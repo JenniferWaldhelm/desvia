@@ -5,31 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projeto Desvia — Mandaguari</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --verde: #2D6A4F;
-    --verde-claro: #52B788;
-    --verde-menta: #D8F3DC;
-    --terra: #B7792A;
-    --terra-claro: #F4E1C1;
-    --off-white: #F9F6F0;
-    --escuro: #1A1A1A;
-    --cinza: #6B6B6B;
-    --cinza-claro: #E8E4DC;
+    --verde: #1A3A8F;
+    --verde-claro: #E8621A;
+    --verde-menta: #FDE8D8;
+    --terra: #2A7A2A;
+    --terra-claro: #D8F0D8;
+    --off-white: #F8F8F6;
+    --escuro: #0F1F3D;
+    --cinza: #5A6070;
+    --cinza-claro: #E0E4ED;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     background: var(--off-white);
     color: var(--escuro);
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   /* ── HEADER ── */
@@ -54,10 +55,10 @@
   }
 
   .logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 1.3rem;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.25px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -109,7 +110,7 @@
     top: -60px; right: -60px;
     width: 320px; height: 320px;
     border-radius: 50%;
-    background: rgba(82,183,136,0.15);
+    background: rgba(232,98,26,0.12);
   }
 
   .hero::after {
@@ -118,7 +119,7 @@
     bottom: -80px; left: -40px;
     width: 260px; height: 260px;
     border-radius: 50%;
-    background: rgba(82,183,136,0.1);
+    background: rgba(232,98,26,0.08);
   }
 
   .hero-inner {
@@ -130,9 +131,9 @@
 
   .hero-badge {
     display: inline-block;
-    background: rgba(82,183,136,0.25);
-    border: 1px solid rgba(82,183,136,0.5);
-    color: var(--verde-claro);
+    background: rgba(232,98,26,0.2);
+    border: 1px solid rgba(232,98,26,0.45);
+    color: #FFBE99;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -144,10 +145,10 @@
 
   .hero h1 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.25rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.25px;
   }
 
   .hero h1 em {
@@ -174,7 +175,7 @@
   .btn-primary {
     background: var(--verde-claro);
     color: var(--verde);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 0.95rem;
     padding: 0.85rem 2rem;
@@ -192,7 +193,7 @@
   .btn-secondary {
     background: transparent;
     color: white;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     padding: 0.85rem 2rem;
@@ -229,9 +230,9 @@
   }
 
   .stat-num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--verde);
     display: block;
   }
@@ -268,10 +269,10 @@
 
   .section-title {
     font-size: clamp(1.6rem, 3vw, 2.4rem);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.15;
     margin-bottom: 0.75rem;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.25px;
   }
 
   .section-desc {
@@ -305,9 +306,9 @@
   }
 
   .step-num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.8rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--verde-menta);
     line-height: 1;
     margin-bottom: 1rem;
@@ -323,7 +324,7 @@
   .step-card p {
     font-size: 0.9rem;
     color: var(--cinza);
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   /* ── CATEGORIAS ── */
@@ -341,7 +342,7 @@
     padding: 0.75rem 1.1rem;
     border: 1.5px solid var(--cinza-claro);
     border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.95rem;
     color: var(--escuro);
     background: var(--off-white);
@@ -359,7 +360,7 @@
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 0.9rem;
     cursor: pointer;
@@ -431,7 +432,7 @@
   .mapa-info p {
     font-size: 0.9rem;
     color: var(--cinza);
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 0.5rem;
   }
 
@@ -498,7 +499,7 @@
     border: 1.5px solid var(--cinza-claro);
     border-radius: 100px;
     padding: 0.5rem 1.2rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.88rem;
     font-weight: 500;
     cursor: pointer;
@@ -593,7 +594,7 @@
   .empresa-card p {
     font-size: 0.88rem;
     color: var(--cinza);
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 1rem;
   }
 
@@ -681,9 +682,9 @@
   }
 
   .impacto-num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--verde-claro);
     line-height: 1;
   }
@@ -716,7 +717,7 @@
 
   .faq-pergunta {
     padding: 1.25rem 1.5rem;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
@@ -856,9 +857,9 @@
   <div class="hero-inner">
     <div class="hero-badge">📍 Mandaguari — PR</div>
     <h1>Descarte certo.<br><em>Cidade mais limpa.</em></h1>
-    <p>Aqui você descobre onde e como descartar qualquer tipo de resíduo em Mandaguari — de forma fácil, gratuita e responsável.</p>
+    <p>Quer saber onde jogar fora pilha, eletrônico, entulho ou óleo de cozinha? Este site mostra o local mais próximo de você em Mandaguari. É grátis e sem cadastro.</p>
     <div class="hero-btns">
-      <a href="#categorias" class="btn-primary">🔍 O que tenho para descartar?</a>
+      <a href="#categorias" class="btn-primary">🔍 O que posso descartar?</a>
       <a href="#mapa" class="btn-secondary">🗺 Ver mapa de pontos</a>
     </div>
   </div>
@@ -869,11 +870,11 @@
   <div class="stats-inner">
     <div class="stat">
       <span class="stat-num">25+</span>
-      <span class="stat-label">Categorias de resíduos</span>
+      <span class="stat-label">Tipos de resíduo</span>
     </div>
     <div class="stat">
       <span class="stat-num">[ X ]</span>
-      <span class="stat-label">Pontos de descarte mapeados</span>
+      <span class="stat-label">Pontos de descarte no mapa</span>
     </div>
     <div class="stat">
       <span class="stat-num">[ X ]</span>
@@ -881,7 +882,7 @@
     </div>
     <div class="stat">
       <span class="stat-num">100%</span>
-      <span class="stat-label">Gratuito e sem cadastro</span>
+      <span class="stat-label">Grátis e sem cadastro</span>
     </div>
   </div>
 </div>
@@ -890,28 +891,28 @@
 <section id="como-funciona">
   <div class="section-inner">
     <span class="section-tag">Como funciona</span>
-    <h2 class="section-title">Em 3 passos, você sabe o que fazer</h2>
-    <p class="section-desc">Não precisa ser especialista em reciclagem. O Projeto Desvia traduz tudo em linguagem simples para você agir com confiança.</p>
+    <h2 class="section-title">Como funciona em 3 passos</h2>
+    <p class="section-desc">Você não precisa entender de reciclagem. Escolha o tipo de resíduo, veja onde levar e pronto.</p>
     <div class="steps">
       <div class="step-card">
         <div class="step-num">01</div>
-        <h3>Identifique o que tem</h3>
-        <p>Escolha a categoria do resíduo que você quer descartar — eletrônico, entulho, roupa, óleo, vidro, e muito mais.</p>
+        <h3>Escolha o que tem</h3>
+        <p>Clique na categoria do resíduo: eletrônico, entulho, roupa, óleo, vidro e outros.</p>
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
-        <h3>Veja onde descartar</h3>
-        <p>Confira no mapa o ponto de coleta mais próximo de você em Mandaguari, com endereço e horário de funcionamento.</p>
+        <h3>Veja onde levar</h3>
+        <p>O mapa mostra o ponto de coleta mais perto de você. Com endereço e horário.</p>
       </div>
       <div class="step-card">
         <div class="step-num">03</div>
         <h3>Leve e pronto!</h3>
-        <p>Sem burocracia. A maioria dos pontos aceita materiais gratuitamente. Você descarta certo e o meio ambiente agradece.</p>
+        <p>Sem burocracia. A maioria dos pontos é gratuita. Você descarta certo e ajuda o meio ambiente.</p>
       </div>
       <div class="step-card">
         <div class="step-num">🤝</div>
-        <h3>Compartilhe com vizinhos</h3>
-        <p>Quanto mais pessoas souberem, mais limpa nossa cidade fica. Compartilhe o Projeto Desvia com quem você conhece.</p>
+        <h3>Conte para os vizinhos</h3>
+        <p>Quanto mais gente souber, mais limpa a cidade fica. Mande o link para alguém que precisa.</p>
       </div>
     </div>
   </div>
@@ -921,8 +922,8 @@
 <section id="categorias">
   <div class="section-inner">
     <span class="section-tag">O que descartar</span>
-    <h2 class="section-title">Escolha o tipo de resíduo</h2>
-    <p class="section-desc">Clique na categoria para ver onde descartar em Mandaguari.</p>
+    <h2 class="section-title">O que você quer descartar?</h2>
+    <p class="section-desc">Clique no tipo de resíduo para ver onde levar em Mandaguari.</p>
 
     <div class="search-bar">
       <input type="text" placeholder="Ex: pilha, óleo, colchão…" id="buscaCategoria">
@@ -966,22 +967,22 @@
 <section id="mapa">
   <div class="section-inner">
     <span class="section-tag">Mapa de pontos</span>
-    <h2 class="section-title">Onde descartar perto de você</h2>
-    <p class="section-desc">Todos os pontos de descarte de Mandaguari em um só lugar. Clique no ponto para ver o endereço e o que aceita.</p>
+    <h2 class="section-title">Onde levar perto de você</h2>
+    <p class="section-desc">Veja todos os pontos de descarte de Mandaguari no mapa. Clique em um ponto para ver o endereço e o que ele aceita.</p>
 
     <div class="mapa-wrapper">
       <div class="mapa-info">
-        <h3>🟢 Pontos de descarte voluntário</h3>
-        <p>Locais fixos onde você pode levar seus resíduos a qualquer momento, sem agendamento.</p>
+        <h3>🟢 Pontos voluntários</h3>
+        <p>Locais fixos. Você pode levar seus resíduos a qualquer momento, sem precisar agendar.</p>
 
         <h3>🔵 Ecopontos da prefeitura</h3>
-        <p>Pontos oficiais da Prefeitura de Mandaguari com maior variedade de materiais aceitos.</p>
+        <p>Pontos oficiais da prefeitura. Aceitam mais tipos de material.</p>
 
         <h3>🟠 Empresas parceiras</h3>
-        <p>Comércios e empresas que aceitam resíduos específicos como parte de programas de logística reversa.</p>
+        <p>Comércios e empresas que aceitam certos tipos de resíduo. Cada um aceita um tipo específico.</p>
 
-        <h3>🔴 Coleta especial (agendamento)</h3>
-        <p>Para resíduos volumosos como móveis e entulho — necessário agendar com a prefeitura.</p>
+        <h3>🔴 Coleta especial</h3>
+        <p>Para objetos grandes como móveis e entulho. Você precisa agendar com a prefeitura antes.</p>
 
         <div class="legenda" style="margin-top:1.5rem">
           <div class="legenda-item"><div class="legenda-dot" style="background:#2D6A4F"></div> Ponto de descarte voluntário</div>
@@ -995,22 +996,16 @@
         </div>
       </div>
 
-      <div class="mapa-embed">
-        <!-- Cole aqui o código de incorporação do seu Google Maps personalizado -->
-        <!-- Para obter: abra seu mapa no Google Maps → clique nos 3 pontos → Incorporar no site → copie o <iframe> -->
-        <div class="mapa-placeholder">
-          <div style="font-size:3rem">🗺️</div>
-          <p><strong>Insira aqui o mapa do Google Maps</strong></p>
-          <p>Cole o código &lt;iframe&gt; do seu mapa personalizado no lugar deste bloco</p>
-          <p style="margin-top:0.5rem; font-size:0.8rem">Mapa: <a href="https://www.google.com/maps/d/edit?mid=1ONPktI_WVHOTZfztqz6d9X7__n_BoyM" style="color:var(--verde)">Ver seu mapa aqui</a></p>
-        </div>
-        <!--
-        EXEMPLO de como inserir o iframe:
+      <div class="mapa-embed" style="flex-direction:column; padding:0; min-height:unset; align-items:stretch;">
         <iframe
-          src="https://www.google.com/maps/d/embed?mid=1ONPktI_WVHOTZfztqz6d9X7__n_BoyM"
-          width="100%" height="480" style="border:0;" allowfullscreen loading="lazy">
+          src="mapa-pev.html"
+          width="100%" height="520" style="border:none; display:block;"
+          title="Mapa de pontos de descarte de Mandaguari" loading="lazy">
         </iframe>
-        -->
+        <div style="padding:0.75rem 1rem; background:var(--verde-menta); font-size:0.82rem; color:var(--verde); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+          <span>🗺 Mapa interativo com <strong>16 pontos</strong> de descarte em Mandaguari e região</span>
+          <a href="mapa-pev.html" target="_blank" style="color:var(--verde); font-weight:700; text-decoration:none;">Abrir em tela cheia ↗</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1020,8 +1015,8 @@
 <section id="coleta">
   <div class="section-inner">
     <span class="section-tag">Coleta domiciliar</span>
-    <h2 class="section-title">Quando passa o caminhão no seu bairro?</h2>
-    <p class="section-desc">Confira os dias e horários da coleta de lixo comum e da coleta seletiva (reciclável) por região de Mandaguari.</p>
+    <h2 class="section-title">Quando o caminhão passa no seu bairro?</h2>
+    <p class="section-desc">Veja os dias em que o caminhão de lixo e o de recicláveis passam na sua rua.</p>
 
     <div class="coleta-tabs">
       <button class="tab-btn active" onclick="mostrarColeta('comum', this)">🗑 Lixo comum</button>
@@ -1029,51 +1024,51 @@
       <button class="tab-btn" onclick="mostrarColeta('especial', this)">📦 Volumoso e especial</button>
     </div>
 
-    <!-- COLETA COMUM -->
+    <!-- COLETA SELETIVA - ACAMAN -->
     <div id="coleta-comum" class="coleta-grid">
-      <div class="coleta-card">
-        <h4>📍 [NOME DO BAIRRO]</h4>
-        <p class="dias">🗓 [Ex: Segunda, quarta e sexta-feira]</p>
-        <span class="horario">⏰ [Ex: A partir das 6h]</span>
+      <div class="coleta-card" style="border-left-color:#378ADD; grid-column: 1 / -1;">
+        <h4>♻️ Coleta Seletiva de Recicláveis — ACAMAN</h4>
+        <p class="dias">A coleta seletiva em Mandaguari é realizada pela <strong>ACAMAN</strong> em dois grupos de bairros, em dias alternados da semana.</p>
+        <span class="horario" style="background:var(--verde-menta); color:var(--verde)">⚠️ Quartas-feiras: coleta apenas em locais específicos, mediante solicitação à ACAMAN</span>
       </div>
-      <div class="coleta-card">
-        <h4>📍 [NOME DO BAIRRO]</h4>
-        <p class="dias">🗓 [Ex: Terça, quinta e sábado]</p>
-        <span class="horario">⏰ [Ex: A partir das 7h]</span>
+
+      <div class="coleta-card" style="border-left-color:#2D6A4F">
+        <h4>🟢 Segunda e quinta-feira</h4>
+        <p class="dias">Bairros atendidos:</p>
+        <p style="font-size:0.85rem; color:var(--cinza); line-height:1.7;">
+          Centro • Conj. Ernesto Troleza • Ipacaray • Boa Vista • Mandaguari • Vila Dr. Paulo Pimentel • Tancredo Neves • Vila Verde • Jardim Itália • Jardim Alípio Costa • Jardim Esplanada • Jardim Primavera • Jardim Soriá • Jardim Cristina • Jardim Madrid • Jardim América • entre outros
+        </p>
+        <span class="horario">🗓 Segunda e Quinta-feira</span>
       </div>
-      <div class="coleta-card">
-        <h4>📍 [NOME DO BAIRRO]</h4>
-        <p class="dias">🗓 [Ex: Segunda, quarta e sexta-feira]</p>
-        <span class="horario">⏰ [Ex: A partir das 6h30]</span>
+
+      <div class="coleta-card" style="border-left-color:#378ADD">
+        <h4>🔵 Terça e sexta-feira</h4>
+        <p class="dias">Bairros atendidos:</p>
+        <p style="font-size:0.85rem; color:var(--cinza); line-height:1.7;">
+          Conj. Padre Max Kaufmann • Roque Pedroni • América • Cristina I • Cristina II • Cristina Central • Cristina Central II • Jardim Imperial • Jardim Lorena • Jardim Murumbi • Jardim Palma • Jardim Progresso • Jardim Vitória • Vila Diaz • Vila Diniz • entre outros
+        </p>
+        <span class="horario">🗓 Terça e Sexta-feira</span>
       </div>
-      <div class="coleta-card">
-        <h4>📍 [NOME DO BAIRRO]</h4>
-        <p class="dias">🗓 [Ex: Diariamente, exceto domingos]</p>
-        <span class="horario">⏰ [Ex: A partir das 6h]</span>
-      </div>
+
       <div class="coleta-card" style="border-left-color: var(--terra);">
-        <h4>ℹ️ Dica importante</h4>
-        <p class="dias">Coloque o lixo na calçada somente na véspera à noite ou no dia da coleta, no máximo 1 hora antes do horário previsto.</p>
-        <span class="horario" style="background:var(--terra-claro); color:var(--terra)">Prefeitura de Mandaguari</span>
+        <h4>✅ O que pode ir na coleta seletiva?</h4>
+        <p class="dias">Papel e papelão limpos • Plásticos • Vidros • Metais (latas) • Embalagens limpas e secas</p>
+        <span class="horario" style="background:var(--terra-claro); color:var(--terra)">❌ Não: lixo orgânico, fraldas, papel engordurado</span>
+      </div>
+
+      <div class="coleta-card" style="border-left-color: var(--verde-claro);">
+        <h4>📞 Dúvidas sobre seu bairro?</h4>
+        <p class="dias">Entre em contato com a ACAMAN para confirmar o dia de coleta no seu endereço ou solicitar coleta especial.</p>
+        <a href="https://wa.me/55" style="display:inline-block; margin-top:0.5rem; color:var(--verde); font-weight:600; font-size:0.88rem; text-decoration:none">Falar com a ACAMAN →</a>
       </div>
     </div>
 
-    <!-- COLETA SELETIVA -->
+    <!-- COLETA SELETIVA TAB (redireciona pro mesmo conteúdo) -->
     <div id="coleta-seletiva" class="coleta-grid" style="display:none">
-      <div class="coleta-card" style="border-left-color:#378ADD">
-        <h4>📍 [NOME DO BAIRRO]</h4>
-        <p class="dias">🗓 [Ex: Toda terça-feira]</p>
-        <span class="horario">♻️ Recicláveis: papel, plástico, vidro, metal</span>
-      </div>
-      <div class="coleta-card" style="border-left-color:#378ADD">
-        <h4>📍 [NOME DO BAIRRO]</h4>
-        <p class="dias">🗓 [Ex: Toda quinta-feira]</p>
-        <span class="horario">♻️ Recicláveis: papel, plástico, vidro, metal</span>
-      </div>
-      <div class="coleta-card" style="border-left-color:#52B788">
-        <h4>♻️ O que pode ir na coleta seletiva?</h4>
-        <p class="dias">Papel e papelão limpos • Plásticos • Vidros • Metais (latas, panelas) • Embalagens limpas e secas</p>
-        <span class="horario">❌ Não: lixo orgânico, fraldas, papel engordurado</span>
+      <div class="coleta-card" style="border-left-color:#378ADD; grid-column: 1 / -1;">
+        <h4>♻️ A coleta seletiva em Mandaguari é feita pela ACAMAN</h4>
+        <p class="dias">Clique na aba <strong>"Lixo comum"</strong> acima para ver os dias por bairro — a coleta seletiva segue o mesmo calendário.</p>
+        <span class="horario">Segunda/quinta e terça/sexta — conforme seu bairro</span>
       </div>
     </div>
 
@@ -1109,51 +1104,131 @@
 <section id="empresas">
   <div class="section-inner">
     <span class="section-tag">Para empresas</span>
-    <h2 class="section-title">Sua empresa também tem responsabilidade — e nós ajudamos</h2>
-    <p class="section-desc">Encontre as opções legais e corretas para descartar resíduos gerados em comércios, obras e indústrias em Mandaguari.</p>
+    <h2 class="section-title">Sua empresa tem obrigações legais com os resíduos que gera</h2>
+    <p class="section-desc">A Lei Federal 12.305/2010 (Política Nacional de Resíduos Sólidos) define responsabilidades claras para empresas. Quem descumpre pode receber <strong>multa, embargo e responder criminalmente</strong>.</p>
+
+    <!-- ALERTA LEGAL -->
+    <div style="background:#FDE8D8; border-left:5px solid #E8621A; border-radius:0 12px 12px 0; padding:1.25rem 1.5rem; margin-bottom:2.5rem; max-width:820px;">
+      <p style="font-size:0.95rem; color:#0F1F3D; font-weight:600; margin-bottom:0.35rem;">⚠️ Atenção: isso é obrigação legal, não recomendação</p>
+      <p style="font-size:0.88rem; color:#5A6070; line-height:1.7; margin:0;">As exigências abaixo valem para <strong>comércios, indústrias, prestadores de serviço e construtoras</strong> em Mandaguari. O órgão fiscalizador no Paraná é o <strong>IAT — Instituto Águas e Terra do Paraná</strong>. Dúvidas sobre o que se aplica à sua empresa? Consulte a Secretaria de Meio Ambiente de Mandaguari.</p>
+    </div>
 
     <div class="empresas-grid">
+
+      <!-- MTR -->
       <div class="empresa-card">
-        <span class="empresa-tipo">🧱 Entulho e construção</span>
+        <span class="empresa-tipo" style="background:#FDE8D8; color:#E8621A;">📋 MTR — Obrigatório</span>
+        <h3>Manifesto de Transporte de Resíduos</h3>
+        <p>Toda movimentação de resíduo da sua empresa para outra área precisa de MTR. Ele registra o tipo de resíduo, a quantidade, o transportador e o destino final.</p>
+        <ul style="font-size:0.87rem; color:var(--cinza); line-height:1.9; padding-left:1.2rem; margin-bottom:1rem;">
+          <li>Obrigatório para resíduos Classe I (perigosos) e Classe II</li>
+          <li>Emitido no sistema <strong>MTR Online</strong> do SINIR (gov.br)</li>
+          <li>Transportador e destinador também assinam o MTR</li>
+          <li>Guarde os MTRs por no mínimo <strong>5 anos</strong></li>
+        </ul>
+        <a href="https://mtr.sinir.gov.br" target="_blank" style="color:#1A3A8F; font-weight:600; font-size:0.88rem; text-decoration:none;">→ Acessar MTR Online (SINIR)</a>
+      </div>
+
+      <!-- INVENTÁRIO -->
+      <div class="empresa-card">
+        <span class="empresa-tipo" style="background:#FDE8D8; color:#E8621A;">📊 Inventário — Anual</span>
+        <h3>Inventário Anual de Resíduos Sólidos</h3>
+        <p>Empresas geradoras de resíduos perigosos são obrigadas a declarar anualmente no SINIR quais resíduos geraram, quanto e para onde foram destinados.</p>
+        <ul style="font-size:0.87rem; color:var(--cinza); line-height:1.9; padding-left:1.2rem; margin-bottom:1rem;">
+          <li>Prazo: geralmente até <strong>31 de março</strong> do ano seguinte</li>
+          <li>Feito no sistema SINIR (sinir.gov.br)</li>
+          <li>Quem não declara pode ser autuado pelo IAT</li>
+          <li>Inclui resíduos industriais, de saúde e perigosos</li>
+        </ul>
+        <a href="https://sinir.gov.br" target="_blank" style="color:#1A3A8F; font-weight:600; font-size:0.88rem; text-decoration:none;">→ Acessar SINIR</a>
+      </div>
+
+      <!-- AUTORIZAÇÃO AMBIENTAL -->
+      <div class="empresa-card">
+        <span class="empresa-tipo" style="background:#FDE8D8; color:#E8621A;">🏛️ Licença — IAT/PR</span>
+        <h3>Autorização Ambiental (IAT)</h3>
+        <p>Algumas atividades exigem licença ou autorização ambiental do IAT antes de operar. Isso inclui empresas que geram, transportam ou tratam resíduos perigosos.</p>
+        <ul style="font-size:0.87rem; color:var(--cinza); line-height:1.9; padding-left:1.2rem; margin-bottom:1rem;">
+          <li>Licença Prévia (LP), de Instalação (LI) e de Operação (LO)</li>
+          <li>Transportadoras de resíduos precisam de Autorização do IAT</li>
+          <li>Aterros e coprocessadores precisam de licença específica</li>
+          <li>Operar sem licença é crime ambiental (Lei 9.605/98)</li>
+        </ul>
+        <a href="https://www.iat.pr.gov.br" target="_blank" style="color:#1A3A8F; font-weight:600; font-size:0.88rem; text-decoration:none;">→ Portal do IAT — Paraná</a>
+      </div>
+
+      <!-- PGRS -->
+      <div class="empresa-card">
+        <span class="empresa-tipo" style="background:#FDE8D8; color:#E8621A;">📁 PGRS — Obrigatório</span>
+        <h3>Plano de Gerenciamento de Resíduos Sólidos</h3>
+        <p>O PGRS é um documento que descreve como sua empresa vai gerar, separar, armazenar, tratar e dar destinação aos resíduos. É exigido por lei para vários setores.</p>
+        <ul style="font-size:0.87rem; color:var(--cinza); line-height:1.9; padding-left:1.2rem; margin-bottom:1rem;">
+          <li>Obrigatório para indústrias, construtoras, serviços de saúde e outros</li>
+          <li>Deve ser aprovado pelo órgão ambiental competente</li>
+          <li>Precisa ser atualizado sempre que mudar o processo produtivo</li>
+          <li>Empresas de saúde têm PGRSS (versão específica para área médica)</li>
+        </ul>
+        <a href="https://www.iat.pr.gov.br" target="_blank" style="color:#1A3A8F; font-weight:600; font-size:0.88rem; text-decoration:none;">→ Consultar exigências no IAT</a>
+      </div>
+
+      <!-- LOGÍSTICA REVERSA -->
+      <div class="empresa-card">
+        <span class="empresa-tipo" style="background:#D8F0D8; color:#2A7A2A;">♻️ Logística Reversa</span>
+        <h3>Logística Reversa Obrigatória</h3>
+        <p>Fabricantes, importadores, distribuidores e comerciantes são obrigados a receber de volta seus produtos após o uso do consumidor. Não é opcional.</p>
+        <ul style="font-size:0.87rem; color:var(--cinza); line-height:1.9; padding-left:1.2rem; margin-bottom:1rem;">
+          <li>🔋 Pilhas, baterias e acumuladores</li>
+          <li>💡 Lâmpadas fluorescentes, de vapor e LED</li>
+          <li>🛢️ Óleos lubrificantes e embalagens</li>
+          <li>💊 Medicamentos e embalagens</li>
+          <li>📱 Eletrônicos e eletrodomésticos</li>
+          <li>🚗 Pneus</li>
+          <li>🧴 Embalagens de agrotóxicos</li>
+        </ul>
+        <a href="https://sinir.gov.br/logistica-reversa" target="_blank" style="color:#1A3A8F; font-weight:600; font-size:0.88rem; text-decoration:none;">→ Ver acordos setoriais no SINIR</a>
+      </div>
+
+      <!-- ATERRO LICENCIADO -->
+      <div class="empresa-card">
+        <span class="empresa-tipo" style="background:#FDE8D8; color:#E8621A;">🏭 Destinação Final</span>
+        <h3>Destinação para Aterro ou Empresa Licenciada</h3>
+        <p>Resíduos que não têm reciclagem viável devem ir para aterro industrial licenciado ou empresa de tratamento autorizada pelo IAT. O gerador responde pelo destino final.</p>
+        <ul style="font-size:0.87rem; color:var(--cinza); line-height:1.9; padding-left:1.2rem; margin-bottom:1rem;">
+          <li>Aterro Classe I: resíduos perigosos</li>
+          <li>Aterro Classe II: resíduos não perigosos</li>
+          <li>Coprocessamento em cimenteiras: opção para alguns resíduos</li>
+          <li>Exija sempre o <strong>Certificado de Destinação Final (CDF)</strong></li>
+          <li>Guarde o CDF: ele é sua prova de cumprimento da lei</li>
+        </ul>
+        <a href="https://www.iat.pr.gov.br" target="_blank" style="color:#1A3A8F; font-weight:600; font-size:0.88rem; text-decoration:none;">→ Consultar empresas licenciadas no IAT</a>
+      </div>
+
+      <!-- PONTOS DE DESCARTE EXISTENTES -->
+      <div class="empresa-card">
+        <span class="empresa-tipo" style="background:#FDE8D8; color:#E8621A;">🧱 Entulho e construção</span>
         <h3>Descarte de entulho de obras</h3>
-        <p>Empresas de construção civil são responsáveis pelo descarte correto do entulho gerado. A prefeitura indica locais licenciados e empresas de caçamba autorizadas em Mandaguari.</p>
-        <a href="[LINK-ENTULHO]">Ver locais e empresas licenciadas →</a>
+        <p>Empresas de construção civil são responsáveis pelo descarte correto do entulho. A prefeitura indica locais licenciados e empresas de caçamba autorizadas em Mandaguari.</p>
+        <a href="[LINK-ENTULHO]" style="color:#1A3A8F; font-size:0.88rem; font-weight:600; text-decoration:none;">Ver locais e empresas licenciadas →</a>
       </div>
 
       <div class="empresa-card">
-        <span class="empresa-tipo">♻️ Logística reversa</span>
-        <h3>Embalagens e produtos pós-consumo</h3>
-        <p>Por lei, fabricantes e importadores são responsáveis pela logística reversa de embalagens, eletrônicos, pneus, baterias e medicamentos. Saiba como cumprir a obrigação.</p>
-        <a href="[LINK-LOGISTICA-REVERSA]">Como funciona a logística reversa →</a>
-      </div>
-
-      <div class="empresa-card">
-        <span class="empresa-tipo">🏭 Resíduos industriais</span>
-        <h3>Resíduos de processos industriais</h3>
-        <p>Resíduos classe I (perigosos) e classe II exigem gerenciamento especial, com manifesto de transporte e destinação em empresa licenciada pelo IAT.</p>
-        <a href="[LINK-RESIDUOS-INDUSTRIAIS]">Saiba como regularizar sua empresa →</a>
-      </div>
-
-      <div class="empresa-card">
-        <span class="empresa-tipo">🍽️ Comércio e restaurantes</span>
+        <span class="empresa-tipo" style="background:#D8F0D8; color:#2A7A2A;">🍽️ Comércio e restaurantes</span>
         <h3>Óleo de fritura e resíduos orgânicos</h3>
         <p>Restaurantes, lanchonetes e padarias não podem descartar óleo de fritura na rede de esgoto. Veja as coletoras autorizadas em Mandaguari.</p>
-        <a href="[LINK-OLEO-COMERCIAL]">Ver coletoras de óleo autorizadas →</a>
+        <a href="[LINK-OLEO-COMERCIAL]" style="color:#1A3A8F; font-size:0.88rem; font-weight:600; text-decoration:none;">Ver coletoras de óleo autorizadas →</a>
       </div>
 
-      <div class="empresa-card">
-        <span class="empresa-tipo">🌿 PGRSS</span>
-        <h3>Resíduos de serviços de saúde</h3>
-        <p>Clínicas, farmácias e laboratórios precisam de Plano de Gerenciamento de Resíduos de Serviços de Saúde (PGRSS). Veja como elaborar o seu.</p>
-        <a href="[LINK-PGRSS]">Saiba mais sobre o PGRSS →</a>
+      <!-- CTA FINAL -->
+      <div class="empresa-card" style="background:var(--verde-menta); border-color:#E8621A;">
+        <span class="empresa-tipo" style="background:#1A3A8F; color:white;">💬 Precisa de orientação?</span>
+        <h3 style="color:#0F1F3D;">Não sabe por onde começar?</h3>
+        <p style="color:var(--cinza);">Entre em contato com a Secretaria de Meio Ambiente de Mandaguari para orientação gratuita. Para licenças e autorizações, acesse o portal do IAT.</p>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:0.5rem;">
+          <a href="#contato" style="color:#1A3A8F; font-weight:600; font-size:0.88rem; text-decoration:none;">Falar com a prefeitura →</a>
+          <a href="https://www.iat.pr.gov.br" target="_blank" style="color:#E8621A; font-weight:600; font-size:0.88rem; text-decoration:none;">Portal IAT →</a>
+        </div>
       </div>
 
-      <div class="empresa-card" style="background: var(--verde-menta); border-color: var(--verde-claro);">
-        <span class="empresa-tipo" style="background:var(--verde); color:white">💬 Dúvida?</span>
-        <h3 style="color:var(--verde)">Sua empresa não sabe por onde começar?</h3>
-        <p style="color:var(--cinza)">Entre em contato com a Secretaria de Meio Ambiente de Mandaguari para orientação gratuita sobre o descarte correto para o seu tipo de negócio.</p>
-        <a href="#contato" style="color:var(--verde); font-weight:600; font-size:0.88rem; text-decoration:none">Fale com a gente →</a>
-      </div>
     </div>
   </div>
 </section>
@@ -1163,25 +1238,25 @@
   <div class="comunidade-inner">
     <div>
       <span class="section-tag">Nossa comunidade</span>
-      <h2 class="section-title">Mandaguari limpa começa em cada um de nós</h2>
-      <p class="section-desc">O Projeto Desvia usa uma abordagem baseada em comunidade (CBSM) — porque mudanças reais acontecem quando vizinhos inspiram vizinhos, não apenas quando o governo manda.</p>
+      <h2 class="section-title">Uma cidade mais limpa começa em você</h2>
+      <p class="section-desc">O Projeto Desvia acredita que a mudança começa pelas pessoas — não pelo governo. Quando um vizinho descarta certo, o outro também começa a fazer o mesmo.</p>
 
       <ul class="compromisso-lista">
         <li>
           <div class="check">✓</div>
-          <span><strong>Você não precisa fazer tudo perfeito.</strong> Um resíduo descartado corretamente já faz diferença. Comece pelo que é fácil para você.</span>
+          <span><strong>Comece pelo mais fácil.</strong> Um resíduo descartado no lugar certo já faz diferença.</span>
         </li>
         <li>
           <div class="check">✓</div>
-          <span><strong>Informação clara para todos.</strong> Sem jargão técnico, sem complicação. Qualquer pessoa encontra o que precisa aqui.</span>
+          <span><strong>Informação clara para todos.</strong> Sem termos difíceis. Qualquer pessoa encontra o que precisa aqui.</span>
         </li>
         <li>
           <div class="check">✓</div>
-          <span><strong>Sua participação muda o bairro.</strong> Quando você descarta certo, inspira quem está do seu lado a fazer o mesmo.</span>
+          <span><strong>Sua atitude muda o bairro.</strong> Quando você descarta certo, as pessoas ao seu redor também passam a fazer o mesmo.</span>
         </li>
         <li>
           <div class="check">✓</div>
-          <span><strong>Gratuito e sem cadastro.</strong> Nada de formulários. Acesse, descubra e vá descartar.</span>
+          <span><strong>Grátis e sem cadastro.</strong> Sem formulário, sem burocracia. Acesse e vá descartar.</span>
         </li>
       </ul>
     </div>
@@ -1213,57 +1288,57 @@
 <section id="faq">
   <div class="section-inner">
     <span class="section-tag">Perguntas frequentes</span>
-    <h2 class="section-title">Ainda tem dúvida?</h2>
-    <p class="section-desc" style="margin-bottom:2rem">Aqui estão as perguntas que mais chegam para a gente.</p>
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <p class="section-desc" style="margin-bottom:2rem">Veja as dúvidas mais comuns dos moradores de Mandaguari.</p>
 
     <div class="faq-list">
       <div class="faq-item open">
         <div class="faq-pergunta" onclick="toggleFaq(this)">
           O Projeto Desvia é gratuito? <span class="arrow">▾</span>
         </div>
-        <div class="faq-resposta">Sim, completamente gratuito! O projeto é uma iniciativa comunitária sem fins lucrativos. Você não precisa se cadastrar, pagar nada ou fornecer nenhum dado pessoal para usar o site.</div>
+        <div class="faq-resposta">Sim, é grátis. O projeto é uma iniciativa da comunidade, sem fins lucrativos. Você não precisa se cadastrar nem fornecer nenhum dado pessoal.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-pergunta" onclick="toggleFaq(this)">
           Posso descartar qualquer quantidade de resíduo nos pontos? <span class="arrow">▾</span>
         </div>
-        <div class="faq-resposta">Depende do local. A maioria dos pontos de descarte voluntário atende pequenas quantidades domésticas. Para volumes maiores (de obras, por exemplo), é necessário usar os serviços específicos indicados na seção "Para empresas" ou agendar coleta especial com a prefeitura.</div>
+        <div class="faq-resposta">Depende do local. A maioria dos pontos atende pequenas quantidades de uso doméstico. Para volumes maiores — como de obras — use os serviços da seção "Para empresas" ou agende com a prefeitura.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-pergunta" onclick="toggleFaq(this)">
           O que acontece se eu descartar lixo em local errado? <span class="arrow">▾</span>
         </div>
-        <div class="faq-resposta">Além do impacto ambiental — como contaminação do solo e da água — o descarte incorreto de resíduos é infração ambiental e pode gerar multa, tanto para pessoas físicas quanto para empresas. O Projeto Desvia existe justamente para tornar o descarte correto simples e acessível para todos.</div>
+        <div class="faq-resposta">Descartar no lugar errado contamina o solo e a água. Além disso, é infração ambiental e pode gerar multa — tanto para pessoas quanto para empresas. O Projeto Desvia existe para facilitar o descarte correto para todo mundo.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-pergunta" onclick="toggleFaq(this)">
           Como sei se meu lixo eletrônico pode ser doado ou precisa ser descartado? <span class="arrow">▾</span>
         </div>
-        <div class="faq-resposta">Se o aparelho ainda funciona ou pode ser consertado, considere doar para escolas, ONGs ou vizinhos antes de descartar. Se está quebrado e sem conserto, leve a um ponto de coleta de eletrônicos — nunca coloque no lixo comum, pois contém metais pesados tóxicos.</div>
+        <div class="faq-resposta">Se o aparelho ainda funciona, considere doá-lo para escolas ou vizinhos. Se está quebrado, leve a um ponto de coleta de eletrônicos. Nunca coloque no lixo comum — eletrônicos têm metais tóxicos.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-pergunta" onclick="toggleFaq(this)">
           Tenho um ponto de descarte ou informação que não está no mapa. Como contribuo? <span class="arrow">▾</span>
         </div>
-        <div class="faq-resposta">Ótimo! O projeto é colaborativo. Entre em contato pelo e-mail ou WhatsApp na seção "Fale conosco" e nos mande as informações do ponto — endereço, o que aceita e horário de funcionamento. Nossa equipe verifica e adiciona ao mapa.</div>
+        <div class="faq-resposta">Ótimo! Mande o endereço, o que o ponto aceita e o horário de funcionamento pelo e-mail ou WhatsApp em "Fale conosco". Nossa equipe verifica e coloca no mapa.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-pergunta" onclick="toggleFaq(this)">
           Posso descartar remédios vencidos na farmácia? <span class="arrow">▾</span>
         </div>
-        <div class="faq-resposta">Sim! Por lei de logística reversa, as farmácias são obrigadas a aceitar medicamentos vencidos ou sem uso. Não jogue remédios no lixo comum nem lave pelo vaso sanitário — isso contamina a água. Veja as farmácias participantes em Mandaguari no mapa.</div>
+        <div class="faq-resposta">Sim. Por lei, as farmácias são obrigadas a aceitar remédios vencidos ou sem uso. Não jogue remédios no lixo nem jogue na pia — isso contamina a água. Veja as farmácias participantes no mapa.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-pergunta" onclick="toggleFaq(this)">
           Minha empresa precisa de um Plano de Gerenciamento de Resíduos? <span class="arrow">▾</span>
         </div>
-        <div class="faq-resposta">Depende do porte e do tipo de atividade. Indústrias, clínicas de saúde e algumas atividades comerciais são obrigadas por lei. A Secretaria de Meio Ambiente de Mandaguari pode orientar sua empresa gratuitamente. Veja mais detalhes na seção "Para empresas".</div>
+        <div class="faq-resposta">Depende do tamanho e do tipo de negócio. Indústrias, clínicas e alguns comércios são obrigados por lei. A Secretaria de Meio Ambiente de Mandaguari orienta de graça. Veja mais na seção "Para empresas".</div>
       </div>
     </div>
   </div>
@@ -1273,8 +1348,8 @@
 <section id="contato">
   <div class="section-inner">
     <span class="section-tag">Fale conosco</span>
-    <h2 class="section-title">Dúvida, sugestão ou parceria?</h2>
-    <p class="section-desc">O Projeto Desvia é feito por pessoas da comunidade, para a comunidade. Adoramos ouvir de você.</p>
+    <h2 class="section-title">Fale com a gente</h2>
+    <p class="section-desc">O Projeto Desvia é feito por pessoas da comunidade, para a comunidade. Mande sua dúvida, sugestão ou proposta de parceria.</p>
 
     <div class="contato-grid">
       <div class="contato-card">
