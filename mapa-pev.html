@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa de Descarte — Projeto Desvia Mandaguari</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f7f2;
+    color: #333;
+  }
+
+  .page-header {
+    background: #1A3A8F;
+    padding: 20px 32px;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .page-header p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .card-header h2 {
+    font-size: 1.05rem;
+    color: #0F1F3D;
+    font-weight: 700;
+  }
+
+  .card-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  .map-layout {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 175px;
+  }
+
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1.5px solid #d0dcc4;
+    border-radius: 22px;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    color: #444;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.18s;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .filter-btn:hover {
+    border-color: #1A3A8F;
+    color: #0F1F3D;
+  }
+
+  .filter-btn.active {
+    background: #1A3A8F;
+    color: #fff;
+    border-color: #1A3A8F;
+  }
+
+  .filter-btn .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  #map {
+    flex: 1;
+    height: 500px;
+    border-radius: 8px;
+    border: 1px solid #dde8cc;
+    min-width: 0;
+  }
+
+  .counter {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: #666;
+    padding-left: 2px;
+  }
+
+  .counter span {
+    font-weight: 700;
+    color: #1A3A8F;
+  }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+
+  .popup-content h3 {
+    font-size: 0.95rem;
+    color: #0F1F3D;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  .popup-content .categoria {
+    display: inline-block;
+    font-size: 0.72rem;
+    background: #FDE8D8;
+    color: #1A3A8F;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .popup-content p {
+    font-size: 0.82rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+
+  .nota {
+    background: #FDE8D8;
+    border-left: 4px solid #1A3A8F;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin-top: 14px;
+    font-size: 0.82rem;
+    color: #0F1F3D;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 680px) {
+    .map-layout { flex-direction: column; }
+    .filters { flex-direction: row; flex-wrap: wrap; min-width: unset; }
+    #map { height: 360px; width: 100%; }
+    .page-header h1 { font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>♻️ Mapa de Pontos de Descarte — Mandaguari/PR</h1>
+  <p>Projeto Desvia · Encontre onde descartar corretamente em Mandaguari e região</p>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>🗺️ Pontos de Descarte Mapeados</h2>
+    </div>
+    <p class="card-subtitle">Clique em um marcador para ver o endereço e o que cada ponto aceita. Use os filtros para encontrar o tipo de resíduo que você precisa descartar.</p>
+
+    <div class="map-layout">
+      <div class="filters" id="filters"></div>
+      <div id="map"></div>
+    </div>
+
+    <p class="counter" id="counter">
+      Exibindo <span id="count">0</span> ponto(s). Filtro: <span id="filtro-ativo">Todos</span>
+    </p>
+
+    <div class="nota">
+      ⚠️ <strong>Atenção:</strong> Confirme o horário de funcionamento antes de ir. Alguns pontos aceitam materiais apenas em dias específicos ou mediante agendamento com a ACAMAN.
+    </div>
+  </div>
+</div>
+
+<script>
+const categorias = {
+  reciclagem:  { cor: '#2ecc71', label: 'Reciclagem Geral', icone: '♻️' },
+  lampadas:    { cor: '#f1c40f', label: 'Lâmpadas',          icone: '💡' },
+  oleo:        { cor: '#8B4513', label: 'Óleo de Cozinha',   icone: '🫙' },
+  pneus:       { cor: '#95a5a6', label: 'Pneus',             icone: '🚗' },
+  medicamento: { cor: '#9b59b6', label: 'Medicamentos',      icone: '💊' },
+  eletronicos: { cor: '#1abc9c', label: 'Eletrônicos',       icone: '💻' },
+  pilhas:      { cor: '#e67e22', label: 'Pilhas/Baterias',   icone: '🔋' },
+  defensivo:   { cor: '#27ae60', label: 'Defensivo Agrícola',icone: '🌿' },
+  oleo_lub:    { cor: '#c0392b', label: 'Óleo Lubrificante', icone: '🛢️' },
+};
+
+const pontos = [
+  // ── MANDAGUARI ──
+  {
+    nome: 'COPROSID',
+    endereco: 'Av. Presidente Vargas, 970 – Centro, Mandaguari/PR',
+    categoria: 'lampadas',
+    lat: -23.5480,
+    lng: -51.6710,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Amigão Supermercados',
+    endereco: 'R. Manoel Antunes Pereira – Centro, Mandaguari/PR',
+    categoria: 'lampadas',
+    lat: -23.5465,
+    lng: -51.6725,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Camilo Supermercados',
+    endereco: 'Av. Amazonas, 2024 – Centro, Mandaguari/PR',
+    categoria: 'lampadas',
+    lat: -23.5472,
+    lng: -51.6695,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Eletro Mandaguari',
+    endereco: 'Av. Amazonas, 2268 – Centro, Mandaguari/PR',
+    categoria: 'lampadas',
+    lat: -23.5468,
+    lng: -51.6680,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Magazine Luiza (Filial 693)',
+    endereco: 'Av. Amazonas, 807 – Centro, Mandaguari/PR – CEP 86975-000',
+    categoria: 'eletronicos',
+    lat: -23.5490,
+    lng: -51.6740,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'ACAMAN — Reciclagem e Eletrônicos',
+    endereco: 'R. Pedro Alves Madeira, 84 – Mandaguari/PR',
+    categoria: 'reciclagem',
+    lat: -23.5500,
+    lng: -51.6700,
+    horario: 'Consultar ACAMAN para dias de coleta especial (quartas mediante solicitação)'
+  },
+  {
+    nome: 'Farmácia Nissei Mandaguari',
+    endereco: 'Av. Amazonas, 899 – Centro, Mandaguari/PR',
+    categoria: 'medicamento',
+    lat: -23.5485,
+    lng: -51.6735,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Luiz Job de Souza — Pneus',
+    endereco: 'Pq. Industrial Norte, Mandaguari/PR',
+    categoria: 'pneus',
+    lat: -23.5440,
+    lng: -51.6650,
+    horario: '(44) 3233-3035 — consultar horário'
+  },
+  {
+    nome: 'Assoc. Distribuidores de Insumos — Defensivo Agrícola',
+    endereco: 'Estrada Velha para Paiçandu, 532 – saída para Paiçandu, Mandaguari/PR',
+    categoria: 'defensivo',
+    lat: -23.5560,
+    lng: -51.6800,
+    horario: 'Consultar horário de funcionamento'
+  },
+
+  // ── REGIÃO ──
+  {
+    nome: 'Pacaembu Autopeças — Baterias',
+    endereco: 'Av. Pref. Sincler Sambatti, 4892 – Jd. Ipanema, Maringá/PR',
+    categoria: 'pilhas',
+    lat: -23.4010,
+    lng: -51.9400,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'TSD Logística — Baterias',
+    endereco: 'Av. Paranavai, 2381 – Pq. Industrial Bandeirantes, Maringá/PR',
+    categoria: 'pilhas',
+    lat: -23.4050,
+    lng: -51.9450,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'WG First Line Baterias',
+    endereco: 'Av. Pioneiro Antônio Franco de Morais, 1021 – Maringá/PR',
+    categoria: 'pilhas',
+    lat: -23.3980,
+    lng: -51.9350,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Auto Posto Reunidos — Óleo Lubrificante',
+    endereco: 'Av. Rio de Janeiro, 1161 – Industrial, Astorga/PR',
+    categoria: 'oleo_lub',
+    lat: -23.2270,
+    lng: -51.6680,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Beija Flor Produtos Automotivos — Óleo Lubrificante',
+    endereco: 'R. Guaratinga, 45 – Pq. Industrial II, Arapongas/PR',
+    categoria: 'oleo_lub',
+    lat: -23.4280,
+    lng: -51.4280,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Reciclagem de Pneus Paraná',
+    endereco: 'Av. das Indústrias, 200 – Região de Mandaguari/PR',
+    categoria: 'pneus',
+    lat: -23.5520,
+    lng: -51.6620,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'Ponto de Coleta de Pneus — Jandaia do Sul',
+    endereco: 'R. Prof. Roberto R. Chaves, s/nº – Jandaia do Sul/PR',
+    categoria: 'pneus',
+    lat: -23.5990,
+    lng: -51.6430,
+    horario: '(43) 3432-1390 — consultar horário'
+  },
+];
+
+// Mapa centrado em Mandaguari
+const map = L.map('map').setView([-23.5490, -51.6720], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+function criarIcone(categoria) {
+  const cfg = categorias[categoria] || { cor: '#999', icone: '📍' };
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="42" viewBox="0 0 34 42">
+      <path d="M17 0C7.6 0 0 7.6 0 17c0 12.5 17 25 17 25S34 29.5 34 17C34 7.6 26.4 0 17 0z"
+            fill="${cfg.cor}" stroke="#fff" stroke-width="2"/>
+      <text x="17" y="22" text-anchor="middle" font-size="14" fill="white">${cfg.icone}</text>
+    </svg>`;
+  return L.divIcon({
+    html: svg,
+    className: '',
+    iconSize: [34, 42],
+    iconAnchor: [17, 42],
+    popupAnchor: [0, -44]
+  });
+}
+
+// Gera botões de filtro
+const filtersEl = document.getElementById('filters');
+const btnTodos = document.createElement('button');
+btnTodos.className = 'filter-btn active';
+btnTodos.dataset.categoria = 'todos';
+btnTodos.onclick = function() { filtrar(this); };
+btnTodos.innerHTML = `<span class="dot" style="background:#1A3A8F"></span> Todos`;
+filtersEl.appendChild(btnTodos);
+
+Object.entries(categorias).forEach(([chave, cfg]) => {
+  if (!pontos.some(p => p.categoria === chave)) return;
+  const btn = document.createElement('button');
+  btn.className = 'filter-btn';
+  btn.dataset.categoria = chave;
+  btn.onclick = function() { filtrar(this); };
+  btn.innerHTML = `<span class="dot" style="background:${cfg.cor}"></span> ${cfg.icone} ${cfg.label}`;
+  filtersEl.appendChild(btn);
+});
+
+// Marcadores
+let marcadores = [];
+pontos.forEach(p => {
+  const cfg = categorias[p.categoria];
+  const marker = L.marker([p.lat, p.lng], { icon: criarIcone(p.categoria) });
+  marker.bindPopup(`
+    <div class="popup-content">
+      <span class="categoria">${cfg ? cfg.icone + ' ' + cfg.label : p.categoria}</span>
+      <h3>${p.nome}</h3>
+      <p>📍 ${p.endereco}</p>
+      ${p.horario ? `<p>🕐 ${p.horario}</p>` : ''}
+    </div>
+  `);
+  marker.categoria = p.categoria;
+  marker.addTo(map);
+  marcadores.push(marker);
+});
+
+atualizarContador('todos', 'Todos');
+
+function filtrar(btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cat = btn.dataset.categoria;
+  const label = btn.textContent.trim();
+  let visiveis = 0;
+  marcadores.forEach(m => {
+    if (cat === 'todos' || m.categoria === cat) { m.addTo(map); visiveis++; }
+    else { map.removeLayer(m); }
+  });
+  atualizarContador(cat, label, visiveis);
+}
+
+function atualizarContador(cat, label, n) {
+  if (n === undefined) n = cat === 'todos' ? pontos.length : pontos.filter(p => p.categoria === cat).length;
+  document.getElementById('count').textContent = n;
+  document.getElementById('filtro-ativo').textContent = label.replace(/^[\S]*\s/, '').trim() || label.trim();
+}
+</script>
+</body>
+</html>
