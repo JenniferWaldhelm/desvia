@@ -227,142 +227,119 @@ const categorias = {
   oleo_lub:    { cor: '#c0392b', label: 'Óleo Lubrificante', icone: '🛢️' },
 };
 
+// Coordenadas extraídas do arquivo .kmz fornecido pelo usuário (Google My Maps) — precisão exata
 const pontos = [
-  // ── MANDAGUARI ──
+  // ── MANDAGUARI — Lâmpadas ──
   {
-    nome: 'COPROSID',
-    endereco: 'Av. Presidente Vargas, 970 – Centro, Mandaguari/PR',
+    nome: 'Coprosid Materiais Elétricos',
+    endereco: 'Mandaguari/PR',
     categoria: 'lampadas',
-    lat: -23.5480,
-    lng: -51.6710,
+    lat: -23.5327406,
+    lng: -51.6707402,
     horario: 'Consultar horário de funcionamento'
   },
   {
     nome: 'Amigão Supermercados',
-    endereco: 'R. Manoel Antunes Pereira – Centro, Mandaguari/PR',
+    endereco: 'Mandaguari/PR',
     categoria: 'lampadas',
-    lat: -23.5465,
-    lng: -51.6725,
+    lat: -23.525424,
+    lng: -51.674015,
     horario: 'Consultar horário de funcionamento'
   },
   {
     nome: 'Camilo Supermercados',
-    endereco: 'Av. Amazonas, 2024 – Centro, Mandaguari/PR',
+    endereco: 'Mandaguari/PR',
     categoria: 'lampadas',
-    lat: -23.5472,
-    lng: -51.6695,
+    lat: -23.5178117,
+    lng: -51.6813042,
     horario: 'Consultar horário de funcionamento'
   },
   {
     nome: 'Eletro Mandaguari',
-    endereco: 'Av. Amazonas, 2268 – Centro, Mandaguari/PR',
+    endereco: 'Mandaguari/PR',
     categoria: 'lampadas',
-    lat: -23.5468,
-    lng: -51.6680,
+    lat: -23.517471,
+    lng: -51.6834733,
     horario: 'Consultar horário de funcionamento'
   },
+
+  // ── MANDAGUARI — Eletrônicos ──
   {
-    nome: 'Magazine Luiza (Filial 693)',
-    endereco: 'Av. Amazonas, 807 – Centro, Mandaguari/PR – CEP 86975-000',
+    nome: 'Magazine Luiza',
+    endereco: 'Mandaguari/PR',
     categoria: 'eletronicos',
-    lat: -23.5490,
-    lng: -51.6740,
+    lat: -23.5267046,
+    lng: -51.6747515,
     horario: 'Consultar horário de funcionamento'
   },
   {
     nome: 'ACAMAN — Reciclagem e Eletrônicos',
-    endereco: 'R. Pedro Alves Madeira, 84 – Mandaguari/PR',
+    endereco: 'Mandaguari/PR',
     categoria: 'reciclagem',
-    lat: -23.5500,
-    lng: -51.6700,
+    lat: -23.5153701,
+    lng: -51.6905629,
     horario: 'Consultar ACAMAN para dias de coleta especial (quartas mediante solicitação)'
   },
+
+  // ── MANDAGUARI — Medicamentos ──
   {
-    nome: 'Farmácia Nissei Mandaguari',
-    endereco: 'Av. Amazonas, 899 – Centro, Mandaguari/PR',
+    nome: 'Farmácia Nissei',
+    endereco: 'Mandaguari/PR',
     categoria: 'medicamento',
-    lat: -23.5485,
-    lng: -51.6735,
-    horario: 'Consultar horário de funcionamento'
-  },
-  {
-    nome: 'Luiz Job de Souza — Pneus',
-    endereco: 'Pq. Industrial Norte, Mandaguari/PR',
-    categoria: 'pneus',
-    lat: -23.5440,
-    lng: -51.6650,
-    horario: '(44) 3233-3035 — consultar horário'
-  },
-  {
-    nome: 'Assoc. Distribuidores de Insumos — Defensivo Agrícola',
-    endereco: 'Estrada Velha para Paiçandu, 532 – saída para Paiçandu, Mandaguari/PR',
-    categoria: 'defensivo',
-    lat: -23.5560,
-    lng: -51.6800,
+    lat: -23.5263148,
+    lng: -51.6754988,
     horario: 'Consultar horário de funcionamento'
   },
 
-  // ── REGIÃO ──
-  {
-    nome: 'Pacaembu Autopeças — Baterias',
-    endereco: 'Av. Pref. Sincler Sambatti, 4892 – Jd. Ipanema, Maringá/PR',
-    categoria: 'pilhas',
-    lat: -23.4010,
-    lng: -51.9400,
-    horario: 'Consultar horário de funcionamento'
-  },
-  {
-    nome: 'TSD Logística — Baterias',
-    endereco: 'Av. Paranavai, 2381 – Pq. Industrial Bandeirantes, Maringá/PR',
-    categoria: 'pilhas',
-    lat: -23.4050,
-    lng: -51.9450,
-    horario: 'Consultar horário de funcionamento'
-  },
-  {
-    nome: 'WG First Line Baterias',
-    endereco: 'Av. Pioneiro Antônio Franco de Morais, 1021 – Maringá/PR',
-    categoria: 'pilhas',
-    lat: -23.3980,
-    lng: -51.9350,
-    horario: 'Consultar horário de funcionamento'
-  },
-  {
-    nome: 'Auto Posto Reunidos — Óleo Lubrificante',
-    endereco: 'Av. Rio de Janeiro, 1161 – Industrial, Astorga/PR',
-    categoria: 'oleo_lub',
-    lat: -23.2270,
-    lng: -51.6680,
-    horario: 'Consultar horário de funcionamento'
-  },
-  {
-    nome: 'Beija Flor Produtos Automotivos — Óleo Lubrificante',
-    endereco: 'R. Guaratinga, 45 – Pq. Industrial II, Arapongas/PR',
-    categoria: 'oleo_lub',
-    lat: -23.4280,
-    lng: -51.4280,
-    horario: 'Consultar horário de funcionamento'
-  },
+  // ── MANDAGUARI — Pneus ──
   {
     nome: 'Reciclagem de Pneus Paraná',
-    endereco: 'Av. das Indústrias, 200 – Região de Mandaguari/PR',
+    endereco: 'Mandaguari/PR',
     categoria: 'pneus',
-    lat: -23.5520,
-    lng: -51.6620,
+    lat: -23.5161184,
+    lng: -51.6893769,
+    horario: 'Consultar horário de funcionamento'
+  },
+
+  // ── REGIÃO — Defensivo Agrícola ──
+  {
+    nome: 'ADITA — Defensivo Agrícola',
+    endereco: 'Maringá/PR',
+    categoria: 'defensivo',
+    lat: -23.4458855,
+    lng: -52.000784,
+    horario: 'Consultar horário de funcionamento'
+  },
+
+  // ── REGIÃO — Baterias de Chumbo ──
+  {
+    nome: 'Pacaembu Autopeças — Baterias',
+    endereco: 'Maringá/PR',
+    categoria: 'pilhas',
+    lat: -23.4599079,
+    lng: -51.9382897,
     horario: 'Consultar horário de funcionamento'
   },
   {
-    nome: 'Ponto de Coleta de Pneus — Jandaia do Sul',
-    endereco: 'R. Prof. Roberto R. Chaves, s/nº – Jandaia do Sul/PR',
-    categoria: 'pneus',
-    lat: -23.5990,
-    lng: -51.6430,
-    horario: '(43) 3432-1390 — consultar horário'
+    nome: 'Toli — Baterias',
+    endereco: 'Maringá/PR',
+    categoria: 'pilhas',
+    lat: -23.4191175,
+    lng: -51.9819664,
+    horario: 'Consultar horário de funcionamento'
+  },
+  {
+    nome: 'WG Baterias',
+    endereco: 'Maringá/PR',
+    categoria: 'pilhas',
+    lat: -23.3885321,
+    lng: -51.9508723,
+    horario: 'Consultar horário de funcionamento'
   },
 ];
 
 // Mapa centrado em Mandaguari
-const map = L.map('map').setView([-23.5490, -51.6720], 13);
+const map = L.map('map').setView([-23.5300, -51.7800], 11);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
