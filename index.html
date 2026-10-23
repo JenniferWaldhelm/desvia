@@ -1584,7 +1584,7 @@
       { nome: 'WG Baterias', endereco: 'Maringá/PR', licenca: '🔍 Licença não verificada', obs: 'Atende região de Mandaguari' },
     ],
     entulho: [
-      { nome: 'Líder Multicoisas', endereco: 'Mandaguari/PR', licenca: '✅ LAS válida até 09/12/2034 — CNPJ 28.508.469/0001-55', parceiro: false },
+      { nome: 'Líder Multicoisas', endereco: 'Av. Amazonas, 150-A — Centro, Mandaguari/PR', licenca: '✅ LAS válida até 09/12/2034 — CNPJ 28.508.469/0001-55', tel: '(44) 3133-2030', parceiro: false },
     ],
     oleo: [
       { nome: 'ACAMAN — Associação dos Catadores de Mandaguari', endereco: 'R. Pedro Alves Madeira, 84 — Parque Industrial II, Mandaguari/PR', licenca: '✅ Parceiro municipal', parceiro: true },
@@ -1641,6 +1641,7 @@
               <strong style="color:var(--escuro); font-size:1rem; padding-right:${p.parceiro ? '9rem' : '0'};">${p.nome}</strong><br>
               <span style="color:var(--cinza); font-size:0.88rem;">📍 ${p.endereco}</span><br>
               <span style="font-size:0.82rem; margin-top:4px; display:block;">${p.licenca}</span>
+              ${p.tel ? `<span style="font-size:0.82rem; color:var(--cinza); margin-top:2px; display:block;">📞 ${p.tel}</span>` : ''}
               ${p.obs ? `<span style="font-size:0.82rem; color:var(--cinza); margin-top:2px; display:block;">ℹ️ ${p.obs}</span>` : ''}
             </div>`).join('');
           conteudo.innerHTML = `
