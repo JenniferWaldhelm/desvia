@@ -1643,7 +1643,7 @@
             <h3 style="color:var(--escuro); margin-bottom:1rem; font-size:1.1rem;">${label} — pontos de descarte em Mandaguari/PR</h3>
             <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.25rem;">${cards}</div>
             <div style="text-align:center;">
-              <a href="#mapa" style="color:var(--verde); font-weight:600; font-size:0.9rem; text-decoration:none;">🗺 Ver no mapa →</a>
+              <button onclick="verNoMapa()" style="background:none; border:none; cursor:pointer; color:var(--verde); font-weight:600; font-size:0.9rem; text-decoration:underline;">🗺 Ver no mapa →</button>
             </div>`;
         }
       }
@@ -1653,9 +1653,14 @@
     });
   });
 
+  // Normaliza texto removendo acentos para busca robusta
+  function norm(str) {
+    return (str || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
   // Busca em tempo real — categorias + pontos de coleta + endereços
   function filtrarCategorias() {
-    const termo = document.getElementById('buscaCategoria').value.toLowerCase().trim();
+    const termo = norm(document.getElementById('buscaCategoria').value.trim());
     const cards = document.querySelectorAll('.cat-card');
 
     if (!termo) {
@@ -1681,15 +1686,15 @@
     let encontrou = false;
     cards.forEach(card => {
       const cat = card.dataset.cat || '';
-      const textoCard = card.textContent.toLowerCase();
-      const extras = (sinonimos[cat] || []).join(' ');
+      const textoCard = norm(card.textContent);
+      const extras = norm((sinonimos[cat] || []).join(' '));
       const tudo = textoCard + ' ' + extras;
 
       // Também busca nos pontos de coleta desta categoria
       let textoPontos = '';
       if (pontosPorCategoria[cat]) {
         pontosPorCategoria[cat].forEach(p => {
-          textoPontos += (p.nome + ' ' + p.endereco + ' ' + (p.obs||'')).toLowerCase() + ' ';
+          textoPontos += norm(p.nome + ' ' + p.endereco + ' ' + (p.obs||'')) + ' ';
         });
       }
 
@@ -1722,6 +1727,26 @@
   const btnBusca = document.querySelector('.search-bar button');
   if (btnBusca) btnBusca.addEventListener('click', filtrarCategorias);
 
+  // Abre aba seletiva, rola até o mapa e faz flyTo no ponto (id opcional)
+  function verNoMapa(id) {
+    // Ativa aba seletiva
+    const btnSeletiva = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.textContent.includes('eletiva'));
+    if (btnSeletiva) mostrarColeta('seletiva', btnSeletiva);
+    // Rola até o mapa
+    setTimeout(() => {
+      const el = document.getElementById('mapa-pontos');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // FlyTo no marker específico
+      if (id && window._mapaMarkers && window._mapaMarkers[id]) {
+        setTimeout(() => {
+          const m = window._mapaMarkers[id];
+          mapaLeaflet.flyTo(m.getLatLng(), 17, { duration: 0.8 });
+          m.openPopup();
+        }, 500);
+      }
+    }, 300);
+  }
+
   // Mapa Leaflet de pontos de coleta
   let mapaLeaflet = null;
   function iniciarMapaPontos() {
@@ -1748,18 +1773,20 @@
 
     const pontos = [
       // Parceiros municipais — verde
-      { lat: -23.5420, lng: -51.6580, cor: '#2D6A4F', titulo: '♻️ ACAMAN', desc: 'R. Pedro Alves Madeira, 84 — Parque Industrial II<br>Recicláveis, eletrônicos, óleo de fritura<br><strong>Parceiro municipal</strong>' },
-      { lat: -23.5490, lng: -51.6710, cor: '#2D6A4F', titulo: '🏛 Almoxarifado Municipal', desc: 'Prefeitura de Mandaguari<br>Móveis/volumosos (até 0,5 m³/mês) e entulho (até 1 m³/mês)<br><strong>Serviço público — agende</strong>' },
+      { id: 'acaman',       lat: -23.5420, lng: -51.6580, cor: '#2D6A4F', titulo: '♻️ ACAMAN', desc: 'R. Pedro Alves Madeira, 84 — Parque Industrial II<br>Recicláveis, eletrônicos, óleo de fritura<br><strong>Parceiro municipal</strong>' },
+      { id: 'almoxarifado', lat: -23.5490, lng: -51.6710, cor: '#2D6A4F', titulo: '🏛 Almoxarifado Municipal', desc: 'Prefeitura de Mandaguari<br>Móveis/volumosos (até 0,5 m³/mês) e entulho (até 1 m³/mês)<br><strong>Serviço público — agende</strong>' },
       // Transportadora — laranja
-      { lat: -23.5505, lng: -51.6730, cor: '#B7792A', titulo: '🚛 Líder Multicoisas', desc: 'Av. Amazonas, 150-A — Centro<br>Transporte de entulho e RCC<br>📞 (44) 3133-2030' },
-      // Farmácias (logística reversa medicamentos) — azul
-      { lat: -23.5500, lng: -51.6700, cor: '#1E88E5', titulo: '💊 Farmácias (logística reversa)', desc: 'Farmácias do centro aceitam medicamentos vencidos.<br>Procure pelo lacre da campanha de logística reversa.' },
+      { id: 'lider',        lat: -23.5505, lng: -51.6730, cor: '#B7792A', titulo: '🚛 Líder Multicoisas', desc: 'Av. Amazonas, 150-A — Centro<br>Transporte de entulho e RCC<br>📞 (44) 3133-2030' },
+      // Farmácias — azul
+      { id: 'farmacias',    lat: -23.5500, lng: -51.6700, cor: '#1E88E5', titulo: '💊 Farmácias (logística reversa)', desc: 'Farmácias do centro aceitam medicamentos vencidos.<br>Procure pelo lacre da campanha de logística reversa.' },
     ];
 
+    window._mapaMarkers = {};
     pontos.forEach(p => {
-      L.marker([p.lat, p.lng], { icon: icone(p.cor) })
+      const m = L.marker([p.lat, p.lng], { icon: icone(p.cor) })
         .addTo(mapaLeaflet)
         .bindPopup(`<strong>${p.titulo}</strong><br>${p.desc}`, { maxWidth: 240 });
+      if (p.id) window._mapaMarkers[p.id] = m;
     });
 
     // Invalida tamanho após transição CSS (aba oculta → visível)
