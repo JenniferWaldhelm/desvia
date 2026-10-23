@@ -1755,7 +1755,7 @@
     if (!el) return;
 
     mapaLeaflet = L.map('mapa-pontos', { zoomControl: true, scrollWheelZoom: false })
-      .setView([-23.5495, -51.6714], 14);
+      .setView([-23.5220, -51.6820], 14);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -1772,12 +1772,24 @@
     }
 
     const pontos = [
-      // Parceiros municipais — verde
-      { id: 'acaman',       lat: -23.5100, lng: -51.6920, cor: '#2D6A4F', titulo: '♻️ ACAMAN', desc: 'R. Pedro Alves Madeira, 84 — Parque Industrial II<br>Recicláveis, eletrônicos, óleo de fritura<br><strong>Parceiro municipal</strong>' },
+      // ── Parceiros municipais — verde escuro ──
+      { id: 'acaman',       lat: -23.5163534, lng: -51.6900485, cor: '#2D6A4F', titulo: '♻️ ACAMAN — Reciclagem e Eletrônicos', desc: 'Mandaguari/PR — Parque Industrial II<br>Recicláveis, eletrônicos, óleo de fritura<br>Coleta especial: quartas mediante solicitação<br><span style="color:#2A7A2A;font-weight:600">✅ Licença LAS — válida até 25/09/2030</span>' },
       { id: 'almoxarifado', lat: -23.5163118, lng: -51.6884851, cor: '#2D6A4F', titulo: '🏛 Almoxarifado Municipal', desc: 'Prefeitura de Mandaguari<br>Móveis/volumosos (até 0,5 m³/mês) e entulho (até 1 m³/mês)<br><strong>Serviço público — agende</strong>' },
+      // ── Transportadora — laranja ──
       { id: 'lider',        lat: -23.5215422, lng: -51.6793386, cor: '#B7792A', titulo: '🚛 Líder Multicoisas', desc: 'Av. Amazonas, 150-A — Centro<br>Transporte de entulho e RCC<br>📞 (44) 3133-2030' },
-      { id: 'vigilancia',   lat: -23.5210, lng: -51.6780, cor: '#7B2D8B', titulo: '🏥 Vigilância Sanitária', desc: 'Mandaguari/PR<br>Medicamentos vencidos, resíduos de saúde domiciliar e animais<br><strong>Confirme endereço na prefeitura</strong>' },
-      { id: 'farmacias',    lat: -23.5215422, lng: -51.6793386, cor: '#1E88E5', titulo: '💊 Farmácias (logística reversa)', desc: 'Farmácias do centro aceitam medicamentos vencidos.<br>Procure pelo lacre da campanha de logística reversa.' },
+      // ── Vigilância Sanitária — roxo ──
+      { id: 'vigilancia',   lat: -23.5218052, lng: -51.6896359, cor: '#7B2D8B', titulo: '🏥 Vigilância Sanitária', desc: 'Mandaguari/PR<br>Medicamentos vencidos, resíduos de saúde domiciliar e animais' },
+      // ── Lâmpadas — amarelo ──
+      { id: 'coprosid',     lat: -23.5327406, lng: -51.6707402, cor: '#C9A800', titulo: '💡 Coprosid Materiais Elétricos', desc: 'Mandaguari/PR<br>Descarte de lâmpadas<br>Consultar horário de funcionamento' },
+      { id: 'amigao',       lat: -23.525424,  lng: -51.674015,  cor: '#C9A800', titulo: '💡 Amigão Supermercados', desc: 'Mandaguari/PR<br>Descarte de lâmpadas<br><span style="color:#2A7A2A;font-weight:600">✅ Licença DLAM — válida até 04/03/2032</span>' },
+      { id: 'camilo',       lat: -23.5178117, lng: -51.6813042, cor: '#C9A800', titulo: '💡 Camilo Supermercados', desc: 'Mandaguari/PR<br>Descarte de lâmpadas<br><span style="color:#2A7A2A;font-weight:600">✅ Licença DLAM — válida até 12/08/2035</span>' },
+      { id: 'eletromandaguari', lat: -23.517471, lng: -51.6834733, cor: '#C9A800', titulo: '💡 Eletro Mandaguari', desc: 'Mandaguari/PR<br>Descarte de lâmpadas<br>Consultar horário de funcionamento' },
+      // ── Eletrônicos — ciano ──
+      { id: 'magalu',       lat: -23.5267046, lng: -51.6747515, cor: '#1abc9c', titulo: '💻 Magazine Luiza', desc: 'Mandaguari/PR<br>Descarte de eletrônicos<br><span style="color:#2A7A2A;font-weight:600">✅ Licença DLAM — válida até 25/07/2033</span>' },
+      // ── Medicamentos — azul ──
+      { id: 'nissei',       lat: -23.5263148, lng: -51.6754988, cor: '#1E88E5', titulo: '💊 Farmácia Nissei', desc: 'Mandaguari/PR<br>Descarte de medicamentos vencidos<br><span style="color:#2A7A2A;font-weight:600">✅ Licença DLAM — válida até 16/02/2033</span>' },
+      // ── Pneus — cinza ──
+      { id: 'pneus',        lat: -23.5161184, lng: -51.6893769, cor: '#7f8c8d', titulo: '🚗 Reciclagem de Pneus Paraná', desc: 'Mandaguari/PR<br>Descarte de pneus inservíveis<br><span style="color:#2A7A2A;font-weight:600">✅ Licença RLO — válida até 17/08/2028</span>' },
     ];
 
     window._mapaMarkers = {};
