@@ -878,7 +878,16 @@
     .stats-inner { gap: 2rem; }
     section { padding: 3.5rem 1.25rem; }
   }
+  #mapa-pontos .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  #mapa-pontos .leaflet-popup-content strong { font-size: 0.92rem; }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </head>
 <body>
 
@@ -1118,16 +1127,11 @@
     <div id="coleta-seletiva" class="coleta-grid" style="display:none">
       <div style="grid-column: 1 / -1;">
 
-        <!-- Mapa oficial SMDEMAT/ACAMAN 2021 -->
-        <img
-          src="mapa-setores-coleta.jpg"
-          alt="Mapa dos setores de coleta seletiva de Mandaguari — setores amarelo (segunda), verde (segunda e quinta), azul (terça) e rosa (terça e sexta)"
-          style="width:100%; max-width:720px; border-radius:12px; border:1px solid var(--borda, #e0e0e0); display:block;"
-        >
-
-        <p style="font-size:0.78rem; color:var(--cinza-light, #aaa); margin-top:0.6rem; line-height:1.5;">
-          Fonte: SMDEMAT / ACAMAN, 2021. Dúvidas sobre seu bairro?
-          <a href="https://wa.me/5544999054535" style="color:var(--verde);" target="_blank" rel="noopener">Fale com o Projeto Desvia</a>.
+        <!-- Mapa de pontos de coleta — Leaflet -->
+        <div id="mapa-pontos" style="width:100%; height:380px; border-radius:12px; border:1px solid var(--borda, #e0e0e0); overflow:hidden; margin-bottom:0.6rem;"></div>
+        <p style="font-size:0.78rem; color:var(--cinza-light, #aaa); line-height:1.5;">
+          Pontos de coleta seletiva e descarte especial em Mandaguari. Clique no marcador para detalhes.
+          Dúvidas? <a href="https://wa.me/5544999054535" style="color:var(--verde);" target="_blank" rel="noopener">Fale com o Projeto Desvia</a>.
         </p>
       </div>
     </div>
@@ -1534,6 +1538,7 @@
       const el = document.getElementById('coleta-' + t);
       if (el) el.style.display = t === tipo ? 'grid' : 'none';
     });
+    if (tipo === 'seletiva') setTimeout(iniciarMapaPontos, 150);
   }
 
   // ── Dados dos pontos por categoria ──
@@ -1716,6 +1721,50 @@
   // Botão de busca
   const btnBusca = document.querySelector('.search-bar button');
   if (btnBusca) btnBusca.addEventListener('click', filtrarCategorias);
+
+  // Mapa Leaflet de pontos de coleta
+  let mapaLeaflet = null;
+  function iniciarMapaPontos() {
+    if (mapaLeaflet) return;
+    const el = document.getElementById('mapa-pontos');
+    if (!el) return;
+
+    mapaLeaflet = L.map('mapa-pontos', { zoomControl: true, scrollWheelZoom: false })
+      .setView([-23.5495, -51.6714], 14);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(mapaLeaflet);
+
+    // Ícones por tipo
+    function icone(cor) {
+      return L.divIcon({
+        className: '',
+        html: `<div style="width:28px;height:28px;border-radius:50% 50% 50% 0;background:${cor};border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);transform:rotate(-45deg)"></div>`,
+        iconSize: [28, 28], iconAnchor: [14, 28], popupAnchor: [0, -30]
+      });
+    }
+
+    const pontos = [
+      // Parceiros municipais — verde
+      { lat: -23.5420, lng: -51.6580, cor: '#2D6A4F', titulo: '♻️ ACAMAN', desc: 'R. Pedro Alves Madeira, 84 — Parque Industrial II<br>Recicláveis, eletrônicos, óleo de fritura<br><strong>Parceiro municipal</strong>' },
+      { lat: -23.5490, lng: -51.6710, cor: '#2D6A4F', titulo: '🏛 Almoxarifado Municipal', desc: 'Prefeitura de Mandaguari<br>Móveis/volumosos (até 0,5 m³/mês) e entulho (até 1 m³/mês)<br><strong>Serviço público — agende</strong>' },
+      // Transportadora — laranja
+      { lat: -23.5505, lng: -51.6730, cor: '#B7792A', titulo: '🚛 Líder Multicoisas', desc: 'Av. Amazonas, 150-A — Centro<br>Transporte de entulho e RCC<br>📞 (44) 3133-2030' },
+      // Farmácias (logística reversa medicamentos) — azul
+      { lat: -23.5500, lng: -51.6700, cor: '#1E88E5', titulo: '💊 Farmácias (logística reversa)', desc: 'Farmácias do centro aceitam medicamentos vencidos.<br>Procure pelo lacre da campanha de logística reversa.' },
+    ];
+
+    pontos.forEach(p => {
+      L.marker([p.lat, p.lng], { icon: icone(p.cor) })
+        .addTo(mapaLeaflet)
+        .bindPopup(`<strong>${p.titulo}</strong><br>${p.desc}`, { maxWidth: 240 });
+    });
+
+    // Invalida tamanho após transição CSS (aba oculta → visível)
+    setTimeout(() => mapaLeaflet.invalidateSize(), 300);
+  }
 
   // Scroll suave
   document.querySelectorAll('a[href^="#"]').forEach(a => {
