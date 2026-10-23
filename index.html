@@ -1495,25 +1495,25 @@
   // ── Dados dos pontos por categoria ──
   const pontosPorCategoria = {
     lampadas: [
+      { nome: 'Amigão Supermercados', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 04/03/2032', parceiro: true },
+      { nome: 'Camilo Supermercados', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 12/08/2035', parceiro: true },
       { nome: 'Coprosid Materiais Elétricos', endereco: 'Mandaguari/PR', licenca: '⚠️ Sem licença ambiental identificada' },
-      { nome: 'Amigão Supermercados', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 04/03/2032' },
-      { nome: 'Camilo Supermercados', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 12/08/2035' },
       { nome: 'Eletro Mandaguari', endereco: 'Mandaguari/PR', licenca: '⚠️ Sem licença ambiental identificada' },
     ],
     eletronicos: [
-      { nome: 'Magazine Luiza', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 25/07/2033' },
+      { nome: 'Magazine Luiza', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 25/07/2033', parceiro: true },
     ],
     reciclagem: [
-      { nome: 'ACAMAN — Reciclagem e Eletrônicos', endereco: 'Mandaguari/PR', licenca: '✅ LAS — válida até 25/09/2030', obs: 'Coleta especial às quartas mediante solicitação' },
+      { nome: 'ACAMAN — Reciclagem e Eletrônicos', endereco: 'Mandaguari/PR', licenca: '✅ LAS — válida até 25/09/2030', parceiro: true, obs: 'Coleta especial às quartas mediante solicitação' },
     ],
     medicamento: [
-      { nome: 'Farmácia Nissei', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 16/02/2033' },
+      { nome: 'Farmácia Nissei', endereco: 'Mandaguari/PR', licenca: '✅ DLAM — válida até 16/02/2033', parceiro: true },
     ],
     pneus: [
-      { nome: 'Reciclagem de Pneus Paraná', endereco: 'Mandaguari/PR', licenca: '✅ RLO — válida até 17/08/2028' },
+      { nome: 'Reciclagem de Pneus Paraná', endereco: 'Mandaguari/PR', licenca: '✅ RLO — válida até 17/08/2028', parceiro: true },
     ],
     defensivo: [
-      { nome: 'ADITA — Defensivo Agrícola', endereco: 'Maringá/PR', licenca: '✅ RLO — válida até 26/05/2027', obs: 'Atende região de Mandaguari' },
+      { nome: 'ADITA — Defensivo Agrícola', endereco: 'Maringá/PR', licenca: '✅ RLO — válida até 26/05/2027', parceiro: true, obs: 'Atende região de Mandaguari' },
     ],
     pilhas: [
       { nome: 'Pacaembu Autopeças — Baterias', endereco: 'Maringá/PR', licenca: '🔍 Licença não verificada', obs: 'Atende região de Mandaguari' },
@@ -1569,8 +1569,9 @@
             </div>`;
         } else {
           const cards = pontos.map(p => `
-            <div style="padding:1rem 1.25rem; background:var(--off-white); border-radius:10px; border-left:4px solid var(--verde);">
-              <strong style="color:var(--escuro); font-size:1rem;">${p.nome}</strong><br>
+            <div style="padding:1rem 1.25rem; background:var(--off-white); border-radius:10px; border-left:4px solid ${p.parceiro ? '#E8621A' : 'var(--verde)'}; position:relative;">
+              ${p.parceiro ? `<span style="position:absolute; top:0.75rem; right:0.75rem; background:linear-gradient(135deg,#E8621A,#c94e12); color:white; font-size:0.7rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:20px; letter-spacing:0.03em; text-transform:uppercase;">⭐ Parceiro Verificado</span>` : ''}
+              <strong style="color:var(--escuro); font-size:1rem; padding-right:${p.parceiro ? '9rem' : '0'};">${p.nome}</strong><br>
               <span style="color:var(--cinza); font-size:0.88rem;">📍 ${p.endereco}</span><br>
               <span style="font-size:0.82rem; margin-top:4px; display:block;">${p.licenca}</span>
               ${p.obs ? `<span style="font-size:0.82rem; color:var(--cinza); margin-top:2px; display:block;">ℹ️ ${p.obs}</span>` : ''}
