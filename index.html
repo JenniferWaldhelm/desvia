@@ -1114,12 +1114,140 @@
       </div>
     </div>
 
-    <!-- COLETA SELETIVA TAB (redireciona pro mesmo conteúdo) -->
+    <!-- COLETA SELETIVA TAB — mapa de setores -->
     <div id="coleta-seletiva" class="coleta-grid" style="display:none">
-      <div class="coleta-card" style="border-left-color:#378ADD; grid-column: 1 / -1;">
-        <h4>♻️ A coleta seletiva em Mandaguari é feita pela ACAMAN</h4>
-        <p class="dias">Clique na aba <strong>"Lixo comum"</strong> acima para ver os dias por bairro — a coleta seletiva segue o mesmo calendário.</p>
-        <span class="horario">Segunda/quinta e terça/sexta — conforme seu bairro</span>
+      <div style="grid-column: 1 / -1;">
+        <p style="font-size:0.92rem; color:var(--cinza); margin-bottom:1rem; line-height:1.6;">
+          Encontre seu setor no mapa e veja em quais dias o caminhão passa na sua rua.
+        </p>
+
+        <!-- Legenda -->
+        <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-bottom:1rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(255,213,0,0.12); border:1.5px solid #FFD500; border-radius:8px; padding:0.4rem 0.75rem;">
+            <span style="width:14px; height:14px; border-radius:3px; background:#FFD500; flex-shrink:0;"></span>
+            <span style="font-size:0.82rem; font-weight:600; color:var(--text);">🟡 Setor Amarelo — Segunda-feira</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(56,142,60,0.12); border:1.5px solid #388E3C; border-radius:8px; padding:0.4rem 0.75rem;">
+            <span style="width:14px; height:14px; border-radius:3px; background:#388E3C; flex-shrink:0;"></span>
+            <span style="font-size:0.82rem; font-weight:600; color:var(--text);">🟢 Setor Verde — Segunda e Quinta-feira</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(30,136,229,0.12); border:1.5px solid #1E88E5; border-radius:8px; padding:0.4rem 0.75rem;">
+            <span style="width:14px; height:14px; border-radius:3px; background:#1E88E5; flex-shrink:0;"></span>
+            <span style="font-size:0.82rem; font-weight:600; color:var(--text);">🔵 Setor Azul — Terça-feira</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(233,30,99,0.12); border:1.5px solid #E91E63; border-radius:8px; padding:0.4rem 0.75rem;">
+            <span style="width:14px; height:14px; border-radius:3px; background:#E91E63; flex-shrink:0;"></span>
+            <span style="font-size:0.82rem; font-weight:600; color:var(--text);">🩷 Setor Rosa — Terça e Sexta-feira</span>
+          </div>
+        </div>
+
+        <!-- Mapa Leaflet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+        <div id="mapa-setores" style="height:420px; border-radius:14px; overflow:hidden; border:1.5px solid var(--borda, #e0e0e0); position:relative; z-index:0;"></div>
+
+        <script>
+        (function() {
+          function initMapaSetores() {
+            if (!document.getElementById('mapa-setores') || window._mapaSetoresInit) return;
+            if (typeof L === 'undefined') { setTimeout(initMapaSetores, 200); return; }
+            window._mapaSetoresInit = true;
+
+            var map = L.map('mapa-setores', { zoomControl: true, scrollWheelZoom: false })
+              .setView([-23.5432, -51.6740], 14);
+            window._mapaSetoresInstance = map;
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+              maxZoom: 18
+            }).addTo(map);
+
+            // ── Setores aproximados baseados na Figura 31 do Diagnóstico (SMDEMAT 2021)
+            // Coordenadas convertidas de UTM SIRGAS2000 Fuso22S para lat/lng
+            // Área urbana de Mandaguari: ~429000–432000E / 7397500–7400000N
+
+            var setores = [
+              {
+                nome: 'Setor Amarelo',
+                dias: 'Segunda-feira',
+                emoji: '🟡',
+                cor: '#FFD500',
+                coords: [
+                  [-23.5350, -51.6870],[-23.5350, -51.6750],[-23.5410, -51.6750],
+                  [-23.5440, -51.6800],[-23.5420, -51.6870]
+                ]
+              },
+              {
+                nome: 'Setor Verde',
+                dias: 'Segunda e Quinta-feira',
+                emoji: '🟢',
+                cor: '#388E3C',
+                coords: [
+                  [-23.5340, -51.6750],[-23.5340, -51.6620],[-23.5430, -51.6620],
+                  [-23.5450, -51.6680],[-23.5450, -51.6750],[-23.5410, -51.6750]
+                ]
+              },
+              {
+                nome: 'Setor Azul',
+                dias: 'Terça-feira',
+                emoji: '🔵',
+                cor: '#1E88E5',
+                coords: [
+                  [-23.5440, -51.6800],[-23.5410, -51.6750],[-23.5450, -51.6750],
+                  [-23.5450, -51.6800],[-23.5490, -51.6810],[-23.5490, -51.6860],
+                  [-23.5460, -51.6870]
+                ]
+              },
+              {
+                nome: 'Setor Rosa',
+                dias: 'Terça e Sexta-feira',
+                emoji: '🩷',
+                cor: '#E91E63',
+                coords: [
+                  [-23.5450, -51.6750],[-23.5450, -51.6620],[-23.5560, -51.6620],
+                  [-23.5560, -51.6750],[-23.5490, -51.6810],[-23.5490, -51.6750]
+                ]
+              }
+            ];
+
+            setores.forEach(function(s) {
+              var poly = L.polygon(s.coords, {
+                color: s.cor,
+                fillColor: s.cor,
+                fillOpacity: 0.28,
+                weight: 2.5,
+                opacity: 0.85
+              }).addTo(map);
+
+              poly.bindPopup(
+                '<div style="font-family:sans-serif; min-width:160px;">' +
+                '<strong style="font-size:1rem;">' + s.emoji + ' ' + s.nome + '</strong><br>' +
+                '<span style="color:#555; font-size:0.88rem;">🗓 ' + s.dias + '</span><br>' +
+                '<span style="color:#777; font-size:0.8rem; margin-top:4px; display:block;">Clique fora para fechar</span>' +
+                '</div>',
+                { maxWidth: 220 }
+              );
+
+              poly.on('mouseover', function() { this.setStyle({ fillOpacity: 0.5 }); });
+              poly.on('mouseout', function() { this.setStyle({ fillOpacity: 0.28 }); });
+            });
+          }
+
+          window._initMapaSetores = initMapaSetores;
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMapaSetores);
+          } else {
+            initMapaSetores();
+          }
+        })();
+        </script>
+
+        <p style="font-size:0.78rem; color:var(--cinza-light, #aaa); margin-top:0.6rem; line-height:1.5;">
+          ⚠️ Mapa com delimitação aproximada baseada no Diagnóstico Municipal (SMDEMAT, 2021). Dúvidas sobre seu endereço?
+          <a href="https://wa.me/5544999054535" style="color:var(--verde);" target="_blank" rel="noopener">Fale com o Projeto Desvia</a>.
+        </p>
       </div>
     </div>
 
@@ -1521,6 +1649,16 @@
       const el = document.getElementById('coleta-' + t);
       if (el) el.style.display = t === tipo ? 'grid' : 'none';
     });
+    // inicializa/redimensiona mapa de setores ao abrir aba seletiva
+    if (tipo === 'seletiva') {
+      setTimeout(function() {
+        if (window._mapaSetoresInstance) {
+          window._mapaSetoresInstance.invalidateSize();
+        } else if (typeof window._initMapaSetores === 'function') {
+          window._initMapaSetores();
+        }
+      }, 100);
+    }
   }
 
   // ── Dados dos pontos por categoria ──
