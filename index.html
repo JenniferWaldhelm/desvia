@@ -1033,23 +1033,19 @@
 
     <div class="mapa-wrapper">
       <div class="mapa-info">
-        <h3>🟢 Pontos voluntários</h3>
-        <p>Locais fixos. Você pode levar seus resíduos a qualquer momento, sem precisar agendar.</p>
+        <h3 style="margin-top:0">O que cada cor significa?</h3>
+        <p>No mapa, cada cor identifica o tipo de resíduo aceito no ponto.</p>
 
-        <h3>🔵 Ecopontos da prefeitura</h3>
-        <p>Pontos oficiais da prefeitura. Aceitam mais tipos de material.</p>
-
-        <h3>🟠 Empresas parceiras</h3>
-        <p>Comércios e empresas que aceitam certos tipos de resíduo. Cada um aceita um tipo específico.</p>
-
-        <h3>🔴 Coleta especial</h3>
-        <p>Para objetos grandes como móveis e entulho. Você precisa agendar com a prefeitura antes.</p>
-
-        <div class="legenda" style="margin-top:1.5rem">
-          <div class="legenda-item"><div class="legenda-dot" style="background:#2D6A4F"></div> Ponto de descarte voluntário</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#378ADD"></div> Ecoponto municipal</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#B7792A"></div> Empresa parceira</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#E24B4A"></div> Coleta especial</div>
+        <div class="legenda" style="margin-top:1rem">
+          <div class="legenda-item"><div class="legenda-dot" style="background:#2D6A4F"></div> ♻️ Reciclagem geral / eletrônicos</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#C9A800"></div> 💡 Lâmpadas</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#1E88E5"></div> 💊 Medicamentos</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#1abc9c"></div> 💻 Eletrônicos / toner</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#7f8c8d"></div> 🚗 Pneus</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#e67e22"></div> 🔋 Pilhas / baterias</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#7B2D8B"></div> 🏥 Saúde / vigilância sanitária</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#27ae60"></div> 🌿 Defensivo agrícola</div>
+          <div class="legenda-item"><div class="legenda-dot" style="background:#B7792A"></div> 🧱 Entulho / RCC</div>
         </div>
 
         <div style="margin-top:1.5rem">
@@ -1115,6 +1111,19 @@
     <!-- COLETA SELETIVA TAB — mapa de setores -->
     <div id="coleta-seletiva" class="coleta-grid" style="display:none">
       <div style="grid-column: 1 / -1;">
+
+        <!-- Filtros do mapa -->
+        <div id="mapa-filtros" style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.75rem;">
+          <button onclick="filtrarMapa('todos',this)" class="filtro-ativo" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid var(--verde); background:var(--verde); color:#fff; cursor:pointer; font-weight:600;">Todos</button>
+          <button onclick="filtrarMapa('reciclagem',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #2D6A4F; background:#fff; color:#2D6A4F; cursor:pointer;">♻️ Reciclagem</button>
+          <button onclick="filtrarMapa('lampadas',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #C9A800; background:#fff; color:#896f00; cursor:pointer;">💡 Lâmpadas</button>
+          <button onclick="filtrarMapa('medicamento',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #1E88E5; background:#fff; color:#1E88E5; cursor:pointer;">💊 Medicamentos</button>
+          <button onclick="filtrarMapa('eletronicos',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #1abc9c; background:#fff; color:#0e8a6e; cursor:pointer;">💻 Eletrônicos</button>
+          <button onclick="filtrarMapa('pneus',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #7f8c8d; background:#fff; color:#5a6566; cursor:pointer;">🚗 Pneus</button>
+          <button onclick="filtrarMapa('baterias',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #e67e22; background:#fff; color:#b85e0a; cursor:pointer;">🔋 Pilhas/Baterias</button>
+          <button onclick="filtrarMapa('defensivo',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #27ae60; background:#fff; color:#1a7a44; cursor:pointer;">🌿 Defensivo</button>
+          <button onclick="filtrarMapa('entulho',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #B7792A; background:#fff; color:#7a4e15; cursor:pointer;">🧱 Entulho</button>
+        </div>
 
         <!-- Mapa de pontos de coleta — Leaflet -->
         <div id="mapa-pontos" style="width:100%; height:380px; border-radius:12px; border:1px solid var(--borda, #e0e0e0); overflow:hidden; margin-bottom:0.6rem;"></div>
@@ -1794,6 +1803,19 @@
       { id: 'novaobra',     lat: -23.4364216, lng: -51.4248987, cor: '#c0392b', titulo: '🏗 A Nova Obra — Reciclagem', desc: 'R. Rouxinol, 2882-B — Arapongas/PR<br>Destinação final de RCC<br>📞 (43) 3152-0755<br><span style="color:#2A7A2A;font-weight:600">✅ Licença RLO — válida até 03/10/2029</span>' },
     ];
 
+    // Mapeamento de categorias → ids dos pontos
+    window._mapaCategoria = {
+      todos:       pontos.map(p => p.id),
+      reciclagem:  ['acaman', 'almoxarifado', 'wpdobrasil'],
+      lampadas:    ['coprosid', 'amigao', 'camilo', 'eletromandaguari'],
+      medicamento: ['nissei', 'vigilancia'],
+      eletronicos: ['magalu', 'acaman', 'wpdobrasil'],
+      pneus:       ['pneus'],
+      baterias:    ['pacaembu', 'toli', 'wgbaterias'],
+      defensivo:   ['adita'],
+      entulho:     ['lider', 'almoxarifado', 'ambiprim', 'novaobra'],
+    };
+
     window._mapaMarkers = {};
     pontos.forEach(p => {
       const m = L.marker([p.lat, p.lng], { icon: icone(p.cor) })
@@ -1804,6 +1826,29 @@
 
     // Invalida tamanho após transição CSS (aba oculta → visível)
     setTimeout(() => mapaLeaflet.invalidateSize(), 300);
+  }
+
+  function filtrarMapa(cat, btn) {
+    if (!window._mapaMarkers || !window._mapaCategoria) return;
+    // Atualiza estilo dos botões
+    document.querySelectorAll('#mapa-filtros button').forEach(b => {
+      b.style.background = '#fff';
+      b.style.color = b.style.borderColor.replace('solid ','');
+      b.classList.remove('filtro-ativo');
+    });
+    if (btn) {
+      btn.style.background = btn.style.borderColor;
+      btn.style.color = '#fff';
+      btn.classList.add('filtro-ativo');
+    }
+    const ativos = window._mapaCategoria[cat] || window._mapaCategoria.todos;
+    Object.entries(window._mapaMarkers).forEach(([id, marker]) => {
+      if (ativos.includes(id)) {
+        if (!mapaLeaflet.hasLayer(marker)) mapaLeaflet.addLayer(marker);
+      } else {
+        if (mapaLeaflet.hasLayer(marker)) mapaLeaflet.removeLayer(marker);
+      }
+    });
   }
 
   // Scroll suave
