@@ -239,7 +239,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {ld}
 </head>
 <body>
-<header><nav><a class="logo" href="{raiz}">Des<span>via</span></a><a class="nav-link" href="{raiz}residuos/">Onde descartar</a></nav></header>
+<header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><a class="nav-link" href="{raiz}residuos/">Onde descartar</a></nav></header>
 <main>
 {corpo}
 </main>
