@@ -19,6 +19,8 @@ import unicodedata
 from datetime import date, datetime
 from pathlib import Path
 
+import hub
+
 RAIZ = Path(__file__).resolve().parent.parent
 CSV = RAIZ / "dados" / "pontos.csv"
 SAIDA = RAIZ / "residuos"
@@ -346,6 +348,7 @@ def gerar():
                 shutil.rmtree(item)
     SAIDA.mkdir(exist_ok=True)
     shutil.copy(Path(__file__).with_name("estilo.css"), SAIDA / "estilo.css")
+    shutil.copy(Path(__file__).with_name("hub.js"), SAIDA / "hub.js")
     urls = [(f"{BASE_URL}/{u}", pr) for u, pr in PAGINAS_FIXAS]
     nomes = {s: (f, c) for s, f, c, _ in CATEGORIAS}
     resumo_cidades = []
@@ -376,7 +379,7 @@ def gerar():
 <h1>Onde descartar {esc(frase)} em {esc(cidade)}</h1>
 <p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)} e região, {n_val} com licença ambiental válida localizada. {esc(DICAS.get(cat, ''))}</p>
 {f'<p class="regra">{esc(regra)}</p>' if regra else ''}
-<p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro.</p>
+<p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro. <a href="../?r={cat}#mapa">Abrir no mapa com filtros</a></p>
 {mapa_js(pts)}
 <section class="lista">
 {''.join(cartao(p, cid_slug) for p in pts)}
@@ -402,19 +405,16 @@ def gerar():
 
         # página da cidade
         url = f"{BASE_URL}/residuos/{cid_slug}/"
-        itens = "".join(f'<li><a href="{s}/"><span>{esc(nomes[s][1])}</span><small>{len(por_cat[s])} {"opção" if len(por_cat[s]) == 1 else "opções"}</small></a></li>'
-                        for s in cats_ordem)
-        corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
-<h1>Onde descartar resíduos em {esc(cidade)}</h1>
-<p class="resposta">Escolha o tipo de resíduo para ver pontos de entrega, cooperativas e empresas que atendem {esc(cidade)}, com a situação da licença ambiental de cada uma.</p>
-<ul class="grade">{itens}</ul>"""
+        ctx = {"norm": norm, "selo": selo_licenca, "aviso_cnpj": aviso_cnpj, "obs_publica": obs_publica,
+               "pessoa_fisica": pessoa_fisica}
+        corpo = hub.corpo_hub(cid_slug, cidade, do_lugar, cats_ordem, nomes, por_cat, ctx)
         jsonld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Cidades", "item": f"{BASE_URL}/residuos/"},
             {"@type": "ListItem", "position": 2, "name": cidade, "item": url}]}]
         (SAIDA / cid_slug / "index.html").write_text(
             pagina(f"Onde descartar resíduos em {cidade}-{UF} | Desvia",
                    f"Pontos de entrega e empresas de coleta e destinação de resíduos em {cidade}, por tipo de resíduo, com a situação da licença ambiental.",
-                   url, "../../", corpo, jsonld), encoding="utf-8")
+                   url, "../../", corpo, jsonld, mapa=True), encoding="utf-8")
         urls.append((url, "0.8"))
 
     # índice de cidades

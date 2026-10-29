@@ -18,12 +18,12 @@ h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
 a { color: var(--verde); }
 
 header { background: var(--verde); padding: 0 16px; position: sticky; top: 0; z-index: 1000; }
-header nav { max-width: 960px; margin: 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+header nav { max-width: 1160px; margin: 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between; }
 .logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; }
 .logo span { color: var(--verde-claro); }
 .nav-link { color: rgba(255,255,255,.9); text-decoration: none; font-weight: 600; font-size: .95rem; }
 
-main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+main { max-width: 1160px; margin: 0 auto; padding: 24px 16px 48px; }
 .trilha { font-size: .9rem; color: var(--cinza); margin-bottom: 12px; }
 .trilha a { color: var(--cinza); }
 h1 { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--verde); margin-bottom: 12px; }
@@ -61,5 +61,57 @@ h2 { font-size: 1.25rem; color: var(--verde); margin: 32px 0 12px; }
 .grade a:hover, .outras a:hover { border-color: var(--verde-claro); }
 .grade small { color: var(--cinza); font-weight: 400; }
 
-footer { border-top: 1px solid var(--cinza-claro); padding: 20px 16px 32px; max-width: 960px; margin: 0 auto; font-size: .85rem; color: var(--cinza); }
+footer { border-top: 1px solid var(--cinza-claro); padding: 20px 16px 32px; max-width: 1160px; margin: 0 auto; font-size: .85rem; color: var(--cinza); }
 footer p + p { margin-top: 8px; }
+
+/* ── Página da cidade: mapa com filtros ── */
+.ferramenta { display: grid; grid-template-columns: minmax(320px, 420px) 1fr; height: 78vh; min-height: 560px; border: 1px solid var(--cinza-claro); border-radius: 12px; overflow: hidden; background: #fff; margin: 16px 0 8px; }
+.painel { display: flex; flex-direction: column; min-height: 0; overflow-y: auto; border-right: 1px solid var(--cinza-claro); background: var(--off-white); }
+.filtros { padding: 14px 16px 12px; display: grid; gap: 12px; background: #fff; border-bottom: 1px solid var(--cinza-claro); }
+.filtros input[type=search] { width: 100%; padding: 10px 12px; border: 1.5px solid var(--cinza-claro); border-radius: 10px; font: inherit; background: var(--off-white); }
+.filtros input[type=search]:focus { outline: none; border-color: var(--verde); }
+.flabel { font-size: .72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--cinza); margin-bottom: 6px; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--cinza-claro); border: 1.5px solid var(--cinza-claro); border-radius: 10px; overflow: hidden; }
+.seg button { flex: 1 1 auto; border: 0; background: #fff; padding: 7px 10px; font: inherit; font-size: .84rem; font-weight: 600; cursor: pointer; color: var(--escuro); }
+.seg button[aria-pressed=true] { background: var(--verde); color: #fff; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1.5px solid var(--cinza-claro); background: #fff; border-radius: 999px; padding: 4px 11px; font: inherit; font-size: .8rem; font-weight: 600; cursor: pointer; color: var(--escuro); }
+.chip .n { color: var(--cinza); font-weight: 400; }
+.chip[aria-pressed=true] { background: var(--verde-claro); border-color: var(--verde-claro); color: #fff; }
+.chip[aria-pressed=true] .n { color: #fff; }
+.checks { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .88rem; }
+.checks input { accent-color: var(--verde); margin-right: 4px; }
+.listhead { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; background: var(--off-white); border-bottom: 1px solid var(--cinza-claro); font-size: .88rem; color: var(--cinza); }
+.listhead b { color: var(--escuro); }
+.limpar { border: 0; background: none; color: var(--verde); font: inherit; font-size: .84rem; font-weight: 600; cursor: pointer; text-decoration: underline; }
+.lista-js { padding: 10px 16px 20px; display: grid; gap: 10px; align-content: start; }
+.lista-js .ponto.ativo { border-color: var(--verde-claro); box-shadow: 0 2px 10px rgba(232,98,26,.18); }
+.acoes { display: flex; gap: 14px; font-size: .86rem !important; }
+.acoes button, .acoes a { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--verde); cursor: pointer; text-decoration: none; }
+.acoes button:hover, .acoes a:hover { text-decoration: underline; }
+.vazio { color: var(--cinza); padding: 16px 4px; }
+.mapa-wrap { position: relative; min-height: 0; }
+.mapa-wrap #mapa { position: absolute; inset: 0; height: auto; border: 0; border-radius: 0; margin: 0; }
+.legenda { position: absolute; left: 12px; bottom: 14px; z-index: 500; background: #fff; border: 1px solid var(--cinza-claro); border-radius: 10px; padding: 8px 10px; font-size: .76rem; display: grid; gap: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.legenda i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.pop-l { margin-top: 4px; font-weight: 600; font-size: .8rem; }
+
+.empresas { margin-top: 40px; }
+.obr-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 16px; }
+.obr { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+.obr-tag { align-self: flex-start; font-size: .75rem; font-weight: 700; color: var(--verde-claro); background: var(--verde-menta); border-radius: 999px; padding: 3px 10px; }
+.obr h3 { font-size: 1.02rem; color: var(--verde); }
+.obr p, .obr li { font-size: .92rem; }
+.obr ul { padding-left: 18px; display: grid; gap: 3px; color: var(--cinza); }
+.obr a { margin-top: auto; font-weight: 600; text-decoration: none; color: var(--verde); }
+.obr-cta { background: var(--verde); border-color: var(--verde); color: #fff; }
+.obr-cta h3, .obr-cta a { color: #fff; }
+.obr-cta .obr-tag { background: rgba(255,255,255,.15); color: #fff; }
+
+@media (max-width: 860px) {
+  .ferramenta { grid-template-columns: 1fr; height: auto; }
+  .mapa-wrap { order: -1; height: 50vh; min-height: 300px; }
+  .painel { overflow: visible; border-right: 0; }
+  .listhead { top: 56px; }
+  .legenda { display: none; }
+}

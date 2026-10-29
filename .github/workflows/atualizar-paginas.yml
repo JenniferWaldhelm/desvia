@@ -1,9 +1,13 @@
 name: Atualizar páginas de resíduos
 
-# Baixa a aba Pontos da planilha "Desvia - Base Mestra" (publicada como CSV),
-# regenera as páginas em residuos/ e o sitemap, e publica se algo mudou.
+# Baixa a aba Pontos da planilha "Desvia - Base Mestra" (se publicada como CSV),
+# regenera as páginas em residuos/ e o sitemap, publica se algo mudou
+# e avisa o Bing (IndexNow) sobre as páginas.
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["dados/**", "gerador/**"]
   schedule:
     - cron: "17 9 * * 1"   # toda segunda, 6h17 em Brasília
 
@@ -33,13 +37,22 @@ jobs:
         run: python3 gerador/gerar.py
 
       - name: Publicar alterações
+        id: publicar
         run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
           git add dados/pontos.csv residuos sitemap.xml
           if git diff --cached --quiet; then
             echo "Nada mudou."
+            echo "mudou=nao" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Atualiza páginas de resíduos a partir da planilha"
             git push
+            echo "mudou=sim" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Avisar o Bing (IndexNow)
+        if: ${{ steps.publicar.outputs.mudou == 'sim' || github.event_name != 'schedule' }}
+        run: |
+          sleep 120   # espera o GitHub Pages publicar
+          python3 gerador/indexnow.py
