@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onde descartar madeira em Londrina-PR | Desvia</title>
+<meta name="description" content="4 opções para descartar madeira em Londrina: pontos de entrega e empresas, com a situação da licença ambiental de cada uma.">
+<link rel="canonical" href="https://jenniferwaldhelm.github.io/desvia/residuos/londrina/madeira/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Onde descartar madeira em Londrina-PR | Desvia">
+<meta property="og:description" content="4 opções para descartar madeira em Londrina: pontos de entrega e empresas, com a situação da licença ambiental de cada uma.">
+<meta property="og:url" content="https://jenniferwaldhelm.github.io/desvia/residuos/londrina/madeira/">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../residuos/estilo.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Cidades", "item": "https://jenniferwaldhelm.github.io/desvia/residuos/"}, {"@type": "ListItem", "position": 2, "name": "Londrina", "item": "https://jenniferwaldhelm.github.io/desvia/residuos/londrina/"}, {"@type": "ListItem", "position": 3, "name": "Madeira", "item": "https://jenniferwaldhelm.github.io/desvia/residuos/londrina/madeira/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Onde descartar madeira em Londrina", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "LocalBusiness", "name": "Indústria e Comércio de Madeiras Britoni Ltda (Paletes Britoni)", "telephone": "(43) 3321-0593", "address": {"@type": "PostalAddress", "streetAddress": "Rua Edson Jere Vicente, 255 / 370, Pq. Industrial Germano Balan, CEP 86084-430", "addressLocality": "Londrina", "addressCountry": "BR"}, "geo": {"@type": "GeoCoordinates", "latitude": -23.269067, "longitude": -51.15535}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "LocalBusiness", "name": "PEV Jd. Nova Conquista", "address": {"@type": "PostalAddress", "streetAddress": "Final da Av. Capitão João Busse", "addressLocality": "Londrina", "addressCountry": "BR"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "LocalBusiness", "name": "PEV Residencial Vista Bela", "address": {"@type": "PostalAddress", "streetAddress": "Final da Av. Annibal Balarotti (Rua Quatorze)", "addressLocality": "Londrina", "addressCountry": "BR"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "LocalBusiness", "name": "Britex Indústria e Comércio de Resíduos de Madeira Ltda", "telephone": "(43) 3327-7846", "address": {"@type": "PostalAddress", "streetAddress": "Rua Cap. Jaci Da Silva Pinheiro, 495, Pq. Industrial Cacique", "addressLocality": "Londrina", "addressCountry": "BR"}, "geo": {"@type": "GeoCoordinates", "latitude": -23.2808218, "longitude": -51.2073604}}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Onde descartar madeira em Londrina?", "acceptedAnswer": {"@type": "Answer", "text": "O Desvia encontrou 4 opções para madeira em Londrina, sendo 2 pontos de entrega para a população e 1 com licença ambiental válida localizada. Madeira limpa (paletes, sobras) pode ser reaproveitada. Madeira tratada ou pintada exige destinação específica."}}, {"@type": "Question", "name": "Como saber se a empresa tem licença ambiental?", "acceptedAnswer": {"@type": "Answer", "text": "Cada empresa mostra o tipo, o número e a validade da licença localizada nas bases do IAT, da prefeitura ou do IBAMA. Quando nada foi encontrado, o Desvia indica que a licença não foi localizada nas bases consultadas e a data da consulta. Antes de contratar, peça a licença atual à empresa."}}, {"@type": "Question", "name": "Sou empresa. O que preciso exigir de quem leva meu resíduo?", "acceptedAnswer": {"@type": "Answer", "text": "Transportador e destinador precisam de licença ambiental válida para o tipo de resíduo. Cada envio exige o Manifesto de Transporte de Resíduos (MTR, no sistema do SINIR) e, depois, o Certificado de Destinação Final (CDF). Guarde os dois."}}]}</script>
+</head>
+<body>
+<header><nav><a class="logo" href="../../../">Des<span>via</span></a><a class="nav-link" href="../../../residuos/">Onde descartar</a></nav></header>
+<main>
+<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">Londrina</a> › Madeira</nav>
+<h1>Onde descartar madeira em Londrina</h1>
+<p class="resposta"><strong>4 opções</strong> em Londrina e região, 1 com licença ambiental válida localizada. Madeira limpa (paletes, sobras) pode ser reaproveitada. Madeira tratada ou pintada exige destinação específica.</p>
+
+<p class="atualizado">Dados atualizados em 29/10/2026. Licença válida aparece primeiro.</p>
+<div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
+<script>
+window.addEventListener('load', function () {
+  var pts = [{"n": "Indústria e Comércio de Madeiras Britoni Ltda (Paletes Britoni)", "a": -23.269067, "o": -51.15535, "id": "lda-021", "s": "valida"}, {"n": "Britex Indústria e Comércio de Resíduos de Madeira Ltda", "a": -23.2808218, "o": -51.2073604, "id": "lda-020", "s": "vencida"}];
+  var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', vencida: '#C77700', nao_localizada: '#7A7F8C'};
+  var mapa = L.map('mapa', {scrollWheelZoom: false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
+  var grupo = L.featureGroup();
+  pts.forEach(function (p) {
+    L.circleMarker([p.a, p.o], {radius: 8, color: '#fff', weight: 2, fillColor: cores[p.s] || '#7A7F8C', fillOpacity: 0.95})
+      .bindPopup('<a href="#' + p.id + '">' + p.n.replace(/</g, '&lt;') + '</a>').addTo(grupo);
+  });
+  grupo.addTo(mapa);
+  mapa.fitBounds(grupo.getBounds().pad(0.15), {maxZoom: 15});
+});
+</script>
+<section class="lista">
+<article class="ponto" id="lda-021">
+<h3>Indústria e Comércio de Madeiras Britoni Ltda (Paletes Britoni)</h3>
+<p class="tipo">Tratamento/destinação final · Destinação final</p>
+<p class="residuos">Madeira</p>
+<p class="local">Rua Edson Jere Vicente, 255 / 370, Pq. Industrial Germano Balan, CEP 86084-430, Londrina</p>
+<p class="contato"><a href="tel:+554333210593">(43) 3321-0593</a></p>
+<p class="licenca ok">Licença LAS 43/2025 (SEMA Londrina) válida até 21/02/2035.</p>
+</article><article class="ponto" id="lda-132">
+<h3>PEV Jd. Nova Conquista</h3>
+<p class="tipo">PEV público · Recebimento</p>
+<p class="residuos">Poda; madeira; entulho (até 1 m³/pessoa/mês)</p>
+<p class="local">Final da Av. Capitão João Busse, Londrina</p>
+<p class="licenca neutro">Serviço público municipal.</p>
+<p class="obs">Seg a sex 8h-17h, sáb 8h-12h</p>
+</article><article class="ponto" id="lda-131">
+<h3>PEV Residencial Vista Bela</h3>
+<p class="tipo">PEV público · Recebimento</p>
+<p class="residuos">Poda; madeira; entulho (até 1 m³/pessoa/mês)</p>
+<p class="local">Final da Av. Annibal Balarotti (Rua Quatorze), Londrina</p>
+<p class="licenca neutro">Serviço público municipal.</p>
+<p class="obs">Seg a sex 8h-17h, sáb 8h-12h</p>
+</article><article class="ponto" id="lda-020">
+<h3>Britex Indústria e Comércio de Resíduos de Madeira Ltda</h3>
+<p class="tipo">Tratamento/destinação final · Destinação final</p>
+<p class="residuos">Madeira</p>
+<p class="local">Rua Cap. Jaci Da Silva Pinheiro, 495, Pq. Industrial Cacique, Londrina</p>
+<p class="contato"><a href="tel:+554333277846">(43) 3327-7846</a></p>
+<p class="licenca alerta">Licença RLO 178215-R1 (IAT) com validade até 25/03/2024. Renovação não localizada nas bases consultadas em 29/10/2026.</p>
+</article>
+</section>
+<section class="faq"><h2>Perguntas frequentes</h2>
+<details><summary>Onde descartar madeira em Londrina?</summary><p>O Desvia encontrou 4 opções para madeira em Londrina, sendo 2 pontos de entrega para a população e 1 com licença ambiental válida localizada. Madeira limpa (paletes, sobras) pode ser reaproveitada. Madeira tratada ou pintada exige destinação específica.</p></details><details><summary>Como saber se a empresa tem licença ambiental?</summary><p>Cada empresa mostra o tipo, o número e a validade da licença localizada nas bases do IAT, da prefeitura ou do IBAMA. Quando nada foi encontrado, o Desvia indica que a licença não foi localizada nas bases consultadas e a data da consulta. Antes de contratar, peça a licença atual à empresa.</p></details><details><summary>Sou empresa. O que preciso exigir de quem leva meu resíduo?</summary><p>Transportador e destinador precisam de licença ambiental válida para o tipo de resíduo. Cada envio exige o Manifesto de Transporte de Resíduos (MTR, no sistema do SINIR) e, depois, o Certificado de Destinação Final (CDF). Guarde os dois.</p></details>
+</section>
+<section class="outras"><h2>Outros resíduos em Londrina</h2><ul><li><a href="../pneus/">Pneus</a></li><li><a href="../eletronicos/">Eletrônicos</a></li><li><a href="../lampadas/">Lâmpadas</a></li><li><a href="../pilhas-e-baterias/">Pilhas e baterias</a></li><li><a href="../oleo-de-cozinha/">Óleo de cozinha</a></li><li><a href="../oleo-lubrificante/">Óleo lubrificante</a></li><li><a href="../entulho/">Entulho (RCC)</a></li><li><a href="../moveis-e-volumosos/">Móveis e volumosos</a></li><li><a href="../poda-e-galhos/">Poda e galhos</a></li><li><a href="../residuos-de-saude/">Resíduos de saúde</a></li><li><a href="../reciclaveis/">Recicláveis</a></li><li><a href="../sucata-metalica/">Sucata metálica</a></li><li><a href="../organicos/">Orgânicos</a></li><li><a href="../texteis/">Têxteis</a></li><li><a href="../tintas-e-solventes/">Tintas e solventes</a></li><li><a href="../limpa-fossa/">Fossa e efluentes</a></li><li><a href="../residuos-perigosos/">Perigosos (Classe I)</a></li><li><a href="../residuos-classe-ii/">Industriais (Classe II)</a></li></ul></section>
+</main>
+<footer><p>Desvia reúne, em uma só busca, dados de licenças do IAT, cadastros do IBAMA, listas das prefeituras e da Receita Federal. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
+<p><a href="../../../">Desvia</a> · <a href="../../../residuos/">Todas as cidades</a></p></footer>
+</body>
+</html>
