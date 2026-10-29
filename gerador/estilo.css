@@ -1,0 +1,65 @@
+/* Estilo das páginas geradas em residuos/ — mesmas cores e fontes do Desvia */
+:root {
+  --verde: #1A3A8F;
+  --verde-claro: #E8621A;
+  --verde-menta: #FDE8D8;
+  --terra: #2A7A2A;
+  --terra-claro: #D8F0D8;
+  --off-white: #F8F8F6;
+  --escuro: #0F1F3D;
+  --cinza: #5A6070;
+  --cinza-claro: #E0E4ED;
+  --alerta: #8A5300;
+  --alerta-claro: #FFF1D6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Source Sans 3', sans-serif; background: var(--off-white); color: var(--escuro); line-height: 1.6; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
+a { color: var(--verde); }
+
+header { background: var(--verde); padding: 0 16px; position: sticky; top: 0; z-index: 1000; }
+header nav { max-width: 960px; margin: 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; }
+.logo span { color: var(--verde-claro); }
+.nav-link { color: rgba(255,255,255,.9); text-decoration: none; font-weight: 600; font-size: .95rem; }
+
+main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+.trilha { font-size: .9rem; color: var(--cinza); margin-bottom: 12px; }
+.trilha a { color: var(--cinza); }
+h1 { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--verde); margin-bottom: 12px; }
+h2 { font-size: 1.25rem; color: var(--verde); margin: 32px 0 12px; }
+.resposta { font-size: 1.08rem; margin-bottom: 12px; max-width: 72ch; }
+.regra { background: var(--verde-menta); border-left: 4px solid var(--verde-claro); padding: 10px 14px; border-radius: 6px; margin-bottom: 12px; max-width: 72ch; }
+.atualizado { font-size: .88rem; color: var(--cinza); margin-bottom: 16px; }
+
+#mapa { height: 340px; border-radius: 10px; border: 1px solid var(--cinza-claro); margin-bottom: 20px; z-index: 1; }
+
+.lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.ponto { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 6px; scroll-margin-top: 72px; }
+.ponto:target { outline: 3px solid var(--verde-claro); }
+.ponto h3 { font-size: 1rem; color: var(--escuro); }
+.ponto p { font-size: .93rem; overflow-wrap: anywhere; }
+.tipo { color: var(--cinza); font-size: .85rem !important; }
+.residuos { color: var(--escuro); }
+.local, .contato { color: var(--cinza); }
+.obs { font-size: .88rem !important; color: var(--cinza); font-style: italic; }
+.licenca { border-radius: 6px; padding: 6px 10px; font-size: .86rem !important; margin-top: auto; }
+.licenca.ok { background: var(--terra-claro); color: var(--terra); }
+.licenca.alerta { background: var(--alerta-claro); color: var(--alerta); }
+.licenca.aviso { background: #EEF0F4; color: var(--cinza); }
+.licenca.neutro { background: #E8ECF7; color: var(--verde); }
+.licenca + .licenca { margin-top: 0; }
+
+.faq details { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 8px; padding: 12px 14px; margin-bottom: 8px; }
+.faq summary { font-weight: 600; cursor: pointer; }
+.faq details p { margin-top: 8px; }
+
+.outras ul, .grade { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.outras a { display: inline-block; background: #fff; border: 1px solid var(--cinza-claro); border-radius: 999px; padding: 6px 14px; text-decoration: none; font-size: .92rem; }
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.grade a { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--cinza-claro); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--escuro); font-weight: 600; }
+.grade a:hover, .outras a:hover { border-color: var(--verde-claro); }
+.grade small { color: var(--cinza); font-weight: 400; }
+
+footer { border-top: 1px solid var(--cinza-claro); padding: 20px 16px 32px; max-width: 960px; margin: 0 auto; font-size: .85rem; color: var(--cinza); }
+footer p + p { margin-top: 8px; }

@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://jemartinsw.github.io/desvia/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://jemartinsw.github.io/desvia/mapa-pev.html</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  <url><loc>https://jemartinsw.github.io/desvia/</loc><lastmod>2026-10-29</lastmod><priority>1.0</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/mapa-pev.html</loc><lastmod>2026-10-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/</loc><lastmod>2026-10-29</lastmod><priority>0.9</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/pneus/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/eletronicos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/lampadas/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/pilhas-e-baterias/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/oleo-de-cozinha/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/oleo-lubrificante/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/entulho/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/moveis-e-volumosos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/poda-e-galhos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/madeira/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/residuos-de-saude/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/reciclaveis/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/sucata-metalica/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/organicos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/texteis/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/tintas-e-solventes/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/limpa-fossa/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/residuos-perigosos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/residuos-classe-ii/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/londrina/</loc><lastmod>2026-10-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/pneus/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/eletronicos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/lampadas/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/pilhas-e-baterias/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/oleo-de-cozinha/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/entulho/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/moveis-e-volumosos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/medicamentos/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/residuos-de-saude/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/reciclaveis/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/embalagens-de-agrotoxico/</loc><lastmod>2026-10-29</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jemartinsw.github.io/desvia/residuos/mandaguari/</loc><lastmod>2026-10-29</lastmod><priority>0.8</priority></url>
 </urlset>

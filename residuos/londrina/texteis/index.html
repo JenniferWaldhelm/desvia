@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onde descartar resíduos têxteis em Londrina-PR | Desvia</title>
+<meta name="description" content="2 opções para descartar resíduos têxteis em Londrina: pontos de entrega e empresas, com a situação da licença ambiental de cada uma.">
+<link rel="canonical" href="https://jemartinsw.github.io/desvia/residuos/londrina/texteis/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Onde descartar resíduos têxteis em Londrina-PR | Desvia">
+<meta property="og:description" content="2 opções para descartar resíduos têxteis em Londrina: pontos de entrega e empresas, com a situação da licença ambiental de cada uma.">
+<meta property="og:url" content="https://jemartinsw.github.io/desvia/residuos/londrina/texteis/">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../residuos/estilo.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Cidades", "item": "https://jemartinsw.github.io/desvia/residuos/"}, {"@type": "ListItem", "position": 2, "name": "Londrina", "item": "https://jemartinsw.github.io/desvia/residuos/londrina/"}, {"@type": "ListItem", "position": 3, "name": "Têxteis", "item": "https://jemartinsw.github.io/desvia/residuos/londrina/texteis/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Onde descartar resíduos têxteis em Londrina", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "LocalBusiness", "name": "Estopas Ouro Branco", "telephone": "(43) 3325-0300", "address": {"@type": "PostalAddress", "streetAddress": "Rua Aratinga, 140, Vila Yara", "addressLocality": "Londrina", "addressCountry": "BR"}, "geo": {"@type": "GeoCoordinates", "latitude": -23.2942907, "longitude": -51.1437075}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "LocalBusiness", "name": "Braulio Coelho", "telephone": "(43) 3258-6146", "geo": {"@type": "GeoCoordinates", "latitude": -23.2627665, "longitude": -51.0418436}}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Onde descartar resíduos têxteis em Londrina?", "acceptedAnswer": {"@type": "Answer", "text": "O Desvia encontrou 2 opções para resíduos têxteis em Londrina, sendo 0 pontos de entrega para a população e 1 com licença ambiental válida localizada. Roupas em bom estado podem ser doadas. Retalhos e estopas industriais vão para empresas de reaproveitamento."}}, {"@type": "Question", "name": "Como saber se a empresa tem licença ambiental?", "acceptedAnswer": {"@type": "Answer", "text": "Cada empresa mostra o tipo, o número e a validade da licença localizada nas bases do IAT, da prefeitura ou do IBAMA. Quando nada foi encontrado, o Desvia indica que a licença não foi localizada nas bases consultadas e a data da consulta. Antes de contratar, peça a licença atual à empresa."}}, {"@type": "Question", "name": "Sou empresa. O que preciso exigir de quem leva meu resíduo?", "acceptedAnswer": {"@type": "Answer", "text": "Transportador e destinador precisam de licença ambiental válida para o tipo de resíduo. Cada envio exige o Manifesto de Transporte de Resíduos (MTR, no sistema do SINIR) e, depois, o Certificado de Destinação Final (CDF). Guarde os dois."}}]}</script>
+</head>
+<body>
+<header><nav><a class="logo" href="../../../">♻ Projeto <span>Desvia</span></a><a class="nav-link" href="../../../residuos/">Onde descartar</a></nav></header>
+<main>
+<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">Londrina</a> › Têxteis</nav>
+<h1>Onde descartar resíduos têxteis em Londrina</h1>
+<p class="resposta"><strong>2 opções</strong> em Londrina e região, 1 com licença ambiental válida localizada. Roupas em bom estado podem ser doadas. Retalhos e estopas industriais vão para empresas de reaproveitamento.</p>
+
+<p class="atualizado">Dados atualizados em 29/10/2026. Licença válida aparece primeiro.</p>
+<div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
+<script>
+window.addEventListener('load', function () {
+  var pts = [{"n": "Estopas Ouro Branco", "a": -23.2942907, "o": -51.1437075, "id": "lda-054", "s": "valida"}, {"n": "Braulio Coelho", "a": -23.2627665, "o": -51.0418436, "id": "lda-053", "s": "vencida"}];
+  var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', vencida: '#C77700', nao_localizada: '#7A7F8C'};
+  var mapa = L.map('mapa', {scrollWheelZoom: false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
+  var grupo = L.featureGroup();
+  pts.forEach(function (p) {
+    L.circleMarker([p.a, p.o], {radius: 8, color: '#fff', weight: 2, fillColor: cores[p.s] || '#7A7F8C', fillOpacity: 0.95})
+      .bindPopup('<a href="#' + p.id + '">' + p.n.replace(/</g, '&lt;') + '</a>').addTo(grupo);
+  });
+  grupo.addTo(mapa);
+  mapa.fitBounds(grupo.getBounds().pad(0.15), {maxZoom: 15});
+});
+</script>
+<section class="lista">
+<article class="ponto" id="lda-054">
+<h3>Estopas Ouro Branco</h3>
+<p class="tipo">Tratamento/destinação final · Destinação final</p>
+<p class="residuos">Resíduos têxteis</p>
+<p class="local">Rua Aratinga, 140, Vila Yara, Londrina</p>
+<p class="contato"><a href="tel:+554333250300">(43) 3325-0300</a></p>
+<p class="licenca ok">Licença DLAM 37/2023 (SEMA Londrina) válida até 16/05/2029.</p>
+</article><article class="ponto" id="lda-053">
+<h3>Braulio Coelho</h3>
+<p class="tipo">Tratamento/destinação final · Destinação final</p>
+<p class="residuos">Resíduos têxteis</p>
+<p class="local">Ibiporã (atende a cidade)</p>
+<p class="contato"><a href="tel:+554332586146">(43) 3258-6146</a></p>
+<p class="licenca alerta">Licença DLAE 143320 (IAT) com validade até 28/05/2024. Renovação não localizada nas bases consultadas em 29/10/2026.</p>
+</article>
+</section>
+<section class="faq"><h2>Perguntas frequentes</h2>
+<details><summary>Onde descartar resíduos têxteis em Londrina?</summary><p>O Desvia encontrou 2 opções para resíduos têxteis em Londrina, sendo 0 pontos de entrega para a população e 1 com licença ambiental válida localizada. Roupas em bom estado podem ser doadas. Retalhos e estopas industriais vão para empresas de reaproveitamento.</p></details><details><summary>Como saber se a empresa tem licença ambiental?</summary><p>Cada empresa mostra o tipo, o número e a validade da licença localizada nas bases do IAT, da prefeitura ou do IBAMA. Quando nada foi encontrado, o Desvia indica que a licença não foi localizada nas bases consultadas e a data da consulta. Antes de contratar, peça a licença atual à empresa.</p></details><details><summary>Sou empresa. O que preciso exigir de quem leva meu resíduo?</summary><p>Transportador e destinador precisam de licença ambiental válida para o tipo de resíduo. Cada envio exige o Manifesto de Transporte de Resíduos (MTR, no sistema do SINIR) e, depois, o Certificado de Destinação Final (CDF). Guarde os dois.</p></details>
+</section>
+<section class="outras"><h2>Outros resíduos em Londrina</h2><ul><li><a href="../pneus/">Pneus</a></li><li><a href="../eletronicos/">Eletrônicos</a></li><li><a href="../lampadas/">Lâmpadas</a></li><li><a href="../pilhas-e-baterias/">Pilhas e baterias</a></li><li><a href="../oleo-de-cozinha/">Óleo de cozinha</a></li><li><a href="../oleo-lubrificante/">Óleo lubrificante</a></li><li><a href="../entulho/">Entulho (RCC)</a></li><li><a href="../moveis-e-volumosos/">Móveis e volumosos</a></li><li><a href="../poda-e-galhos/">Poda e galhos</a></li><li><a href="../madeira/">Madeira</a></li><li><a href="../residuos-de-saude/">Resíduos de saúde</a></li><li><a href="../reciclaveis/">Recicláveis</a></li><li><a href="../sucata-metalica/">Sucata metálica</a></li><li><a href="../organicos/">Orgânicos</a></li><li><a href="../tintas-e-solventes/">Tintas e solventes</a></li><li><a href="../limpa-fossa/">Fossa e efluentes</a></li><li><a href="../residuos-perigosos/">Perigosos (Classe I)</a></li><li><a href="../residuos-classe-ii/">Industriais (Classe II)</a></li></ul></section>
+</main>
+<footer><p>Desvia reúne, em uma só busca, dados de licenças do IAT, cadastros do IBAMA, listas das prefeituras e da Receita Federal. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
+<p><a href="../../../">Desvia</a> · <a href="../../../residuos/">Todas as cidades</a></p></footer>
+</body>
+</html>

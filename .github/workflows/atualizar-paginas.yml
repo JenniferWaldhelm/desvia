@@ -1,0 +1,45 @@
+name: Atualizar páginas de resíduos
+
+# Baixa a aba Pontos da planilha "Desvia - Base Mestra" (publicada como CSV),
+# regenera as páginas em residuos/ e o sitemap, e publica se algo mudou.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 * * 1"   # toda segunda, 6h17 em Brasília
+
+permissions:
+  contents: write
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Baixar a planilha publicada
+        if: ${{ vars.PLANILHA_CSV_URL != '' }}
+        env:
+          URL: ${{ vars.PLANILHA_CSV_URL }}
+        run: |
+          curl -fsSL "$URL" -o dados/pontos.novo.csv
+          head -1 dados/pontos.novo.csv | grep -q "^ID," || { echo "CSV inesperado"; exit 1; }
+          mv dados/pontos.novo.csv dados/pontos.csv
+
+      - name: Gerar páginas
+        run: python3 gerador/gerar.py
+
+      - name: Publicar alterações
+        run: |
+          git config user.name "Desvia (automático)"
+          git config user.email "actions@users.noreply.github.com"
+          git add dados/pontos.csv residuos sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+          else
+            git commit -m "Atualiza páginas de resíduos a partir da planilha"
+            git push
+          fi
