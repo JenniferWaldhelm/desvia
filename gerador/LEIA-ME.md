@@ -42,3 +42,16 @@ Só a aba Pontos fica pública. Fila de cidades, Fontes e Pendências continuam 
 - Licença prévia ou de instalação: aviso de que não autoriza a operação.
 - CNPJ inapto ou baixado: aviso com a data da consulta.
 - Pessoa física sem CNPJ: o endereço não é publicado.
+
+## Página da cidade (mapa com filtros)
+
+`residuos/<cidade>/` é a ferramenta: mapa, busca, filtros por tipo de atendimento e por resíduo,
+"só com licença válida" e "só com sede na cidade", mais a seção de obrigações das empresas.
+O conteúdo dessa seção fica em `gerador/hub.py` (partes comuns + `LOCAL` por município).
+As páginas de cada resíduo têm o link "Abrir no mapa com filtros", que abre a ferramenta já filtrada (`?r=pneus`).
+
+## IndexNow (Bing)
+
+A ação avisa o Bing pelo IndexNow sempre que as páginas mudam (e quando é rodada à mão).
+A chave fica em `gerador/indexnow_key.txt` e o arquivo de verificação na raiz do site (`<chave>.txt`).
+Não apague esses dois arquivos.
