@@ -6,8 +6,8 @@ import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-BASE_URL = "https://jemartinsw.github.io/desvia"
-HOST = "jemartinsw.github.io"
+BASE_URL = "https://jenniferwaldhelm.github.io/desvia"
+HOST = "jenniferwaldhelm.github.io"
 
 chave = (RAIZ / "gerador" / "indexnow_key.txt").read_text().strip()
 urls = re.findall(r"<loc>([^<]+)</loc>", (RAIZ / "sitemap.xml").read_text(encoding="utf-8"))

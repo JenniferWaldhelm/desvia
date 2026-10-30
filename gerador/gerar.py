@@ -24,7 +24,7 @@ import hub
 RAIZ = Path(__file__).resolve().parent.parent
 CSV = RAIZ / "dados" / "pontos.csv"
 SAIDA = RAIZ / "residuos"
-BASE_URL = "https://jemartinsw.github.io/desvia"
+BASE_URL = "https://jenniferwaldhelm.github.io/desvia"
 HOJE = date.today()
 
 # Cidades publicadas (status "Verificado" ou "Publicado" na Fila de cidades).
