@@ -19,10 +19,13 @@ import unicodedata
 from datetime import date, datetime
 from pathlib import Path
 
+import hub
+import paginas as site_desvia
+
 RAIZ = Path(__file__).resolve().parent.parent
 CSV = RAIZ / "dados" / "pontos.csv"
 SAIDA = RAIZ / "residuos"
-BASE_URL = "https://jemartinsw.github.io/desvia"
+BASE_URL = "https://jenniferwaldhelm.github.io/desvia"
 HOJE = date.today()
 
 # Cidades publicadas (status "Verificado" ou "Publicado" na Fila de cidades).
@@ -34,7 +37,7 @@ CIDADES = {
 UF = "PR"
 
 # Páginas fixas do site que continuam no sitemap.
-PAGINAS_FIXAS = [("", "1.0"), ("mapa-pev.html", "0.8")]
+PAGINAS_FIXAS = [("", "1.0"), ("mandaguari.html", "0.8"), ("mapa-pev.html", "0.6")]
 
 # slug, nome na frase ("Onde descartar ..."), nome curto, palavras-chave
 CATEGORIAS = [
@@ -239,12 +242,12 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {ld}
 </head>
 <body>
-<header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><a class="nav-link" href="{raiz}residuos/">Onde descartar</a></nav></header>
+<header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}#empresas">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
 <main>
 {corpo}
 </main>
 <footer><p>Desvia reúne, em uma só busca, dados de licenças do IAT, cadastros do IBAMA, listas das prefeituras e da Receita Federal. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
-<p><a href="{raiz}">Desvia</a> · <a href="{raiz}residuos/">Todas as cidades</a></p></footer>
+<p><a href="{raiz}">Busca</a> · <a href="{raiz}guias/">Guias</a> · <a href="{raiz}residuos/">Cidades</a> · <a href="{raiz}mandaguari.html">Guia de Mandaguari</a> · <a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">Fale conosco</a></p></footer>
 </body>
 </html>
 """
@@ -346,9 +349,11 @@ def gerar():
                 shutil.rmtree(item)
     SAIDA.mkdir(exist_ok=True)
     shutil.copy(Path(__file__).with_name("estilo.css"), SAIDA / "estilo.css")
+    shutil.copy(Path(__file__).with_name("hub.js"), SAIDA / "hub.js")
     urls = [(f"{BASE_URL}/{u}", pr) for u, pr in PAGINAS_FIXAS]
     nomes = {s: (f, c) for s, f, c, _ in CATEGORIAS}
     resumo_cidades = []
+    contagens = {}
 
     for cid_slug, cidade in CIDADES.items():
         do_lugar = [p for p in pontos if cid_slug in p["_cidades"]]
@@ -358,6 +363,7 @@ def gerar():
                 por_cat.setdefault(c, []).append(p)
         cats_ordem = [s for s, _, _, _ in CATEGORIAS if s in por_cat]
         resumo_cidades.append((cid_slug, cidade, len(do_lugar), len(cats_ordem)))
+        contagens[cid_slug] = {c: len(v) for c, v in por_cat.items()}
 
         for cat in cats_ordem:
             frase, curto = nomes[cat]
@@ -376,7 +382,7 @@ def gerar():
 <h1>Onde descartar {esc(frase)} em {esc(cidade)}</h1>
 <p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)} e região, {n_val} com licença ambiental válida localizada. {esc(DICAS.get(cat, ''))}</p>
 {f'<p class="regra">{esc(regra)}</p>' if regra else ''}
-<p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro.</p>
+<p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro. <a href="../?r={cat}#mapa">Abrir no mapa com filtros</a></p>
 {mapa_js(pts)}
 <section class="lista">
 {''.join(cartao(p, cid_slug) for p in pts)}
@@ -402,19 +408,16 @@ def gerar():
 
         # página da cidade
         url = f"{BASE_URL}/residuos/{cid_slug}/"
-        itens = "".join(f'<li><a href="{s}/"><span>{esc(nomes[s][1])}</span><small>{len(por_cat[s])} {"opção" if len(por_cat[s]) == 1 else "opções"}</small></a></li>'
-                        for s in cats_ordem)
-        corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
-<h1>Onde descartar resíduos em {esc(cidade)}</h1>
-<p class="resposta">Escolha o tipo de resíduo para ver pontos de entrega, cooperativas e empresas que atendem {esc(cidade)}, com a situação da licença ambiental de cada uma.</p>
-<ul class="grade">{itens}</ul>"""
+        ctx = {"norm": norm, "selo": selo_licenca, "aviso_cnpj": aviso_cnpj, "obs_publica": obs_publica,
+               "pessoa_fisica": pessoa_fisica}
+        corpo = hub.corpo_hub(cid_slug, cidade, do_lugar, cats_ordem, nomes, por_cat, ctx)
         jsonld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Cidades", "item": f"{BASE_URL}/residuos/"},
             {"@type": "ListItem", "position": 2, "name": cidade, "item": url}]}]
         (SAIDA / cid_slug / "index.html").write_text(
             pagina(f"Onde descartar resíduos em {cidade}-{UF} | Desvia",
                    f"Pontos de entrega e empresas de coleta e destinação de resíduos em {cidade}, por tipo de resíduo, com a situação da licença ambiental.",
-                   url, "../../", corpo, jsonld), encoding="utf-8")
+                   url, "../../", corpo, jsonld, mapa=True), encoding="utf-8")
         urls.append((url, "0.8"))
 
     # índice de cidades
@@ -428,6 +431,40 @@ def gerar():
                "Encontre onde descartar cada tipo de resíduo na sua cidade, com a situação da licença ambiental de quem recebe.",
                f"{BASE_URL}/residuos/", "../", corpo, []), encoding="utf-8")
     urls.insert(len(PAGINAS_FIXAS), (f"{BASE_URL}/residuos/", "0.9"))
+
+    # guias por resíduo
+    pasta_guias = RAIZ / "guias"
+    if pasta_guias.exists():
+        shutil.rmtree(pasta_guias)
+    pasta_guias.mkdir()
+    todas = {}
+    for p in pontos:
+        for c in p["_cats"]:
+            todas[c] = todas.get(c, 0) + 1
+    cats_geral = [(s, todas[s]) for s, _, _, _ in CATEGORIAS if s in todas]
+    for slug, _ in cats_geral:
+        if slug not in site_desvia.G.GUIAS:
+            continue
+        titulo, descricao, corpo, jsonld = site_desvia.guia(slug, nomes, contagens, CIDADES)
+        destino = pasta_guias / slug / "index.html"
+        destino.parent.mkdir(parents=True)
+        destino.write_text(pagina(titulo, descricao, f"{BASE_URL}/guias/{slug}/", "../../", corpo, jsonld), encoding="utf-8")
+        urls.append((f"{BASE_URL}/guias/{slug}/", "0.8"))
+    (pasta_guias / "index.html").write_text(
+        pagina("Guias de descarte de resíduos | Desvia",
+               "Como descartar cada tipo de resíduo em casa e na empresa, o que diz a lei e onde levar.",
+               f"{BASE_URL}/guias/", "../", site_desvia.indice_guias(nomes, cats_geral), []), encoding="utf-8")
+    urls.insert(len(PAGINAS_FIXAS), (f"{BASE_URL}/guias/", "0.9"))
+
+    # página inicial (busca única)
+    ctx = {"norm": norm, "selo": selo_licenca, "aviso_cnpj": aviso_cnpj, "obs_publica": obs_publica,
+           "pessoa_fisica": pessoa_fisica, "base": BASE_URL}
+    publicados = [p for p in pontos if p["_cidades"] & set(CIDADES)]
+    corpo, jsonld = site_desvia.home(publicados, CIDADES, nomes, cats_geral, contagens, ctx, HOJE)
+    html_home = pagina("Desvia: onde descartar resíduos, com a licença de cada empresa",
+                       "Pontos de entrega, cooperativas e empresas de coleta e destinação de resíduos, com a situação da licença ambiental. Várias fontes, uma só busca.",
+                       f"{BASE_URL}/", "", corpo, jsonld, mapa=True)
+    (RAIZ / "index.html").write_text(html_home.replace("<main>", '<main class="home">', 1), encoding="utf-8")
 
     linhas = "\n".join(f"  <url><loc>{u}</loc><lastmod>{HOJE.isoformat()}</lastmod><priority>{pr}</priority></url>" for u, pr in urls)
     (RAIZ / "sitemap.xml").write_text(
