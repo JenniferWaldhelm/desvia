@@ -40,9 +40,9 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     corpo = f"""<section class="hero-busca">
   <h1>Onde descartar cada resíduo.<br><em>Várias fontes, uma só busca.</em></h1>
   <p>Pontos de entrega, cooperativas e empresas de coleta e destinação, com a situação da licença ambiental de cada uma.</p>
-  <form class="busca" id="busca" role="search">
-    <label class="campo"><span>O que você quer descartar?</span><input id="q" type="search" placeholder="pilha, óleo, entulho, sofá, lâmpada…" autocomplete="off"></label>
-    <label class="campo campo-cidade"><span>Cidade</span><select id="cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
+  <form class="busca" id="busca" role="search" toolname="buscar_onde_descartar_formulario" tooldescription="Busca onde descartar um resíduo em uma cidade, com a licença ambiental de cada empresa.">
+    <label class="campo"><span>O que você quer descartar?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="pilha, óleo, entulho, sofá, lâmpada…" autocomplete="off"></label>
+    <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
     <button type="submit">Buscar</button>
   </form>
   <div class="atalhos" aria-label="Buscas comuns">{atalhos_html}</div>
@@ -100,8 +100,10 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 <script>
 var PONTOS = {hub.dados_js(pontos, "", ctx)};
 var CATS = {cats_js};
+var DESVIA_CIDADES = {json.dumps(cidades, ensure_ascii=False)};
 </script>
-<script src="residuos/hub.js" defer></script>"""
+<script src="residuos/hub.js" defer></script>
+<script src="residuos/webmcp.js" defer></script>"""
     jsonld = [{"@context": "https://schema.org", "@type": "WebSite", "name": "Desvia",
                "url": ctx["base"] + "/",
                "potentialAction": {"@type": "SearchAction", "target": ctx["base"] + "/?q={search_term_string}",

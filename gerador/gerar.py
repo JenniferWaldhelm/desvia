@@ -36,6 +36,9 @@ CIDADES = {
 }
 UF = "PR"
 
+# Token do teste de origem do WebMCP no Chrome (deixe vazio até cadastrar o site).
+ORIGIN_TRIAL = ""
+
 # Páginas fixas do site que continuam no sitemap.
 PAGINAS_FIXAS = [("", "1.0"), ("mandaguari.html", "0.8"), ("mapa-pev.html", "0.6")]
 
@@ -231,11 +234,13 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 <title>{esc(titulo)}</title>
 <meta name="description" content="{esc(descricao)}">
 <link rel="canonical" href="{url}">
+<link rel="alternate" type="text/markdown" title="llms.txt" href="{BASE_URL}/llms.txt">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(titulo)}">
 <meta property="og:description" content="{esc(descricao)}">
 <meta property="og:url" content="{url}">
 <meta property="og:locale" content="pt_BR">
+{f'<meta http-equiv="origin-trial" content="{ORIGIN_TRIAL}">' if ORIGIN_TRIAL else ""}
 {FONTES}
 {CSS_LINK.format(raiz=raiz)}
 {leaflet}
@@ -350,6 +355,7 @@ def gerar():
     SAIDA.mkdir(exist_ok=True)
     shutil.copy(Path(__file__).with_name("estilo.css"), SAIDA / "estilo.css")
     shutil.copy(Path(__file__).with_name("hub.js"), SAIDA / "hub.js")
+    shutil.copy(Path(__file__).with_name("webmcp.js"), SAIDA / "webmcp.js")
     urls = [(f"{BASE_URL}/{u}", pr) for u, pr in PAGINAS_FIXAS]
     nomes = {s: (f, c) for s, f, c, _ in CATEGORIAS}
     resumo_cidades = []
@@ -465,6 +471,35 @@ def gerar():
                        "Pontos de entrega, cooperativas e empresas de coleta e destinação de resíduos, com a situação da licença ambiental. Várias fontes, uma só busca.",
                        f"{BASE_URL}/", "", corpo, jsonld, mapa=True)
     (RAIZ / "index.html").write_text(html_home.replace("<main>", '<main class="home">', 1), encoding="utf-8")
+
+    # llms.txt: resumo do site para assistentes de IA
+    linhas_llms = [
+        "# Desvia",
+        "",
+        "> Onde descartar cada resíduo no Paraná: pontos de entrega, cooperativas e empresas de coleta, transporte e destinação, "
+        "com a situação da licença ambiental de cada uma. Reúne dados do IAT (GeoPR e SGA), do Cadastro Técnico Federal do IBAMA, "
+        "da Receita Federal e das prefeituras.",
+        "",
+        f"Dados atualizados em {HOJE:%d/%m/%Y}. A situação da licença reflete as bases públicas na data da consulta; "
+        "\"licença não localizada\" significa que nada foi encontrado nas bases consultadas, não que a empresa seja irregular.",
+        "",
+        "## Busca",
+        f"- [Busca por resíduo e cidade]({BASE_URL}/): mapa e lista com filtros. Aceita ?q=<resíduo>&cidade=<cidade>&r=<tipo>.",
+        "",
+        "## Cidades",
+    ]
+    for s_, c_, n_, k_ in resumo_cidades:
+        linhas_llms.append(f"- [{c_}]({BASE_URL}/residuos/{s_}/): {n_} pontos e empresas, {k_} tipos de resíduo, obrigações das empresas")
+        for cat_ in [s for s, _, _, _ in CATEGORIAS if s in contagens[s_]]:
+            linhas_llms.append(f"  - [Onde descartar {nomes[cat_][0]} em {c_}]({BASE_URL}/residuos/{s_}/{cat_}/)")
+    linhas_llms += ["", "## Guias de descarte"]
+    for slug, _ in cats_geral:
+        if slug in site_desvia.G.GUIAS:
+            linhas_llms.append(f"- [Como descartar {nomes[slug][0]}]({BASE_URL}/guias/{slug}/): {site_desvia.G.GUIAS[slug]['intro']}")
+    linhas_llms += ["", "## Opcional",
+                    f"- [Guia de Mandaguari]({BASE_URL}/mandaguari.html): coleta por bairro, regras municipais (Lei 4.419/2025) e PGRS",
+                    f"- [Contato]({site_desvia.WHATSAPP}): orientação gratuita e cadastro de empresas", ""]
+    (RAIZ / "llms.txt").write_text("\n".join(linhas_llms), encoding="utf-8")
 
     linhas = "\n".join(f"  <url><loc>{u}</loc><lastmod>{HOJE.isoformat()}</lastmod><priority>{pr}</priority></url>" for u, pr in urls)
     (RAIZ / "sitemap.xml").write_text(

@@ -55,3 +55,13 @@ As páginas de cada resíduo têm o link "Abrir no mapa com filtros", que abre a
 A ação avisa o Bing pelo IndexNow sempre que as páginas mudam (e quando é rodada à mão).
 A chave fica em `gerador/indexnow_key.txt` e o arquivo de verificação na raiz do site (`<chave>.txt`).
 Não apague esses dois arquivos.
+
+## llms.txt e WebMCP (assistentes de IA)
+
+- `llms.txt` (raiz do site) é gerado a cada atualização: resumo do Desvia, cidades, páginas por resíduo e guias.
+- `residuos/webmcp.js` registra duas ferramentas WebMCP (`navigator.modelContext`) na página inicial e nas páginas de cidade:
+  `buscar_onde_descartar` (resíduo, cidade, quem, só licença válida) e `listar_residuos_e_cidades`.
+  O formulário de busca da página inicial também tem os atributos declarativos (`toolname`, `tooldescription`).
+  Em navegadores sem WebMCP, nada acontece.
+- Para valer em produção no Chrome, cadastre o site no teste de origem do WebMCP e cole o token em
+  `<meta http-equiv="origin-trial" content="TOKEN">` (constante `ORIGIN_TRIAL` em `gerador/gerar.py`).
