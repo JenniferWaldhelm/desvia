@@ -194,5 +194,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
 <script>
 var PONTOS = {dados_js(pts, cid_slug, ctx)};
 var CATS = {cats_js};
+var DESVIA_CIDADES = {json.dumps({cid_slug: cidade}, ensure_ascii=False)};
 </script>
-<script src="../hub.js" defer></script>"""
+<script src="../hub.js" defer></script>
+<script src="../webmcp.js" defer></script>"""

@@ -1,0 +1,69 @@
+# Desvia
+
+> Onde descartar cada resíduo no Paraná: pontos de entrega, cooperativas e empresas de coleta, transporte e destinação, com a situação da licença ambiental de cada uma. Reúne dados do IAT (GeoPR e SGA), do Cadastro Técnico Federal do IBAMA, da Receita Federal e das prefeituras.
+
+Dados atualizados em 30/10/2026. A situação da licença reflete as bases públicas na data da consulta; "licença não localizada" significa que nada foi encontrado nas bases consultadas, não que a empresa seja irregular.
+
+## Busca
+- [Busca por resíduo e cidade](https://jenniferwaldhelm.github.io/desvia/): mapa e lista com filtros. Aceita ?q=<resíduo>&cidade=<cidade>&r=<tipo>.
+
+## Cidades
+- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 134 pontos e empresas, 19 tipos de resíduo, obrigações das empresas
+  - [Onde descartar pneus em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/pneus/)
+  - [Onde descartar eletrônicos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/eletronicos/)
+  - [Onde descartar lâmpadas em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/lampadas/)
+  - [Onde descartar pilhas e baterias em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/pilhas-e-baterias/)
+  - [Onde descartar óleo de cozinha em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/oleo-de-cozinha/)
+  - [Onde descartar óleo lubrificante em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/oleo-lubrificante/)
+  - [Onde descartar entulho e resíduos de construção em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/entulho/)
+  - [Onde descartar móveis, colchões e volumosos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/moveis-e-volumosos/)
+  - [Onde descartar poda e galhos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/poda-e-galhos/)
+  - [Onde descartar madeira em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/madeira/)
+  - [Onde descartar resíduos de serviços de saúde em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-de-saude/)
+  - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/reciclaveis/)
+  - [Onde descartar sucata metálica em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/sucata-metalica/)
+  - [Onde descartar resíduos orgânicos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/organicos/)
+  - [Onde descartar resíduos têxteis em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/texteis/)
+  - [Onde descartar tintas e solventes em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/tintas-e-solventes/)
+  - [Onde descartar esgoto de fossa e efluentes em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/limpa-fossa/)
+  - [Onde descartar resíduos perigosos (Classe I) em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-perigosos/)
+  - [Onde descartar resíduos industriais não perigosos (Classe II) em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-classe-ii/)
+- [Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/): 17 pontos e empresas, 11 tipos de resíduo, obrigações das empresas
+  - [Onde descartar pneus em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/pneus/)
+  - [Onde descartar eletrônicos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/eletronicos/)
+  - [Onde descartar lâmpadas em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/lampadas/)
+  - [Onde descartar pilhas e baterias em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/pilhas-e-baterias/)
+  - [Onde descartar óleo de cozinha em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/oleo-de-cozinha/)
+  - [Onde descartar entulho e resíduos de construção em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/entulho/)
+  - [Onde descartar móveis, colchões e volumosos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/moveis-e-volumosos/)
+  - [Onde descartar medicamentos vencidos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/medicamentos/)
+  - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/residuos-de-saude/)
+  - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/reciclaveis/)
+  - [Onde descartar embalagens de agrotóxico em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/embalagens-de-agrotoxico/)
+
+## Guias de descarte
+- [Como descartar pneus](https://jenniferwaldhelm.github.io/desvia/guias/pneus/): Pneu velho não pode ir para a coleta comum nem ficar no quintal. Parado, acumula água e vira criadouro do mosquito da dengue. Queimado, solta fumaça tóxica.
+- [Como descartar eletrônicos](https://jenniferwaldhelm.github.io/desvia/guias/eletronicos/): Celulares, computadores, TVs, cabos e eletrodomésticos têm metais pesados e componentes que contaminam solo e água quando vão para o aterro. Também têm materiais valiosos que podem ser recuperados.
+- [Como descartar lâmpadas](https://jenniferwaldhelm.github.io/desvia/guias/lampadas/): Lâmpadas fluorescentes têm mercúrio. Quebradas, liberam vapor tóxico. Lâmpadas LED também têm componentes eletrônicos e não devem ir para o lixo comum.
+- [Como descartar pilhas e baterias](https://jenniferwaldhelm.github.io/desvia/guias/pilhas-e-baterias/): Pilhas e baterias têm chumbo, cádmio, mercúrio e outros metais. No lixo comum, contaminam o solo e a água do aterro.
+- [Como descartar óleo de cozinha](https://jenniferwaldhelm.github.io/desvia/guias/oleo-de-cozinha/): Óleo de fritura jogado na pia entope o encanamento e contamina rios: um litro de óleo pode contaminar milhares de litros de água. Reciclado, vira sabão, biodiesel e ração.
+- [Como descartar óleo lubrificante](https://jenniferwaldhelm.github.io/desvia/guias/oleo-lubrificante/): Óleo lubrificante usado (de motor e máquinas) é resíduo perigoso. Por lei, ele deve ir para rerrefino, que transforma o óleo usado em óleo novo.
+- [Como descartar entulho e resíduos de construção](https://jenniferwaldhelm.github.io/desvia/guias/entulho/): Entulho de obra (concreto, tijolo, cerâmica, argamassa) pode ser reciclado como agregado. Descartado em terreno baldio, gera multa e atrai bichos.
+- [Como descartar móveis, colchões e volumosos](https://jenniferwaldhelm.github.io/desvia/guias/moveis-e-volumosos/): Sofás, colchões e móveis velhos não cabem na coleta comum. Abandonados na calçada, viram foco de bichos e podem gerar multa.
+- [Como descartar poda e galhos](https://jenniferwaldhelm.github.io/desvia/guias/poda-e-galhos/): Galhos, folhas e grama são resíduos orgânicos que podem virar adubo.
+- [Como descartar madeira](https://jenniferwaldhelm.github.io/desvia/guias/madeira/): Madeira limpa (paletes, sobras de obra) pode ser reaproveitada ou virar biomassa. Madeira tratada ou pintada precisa de destino específico.
+- [Como descartar medicamentos vencidos](https://jenniferwaldhelm.github.io/desvia/guias/medicamentos/): Remédios vencidos ou que sobraram contaminam a água quando vão para o lixo ou o vaso sanitário.
+- [Como descartar resíduos de serviços de saúde](https://jenniferwaldhelm.github.io/desvia/guias/residuos-de-saude/): Resíduos de serviços de saúde (clínicas, consultórios, laboratórios, farmácias, clínicas veterinárias e estúdios de tatuagem) podem ser infectantes ou perigosos.
+- [Como descartar recicláveis (papel, plástico, metal e vidro)](https://jenniferwaldhelm.github.io/desvia/guias/reciclaveis/): Papel, papelão, plástico, metal e vidro limpos voltam para a indústria e geram renda para cooperativas de catadores.
+- [Como descartar sucata metálica](https://jenniferwaldhelm.github.io/desvia/guias/sucata-metalica/): Ferro, alumínio, cobre e outros metais têm valor de mercado e podem ser reciclados infinitas vezes.
+- [Como descartar resíduos orgânicos](https://jenniferwaldhelm.github.io/desvia/guias/organicos/): Restos de alimentos e resíduos orgânicos são cerca de metade do lixo doméstico no Brasil. Compostados, viram adubo em vez de gerar gás e chorume no aterro.
+- [Como descartar resíduos têxteis](https://jenniferwaldhelm.github.io/desvia/guias/texteis/): Roupas e tecidos podem ser doados, reaproveitados ou desfibrados para virar estopa, enchimento e novos fios.
+- [Como descartar tintas e solventes](https://jenniferwaldhelm.github.io/desvia/guias/tintas-e-solventes/): Tinta, thinner, solventes e vernizes são inflamáveis e tóxicos. Não podem ir para a pia, o ralo ou o lixo comum.
+- [Como descartar esgoto de fossa e efluentes](https://jenniferwaldhelm.github.io/desvia/guias/limpa-fossa/): Fossas, caixas de gordura e banheiros químicos precisam ser esvaziados por empresa licenciada, que leva o efluente para tratamento.
+- [Como descartar embalagens de agrotóxico](https://jenniferwaldhelm.github.io/desvia/guias/embalagens-de-agrotoxico/): Embalagens vazias de agrotóxico são perigosas e têm sistema próprio de devolução no Brasil, o Sistema Campo Limpo (inpEV).
+- [Como descartar resíduos perigosos (Classe I)](https://jenniferwaldhelm.github.io/desvia/guias/residuos-perigosos/): Resíduos Classe I são inflamáveis, corrosivos, reativos, tóxicos ou infectantes: óleo usado, solvente, estopa contaminada, lâmpadas, baterias, resíduos de saúde e outros.
+- [Como descartar resíduos industriais não perigosos (Classe II)](https://jenniferwaldhelm.github.io/desvia/guias/residuos-classe-ii/): Resíduos Classe II são os não perigosos da indústria e do comércio: sobras de produção, embalagens, varrição e lodo não perigoso.
+
+## Opcional
+- [Guia de Mandaguari](https://jenniferwaldhelm.github.io/desvia/mandaguari.html): coleta por bairro, regras municipais (Lei 4.419/2025) e PGRS
+- [Contato](https://wa.me/5544999054535): orientação gratuita e cadastro de empresas
