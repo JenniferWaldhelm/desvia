@@ -101,6 +101,9 @@ def buscar_iat(cidade):
 
 
 # ── 2. CTF/IBAMA ────────────────────────────────────────────────────────
+DIAG = []
+
+
 def buscar_ctf(cidade):
     bruto = get(CTF_ZIP, timeout=600)
     z = zipfile.ZipFile(io.BytesIO(bruto))
@@ -115,6 +118,7 @@ def buscar_ctf(cidade):
         with z.open(nome) as fh:
             leitor = csv.reader(io.TextIOWrapper(fh, encoding="utf-8", errors="replace"), delimiter=sep)
             cab = [norm(c) for c in next(leitor)]
+            DIAG.append(f"CTF {nome}: separador '{sep}', colunas {cab[:20]}")
 
             def col(*chaves):
                 for i, c in enumerate(cab):
@@ -128,10 +132,15 @@ def buscar_ctf(cidade):
             if None in (i_cnpj, i_nome, i_mun):
                 print(f"CTF: colunas não reconhecidas em {nome}: {cab[:15]}")
                 continue
+            n_mun = 0
+            exemplos = []
             for linha in leitor:
                 try:
                     if norm(linha[i_mun]) != alvo:
                         continue
+                    n_mun += 1
+                    if len(exemplos) < 5:
+                        exemplos.append(" | ".join(linha[i] for i in (i_cat, i_ativ) if i is not None)[:120])
                     if i_uf is not None and norm(linha[i_uf]) not in ("pr", "parana"):
                         continue
                     ativ = " ".join(linha[i] for i in (i_cat, i_ativ) if i is not None)
@@ -143,6 +152,7 @@ def buscar_ctf(cidade):
                 e = empresas.setdefault(cnpj, {"nome": linha[i_nome], "atividades": set(),
                                                "situacao": linha[i_sit] if i_sit is not None else ""})
                 e["atividades"].add(linha[i_ativ] if i_ativ is not None else ativ)
+            DIAG.append(f"CTF {nome}: {n_mun} linhas do município; exemplos de atividade: {exemplos}")
     return empresas
 
 
@@ -251,7 +261,7 @@ def principal(cidade):
               f"- Já na base: {len(linhas) - len(novas)}",
               f"- Novas: {len(novas)}",
               f"- CNPJ não ativo na Receita: {sum(1 for l in linhas if l['Situação CNPJ'] and l['Situação CNPJ'].lower() not in ('ativa', 'não consultada'))}",
-              ""] + [f"- Aviso: {a}" for a in avisos]
+              ""] + [f"- Aviso: {a}" for a in avisos] + (["", "## Diagnóstico CTF", ""] + [f"- {d}" for d in DIAG] if DIAG else [])
     (RAIZ / "coleta" / f"{slug}-resumo.md").write_text("\n".join(resumo) + "\n", encoding="utf-8")
     print("\n".join(resumo))
 
