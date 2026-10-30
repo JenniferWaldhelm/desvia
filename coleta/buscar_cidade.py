@@ -110,7 +110,8 @@ def buscar_ctf(cidade):
     alvo = norm(cidade)
     empresas = {}
     for nome in z.namelist():
-        if not nome.lower().endswith(".csv"):
+        if not nome.lower().endswith(".csv") or (any(n.lower().endswith("_pr.csv") for n in z.namelist())
+                                                  and not nome.lower().endswith("_pr.csv")):
             continue
         with z.open(nome) as fh:
             amostra = fh.read(4096).decode("utf-8", "replace")
@@ -118,7 +119,6 @@ def buscar_ctf(cidade):
         with z.open(nome) as fh:
             leitor = csv.reader(io.TextIOWrapper(fh, encoding="utf-8", errors="replace"), delimiter=sep)
             cab = [norm(c) for c in next(leitor)]
-            DIAG.append(f"CTF {nome}: separador '{sep}', colunas {cab[:20]}")
 
             def col(*chaves):
                 for i, c in enumerate(cab):
@@ -127,32 +127,39 @@ def buscar_ctf(cidade):
                 return None
             i_cnpj, i_nome = col("cnpj"), col("razao", "nome", "inscrito")
             i_mun, i_uf = col("municipio"), col("estado", "uf")
-            i_ativ, i_cat = col("atividade"), col("categoria")
-            i_sit = col("situacao")
+            i_ccat, i_dcat = col("codigo da categoria"), col("descricao da categoria")
+            i_catv, i_dativ = col("codigo da atividade"), col("descricao da atividade")
+            i_sit = col("situacao cadastral", "situacao")
             if None in (i_cnpj, i_nome, i_mun):
-                print(f"CTF: colunas não reconhecidas em {nome}: {cab[:15]}")
+                DIAG.append(f"CTF {nome}: colunas não reconhecidas: {cab[:20]}")
                 continue
-            n_mun = 0
-            exemplos = []
+
+            def codigo(linha):
+                try:
+                    return f"{int(linha[i_ccat]):03d}.{int(linha[i_catv]):03d}"
+                except (TypeError, ValueError, IndexError):
+                    return ""
+            n_mun, n_ok = 0, 0
             for linha in leitor:
                 try:
                     if norm(linha[i_mun]) != alvo:
                         continue
-                    n_mun += 1
-                    if len(exemplos) < 5:
-                        exemplos.append(" | ".join(linha[i] for i in (i_cat, i_ativ) if i is not None)[:120])
                     if i_uf is not None and norm(linha[i_uf]) not in ("pr", "parana"):
                         continue
-                    ativ = " ".join(linha[i] for i in (i_cat, i_ativ) if i is not None)
+                    n_mun += 1
+                    desc = " ".join(linha[i] for i in (i_dcat, i_dativ) if i is not None)
+                    ativ = f"{codigo(linha)} {desc}"
                     if not CTF_INCLUI.search(ativ) or NOME_EXCLUI.search(linha[i_nome]):
                         continue
                 except IndexError:
                     continue
+                n_ok += 1
                 cnpj = so_digitos(linha[i_cnpj])
                 e = empresas.setdefault(cnpj, {"nome": linha[i_nome], "atividades": set(),
                                                "situacao": linha[i_sit] if i_sit is not None else ""})
-                e["atividades"].add(linha[i_ativ] if i_ativ is not None else ativ)
-            DIAG.append(f"CTF {nome}: {n_mun} linhas do município; exemplos de atividade: {exemplos}")
+                e["atividades"].add(linha[i_dativ] if i_dativ is not None else ativ)
+            if n_mun:
+                DIAG.append(f"CTF {nome}: {n_mun} atividades no município, {n_ok} de resíduos")
     return empresas
 
 
