@@ -35,7 +35,7 @@ IAT_INCLUI = re.compile(r"Disposição de resíduos|Gerenciamento de resíduos|R
                         r"cargas em geral e de resíduos classe|transporte de resíduos|Transportadora de resíduos", re.I)
 IAT_EXCLUI = re.compile(r"Autom|sem resíduos", re.I)
 # Atividades do CTF: 017.* (tratamento/destinação), 018.014 (transporte OLUC), 018.074 (transporte resíduos perigosos)
-CTF_INCLUI = re.compile(r"\b(017\.\d{3}|018\.014|018\.074)\b|tratamento e destina|destinação de resíduos|transporte de cargas perigosas - lei", re.I)
+CTF_INCLUI = re.compile(r"\b(017\.\d{3}|018\.014|018\.074)\b|tratamento e destina|destinação de resíduos|transporte de cargas perigosas - (lei n|resolu)", re.I)
 # Quem não presta serviço de resíduos a terceiros
 NOME_EXCLUI = re.compile(r"ÁGUA E ESGOTO|AGUA E ESGOTO|SANEPAR|SAMAE|SAAE|COMPANHIA DE SANEAMENTO", re.I)
 
