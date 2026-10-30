@@ -2,7 +2,9 @@
 (function () {
   var CORES = { valida: '#2A7A2A', vencendo: '#C77700', vencida: '#C77700', publico: '#1A3A8F', nao_localizada: '#7A7F8C' };
   var ORDEM = { valida: 0, vencendo: 1, publico: 2, vencida: 3, nao_localizada: 4 };
-  var estado = { q: '', p: 'todos', cat: null, lic: false, loc: false };
+  var estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '' };
+  var selCidade = document.getElementById('cidade');
+  var fLoc = document.getElementById('fLoc');
   var lista = document.getElementById('lista');
   var contador = document.getElementById('count');
   var mapa = null, marcadores = {}, camada = null;
@@ -15,10 +17,14 @@
   });
 
   // filtro inicial pela URL: ?r=pneus
-  var param = new URLSearchParams(location.search).get('r');
+  var busca = new URLSearchParams(location.search);
+  var param = busca.get('r');
   if (param && CATS[param]) estado.cat = param;
+  if (selCidade && busca.get('cidade')) { selCidade.value = busca.get('cidade'); estado.cid = selCidade.value; }
+  if (busca.get('q')) { estado.q = busca.get('q'); document.getElementById('q').value = estado.q; }
 
   function passa(p) {
+    if (estado.cid && p.cs.indexOf(estado.cid) < 0) return false;
     if (estado.cat && p.c.indexOf(estado.cat) < 0) return false;
     if (estado.p !== 'todos' && p.pp.indexOf(estado.p) < 0) return false;
     if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo')) return false;
@@ -73,6 +79,7 @@
     if (mapa) desenhar(vis);
     var url = new URL(location.href);
     if (estado.cat) url.searchParams.set('r', estado.cat); else url.searchParams.delete('r');
+    if (estado.cid) url.searchParams.set('cidade', estado.cid); else url.searchParams.delete('cidade');
     history.replaceState(null, '', url);
   }
 
@@ -92,6 +99,13 @@
       if (p.loc) locais.push([p.a, p.o]);
     });
     var pts = locais.length ? locais : vis.filter(function (p) { return p.a != null; }).map(function (p) { return [p.a, p.o]; });
+    if (!locais.length && pts.length > 2) {
+      // ignora pontos muito distantes (empresas de outros estados) para o mapa abrir na região certa
+      var med = function (i) { var v = pts.map(function (x) { return x[i]; }).sort(function (a, b) { return a - b; }); return v[Math.floor(v.length / 2)]; };
+      var mLat = med(0), mLng = med(1);
+      var perto = pts.filter(function (x) { return Math.abs(x[0] - mLat) < 1 && Math.abs(x[1] - mLng) < 1.2; });
+      if (perto.length) pts = perto;
+    }
     if (pts.length) mapa.fitBounds(L.latLngBounds(pts).pad(0.15), { maxZoom: 15 });
   }
 
@@ -121,12 +135,25 @@
     render();
   });
   document.getElementById('fLic').addEventListener('change', function (e) { estado.lic = e.target.checked; render(); });
-  document.getElementById('fLoc').addEventListener('change', function (e) { estado.loc = e.target.checked; render(); });
+  if (fLoc) fLoc.addEventListener('change', function (e) { estado.loc = e.target.checked; render(); });
+  if (selCidade) selCidade.addEventListener('change', function (e) { estado.cid = e.target.value; render(); });
+  var form = document.getElementById('busca');
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault(); render();
+    document.getElementById('resultados').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  document.querySelectorAll('[data-atalho]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      estado.cat = b.dataset.atalho; render();
+      document.getElementById('resultados').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
   document.getElementById('limpar').addEventListener('click', function () {
-    estado = { q: '', p: 'todos', cat: null, lic: false, loc: false };
+    estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '' };
     document.getElementById('q').value = '';
     document.getElementById('fLic').checked = false;
-    document.getElementById('fLoc').checked = false;
+    if (fLoc) fLoc.checked = false;
+    if (selCidade) selCidade.value = '';
     document.querySelectorAll('#seg button').forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.p === 'todos' ? 'true' : 'false'); });
     render();
   });

@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
-          git add dados/pontos.csv residuos sitemap.xml
+          git add dados/pontos.csv residuos guias index.html sitemap.xml
           if git diff --cached --quiet; then
             echo "Nada mudou."
             echo "mudou=nao" >> "$GITHUB_OUTPUT"

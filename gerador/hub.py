@@ -142,7 +142,7 @@ def dados_js(pts, cid_slug, ctx):
             "loc": norm(p["Município sede"]).replace(" ", "-") == cid_slug,
             "a": p["_lat"], "o": p["_lng"], "tel": p["Telefone"], "site": site,
             "st": p["_status"], "lic": lic, "lc": cls, "cnpj": aviso_cnpj(p), "obs": obs_publica(p),
-            "pp": papel(p),
+            "pp": papel(p), "cs": sorted(p["_cidades"]),
         })
     return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
 
