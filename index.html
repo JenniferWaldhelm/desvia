@@ -1768,10 +1768,21 @@
     mapaLeaflet = L.map('mapa-pontos', { zoomControl: true, scrollWheelZoom: false })
       .setView([-23.4700, -51.7000], 10);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    const camadaRua = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       maxZoom: 19
-    }).addTo(mapaLeaflet);
+    });
+    const camadaSatelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: '© <a href="https://www.esri.com">Esri</a> — Esri, Maxar, Earthstar Geographics',
+      maxZoom: 19
+    });
+    camadaRua.addTo(mapaLeaflet);
+
+    L.control.layers(
+      { '🗺 Mapa': camadaRua, '🛰 Satélite': camadaSatelite },
+      {},
+      { position: 'topright', collapsed: false }
+    ).addTo(mapaLeaflet);
 
     // Ícones por tipo
     function icone(cor) {
