@@ -94,7 +94,13 @@ LOCAL = {
                     ("Licenciamento ambiental municipal (SEMA)", "https://portal.londrina.pr.gov.br/licenciamento-ambiental-municipal")),
     },
     "maringa": {
-        "licenciador": "Em Maringá, confira na Secretaria Municipal de Meio Ambiente se a atividade é licenciada pelo município; as demais são licenciadas pelo IAT (Instituto Água e Terra).",
+        "licenciador": "Em Maringá o licenciamento é municipalizado: o município licencia as atividades de impacto local e o IAT (Instituto Água e Terra) as demais.",
+        "licenca": ("🏛️", "Licença — Município ou IAT", "Licença ambiental (Prefeitura de Maringá ou IAT)",
+                    "Maringá tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
+                    ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
+                     "Confira na Secretaria Municipal de Meio Ambiente se a atividade é de impacto local; se não for, o processo é no IAT",
+                     "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
+                    None),
         "extra": [
             ("♻️", "Recicláveis", "Ecopontos Ecolix",
              "Os ecopontos Ecolix, espalhados pela cidade, recebem recicláveis separados (papel, plástico, metal e vidro). Leve limpos e secos.",
