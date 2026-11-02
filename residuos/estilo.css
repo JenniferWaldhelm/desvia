@@ -215,3 +215,10 @@ main.home { padding-top: 0; }
   .busca > button[type=submit] { order: 3; border-radius: 0 0 14px 14px; }
   .busca-filtros { order: 2; border-radius: 0; }
 }
+
+/* ── Rodapé ── */
+.rodape-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px 24px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--cinza-claro); }
+.rodape-links div { display: flex; flex-direction: column; gap: 6px; }
+.rodape-links b { font-family: 'Montserrat', sans-serif; color: var(--escuro); font-size: .85rem; }
+.rodape-links a { color: var(--cinza); text-decoration: none; }
+.rodape-links a:hover { color: var(--verde); text-decoration: underline; }

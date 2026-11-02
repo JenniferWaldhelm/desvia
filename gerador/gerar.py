@@ -253,7 +253,11 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {corpo}
 </main>
 <footer><p>Desvia reúne, em uma só busca, dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
-<p><a href="{raiz}">Busca</a> · <a href="{raiz}guias/">Guias</a> · <a href="{raiz}residuos/">Cidades</a> · <a href="{raiz}mandaguari.html">Guia de Mandaguari</a> · <a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">Fale conosco</a></p></footer>
+<nav class="rodape-links" aria-label="Rodapé">
+  <div><b>Desvia</b><a href="{raiz}">Buscar onde descartar</a><a href="{raiz}guias/">Guias por resíduo</a><a href="{raiz}#empresas">Para empresas</a></div>
+  <div><b>Cidades</b>{"".join(f'<a href="{raiz}residuos/{c}/">{esc(n)}</a>' for c, n in CIDADES.items())}</div>
+  <div><b>Contato</b><a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div>
+</nav></footer>
 </body>
 </html>
 """
