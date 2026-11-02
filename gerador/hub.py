@@ -212,6 +212,31 @@ def dados_js(pts, cid_slug, ctx):
     return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
 
 
+def grupos(ctx):
+    """Grupos e canais de doação por cidade (dados/grupos.csv), chave = slug da cidade."""
+    import csv
+    from pathlib import Path
+    arq = Path(__file__).resolve().parent.parent / "dados" / "grupos.csv"
+    out = {}
+    if arq.exists():
+        for g in csv.DictReader(open(arq, encoding="utf-8")):
+            out.setdefault(ctx["norm"](g["Cidade"]).replace(" ", "-"), []).append({"n": g["Nome"], "l": g["Link"], "t": g["Tipo"]})
+    return out
+
+
+def secao_doar(cid_slug, cidade, ctx):
+    gs = grupos(ctx).get(cid_slug, [])
+    if not gs:
+        return ""
+    lis = "".join(f'<li><a href="{esc(g["l"])}" target="_blank" rel="noopener nofollow">{esc(g["n"])} ↗</a></li>' for g in gs)
+    return f"""<section class="doar" id="doar">
+<h2>Doar ou desapegar em {esc(cidade)}</h2>
+<p class="resposta">Móveis, roupas, eletrônicos que funcionam e utensílios em bom estado costumam ir mais rápido por doação direta, em grupos da cidade, do que para um ponto de coleta. Anuncie com foto, bairro e se precisa retirar.</p>
+<ul class="doar-links">{lis}</ul>
+<p class="sub">Conhece um grupo ou instituição que recebe doações em {esc(cidade)}? <a href="{WHATSAPP}" target="_blank" rel="noopener">Indique para o Desvia</a>.</p>
+</section>"""
+
+
 def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     chips = "".join(
         f'<button type="button" class="chip" data-cat="{s}" aria-pressed="false">{esc(nomes[s][1])} <span class="n">{len(por_cat[s])}</span></button>'
@@ -255,6 +280,8 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
   </div>
 </section>
 
+{secao_doar(cid_slug, cidade, ctx)}
+
 {secao_empresas(cid_slug, cidade)}
 
 <section class="outras"><h2>Páginas por tipo de resíduo</h2><ul>{paginas}</ul></section>
@@ -263,6 +290,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
 var PONTOS = {dados_js(pts, cid_slug, ctx)};
 var CATS = {cats_js};
 var SINONIMOS = {json.dumps(SINONIMOS, ensure_ascii=False)};
+var GRUPOS = {json.dumps(grupos(ctx), ensure_ascii=False)};
 var DESVIA_CIDADES = {json.dumps({cid_slug: cidade}, ensure_ascii=False)};
 </script>
 <script src="../hub.js" defer></script>
