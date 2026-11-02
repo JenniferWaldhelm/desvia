@@ -85,6 +85,13 @@ LOCAL = {
              [], None),
         ],
         "orgao": "Secretaria Municipal do Ambiente (SEMA) de Londrina",
+        "licenciador": "Em Londrina o licenciamento é municipalizado: a SEMA licencia as atividades de impacto local e o IAT (Instituto Água e Terra) as demais.",
+        "licenca": ("🏛️", "Licença — SEMA ou IAT", "Licença ambiental (SEMA Londrina ou IAT)",
+                    "Londrina tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela SEMA; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
+                    ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
+                     "Confira na SEMA se a atividade é de impacto local; se não for, o processo é no IAT",
+                     "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
+                    ("Portal da Prefeitura de Londrina", "https://portal.londrina.pr.gov.br/")),
     },
     "ibipora": {
         "extra": [
@@ -110,12 +117,15 @@ def cartao_obrigacao(item):
 def secao_empresas(cid_slug, cidade):
     loc = LOCAL.get(cid_slug, {})
     itens = COMUM[:3] + [loc.get("pgrs", PGRS_GERAL)] + COMUM[3:] + loc.get("extra", [])
+    if loc.get("licenca"):
+        itens = [loc["licenca"] if i[2].startswith("Licença ambiental") else i for i in itens]
+    licenciador = loc.get("licenciador", "O órgão estadual é o IAT (Instituto Água e Terra).")
     orgao = loc.get("orgao", f"Secretaria de Meio Ambiente de {cidade}")
     cards = "".join(cartao_obrigacao(i) for i in itens)
     return f"""<section class="empresas" id="empresas">
 <h2>Sua empresa tem obrigações com os resíduos que gera</h2>
 <p class="resposta">A Lei Federal 12.305/2010 (Política Nacional de Resíduos Sólidos) define responsabilidades claras para empresas. Quem descumpre pode receber multa, ter a atividade embargada e responder criminalmente.</p>
-<p class="regra">Isto é obrigação legal, não recomendação. Vale para comércios, indústrias, prestadores de serviço e construtoras em {esc(cidade)}. O órgão estadual é o IAT (Instituto Água e Terra). Dúvidas sobre o que se aplica à sua empresa: {esc(orgao)}.</p>
+<p class="regra">Isto é obrigação legal, não recomendação. Vale para comércios, indústrias, prestadores de serviço e construtoras em {esc(cidade)}. {esc(licenciador)} Dúvidas sobre o que se aplica à sua empresa: {esc(orgao)}.</p>
 <div class="obr-grade">{cards}
 <article class="obr obr-cta"><span class="obr-tag">💬 Precisa de orientação?</span><h3>Não sabe por onde começar?</h3><p>O Projeto Desvia ajuda a entender o que se aplica ao seu caso. Mande uma mensagem.</p><a href="{WHATSAPP}" target="_blank" rel="noopener">Chamar no WhatsApp →</a></article>
 </div>
