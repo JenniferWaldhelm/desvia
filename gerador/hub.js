@@ -116,6 +116,19 @@
     return html;
   }
 
+  // Registra o que as pessoas buscam (e o que não acham) no contador de visitas, se estiver ligado
+  var tBusca;
+  function registrar(caminho) {
+    try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: caminho, title: caminho, event: true }); } catch (e) {}
+  }
+  function registrarBusca(n) {
+    clearTimeout(tBusca);
+    var q = norm(estado.q || '').trim();
+    if (q.length < 3) return;
+    tBusca = setTimeout(function () {
+      registrar((n ? 'busca/' : 'busca-sem-resultado/') + (estado.cid || 'todas') + '/' + q.replace(/\s+/g, '-'));
+    }, 1500);
+  }
   var POR_PAGINA = 20, limite = POR_PAGINA, visAtual = [];
   function render(mais) {
     if (!mais) limite = POR_PAGINA;
@@ -125,6 +138,7 @@
     });
     contador.textContent = vis.length;
     visAtual = vis;
+    if (!mais) registrarBusca(vis.length);
     var resto = vis.length - limite;
     lista.innerHTML = vis.length ? vis.slice(0, limite).map(cartao).join('') +
       (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') : sugestoes();
@@ -346,7 +360,7 @@
   dlg.addEventListener('click', function (e) {
     var t = e.target;
     if (t === dlg || t.closest('[data-fechar]')) { dlg.close ? dlg.close() : dlg.removeAttribute('open'); return; }
-    var c = t.closest('[data-c]'); if (c) return passo2(c.dataset.c);
+    var c = t.closest('[data-c]'); if (c) { registrar('assistente/' + c.dataset.c); return passo2(c.dataset.c); }
     var es = t.closest('[data-estado]'); if (es) { var x = es.dataset.estado.split('|'); return passo3(x[0], x[1] === 'bom'); }
     var ir = t.closest('[data-ir]');
     if (ir) {

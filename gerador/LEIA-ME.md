@@ -71,3 +71,15 @@ Não apague esses dois arquivos.
 `gerador/sinonimos.py` liga palavras comuns ao tipo de resíduo ("cabo usb", "geladeira" → Eletrônicos;
 "sofá", "colchão" → Móveis e volumosos). A busca aceita um erro de digitação e, quando não acha nada,
 sugere os tipos de resíduo mais prováveis. Para ensinar uma palavra nova, acrescente-a na lista do tipo certo.
+
+## Revisão mensal das licenças
+
+A ação "Revisão mensal das licenças" roda todo dia 1º: refaz a coleta automática (IAT, IBAMA, Receita)
+em todas as cidades publicadas e grava `coleta/revisao-AAAA-MM.md` com CNPJs que deixaram de estar ativos,
+licenças renovadas, licenças que venceram no último mês e empresas novas. Não altera o site.
+
+## Contador de visitas e buscas
+
+Com `GOATCOUNTER` preenchido em `gerador/gerar.py`, o site conta visitas (sem cookies) e registra como eventos:
+`busca/<cidade>/<termo>`, `busca-sem-resultado/<cidade>/<termo>` e `assistente/<tipo>`.
+As buscas sem resultado mostram o que falta na base.

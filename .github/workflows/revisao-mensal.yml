@@ -1,0 +1,35 @@
+name: Revisão mensal das licenças
+
+# Todo dia 1º roda a coleta automática em todas as cidades publicadas e gera
+# coleta/revisao-AAAA-MM.md com o que mudou (CNPJ baixado, licença renovada ou vencida, empresa nova).
+# Não altera o site: a Jen revisa e as mudanças aprovadas entram na planilha.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 10 1 * *"   # dia 1º, 7h23 em Brasília
+
+permissions:
+  contents: write
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Coletar todas as cidades publicadas
+        run: |
+          python3 -c "import sys; sys.path.insert(0,'gerador'); from gerar import CIDADES; print('\n'.join(CIDADES.values()))" > cidades.txt
+          while read -r c; do python3 coleta/buscar_cidade.py "$c" || echo "falhou: $c"; done < cidades.txt
+      - name: Comparar com a base
+        run: python3 coleta/revisar.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Salvar
+        run: |
+          git config user.name "Desvia (automático)"
+          git config user.email "actions@users.noreply.github.com"
+          git add coleta/*.csv coleta/*.md
+          git diff --cached --quiet || git commit -m "Revisão mensal das licenças"
+          git pull --rebase -q && git push
