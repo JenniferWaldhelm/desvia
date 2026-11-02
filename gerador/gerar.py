@@ -60,7 +60,7 @@ CATEGORIAS = [
     ("reciclaveis", "recicláveis (papel, plástico, metal e vidro)", "Recicláveis", ["reciclav", "papel", "plastic", "vidro", "isopor"]),
     ("sucata-metalica", "sucata metálica", "Sucata metálica", ["sucata", "metai", "metal", "ferro", "alumin"]),
     ("organicos", "resíduos orgânicos", "Orgânicos", ["organic", "compostag", "alimento", "sebo"]),
-    ("texteis", "resíduos têxteis", "Têxteis", ["textil", "texteis", "estopa"]),
+    ("texteis", "roupas e resíduos têxteis", "Roupas e têxteis", ["textil", "texteis", "estopa", "roupa", "brecho"]),
     ("tintas-e-solventes", "tintas e solventes", "Tintas e solventes", ["tinta", "solvente", "thinner"]),
     ("limpa-fossa", "esgoto de fossa e efluentes", "Fossa e efluentes", ["fossa", "esgoto", "efluente", "despejo", "banheiros quimicos"]),
     ("embalagens-de-agrotoxico", "embalagens de agrotóxico", "Embalagens de agrotóxico", ["defensivo", "agrotox"]),
