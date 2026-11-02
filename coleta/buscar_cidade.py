@@ -73,19 +73,25 @@ def get(url, tentativas=3, timeout=60):
 
 # ── 1. IAT ──────────────────────────────────────────────────────────────
 def buscar_iat(cidade):
-    todos, off = [], 0
+    # Filtra no servidor só atividades ligadas a resíduos (cidades grandes dão erro 500 sem filtro)
+    filtro = ("(UPPER(desc_atividade) LIKE '%RES_DUO%' OR UPPER(desc_grupo_atividade) LIKE '%RES_DUO%' "
+              "OR UPPER(desc_atividade) LIKE '%RECICLAGEM%' OR UPPER(desc_atividade) LIKE '%REFINO%')")
+    todos, off, pagina = [], 0, 1000
     while True:
-        q = urllib.parse.urlencode({"f": "json", "where": f"nome_municipio='{cidade}'", "outFields": "*",
-                                    "returnGeometry": "false", "resultRecordCount": 2000, "resultOffset": off,
+        q = urllib.parse.urlencode({"f": "json", "where": f"nome_municipio='{cidade}' AND {filtro}", "outFields": "*",
+                                    "returnGeometry": "false", "resultRecordCount": pagina, "resultOffset": off,
                                     "orderByFields": "objectid"})
         r = json.loads(get(f"{IAT}?{q}"))
         if "error" in r:
+            if pagina > 250:
+                pagina //= 2
+                continue
             raise RuntimeError(r["error"])
         fs = [f["attributes"] for f in r.get("features", [])]
         todos += fs
-        if len(fs) < 2000:
+        if len(fs) < pagina:
             break
-        off += 2000
+        off += pagina
     empresas = {}
     for a in todos:
         chave = f"{a.get('desc_grupo_atividade')} | {a.get('desc_atividade')}"
@@ -261,7 +267,7 @@ def principal(cidade):
         w.writerows(linhas)
     novas = [l for l in linhas if not l["Já na base"]]
     resumo = [f"# {cidade}: coleta automática em {HOJE}", "",
-              f"- Licenças do IAT no município: {n_iat}",
+              f"- Licenças do IAT ligadas a resíduos no município: {n_iat}",
               f"- Empresas de resíduos no IAT: {len(iat)}",
               f"- Empresas de resíduos no CTF/IBAMA: {len(ctf)}",
               f"- Total (sem repetição): {len(linhas)}",
