@@ -130,6 +130,7 @@
       (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') : sugestoes();
     document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.cat === estado.cat ? 'true' : 'false'); });
     document.querySelectorAll('.legenda [data-st]').forEach(function (b) { b.setAttribute('aria-pressed', estado.fora[b.dataset.st] ? 'false' : 'true'); });
+    document.querySelectorAll('#seg button').forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.p === estado.p ? 'true' : 'false'); });
     var fq = document.getElementById('fQuem'), ft = document.getElementById('fTipo');
     if (fq) fq.value = estado.p; if (ft) ft.value = estado.cat || '';
     if (mapa && !mais) desenhar(vis);
@@ -285,6 +286,70 @@
       document.getElementById('resultados').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // ── Assistente "Me ajude a decidir" ──
+  var REUSO = ['eletronicos', 'moveis-e-volumosos', 'texteis', 'madeira', 'sucata-metalica'];
+  var PERIGO = ['medicamentos', 'pilhas-e-baterias', 'lampadas', 'oleo-de-cozinha', 'oleo-lubrificante', 'pneus', 'entulho',
+    'residuos-de-saude', 'tintas-e-solventes', 'embalagens-de-agrotoxico', 'limpa-fossa', 'residuos-perigosos', 'poda-e-galhos'];
+  var NOME_ACAO = { doar: 'doar', vender: 'vender ou trocar', reciclar: 'reciclar', descartar: 'descartar com segurança', empresa: 'contratar coleta' };
+  var dlg = document.createElement('dialog'); dlg.className = 'ajuda'; document.body.appendChild(dlg);
+  function contaAcao(cat, ac) {
+    return PONTOS.filter(function (p) { return p.c.indexOf(cat) >= 0 && (!ac || p.pp.indexOf(ac) >= 0) && (!estado.cid || p.cs.indexOf(estado.cid) >= 0); }).length;
+  }
+  function tela(html) { dlg.innerHTML = '<button type="button" class="ajuda-x" data-fechar aria-label="Fechar">×</button>' + html; if (!dlg.open) { try { dlg.showModal(); } catch (e) { dlg.setAttribute('open', ''); } } }
+  function botoesAcao(cat, lista) {
+    var b = lista.map(function (ac) { var n = contaAcao(cat, ac); return n ? '<button type="button" class="ajuda-ok" data-ir="' + cat + '|' + ac + '">Ver onde ' + NOME_ACAO[ac] + ' (' + n + ')</button>' : ''; }).join('');
+    if (!b) { var t = contaAcao(cat, null); b = t ? '<button type="button" class="ajuda-ok" data-ir="' + cat + '|todos">Ver todos os lugares (' + t + ')</button>' : '<p>Ainda não temos lugares para isso nesta cidade. Fale com a prefeitura ou mande uma mensagem para o Desvia.</p>'; }
+    return '<div class="ajuda-acoes">' + b + '</div>';
+  }
+  function passo1() {
+    var cats = Object.keys(CATS).filter(function (c) { return contaAcao(c, null) > 0; });
+    tela('<h2>O que você tem?</h2><input type="search" class="ajuda-q" placeholder="Digite: sofá, celular, remédio…" autocomplete="off">' +
+      '<div class="ajuda-cats">' + cats.map(function (c) { return '<button type="button" class="chip" data-c="' + c + '">' + esc(CATS[c]) + '</button>'; }).join('') + '</div>');
+    var q = dlg.querySelector('.ajuda-q'); q.focus();
+    q.addEventListener('input', function () {
+      var achou = catsDaBusca(q.value), t = norm(q.value);
+      dlg.querySelectorAll('.ajuda-cats .chip').forEach(function (b) {
+        b.hidden = !!t && achou.indexOf(b.dataset.c) < 0 && norm(b.textContent).indexOf(t) < 0;
+      });
+    });
+  }
+  function passo2(cat) {
+    if (REUSO.indexOf(cat) >= 0) {
+      tela('<h2>' + esc(CATS[cat]) + '</h2><p>Ainda funciona ou está em bom estado?</p><div class="ajuda-acoes">' +
+        '<button type="button" class="ajuda-ok" data-estado="' + cat + '|bom">Sim, ainda dá para usar</button>' +
+        '<button type="button" class="ajuda-ok ajuda-sec" data-estado="' + cat + '|ruim">Não, está quebrado ou gasto</button></div>');
+    } else if (PERIGO.indexOf(cat) >= 0) {
+      tela('<h2>' + esc(CATS[cat]) + '</h2><p><b>Isso não pode ir para o lixo comum.</b> Leve a um ponto de descarte seguro. Se for empresa ou volume grande, contrate coleta licenciada.</p>' + botoesAcao(cat, ['descartar', 'reciclar', 'empresa']));
+    } else {
+      tela('<h2>' + esc(CATS[cat]) + '</h2><p>Separe, limpe se precisar, e leve para reciclar. Há quem compre alguns materiais.</p>' + botoesAcao(cat, ['reciclar', 'vender', 'descartar', 'empresa']));
+    }
+  }
+  function passo3(cat, bom) {
+    if (bom) {
+      var temReuso = contaAcao(cat, 'doar') + contaAcao(cat, 'vender') > 0;
+      tela('<h2>Ótimo: dá para continuar sendo usado</h2><p>Doar ou vender evita que vire lixo e ajuda alguém.' +
+        (temReuso ? ' Veja quem recebe:' : ' Ainda não temos aqui lugares que recebem doação disso, mas dá para anunciar em grupos de doação do bairro, no Marketplace ou na OLX, ou oferecer para instituições e vizinhos. Se não der certo:') +
+        '</p>' + botoesAcao(cat, temReuso ? ['doar', 'vender'] : ['reciclar', 'descartar']));
+    }
+    else tela('<h2>Então o melhor é reciclar ou descartar com segurança</h2><p>Muitas peças ainda viram matéria-prima. Veja onde levar:</p>' + botoesAcao(cat, ['reciclar', 'descartar', 'vender', 'empresa']));
+  }
+  dlg.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t === dlg || t.closest('[data-fechar]')) { dlg.close ? dlg.close() : dlg.removeAttribute('open'); return; }
+    var c = t.closest('[data-c]'); if (c) return passo2(c.dataset.c);
+    var es = t.closest('[data-estado]'); if (es) { var x = es.dataset.estado.split('|'); return passo3(x[0], x[1] === 'bom'); }
+    var ir = t.closest('[data-ir]');
+    if (ir) {
+      var y = ir.dataset.ir.split('|');
+      estado.q = ''; campoQ.value = ''; mostraX(); estado.cat = y[0]; estado.p = y[1];
+      dlg.close ? dlg.close() : dlg.removeAttribute('open'); render();
+      var r = document.getElementById('resultados') || document.querySelector('.ferramenta');
+      if (r) r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+  document.querySelectorAll('[data-ajuda]').forEach(function (b) { b.addEventListener('click', passo1); });
+
   document.getElementById('limpar').addEventListener('click', function () {
     estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '', fora: {} };
     document.getElementById('q').value = ''; mostraX();

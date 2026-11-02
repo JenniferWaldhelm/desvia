@@ -1,5 +1,6 @@
 """Página da cidade: mapa com filtros (estilo da ferramenta de Londrina) + obrigações das empresas."""
 import json
+import re
 from sinonimos import SINONIMOS
 from html import escape as _esc
 
@@ -146,6 +147,35 @@ def secao_empresas(cid_slug, cidade):
 </section>"""
 
 
+DESCARTE_SEGURO = {"medicamentos", "pilhas-e-baterias", "lampadas", "eletronicos", "pneus", "entulho", "oleo-de-cozinha",
+                   "oleo-lubrificante", "moveis-e-volumosos", "poda-e-galhos", "madeira", "residuos-de-saude",
+                   "tintas-e-solventes", "embalagens-de-agrotoxico", "limpa-fossa"}
+RECICLA = {"reciclaveis", "sucata-metalica", "organicos", "escovas-e-esponjas"}
+
+
+def acoes(p, norm):
+    """O que a pessoa pode fazer neste ponto: doar, vender, reciclar, descartar ou (empresas) contratar."""
+    tp, sv = p["Tipo de ponto"], p["Serviço"]
+    txt = norm(" ".join([p["Nome"], p["Resíduos aceitos"]]))
+    obs = norm(p.get("Obs", ""))
+    cats = set(p.get("_cats", []))
+    a = []
+    if re.search(r"\bdoac|\bong\b|bazar", txt) or obs.startswith("recebe doac"):
+        a.append("doar")
+    if re.search(r"brecho|\bcompra|ferro velho|consigna", txt) or sv == "Compra de recicláveis":
+        a.append("vender")
+    publico = tp in ("PEV público", "PEV privado", "Cooperativa/associação", "Programa logística reversa")
+    if (cats & RECICLA or tp == "Cooperativa/associação" or "recicl" in txt) and (publico or sv == "Compra de recicláveis"):
+        a.append("reciclar")
+    if (publico or sv == "Recebimento") and cats & DESCARTE_SEGURO:
+        a.append("descartar")
+    if tp in ("Tratamento/destinação final", "Coleta e transporte") and sv != "Compra de recicláveis":
+        a.append("empresa")
+    if not a:
+        a.append("descartar" if publico else "empresa")
+    return a
+
+
 def papel(p):
     sv, tp = p["Serviço"], p["Tipo de ponto"]
     if tp in ("PEV público", "PEV privado", "Cooperativa/associação") and sv in ("Recebimento", "Triagem", "Coleta"):
@@ -177,7 +207,7 @@ def dados_js(pts, cid_slug, ctx):
             "loc": norm(p["Município sede"]).replace(" ", "-") == cid_slug,
             "a": p["_lat"], "o": p["_lng"], "tel": p["Telefone"], "site": site,
             "st": p["_status"], "lic": lic, "lc": cls, "cnpj": aviso_cnpj(p), "obs": obs_publica(p),
-            "pp": papel(p), "cs": sorted(p["_cidades"]),
+            "pp": acoes(p, norm), "cs": sorted(p["_cidades"]),
         })
     return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
 
@@ -189,20 +219,23 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     paginas = "".join(f'<li><a href="{s}/">Onde descartar {esc(nomes[s][0])}</a></li>' for s in cats_ordem)
     cats_js = json.dumps({s: nomes[s][1] for s in cats_ordem}, ensure_ascii=False)
     return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
-<h1>Onde descartar resíduos em {esc(cidade)}</h1>
-<p class="resposta">Pontos de entrega, cooperativas e empresas que coletam, transportam e recebem resíduos em {esc(cidade)} e região, com a situação da licença ambiental de cada uma. Filtre pelo tipo de resíduo.</p>
+<h1>Onde doar, reciclar e descartar em {esc(cidade)}</h1>
+<p class="resposta">Antes de jogar fora, veja se dá para doar, vender ou reciclar. Aqui estão os pontos de entrega, brechós, cooperativas e empresas de coleta e destinação de {esc(cidade)} e região, com a situação da licença ambiental de cada uma.</p>
+<button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe o que fazer? Me ajude a decidir</button>
 
 <section class="ferramenta" aria-label="Mapa e lista com filtros">
   <aside class="painel">
     <div class="filtros">
-      <input id="q" type="search" placeholder="Buscar: pilha, óleo, caçamba, nome da empresa…" autocomplete="off" aria-label="Buscar">
+      <input id="q" type="search" placeholder="O que você tem? sofá, roupa, pilha, remédio, nome da empresa…" autocomplete="off" aria-label="Buscar">
       <div>
-        <div class="flabel">Quem você procura</div>
+        <div class="flabel">O que você quer fazer</div>
         <div class="seg" role="group" aria-label="Tipo de atendimento" id="seg">
           <button type="button" data-p="todos" aria-pressed="true">Todos</button>
-          <button type="button" data-p="entrega" aria-pressed="false">Ponto de entrega</button>
-          <button type="button" data-p="recebe" aria-pressed="false">Recebe / destina</button>
-          <button type="button" data-p="transporta" aria-pressed="false">Coleta / transporta</button>
+          <button type="button" data-p="doar" aria-pressed="false">Doar</button>
+          <button type="button" data-p="vender" aria-pressed="false">Vender ou trocar</button>
+          <button type="button" data-p="reciclar" aria-pressed="false">Reciclar</button>
+          <button type="button" data-p="descartar" aria-pressed="false">Descartar com segurança</button>
+          <button type="button" data-p="empresa" aria-pressed="false">Empresas: coleta e destinação</button>
         </div>
       </div>
       <div>
