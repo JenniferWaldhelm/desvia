@@ -56,6 +56,24 @@ Dados atualizados em 02/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/residuos-classe-ii/)
+- [Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/): 308 pontos e empresas, 17 tipos de resíduo, obrigações das empresas
+  - [Onde descartar pneus em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/pneus/)
+  - [Onde descartar eletrônicos em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/eletronicos/)
+  - [Onde descartar lâmpadas em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/lampadas/)
+  - [Onde descartar pilhas e baterias em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/pilhas-e-baterias/)
+  - [Onde descartar óleo de cozinha em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/oleo-de-cozinha/)
+  - [Onde descartar óleo lubrificante em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/oleo-lubrificante/)
+  - [Onde descartar entulho e resíduos de construção em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/entulho/)
+  - [Onde descartar poda e galhos em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/poda-e-galhos/)
+  - [Onde descartar medicamentos vencidos em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/medicamentos/)
+  - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/reciclaveis/)
+  - [Onde descartar sucata metálica em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/sucata-metalica/)
+  - [Onde descartar resíduos orgânicos em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/organicos/)
+  - [Onde descartar esgoto de fossa e efluentes em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/limpa-fossa/)
+  - [Onde descartar embalagens de agrotóxico em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/embalagens-de-agrotoxico/)
+  - [Onde descartar escovas de dente e esponjas em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/escovas-e-esponjas/)
+  - [Onde descartar resíduos perigosos (Classe I) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-perigosos/)
+  - [Onde descartar resíduos industriais não perigosos (Classe II) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-classe-ii/)
 
 ## Guias de descarte
 - [Como descartar pneus](https://jenniferwaldhelm.github.io/desvia/guias/pneus/): Pneu velho não pode ir para a coleta comum nem ficar no quintal. Parado, acumula água e vira criadouro do mosquito da dengue. Queimado, solta fumaça tóxica.

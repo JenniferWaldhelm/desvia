@@ -34,6 +34,7 @@ SINONIMOS = {
     "tintas-e-solventes": ["tinta", "lata de tinta", "verniz", "solvente", "thinner", "aguarras", "pincel", "spray"],
     "limpa-fossa": ["fossa", "esgoto", "caixa de gordura", "limpa fossa", "desentupimento", "banheiro quimico"],
     "embalagens-de-agrotoxico": ["agrotoxico", "veneno", "defensivo", "herbicida", "inseticida", "embalagem de agrotoxico"],
+    "escovas-e-esponjas": ["escova", "escova de dente", "esponja", "esponja de cozinha", "fio dental", "creme dental"],
     "residuos-perigosos": ["perigoso", "classe i", "contaminado", "quimico", "produto quimico", "amianto", "mercurio"],
     "residuos-classe-ii": ["industrial", "classe ii", "residuo industrial", "nao perigoso"],
 }
