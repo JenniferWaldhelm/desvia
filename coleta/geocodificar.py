@@ -27,9 +27,28 @@ def busca(q):
     return d[0] if d else None
 
 
+def reverso(lat, lng):
+    url = "https://nominatim.openstreetmap.org/reverse?" + urllib.parse.urlencode(
+        {"lat": lat, "lon": lng, "format": "json", "zoom": 18, "addressdetails": 1})
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "pt-BR"})
+    time.sleep(1.2)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        d = json.load(r)
+    a = d.get("address", {})
+    rua = a.get("road", "")
+    partes = [rua + (f", {a['house_number']}" if a.get("house_number") else ""), a.get("suburb") or a.get("neighbourhood") or ""]
+    return ", ".join(x for x in partes if x), d.get("display_name", "")[:120]
+
+
 def main():
     saida = []
     for l in csv.DictReader(open(RAIZ / "coleta" / "geocodificar.csv", encoding="utf-8")):
+        if l.get("Lat"):  # modo inverso: coordenada -> endereço
+            end, achado = reverso(l["Lat"], l["Lng"])
+            saida.append({"ID": l["ID"], "Lat": l["Lat"], "Lng": l["Lng"], "Precisão": "endereço" if end else "não achado",
+                          "Achado": end or achado})
+            print(l["ID"], end)
+            continue
         cidade = f"{l['Município']}, Paraná, Brasil"
         end = re.sub(r"^Av\.", "Avenida", l["Endereço"].strip())
         end = re.sub(r"^Rod\.", "Rodovia", end)

@@ -1,3 +1,11 @@
-ID,Endereço,Município
-LDA-131,"Avenida Annibal Balarotti",Londrina
-LDA-132,"Rua Capitão João Busse, 1285",Londrina
+ID,Endereço,Município,Lat,Lng
+LDA-149,,Londrina,-23.31954,-51.16950
+LDA-150,,Londrina,-23.26146,-51.18661
+LDA-151,,Londrina,-23.25877,-51.14974
+LDA-152,,Londrina,-23.34952,-51.14870
+LDA-153,,Londrina,-23.31315,-51.16518
+LDA-154,,Londrina,-23.25126,-51.13949
+LDA-155,,Londrina,-23.30974,-51.16290
+LDA-156,,Londrina,-23.36061,-51.14060
+LDA-157,,Londrina,-23.31009,-51.16744
+LDA-158,,Londrina,-23.31265,-51.17117
