@@ -247,3 +247,15 @@ main.home { padding-top: 0; }
   .filtros { min-width: 0; width: 100%; grid-template-columns: minmax(0, 1fr); }
   .filtros > div { min-width: 0; }
 }
+
+/* ── Legenda do mapa vira filtro de licença ── */
+.legenda { gap: 2px; padding: 8px; }
+.legenda b { font-size: .7rem; letter-spacing: .8px; text-transform: uppercase; color: var(--cinza); padding: 0 4px 2px; }
+.legenda button { display: flex; align-items: center; border: 0; background: none; font: inherit; font-size: .78rem; color: var(--escuro); padding: 4px 6px; border-radius: 6px; cursor: pointer; text-align: left; }
+.legenda button:hover { background: var(--off-white); }
+.legenda button[aria-pressed=false] { opacity: .4; text-decoration: line-through; }
+@media (max-width: 860px) {
+  .legenda { display: flex; flex-wrap: wrap; left: 8px; right: 8px; bottom: 8px; padding: 4px 6px; }
+  .legenda b { display: none; }
+  .legenda button { font-size: .74rem; padding: 6px 6px; }
+}
