@@ -7,6 +7,7 @@ import json
 import os
 import sys
 import urllib.parse
+import urllib.error
 import urllib.request
 from datetime import date, timedelta
 from pathlib import Path
@@ -27,8 +28,11 @@ fim = (inicio.replace(day=28) + timedelta(days=4)).replace(day=1) - timedelta(da
 def api(caminho, **params):
     url = f"{SITE}/api/v0/{caminho}?" + urllib.parse.urlencode(params, doseq=True)
     req = urllib.request.Request(url, headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        sys.exit(f"GoatCounter respondeu {e.code} em {caminho}: {e.read()[:300]!r}")
 
 
 hits, excluir = [], []

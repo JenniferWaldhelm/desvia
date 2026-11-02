@@ -18,14 +18,17 @@ jobs:
   exportar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: GoatCounter
         env:
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
-        run: python3 metricas/exportar.py ${{ inputs.mes }} | tee -a "$GITHUB_STEP_SUMMARY"
+        run: |
+          set -o pipefail
+          if [ -z "$GOATCOUNTER_TOKEN" ]; then echo "Falta o segredo GOATCOUNTER_TOKEN no GitHub (Settings › Secrets and variables › Actions)." | tee -a "$GITHUB_STEP_SUMMARY"; exit 1; fi
+          python3 metricas/exportar.py ${{ inputs.mes }} 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Salvar
         run: |
           git config user.name "Desvia (automático)"
