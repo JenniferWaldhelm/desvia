@@ -115,17 +115,22 @@
     return html;
   }
 
-  function render() {
+  var POR_PAGINA = 20, limite = POR_PAGINA, visAtual = [];
+  function render(mais) {
+    if (!mais) limite = POR_PAGINA;
     estado.qcats = catsDaBusca(estado.q || '');
     var vis = PONTOS.filter(passa).sort(function (a, b) {
       return (ORDEM[a.st] - ORDEM[b.st]) || ((a.loc ? 0 : 1) - (b.loc ? 0 : 1)) || a.n.localeCompare(b.n, 'pt-BR');
     });
     contador.textContent = vis.length;
-    lista.innerHTML = vis.length ? vis.map(cartao).join('') : sugestoes();
+    visAtual = vis;
+    var resto = vis.length - limite;
+    lista.innerHTML = vis.length ? vis.slice(0, limite).map(cartao).join('') +
+      (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') : sugestoes();
     document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.cat === estado.cat ? 'true' : 'false'); });
     var fq = document.getElementById('fQuem'), ft = document.getElementById('fTipo');
     if (fq) fq.value = estado.p; if (ft) ft.value = estado.cat || '';
-    if (mapa) desenhar(vis);
+    if (mapa && !mais) desenhar(vis);
     var url = new URL(location.href);
     if (estado.cat) url.searchParams.set('r', estado.cat); else url.searchParams.delete('r');
     if (estado.cid) url.searchParams.set('cidade', estado.cid); else url.searchParams.delete('cidade');
@@ -161,6 +166,10 @@
   function destacar(id, voar) {
     document.querySelectorAll('.ponto.ativo').forEach(function (c) { c.classList.remove('ativo'); });
     var card = document.getElementById('p-' + id);
+    if (!card) {  // cartão ainda não exibido: abre a lista até ele
+      var pos = visAtual.map(function (p) { return p.id; }).indexOf(id);
+      if (pos >= limite) { limite = pos + 1; var y = window.scrollY; render(true); window.scrollTo(0, y); card = document.getElementById('p-' + id); }
+    }
     if (card) { card.classList.add('ativo'); if (!voar) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
     var m = marcadores[id];
     if (voar && m && mapa) {
@@ -274,6 +283,7 @@
     render();
   });
   lista.addEventListener('click', function (e) {
+    if (e.target.closest('[data-mais]')) { limite += POR_PAGINA; render(true); return; }
     var sg = e.target.closest('[data-sug]');
     if (sg) { estado.q = ''; document.getElementById('q').value = ''; estado.cat = sg.dataset.sug; render(); return; }
     var b = e.target.closest('[data-ver]'); if (b) destacar(b.dataset.ver, true);
