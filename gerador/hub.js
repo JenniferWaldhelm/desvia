@@ -304,6 +304,21 @@
   function iniciarMapa() {
     if (!window.L) return;
     mapa = L.map('mapa', { scrollWheelZoom: false });
+    // Ctrl (ou Cmd) + rolagem dá zoom; rolagem sozinha rola a página e mostra o aviso
+    var elMapa = document.getElementById('mapa'), aviso = document.createElement('div'), tAviso;
+    aviso.className = 'aviso-zoom'; aviso.textContent = /Mac/.test(navigator.platform) ? 'Use ⌘ + rolagem para dar zoom no mapa' : 'Use Ctrl + rolagem para dar zoom no mapa';
+    elMapa.parentNode.appendChild(aviso);
+    elMapa.addEventListener('wheel', function (e) {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        var pt = mapa.mouseEventToContainerPoint(e);
+        mapa.setZoomAround(pt, mapa.getZoom() + (e.deltaY < 0 ? 1 : -1));
+        aviso.classList.remove('ver');
+      } else {
+        aviso.classList.add('ver'); clearTimeout(tAviso);
+        tAviso = setTimeout(function () { aviso.classList.remove('ver'); }, 1200);
+      }
+    }, { passive: false });
     var ruas = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(mapa);
     var sat = L.layerGroup([
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Imagens &copy; Esri, Maxar, Earthstar Geographics' }),
