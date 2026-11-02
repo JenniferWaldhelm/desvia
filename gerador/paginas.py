@@ -170,6 +170,7 @@ def indice_guias(nomes, cats_ordem):
 
 
 # ── Página para empresas: checklist + calendário + serviços técnicos ──
+MAWE = "https://wa.me/5543920024725"
 PERGUNTAS = [
     ("licenca", "Sua empresa tem licença ambiental válida (ou dispensa) para a atividade que exerce?",
      "Licença ambiental", "Sem licença válida, a operação pode ser embargada e multada (Lei 9.605/1998). A renovação deve ser pedida até 120 dias antes do vencimento (LC 140/2011)."),
@@ -230,7 +231,8 @@ def empresas():
 <h2>Precisa de ajuda para regularizar?</h2>
 <p>A equipe técnica por trás do Desvia faz:</p>
 <ul class="serv-lista">{serv}</ul>
-<a class="pq-btn" href="{WHATSAPP}?text={DIAG_TXT}" target="_blank" rel="noopener">Pedir diagnóstico gratuito</a>
+<a class="pq-btn" href="{MAWE}?text={DIAG_TXT}" target="_blank" rel="noopener">Pedir diagnóstico gratuito</a>
+<p class="sub">WhatsApp da Mawé: (43) 92002-4725</p>
 <p class="nota">O Desvia é independente: a ordem das empresas e a situação das licenças vêm só de dados públicos (IAT, IBAMA e prefeituras). Contratar serviços técnicos não muda nada na listagem.</p>
 </div>
 </section>
@@ -254,7 +256,7 @@ def empresas():
     out.innerHTML = '<h2>' + (falta.length || duvida.length ? ok + ' de 6 em dia' : 'Tudo em dia. Parabéns!') + '</h2>' +
       (falta.length ? '<h3>O que falta</h3><ul>' + falta.map(item).join('') + '</ul>' : '') +
       (duvida.length ? '<h3>Vale conferir</h3><ul>' + duvida.map(item).join('') + '</ul>' : '') +
-      (falta.length || duvida.length ? '<a class="pq-btn" target="_blank" rel="noopener" href="{WHATSAPP}?text=' + encodeURIComponent(txt) + '">Pedir diagnóstico gratuito com estas respostas</a>' : '<p>Mantenha o calendário abaixo em dia.</p>');
+      (falta.length || duvida.length ? '<a class="pq-btn" target="_blank" rel="noopener" href="{MAWE}?text=' + encodeURIComponent(txt) + '">Pedir diagnóstico gratuito com estas respostas</a>' : '<p>Mantenha o calendário abaixo em dia.</p>');
     out.hidden = false; out.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
   }});
 }})();
