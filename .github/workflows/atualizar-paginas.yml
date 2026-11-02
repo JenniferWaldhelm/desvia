@@ -25,9 +25,9 @@ jobs:
           python-version: "3.12"
 
       - name: Baixar a planilha publicada
-        if: ${{ vars.PLANILHA_CSV_URL != '' }}
         env:
-          URL: ${{ vars.PLANILHA_CSV_URL }}
+          # aba Pontos publicada como CSV (Arquivo › Compartilhar › Publicar na Web); a variável PLANILHA_CSV_URL, se existir, tem prioridade
+          URL: ${{ vars.PLANILHA_CSV_URL || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYt3WY6jEpAs9iS9Icz4jTQl_O_JA7pFLJ8Gd0-vKCC5Xsbs1j2VkJR1F9YolAvLoYp6t25704z2yV/pub?gid=0&single=true&output=csv' }}
         run: |
           curl -fsSL "$URL" -o dados/pontos.novo.csv
           head -1 dados/pontos.novo.csv | grep -q "^ID," || { echo "CSV inesperado"; exit 1; }
