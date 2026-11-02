@@ -61,7 +61,7 @@
     if (estado.cid && p.cs.indexOf(estado.cid) < 0) return false;
     if (estado.cat && p.c.indexOf(estado.cat) < 0) return false;
     if (estado.p !== 'todos' && p.pp.indexOf(estado.p) < 0) return false;
-    if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo')) return false;
+    if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo' || p.st === 'publico')) return false;
     if (estado.loc && !p.loc) return false;
     if (estado.q) {
       var qc = estado.qcats || [];
@@ -123,6 +123,8 @@
     contador.textContent = vis.length;
     lista.innerHTML = vis.length ? vis.map(cartao).join('') : sugestoes();
     document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.cat === estado.cat ? 'true' : 'false'); });
+    var fq = document.getElementById('fQuem'), ft = document.getElementById('fTipo');
+    if (fq) fq.value = estado.p; if (ft) ft.value = estado.cat || '';
     if (mapa) desenhar(vis);
     var url = new URL(location.href);
     if (estado.cat) url.searchParams.set('r', estado.cat); else url.searchParams.delete('r');
@@ -232,13 +234,18 @@
     estado.q = e.target.value; estado.cat = null;  // digitar troca a busca, não soma com o tipo escolhido antes
     mostraX(); sugerir(); render();
   });
-  document.getElementById('seg').addEventListener('click', function (e) {
+  var segEl = document.getElementById('seg') || document.createElement('div');
+  var chipsEl = document.getElementById('chips') || document.createElement('div');
+  var fQuem = document.getElementById('fQuem'), fTipo = document.getElementById('fTipo');
+  if (fQuem) fQuem.addEventListener('change', function (e) { estado.p = e.target.value; render(); });
+  if (fTipo) fTipo.addEventListener('change', function (e) { estado.cat = e.target.value || null; render(); });
+  segEl.addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b) return;
     estado.p = b.dataset.p;
     this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
     render();
   });
-  document.getElementById('chips').addEventListener('click', function (e) {
+  chipsEl.addEventListener('click', function (e) {
     var b = e.target.closest('.chip'); if (!b) return;
     estado.cat = estado.cat === b.dataset.cat ? null : b.dataset.cat;
     render();

@@ -186,7 +186,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
         <div class="chips" id="chips">{chips}</div>
       </div>
       <div class="checks">
-        <label><input type="checkbox" id="fLic"> Só com licença válida</label>
+        <label><input type="checkbox" id="fLic"> Só com licença válida ou serviço público</label>
         <label><input type="checkbox" id="fLoc"> Só com sede em {esc(cidade)}</label>
       </div>
     </div>
