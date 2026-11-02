@@ -34,6 +34,7 @@ CIDADES = {
     "londrina": "Londrina",
     "mandaguari": "Mandaguari",
     "ibipora": "Ibiporã",
+    "maringa": "Maringá",
 }
 UF = "PR"
 
@@ -64,6 +65,7 @@ CATEGORIAS = [
     ("tintas-e-solventes", "tintas e solventes", "Tintas e solventes", ["tinta", "solvente", "thinner"]),
     ("limpa-fossa", "esgoto de fossa e efluentes", "Fossa e efluentes", ["fossa", "esgoto", "efluente", "despejo", "banheiros quimicos"]),
     ("embalagens-de-agrotoxico", "embalagens de agrotóxico", "Embalagens de agrotóxico", ["defensivo", "agrotox"]),
+    ("escovas-e-esponjas", "escovas de dente e esponjas", "Escovas e esponjas", ["escova", "esponja"]),
     ("residuos-perigosos", "resíduos perigosos (Classe I)", "Perigosos (Classe I)", ["perigos", "tanques", "oleos/solventes", "coprocess"]),
     ("residuos-classe-ii", "resíduos industriais não perigosos (Classe II)", "Industriais (Classe II)", ["nao perigos", "embalagens industriais", "transbordo"]),
 ]

@@ -93,6 +93,14 @@ LOCAL = {
                      "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
                     ("Licenciamento ambiental municipal (SEMA)", "https://portal.londrina.pr.gov.br/licenciamento-ambiental-municipal")),
     },
+    "maringa": {
+        "licenciador": "Em Maringá, confira na Secretaria Municipal de Meio Ambiente se a atividade é licenciada pelo município; as demais são licenciadas pelo IAT (Instituto Água e Terra).",
+        "extra": [
+            ("♻️", "Recicláveis", "Ecopontos Ecolix",
+             "Os ecopontos Ecolix, espalhados pela cidade, recebem recicláveis separados (papel, plástico, metal e vidro). Leve limpos e secos.",
+             [], None),
+        ],
+    },
     "ibipora": {
         "extra": [
             ("🧱", "Entulho e construção", "Entulho de pequenos geradores",
