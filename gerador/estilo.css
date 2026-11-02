@@ -222,3 +222,28 @@ main.home { padding-top: 0; }
 .rodape-links b { font-family: 'Montserrat', sans-serif; color: var(--escuro); font-size: .85rem; }
 .rodape-links a { color: var(--cinza); text-decoration: none; }
 .rodape-links a:hover { color: var(--verde); text-decoration: underline; }
+
+/* ── Celular: busca e filtros primeiro, depois mapa, depois lista ── */
+.mais { margin: 4px 0 8px; padding: 12px; border: 1.5px solid var(--verde); border-radius: 10px; background: #fff; color: var(--verde); font: inherit; font-weight: 700; cursor: pointer; }
+.mais:hover { background: var(--verde); color: #fff; }
+@media (max-width: 860px) {
+  .ferramenta { display: flex; flex-direction: column; border-radius: 12px; }
+  .painel { display: contents; }
+  .filtros { order: 1; }
+  .mapa-wrap { order: 2; height: 42vh; min-height: 260px; }
+  .listhead { order: 3; position: sticky; top: 56px; z-index: 5; }
+  .lista-js { order: 4; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+  .chip { flex: 0 0 auto; }
+  .seg button { padding: 9px 6px; }
+  .checks label { padding: 4px 0; }
+  .acoes { gap: 18px; }
+  .acoes a, .acoes button { padding: 6px 0 !important; }
+  h1 { font-size: 1.45rem; }
+  .obr-grade { grid-template-columns: 1fr; }
+  .limpar-q { width: 32px; height: 32px; }
+}
+@media (max-width: 860px) {
+  .filtros { min-width: 0; width: 100%; grid-template-columns: minmax(0, 1fr); }
+  .filtros > div { min-width: 0; }
+}
