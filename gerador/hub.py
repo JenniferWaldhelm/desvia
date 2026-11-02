@@ -86,6 +86,16 @@ LOCAL = {
         ],
         "orgao": "Secretaria Municipal do Ambiente (SEMA) de Londrina",
     },
+    "ibipora": {
+        "extra": [
+            ("🧱", "Entulho e construção", "Entulho de pequenos geradores",
+             "A Central de RCC da Prefeitura (estrada antiga para Jataizinho, lote 66) recebe entulho, volumosos, poda e limpeza de quintal de pequenos geradores, até 3 m³. Acima disso, contrate caçamba ou transportadora licenciada.",
+             ["Base legal: Resolução CONAMA 307/2002 e PMGIRS de Ibiporã (2023)"], None),
+            ("🫙", "Óleo de cozinha", "Óleo de fritura usado",
+             "O SAMAE recebe óleo de cozinha usado na sede (Av. Santos Dumont, 565) e nas escolas municipais. Leve frio, em garrafa PET bem fechada. Nunca despeje na pia ou no esgoto.",
+             [], None),
+        ],
+    },
 }
 
 
