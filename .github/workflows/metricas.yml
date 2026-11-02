@@ -1,11 +1,15 @@
 name: Exportar métricas do mês
 
-# Dia 2 de cada mês: baixa Bing Webmaster e GoatCounter do mês anterior para metricas/AAAA-MM/.
-# Precisa dos segredos BING_API_KEY e GOATCOUNTER_TOKEN (Settings › Secrets and variables › Actions).
+# Dia 2 de cada mês: baixa do GoatCounter as visitas e buscas do mês anterior
+# e grava em metricas/AAAA-MM/. A análise mensal (dia 3) lê daqui.
 on:
   workflow_dispatch:
+    inputs:
+      mes:
+        description: "Mês no formato AAAA-MM (vazio = mês anterior)"
+        required: false
   schedule:
-    - cron: "41 11 2 * *"   # dia 2, 8h41 em Brasília
+    - cron: "41 10 2 * *"   # dia 2, 7h41 em Brasília
 
 permissions:
   contents: write
@@ -18,11 +22,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Baixar
+      - name: GoatCounter
         env:
-          BING_API_KEY: ${{ secrets.BING_API_KEY }}
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
-        run: python3 coleta/metricas.py | tee -a "$GITHUB_STEP_SUMMARY"
+        run: python3 metricas/exportar.py ${{ inputs.mes }} | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Salvar
         run: |
           git config user.name "Desvia (automático)"
