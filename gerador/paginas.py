@@ -54,7 +54,6 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
       <label class="filtro-lic"><input type="checkbox" id="fLic"> Só com licença válida ou serviço público</label>
     </div>
   </form>
-  <div class="atalhos" aria-label="Buscas comuns">{atalhos_html}</div>
   <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
 </section>
 
