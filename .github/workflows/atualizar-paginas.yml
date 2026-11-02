@@ -31,6 +31,25 @@ jobs:
         run: |
           curl -fsSL "$URL" -o dados/pontos.novo.csv
           head -1 dados/pontos.novo.csv | grep -q "^ID," || { echo "CSV inesperado"; exit 1; }
+          python3 - <<'PY'
+          import csv, sys
+          novo = [r for r in csv.DictReader(open("dados/pontos.novo.csv", encoding="utf-8")) if r.get("ID")]
+          atual = list(csv.DictReader(open("dados/pontos.csv", encoding="utf-8")))
+          if len(novo) < 0.9 * len(atual):
+              sys.exit(f"Planilha com {len(novo)} pontos, menos de 90% dos {len(atual)} atuais: não publico (possível erro).")
+          ruins = []
+          for r in novo:
+              for c in ("Lat", "Lng"):
+                  v = (r.get(c) or "").strip().replace(",", ".")
+                  if v:
+                      try:
+                          float(v)
+                      except ValueError:
+                          ruins.append(f"{r['ID']} {c}={r[c]}")
+          if ruins:
+              print("Coordenadas inválidas (ignoradas no mapa):", "; ".join(ruins[:20]))
+          print(f"Planilha OK: {len(novo)} pontos (antes {len(atual)}).")
+          PY
           mv dados/pontos.novo.csv dados/pontos.csv
 
       - name: Gerar páginas

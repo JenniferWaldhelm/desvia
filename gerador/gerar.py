@@ -41,7 +41,7 @@ UF = "PR"
 # Token do teste de origem do WebMCP no Chrome (deixe vazio até cadastrar o site).
 ORIGIN_TRIAL = ""
 # Contador de visitas GoatCounter (gratuito, sem cookies). Ex.: "desvia" para desvia.goatcounter.com
-GOATCOUNTER = ""
+GOATCOUNTER = "projetodesvia"
 
 # Páginas fixas do site que continuam no sitemap.
 PAGINAS_FIXAS = [("", "1.0"), ("mandaguari.html", "0.8"), ("mapa-pev.html", "0.6")]
@@ -208,7 +208,7 @@ def obs_publica(p):
 
 def carregar():
     with open(CSV, newline="", encoding="utf-8") as f:
-        pontos = list(csv.DictReader(f))
+        pontos = [p for p in csv.DictReader(f) if (p.get("ID") or "").strip()]
     for p in pontos:
         for k in p:
             p[k] = (p[k] or "").strip()
