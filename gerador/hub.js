@@ -169,7 +169,19 @@
   }
 
   // eventos
-  document.getElementById('q').addEventListener('input', function (e) { estado.q = e.target.value; render(); });
+  var campoQ = document.getElementById('q');
+  // Botão "×" para limpar a busca
+  var envolve = document.createElement('span'); envolve.className = 'campo-q';
+  campoQ.parentNode.insertBefore(envolve, campoQ); envolve.appendChild(campoQ);
+  var xq = document.createElement('button');
+  xq.type = 'button'; xq.className = 'limpar-q'; xq.setAttribute('aria-label', 'Limpar busca'); xq.textContent = '×';
+  envolve.appendChild(xq);
+  function mostraX() { xq.hidden = !campoQ.value; }
+  xq.addEventListener('click', function () {
+    campoQ.value = ''; estado.q = ''; estado.cat = null; mostraX(); render(); campoQ.focus();
+  });
+  mostraX();
+  campoQ.addEventListener('input', function (e) { estado.q = e.target.value; mostraX(); render(); });
   document.getElementById('seg').addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b) return;
     estado.p = b.dataset.p;
@@ -197,7 +209,7 @@
   });
   document.getElementById('limpar').addEventListener('click', function () {
     estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '' };
-    document.getElementById('q').value = '';
+    document.getElementById('q').value = ''; mostraX();
     document.getElementById('fLic').checked = false;
     if (fLoc) fLoc.checked = false;
     if (selCidade) selCidade.value = '';
