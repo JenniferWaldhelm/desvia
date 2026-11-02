@@ -201,3 +201,17 @@ main.home { padding-top: 0; }
 .sugere small { color: var(--cinza); white-space: nowrap; font-size: .8rem; }
 .busca { overflow: visible; }
 .busca .campo .sugere span { font-size: .95rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--escuro); }
+
+/* ── Filtros dentro da caixa de busca (página inicial) ── */
+.busca { flex-wrap: wrap; }
+.busca-filtros { flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 10px 18px 12px; border-top: 1.5px solid var(--cinza-claro); background: var(--off-white); border-radius: 0 0 16px 16px; }
+.busca-filtros .filtro { display: flex; flex-direction: column; flex: 1 1 200px; min-width: 0; }
+.busca-filtros .filtro span { font-size: .7rem; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--cinza); }
+.busca-filtros select { border: 1.5px solid var(--cinza-claro); border-radius: 10px; background: #fff; padding: 7px 10px; font: inherit; font-size: .95rem; color: var(--escuro); width: 100%; }
+.busca-filtros .filtro-lic { flex: 1 1 220px; font-size: .92rem; font-weight: 600; display: flex; align-items: center; gap: 6px; padding-top: 14px; }
+.busca-filtros .filtro-lic input { accent-color: var(--verde); width: 18px; height: 18px; }
+.busca > button[type=submit] { border-radius: 0 14px 0 0; }
+@media (max-width: 860px) {
+  .busca > button[type=submit] { order: 3; border-radius: 0 0 14px 14px; }
+  .busca-filtros { order: 2; border-radius: 0; }
+}

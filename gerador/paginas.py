@@ -30,6 +30,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     cidades_html = "".join(
         f'<li><a href="residuos/{s}/"><span>{esc(c)}</span><small>{len(contagens[s])} tipos de resíduo</small></a></li>'
         for s, c in cidades.items())
+    opcoes_tipo = "".join(f'<option value="{s}">{esc(nomes[s][1])}</option>' for s, _ in cats_ordem)
     cats_js = json.dumps({s: nomes[s][1] for s, _ in cats_ordem}, ensure_ascii=False)
     faq = [
         ("De onde vêm os dados?", "De dados públicos do IAT (licenciamento ambiental), do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. Cada empresa mostra a fonte e a data da consulta."),
@@ -45,6 +46,13 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     <label class="campo"><span>O que você quer descartar?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="pilha, óleo, entulho, sofá, lâmpada…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
     <button type="submit">Buscar</button>
+    <div class="busca-filtros">
+      <label class="filtro"><span>Quem você procura</span><select id="fQuem" name="quem">
+        <option value="todos">Todos</option><option value="entrega">Ponto de entrega</option>
+        <option value="recebe">Recebe / destina</option><option value="transporta">Coleta / transporta</option></select></label>
+      <label class="filtro"><span>Tipo de resíduo</span><select id="fTipo" name="tipo"><option value="">Todos os tipos</option>{opcoes_tipo}</select></label>
+      <label class="filtro-lic"><input type="checkbox" id="fLic"> Só com licença válida ou serviço público</label>
+    </div>
   </form>
   <div class="atalhos" aria-label="Buscas comuns">{atalhos_html}</div>
   <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
@@ -52,19 +60,6 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 
 <section class="ferramenta" id="resultados" aria-label="Resultados">
   <aside class="painel">
-    <div class="filtros">
-      <div>
-        <div class="flabel">Quem você procura</div>
-        <div class="seg" role="group" aria-label="Tipo de atendimento" id="seg">
-          <button type="button" data-p="todos" aria-pressed="true">Todos</button>
-          <button type="button" data-p="entrega" aria-pressed="false">Ponto de entrega</button>
-          <button type="button" data-p="recebe" aria-pressed="false">Recebe / destina</button>
-          <button type="button" data-p="transporta" aria-pressed="false">Coleta / transporta</button>
-        </div>
-      </div>
-      <div><div class="flabel">Tipo de resíduo</div><div class="chips" id="chips">{chips}</div></div>
-      <div class="checks"><label><input type="checkbox" id="fLic"> Só com licença válida</label></div>
-    </div>
     <div class="listhead"><span><b id="count">0</b> resultados</span><button type="button" class="limpar" id="limpar">Limpar filtros</button></div>
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
