@@ -17,6 +17,40 @@
   });
 
   // filtro inicial pela URL: ?r=pneus
+  // Palavras do dia a dia → tipo de resíduo ("cabo usb" → Eletrônicos)
+  var SIN = [];
+  Object.keys(window.SINONIMOS || {}).forEach(function (cat) {
+    if (!CATS[cat]) return;
+    SINONIMOS[cat].concat([CATS[cat]]).forEach(function (w) { SIN.push([norm(w), cat]); });
+  });
+  function parecido(a, b) {  // tolera um erro de digitação em palavras de 5+ letras
+    if (a === b) return true;
+    if (a.length < 5 || Math.abs(a.length - b.length) > 1) return false;
+    var i = 0, j = 0, erros = 0;
+    while (i < a.length && j < b.length) {
+      if (a[i] === b[j]) { i++; j++; continue; }
+      if (++erros > 1) return false;
+      if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; }
+    }
+    return erros + (a.length - i) + (b.length - j) <= 1;
+  }
+  function catsDaBusca(q) {
+    var t = norm(q).trim(); if (!t) return [];
+    var palavras = t.split(/\s+/).filter(function (w) { return w.length > 1 && ['de', 'da', 'do', 'e', 'o', 'a', 'os', 'as', 'para', 'onde', 'descartar', 'jogar', 'fora'].indexOf(w) < 0; });
+    var achou = {};
+    SIN.forEach(function (s) {
+      var w = s[0], cat = s[1];
+      if ((' ' + t + ' ').indexOf(' ' + w + ' ') >= 0 || (w.length >= 6 && t.indexOf(w) >= 0)) { achou[cat] = (achou[cat] || 0) + w.length; return; }
+      var ws = w.split(' ');
+      palavras.forEach(function (p) {
+        ws.forEach(function (x) {
+          if (parecido(p, x) || (p.length >= 4 && x.indexOf(p) === 0) || (x.length >= 4 && p.indexOf(x) === 0)) achou[cat] = (achou[cat] || 0) + 1;
+        });
+      });
+    });
+    return Object.keys(achou).sort(function (a, b) { return achou[b] - achou[a]; });
+  }
+
   var busca = new URLSearchParams(location.search);
   var param = busca.get('r');
   if (param && CATS[param]) estado.cat = param;
@@ -30,6 +64,8 @@
     if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo')) return false;
     if (estado.loc && !p.loc) return false;
     if (estado.q) {
+      var qc = estado.qcats || [];
+      for (var k = 0; k < qc.length; k++) if (p.c.indexOf(qc[k]) >= 0) return true;
       var termos = norm(estado.q).split(/\s+/).filter(Boolean);
       for (var i = 0; i < termos.length; i++) if (p._txt.indexOf(termos[i]) < 0) return false;
     }
@@ -68,13 +104,24 @@
     return h + '</article>';
   }
 
+  function sugestoes() {
+    var ids = (estado.qcats && estado.qcats.length ? estado.qcats : []).slice(0, 4);
+    var html = '<p class="vazio">Não encontramos <b>' + esc(estado.q || 'resultados') + '</b>' +
+      (estado.cid || estado.cat || estado.lic || estado.loc || estado.p !== 'todos' ? ' com esses filtros.' : ' nesta cidade.') + '</p>';
+    if (ids.length) html += '<p class="vazio">Isso costuma ir para: ' + ids.map(function (c) {
+      return '<button type="button" class="chip" data-sug="' + c + '">' + esc(CATS[c]) + '</button>'; }).join(' ') + '</p>';
+    html += '<p class="vazio">Veja todos os tipos: ' + Object.keys(CATS).map(function (c) {
+      return '<button type="button" class="chip" data-sug="' + c + '">' + esc(CATS[c]) + '</button>'; }).join(' ') + '</p>';
+    return html;
+  }
+
   function render() {
+    estado.qcats = catsDaBusca(estado.q || '');
     var vis = PONTOS.filter(passa).sort(function (a, b) {
       return (ORDEM[a.st] - ORDEM[b.st]) || ((a.loc ? 0 : 1) - (b.loc ? 0 : 1)) || a.n.localeCompare(b.n, 'pt-BR');
     });
     contador.textContent = vis.length;
-    lista.innerHTML = vis.length ? vis.map(cartao).join('') :
-      '<p class="vazio">Nenhum resultado com esses filtros. Tente tirar algum filtro ou buscar outra palavra.</p>';
+    lista.innerHTML = vis.length ? vis.map(cartao).join('') : sugestoes();
     document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.cat === estado.cat ? 'true' : 'false'); });
     if (mapa) desenhar(vis);
     var url = new URL(location.href);
@@ -158,6 +205,8 @@
     render();
   });
   lista.addEventListener('click', function (e) {
+    var sg = e.target.closest('[data-sug]');
+    if (sg) { estado.q = ''; document.getElementById('q').value = ''; estado.cat = sg.dataset.sug; render(); return; }
     var b = e.target.closest('[data-ver]'); if (b) destacar(b.dataset.ver, true);
   });
 
