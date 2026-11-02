@@ -1,6 +1,6 @@
 # Maringá: coleta automática em 02/11/2026
 
-- Licenças do IAT no município: 0
+- Licenças do IAT ligadas a resíduos no município: 0
 - Empresas de resíduos no IAT: 0
 - Empresas de resíduos no CTF/IBAMA: 114
 - Total (sem repetição): 114
