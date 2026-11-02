@@ -91,7 +91,7 @@ LOCAL = {
                     ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
                      "Confira na SEMA se a atividade é de impacto local; se não for, o processo é no IAT",
                      "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
-                    ("Portal da Prefeitura de Londrina", "https://portal.londrina.pr.gov.br/")),
+                    ("Licenciamento ambiental municipal (SEMA)", "https://portal.londrina.pr.gov.br/licenciamento-ambiental-municipal")),
     },
     "ibipora": {
         "extra": [
