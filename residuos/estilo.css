@@ -302,3 +302,25 @@ dialog.ajuda { margin: auto; position: fixed; inset: 0; height: fit-content; }
 .doar-links a:hover { border-color: var(--verde-claro); }
 .ajuda-doar { background: var(--verde-menta); border-radius: 10px; padding: 10px 12px; margin: 4px 0 10px; font-size: .92rem; }
 .ajuda-grupos { margin: 2px 0 !important; }
+
+/* ── Página para empresas ── */
+.checklist ol { padding-left: 22px; display: grid; gap: 14px; max-width: 760px; }
+.checklist li p { font-weight: 600; margin-bottom: 6px; }
+.ck-op { display: flex; flex-wrap: wrap; gap: 8px; }
+.ck-op label { display: inline-flex; align-items: center; gap: 6px; border: 1.5px solid var(--cinza-claro); background: #fff; border-radius: 999px; padding: 6px 14px; cursor: pointer; font-size: .95rem; }
+.ck-op label:has(input:checked) { border-color: var(--verde); background: var(--verde-menta); }
+.ck-op input { accent-color: var(--verde); }
+.checklist button { margin-top: 18px; border: 0; background: var(--verde-claro); color: #fff; font: inherit; font-weight: 700; padding: 12px 22px; border-radius: 10px; cursor: pointer; }
+.ck-resultado { margin-top: 24px; background: #fff; border: 1.5px solid var(--verde); border-radius: 14px; padding: 20px; max-width: 760px; }
+.ck-resultado h2 { margin-top: 0; } .ck-resultado h3 { margin: 14px 0 6px; color: var(--verde); }
+.ck-resultado ul { padding-left: 18px; display: grid; gap: 6px; margin-bottom: 14px; }
+.cal { list-style: none; display: grid; gap: 8px; max-width: 760px; }
+.cal li { display: grid; grid-template-columns: minmax(150px, 230px) 1fr; gap: 12px; background: #fff; border: 1px solid var(--cinza-claro); border-radius: 10px; padding: 10px 14px; }
+.cal b { color: var(--verde); }
+@media (max-width: 600px) { .cal li { grid-template-columns: 1fr; gap: 2px; } }
+.servicos { margin-top: 40px; }
+.serv-box { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 14px; padding: 22px; display: grid; gap: 10px; max-width: 760px; }
+.serv-box h2 { margin: 0; }
+.serv-lista { padding-left: 18px; display: grid; gap: 4px; }
+.serv-box .pq-btn { justify-self: start; }
+.nota { font-size: .85rem; color: var(--cinza); }

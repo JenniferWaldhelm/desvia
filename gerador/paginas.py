@@ -76,7 +76,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   <div class="pq-grade">
     <article class="pq"><span class="pq-tag">Quem precisa descartar</span><h3>Moradores, empresas e técnicos</h3>
       <p>Saiba o que fazer com cada coisa (doar, vender, reciclar ou descartar), qual é a sua obrigação e onde levar com segurança, sabendo se o destino tem licença.</p>
-      <div class="pq-acoes"><button type="button" class="pq-btn" data-ajuda>Me ajude a decidir</button><a href="residuos/londrina/#empresas">Obrigações das empresas →</a></div></article>
+      <div class="pq-acoes"><button type="button" class="pq-btn" data-ajuda>Me ajude a decidir</button><a href="empresas/">Sua empresa está em dia? →</a></div></article>
     <article class="pq"><span class="pq-tag">Quem presta serviço</span><h3>Reuso, reciclagem, coleta, transporte e destinação</h3>
       <p>Apareça para quem procura o seu serviço, com a licença ambiental verificada. Quem está regular ganha destaque; quem está com pendência sabe o que corrigir.</p>
       <div class="pq-acoes"><a class="pq-btn" href="{CADASTRO}" target="_blank" rel="noopener">Cadastrar minha empresa</a></div></article>
@@ -167,3 +167,98 @@ def indice_guias(nomes, cats_ordem):
 <h1>Guias de descarte</h1>
 <p class="resposta">Como descartar cada tipo de resíduo em casa e na empresa, o que diz a lei e onde levar em cada cidade.</p>
 <ul class="grade">{itens}</ul>"""
+
+
+# ── Página para empresas: checklist + calendário + serviços técnicos ──
+PERGUNTAS = [
+    ("licenca", "Sua empresa tem licença ambiental válida (ou dispensa) para a atividade que exerce?",
+     "Licença ambiental", "Sem licença válida, a operação pode ser embargada e multada (Lei 9.605/1998). A renovação deve ser pedida até 120 dias antes do vencimento (LC 140/2011)."),
+    ("pgrs", "Tem um PGRS (Plano de Gerenciamento de Resíduos Sólidos) atualizado?",
+     "PGRS", "Obrigatório para indústrias, serviços de saúde, construtoras, grandes geradores e quem gera resíduo perigoso (Lei 12.305/2010, art. 20). Muitos municípios exigem o PGRS para alvará."),
+    ("mtr", "Emite o MTR (Manifesto de Transporte de Resíduos) no SINIR sempre que um resíduo sai da empresa?",
+     "MTR", "O MTR acompanha cada transporte de resíduo e é obrigatório em todo o país desde 2021 (Portaria MMA 280/2020)."),
+    ("cdf", "Destina só para empresas licenciadas e guarda os CDFs (Certificados de Destinação Final)?",
+     "Destinação e CDF", "O gerador continua responsável pelo resíduo até a destinação final correta. O CDF é a prova de que ele chegou a um destino licenciado."),
+    ("relatorios", "Entrega as declarações periódicas (DMR no SINIR e, se tiver CTF, o RAPP do IBAMA até 31 de março)?",
+     "Declarações e relatórios", "A falta das declarações gera pendência no CTF/IBAMA e no SINIR, e pode impedir certidões e renovações."),
+    ("equipe", "A equipe sabe separar, armazenar e registrar os resíduos?",
+     "Treinamento da equipe", "Separação e armazenamento errados contaminam recicláveis, aumentam o custo da destinação e geram autuação em fiscalização."),
+]
+
+CALENDARIO = [
+    ("A cada saída de resíduo", "Emitir o MTR no SINIR e receber o resíduo só com transportador licenciado."),
+    ("A cada destinação", "Receber e arquivar o CDF do destinador."),
+    ("Periodicamente", "Declarar no SINIR a movimentação de resíduos (DMR), no prazo do sistema."),
+    ("Até 31 de março", "Entregar o RAPP do IBAMA referente ao ano anterior (empresas com CTF)."),
+    ("120 dias antes do vencimento", "Pedir a renovação da licença ambiental, para que ela continue valendo durante a análise."),
+    ("Quando mudar o processo", "Atualizar o PGRS e treinar a equipe."),
+]
+
+SERVICOS = ["Licenciamento ambiental (IAT e municípios)", "PGRS: elaboração e atualização", "MTR e declarações no SINIR",
+            "Inventário e relatórios de resíduos (RAPP/CTF)", "Treinamento de equipes", "Regularização de pendências e renovações"]
+
+
+def empresas():
+    perguntas = "".join(
+        f'<li><p>{esc(t)}</p><div class="ck-op" data-q="{k}">'
+        f'<label><input type="radio" name="{k}" value="sim"> Sim</label>'
+        f'<label><input type="radio" name="{k}" value="nao"> Não</label>'
+        f'<label><input type="radio" name="{k}" value="ns"> Não sei</label></div></li>'
+        for k, t, _, _ in PERGUNTAS)
+    explica = json.dumps({k: [n, e] for k, _, n, e in PERGUNTAS}, ensure_ascii=False)
+    cal = "".join(f"<li><b>{esc(q)}</b><span>{esc(o)}</span></li>" for q, o in CALENDARIO)
+    serv = "".join(f"<li>{esc(s)}</li>" for s in SERVICOS)
+    return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Início</a> › Para empresas</nav>
+<h1>Sua empresa está em dia com os resíduos?</h1>
+<p class="resposta">Responda 6 perguntas e veja o que falta para cumprir a Política Nacional de Resíduos Sólidos. Leva um minuto e nada é enviado sem você pedir.</p>
+
+<form class="checklist" id="checklist">
+<ol>{perguntas}</ol>
+<button type="submit">Ver resultado</button>
+</form>
+<div class="ck-resultado" id="ck-resultado" hidden></div>
+
+<section class="calendario">
+<h2>Calendário de obrigações</h2>
+<ul class="cal">{cal}</ul>
+<p class="sub">Encontre transportadores e destinadores licenciados na sua cidade: <a href="../residuos/">ver cidades</a>.</p>
+</section>
+
+<section class="servicos" id="servicos">
+<div class="serv-box">
+<span class="pq-tag">Serviços técnicos: Mawé Consultoria Ambiental</span>
+<h2>Precisa de ajuda para regularizar?</h2>
+<p>A equipe técnica por trás do Desvia faz:</p>
+<ul class="serv-lista">{serv}</ul>
+<a class="pq-btn" href="{WHATSAPP}?text={DIAG_TXT}" target="_blank" rel="noopener">Pedir diagnóstico gratuito</a>
+<p class="nota">O Desvia é independente: a ordem das empresas e a situação das licenças vêm só de dados públicos (IAT, IBAMA e prefeituras). Contratar serviços técnicos não muda nada na listagem.</p>
+</div>
+</section>
+
+<script>
+(function () {{
+  var EXPLICA = {explica};
+  var f = document.getElementById('checklist'), out = document.getElementById('ck-resultado');
+  f.addEventListener('submit', function (e) {{
+    e.preventDefault();
+    var falta = [], duvida = [], resp = 0;
+    Object.keys(EXPLICA).forEach(function (k) {{
+      var v = (f.querySelector('input[name="' + k + '"]:checked') || {{}}).value;
+      if (v) resp++;
+      if (v === 'nao') falta.push(k); else if (v === 'ns' || !v) duvida.push(k);
+    }});
+    var ok = Object.keys(EXPLICA).length - falta.length - duvida.length;
+    var item = function (k) {{ return '<li><b>' + EXPLICA[k][0] + ':</b> ' + EXPLICA[k][1] + '</li>'; }};
+    var txt = 'Olá! Fiz o checklist do Desvia. ' + (falta.length ? 'Pendências: ' + falta.map(function (k) {{ return EXPLICA[k][0]; }}).join(', ') + '. ' : '') +
+      (duvida.length ? 'Não sei: ' + duvida.map(function (k) {{ return EXPLICA[k][0]; }}).join(', ') + '. ' : '') + 'Quero um diagnóstico gratuito.';
+    out.innerHTML = '<h2>' + (falta.length || duvida.length ? ok + ' de 6 em dia' : 'Tudo em dia. Parabéns!') + '</h2>' +
+      (falta.length ? '<h3>O que falta</h3><ul>' + falta.map(item).join('') + '</ul>' : '') +
+      (duvida.length ? '<h3>Vale conferir</h3><ul>' + duvida.map(item).join('') + '</ul>' : '') +
+      (falta.length || duvida.length ? '<a class="pq-btn" target="_blank" rel="noopener" href="{WHATSAPP}?text=' + encodeURIComponent(txt) + '">Pedir diagnóstico gratuito com estas respostas</a>' : '<p>Mantenha o calendário abaixo em dia.</p>');
+    out.hidden = false; out.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+  }});
+}})();
+</script>"""
+
+
+DIAG_TXT = "Ol%C3%A1!%20Vim%20pelo%20Desvia%20e%20quero%20um%20diagn%C3%B3stico%20gratuito%20dos%20res%C3%ADduos%20da%20minha%20empresa."

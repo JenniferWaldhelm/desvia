@@ -250,13 +250,13 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {ld}
 </head>
 <body>
-<header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}#empresas">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
+<header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}empresas/">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
 <main>
 {corpo}
 </main>
 <footer><p>Desvia reúne, em uma só busca, dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
 <nav class="rodape-links" aria-label="Rodapé">
-  <div><b>Desvia</b><a href="{raiz}">Buscar onde descartar</a><a href="{raiz}guias/">Guias por resíduo</a><a href="{raiz}#empresas">Para empresas</a></div>
+  <div><b>Desvia</b><a href="{raiz}">Buscar onde descartar</a><a href="{raiz}guias/">Guias por resíduo</a><a href="{raiz}empresas/">Para empresas</a></div>
   <div><b>Cidades</b>{"".join(f'<a href="{raiz}residuos/{c}/">{esc(n)}</a>' for c, n in CIDADES.items())}</div>
   <div><b>Contato</b><a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div>
 </nav></footer>
@@ -468,6 +468,15 @@ def gerar():
                "Como descartar cada tipo de resíduo em casa e na empresa, o que diz a lei e onde levar.",
                f"{BASE_URL}/guias/", "../", site_desvia.indice_guias(nomes, cats_geral), []), encoding="utf-8")
     urls.insert(len(PAGINAS_FIXAS), (f"{BASE_URL}/guias/", "0.9"))
+
+    # página para empresas (checklist, calendário, serviços)
+    pasta_emp = RAIZ / "empresas"
+    pasta_emp.mkdir(exist_ok=True)
+    (pasta_emp / "index.html").write_text(
+        pagina("Sua empresa está em dia com os resíduos? Checklist gratuito | Desvia",
+               "Checklist de 6 perguntas sobre licença ambiental, PGRS, MTR, CDF e declarações, com o calendário de obrigações de resíduos para empresas.",
+               f"{BASE_URL}/empresas/", "../", site_desvia.empresas(), []), encoding="utf-8")
+    urls.insert(len(PAGINAS_FIXAS), (f"{BASE_URL}/empresas/", "0.8"))
 
     # página inicial (busca única)
     ctx = {"norm": norm, "selo": selo_licenca, "aviso_cnpj": aviso_cnpj, "obs_publica": obs_publica,
