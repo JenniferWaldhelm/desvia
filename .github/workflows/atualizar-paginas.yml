@@ -33,7 +33,26 @@ jobs:
           head -1 dados/pontos.novo.csv | grep -q "^ID," || { echo "CSV inesperado"; exit 1; }
           python3 - <<'PY'
           import csv, sys
-          novo = [r for r in csv.DictReader(open("dados/pontos.novo.csv", encoding="utf-8")) if r.get("ID")]
+          import re
+          from datetime import date, timedelta
+          leitor = csv.DictReader(open("dados/pontos.novo.csv", encoding="utf-8"))
+          campos = leitor.fieldnames
+          novo = [r for r in leitor if (r.get("ID") or "").strip()]
+          # a planilha publicada sai no formato do Google (2030/09/25 e -23,51): volta para 25/09/2030 e -23.51
+          for r in novo:
+              for k, v in r.items():
+                  m = re.match(r"^(\d{4})/(\d{2})/(\d{2})$", (v or "").strip())
+                  if m:
+                      r[k] = f"{m.group(3)}/{m.group(2)}/{m.group(1)}"
+              for c in ("Lat", "Lng"):
+                  r[c] = (r.get(c) or "").strip().replace(",", ".")
+              for c in ("Validade licença", "Data verificação"):  # data que veio como número de série (46328)
+                  v = (r.get(c) or "").strip()
+                  if re.match(r"^\d{5}$", v):
+                      d = date(1899, 12, 30) + timedelta(days=int(v))
+                      r[c] = f"{d:%d/%m/%Y}"
+          w = csv.DictWriter(open("dados/pontos.novo.csv", "w", newline="", encoding="utf-8"), fieldnames=campos)
+          w.writeheader(); w.writerows(novo)
           atual = list(csv.DictReader(open("dados/pontos.csv", encoding="utf-8")))
           if len(novo) < 0.9 * len(atual):
               sys.exit(f"Planilha com {len(novo)} pontos, menos de 90% dos {len(atual)} atuais: não publico (possível erro).")

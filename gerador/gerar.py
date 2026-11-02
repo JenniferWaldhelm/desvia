@@ -122,7 +122,8 @@ def esc(txt):
 
 def data_br(txt):
     try:
-        return datetime.strptime(txt.strip(), "%d/%m/%Y").date()
+        t = txt.strip()
+        return datetime.strptime(t, "%Y/%m/%d" if re.match(r"^\d{4}/", t) else "%d/%m/%Y").date()
     except (ValueError, AttributeError):
         return None
 
