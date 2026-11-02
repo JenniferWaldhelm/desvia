@@ -282,3 +282,23 @@ dialog.ajuda p { margin-bottom: 12px; }
 .ajuda-ok:hover { background: var(--verde-claro); }
 .ajuda-sec { background: #fff; color: var(--verde); border: 1.5px solid var(--verde); }
 dialog.ajuda { margin: auto; position: fixed; inset: 0; height: fit-content; }
+
+/* ── Para quem é ── */
+.para-quem { margin: 48px 0 8px; }
+.para-quem > .sub { max-width: 80ch; color: var(--cinza); margin-bottom: 18px; }
+.pq-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.pq { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.pq-tag { align-self: flex-start; font-size: .75rem; font-weight: 700; color: var(--verde-claro); background: var(--verde-menta); border-radius: 999px; padding: 3px 10px; text-transform: uppercase; letter-spacing: .5px; }
+.pq h3 { color: var(--verde); font-size: 1.08rem; }
+.pq p { font-size: .95rem; }
+.pq-acoes { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.pq-acoes a { font-weight: 600; text-decoration: none; }
+.pq-btn { display: inline-block; border: 0; background: var(--verde); color: #fff !important; font: inherit; font-weight: 700; padding: 10px 16px; border-radius: 10px; cursor: pointer; text-decoration: none; }
+.pq-btn:hover { background: var(--verde-claro); }
+/* ── Doar ou desapegar ── */
+.doar { margin-top: 40px; }
+.doar-links { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.doar-links a { display: inline-block; background: #fff; border: 1.5px solid var(--cinza-claro); border-radius: 999px; padding: 8px 14px; text-decoration: none; font-weight: 600; }
+.doar-links a:hover { border-color: var(--verde-claro); }
+.ajuda-doar { background: var(--verde-menta); border-radius: 10px; padding: 10px 12px; margin: 4px 0 10px; font-size: .92rem; }
+.ajuda-grupos { margin: 2px 0 !important; }

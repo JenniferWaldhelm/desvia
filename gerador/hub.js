@@ -302,6 +302,15 @@
     if (!b) { var t = contaAcao(cat, null); b = t ? '<button type="button" class="ajuda-ok" data-ir="' + cat + '|todos">Ver todos os lugares (' + t + ')</button>' : '<p>Ainda não temos lugares para isso nesta cidade. Fale com a prefeitura ou mande uma mensagem para o Desvia.</p>'; }
     return '<div class="ajuda-acoes">' + b + '</div>';
   }
+  function linksGrupos() {
+    var G = window.GRUPOS || {}, cid = estado.cid || (Object.keys(window.DESVIA_CIDADES || {}).length === 1 ? Object.keys(DESVIA_CIDADES)[0] : '');
+    var cids = cid ? [cid] : Object.keys(G);
+    var h = cids.filter(function (c) { return G[c]; }).map(function (c) {
+      return '<p class="ajuda-grupos">' + (cid ? '' : '<b>' + esc((window.DESVIA_CIDADES || {})[c] || c) + ':</b> ') +
+        G[c].map(function (g) { return '<a href="' + esc(g.l) + '" target="_blank" rel="noopener nofollow">' + esc(g.n) + ' ↗</a>'; }).join(' · ') + '</p>';
+    }).join('');
+    return h ? '<div class="ajuda-doar">' + h + '</div>' : '';
+  }
   function passo1() {
     var cats = Object.keys(CATS).filter(function (c) { return contaAcao(c, null) > 0; });
     tela('<h2>O que você tem?</h2><input type="search" class="ajuda-q" placeholder="Digite: sofá, celular, remédio…" autocomplete="off">' +
@@ -330,7 +339,7 @@
       var temReuso = contaAcao(cat, 'doar') + contaAcao(cat, 'vender') > 0;
       tela('<h2>Ótimo: dá para continuar sendo usado</h2><p>Doar ou vender evita que vire lixo e ajuda alguém.' +
         (temReuso ? ' Veja quem recebe:' : ' Ainda não temos aqui lugares que recebem doação disso, mas dá para anunciar em grupos de doação do bairro, no Marketplace ou na OLX, ou oferecer para instituições e vizinhos. Se não der certo:') +
-        '</p>' + botoesAcao(cat, temReuso ? ['doar', 'vender'] : ['reciclar', 'descartar']));
+        '</p>' + linksGrupos() + botoesAcao(cat, temReuso ? ['doar', 'vender'] : ['reciclar', 'descartar']));
     }
     else tela('<h2>Então o melhor é reciclar ou descartar com segurança</h2><p>Muitas peças ainda viram matéria-prima. Veja onde levar:</p>' + botoesAcao(cat, ['reciclar', 'descartar', 'vender', 'empresa']));
   }

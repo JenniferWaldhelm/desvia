@@ -7,6 +7,7 @@ import guias as G
 import hub
 
 WHATSAPP = hub.WHATSAPP
+PREFEITURA = WHATSAPP + "?text=" + "Ol%C3%A1!%20Sou%20de%20uma%20prefeitura%20e%20quero%20saber%20mais%20sobre%20o%20Desvia."
 CADASTRO = WHATSAPP + "?text=" + "Ol%C3%A1!%20Quero%20cadastrar%20minha%20empresa%20no%20Desvia."
 
 
@@ -69,6 +70,22 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   </div>
 </section>
 
+<section class="para-quem" id="empresas">
+  <h2>Para quem é o Desvia</h2>
+  <p class="sub">A informação sobre resíduos está espalhada: a Receita mostra a atividade da empresa, mas não a licença; a licença fica dividida entre IBAMA, IAT e prefeitura, cada um com seu sistema; e a orientação para o morador está no plano municipal (PMGIRS). O Desvia junta tudo para que cada um saiba o seu papel e o lugar certo de cada coisa.</p>
+  <div class="pq-grade">
+    <article class="pq"><span class="pq-tag">Quem precisa descartar</span><h3>Moradores, empresas e técnicos</h3>
+      <p>Saiba o que fazer com cada coisa (doar, vender, reciclar ou descartar), qual é a sua obrigação e onde levar com segurança, sabendo se o destino tem licença.</p>
+      <div class="pq-acoes"><button type="button" class="pq-btn" data-ajuda>Me ajude a decidir</button><a href="residuos/londrina/#empresas">Obrigações das empresas →</a></div></article>
+    <article class="pq"><span class="pq-tag">Quem presta serviço</span><h3>Reuso, reciclagem, coleta, transporte e destinação</h3>
+      <p>Apareça para quem procura o seu serviço, com a licença ambiental verificada. Quem está regular ganha destaque; quem está com pendência sabe o que corrigir.</p>
+      <div class="pq-acoes"><a class="pq-btn" href="{CADASTRO}" target="_blank" rel="noopener">Cadastrar minha empresa</a></div></article>
+    <article class="pq"><span class="pq-tag">Prefeituras</span><h3>Gestão de resíduos e PMGIRS</h3>
+      <p>Veja quem opera na cidade, com que licença, onde há pontos de entrega e onde faltam. Informação organizada para o plano municipal, para a fiscalização e para orientar a população.</p>
+      <div class="pq-acoes"><a class="pq-btn" href="{PREFEITURA}" target="_blank" rel="noopener">Falar com o Desvia</a></div></article>
+  </div>
+</section>
+
 <section class="passos" id="como-funciona">
   <h2>Como funciona</h2>
   <ol>
@@ -87,17 +104,13 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   <p class="sub">Guia completo de Mandaguari, com coleta por bairro e regras municipais: <a href="mandaguari.html">abrir</a>.</p></div>
 </section>
 
-<section class="cta-dupla" id="empresas">
-  <div class="cta"><h2>Para empresas que geram resíduos</h2><p>MTR, PGRS, inventário anual e logística reversa: veja o que a lei exige e encontre transportadores e destinadores licenciados.</p><a href="residuos/londrina/#empresas">Ver obrigações</a></div>
-  <div class="cta cta-escura"><h2>Coleta, transporta ou recebe resíduos?</h2><p>Cadastre sua empresa e apareça com a licença verificada para quem procura.</p><a href="{CADASTRO}" target="_blank" rel="noopener">Cadastrar minha empresa</a></div>
-</section>
-
 <section class="faq"><h2>Perguntas frequentes</h2>{faq_html}</section>
 
 <script>
 var PONTOS = {hub.dados_js(pontos, "", ctx)};
 var CATS = {cats_js};
 var SINONIMOS = {json.dumps(SINONIMOS, ensure_ascii=False)};
+var GRUPOS = {json.dumps(hub.grupos(ctx), ensure_ascii=False)};
 var DESVIA_CIDADES = {json.dumps(cidades, ensure_ascii=False)};
 </script>
 <script src="residuos/hub.js" defer></script>
