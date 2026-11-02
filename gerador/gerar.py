@@ -40,6 +40,8 @@ UF = "PR"
 
 # Token do teste de origem do WebMCP no Chrome (deixe vazio até cadastrar o site).
 ORIGIN_TRIAL = ""
+# Contador de visitas GoatCounter (gratuito, sem cookies). Ex.: "desvia" para desvia.goatcounter.com
+GOATCOUNTER = ""
 
 # Páginas fixas do site que continuam no sitemap.
 PAGINAS_FIXAS = [("", "1.0"), ("mandaguari.html", "0.8"), ("mapa-pev.html", "0.6")]
@@ -188,9 +190,10 @@ def selo_licenca(p):
 
 def aviso_cnpj(p):
     obs = norm(p["Obs"])
-    m = re.search(r"cnpj (inapto|baixado) na receita(?: federal)? desde (\d{2}/\d{2}/\d{4})", obs)
+    m = re.search(r"cnpj (inapto|inapta|baixado|baixada|suspenso|suspensa) na receita(?: federal)? (desde|em) (\d{2}/\d{2}/\d{4})", obs)
     if m:
-        return f"CNPJ {m.group(1)} na Receita Federal desde {m.group(2)}."
+        sit = {"inapta": "inapto", "baixada": "baixado", "suspensa": "suspenso"}.get(m.group(1), m.group(1))
+        return f"CNPJ {sit} na Receita Federal " + (f"desde {m.group(3)}." if m.group(2) == "desde" else f"(consulta em {m.group(3)}).")
     return ""
 
 
@@ -260,6 +263,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
   <div><b>Cidades</b>{"".join(f'<a href="{raiz}residuos/{c}/">{esc(n)}</a>' for c, n in CIDADES.items())}</div>
   <div><b>Contato</b><a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div>
 </nav></footer>
+{f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER else ""}
 </body>
 </html>
 """
