@@ -63,7 +63,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>
-    <div class="legenda" aria-hidden="true"><span><i style="background:#2A7A2A"></i>Licença válida</span><span><i style="background:#C77700"></i>Vencendo ou vencida</span><span><i style="background:#1A3A8F"></i>Serviço público</span><span><i style="background:#7A7F8C"></i>Licença não localizada</span></div>
+    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Licença</b><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Não localizada</button></div>
   </div>
 </section>
 

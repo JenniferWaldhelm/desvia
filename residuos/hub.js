@@ -2,7 +2,7 @@
 (function () {
   var CORES = { valida: '#2A7A2A', vencendo: '#C77700', vencida: '#C77700', publico: '#1A3A8F', nao_localizada: '#7A7F8C' };
   var ORDEM = { valida: 0, vencendo: 1, publico: 2, vencida: 3, nao_localizada: 4 };
-  var estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '' };
+  var estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '', fora: {} };
   var selCidade = document.getElementById('cidade');
   var fLoc = document.getElementById('fLoc');
   var lista = document.getElementById('lista');
@@ -63,6 +63,7 @@
     if (estado.p !== 'todos' && p.pp.indexOf(estado.p) < 0) return false;
     if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo' || p.st === 'publico')) return false;
     if (estado.loc && !p.loc) return false;
+    if (estado.fora[p.st === 'vencendo' ? 'vencida' : p.st]) return false;
     if (estado.q) {
       var qc = estado.qcats || [];
       for (var k = 0; k < qc.length; k++) if (p.c.indexOf(qc[k]) >= 0) return true;
@@ -128,6 +129,7 @@
     lista.innerHTML = vis.length ? vis.slice(0, limite).map(cartao).join('') +
       (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') : sugestoes();
     document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.cat === estado.cat ? 'true' : 'false'); });
+    document.querySelectorAll('.legenda [data-st]').forEach(function (b) { b.setAttribute('aria-pressed', estado.fora[b.dataset.st] ? 'false' : 'true'); });
     var fq = document.getElementById('fQuem'), ft = document.getElementById('fTipo');
     if (fq) fq.value = estado.p; if (ft) ft.value = estado.cat || '';
     if (mapa && !mais) desenhar(vis);
@@ -245,6 +247,16 @@
   });
   var segEl = document.getElementById('seg') || document.createElement('div');
   var chipsEl = document.getElementById('chips') || document.createElement('div');
+  var leg = document.querySelector('.legenda');
+  if (leg) leg.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-st]'); if (!b) return;
+    var st = b.dataset.st, ligados = Object.keys(estado.fora).length;
+    if (!estado.fora[st] && ligados === 0) {  // primeiro toque: mostra só esta
+      ['valida', 'vencida', 'publico', 'nao_localizada'].forEach(function (x) { if (x !== st) estado.fora[x] = true; });
+    } else if (estado.fora[st]) { delete estado.fora[st]; }
+    else { estado.fora[st] = true; if (Object.keys(estado.fora).length === 4) estado.fora = {}; }
+    render();
+  });
   var fQuem = document.getElementById('fQuem'), fTipo = document.getElementById('fTipo');
   if (fQuem) fQuem.addEventListener('change', function (e) { estado.p = e.target.value; render(); });
   if (fTipo) fTipo.addEventListener('change', function (e) { estado.cat = e.target.value || null; render(); });
@@ -274,7 +286,7 @@
     });
   });
   document.getElementById('limpar').addEventListener('click', function () {
-    estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '' };
+    estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '', fora: {} };
     document.getElementById('q').value = ''; mostraX();
     document.getElementById('fLic').checked = false;
     if (fLoc) fLoc.checked = false;
