@@ -33,6 +33,7 @@ HOJE = date.today()
 CIDADES = {
     "londrina": "Londrina",
     "mandaguari": "Mandaguari",
+    "ibipora": "Ibiporã",
 }
 UF = "PR"
 
