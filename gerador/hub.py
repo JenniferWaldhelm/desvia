@@ -100,7 +100,7 @@ LOCAL = {
                     ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
                      "Confira na Secretaria Municipal de Meio Ambiente se a atividade é de impacto local; se não for, o processo é no IAT",
                      "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
-                    None),
+                    ("Licenciamento ambiental (Prefeitura de Maringá)", "https://www3.maringa.pr.gov.br/meioambiente/?cod=licenciamento")),
         "extra": [
             ("♻️", "Recicláveis", "Ecopontos Ecolix",
              "Os ecopontos Ecolix, espalhados pela cidade, recebem recicláveis separados (papel, plástico, metal e vidro). Leve limpos e secos.",
