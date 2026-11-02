@@ -8,7 +8,7 @@ Dados atualizados em 02/11/2026. A situação da licença reflete as bases públ
 - [Busca por resíduo e cidade](https://jenniferwaldhelm.github.io/desvia/): mapa e lista com filtros. Aceita ?q=<resíduo>&cidade=<cidade>&r=<tipo>.
 
 ## Cidades
-- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 157 pontos e empresas, 19 tipos de resíduo, obrigações das empresas
+- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 156 pontos e empresas, 19 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/pneus/)
   - [Onde descartar eletrônicos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/eletronicos/)
   - [Onde descartar lâmpadas em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/lampadas/)
@@ -40,7 +40,7 @@ Dados atualizados em 02/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/residuos-de-saude/)
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/reciclaveis/)
   - [Onde descartar embalagens de agrotóxico em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/embalagens-de-agrotoxico/)
-- [Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/): 50 pontos e empresas, 14 tipos de resíduo, obrigações das empresas
+- [Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/): 48 pontos e empresas, 14 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/pneus/)
   - [Onde descartar lâmpadas em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/lampadas/)
   - [Onde descartar óleo de cozinha em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/oleo-de-cozinha/)
