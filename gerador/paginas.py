@@ -40,20 +40,22 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     ]
     faq_html = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)
     corpo = f"""<section class="hero-busca">
-  <h1>Onde descartar cada resíduo.<br><em>Várias fontes, uma só busca.</em></h1>
-  <p>Pontos de entrega, cooperativas e empresas de coleta e destinação, com a situação da licença ambiental de cada uma.</p>
+  <h1>O que fazer com o que você não usa mais?<br><em>Doar, vender, reciclar ou descartar.</em></h1>
+  <p>O lugar certo para cada coisa na sua cidade: pontos de entrega, brechós, cooperativas e empresas de coleta e destinação, com a situação da licença ambiental de cada uma.</p>
   <form class="busca" id="busca" role="search" toolname="buscar_onde_descartar_formulario" tooldescription="Busca onde descartar um resíduo em uma cidade, com a licença ambiental de cada empresa.">
-    <label class="campo"><span>O que você quer descartar?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="pilha, óleo, entulho, sofá, lâmpada…" autocomplete="off"></label>
+    <label class="campo"><span>O que você tem?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="sofá, roupa, pilha, remédio, entulho…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
     <button type="submit">Buscar</button>
     <div class="busca-filtros">
-      <label class="filtro"><span>Quem você procura</span><select id="fQuem" name="quem">
-        <option value="todos">Todos</option><option value="entrega">Ponto de entrega</option>
-        <option value="recebe">Recebe / destina</option><option value="transporta">Coleta / transporta</option></select></label>
+      <label class="filtro"><span>O que você quer fazer</span><select id="fQuem" name="quem">
+        <option value="todos">Tudo</option><option value="doar">Doar</option><option value="vender">Vender ou trocar</option>
+        <option value="reciclar">Reciclar</option><option value="descartar">Descartar com segurança</option>
+        <option value="empresa">Empresas: coleta e destinação</option></select></label>
       <label class="filtro"><span>Tipo de resíduo</span><select id="fTipo" name="tipo"><option value="">Todos os tipos</option>{opcoes_tipo}</select></label>
       <label class="filtro-lic"><input type="checkbox" id="fLic"> Só com licença válida ou serviço público</label>
     </div>
   </form>
+  <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe o que fazer? Me ajude a decidir</button>
   <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
 </section>
 

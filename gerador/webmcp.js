@@ -31,13 +31,13 @@
 
   mc.registerTool({
     name: 'buscar_onde_descartar',
-    description: 'Busca pontos de entrega, cooperativas e empresas que coletam, transportam ou recebem um tipo de resíduo em uma cidade, com a situação da licença ambiental de cada uma. Fontes: IAT, IBAMA, Receita Federal e prefeituras.',
+    description: 'Busca pontos de entrega, cooperativas e empresas que coletam, transportam ou recebem um tipo de resíduo em uma cidade, com a situação da licença ambiental de cada uma. Fontes: IAT, IBAMA e prefeituras.',
     inputSchema: {
       type: 'object',
       properties: {
         residuo: { type: 'string', description: 'Tipo de resíduo. Valores aceitos: ' + tipos.join(', ') + '. Também aceita texto livre como "pilha" ou "sofá".' },
         cidade: { type: 'string', description: 'Cidade. Valores aceitos: ' + cidades.join(', ') + '.' },
-        quem: { type: 'string', enum: ['todos', 'entrega', 'recebe', 'transporta'], description: 'entrega = ponto de entrega para a população; recebe = recebe ou dá destinação final; transporta = coleta ou transporta.' },
+        quem: { type: 'string', enum: ['todos', 'doar', 'vender', 'reciclar', 'descartar', 'empresa'], description: 'doar = recebe doação; vender = brechó, compra ou troca; reciclar = cooperativa ou ecoponto; descartar = ponto de descarte seguro (pilhas, remédios, entulho...); empresa = empresa de coleta, transporte ou destinação.' },
         so_licenca_valida: { type: 'boolean', description: 'Se verdadeiro, retorna só quem tem licença ambiental válida localizada.' },
         limite: { type: 'integer', minimum: 1, maximum: 50, description: 'Número máximo de resultados (padrão 15).' }
       }

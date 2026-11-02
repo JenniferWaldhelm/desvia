@@ -263,3 +263,22 @@ main.home { padding-top: 0; }
 .aviso-zoom { position: absolute; inset: 0; z-index: 600; display: flex; align-items: center; justify-content: center; background: rgba(15,31,61,.45); color: #fff; font-weight: 700; font-size: 1.05rem; text-align: center; padding: 16px; pointer-events: none; opacity: 0; transition: opacity .25s; }
 .aviso-zoom.ver { opacity: 1; }
 @media (hover: none) { .aviso-zoom { display: none; } }
+
+/* ── Assistente ── */
+.btn-ajuda { display: inline-flex; align-items: center; gap: 6px; margin: 14px auto 0; border: 1.5px solid var(--verde); background: #fff; color: var(--verde); font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 999px; cursor: pointer; }
+.btn-ajuda:hover { background: var(--verde); color: #fff; }
+.hero-busca .btn-ajuda { display: flex; }
+dialog.ajuda { border: 0; border-radius: 16px; padding: 24px 20px 20px; width: min(560px, calc(100vw - 32px)); max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(15,31,61,.3); color: var(--escuro); }
+dialog.ajuda::backdrop { background: rgba(15,31,61,.5); }
+dialog.ajuda h2 { margin: 0 32px 10px 0; font-size: 1.25rem; }
+dialog.ajuda p { margin-bottom: 12px; }
+.ajuda-x { position: absolute; top: 10px; right: 12px; border: 0; background: none; font-size: 1.6rem; cursor: pointer; color: var(--cinza); line-height: 1; }
+.ajuda-q { width: 100%; padding: 10px 12px; border: 1.5px solid var(--cinza-claro); border-radius: 10px; font: inherit; margin-bottom: 12px; }
+.ajuda-cats { display: flex; flex-wrap: wrap; gap: 8px; }
+.ajuda-cats .chip { padding: 8px 12px; font-size: .9rem; }
+.ajuda-cats .chip[hidden] { display: none; }
+.ajuda-acoes { display: grid; gap: 8px; margin-top: 8px; }
+.ajuda-ok { border: 0; background: var(--verde); color: #fff; font: inherit; font-weight: 700; padding: 12px 14px; border-radius: 10px; cursor: pointer; text-align: left; }
+.ajuda-ok:hover { background: var(--verde-claro); }
+.ajuda-sec { background: #fff; color: var(--verde); border: 1.5px solid var(--verde); }
+dialog.ajuda { margin: auto; position: fixed; inset: 0; height: fit-content; }
