@@ -192,3 +192,12 @@ main.home { padding-top: 0; }
 .limpar-q { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border: 0; border-radius: 50%; background: var(--cinza-claro); color: var(--escuro); font-size: 1.2rem; line-height: 1; cursor: pointer; }
 .limpar-q:hover { background: var(--verde-claro); color: #fff; }
 .limpar-q[hidden] { display: none; }
+
+/* ── Sugestões da busca ── */
+.sugere { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 1200; background: #fff; border: 1.5px solid var(--cinza-claro); border-radius: 12px; box-shadow: 0 10px 30px rgba(15,31,61,.15); overflow: hidden; }
+.sugere button { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; width: 100%; border: 0; background: #fff; padding: 10px 14px; font: inherit; font-size: .95rem; text-align: left; cursor: pointer; color: var(--escuro); }
+.sugere button + button { border-top: 1px solid var(--off-white); }
+.sugere button:hover, .sugere button.ativo { background: var(--verde-menta); }
+.sugere small { color: var(--cinza); white-space: nowrap; font-size: .8rem; }
+.busca { overflow: visible; }
+.busca .campo .sugere span { font-size: .95rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--escuro); }

@@ -178,10 +178,60 @@
   envolve.appendChild(xq);
   function mostraX() { xq.hidden = !campoQ.value; }
   xq.addEventListener('click', function () {
-    campoQ.value = ''; estado.q = ''; estado.cat = null; mostraX(); render(); campoQ.focus();
+    campoQ.value = ''; estado.q = ''; estado.cat = null; mostraX(); caixa.hidden = true; render(); campoQ.focus();
   });
   mostraX();
-  campoQ.addEventListener('input', function (e) { estado.q = e.target.value; mostraX(); render(); });
+  // Sugestões enquanto digita (tipos de resíduo e empresas)
+  var caixa = document.createElement('div'); caixa.className = 'sugere'; caixa.hidden = true;
+  caixa.setAttribute('role', 'listbox'); envolve.appendChild(caixa);
+  var ativoSug = -1;
+  function contaCat(c) {
+    return PONTOS.filter(function (p) { return p.c.indexOf(c) >= 0 && (!estado.cid || p.cs.indexOf(estado.cid) >= 0); }).length;
+  }
+  function sugerir() {
+    var t = norm(campoQ.value).trim(); ativoSug = -1;
+    if (t.length < 2) { caixa.hidden = true; return; }
+    var itens = [];
+    var porNome = Object.keys(CATS).filter(function (c) { return norm(CATS[c]).indexOf(t) >= 0; });
+    var cats = porNome.concat(catsDaBusca(campoQ.value).filter(function (c) { return porNome.indexOf(c) < 0; }));
+    cats.slice(0, 4).forEach(function (c) {
+      var n = contaCat(c); itens.push({ tipo: 'cat', v: c, txt: CATS[c], n: n ? n + (n > 1 ? ' locais' : ' local') : 'nenhum local nesta cidade' });
+    });
+    var vistos = {};
+    PONTOS.forEach(function (p) {
+      if (itens.length >= 8 || vistos[p.n]) return;
+      if ((!estado.cid || p.cs.indexOf(estado.cid) >= 0) && norm(p.n).indexOf(t) >= 0) { vistos[p.n] = 1; itens.push({ tipo: 'emp', v: p.n, txt: p.n, n: p.m }); }
+    });
+    if (!itens.length) { caixa.hidden = true; return; }
+    caixa.innerHTML = itens.map(function (it, i) {
+      return '<button type="button" role="option" data-i="' + i + '" data-tipo="' + it.tipo + '" data-v="' + esc(it.v) + '">' +
+        '<span>' + (it.tipo === 'cat' ? '♻ ' : '🏢 ') + esc(it.txt) + '</span><small>' + esc(it.n) + '</small></button>';
+    }).join('');
+    caixa.hidden = false;
+  }
+  function escolher(b) {
+    if (b.dataset.tipo === 'cat') { estado.cat = b.dataset.v; estado.q = ''; campoQ.value = ''; }
+    else { estado.cat = null; estado.q = b.dataset.v; campoQ.value = b.dataset.v; }
+    caixa.hidden = true; mostraX(); render();
+    var r = document.getElementById('resultados'); if (r && r.scrollIntoView) r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  caixa.addEventListener('mousedown', function (e) { e.preventDefault(); });
+  caixa.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) escolher(b); });
+  campoQ.addEventListener('keydown', function (e) {
+    var bs = caixa.hidden ? [] : caixa.querySelectorAll('button');
+    if (!bs.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault(); ativoSug = (ativoSug + (e.key === 'ArrowDown' ? 1 : -1) + bs.length) % bs.length;
+      bs.forEach(function (b, i) { b.classList.toggle('ativo', i === ativoSug); });
+    } else if (e.key === 'Enter' && ativoSug >= 0) { e.preventDefault(); escolher(bs[ativoSug]); }
+    else if (e.key === 'Escape') caixa.hidden = true;
+  });
+  campoQ.addEventListener('blur', function () { setTimeout(function () { caixa.hidden = true; }, 150); });
+  campoQ.addEventListener('focus', sugerir);
+  campoQ.addEventListener('input', function (e) {
+    estado.q = e.target.value; estado.cat = null;  // digitar troca a busca, não soma com o tipo escolhido antes
+    mostraX(); sugerir(); render();
+  });
   document.getElementById('seg').addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b) return;
     estado.p = b.dataset.p;
@@ -198,7 +248,7 @@
   if (selCidade) selCidade.addEventListener('change', function (e) { estado.cid = e.target.value; render(); });
   var form = document.getElementById('busca');
   if (form) form.addEventListener('submit', function (e) {
-    e.preventDefault(); render();
+    e.preventDefault(); caixa.hidden = true; render();
     document.getElementById('resultados').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   document.querySelectorAll('[data-atalho]').forEach(function (b) {
