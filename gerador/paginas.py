@@ -1,5 +1,6 @@
 """Página inicial (busca única, estilo agregador) e guias por tipo de resíduo."""
 import json
+from sinonimos import SINONIMOS
 from html import escape as _esc
 
 import guias as G
@@ -31,7 +32,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
         for s, c in cidades.items())
     cats_js = json.dumps({s: nomes[s][1] for s, _ in cats_ordem}, ensure_ascii=False)
     faq = [
-        ("De onde vêm os dados?", "Do licenciamento do IAT (base GeoPR e consulta SGA), do Cadastro Técnico Federal do IBAMA, da Receita Federal e das listas e páginas das prefeituras. Cada empresa mostra de onde veio a licença e a data da consulta."),
+        ("De onde vêm os dados?", "De dados públicos do IAT (licenciamento ambiental), do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. Cada empresa mostra a fonte e a data da consulta."),
         ("Por que aparecem empresas sem licença?", "Porque elas operam e as pessoas encontram essas empresas de qualquer forma. O Desvia mostra todas, com a situação da licença bem visível: válida, vencida ou não localizada nas bases consultadas. Antes de contratar, peça a licença atual."),
         ("Sou empresa de coleta ou destinação. Como apareço com licença verificada?", "Mande sua licença pelo WhatsApp. Conferimos no órgão ambiental e atualizamos seu cadastro."),
         ("O Desvia é da prefeitura?", "Não. É um projeto independente que reúne informações públicas de várias fontes. Em cada cidade, as regras oficiais são as da prefeitura e do órgão ambiental."),
@@ -75,7 +76,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 <section class="passos" id="como-funciona">
   <h2>Como funciona</h2>
   <ol>
-    <li><b>Reunimos as fontes</b><span>Licenças do IAT, cadastro do IBAMA, Receita Federal e listas das prefeituras, que hoje ficam em sites separados.</span></li>
+    <li><b>Reunimos as fontes</b><span>Dados públicos do IAT, do CTF/IBAMA e das prefeituras municipais, que hoje ficam em sites separados.</span></li>
     <li><b>Conferimos a licença</b><span>Cada empresa mostra se a licença está válida, vencida ou não foi localizada, com a data da consulta.</span></li>
     <li><b>Você escolhe com segurança</b><span>Filtre pelo resíduo e pela cidade, veja no mapa e fale direto com quem recebe.</span></li>
   </ol>
@@ -100,6 +101,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 <script>
 var PONTOS = {hub.dados_js(pontos, "", ctx)};
 var CATS = {cats_js};
+var SINONIMOS = {json.dumps(SINONIMOS, ensure_ascii=False)};
 var DESVIA_CIDADES = {json.dumps(cidades, ensure_ascii=False)};
 </script>
 <script src="residuos/hub.js" defer></script>

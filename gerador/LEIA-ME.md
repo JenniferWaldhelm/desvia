@@ -65,3 +65,9 @@ Não apague esses dois arquivos.
   Em navegadores sem WebMCP, nada acontece.
 - Para valer em produção no Chrome, cadastre o site no teste de origem do WebMCP e cole o token em
   `<meta http-equiv="origin-trial" content="TOKEN">` (constante `ORIGIN_TRIAL` em `gerador/gerar.py`).
+
+## Busca por palavras do dia a dia
+
+`gerador/sinonimos.py` liga palavras comuns ao tipo de resíduo ("cabo usb", "geladeira" → Eletrônicos;
+"sofá", "colchão" → Móveis e volumosos). A busca aceita um erro de digitação e, quando não acha nada,
+sugere os tipos de resíduo mais prováveis. Para ensinar uma palavra nova, acrescente-a na lista do tipo certo.

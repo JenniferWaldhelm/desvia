@@ -1,0 +1,39 @@
+"""Palavras do dia a dia que levam a cada tipo de resíduo na busca do site.
+
+Quem busca "cabo usb" ou "geladeira" cai em Eletrônicos, mesmo que nenhuma
+empresa use essa palavra. Escreva em minúsculas; acentos não importam.
+"""
+SINONIMOS = {
+    "eletronicos": ["cabo", "usb", "carregador", "fio", "fone", "celular", "smartphone", "telefone", "tablet",
+                    "notebook", "computador", "pc", "monitor", "teclado", "mouse", "impressora", "cartucho",
+                    "toner", "televisao", "tv", "radio", "som", "caixa de som", "videogame", "controle remoto",
+                    "roteador", "modem", "hd", "pendrive", "placa", "microondas", "micro-ondas", "geladeira",
+                    "freezer", "fogao", "maquina de lavar", "lavadora", "secador", "ventilador", "liquidificador",
+                    "batedeira", "ferro de passar", "aspirador", "ar condicionado", "eletrodomestico", "lixo eletronico"],
+    "pilhas-e-baterias": ["pilha", "bateria", "bateria de celular", "bateria de carro", "bateria de moto",
+                          "bateria de notebook", "powerbank", "carregador portatil"],
+    "lampadas": ["lampada", "fluorescente", "led", "lampada queimada", "reator"],
+    "pneus": ["pneu", "camara de ar", "pneu de bicicleta", "pneu de moto"],
+    "oleo-de-cozinha": ["oleo usado", "oleo de fritura", "oleo de soja", "gordura", "banha", "azeite"],
+    "oleo-lubrificante": ["oleo de motor", "oleo de carro", "troca de oleo", "lubrificante", "graxa", "filtro de oleo"],
+    "entulho": ["entulho", "tijolo", "telha", "cimento", "concreto", "reboco", "azulejo", "piso", "ceramica",
+                "areia", "pedra", "reforma", "obra", "construcao", "demolicao", "cacamba", "vaso sanitario", "pia"],
+    "moveis-e-volumosos": ["sofa", "colchao", "cama", "guarda-roupa", "armario", "mesa", "cadeira", "estante",
+                           "rack", "movel", "moveis", "volumoso", "estofado", "box"],
+    "poda-e-galhos": ["galho", "poda", "folha", "grama", "mato", "capina", "tronco", "arvore", "jardim", "quintal"],
+    "madeira": ["madeira", "palete", "pallet", "compensado", "mdf", "serragem", "caixote"],
+    "medicamentos": ["remedio", "medicamento", "comprimido", "xarope", "remedio vencido", "farmacia", "cartela"],
+    "residuos-de-saude": ["seringa", "agulha", "insulina", "perfurocortante", "curativo", "material hospitalar",
+                          "raio x", "radiografia", "luva"],
+    "reciclaveis": ["reciclavel", "papel", "papelao", "caixa", "jornal", "revista", "plastico", "garrafa pet", "pet",
+                    "garrafa", "vidro", "pote", "embalagem", "sacola", "isopor", "tetra pak", "caixa de leite",
+                    "latinha", "lata", "aluminio"],
+    "sucata-metalica": ["sucata", "ferro", "metal", "cobre", "aluminio", "panela", "ferro velho", "bicicleta", "grade"],
+    "organicos": ["organico", "resto de comida", "comida", "casca", "borra de cafe", "compostagem", "alimento"],
+    "texteis": ["roupa", "tecido", "pano", "sapato", "calcado", "tenis", "retalho", "cobertor", "lencol", "estopa"],
+    "tintas-e-solventes": ["tinta", "lata de tinta", "verniz", "solvente", "thinner", "aguarras", "pincel", "spray"],
+    "limpa-fossa": ["fossa", "esgoto", "caixa de gordura", "limpa fossa", "desentupimento", "banheiro quimico"],
+    "embalagens-de-agrotoxico": ["agrotoxico", "veneno", "defensivo", "herbicida", "inseticida", "embalagem de agrotoxico"],
+    "residuos-perigosos": ["perigoso", "classe i", "contaminado", "quimico", "produto quimico", "amianto", "mercurio"],
+    "residuos-classe-ii": ["industrial", "classe ii", "residuo industrial", "nao perigoso"],
+}

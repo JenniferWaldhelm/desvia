@@ -251,7 +251,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 <main>
 {corpo}
 </main>
-<footer><p>Desvia reúne, em uma só busca, dados de licenças do IAT, cadastros do IBAMA, listas das prefeituras e da Receita Federal. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
+<footer><p>Desvia reúne, em uma só busca, dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
 <p><a href="{raiz}">Busca</a> · <a href="{raiz}guias/">Guias</a> · <a href="{raiz}residuos/">Cidades</a> · <a href="{raiz}mandaguari.html">Guia de Mandaguari</a> · <a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">Fale conosco</a></p></footer>
 </body>
 </html>
@@ -477,8 +477,8 @@ def gerar():
         "# Desvia",
         "",
         "> Onde descartar cada resíduo no Paraná: pontos de entrega, cooperativas e empresas de coleta, transporte e destinação, "
-        "com a situação da licença ambiental de cada uma. Reúne dados do IAT (GeoPR e SGA), do Cadastro Técnico Federal do IBAMA, "
-        "da Receita Federal e das prefeituras.",
+        "com a situação da licença ambiental de cada uma. Reúne dados públicos do IAT, do Cadastro Técnico Federal do IBAMA "
+        "e das prefeituras municipais.",
         "",
         f"Dados atualizados em {HOJE:%d/%m/%Y}. A situação da licença reflete as bases públicas na data da consulta; "
         "\"licença não localizada\" significa que nada foi encontrado nas bases consultadas, não que a empresa seja irregular.",
