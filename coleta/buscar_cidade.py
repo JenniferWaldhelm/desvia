@@ -72,47 +72,47 @@ def get(url, tentativas=3, timeout=60):
 
 
 # ── 1. IAT ──────────────────────────────────────────────────────────────
+IAT_DIAG = []
+
+
 def buscar_iat(cidade):
-    # 1) Pede só os IDs dos registros do município (leve, funciona mesmo em cidades grandes)
-    # 2) Baixa os registros em lotes de 200 IDs. Evita o erro 500 de consultas grandes.
-    ids, tentativas = None, []
-    sem_acento = unicodedata.normalize("NFD", cidade).encode("ascii", "ignore").decode()
-    filtros = [f"nome_municipio='{cidade}'", f"nome_municipio='{cidade.upper()}'",
-               f"nome_municipio LIKE '{sem_acento[:-1]}%'", f"UPPER(nome_municipio) LIKE '{sem_acento.upper()[:-1]}%'"]
-    for w in filtros:
+    # Paginação simples pelo nome do município (funciona em cidades pequenas e médias).
+    # Se o servidor der erro (cidades grandes, ex.: Maringá), repete a consulta ano a ano pela data de emissão.
+    def paginar(where):
+        out, off = [], 0
+        while True:
+            q = urllib.parse.urlencode({"f": "json", "where": where, "outFields": "*", "returnGeometry": "false",
+                                        "resultRecordCount": 1000, "resultOffset": off, "orderByFields": "objectid"})
+            r = json.loads(get(f"{IAT}?{q}", tentativas=2))
+            if "error" in r:
+                raise RuntimeError(r["error"])
+            fs = [f["attributes"] for f in r.get("features", [])]
+            out += fs
+            if len(fs) < 1000:
+                return out
+            off += 1000
+
+    base = f"nome_municipio='{cidade}'"
+    try:
+        todos = paginar(base)
+        IAT_DIAG.append(f"IAT: consulta direta, {len(todos)} registros")
+    except Exception as e:  # noqa: BLE001
+        IAT_DIAG.append(f"IAT: consulta direta falhou ({str(e)[:80]}); tentando ano a ano")
+        todos, falhas = [], []
+        ano_fim = time.localtime().tm_year + 1
+        for ano in range(1985, ano_fim):
+            w = f"{base} AND dt_emissao >= timestamp '{ano}-01-01 00:00:00' AND dt_emissao < timestamp '{ano + 1}-01-01 00:00:00'"
+            try:
+                todos += paginar(w)
+            except Exception:  # noqa: BLE001
+                falhas.append(str(ano))
         try:
-            r = json.loads(get(f"{IAT}?" + urllib.parse.urlencode({"f": "json", "where": w, "returnIdsOnly": "true"}), tentativas=2))
-        except Exception as e:  # noqa: BLE001
-            r = {"error": {"code": str(e)[:60]}}
-        if "error" in r or not r.get("objectIds"):
-            tentativas.append(f"{w}: {r.get('error', {}).get('code', 'vazio')}")
-            continue
-        ids = r["objectIds"]
-        break
-    if ids is None:
-        # último recurso: busca espacial pelo retângulo do município (OpenStreetMap) e filtra pelo nome
-        bb = json.loads(get("https://nominatim.openstreetmap.org/search?" + urllib.parse.urlencode(
-            {"city": cidade, "state": "Paraná", "country": "Brasil", "format": "json", "limit": 1})))
-        if bb:
-            s_, n_, o_, l_ = map(float, bb[0]["boundingbox"])
-            r = json.loads(get(f"{IAT}?" + urllib.parse.urlencode({"f": "json", "geometry": f"{o_},{s_},{l_},{n_}",
-                "geometryType": "esriGeometryEnvelope", "inSR": "4326", "spatialRel": "esriSpatialRelIntersects", "returnIdsOnly": "true"})))
-            ids = r.get("objectIds") if "error" not in r else None
-            tentativas.append(f"espacial: {len(ids or [])} ids" if ids is not None else f"espacial: {r.get('error')}")
-    if not ids:
-        raise RuntimeError("; ".join(tentativas))
-    print("IAT:", "; ".join(tentativas) or "consulta direta ok", file=sys.stderr)
-    ids = sorted(ids)
-    todos = []
-    for k in range(0, len(ids), 200):
-        lote = ",".join(str(x) for x in ids[k:k + 200])
-        q = urllib.parse.urlencode({"f": "json", "objectIds": lote, "outFields": "*", "returnGeometry": "false"})
-        r = json.loads(get(f"{IAT}?{q}"))
-        if "error" in r:
-            raise RuntimeError(r["error"])
-        todos += [f["attributes"] for f in r.get("features", [])]
-    alvo = norm(cidade)
-    todos = [a for a in todos if norm(a.get("nome_municipio") or "") == alvo]
+            todos += paginar(f"{base} AND dt_emissao IS NULL")
+        except Exception:  # noqa: BLE001
+            falhas.append("sem data")
+        IAT_DIAG.append(f"IAT: ano a ano, {len(todos)} registros" + (f"; anos com erro: {', '.join(falhas)}" if falhas else ""))
+        if not todos:
+            raise RuntimeError("; ".join(IAT_DIAG))
     empresas = {}
     for a in todos:
         chave = f"{a.get('desc_grupo_atividade')} | {a.get('desc_atividade')}"
@@ -295,7 +295,7 @@ def principal(cidade):
               f"- Já na base: {len(linhas) - len(novas)}",
               f"- Novas: {len(novas)}",
               f"- CNPJ não ativo na Receita: {sum(1 for l in linhas if l['Situação CNPJ'] and l['Situação CNPJ'].lower() not in ('ativa', 'não consultada'))}",
-              ""] + [f"- Aviso: {a}" for a in avisos] + (["", "## Diagnóstico CTF", ""] + [f"- {d}" for d in DIAG] if DIAG else [])
+              ""] + [f"- {d}" for d in IAT_DIAG] + [f"- Aviso: {a}" for a in avisos] + (["", "## Diagnóstico CTF", ""] + [f"- {d}" for d in DIAG] if DIAG else [])
     (RAIZ / "coleta" / f"{slug}-resumo.md").write_text("\n".join(resumo) + "\n", encoding="utf-8")
     print("\n".join(resumo))
 
