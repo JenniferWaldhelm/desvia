@@ -1,6 +1,6 @@
-Município,UF,Prioridade,Status,Pasta Drive,Documentos recebidos,Faltando,Obs,Publicar,Licenciamento municipal,Link licenciamento
-Mandaguari,PR,Alta,Publicado,https://drive.google.com/drive/folders/1c9dsTQMnk_Wf6O7dZkwjr2W_CDqQ2-21,"17 pontos no site Desvia, KMZ, PMGIRS 2024","3 PEVs pendentes (Canção, GCA, Sicoob)",,Sim,Não,
-Londrina,PR,Alta,Publicado,https://drive.google.com/drive/folders/1jnVr2Jd_k2CFK8ssn_9i_mBPyooRKhH1,"Página prefeitura, PDF empresas (jul/2024), Londrina Recicla",Licenças das empresas; CNPJ,,Sim,Sim,https://portal.londrina.pr.gov.br/licenciamento-ambiental-municipal
-Ibiporã,PR,Média,Publicado,https://drive.google.com/drive/folders/1g0T1wyNnFh6Pnfkngv4EEtSw_cPYVZ-s,"Planilha unificada, consulta IAT, shapefile CTF",CSV do CTF; geocodificação; pendências,,Sim,Não,
-Maringá,PR,Alta,Publicado,,Planilha unificada (306 pontos) + CTF/IBAMA,Licenças do IAT (consulta dava erro 500),,Sim,Sim,https://www3.maringa.pr.gov.br/meioambiente/?cod=licenciamento
-Rolândia,PR,Média,Na fila,,Planilha unificada (52 pontos),Coleta automática IAT/IBAMA,,Não,,
+Município,UF,Prioridade,Status,Pasta Drive,Documentos recebidos,Faltando,Obs,Publicar,Licenciamento municipal,Link licenciamento,Link coleta,Titular coleta
+Mandaguari,PR,Alta,Publicado,https://drive.google.com/drive/folders/1c9dsTQMnk_Wf6O7dZkwjr2W_CDqQ2-21,"17 pontos no site Desvia, KMZ, PMGIRS 2024","3 PEVs pendentes (Canção, GCA, Sicoob)",,Sim,Não,,https://jenniferwaldhelm.github.io/desvia/mandaguari.html,Prefeitura de Mandaguari
+Londrina,PR,Alta,Publicado,https://drive.google.com/drive/folders/1jnVr2Jd_k2CFK8ssn_9i_mBPyooRKhH1,"Página prefeitura, PDF empresas (jul/2024), Londrina Recicla",Licenças das empresas; CNPJ,,Sim,Sim,https://portal.londrina.pr.gov.br/licenciamento-ambiental-municipal,https://geo.londrina.pr.gov.br/portal/apps/webappviewer/index.html?id=27a12430f469471d933b9e7c78e98a9a,CMTU (Companhia Municipal de Trânsito e Urbanização)
+Ibiporã,PR,Média,Publicado,https://drive.google.com/drive/folders/1g0T1wyNnFh6Pnfkngv4EEtSw_cPYVZ-s,"Planilha unificada, consulta IAT, shapefile CTF",CSV do CTF; geocodificação; pendências,,Sim,Não,,https://samaeibi.com.br/uploads/noticia/arquivos/Cronograma-de-Coleta-01-b.pdf,SAMAE de Ibiporã
+Maringá,PR,Alta,Publicado,,Planilha unificada (306 pontos) + CTF/IBAMA,Licenças do IAT (consulta dava erro 500),,Sim,Sim,https://www3.maringa.pr.gov.br/meioambiente/?cod=licenciamento,,Prefeitura de Maringá
+Rolândia,PR,Média,Na fila,,Planilha unificada (52 pontos),Coleta automática IAT/IBAMA,,Não,,,,

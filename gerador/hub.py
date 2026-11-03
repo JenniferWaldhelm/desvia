@@ -257,6 +257,16 @@ def secao_doar(cid_slug, cidade, ctx):
 </section>"""
 
 
+def link_coleta(cidade):
+    import csv
+    from pathlib import Path
+    arq = Path(__file__).resolve().parent.parent / "dados" / "cidades.csv"
+    for c in csv.DictReader(open(arq, encoding="utf-8")):
+        if (c.get("Município") or "").strip() == cidade and (c.get("Link coleta") or "").strip():
+            return f'<a class="btn-ajuda" href="coleta-de-lixo/">🗓️ Dia da coleta de lixo no seu bairro</a>'
+    return ""
+
+
 def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     chips = "".join(
         f'<button type="button" class="chip" data-cat="{s}" aria-pressed="false">{esc(nomes[s][1])} <span class="n">{len(por_cat[s])}</span></button>'
@@ -267,6 +277,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
 <h1>Onde doar, reciclar e descartar em {esc(cidade)}</h1>
 <p class="resposta">Antes de jogar fora, veja se dá para doar, vender ou reciclar. Aqui estão os pontos de entrega, brechós, cooperativas e empresas de coleta e destinação de {esc(cidade)} e região, com a situação da licença ambiental de cada uma.</p>
 <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe o que fazer? Me ajude a decidir</button>
+{link_coleta(cidade)}
 
 <section class="ferramenta" aria-label="Mapa e lista com filtros">
   <aside class="painel">
