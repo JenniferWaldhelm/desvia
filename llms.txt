@@ -2,7 +2,7 @@
 
 > Onde descartar cada resíduo no Paraná: pontos de entrega, cooperativas e empresas de coleta, transporte e destinação, com a situação da licença ambiental de cada uma. Reúne dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais.
 
-Dados atualizados em 03/11/2026. A situação da licença reflete as bases públicas na data da consulta; "licença não localizada" significa que nada foi encontrado nas bases consultadas, não que a empresa seja irregular.
+Dados atualizados em 02/11/2026. A situação da licença reflete as bases públicas na data da consulta; "licença não localizada" significa que nada foi encontrado nas bases consultadas, não que a empresa seja irregular.
 
 ## Busca
 - [Busca por resíduo e cidade](https://jenniferwaldhelm.github.io/desvia/): mapa e lista com filtros. Aceita ?q=<resíduo>&cidade=<cidade>&r=<tipo>.

@@ -101,6 +101,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 
 <section class="blocos">
   <div><h2>Cidades</h2><ul class="grade">{cidades_html}</ul>
+  {pedir_cidade()}
   <p class="sub">Guia completo de Mandaguari, com coleta por bairro e regras municipais: <a href="mandaguari.html">abrir</a>.</p></div>
 </section>
 
@@ -264,3 +265,12 @@ def empresas():
 
 
 DIAG_TXT = "Ol%C3%A1!%20Vim%20pelo%20Desvia%20e%20quero%20um%20diagn%C3%B3stico%20gratuito%20dos%20res%C3%ADduos%20da%20minha%20empresa."
+
+
+FORM = ""  # link do formulário Google, quando existir
+
+
+def pedir_cidade():
+    link = FORM or (WHATSAPP + "?text=" + "Ol%C3%A1!%20Quero%20pedir%20que%20o%20Desvia%20inclua%20a%20minha%20cidade%3A%20")
+    return (f'<p class="pedir-cidade">Sua cidade ainda não está no Desvia? '
+            f'<a href="{link}" target="_blank" rel="noopener">Peça para incluir</a>. As mais pedidas entram primeiro.</p>')
