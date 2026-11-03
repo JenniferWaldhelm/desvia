@@ -457,6 +457,66 @@ def gerar():
                    url, "../../", corpo, jsonld, mapa=True), encoding="utf-8")
         urls.append((url, "0.8"))
 
+    # página "Coleta de lixo: dias e horários" (quando a aba Fila de cidades tem o Link coleta)
+    with open(RAIZ / "dados" / "cidades.csv", encoding="utf-8") as f:
+        info_cid = {(c.get("Município") or "").strip(): c for c in csv.DictReader(f)}
+    for cid_slug, cidade in CIDADES.items():
+        c = info_cid.get(cidade, {})
+        link, titular = (c.get("Link coleta") or "").strip(), (c.get("Titular coleta") or "").strip() or f"Prefeitura de {cidade}"
+        if not link:
+            continue
+        url = f"{BASE_URL}/residuos/{cid_slug}/coleta-de-lixo/"
+        tipo_link = "o cronograma oficial (PDF)" if link.lower().endswith(".pdf") else "o mapa oficial da coleta"
+        cats_cid = [s_ for s_ in ("eletronicos", "pilhas-e-baterias", "lampadas", "medicamentos", "oleo-de-cozinha", "entulho", "moveis-e-volumosos", "poda-e-galhos", "pneus")
+                    if (SAIDA / cid_slug / s_).exists()]
+        nao_vai = "".join(f'<li><a href="../{s_}/">{esc(nomes[s_][1])}</a></li>' for s_ in cats_cid)
+        faq = [
+            (f"Qual o dia da coleta de lixo no meu bairro em {cidade}?",
+             f"Os dias e horários da coleta comum e da coleta seletiva em {cidade} são definidos pelo responsável pelo serviço ({titular}). Consulte {tipo_link}. Eles podem mudar quando há novo contrato (licitação), então confira sempre a fonte oficial."),
+            ("O que não pode ir na coleta comum?",
+             "Pilhas, baterias, lâmpadas, eletrônicos, remédios, óleo de cozinha, entulho, móveis, pneus e galhos têm destino próprio. Veja onde levar cada um no Desvia."),
+            ("A coleta não passou. O que fazer?",
+             f"Primeiro, registre a reclamação com {titular} ou na ouvidoria da prefeitura. Se o problema continuar, comunique a agência reguladora que fiscaliza o serviço de limpeza urbana no município (no Paraná, em muitos municípios, a AGEPAR). Ela fiscaliza o titular do serviço, não o morador."),
+        ]
+        corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">{esc(cidade)}</a> › Coleta de lixo</nav>
+<h1>Coleta de lixo em {esc(cidade)}: dias e horários por bairro</h1>
+<p class="resposta">Os dias e horários da coleta comum e da coleta seletiva em {esc(cidade)} são definidos pelo responsável pelo serviço: <b>{esc(titular)}</b>. Consulte o seu bairro em {tipo_link}:</p>
+<p><a class="pq-btn" href="{esc(link)}" target="_blank" rel="noopener">Ver dias e horários da coleta em {esc(cidade)} ↗</a></p>
+<p class="regra">Os setores e dias de coleta podem mudar quando há novo contrato do serviço (licitação). Confira sempre a fonte oficial antes de colocar o lixo para fora.</p>
+
+<h2>Dicas para a coleta passar sem problema</h2>
+<ul class="lista-texto">
+<li>Coloque o lixo para fora perto do horário da coleta, em sacos bem fechados, para não atrair animais.</li>
+<li>Separe os recicláveis (papel, plástico, metal e vidro) limpos e secos para a coleta seletiva.</li>
+<li>Vidro quebrado e objetos cortantes: embrulhe em jornal ou caixa e avise com um bilhete.</li>
+</ul>
+
+<h2>O que não vai na coleta comum</h2>
+<p>Estes itens têm destino próprio em {esc(cidade)}:</p>
+<ul class="outras">{nao_vai}</ul>
+
+<h2>A coleta não passou?</h2>
+<ol class="lista-texto">
+<li><b>Reclame com o responsável pelo serviço</b> ({esc(titular)}) ou na ouvidoria da prefeitura. Anote o protocolo.</li>
+<li><b>Se não resolver</b>, comunique a agência reguladora que fiscaliza a limpeza urbana no município. No Paraná, muitos municípios são regulados pela <b>AGEPAR</b>. A agência fiscaliza o titular do serviço (prefeitura, autarquia ou empresa contratada).</li>
+</ol>
+
+<section class="faq"><h2>Perguntas frequentes</h2>{"".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)}</section>"""
+        jsonld = [
+            {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Cidades", "item": f"{BASE_URL}/residuos/"},
+                {"@type": "ListItem", "position": 2, "name": cidade, "item": f"{BASE_URL}/residuos/{cid_slug}/"},
+                {"@type": "ListItem", "position": 3, "name": "Coleta de lixo", "item": url}]},
+            {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]},
+        ]
+        destino = SAIDA / cid_slug / "coleta-de-lixo" / "index.html"
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_text(pagina(f"Coleta de lixo em {cidade}: dias e horários por bairro | Desvia",
+                                  f"Dia e horário da coleta de lixo e da coleta seletiva em {cidade}: onde consultar o seu bairro, o que não vai na coleta comum e o que fazer se a coleta não passar.",
+                                  url, "../../../", corpo, jsonld), encoding="utf-8")
+        urls.append((url, "0.8"))
+
     # índice de cidades
     itens = "".join(f'<li><a href="{s}/"><span>{esc(c)}</span><small>{n} pontos · {k} tipos de resíduo</small></a></li>'
                     for s, c, n, k in resumo_cidades)
