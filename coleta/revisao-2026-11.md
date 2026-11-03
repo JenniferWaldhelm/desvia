@@ -1,51 +1,32 @@
 # Revisão mensal: 11/2026
 
-Total de mudanças para revisar: **86**
-
-## Londrina
-
-- Sem coleta neste mês.
+Total de mudanças para revisar: **70**
 
 ## Mandaguari
 
 - Sem coleta neste mês.
 
-## Ibiporã (35 mudanças)
+## Londrina
+
+- Sem coleta neste mês.
+
+## Ibiporã (19 mudanças)
 
 **CNPJ deixou de estar ativo**
 
-- IBI-026 Recoplas Recuperação de Plásticos Ltda: CNPJ inapta na Receita
-- IBI-024 Recicap Recicladora de Caixas Plásticas Ltda: CNPJ inapta na Receita
-- IBI-025 Ecoflex Ind. e Com. de Embalagens Ltda: CNPJ inapta na Receita
-- IBI-029 AN Ind. e Com. de Subprodutos Bovinos: CNPJ inapta na Receita
-- IBI-030 AGRISA Agroindustrial de Subprodutos Animais: CNPJ inapta na Receita
-- IBI-023 Elso Cardoso Recuperadora ME: CNPJ inapta na Receita
-- IBI-021 Oiti Reciclagem e Serviços Ambientais Ltda: CNPJ inapta na Receita
-- IBI-013 Fabiano Batista Transportes ME: CNPJ inapta na Receita
-- LDA-117 ARD Recuperação de Plásticos Ltda: CNPJ baixada na Receita
+- IBI-026 Recoplas Recuperação de Plásticos Ltda: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- IBI-024 Recicap Recicladora de Caixas Plásticas Ltda: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- IBI-025 Ecoflex Ind. e Com. de Embalagens Ltda: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- IBI-029 AN Ind. e Com. de Subprodutos Bovinos: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- IBI-030 AGRISA Agroindustrial de Subprodutos Animais: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- IBI-023 Elso Cardoso Recuperadora ME: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- IBI-021 Oiti Reciclagem e Serviços Ambientais Ltda: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- IBI-013 Fabiano Batista Transportes ME: CNPJ inapta desde 02/11/2026 (aviso no site; sai se continuar até 01/05/2027)
+- LDA-117 ARD Recuperação de Plásticos Ltda: CNPJ baixado, saiu do site
 
 **Licença nova ou renovada no IAT**
 
-- LDA-129 Pedreira ICA Ltda: LI 261530 válida até 12/01/2028 (na base: 26/07/2027)
-
-**Licença vencida sem renovação**
-
-- IBI-028 JPL Ind. e Com. de Embalagens Ltda: venceu em 20/09/2009 e não há renovação no IAT
-- IBI-026 Recoplas Recuperação de Plásticos Ltda: venceu em 01/09/2009 e não há renovação no IAT
-- IBI-024 Recicap Recicladora de Caixas Plásticas Ltda: venceu em 06/08/2007 e não há renovação no IAT
-- IBI-034 Cheiro Verde Ambiental (matriz): venceu em 14/01/2014 e não há renovação no IAT
-- IBI-019 Cheiro Verde Comércio de Material Reciclável: venceu em 20/05/2025 e não há renovação no IAT
-- IBI-025 Ecoflex Ind. e Com. de Embalagens Ltda: venceu em 26/12/2013 e não há renovação no IAT
-- IBI-029 AN Ind. e Com. de Subprodutos Bovinos: venceu em 07/08/2014 e não há renovação no IAT
-- IBI-030 AGRISA Agroindustrial de Subprodutos Animais: venceu em 21/05/2013 e não há renovação no IAT
-- IBI-023 Elso Cardoso Recuperadora ME: venceu em 01/05/2018 e não há renovação no IAT
-- IBI-021 Oiti Reciclagem e Serviços Ambientais Ltda: venceu em 17/07/2015 e não há renovação no IAT
-- IBI-020 Ibi Ambiental Ltda-ME: venceu em 29/07/2017 e não há renovação no IAT
-- IBI-018 Sergio Lopes Pereira (MEI): venceu em 08/06/2022 e não há renovação no IAT
-- LDA-098 Metálicos – Transporte, Comércio e Locação de Equipamentos Ltda: venceu em 28/07/2026 e não há renovação no IAT
-- IBI-017 Rafael Cadimo Marques de Lima: venceu em 18/06/2025 e não há renovação no IAT
-- IBI-022 Transportadora Ortec Ltda: venceu em 04/09/2006 e não há renovação no IAT
-- IBI-027 Plásticos Novel do Paraná S/A: venceu em 25/07/2013 e não há renovação no IAT
+- LDA-129 Pedreira ICA Ltda: LI 261530 válida até 12/01/2028 (na base: 26/07/2027). Já aparece no site; copie para a planilha.
 
 **Empresas novas (ativas) fora da base**
 

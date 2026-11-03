@@ -321,6 +321,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
 var PONTOS = {dados_js(pts, cid_slug, ctx)};
 var CATS = {cats_js};
 var SINONIMOS = {json.dumps(SINONIMOS, ensure_ascii=False)};
+var DESVIA_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdV7aBhtu6Lx6uHXM5MxB13WXaX9or0uAkJa9rJz395m_Rj4Q/viewform";
 var GRUPOS = {json.dumps(grupos(ctx), ensure_ascii=False)};
 var DESVIA_CIDADES = {json.dumps({cid_slug: cidade}, ensure_ascii=False)};
 </script>

@@ -225,9 +225,31 @@ def obs_publica(p):
     return ""
 
 
+def _ajustes():
+    """Ajustes automáticos da revisão mensal (dados/ajustes.csv): ocultar, aviso de CNPJ e licença renovada."""
+    arq = Path(__file__).resolve().parent.parent / "dados" / "ajustes.csv"
+    out = {}
+    if arq.exists():
+        with open(arq, encoding="utf-8") as f:
+            for a in csv.DictReader(f):
+                out.setdefault(a["ID"], []).append(a)
+    return out
+
+
 def carregar():
     with open(CSV, newline="", encoding="utf-8") as f:
         pontos = [p for p in csv.DictReader(f) if (p.get("ID") or "").strip()]
+    aj = _ajustes()
+    for p in pontos:
+        for a in aj.get(p["ID"], []):
+            if a["Campo"] == "ocultar":
+                p["_ocultar"] = True
+            elif a["Campo"] == "aviso_cnpj":
+                if "cnpj" not in (p.get("Obs") or "").lower():
+                    p["Obs"] = ((p.get("Obs") or "") + " " + a["Valor"].replace("(consulta em", "em").replace(")", "") + ".").strip()
+            elif a["Campo"] in p:
+                p[a["Campo"]] = a["Valor"]
+    pontos = [p for p in pontos if not p.get("_ocultar")]
     for p in pontos:
         for k in p:
             p[k] = (p[k] or "").strip()

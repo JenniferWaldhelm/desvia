@@ -111,6 +111,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 var PONTOS = {hub.dados_js(pontos, "", ctx)};
 var CATS = {cats_js};
 var SINONIMOS = {json.dumps(SINONIMOS, ensure_ascii=False)};
+var DESVIA_FORM = "{CADASTRO}";
 var GRUPOS = {json.dumps(hub.grupos(ctx), ensure_ascii=False)};
 var DESVIA_CIDADES = {json.dumps(cidades, ensure_ascii=False)};
 </script>
