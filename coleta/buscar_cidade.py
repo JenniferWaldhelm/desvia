@@ -75,11 +75,34 @@ def get(url, tentativas=3, timeout=60):
 def buscar_iat(cidade):
     # 1) Pede só os IDs dos registros do município (leve, funciona mesmo em cidades grandes)
     # 2) Baixa os registros em lotes de 200 IDs. Evita o erro 500 de consultas grandes.
-    q = urllib.parse.urlencode({"f": "json", "where": f"nome_municipio='{cidade}'", "returnIdsOnly": "true"})
-    r = json.loads(get(f"{IAT}?{q}"))
-    if "error" in r:
-        raise RuntimeError(r["error"])
-    ids = sorted(r.get("objectIds") or [])
+    ids, tentativas = None, []
+    sem_acento = unicodedata.normalize("NFD", cidade).encode("ascii", "ignore").decode()
+    filtros = [f"nome_municipio='{cidade}'", f"nome_municipio='{cidade.upper()}'",
+               f"nome_municipio LIKE '{sem_acento[:-1]}%'", f"UPPER(nome_municipio) LIKE '{sem_acento.upper()[:-1]}%'"]
+    for w in filtros:
+        try:
+            r = json.loads(get(f"{IAT}?" + urllib.parse.urlencode({"f": "json", "where": w, "returnIdsOnly": "true"}), tentativas=2))
+        except Exception as e:  # noqa: BLE001
+            r = {"error": {"code": str(e)[:60]}}
+        if "error" in r or not r.get("objectIds"):
+            tentativas.append(f"{w}: {r.get('error', {}).get('code', 'vazio')}")
+            continue
+        ids = r["objectIds"]
+        break
+    if ids is None:
+        # último recurso: busca espacial pelo retângulo do município (OpenStreetMap) e filtra pelo nome
+        bb = json.loads(get("https://nominatim.openstreetmap.org/search?" + urllib.parse.urlencode(
+            {"city": cidade, "state": "Paraná", "country": "Brasil", "format": "json", "limit": 1})))
+        if bb:
+            s_, n_, o_, l_ = map(float, bb[0]["boundingbox"])
+            r = json.loads(get(f"{IAT}?" + urllib.parse.urlencode({"f": "json", "geometry": f"{o_},{s_},{l_},{n_}",
+                "geometryType": "esriGeometryEnvelope", "inSR": "4326", "spatialRel": "esriSpatialRelIntersects", "returnIdsOnly": "true"})))
+            ids = r.get("objectIds") if "error" not in r else None
+            tentativas.append(f"espacial: {len(ids or [])} ids" if ids is not None else f"espacial: {r.get('error')}")
+    if not ids:
+        raise RuntimeError("; ".join(tentativas))
+    print("IAT:", "; ".join(tentativas) or "consulta direta ok", file=sys.stderr)
+    ids = sorted(ids)
     todos = []
     for k in range(0, len(ids), 200):
         lote = ",".join(str(x) for x in ids[k:k + 200])
@@ -88,6 +111,8 @@ def buscar_iat(cidade):
         if "error" in r:
             raise RuntimeError(r["error"])
         todos += [f["attributes"] for f in r.get("features", [])]
+    alvo = norm(cidade)
+    todos = [a for a in todos if norm(a.get("nome_municipio") or "") == alvo]
     empresas = {}
     for a in todos:
         chave = f"{a.get('desc_grupo_atividade')} | {a.get('desc_atividade')}"
