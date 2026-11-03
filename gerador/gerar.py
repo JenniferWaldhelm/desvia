@@ -604,7 +604,7 @@ def gerar():
            "pessoa_fisica": pessoa_fisica, "base": BASE_URL}
     publicados = [p for p in pontos if p["_cidades"] & set(CIDADES)]
     corpo, jsonld = site_desvia.home(publicados, CIDADES, nomes, cats_geral, contagens, ctx, HOJE)
-    html_home = pagina("Desvia: onde descartar resíduos, com a licença de cada empresa",
+    html_home = pagina("Onde descartar entulho e resíduos em Londrina e região | Desvia",
                        "Pontos de entrega, cooperativas e empresas de coleta e destinação de resíduos, com a situação da licença ambiental. Várias fontes, uma só busca.",
                        f"{BASE_URL}/", "", corpo, jsonld, mapa=True)
     (RAIZ / "index.html").write_text(html_home.replace("<main>", '<main class="home">', 1), encoding="utf-8")
