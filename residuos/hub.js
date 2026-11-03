@@ -101,6 +101,7 @@
       acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
       acoes.push('<a href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
     }
+    if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';
     return h + '</article>';
   }

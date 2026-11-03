@@ -2,7 +2,7 @@ name: Revisão mensal das licenças
 
 # Todo dia 1º roda a coleta automática em todas as cidades publicadas e gera
 # coleta/revisao-AAAA-MM.md com o que mudou (CNPJ baixado, licença renovada ou vencida, empresa nova).
-# Não altera o site: a Jen revisa e as mudanças aprovadas entram na planilha.
+# Aplica no site, por dados/ajustes.csv, as regras aprovadas (CNPJ baixado sai; inapto 6 meses sai; renovação do IAT entra).
 on:
   workflow_dispatch:
   schedule:
@@ -30,6 +30,6 @@ jobs:
         run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
-          git add coleta/*.csv coleta/*.md
+          git add coleta/*.csv coleta/*.md dados/ajustes.csv dados/situacao_cnpj.csv
           git diff --cached --quiet || git commit -m "Revisão mensal das licenças"
           git pull --rebase -q && git push

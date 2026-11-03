@@ -83,3 +83,12 @@ licenças renovadas, licenças que venceram no último mês e empresas novas. N�
 Com `GOATCOUNTER` preenchido em `gerador/gerar.py`, o site conta visitas (sem cookies) e registra como eventos:
 `busca/<cidade>/<termo>`, `busca-sem-resultado/<cidade>/<termo>` e `assistente/<tipo>`.
 As buscas sem resultado mostram o que falta na base.
+
+## Regras automáticas de ciclo de vida (aprovadas em 02/11/2026)
+
+A revisão mensal grava `dados/ajustes.csv`, que o gerador aplica sem alterar a planilha:
+- CNPJ baixado na Receita: o ponto sai do site.
+- CNPJ inapto ou suspenso: aviso no ponto; se continuar por 6 meses (`dados/situacao_cnpj.csv` guarda desde quando), sai do site.
+- Licença renovada localizada no IAT: o site mostra a licença nova; o relatório pede para copiar na planilha.
+- Pontos sem CNPJ com Data verificação de mais de 12 meses: listados para reconferir.
+- Cada ponto tem o link "Informar problema" (formulário).

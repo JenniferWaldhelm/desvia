@@ -328,3 +328,4 @@ dialog.ajuda { margin: auto; position: fixed; inset: 0; height: fit-content; }
 .pedir-cidade a { font-weight: 700; }
 .lista-texto { padding-left: 20px; display: grid; gap: 6px; max-width: 72ch; margin-bottom: 12px; }
 a.btn-ajuda { text-decoration: none; margin-left: 8px; }
+.acoes .informar { color: var(--cinza) !important; font-weight: 400 !important; margin-left: auto; font-size: .8rem; }
