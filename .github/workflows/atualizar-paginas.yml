@@ -70,6 +70,13 @@ jobs:
           print(f"Planilha OK: {len(novo)} pontos (antes {len(atual)}).")
           PY
           mv dados/pontos.novo.csv dados/pontos.csv
+          # aba "Fila de cidades" (gid=1) do mesmo documento publicado: define quais cidades viram página
+          CID_URL=$(echo "$URL" | sed 's/gid=0/gid=1/')
+          if curl -fsSL "$CID_URL" -o dados/cidades.novo.csv && head -1 dados/cidades.novo.csv | grep -q "Publicar"; then
+            mv dados/cidades.novo.csv dados/cidades.csv
+          else
+            echo "Aba Fila de cidades não publicada ou sem a coluna Publicar: mantenho dados/cidades.csv"; rm -f dados/cidades.novo.csv
+          fi
 
       - name: Gerar páginas
         run: python3 gerador/gerar.py
@@ -79,7 +86,7 @@ jobs:
         run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
-          git add dados/pontos.csv residuos guias empresas index.html sitemap.xml llms.txt
+          git add dados/pontos.csv dados/cidades.csv residuos guias empresas index.html sitemap.xml llms.txt
           if git diff --cached --quiet; then
             echo "Nada mudou."
             echo "mudou=nao" >> "$GITHUB_OUTPUT"

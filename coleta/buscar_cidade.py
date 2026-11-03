@@ -73,25 +73,21 @@ def get(url, tentativas=3, timeout=60):
 
 # ── 1. IAT ──────────────────────────────────────────────────────────────
 def buscar_iat(cidade):
-    # Filtra no servidor só atividades ligadas a resíduos (cidades grandes dão erro 500 sem filtro)
-    filtro = ("(UPPER(desc_atividade) LIKE '%RES_DUO%' OR UPPER(desc_grupo_atividade) LIKE '%RES_DUO%' "
-              "OR UPPER(desc_atividade) LIKE '%RECICLAGEM%' OR UPPER(desc_atividade) LIKE '%REFINO%')")
-    todos, off, pagina = [], 0, 1000
-    while True:
-        q = urllib.parse.urlencode({"f": "json", "where": f"nome_municipio='{cidade}' AND {filtro}", "outFields": "*",
-                                    "returnGeometry": "false", "resultRecordCount": pagina, "resultOffset": off,
-                                    "orderByFields": "objectid"})
+    # 1) Pede só os IDs dos registros do município (leve, funciona mesmo em cidades grandes)
+    # 2) Baixa os registros em lotes de 200 IDs. Evita o erro 500 de consultas grandes.
+    q = urllib.parse.urlencode({"f": "json", "where": f"nome_municipio='{cidade}'", "returnIdsOnly": "true"})
+    r = json.loads(get(f"{IAT}?{q}"))
+    if "error" in r:
+        raise RuntimeError(r["error"])
+    ids = sorted(r.get("objectIds") or [])
+    todos = []
+    for k in range(0, len(ids), 200):
+        lote = ",".join(str(x) for x in ids[k:k + 200])
+        q = urllib.parse.urlencode({"f": "json", "objectIds": lote, "outFields": "*", "returnGeometry": "false"})
         r = json.loads(get(f"{IAT}?{q}"))
         if "error" in r:
-            if pagina > 250:
-                pagina //= 2
-                continue
             raise RuntimeError(r["error"])
-        fs = [f["attributes"] for f in r.get("features", [])]
-        todos += fs
-        if len(fs) < pagina:
-            break
-        off += pagina
+        todos += [f["attributes"] for f in r.get("features", [])]
     empresas = {}
     for a in todos:
         chave = f"{a.get('desc_grupo_atividade')} | {a.get('desc_atividade')}"
@@ -267,7 +263,7 @@ def principal(cidade):
         w.writerows(linhas)
     novas = [l for l in linhas if not l["Já na base"]]
     resumo = [f"# {cidade}: coleta automática em {HOJE}", "",
-              f"- Licenças do IAT ligadas a resíduos no município: {n_iat}",
+              f"- Licenças do IAT no município: {n_iat}",
               f"- Empresas de resíduos no IAT: {len(iat)}",
               f"- Empresas de resíduos no CTF/IBAMA: {len(ctf)}",
               f"- Total (sem repetição): {len(linhas)}",
