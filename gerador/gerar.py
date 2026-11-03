@@ -238,7 +238,21 @@ def carregar():
             p["_lat"], p["_lng"] = float(p["Lat"].replace(",", ".")), float(p["Lng"].replace(",", "."))
         except ValueError:
             p["_lat"] = p["_lng"] = None
+            c = COORD_CACHE.get(p["ID"])  # coordenada achada pela ação semanal (dados/coordenadas.csv)
+            if c and c.get("Endereço usado") == p["Endereço"]:
+                p["_lat"], p["_lng"] = float(c["Lat"]), float(c["Lng"])
     return pontos
+
+
+def _cache_coord():
+    arq = Path(__file__).resolve().parent.parent / "dados" / "coordenadas.csv"
+    if not arq.exists():
+        return {}
+    with open(arq, encoding="utf-8") as f:
+        return {r["ID"]: r for r in csv.DictReader(f) if r.get("Lat")}
+
+
+COORD_CACHE = _cache_coord()
 
 
 CSS_LINK = '<link rel="stylesheet" href="{raiz}residuos/estilo.css">'

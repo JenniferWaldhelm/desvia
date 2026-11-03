@@ -78,6 +78,9 @@ jobs:
             echo "Aba Fila de cidades não publicada ou sem a coluna Publicar: mantenho dados/cidades.csv"; rm -f dados/cidades.novo.csv
           fi
 
+      - name: Checar a base (coordenadas e duplicados)
+        run: python3 coleta/qualidade.py | tee -a "$GITHUB_STEP_SUMMARY" || echo "checagem falhou, sigo"
+
       - name: Gerar páginas
         run: python3 gerador/gerar.py
 
@@ -86,7 +89,7 @@ jobs:
         run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
-          git add dados/pontos.csv dados/cidades.csv residuos guias empresas index.html sitemap.xml llms.txt
+          git add dados/pontos.csv dados/cidades.csv dados/coordenadas.csv coleta/qualidade.md residuos guias empresas index.html sitemap.xml llms.txt
           if git diff --cached --quiet; then
             echo "Nada mudou."
             echo "mudou=nao" >> "$GITHUB_OUTPUT"
