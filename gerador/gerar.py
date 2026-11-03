@@ -81,6 +81,15 @@ CATEGORIAS = [
     ("residuos-classe-ii", "resíduos industriais não perigosos (Classe II)", "Industriais (Classe II)", ["nao perigos", "embalagens industriais", "transbordo"]),
 ]
 
+# Termo mais buscado por tipo de resíduo (Google Keyword Planner, Londrina, out/2025 a set/2026): vai no <title>
+TERMO_BUSCA = {
+    "eletronicos": "Lixo eletrônico", "entulho": "Descarte de entulho e caçamba", "pilhas-e-baterias": "Descarte de pilhas e baterias",
+    "oleo-de-cozinha": "Descarte de óleo de cozinha", "medicamentos": "Descarte de remédios vencidos",
+    "moveis-e-volumosos": "Descarte de móveis, sofá e colchão", "lampadas": "Descarte de lâmpadas", "pneus": "Descarte de pneus",
+    "reciclaveis": "Coleta seletiva e recicláveis", "texteis": "Doação e descarte de roupas", "poda-e-galhos": "Descarte de galhos e poda",
+    "sucata-metalica": "Venda e descarte de sucata", "oleo-lubrificante": "Descarte de óleo lubrificante", "limpa-fossa": "Limpa-fossa e desentupidora",
+}
+
 # Orientação curta por categoria (aparece no topo e no FAQ).
 DICAS = {
     "pneus": "Pneus inservíveis têm logística reversa obrigatória: fabricantes e importadores precisam recolher. Não descarte em terreno baldio nem na coleta comum, porque acumulam água e viram criadouro do Aedes aegypti.",
@@ -398,7 +407,8 @@ def gerar():
                                                      norm(p["Município sede"]).replace(" ", "-") != cid_slug,
                                                      norm(p["Nome"])))
             url = f"{BASE_URL}/residuos/{cid_slug}/{cat}/"
-            titulo = f"Onde descartar {frase} em {cidade}-{UF} | Desvia"
+            titulo = (f"{TERMO_BUSCA[cat]} em {cidade}: onde levar | Desvia" if cat in TERMO_BUSCA
+                      else f"Onde descartar {frase} em {cidade}-{UF} | Desvia")
             n_val = sum(1 for p in pts if p["_status"] in ("valida", "vencendo"))
             descricao = (f"{len(pts)} {'opção' if len(pts) == 1 else 'opções'} para descartar {frase} em {cidade}: "
                          f"pontos de entrega e empresas, com a situação da licença ambiental de cada uma.")
@@ -442,8 +452,8 @@ def gerar():
             {"@type": "ListItem", "position": 1, "name": "Cidades", "item": f"{BASE_URL}/residuos/"},
             {"@type": "ListItem", "position": 2, "name": cidade, "item": url}]}]
         (SAIDA / cid_slug / "index.html").write_text(
-            pagina(f"Onde descartar resíduos em {cidade}-{UF} | Desvia",
-                   f"Pontos de entrega e empresas de coleta e destinação de resíduos em {cidade}, por tipo de resíduo, com a situação da licença ambiental.",
+            pagina(f"Coleta e descarte de lixo em {cidade}: onde levar cada coisa | Desvia",
+                   f"Onde descartar, doar ou reciclar em {cidade}: lixo eletrônico, entulho, pilhas, remédios, óleo, móveis e recicláveis, com mapa e a licença ambiental de cada empresa.",
                    url, "../../", corpo, jsonld, mapa=True), encoding="utf-8")
         urls.append((url, "0.8"))
 
@@ -452,7 +462,8 @@ def gerar():
                     for s, c, n, k in resumo_cidades)
     corpo = f"""<h1>Onde descartar resíduos</h1>
 <p class="resposta">Pontos de entrega, cooperativas e empresas de coleta e destinação de resíduos, com a situação da licença ambiental, reunidos de várias fontes em uma só busca.</p>
-<ul class="grade">{itens}</ul>"""
+<ul class="grade">{itens}</ul>
+{site_desvia.pedir_cidade()}"""
     (SAIDA / "index.html").write_text(
         pagina("Onde descartar resíduos: cidades | Desvia",
                "Encontre onde descartar cada tipo de resíduo na sua cidade, com a situação da licença ambiental de quem recebe.",
