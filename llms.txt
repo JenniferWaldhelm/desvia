@@ -8,6 +8,18 @@ Dados atualizados em 02/11/2026. A situação da licença reflete as bases públ
 - [Busca por resíduo e cidade](https://jenniferwaldhelm.github.io/desvia/): mapa e lista com filtros. Aceita ?q=<resíduo>&cidade=<cidade>&r=<tipo>.
 
 ## Cidades
+- [Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/): 17 pontos e empresas, 11 tipos de resíduo, obrigações das empresas
+  - [Onde descartar pneus em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/pneus/)
+  - [Onde descartar eletrônicos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/eletronicos/)
+  - [Onde descartar lâmpadas em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/lampadas/)
+  - [Onde descartar pilhas e baterias em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/pilhas-e-baterias/)
+  - [Onde descartar óleo de cozinha em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/oleo-de-cozinha/)
+  - [Onde descartar entulho e resíduos de construção em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/entulho/)
+  - [Onde descartar móveis, colchões e volumosos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/moveis-e-volumosos/)
+  - [Onde descartar medicamentos vencidos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/medicamentos/)
+  - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/residuos-de-saude/)
+  - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/reciclaveis/)
+  - [Onde descartar embalagens de agrotóxico em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/embalagens-de-agrotoxico/)
 - [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 322 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/pneus/)
   - [Onde descartar eletrônicos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/eletronicos/)
@@ -29,18 +41,6 @@ Dados atualizados em 02/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-classe-ii/)
-- [Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/): 17 pontos e empresas, 11 tipos de resíduo, obrigações das empresas
-  - [Onde descartar pneus em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/pneus/)
-  - [Onde descartar eletrônicos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/eletronicos/)
-  - [Onde descartar lâmpadas em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/lampadas/)
-  - [Onde descartar pilhas e baterias em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/pilhas-e-baterias/)
-  - [Onde descartar óleo de cozinha em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/oleo-de-cozinha/)
-  - [Onde descartar entulho e resíduos de construção em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/entulho/)
-  - [Onde descartar móveis, colchões e volumosos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/moveis-e-volumosos/)
-  - [Onde descartar medicamentos vencidos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/medicamentos/)
-  - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/residuos-de-saude/)
-  - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/reciclaveis/)
-  - [Onde descartar embalagens de agrotóxico em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/embalagens-de-agrotoxico/)
 - [Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/): 48 pontos e empresas, 14 tipos de resíduo, obrigações das empresas
   - [Onde descartar lâmpadas em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/lampadas/)
   - [Onde descartar óleo de cozinha em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/oleo-de-cozinha/)

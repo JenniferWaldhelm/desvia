@@ -30,12 +30,21 @@ HOJE = date.today()
 
 # Cidades publicadas (status "Verificado" ou "Publicado" na Fila de cidades).
 # Uma cidade só entra aqui quando a Jen aprova a lista dela.
-CIDADES = {
-    "londrina": "Londrina",
-    "mandaguari": "Mandaguari",
-    "ibipora": "Ibiporã",
-    "maringa": "Maringá",
-}
+def _cidades():
+    """Cidades publicadas: aba "Fila de cidades" da planilha (dados/cidades.csv), coluna Publicar = Sim."""
+    import csv as _csv
+    import unicodedata as _ud
+    arq = Path(__file__).resolve().parent.parent / "dados" / "cidades.csv"
+    out = {}
+    for c in _csv.DictReader(open(arq, encoding="utf-8")):
+        nome = (c.get("Município") or "").strip()
+        if nome and (c.get("Publicar") or "").strip().lower() in ("sim", "s", "x", "true"):
+            slug = _ud.normalize("NFD", nome).encode("ascii", "ignore").decode().lower().replace(" ", "-")
+            out[slug] = nome
+    return out
+
+
+CIDADES = _cidades()
 UF = "PR"
 
 # Token do teste de origem do WebMCP no Chrome (deixe vazio até cadastrar o site).

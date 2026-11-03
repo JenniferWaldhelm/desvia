@@ -129,8 +129,28 @@ def cartao_obrigacao(item):
             f'<p>{esc(texto)}</p>{f"<ul>{ul}</ul>" if ul else ""}{a}</article>')
 
 
+def licenciamento_municipal(cidade):
+    """(sim/não, link) da aba Fila de cidades (dados/cidades.csv)."""
+    import csv
+    from pathlib import Path
+    arq = Path(__file__).resolve().parent.parent / "dados" / "cidades.csv"
+    for c in csv.DictReader(open(arq, encoding="utf-8")):
+        if (c.get("Município") or "").strip() == cidade:
+            return (c.get("Licenciamento municipal") or "").strip().lower() == "sim", (c.get("Link licenciamento") or "").strip()
+    return False, ""
+
+
 def secao_empresas(cid_slug, cidade):
-    loc = LOCAL.get(cid_slug, {})
+    loc = dict(LOCAL.get(cid_slug, {}))
+    municipal, link = licenciamento_municipal(cidade)
+    if municipal and "licenca" not in loc:
+        loc["licenciador"] = f"Em {cidade} o licenciamento é municipalizado: o município licencia as atividades de impacto local e o IAT (Instituto Água e Terra) as demais."
+        loc["licenca"] = ("🏛️", "Licença — Município ou IAT", f"Licença ambiental (Prefeitura de {cidade} ou IAT)",
+                          f"{cidade} tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT.",
+                          ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
+                           "Confira na Prefeitura se a atividade é de impacto local; se não for, o processo é no IAT",
+                           "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
+                          ("Licenciamento ambiental municipal", link) if link else None)
     itens = COMUM[:3] + [loc.get("pgrs", PGRS_GERAL)] + COMUM[3:] + loc.get("extra", [])
     if loc.get("licenca"):
         itens = [loc["licenca"] if i[2].startswith("Licença ambiental") else i for i in itens]
