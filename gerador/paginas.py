@@ -8,7 +8,7 @@ import hub
 
 WHATSAPP = hub.WHATSAPP
 PREFEITURA = WHATSAPP + "?text=" + "Ol%C3%A1!%20Sou%20de%20uma%20prefeitura%20e%20quero%20saber%20mais%20sobre%20o%20Desvia."
-CADASTRO = WHATSAPP + "?text=" + "Ol%C3%A1!%20Quero%20cadastrar%20minha%20empresa%20no%20Desvia."
+CADASTRO = "https://docs.google.com/forms/d/e/1FAIpQLSdV7aBhtu6Lx6uHXM5MxB13WXaX9or0uAkJa9rJz395m_Rj4Q/viewform"  # formulário Google (cadastro de empresa / incluir cidade / correção)
 
 
 def esc(t):
@@ -267,7 +267,7 @@ def empresas():
 DIAG_TXT = "Ol%C3%A1!%20Vim%20pelo%20Desvia%20e%20quero%20um%20diagn%C3%B3stico%20gratuito%20dos%20res%C3%ADduos%20da%20minha%20empresa."
 
 
-FORM = ""  # link do formulário Google, quando existir
+FORM = CADASTRO
 
 
 def pedir_cidade():
