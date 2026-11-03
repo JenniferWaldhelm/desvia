@@ -8,7 +8,7 @@
 - Novas: 70
 - CNPJ não ativo na Receita: 19
 
-- Aviso: IAT não respondeu: {'code': 500, 'message': 'Error performing query operation', 'details': []}
+- Aviso: IAT não respondeu: nome_municipio='Maringá': 500; nome_municipio='MARINGÁ': 500; nome_municipio LIKE 'Maring%': 500; UPPER(nome_municipio) LIKE 'MARING%': 500; espacial: {'code': 500, 'message': 'Error performing query operation', 'details': []}
 
 ## Diagnóstico CTF
 
