@@ -74,6 +74,17 @@ Dados atualizados em 03/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar escovas de dente e esponjas em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/escovas-e-esponjas/)
   - [Onde descartar resíduos perigosos (Classe I) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-classe-ii/)
+- [Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/): 27 pontos e empresas, 10 tipos de resíduo, obrigações das empresas
+  - [Onde descartar pilhas e baterias em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/pilhas-e-baterias/)
+  - [Onde descartar óleo lubrificante em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/oleo-lubrificante/)
+  - [Onde descartar entulho e resíduos de construção em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/entulho/)
+  - [Onde descartar medicamentos vencidos em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/medicamentos/)
+  - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/reciclaveis/)
+  - [Onde descartar sucata metálica em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/sucata-metalica/)
+  - [Onde descartar roupas e resíduos têxteis em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/texteis/)
+  - [Onde descartar esgoto de fossa e efluentes em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/limpa-fossa/)
+  - [Onde descartar resíduos perigosos (Classe I) em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-perigosos/)
+  - [Onde descartar resíduos industriais não perigosos (Classe II) em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-classe-ii/)
 
 ## Guias de descarte
 - [Como descartar pneus](https://jenniferwaldhelm.github.io/desvia/guias/pneus/): Pneu velho não pode ir para a coleta comum nem ficar no quintal. Parado, acumula água e vira criadouro do mosquito da dengue. Queimado, solta fumaça tóxica.
