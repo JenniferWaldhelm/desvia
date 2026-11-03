@@ -113,10 +113,14 @@ def buscar_iat(cidade):
         IAT_DIAG.append(f"IAT: ano a ano, {len(todos)} registros" + (f"; anos com erro: {', '.join(falhas)}" if falhas else ""))
         if not todos:
             raise RuntimeError("; ".join(IAT_DIAG))
+    return len(todos), agrupar(todos)
+
+
+def agrupar(todos, so_residuos=True):
     empresas = {}
     for a in todos:
         chave = f"{a.get('desc_grupo_atividade')} | {a.get('desc_atividade')}"
-        if not IAT_INCLUI.search(chave) or IAT_EXCLUI.search(chave) or NOME_EXCLUI.search(a.get("nome_razao_social") or ""):
+        if so_residuos and not IAT_INCLUI.search(chave) or IAT_EXCLUI.search(chave) or NOME_EXCLUI.search(a.get("nome_razao_social") or ""):
             continue
         cnpj = so_digitos(a.get("cpf_cnpj"))
         e = empresas.setdefault(cnpj, {"nome": a["nome_razao_social"], "atividades": set(), "lic": None,
@@ -124,7 +128,35 @@ def buscar_iat(cidade):
         e["atividades"].add(a.get("desc_atividade") or "")
         if not e["lic"] or (a.get("dt_validade") or 0) > (e["lic"].get("dt_validade") or 0):
             e["lic"] = a
-    return len(todos), empresas
+    return empresas
+
+
+def buscar_iat_por_cnpj(cnpjs):
+    """Plano B (cidades em que a consulta pelo município dá erro): busca as licenças pelos CNPJs já conhecidos.
+    Lotes de 40; se um lote dá erro, divide ao meio até isolar o registro problemático."""
+    todos, ruins = [], []
+
+    def lote(lst):
+        if not lst:
+            return
+        w = "cpf_cnpj IN (" + ",".join(str(int(c)) for c in lst) + ")"
+        try:
+            r = json.loads(get(f"{IAT}?" + urllib.parse.urlencode({"f": "json", "where": w, "outFields": "*", "returnGeometry": "false"}), tentativas=2))
+            if "error" in r:
+                raise RuntimeError(r["error"])
+            todos.extend(f["attributes"] for f in r.get("features", []))
+        except Exception:  # noqa: BLE001
+            if len(lst) == 1:
+                ruins.append(lst[0])
+            else:
+                lote(lst[:len(lst) // 2]); lote(lst[len(lst) // 2:])
+
+    lst = sorted({c for c in cnpjs if c and c.isdigit()})
+    for k in range(0, len(lst), 40):
+        lote(lst[k:k + 40])
+    IAT_DIAG.append(f"IAT por CNPJ: {len(lst)} CNPJs consultados, {len(todos)} licenças achadas" + (f", {len(ruins)} com erro" if ruins else ""))
+    # aqui não filtra pela atividade: a empresa já foi selecionada como prestadora de serviço de resíduo
+    return len(todos), agrupar(todos, so_residuos=False)
 
 
 # ── 2. CTF/IBAMA ────────────────────────────────────────────────────────
@@ -245,6 +277,16 @@ def principal(cidade):
     except Exception as e:  # noqa: BLE001
         ctf = {}
         avisos.append(f"CTF/IBAMA não respondeu: {e}")
+    if not iat:
+        # IAT pelo município falhou: tenta pelas empresas conhecidas (CTF + base do site desta cidade)
+        conhecidos = set(ctf)
+        with open(RAIZ / "dados" / "pontos.csv", encoding="utf-8") as f:
+            conhecidos |= {so_digitos(p["CNPJ"]) for p in csv.DictReader(f) if p["CNPJ"] and norm(p["Município sede"]) == norm(cidade)}
+        try:
+            n_iat, iat = buscar_iat_por_cnpj(conhecidos)
+            avisos[:] = [a for a in avisos if not a.startswith("IAT não respondeu")]
+        except Exception as e:  # noqa: BLE001
+            avisos.append(f"IAT por CNPJ falhou: {e}")
 
     linhas = []
     for cnpj in sorted(set(iat) | set(ctf)):
