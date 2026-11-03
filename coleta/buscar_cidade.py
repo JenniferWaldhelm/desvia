@@ -97,22 +97,8 @@ def buscar_iat(cidade):
         todos = paginar(base)
         IAT_DIAG.append(f"IAT: consulta direta, {len(todos)} registros")
     except Exception as e:  # noqa: BLE001
-        IAT_DIAG.append(f"IAT: consulta direta falhou ({str(e)[:80]}); tentando ano a ano")
-        todos, falhas = [], []
-        ano_fim = time.localtime().tm_year + 1
-        for ano in range(1985, ano_fim):
-            w = f"{base} AND dt_emissao >= timestamp '{ano}-01-01 00:00:00' AND dt_emissao < timestamp '{ano + 1}-01-01 00:00:00'"
-            try:
-                todos += paginar(w)
-            except Exception:  # noqa: BLE001
-                falhas.append(str(ano))
-        try:
-            todos += paginar(f"{base} AND dt_emissao IS NULL")
-        except Exception:  # noqa: BLE001
-            falhas.append("sem data")
-        IAT_DIAG.append(f"IAT: ano a ano, {len(todos)} registros" + (f"; anos com erro: {', '.join(falhas)}" if falhas else ""))
-        if not todos:
-            raise RuntimeError("; ".join(IAT_DIAG))
+        IAT_DIAG.append(f"IAT: consulta pelo município falhou ({str(e)[:80]}); usando os CNPJs conhecidos")
+        raise RuntimeError("; ".join(IAT_DIAG))
     return len(todos), agrupar(todos)
 
 
