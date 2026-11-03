@@ -8,7 +8,9 @@
 - Novas: 70
 - CNPJ não ativo na Receita: 19
 
-- Aviso: IAT não respondeu: nome_municipio='Maringá': 500; nome_municipio='MARINGÁ': 500; nome_municipio LIKE 'Maring%': 500; UPPER(nome_municipio) LIKE 'MARING%': 500; espacial: {'code': 500, 'message': 'Error performing query operation', 'details': []}
+- IAT: consulta direta falhou ({'code': 500, 'message': 'Error performing query operation', 'details': []}); tentando ano a ano
+- IAT: ano a ano, 0 registros; anos com erro: 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, sem data
+- Aviso: IAT não respondeu: IAT: consulta direta falhou ({'code': 500, 'message': 'Error performing query operation', 'details': []}); tentando ano a ano; IAT: ano a ano, 0 registros; anos com erro: 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, sem data
 
 ## Diagnóstico CTF
 
