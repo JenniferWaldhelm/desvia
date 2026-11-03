@@ -9,7 +9,7 @@ def esc(t):
     return _esc(t or "", quote=True)
 
 
-WHATSAPP = "https://wa.me/5544999054535"
+WHATSAPP = "https://wa.me/5543920024725"
 
 # Conteúdo "Para empresas". Partes comuns valem para qualquer cidade do PR;
 # LOCAL acrescenta o que é específico de cada município.
