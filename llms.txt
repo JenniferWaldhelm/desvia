@@ -74,7 +74,7 @@ Dados atualizados em 03/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar escovas de dente e esponjas em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/escovas-e-esponjas/)
   - [Onde descartar resíduos perigosos (Classe I) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-classe-ii/)
-- [Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/): 27 pontos e empresas, 10 tipos de resíduo, obrigações das empresas
+- [Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/): 31 pontos e empresas, 10 tipos de resíduo, obrigações das empresas
   - [Onde descartar pilhas e baterias em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/pilhas-e-baterias/)
   - [Onde descartar óleo lubrificante em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/oleo-lubrificante/)
   - [Onde descartar entulho e resíduos de construção em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/entulho/)
