@@ -43,7 +43,7 @@ cache = {r["ID"]: r for r in csv.DictReader(open(arq_cache, encoding="utf-8"))} 
 # 1. coordenadas
 achados, nao_achados, feitos = [], [], 0
 for p in pontos:
-    if num(p["Lat"]) is not None or not p["Endereço"].strip():
+    if num(p["Lat"]) is not None or not p["Endereço"].strip() or p["Tipo de ponto"] == "Programa logística reversa" or "www." in p["Endereço"] or "site" in p["Endereço"].lower():
         continue
     c = cache.get(p["ID"])
     if c and c.get("Endereço usado") == p["Endereço"]:
