@@ -51,6 +51,8 @@ UF = "PR"
 ORIGIN_TRIAL = ""
 # Contador de visitas GoatCounter (gratuito, sem cookies). Ex.: "desvia" para desvia.goatcounter.com
 GOATCOUNTER = "projetodesvia"
+# Google Analytics 4 (ID de medição). Vazio desliga.
+GA4 = "G-2SCQNPX98Z"
 
 # Páginas fixas do site que continuam no sitemap.
 PAGINAS_FIXAS = [("", "1.0"), ("mandaguari.html", "0.8"), ("mapa-pev.html", "0.6")]
@@ -313,6 +315,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {CSS_LINK.format(raiz=raiz)}
 {leaflet}
 {ld}
+{f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag("js",new Date());gtag("config","{GA4}");</script>' if GA4 else ""}
 </head>
 <body>
 <header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}empresas/">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
