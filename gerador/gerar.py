@@ -293,14 +293,15 @@ FONTES = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 
 
 def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
-    leaflet = ('<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">'
-               '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>') if mapa else ""
+    leaflet = ('<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">'
+               '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>') if mapa else ""
     ld = "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in jsonld)
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>{esc(titulo)}</title>
 <meta name="description" content="{esc(descricao)}">
 <link rel="canonical" href="{url}">
