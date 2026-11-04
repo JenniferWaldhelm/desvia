@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="../../residuos/estilo.css">
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Como descartar pneus", "author": {"@type": "Organization", "name": "Projeto Desvia"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Borracharia pode cobrar para receber pneu velho?", "acceptedAnswer": {"@type": "Answer", "text": "A revenda é obrigada a receber o pneu usado na troca. Para pneus levados sem compra, cada ponto define suas regras."}}, {"@type": "Question", "name": "O que acontece com o pneu reciclado?", "acceptedAnswer": {"@type": "Answer", "text": "Vira borracha granulada, manta, piso, solado ou combustível para fornos de cimento (coprocessamento)."}}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2SCQNPX98Z"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-2SCQNPX98Z");</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function desviaGA(){if(window._dga)return;window._dga=1;var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id=G-2SCQNPX98Z";document.head.appendChild(s);gtag("js",new Date());gtag("config","G-2SCQNPX98Z")}try{if(localStorage.getItem("desvia-cookies")==="sim")desviaGA()}catch(e){}</script>
 </head>
 <body>
 <header><nav><a class="logo" href="../../">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="../../#resultados">Buscar</a><a href="../../guias/">Guias</a><a href="../../residuos/">Cidades</a><a href="../../empresas/">Para empresas</a><a class="menu-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdV7aBhtu6Lx6uHXM5MxB13WXaX9or0uAkJa9rJz395m_Rj4Q/viewform" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
@@ -39,10 +39,12 @@
 </main>
 <footer><p>Desvia reúne, em uma só busca, dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
 <nav class="rodape-links" aria-label="Rodapé">
-  <div><b>Desvia</b><a href="../../">Buscar onde descartar</a><a href="../../guias/">Guias por resíduo</a><a href="../../empresas/">Para empresas</a></div>
+  <div><b>Desvia</b><a href="../../">Buscar onde descartar</a><a href="../../guias/">Guias por resíduo</a><a href="../../empresas/">Para empresas</a><a href="../../privacidade/">Cookies e privacidade</a></div>
   <div><b>Cidades</b><a href="../../residuos/mandaguari/">Mandaguari</a><a href="../../residuos/londrina/">Londrina</a><a href="../../residuos/ibipora/">Ibiporã</a><a href="../../residuos/maringa/">Maringá</a><a href="../../residuos/rolandia/">Rolândia</a><a href="../../residuos/cambe/">Cambé</a></div>
   <div><b>Contato</b><a href="https://wa.me/5543920024725" target="_blank" rel="noopener">WhatsApp</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSdV7aBhtu6Lx6uHXM5MxB13WXaX9or0uAkJa9rJz395m_Rj4Q/viewform" target="_blank" rel="noopener">Cadastre sua empresa</a></div>
 </nav></footer>
+<div id="cookies" class="cookies" hidden role="dialog" aria-label="Aviso de cookies"><p>Usamos cookies só para medir visitas e melhorar o site (Google Analytics). Não usamos para anúncios. <a href="../../privacidade/">Política de cookies</a></p><div class="cookies-bt"><button type="button" data-c="nao">Recusar opcionais</button><button type="button" data-c="sim" class="cookies-ok">Aceitar</button></div></div>
+<script>(function(){var b=document.getElementById("cookies");if(!b)return;var v=null;try{v=localStorage.getItem("desvia-cookies")}catch(e){}if(!v)b.hidden=false;b.addEventListener("click",function(e){var c=e.target.getAttribute("data-c");if(!c)return;try{localStorage.setItem("desvia-cookies",c)}catch(x){}b.hidden=true;if(c==="sim"&&window.desviaGA)desviaGA()});document.querySelectorAll("[data-cookies-abrir]").forEach(function(a){a.addEventListener("click",function(ev){ev.preventDefault();b.hidden=false})})})();</script>
 <script data-goatcounter="https://projetodesvia.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
