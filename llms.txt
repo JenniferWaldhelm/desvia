@@ -2,7 +2,7 @@
 
 > Onde descartar cada resíduo no Paraná: pontos de entrega, cooperativas e empresas de coleta, transporte e destinação, com a situação da licença ambiental de cada uma. Reúne dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais.
 
-Dados atualizados em 03/11/2026. A situação da licença reflete as bases públicas na data da consulta; "licença não localizada" significa que nada foi encontrado nas bases consultadas, não que a empresa seja irregular.
+Dados atualizados em 04/11/2026. A situação da licença reflete as bases públicas na data da consulta; "licença não localizada" significa que nada foi encontrado nas bases consultadas, não que a empresa seja irregular.
 
 ## Busca
 - [Busca por resíduo e cidade](https://jenniferwaldhelm.github.io/desvia/): mapa e lista com filtros. Aceita ?q=<resíduo>&cidade=<cidade>&r=<tipo>.
@@ -20,7 +20,7 @@ Dados atualizados em 03/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/residuos-de-saude/)
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/reciclaveis/)
   - [Onde descartar embalagens de agrotóxico em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/embalagens-de-agrotoxico/)
-- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 319 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
+- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 318 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/pneus/)
   - [Onde descartar eletrônicos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/eletronicos/)
   - [Onde descartar lâmpadas em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/lampadas/)
@@ -41,13 +41,11 @@ Dados atualizados em 03/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-classe-ii/)
-- [Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/): 47 pontos e empresas, 14 tipos de resíduo, obrigações das empresas
+- [Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/): 46 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
   - [Onde descartar lâmpadas em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/lampadas/)
   - [Onde descartar óleo de cozinha em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/oleo-de-cozinha/)
   - [Onde descartar óleo lubrificante em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/oleo-lubrificante/)
   - [Onde descartar entulho e resíduos de construção em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/entulho/)
-  - [Onde descartar móveis, colchões e volumosos em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/moveis-e-volumosos/)
-  - [Onde descartar poda e galhos em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/poda-e-galhos/)
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/reciclaveis/)
   - [Onde descartar sucata metálica em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/sucata-metalica/)
   - [Onde descartar resíduos orgânicos em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/organicos/)
