@@ -108,8 +108,18 @@ LOCAL = {
              [], None),
         ],
     },
+    "cambe": {
+        "extra": [
+            ("🏭", "Empresas", "PGRS exigido pela prefeitura",
+             "Cambé não emite licença ambiental: o licenciamento é feito pelo IAT. Mas a prefeitura exige o Plano de Gerenciamento de Resíduos Sólidos (PGRS) das empresas. Contrate só coletores e destinadores licenciados e guarde os comprovantes (MTR e CDF).",
+             ["Base legal: Lei 12.305/2010 (PNRS), arts. 20 a 24"], None),
+        ],
+    },
     "ibipora": {
         "extra": [
+            ("💊", "Medicamentos", "Remédios vencidos",
+             "Ibiporã não tem ponto público de entrega de medicamentos. Nas unidades de saúde públicas, eles seguem com os resíduos de saúde, recolhidos pela empresa contratada. Para descartar em casa, procure uma farmácia participante da logística reversa de medicamentos (há várias em Londrina) e nunca jogue no lixo comum ou no vaso sanitário.",
+             ["Base legal: Decreto federal 10.388/2020 (logística reversa de medicamentos)"], None),
             ("🧱", "Entulho e construção", "Entulho de pequenos geradores",
              "A Central de RCC da Prefeitura (estrada antiga para Jataizinho, lote 66) ainda não está em funcionamento. Quando abrir, vai receber entulho, volumosos, poda e limpeza de quintal de pequenos geradores, até 3 m³. Por enquanto, contrate caçamba ou transportadora licenciada e confirme com a prefeitura.",
              ["Base legal: Resolução CONAMA 307/2002 e PMGIRS de Ibiporã (2023)"], None),
