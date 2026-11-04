@@ -1,0 +1,55 @@
+# Desvia: decisões da Jen
+
+Registro das decisões que valem para o projeto inteiro e das decisões sobre pontos específicos. Antes de mudar algo, conferir aqui.
+
+## Regras gerais
+
+| Data | Decisão |
+|---|---|
+| 29/10/2026 | Todas as empresas que prestam serviço de resíduos entram, com ou sem licença. A licença é informação, não filtro. Nunca chamar de "irregular": usar "licença não localizada nas bases consultadas". |
+| 29/10/2026 | MEI/pessoa física: sem CPF e sem endereço residencial. |
+| 30/10/2026 | Empresa de outra cidade não entra como "atende" a cidade processada: só entram as com sede nela. |
+| 02/11/2026 | Fontes citadas no site: só IAT, CTF/IBAMA e prefeitura municipal (dados públicos). Nada copiado do Google Maps/Places. |
+| 02/11/2026 | Ciclo de vida: CNPJ baixado sai do site; inapto/suspenso fica com aviso e sai após 6 meses; licença renovada no IAT entra sozinha; pontos sem CNPJ verificados há mais de 12 meses vão para reconferir. |
+| 02/11/2026 | Não procurar empresas com licença irregular para oferecer serviço (por enquanto). |
+| 02/11/2026 | Serviços de consultoria pelo WhatsApp da Mawé: (43) 92002-4725. |
+| 02/11/2026 | Dias e setores de coleta: só link para a fonte oficial (prefeitura, autarquia), porque mudam com cada licitação. |
+| 04/11/2026 | Empresas que só têm Autorização Ambiental (AA) não entram. RLO vencida pode entrar, com o aviso. |
+| 04/11/2026 | Empresa nova só entra depois de a Jen conferir se funciona e se recebe resíduo. Na dúvida, fica de fora. |
+| 04/11/2026 | Programas nacionais de logística reversa (Reciclanip etc.): link para o localizador oficial; pontos específicos só quando a Jen passar os dados. |
+| 04/11/2026 | Ponto que ainda não funciona: Obs começando com "Ainda não está em funcionamento" tira do site até mudar. |
+
+## Licenciamento por município
+
+| Município | Licencia? | Observação |
+|---|---|---|
+| Londrina | Sim (SEMA) ou IAT | Link: portal.londrina.pr.gov.br/licenciamento-ambiental-municipal |
+| Maringá | Sim | Link: www3.maringa.pr.gov.br/meioambiente/?cod=licenciamento |
+| Ibiporã | Não, só IAT | |
+| Mandaguari | Não, só IAT | |
+| Rolândia | Não, só IAT | |
+| Cambé | Não, só IAT | Prefeitura exige PGRS das empresas |
+
+## Pontos específicos
+
+| Data | Ponto | Decisão |
+|---|---|---|
+| 02/11/2026 | Rota 90 (Ibiporã) | Removida: no endereço funciona a Metálicos Ambiental (LDA-098). |
+| 02/11/2026 | Pneus PR-090 (Ibiporã) | Removido; continua fora até a Jen achar o local (04/11). |
+| 02/11/2026 | Casas Bahia (Londrina) | Só existe uma (LDA-143); LDA-144 removida. |
+| 03/11/2026 | ROL-020 | "Reciclagem Paraná" é a KRM. |
+| 03/11/2026 | Duplicados Maringá | Unidos: MGA-061, 026, 005, 091. LDA-285 renomeada; LDA-283 e LDA-269 apagadas. |
+| 04/11/2026 | Brechós e ONG Autimizar (LDA-149 a 158) | Todos aceitam doação. |
+| 04/11/2026 | LDA-129 Pedreira ICA | LO 274.704 até 26/07/2027; aterro Classe II, RCC, triagem e limpeza de drenagem. |
+| 04/11/2026 | LDA-068 Baldissera | Só LP. |
+| 04/11/2026 | LDA-110 Transportadora Falcão | Removida. |
+| 04/11/2026 | IBI-002 Central de RCC Ibiporã | Ainda não funciona: fora do site até abrir. |
+| 04/11/2026 | IBI-003 SAMAE | Recebe eletrônicos (vão para Green Eletron ou E-Letro). |
+| 04/11/2026 | Ibiporã medicamentos | Não há ponto público; só orientação na página. |
+| 04/11/2026 | Pneus Londrina | LDA-136 Hyundai Lovat, LDA-137 Euro Import BMW, LDA-138 Auto Center Bandeirantes; LDA-139 removida. |
+| 04/11/2026 | Pontos Reciclanip | AM Usinas (LDA-135), Willian Mello (MEI), CJ Gimenez, D Carrasco, Prefeitura de Rolândia, Karango Pneus. Jandaia do Sul fica para quando a cidade for publicada. |
+| 04/11/2026 | Rigo Reciclagem Plástica | É a mesma Rigo Pet (ROL-024); não entra de novo. |
+| 04/11/2026 | MOMENTO Engenharia Ambiental | É de Blumenau (SC); não entra. |
+| 04/11/2026 | Empresas novas de Maringá | Entram: MGA-305 Associação de Agentes Ecológicos, MGA-306 Cimflex (recebe aparas), MGA-314 Plaspet-Dinâmica. Saem: MGA-302 Vitare, MGA-309 Reciclagens Ingá, MGA-310 Cooperativa de Vidros, MGA-311 Renovace, MGA-313 Versa. |
+| 04/11/2026 | Cabocla Serviços Ambientais | Fica em Mandaguaçu e funciona: entra quando Mandaguaçu for publicada. |
+| 04/11/2026 | Cetrel e Solvi Essencis | Fora (só AA antiga). |
