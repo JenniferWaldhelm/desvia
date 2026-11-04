@@ -20,7 +20,7 @@ Dados atualizados em 04/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/residuos-de-saude/)
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/reciclaveis/)
   - [Onde descartar embalagens de agrotóxico em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/embalagens-de-agrotoxico/)
-- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 317 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
+- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 318 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/pneus/)
   - [Onde descartar eletrônicos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/eletronicos/)
   - [Onde descartar lâmpadas em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/lampadas/)
@@ -55,7 +55,7 @@ Dados atualizados em 04/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Ibiporã](https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/residuos-classe-ii/)
-- [Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/): 304 pontos e empresas, 17 tipos de resíduo, obrigações das empresas
+- [Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/): 305 pontos e empresas, 17 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/pneus/)
   - [Onde descartar eletrônicos em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/eletronicos/)
   - [Onde descartar lâmpadas em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/lampadas/)
@@ -73,7 +73,8 @@ Dados atualizados em 04/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar escovas de dente e esponjas em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/escovas-e-esponjas/)
   - [Onde descartar resíduos perigosos (Classe I) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-classe-ii/)
-- [Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/): 31 pontos e empresas, 11 tipos de resíduo, obrigações das empresas
+- [Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/): 32 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
+  - [Onde descartar pneus em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/pneus/)
   - [Onde descartar pilhas e baterias em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/pilhas-e-baterias/)
   - [Onde descartar óleo lubrificante em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/oleo-lubrificante/)
   - [Onde descartar entulho e resíduos de construção em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/entulho/)
@@ -85,7 +86,7 @@ Dados atualizados em 04/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-classe-ii/)
-- [Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/): 27 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
+- [Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/): 28 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/pneus/)
   - [Onde descartar eletrônicos em Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/eletronicos/)
   - [Onde descartar lâmpadas em Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/lampadas/)

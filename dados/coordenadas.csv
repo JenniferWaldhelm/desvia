@@ -1,9 +1,11 @@
 ID,Lat,Lng,Endereço usado,Achado
 CAM-006,-23.28944,-51.23514,"Rodovia Celso Garcia Cid, 1, Gleba Cacadores","Rodovia Celso Garcia Cid, Cambé, Paraná, Região Sul, 86185-470, Brasil"
 CAM-009,,,"Rua Uzen Ajimura, 101, Distrito Industrial Doutor Jehovah Almeida Gomes",
+CAM-026,,,"Rua José Carlos Mufatto, 2550, CEP 86187-025",
 LDA-023,,,www.joguelimpo.org.br,
 LDA-070,,,Aragarça,
 LDA-074,,,Pontos de recebimento e coleta em casa pelo site greeneletron.org.br,
+LDA-135,-23.29391,-51.13710,"Rua Alabastro, 63, CEP 86030-160","Rua Alabastro, Vila Casoni, Parque Waldemar Hauer, Londrina, Paraná, Região Sul, 86030-180, Brasil"
 MGA-257,-23.53057,-52.00616,"Estrada Pinguim, 814, Gleba Ribeirao Pinguim","Estrada Pinguim, Maringá, Paraná, Região Sul, 87105-040, Brasil"
 MGA-258,-23.36228,-51.89901,"Rodovia Pr 317, Km 02, Lote 326/339-A, S/N, Gleba Patr. Maringa","PR-317, Parque Industrial 200, Maringá, Paraná, Região Sul, 87035-170, Brasil"
 MGA-259,-23.45985,-51.99978,"Avenida Pioneiro Victorio Marcon, 543, Parque Industrial","Avenida Pioneiro Victório Marcon, Distrito Industrial II, Maringá, Paraná, Região Sul, 87065-160, Brasil"
@@ -54,3 +56,4 @@ ROL-021,-23.30609,-51.33554,"Avenida Esplanada, 1355, Parque Industrial Cafezal"
 ROL-022,-23.35896,-51.39708,"Rodovia Br 369, S/N, Jardim Caviuna","BR-369, Ceboleiro, Rolândia, Paraná, Região Sul, 86609-899, Brasil"
 ROL-023,,,"Rua Jose Nicola Caliento, 740, Jardim Rosangelo",
 ROL-025,-23.24401,-51.40508,"Rodovia Pr 170 Km 07 Sao Martinho, 0, Zona Rural","Rodovia João Lunardelli, São Martinho, Rolândia, Paraná, Região Sul, 86609-000, Brasil"
+ROL-030,-23.31161,-51.36277,"Avenida Presidente Bernardes, 809, CEP 86600-067","Avenida Presidente Bernardes, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-117, Brasil"
