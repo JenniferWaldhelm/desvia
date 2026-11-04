@@ -18,7 +18,7 @@ Dados atualizados em 04/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar medicamentos vencidos em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/medicamentos/)
   - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/residuos-de-saude/)
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/reciclaveis/)
-- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 285 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
+- [Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/): 279 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/pneus/)
   - [Onde descartar eletrônicos em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/eletronicos/)
   - [Onde descartar lâmpadas em Londrina](https://jenniferwaldhelm.github.io/desvia/residuos/londrina/lampadas/)
