@@ -1,12 +1,8 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 1 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 1
 - Possíveis duplicados: 1
-
-## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
-
-- CAM-006 IPÊ AMBIENTAL LTDA (Petifler): -23.28944, -51.23514
 
 ## Sem coordenada (pegar no Google Maps)
 
