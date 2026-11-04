@@ -248,7 +248,7 @@ def aviso_cnpj(p):
 def obs_publica(p):
     if p["Tipo de ponto"] in ("PEV público", "PEV privado", "Cooperativa/associação", "Programa logística reversa"):
         o = p["Obs"].strip()
-        bloqueios = ["só no ctf", "pedir licença", "sem licença", "cnpj", "divergente", "confirm"]
+        bloqueios = ["so no ctf", "pedir licenca", "sem licenca", "cnpj", "divergente", "confirm", "conferir", "coordenada"]
         if o and not any(b in norm(o) for b in bloqueios):
             return o
     return ""
@@ -279,6 +279,13 @@ def carregar():
             elif a["Campo"] in p:
                 p[a["Campo"]] = a["Valor"]
     # Obs começando com "Ainda não está em funcionamento" tira o ponto do site até a Jen mudar a planilha
+    # Regra da Jen (02/11/2026): CNPJ baixado sai; inapto/suspenso sai depois de 6 meses (data "desde" da Receita)
+    for p in pontos:
+        m = re.search(r"cnpj (inapt|baixad|suspens)\w* na receita(?: federal)? desde (\d{2}/\d{2}/\d{4})", norm(p.get("Obs") or ""))
+        if m:
+            desde = data_br(m.group(2))
+            if m.group(1) == "baixad" or (desde and (HOJE - desde).days >= 180):
+                p["_ocultar"] = True
     pontos = [p for p in pontos if not p.get("_ocultar")
               and not (p.get("Obs") or "").strip().lower().startswith("ainda não está em funcionamento")]
     for p in pontos:
