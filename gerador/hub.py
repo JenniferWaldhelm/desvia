@@ -325,6 +325,8 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
 
 {secao_empresas(cid_slug, cidade)}
 
+{ctx.get("servicos", "")}
+
 <section class="outras"><h2>Páginas por tipo de resíduo</h2><ul>{paginas}</ul></section>
 
 <script>

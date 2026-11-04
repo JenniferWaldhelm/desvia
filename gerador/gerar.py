@@ -83,6 +83,28 @@ CATEGORIAS = [
     ("residuos-classe-ii", "resíduos industriais não perigosos (Classe II)", "Industriais (Classe II)", ["nao perigos", "embalagens industriais", "transbordo"]),
 ]
 
+# Serviços (quem vem buscar ou compra): slug, nome, aviso no topo, regra sobre o ponto
+def _txt(p):
+    return norm(" ".join(p.get(k, "") for k in ("Nome", "Resíduos aceitos", "Obs", "Serviço", "Tipo de ponto")))
+EMPRESA = ("Coleta e transporte", "Tratamento/destinação final")
+SERVICOS = [
+    ("cacamba-de-entulho", "Caçamba de entulho",
+     "Quem gera o entulho responde pelo destino dele. Prefira empresa com licença válida e peça o comprovante de onde a caçamba foi descarregada.",
+     lambda p: (p["Tipo de ponto"] == "Coleta e transporte" and "entulho" in p["_cats"]) or any(k in norm(p["Nome"]) for k in ("cacamba", "disk entulho"))),
+    ("limpa-fossa-e-desentupidora", "Limpa-fossa e desentupidora",
+     "O caminhão precisa levar o esgoto para uma estação de tratamento licenciada. Peça o comprovante de descarte.",
+     lambda p: p["Tipo de ponto"] in EMPRESA and ("limpa-fossa" in p["_cats"] or "desentup" in _txt(p))),
+    ("coleta-de-residuos-para-empresas", "Coleta de resíduos para empresas",
+     "Empresa que contrata coleta continua responsável pelo resíduo até a destinação final. Confira a licença, emita o MTR e guarde o CDF.",
+     lambda p: p["Tipo de ponto"] == "Coleta e transporte" or (p["Tipo de ponto"] in EMPRESA and p["Serviço"] in ("Coleta", "Transporte", "Coleta + destinação"))),
+    ("brecho-e-consignacao", "Brechós e consignação",
+     "Roupas, calçados e acessórios em bom estado podem ser vendidos, trocados ou deixados em consignação antes de virar resíduo.",
+     lambda p: any(k in _txt(p) for k in ("brecho", "consign"))),
+    ("compra-de-sucata-e-reciclaveis", "Compra de sucata e recicláveis",
+     "Sucata e recicláveis têm valor. Para empresas, exija nota e comprovante de destinação de quem compra.",
+     lambda p: p["Serviço"] == "Compra de recicláveis" or p["Tipo de ponto"] == "Comprador informal" or any(k in norm(p["Nome"]) for k in ("sucata", "ferro velho", "ferro-velho", "aparas"))),
+]
+
 # Termo mais buscado por tipo de resíduo (Google Keyword Planner, Londrina, out/2025 a set/2026): vai no <title>
 TERMO_BUSCA = {
     "eletronicos": "Lixo eletrônico", "entulho": "Descarte de entulho e caçamba", "pilhas-e-baterias": "Descarte de pilhas e baterias",
@@ -493,10 +515,61 @@ def gerar():
             destino.write_text(pagina(titulo, descricao, url, "../../../", corpo, jsonld, mapa=True), encoding="utf-8")
             urls.append((url, "0.7"))
 
+        # páginas de serviços
+        serv_links = []
+        _pags = []
+        for sv_slug, sv_nome, sv_aviso, sv_regra in SERVICOS:
+            pts = [p for p in do_lugar if sv_regra(p)]
+            if not pts:
+                continue
+            pts.sort(key=lambda p: (ORDEM_STATUS[p["_status"]], norm(p["Nome"])))
+            serv_links.append((sv_slug, sv_nome, len(pts)))
+            url = f"{BASE_URL}/residuos/{cid_slug}/servicos/{sv_slug}/"
+            n_val = sum(1 for p in pts if p["_status"] in ("valida", "vencendo"))
+            faq = [(f"Como escolher {sv_nome.lower()} em {cidade}?",
+                    "Prefira quem tem licença ambiental válida, peça o comprovante de destinação e desconfie de preço muito abaixo do mercado."),
+                   ("A licença que aparece aqui é a atual?",
+                    f"É a que consta nas bases públicas (IAT, CTF/IBAMA e prefeitura) em {HOJE:%d/%m/%Y}. Antes de contratar, peça a licença à empresa.")]
+            corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../../">Cidades</a> › <a href="../../">{esc(cidade)}</a> › {esc(sv_nome)}</nav>
+<h1>{esc(sv_nome)} em {esc(cidade)}</h1>
+<p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)}, {n_val} com licença ambiental válida localizada.</p>
+<p class="regra">{esc(sv_aviso)}</p>
+<p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro.</p>
+{mapa_js(pts)}
+<section class="lista">
+{''.join(cartao(p, cid_slug) for p in pts)}
+</section>
+<section class="faq"><h2>Perguntas frequentes</h2>
+{''.join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)}
+</section>
+@@OUTROS@@"""
+            jsonld = [
+                {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Cidades", "item": f"{BASE_URL}/residuos/"},
+                    {"@type": "ListItem", "position": 2, "name": cidade, "item": f"{BASE_URL}/residuos/{cid_slug}/"},
+                    {"@type": "ListItem", "position": 3, "name": sv_nome, "item": url}]},
+                {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                    {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]},
+            ]
+            serv_pag = (sv_slug, f"{sv_nome} em {cidade}: empresas e licença ambiental | Desvia",
+                        f"{len(pts)} {'opção' if len(pts) == 1 else 'opções'} de {sv_nome.lower()} em {cidade}, com a situação da licença ambiental de cada empresa.",
+                        url, corpo, jsonld)
+            _pags.append(serv_pag)
+        for sv_slug, titulo, descricao, url, corpo, jsonld in _pags:
+            outros = "".join(f'<li><a href="../{s}/">{esc(n)}</a></li>' for s, n, _ in serv_links if s != sv_slug)
+            corpo = corpo.replace("@@OUTROS@@", f'<section class="outras"><h2>Outros serviços em {esc(cidade)}</h2><ul>{outros}</ul></section>' if outros else "")
+            destino = SAIDA / cid_slug / "servicos" / sv_slug / "index.html"
+            destino.parent.mkdir(parents=True, exist_ok=True)
+            destino.write_text(pagina(titulo, descricao, url, "../../../../", corpo, jsonld, mapa=True), encoding="utf-8")
+            urls.append((url, "0.7"))
+        servicos_html = ("<section class=\"servicos\"><h2>Serviços em " + esc(cidade) + "</h2><p>Quem vem buscar, compra ou recebe.</p><ul>"
+                         + "".join(f'<li><a href="servicos/{s}/">{esc(n)} <span class="n">{k}</span></a></li>' for s, n, k in serv_links)
+                         + "</ul></section>") if serv_links else ""
+
         # página da cidade
         url = f"{BASE_URL}/residuos/{cid_slug}/"
         ctx = {"norm": norm, "selo": selo_licenca, "aviso_cnpj": aviso_cnpj, "obs_publica": obs_publica,
-               "pessoa_fisica": pessoa_fisica}
+               "pessoa_fisica": pessoa_fisica, "servicos": servicos_html}
         corpo = hub.corpo_hub(cid_slug, cidade, do_lugar, cats_ordem, nomes, por_cat, ctx)
         jsonld = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Cidades", "item": f"{BASE_URL}/residuos/"},
