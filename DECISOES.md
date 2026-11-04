@@ -17,6 +17,7 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 04/11/2026 | Empresas que só têm Autorização Ambiental (AA) não entram. RLO vencida pode entrar, com o aviso. |
 | 04/11/2026 | Empresa nova só entra depois de a Jen conferir se funciona e se recebe resíduo. Na dúvida, fica de fora. |
 | 04/11/2026 | Programas nacionais de logística reversa (Reciclanip etc.): link para o localizador oficial; pontos específicos só quando a Jen passar os dados. |
+| 04/11/2026 | Regra da sede vale também para a lista da prefeitura de Londrina e para Mandaguari: empresa de fora só aparece na página da própria cidade (ou fica guardada, se a cidade não está publicada). |
 | 04/11/2026 | Ponto que ainda não funciona: Obs começando com "Ainda não está em funcionamento" tira do site até mudar. |
 
 ## Licenciamento por município
@@ -50,6 +51,7 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 04/11/2026 | Pontos Reciclanip | AM Usinas (LDA-135), Willian Mello (MEI), CJ Gimenez, D Carrasco, Prefeitura de Rolândia, Karango Pneus. Jandaia do Sul fica para quando a cidade for publicada. |
 | 04/11/2026 | Rigo Reciclagem Plástica | É a mesma Rigo Pet (ROL-024); não entra de novo. |
 | 04/11/2026 | MOMENTO Engenharia Ambiental | É de Blumenau (SC); não entra. |
-| 04/11/2026 | Empresas novas de Maringá | Entram: MGA-305 Associação de Agentes Ecológicos, MGA-306 Cimflex (recebe aparas), MGA-314 Plaspet-Dinâmica. Saem: MGA-302 Vitare, MGA-309 Reciclagens Ingá, MGA-310 Cooperativa de Vidros, MGA-311 Renovace, MGA-313 Versa. |
+| 04/11/2026 | Empresas novas de Maringá | Entram: MGA-303 GRP Plásticos (aparas industriais de PE, PP e PET, coleta pelo WhatsApp), MGA-305 Associação de Agentes Ecológicos, MGA-306 Cimflex (recebe aparas), MGA-314 Plaspet-Dinâmica. Saem: MGA-302 Vitare, MGA-309 Reciclagens Ingá, MGA-310 Cooperativa de Vidros, MGA-311 Renovace, MGA-313 Versa. |
 | 04/11/2026 | Cabocla Serviços Ambientais | Fica em Mandaguaçu e funciona: entra quando Mandaguaçu for publicada. |
 | 04/11/2026 | Cetrel e Solvi Essencis | Fora (só AA antiga). |
+| 04/11/2026 | Duplicados unidos | CCGP (MGA-275 → LDA-029), M.M. Serviços Ambientais (MGA-270 → LDA-058), Transresíduos (MGA-256 → LDA-060), Construlândia (ROL-027 → LDA-118). |
