@@ -1,13 +1,8 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 2 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 2
 - Possíveis duplicados: 1
-
-## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
-
-- LDA-135 AM Usinas Londrina (Aranda de Matos Tratamento de Resíduos e Geração de Energia): -23.29391, -51.13710
-- ROL-030 Prefeitura de Rolândia: ponto de coleta de pneus: -23.31161, -51.36277
 
 ## Sem coordenada (pegar no Google Maps)
 
