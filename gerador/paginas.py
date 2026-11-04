@@ -275,3 +275,29 @@ def pedir_cidade():
     link = FORM or (WHATSAPP + "?text=" + "Ol%C3%A1!%20Quero%20pedir%20que%20o%20Desvia%20inclua%20a%20minha%20cidade%3A%20")
     return (f'<p class="pedir-cidade">Sua cidade ainda não está no Desvia? '
             f'<a href="{link}" target="_blank" rel="noopener">Peça para incluir</a>. As mais pedidas entram primeiro.</p>')
+
+
+def privacidade(hoje):
+    return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Início</a> › Cookies e privacidade</nav>
+<h1>Política de cookies e privacidade</h1>
+<p class="resposta">O Desvia é um site de consulta. Você não precisa se cadastrar nem informar dados pessoais para buscar onde descartar.</p>
+<section class="texto">
+<h2>O que medimos</h2>
+<ul>
+<li><b>GoatCounter (sempre ativo, sem cookies):</b> conta visitas, páginas vistas e os termos digitados na busca do site, sem identificar quem visitou. Serve para saber o que as pessoas procuram e não encontram.</li>
+<li><b>Google Analytics (só se você aceitar):</b> usa cookies para medir de onde vêm as visitas, quanto tempo ficam e em que aparelho. Os dados ficam com o Google e são vistos pelo Desvia apenas de forma agregada.</li>
+</ul>
+<h2>O que não fazemos</h2>
+<ul>
+<li>Não usamos cookies de anúncios nem de redes sociais.</li>
+<li>Não vendemos nem compartilhamos dados de visitantes.</li>
+<li>Não guardamos o que você digita na busca junto com nenhum dado seu.</li>
+</ul>
+<h2>Formulários e contato</h2>
+<p>Os formulários de cadastro de empresa e de pedido de cidade são do Google Forms: o que você preencher vai para o Google e para a planilha do Desvia, e é usado só para incluir ou corrigir pontos no site. O contato por WhatsApp segue as regras do próprio WhatsApp.</p>
+<h2>Seus direitos</h2>
+<p>Pela Lei Geral de Proteção de Dados (Lei 13.709/2018), você pode pedir acesso, correção ou exclusão de dados que tenha enviado. Fale com a gente pelo <a href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a>.</p>
+<h2>Mudar sua escolha</h2>
+<p>Você pode aceitar ou recusar o Google Analytics a qualquer momento. <a href="#" data-cookies-abrir class="localizador-link">Abrir o aviso de cookies</a></p>
+<p class="atualizado">Atualizada em {hoje:%d/%m/%Y}.</p>
+</section>"""

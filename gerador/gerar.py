@@ -315,7 +315,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {CSS_LINK.format(raiz=raiz)}
 {leaflet}
 {ld}
-{f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag("js",new Date());gtag("config","{GA4}");</script>' if GA4 else ""}
+{f'<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}function desviaGA(){{if(window._dga)return;window._dga=1;var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id={GA4}";document.head.appendChild(s);gtag("js",new Date());gtag("config","{GA4}")}}try{{if(localStorage.getItem("desvia-cookies")==="sim")desviaGA()}}catch(e){{}}</script>' if GA4 else ""}
 </head>
 <body>
 <header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}empresas/">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
@@ -324,10 +324,12 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 </main>
 <footer><p>Desvia reúne, em uma só busca, dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
 <nav class="rodape-links" aria-label="Rodapé">
-  <div><b>Desvia</b><a href="{raiz}">Buscar onde descartar</a><a href="{raiz}guias/">Guias por resíduo</a><a href="{raiz}empresas/">Para empresas</a></div>
+  <div><b>Desvia</b><a href="{raiz}">Buscar onde descartar</a><a href="{raiz}guias/">Guias por resíduo</a><a href="{raiz}empresas/">Para empresas</a><a href="{raiz}privacidade/">Cookies e privacidade</a></div>
   <div><b>Cidades</b>{"".join(f'<a href="{raiz}residuos/{c}/">{esc(n)}</a>' for c, n in CIDADES.items())}</div>
   <div><b>Contato</b><a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div>
 </nav></footer>
+{f'''<div id="cookies" class="cookies" hidden role="dialog" aria-label="Aviso de cookies"><p>Usamos cookies só para medir visitas e melhorar o site (Google Analytics). Não usamos para anúncios. <a href="{raiz}privacidade/">Política de cookies</a></p><div class="cookies-bt"><button type="button" data-c="nao">Recusar opcionais</button><button type="button" data-c="sim" class="cookies-ok">Aceitar</button></div></div>
+<script>(function(){{var b=document.getElementById("cookies");if(!b)return;var v=null;try{{v=localStorage.getItem("desvia-cookies")}}catch(e){{}}if(!v)b.hidden=false;b.addEventListener("click",function(e){{var c=e.target.getAttribute("data-c");if(!c)return;try{{localStorage.setItem("desvia-cookies",c)}}catch(x){{}}b.hidden=true;if(c==="sim"&&window.desviaGA)desviaGA()}});document.querySelectorAll("[data-cookies-abrir]").forEach(function(a){{a.addEventListener("click",function(ev){{ev.preventDefault();b.hidden=false}})}})}})();</script>''' if GA4 else ""}
 {f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER else ""}
 </body>
 </html>
@@ -600,6 +602,15 @@ def gerar():
                "Como descartar cada tipo de resíduo em casa e na empresa, o que diz a lei e onde levar.",
                f"{BASE_URL}/guias/", "../", site_desvia.indice_guias(nomes, cats_geral), []), encoding="utf-8")
     urls.insert(len(PAGINAS_FIXAS), (f"{BASE_URL}/guias/", "0.9"))
+
+    # política de cookies e privacidade
+    pasta_priv = RAIZ / "privacidade"
+    pasta_priv.mkdir(exist_ok=True)
+    (pasta_priv / "index.html").write_text(
+        pagina("Política de cookies e privacidade | Desvia",
+               "Quais dados o Desvia coleta, para que usa os cookies do Google Analytics e como mudar sua escolha.",
+               f"{BASE_URL}/privacidade/", "../", site_desvia.privacidade(HOJE), []), encoding="utf-8")
+    urls.append((f"{BASE_URL}/privacidade/", "0.2"))
 
     # página para empresas (checklist, calendário, serviços)
     pasta_emp = RAIZ / "empresas"
