@@ -1,10 +1,79 @@
 ID,Campo,Valor,Motivo
-IBI-026,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
-IBI-024,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
-IBI-025,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
-IBI-029,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
-IBI-030,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
-IBI-023,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
-IBI-021,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
-IBI-013,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
+IBI-026,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
+IBI-024,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
+IBI-025,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
+IBI-029,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
+IBI-030,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
+IBI-023,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
+IBI-021,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
+IBI-013,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
 LDA-117,ocultar,sim,CNPJ baixado na Receita (desde 02/11/2026)
+MGA-257,Órgão licença,IAT,Renovação localizada no IAT
+MGA-257,Tipo licença,RLO,Renovação localizada no IAT
+MGA-257,Nº licença,281087,Renovação localizada no IAT
+MGA-257,Validade licença,26/09/2026,Renovação localizada no IAT
+MGA-258,Órgão licença,IAT,Renovação localizada no IAT
+MGA-258,Tipo licença,RLO,Renovação localizada no IAT
+MGA-258,Nº licença,129442,Renovação localizada no IAT
+MGA-258,Validade licença,30/08/2021,Renovação localizada no IAT
+MGA-259,Órgão licença,IAT,Renovação localizada no IAT
+MGA-259,Tipo licença,LO,Renovação localizada no IAT
+MGA-259,Nº licença,257675,Renovação localizada no IAT
+MGA-259,Validade licença,03/11/2027,Renovação localizada no IAT
+MGA-261,Órgão licença,IAT,Renovação localizada no IAT
+MGA-261,Tipo licença,LP-A,Renovação localizada no IAT
+MGA-261,Nº licença,339649,Renovação localizada no IAT
+MGA-261,Validade licença,15/07/2025,Renovação localizada no IAT
+MGA-262,Órgão licença,IAT,Renovação localizada no IAT
+MGA-262,Tipo licença,LO,Renovação localizada no IAT
+MGA-262,Nº licença,31783,Renovação localizada no IAT
+MGA-262,Validade licença,13/08/2018,Renovação localizada no IAT
+MGA-264,Órgão licença,IAT,Renovação localizada no IAT
+MGA-264,Tipo licença,RLO,Renovação localizada no IAT
+MGA-264,Nº licença,248128,Renovação localizada no IAT
+MGA-264,Validade licença,22/07/2027,Renovação localizada no IAT
+MGA-267,Órgão licença,IAT,Renovação localizada no IAT
+MGA-267,Tipo licença,LO,Renovação localizada no IAT
+MGA-267,Nº licença,30011,Renovação localizada no IAT
+MGA-267,Validade licença,06/11/2017,Renovação localizada no IAT
+MGA-270,Órgão licença,IAT,Renovação localizada no IAT
+MGA-270,Tipo licença,LO,Renovação localizada no IAT
+MGA-270,Nº licença,21079,Renovação localizada no IAT
+MGA-270,Validade licença,30/04/2014,Renovação localizada no IAT
+MGA-271,Órgão licença,IAT,Renovação localizada no IAT
+MGA-271,Tipo licença,LAS,Renovação localizada no IAT
+MGA-271,Nº licença,7279,Renovação localizada no IAT
+MGA-271,Validade licença,31/08/2026,Renovação localizada no IAT
+MGA-274,Órgão licença,IAT,Renovação localizada no IAT
+MGA-274,Tipo licença,RLO,Renovação localizada no IAT
+MGA-274,Nº licença,145424,Renovação localizada no IAT
+MGA-274,Validade licença,21/08/2022,Renovação localizada no IAT
+MGA-275,Órgão licença,IAT,Renovação localizada no IAT
+MGA-275,Tipo licença,RLO,Renovação localizada no IAT
+MGA-275,Nº licença,279495,Renovação localizada no IAT
+MGA-275,Validade licença,06/09/2026,Renovação localizada no IAT
+MGA-276,Órgão licença,IAT,Renovação localizada no IAT
+MGA-276,Tipo licença,RLAS,Renovação localizada no IAT
+MGA-276,Nº licença,253382,Renovação localizada no IAT
+MGA-276,Validade licença,14/09/2027,Renovação localizada no IAT
+MGA-278,Órgão licença,IAT,Renovação localizada no IAT
+MGA-278,Tipo licença,LO,Renovação localizada no IAT
+MGA-278,Nº licença,252607,Renovação localizada no IAT
+MGA-278,Validade licença,01/09/2025,Renovação localizada no IAT
+MGA-289,Órgão licença,IAT,Renovação localizada no IAT
+MGA-289,Tipo licença,LO,Renovação localizada no IAT
+MGA-289,Nº licença,327551,Renovação localizada no IAT
+MGA-289,Validade licença,05/08/2028,Renovação localizada no IAT
+MGA-293,Órgão licença,IAT,Renovação localizada no IAT
+MGA-293,Tipo licença,LP,Renovação localizada no IAT
+MGA-293,Nº licença,324667,Renovação localizada no IAT
+MGA-293,Validade licença,27/06/2025,Renovação localizada no IAT
+MGA-297,Órgão licença,IAT,Renovação localizada no IAT
+MGA-297,Tipo licença,LP,Renovação localizada no IAT
+MGA-297,Nº licença,341065,Renovação localizada no IAT
+MGA-297,Validade licença,06/02/2027,Renovação localizada no IAT
+ROL-023,Órgão licença,IAT,Renovação localizada no IAT
+ROL-023,Tipo licença,LO,Renovação localizada no IAT
+ROL-023,Nº licença,287990,Renovação localizada no IAT
+ROL-023,Validade licença,13/01/2025,Renovação localizada no IAT
+ROL-026,aviso_cnpj,CNPJ inapta na Receita (consulta em 04/11/2026),Receita
