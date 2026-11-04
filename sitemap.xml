@@ -39,6 +39,7 @@
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-perigosos/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/londrina/residuos-classe-ii/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/londrina/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/eletronicos/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/lampadas/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/oleo-de-cozinha/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/oleo-lubrificante/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
@@ -82,11 +83,25 @@
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-perigosos/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-classe-ii/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/pneus/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/eletronicos/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/lampadas/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/pilhas-e-baterias/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/oleo-lubrificante/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/entulho/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/medicamentos/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/reciclaveis/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/sucata-metalica/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/limpa-fossa/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/embalagens-de-agrotoxico/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/residuos-perigosos/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/mandaguari/coleta-de-lixo/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/londrina/coleta-de-lixo/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/ibipora/coleta-de-lixo/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/maringa/coleta-de-lixo/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/coleta-de-lixo/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jenniferwaldhelm.github.io/desvia/residuos/cambe/coleta-de-lixo/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/guias/pneus/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/guias/eletronicos/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://jenniferwaldhelm.github.io/desvia/guias/lampadas/</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
