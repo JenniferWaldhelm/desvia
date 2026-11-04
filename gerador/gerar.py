@@ -90,6 +90,11 @@ TERMO_BUSCA = {
     "sucata-metalica": "Venda e descarte de sucata", "oleo-lubrificante": "Descarte de óleo lubrificante", "limpa-fossa": "Limpa-fossa e desentupidora",
 }
 
+# Localizadores oficiais dos programas nacionais de logística reversa (link, sem copiar os pontos).
+LOCALIZADOR = {
+    "pneus": ("Ver todos os pontos de coleta da Reciclanip", "https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/"),
+}
+
 # Orientação curta por categoria (aparece no topo e no FAQ).
 DICAS = {
     "pneus": "Pneus inservíveis têm logística reversa obrigatória: fabricantes e importadores precisam recolher. Não descarte em terreno baldio nem na coleta comum, porque acumulam água e viram criadouro do Aedes aegypti.",
@@ -457,6 +462,7 @@ def gerar():
 <h1>Onde descartar {esc(frase)} em {esc(cidade)}</h1>
 <p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)} e região, {n_val} com licença ambiental válida localizada. {esc(DICAS.get(cat, ''))}</p>
 {f'<p class="regra">{esc(regra)}</p>' if regra else ''}
+{f'<p class="localizador"><a href="{LOCALIZADOR[cat][1]}" target="_blank" rel="noopener">{esc(LOCALIZADOR[cat][0])} ↗</a></p>' if cat in LOCALIZADOR else ''}
 <p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro. <a href="../?r={cat}#mapa">Abrir no mapa com filtros</a></p>
 {mapa_js(pts)}
 <section class="lista">
