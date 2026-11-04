@@ -70,7 +70,10 @@ for slug, cidade in CIDADES.items():
                 else:
                     inativos.append(f"{nome}: CNPJ {sit} desde {desde} (aviso no site; sai se continuar até {date.fromordinal(data(desde).toordinal() + 180):%d/%m/%Y})")
         vb, vc = data(b["Validade licença"]), data(c["Validade licença"])
-        if vc and (not vb or (vc - vb).days > 2):  # IAT grava em UTC: ignora diferença de 1 dia
+        # LP/LI nova não substitui uma LO que a base já tem (ex.: ampliação com LI)
+        lo_base = (b.get("Tipo licença") or "").upper().startswith(("LO", "RLO", "LAS", "LAU"))
+        so_lp_li = (c.get("Tipo licença") or "").upper() in ("LP", "LI")
+        if vc and (not vb or (vc - vb).days > 2) and not (lo_base and so_lp_li):  # IAT grava em UTC: ignora diferença de 1 dia
             for campo in ("Órgão licença", "Tipo licença", "Nº licença", "Validade licença"):
                 if c.get(campo):
                     ajustes.append({"ID": b["ID"], "Campo": campo, "Valor": c[campo], "Motivo": "Renovação localizada no IAT"})

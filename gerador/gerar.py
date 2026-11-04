@@ -249,7 +249,9 @@ def carregar():
                     p["Obs"] = ((p.get("Obs") or "") + " " + a["Valor"].replace("(consulta em", "em").replace(")", "") + ".").strip()
             elif a["Campo"] in p:
                 p[a["Campo"]] = a["Valor"]
-    pontos = [p for p in pontos if not p.get("_ocultar")]
+    # Obs começando com "Ainda não está em funcionamento" tira o ponto do site até a Jen mudar a planilha
+    pontos = [p for p in pontos if not p.get("_ocultar")
+              and not (p.get("Obs") or "").strip().lower().startswith("ainda não está em funcionamento")]
     for p in pontos:
         for k in p:
             p[k] = (p[k] or "").strip()

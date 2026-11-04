@@ -8,7 +8,3 @@ IBI-023,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
 IBI-021,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
 IBI-013,aviso_cnpj,CNPJ inapta na Receita (consulta em 02/11/2026),Receita
 LDA-117,ocultar,sim,CNPJ baixado na Receita (desde 02/11/2026)
-LDA-129,Órgão licença,IAT,Renovação localizada no IAT
-LDA-129,Tipo licença,LI,Renovação localizada no IAT
-LDA-129,Nº licença,261530,Renovação localizada no IAT
-LDA-129,Validade licença,12/01/2028,Renovação localizada no IAT
