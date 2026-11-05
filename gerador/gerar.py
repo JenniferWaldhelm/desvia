@@ -25,7 +25,7 @@ import paginas as site_desvia
 RAIZ = Path(__file__).resolve().parent.parent
 CSV = RAIZ / "dados" / "pontos.csv"
 SAIDA = RAIZ / "residuos"
-BASE_URL = "https://jenniferwaldhelm.github.io/desvia"
+BASE_URL = "https://desvia.eco.br"
 HOJE = date.today()
 
 # Cidades publicadas (status "Verificado" ou "Publicado" na Fila de cidades).

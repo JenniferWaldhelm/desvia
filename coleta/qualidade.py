@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-UA = {"User-Agent": "Desvia/1.0 (https://jenniferwaldhelm.github.io/desvia)", "Accept-Language": "pt-BR"}
+UA = {"User-Agent": "Desvia/1.0 (https://desvia.eco.br/)", "Accept-Language": "pt-BR"}
 import os
 LIMITE = int(os.environ.get("GEO_LIMITE", "60"))
 

@@ -14,7 +14,7 @@ import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-UA = "Desvia/1.0 (https://jenniferwaldhelm.github.io/desvia)"
+UA = "Desvia/1.0 (https://desvia.eco.br/)"
 
 
 def busca(q):

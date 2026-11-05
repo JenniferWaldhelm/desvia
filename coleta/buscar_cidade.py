@@ -28,7 +28,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 HOJE = date.today().strftime("%d/%m/%Y")
 IAT = "https://geopr.iat.pr.gov.br/server/rest/services/00_PUBLICACOES/licenciamento_ambiental_pr/FeatureServer/0/query"
 CTF_ZIP = "https://stibamadadosabertosprd.blob.core.windows.net/dados-abertos/dados/CTF/APP/pessoas-juridicas-inscritas-no-ctf-app1_csv.zip"
-UA = {"User-Agent": "Desvia/1.0 (+https://jenniferwaldhelm.github.io/desvia/)"}
+UA = {"User-Agent": "Desvia/1.0 (+https://desvia.eco.br/)"}
 
 # Atividades do IAT que indicam prestação de serviço de resíduos
 IAT_INCLUI = re.compile(r"Disposição de resíduos|Gerenciamento de resíduos|Reciclagem|Recuperação e refino|"

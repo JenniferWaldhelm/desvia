@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jenniferwaldhelm.github.io/desvia/sitemap.xml
+Sitemap: https://desvia.eco.br/sitemap.xml
