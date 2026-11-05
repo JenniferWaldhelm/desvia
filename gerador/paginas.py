@@ -285,7 +285,7 @@ def privacidade(hoje):
 <h2>O que medimos</h2>
 <ul>
 <li><b>GoatCounter (sempre ativo, sem cookies):</b> conta visitas, páginas vistas e os termos digitados na busca do site, sem identificar quem visitou. Serve para saber o que as pessoas procuram e não encontram.</li>
-<li><b>Google Analytics (só se você aceitar):</b> usa cookies para medir de onde vêm as visitas, quanto tempo ficam e em que aparelho. Os dados ficam com o Google e são vistos pelo Desvia apenas de forma agregada.</li>
+<li><b>Google Analytics:</b> só grava cookies se você aceitar. Sem o aceite, o Google recebe apenas um sinal anônimo de visita, sem cookie e sem identificar você. Com o aceite, mede de onde vêm as visitas, quanto tempo ficam e em que aparelho. O Desvia vê esses dados só de forma agregada.</li>
 </ul>
 <h2>O que não fazemos</h2>
 <ul>
