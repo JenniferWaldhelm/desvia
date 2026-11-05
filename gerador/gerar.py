@@ -345,7 +345,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {CSS_LINK.format(raiz=raiz)}
 {leaflet}
 {ld}
-{f'<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}function desviaGA(){{if(window._dga)return;window._dga=1;var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id={GA4}";document.head.appendChild(s);gtag("js",new Date());gtag("config","{GA4}")}}try{{if(localStorage.getItem("desvia-cookies")==="sim")desviaGA()}}catch(e){{}}</script>' if GA4 else ""}
+{f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}var _ok=false;try{{_ok=localStorage.getItem("desvia-cookies")==="sim"}}catch(e){{}}gtag("consent","default",{{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:_ok?"granted":"denied"}});gtag("js",new Date());gtag("config","{GA4}");function desviaGA(){{gtag("consent","update",{{analytics_storage:"granted"}})}}</script>' if GA4 else ""}
 </head>
 <body>
 <header><nav><a class="logo" href="{raiz}">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}empresas/">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
