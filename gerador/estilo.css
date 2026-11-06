@@ -342,3 +342,10 @@ a.btn-ajuda { text-decoration: none; margin-left: 8px; }
 .servicos ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .servicos li a{display:inline-block;padding:.5rem .8rem;border:1px solid #cfd8d3;border-radius:999px;text-decoration:none}
 .servicos .n{opacity:.7;font-size:.85em}
+
+.compartilhar{max-width:1100px;margin:2rem auto 1rem;padding:0 16px;text-align:center}
+.compartilhar p{margin:0 0 .6rem;font-weight:600}
+.compartilhar-bt{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.compartilhar-bt a,.compartilhar-bt button{font:inherit;font-size:.9rem;padding:.45rem .85rem;border:1px solid #cfd8d3;border-radius:999px;background:transparent;color:inherit;text-decoration:none;cursor:pointer}
+.compartilhar-bt .nativo{background:#1f6f4a;border-color:#1f6f4a;color:#fff}
+.compartilhar-bt [hidden]{display:none}
