@@ -71,7 +71,7 @@ Dados atualizados em 06/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar escovas de dente e esponjas em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/escovas-e-esponjas/)
   - [Onde descartar resíduos perigosos (Classe I) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Maringá](https://jenniferwaldhelm.github.io/desvia/residuos/maringa/residuos-classe-ii/)
-- [Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/): 31 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
+- [Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/): 29 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/pneus/)
   - [Onde descartar pilhas e baterias em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/pilhas-e-baterias/)
   - [Onde descartar óleo lubrificante em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/oleo-lubrificante/)
@@ -84,7 +84,7 @@ Dados atualizados em 06/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Rolândia](https://jenniferwaldhelm.github.io/desvia/residuos/rolandia/residuos-classe-ii/)
-- [Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/): 27 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
+- [Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/): 29 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/pneus/)
   - [Onde descartar eletrônicos em Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/eletronicos/)
   - [Onde descartar lâmpadas em Cambé](https://jenniferwaldhelm.github.io/desvia/residuos/cambe/lampadas/)

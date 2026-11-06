@@ -31,7 +31,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "C. Girotto & Cia Ltda (Transmendes Transportes e Blocos)", "a": -23.29969, "o": -51.23468, "id": "cam-003", "s": "vencida"}, {"n": "Coletão Transportes em Caçambas S/C Ltda.", "a": -23.27694, "o": -51.26784, "id": "cam-001", "s": "vencida"}, {"n": "Roterx - Ambiental Ltda EPP (Rotercano)", "a": -23.29063, "o": -51.31429, "id": "cam-008", "s": "vencida"}, {"n": "Favato Transportes Ltda", "a": -23.288694, "o": -51.222917, "id": "lda-087", "s": "nao_localizada"}];
+  var pts = [{"n": "C. Girotto & Cia Ltda (Transmendes Transportes e Blocos)", "a": -23.29969, "o": -51.23468, "id": "cam-003", "s": "vencida"}, {"n": "Coletão Transportes em Caçambas S/C Ltda.", "a": -23.27694, "o": -51.26784, "id": "cam-001", "s": "vencida"}, {"n": "Roterx - Ambiental Ltda EPP (Rotercano)", "a": -23.29063, "o": -51.31429, "id": "cam-008", "s": "vencida"}, {"n": "CJ Gimenez Coleta e Seleção de Pneus Usados para Reciclagem", "a": -23.3041112, "o": -51.2245299, "id": "cam-026", "s": "nao_localizada"}, {"n": "Favato Transportes Ltda", "a": -23.288694, "o": -51.222917, "id": "lda-087", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
