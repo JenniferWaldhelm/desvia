@@ -1,10 +1,7 @@
 ID,Lat,Lng,Precisão,Achado
-ROL-017,,,não achado,
-ROL-018,,,não achado,
-ROL-020,,,não achado,
-ROL-021,,,não achado,
-ROL-022,,,não achado,
-ROL-030,,,não achado,
-ROL-033,,,não achado,
-ROL-038,,,não achado,
-ROL-041,,,não achado,
+ROL-001,,,não achado,
+ROL-002,-23.33841,-51.38303,número,"Avenida Brasil, Jardim Canan, Rolândia, Paraná, Região Sul, 40310-060, Brasil"
+ROL-004,-23.33471,-51.37979,número,"Avenida Brasil, Jardim Orlandino, Rolândia, Paraná, Região Sul, 40310-060, Brasil"
+ROL-010,-23.30306,-51.34167,número,"Rua Belo Horizonte, Rolândia, Paraná, Região Sul, 86600-179, Brasil"
+ROL-015,-23.30306,-51.34167,número,"Rua Belo Horizonte, Rolândia, Paraná, Região Sul, 86600-179, Brasil"
+CAM-026,,,não achado,
