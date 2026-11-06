@@ -31,7 +31,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "DESTINARE GERENCIAMENTO DE RESIDUOS LTDA", "a": -23.45104, "o": -51.99794, "id": "mga-289", "s": "valida"}, {"n": "M. M. Serviços Ambientais Ltda", "a": -23.4305427, "o": -51.9907104, "id": "lda-058", "s": "valida"}, {"n": "Transresiduos Transportes de Resíduos Industriais Ltda (Transresíduos Ambiental S/A)", "a": -23.4577567, "o": -51.9600146, "id": "lda-060", "s": "valida"}, {"n": "Karango Pneus", "a": -23.39033, "o": -51.86719, "id": "mga-300", "s": "vencida"}, {"n": "Nortevisual Serviços Ambientais", "a": -23.4305427, "o": -51.9907104, "id": "lda-066", "s": "vencida"}, {"n": "RODOVIARIO MATSUDA LTDA", "a": -23.36228, "o": -51.89901, "id": "mga-258", "s": "vencida"}, {"n": "BAESSO - TRANSPORTES LTDA (Baesso Transportes)", "a": -23.45549, "o": -51.96912, "id": "mga-287", "s": "nao_localizada"}, {"n": "CONFIANÇA SOLUÇÕES E LOGISTICA INTEGRADA LTDA", "a": -23.44787, "o": -51.99563, "id": "mga-296", "s": "nao_localizada"}, {"n": "FAVARO SERVICOS AMBIENTAIS LTDA", "a": -23.46176, "o": -51.95231, "id": "mga-294", "s": "nao_localizada"}, {"n": "HERCULES TRANSPORTES RODOVIÁRIO LTDA", "a": -23.45549, "o": -51.96912, "id": "mga-263", "s": "nao_localizada"}, {"n": "MARINHO & CARVALHO LTDA (Transmarinho)", "a": -23.42361, "o": -51.89292, "id": "mga-265", "s": "nao_localizada"}, {"n": "PIRES LIMPEZA AMBIENTAL EIRELI (Pires Ambiental)", "a": -23.3842, "o": -51.9505, "id": "mga-284", "s": "nao_localizada"}, {"n": "SIMAO & FEIJO LTDA (Exclusiva Transportes)", "a": -23.38933, "o": -51.90309, "id": "mga-266", "s": "nao_localizada"}, {"n": "TRANSPORTADORA BATISTA DUARTE LTDA", "a": -23.41821, "o": -51.93962, "id": "mga-299", "s": "nao_localizada"}, {"n": "TRANSPORTADORA EQUADOR LTDA", "a": -23.45549, "o": -51.96912, "id": "mga-260", "s": "nao_localizada"}, {"n": "TRANSPORTE RODOVIÁRIO 1500 LTDA", "a": -23.45549, "o": -51.96912, "id": "mga-269", "s": "nao_localizada"}];
+  var pts = [{"n": "Destinare Gerenciamento de Resíduos Ltda", "a": -23.45104, "o": -51.99794, "id": "mga-289", "s": "valida"}, {"n": "M. M. Serviços Ambientais Ltda", "a": -23.4305427, "o": -51.9907104, "id": "lda-058", "s": "valida"}, {"n": "Transresiduos Transportes de Resíduos Industriais Ltda (Transresíduos Ambiental S/A)", "a": -23.4577567, "o": -51.9600146, "id": "lda-060", "s": "valida"}, {"n": "Karango Pneus", "a": -23.39033, "o": -51.86719, "id": "mga-300", "s": "vencida"}, {"n": "Nortevisual Serviços Ambientais", "a": -23.4305427, "o": -51.9907104, "id": "lda-066", "s": "vencida"}, {"n": "Rodoviário Matsuda Ltda", "a": -23.36228, "o": -51.89901, "id": "mga-258", "s": "vencida"}, {"n": "Baesso - Transportes Ltda (Baesso Transportes)", "a": -23.45549, "o": -51.96912, "id": "mga-287", "s": "nao_localizada"}, {"n": "Confiança Soluções e Logística Integrada Ltda", "a": -23.44787, "o": -51.99563, "id": "mga-296", "s": "nao_localizada"}, {"n": "Favaro Serviços Ambientais Ltda", "a": -23.46176, "o": -51.95231, "id": "mga-294", "s": "nao_localizada"}, {"n": "Hércules Transportes Rodoviário Ltda", "a": -23.45549, "o": -51.96912, "id": "mga-263", "s": "nao_localizada"}, {"n": "Marinho & Carvalho Ltda (Transmarinho)", "a": -23.42361, "o": -51.89292, "id": "mga-265", "s": "nao_localizada"}, {"n": "Pires Limpeza Ambiental Eireli (Pires Ambiental)", "a": -23.3842, "o": -51.9505, "id": "mga-284", "s": "nao_localizada"}, {"n": "Simão & Feijó Ltda (Exclusiva Transportes)", "a": -23.38933, "o": -51.90309, "id": "mga-266", "s": "nao_localizada"}, {"n": "Transportadora Batista Duarte Ltda", "a": -23.41821, "o": -51.93962, "id": "mga-299", "s": "nao_localizada"}, {"n": "Transportadora Equador Ltda", "a": -23.45549, "o": -51.96912, "id": "mga-260", "s": "nao_localizada"}, {"n": "Transporte Rodoviário 1500 Ltda", "a": -23.45549, "o": -51.96912, "id": "mga-269", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
 </script>
 <section class="lista">
 <article class="ponto" id="mga-289">
-<h3>DESTINARE GERENCIAMENTO DE RESIDUOS LTDA</h3>
+<h3>Destinare Gerenciamento de Resíduos Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Resíduos industriais (Classe I e II)</p>
 <p class="local">Rua Izaura Gamba Vitorino, 345, Parque Industrial, Maringá</p>
@@ -81,75 +81,75 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554430313553">(44) 3031-3553</a></p>
 <p class="licenca alerta">Licença AA 288565 (IAT) com validade até 21/01/2025. Renovação não localizada nas bases consultadas em 29/10/2026.</p>
 </article><article class="ponto" id="mga-258">
-<h3>RODOVIARIO MATSUDA LTDA</h3>
+<h3>Rodoviário Matsuda Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Rodovia Pr 317, Km 02, Lote 326/339-A, S/N, Gleba Patr. Maringa, Maringá</p>
 <p class="licenca alerta">Licença RLO 129442 (IAT) com validade até 30/08/2021. Renovação não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-287">
-<h3>BAESSO - TRANSPORTES LTDA (Baesso Transportes)</h3>
+<h3>Baesso - Transportes Ltda (Baesso Transportes)</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Avenida Prefeito Sincler Sambatti, 10089, Jardim Universo, Maringá</p>
 <p class="contato"><a href="tel:+554499169959">(44) 99169959</a></p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-296">
-<h3>CONFIANÇA SOLUÇÕES E LOGISTICA INTEGRADA LTDA</h3>
+<h3>Confiança Soluções e Logística Integrada Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Rua Dinerolli Labatut, 126, Jardim Nilza, Maringá</p>
 <p class="contato"><a href="tel:+553432165541">(34) 32165541</a></p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-294">
-<h3>FAVARO SERVICOS AMBIENTAIS LTDA</h3>
+<h3>Favaro Serviços Ambientais Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Resíduos industriais (Classe I e II)</p>
 <p class="local">Avenida Carlos Correa Borges, 2953, Jardim Atami, Maringá</p>
 <p class="contato"><a href="tel:+554491439958">(44) 91439958</a></p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-263">
-<h3>HERCULES TRANSPORTES RODOVIÁRIO LTDA</h3>
+<h3>Hércules Transportes Rodoviário Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Avenida Prefeito Sincler Sambatti, 7268, Jardim Ipanema, Maringá</p>
 <p class="contato"><a href="tel:+554498639968">(44) 98639968</a></p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-265">
-<h3>MARINHO &amp; CARVALHO LTDA (Transmarinho)</h3>
+<h3>Marinho &amp; Carvalho Ltda (Transmarinho)</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Rua Auto Curti, 416, Jardim Amrica, Maringá</p>
 <p class="contato">442289575</p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-284">
-<h3>PIRES LIMPEZA AMBIENTAL EIRELI (Pires Ambiental)</h3>
+<h3>Pires Limpeza Ambiental Eireli (Pires Ambiental)</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Resíduos industriais (Classe I e II)</p>
 <p class="local">Rua Angelo Favaretto, 133, Jardim Paris, Maringá</p>
 <p class="contato"><a href="tel:+554498622733">(44) 98622733</a></p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-266">
-<h3>SIMAO &amp; FEIJO LTDA (Exclusiva Transportes)</h3>
+<h3>Simão &amp; Feijó Ltda (Exclusiva Transportes)</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Rua Guarino Augusto Basseto, 586, Jd Alvorada, Maringá</p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-299">
-<h3>TRANSPORTADORA BATISTA DUARTE LTDA</h3>
+<h3>Transportadora Batista Duarte Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Avenida Advogado Horacio Raccanello Filho, 5570, Zona 01, Maringá</p>
 <p class="contato"><a href="tel:+554430410542">(44) 30410542</a></p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-260">
-<h3>TRANSPORTADORA EQUADOR LTDA</h3>
+<h3>Transportadora Equador Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Avenida Prefeito Sincler Sambatti, 8821, Jardim Universo, Maringá</p>
 <p class="contato"><a href="tel:+554432289918">(44) 32289918</a></p>
 <p class="licenca aviso">Licença não localizada nas bases consultadas em 02/11/2026.</p>
 </article><article class="ponto" id="mga-269">
-<h3>TRANSPORTE RODOVIÁRIO 1500 LTDA</h3>
+<h3>Transporte Rodoviário 1500 Ltda</h3>
 <p class="tipo">Coleta e transporte · Transporte</p>
 <p class="residuos">Óleo lubrificante usado</p>
 <p class="local">Anel Viario Sincler Sambatti,Prefeito, 9170, Gleba Patrimonio Maringa, Maringá</p>
