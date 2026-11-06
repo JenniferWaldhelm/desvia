@@ -55,3 +55,10 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 04/11/2026 | Cabocla Serviços Ambientais | Fica em Mandaguaçu e funciona: entra quando Mandaguaçu for publicada. |
 | 04/11/2026 | Cetrel e Solvi Essencis | Fora (só AA antiga). |
 | 04/11/2026 | Duplicados unidos | CCGP (MGA-275 → LDA-029), M.M. Serviços Ambientais (MGA-270 → LDA-058), Transresíduos (MGA-256 → LDA-060), Construlândia (ROL-027 → LDA-118). |
+| 06/11/2026 | Ecopontos Ecolix duplicados | Mesmo local: fica só um (MGA-234, 237, 238, 240, 245 apagados). |
+| 06/11/2026 | Pedreira ICA | Fica só em Ibiporã (IBI-037), com a LO 274.704 e os resíduos; LDA-129 apagado. |
+| 06/11/2026 | Paulistano Transportes | Fica só IBI-033, coordenada -23.2931745, -51.0795808. |
+| 06/11/2026 | Roterx | Fica só CAM-008 (Cambé). |
+| 06/11/2026 | Preço Popular × Super Popular | Fica a mais recente (Super Popular). |
+| 06/11/2026 | Nomes | Nomes em MAIÚSCULAS do IAT/CTF padronizados (85). Regra para os próximos: padronizar. |
+| 06/11/2026 | Mandaguari | Data de verificação 29/10/2026 nos pontos antigos. |
