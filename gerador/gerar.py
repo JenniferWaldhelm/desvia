@@ -321,6 +321,24 @@ FONTES = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
           '<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">')
 
 
+def compartilhar(url, titulo):
+    from urllib.parse import quote
+    u, t = quote(url, safe=""), quote(titulo.split(" | ")[0], safe="")
+    redes = [("WhatsApp", f"https://wa.me/?text={t}%20{u}"),
+             ("Facebook", f"https://www.facebook.com/sharer/sharer.php?u={u}"),
+             ("LinkedIn", f"https://www.linkedin.com/sharing/share-offsite/?url={u}"),
+             ("Telegram", f"https://t.me/share/url?url={u}&text={t}"),
+             ("X", f"https://twitter.com/intent/tweet?url={u}&text={t}"),
+             ("E-mail", f"mailto:?subject={t}&body={u}")]
+    links = "".join(f'<a href="{h}" target="_blank" rel="noopener">{n}</a>' for n, h in redes)
+    return (f'<section class="compartilhar" aria-label="Compartilhar esta página"><p>Ajude mais gente a descartar certo: compartilhe esta página</p>'
+            f'<div class="compartilhar-bt"><button type="button" class="nativo" hidden>Compartilhar…</button>{links}'
+            f'<button type="button" class="copiar" data-url="{esc(url)}">Copiar link</button></div></section>'
+            '<script>(function(){var s=document.currentScript.previousElementSibling,n=s.querySelector(".nativo"),c=s.querySelector(".copiar");'
+            'if(navigator.share){n.hidden=false;n.onclick=function(){navigator.share({title:document.title,url:c.dataset.url}).catch(function(){})}}'
+            'c.onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(c.dataset.url):Promise.reject()).then(function(){c.textContent="Link copiado ✓"},function(){prompt("Copie o link:",c.dataset.url)})}})();</script>')
+
+
 def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
     leaflet = ('<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">'
                '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>') if mapa else ""
@@ -352,6 +370,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 <main>
 {corpo}
 </main>
+{compartilhar(url, titulo)}
 <footer><p>Desvia reúne, em uma só busca, dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
 <nav class="rodape-links" aria-label="Rodapé">
   <div><b>Desvia</b><a href="{raiz}">Buscar onde descartar</a><a href="{raiz}guias/">Guias por resíduo</a><a href="{raiz}empresas/">Para empresas</a><a href="{raiz}privacidade/">Cookies e privacidade</a></div>
