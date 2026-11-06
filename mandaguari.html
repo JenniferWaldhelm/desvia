@@ -894,7 +894,7 @@
 <!-- NAVEGAÇÃO -->
 <header>
   <nav>
-    <div class="logo">♻ Projeto <span>Desvia</span></div>
+    <a class="logo" href="./" style="text-decoration:none;color:inherit">♻ Projeto <span>Desvia</span></a>
     <ul>
       <li><a href="#como-funciona">Como funciona</a></li>
       <li><a href="#categorias">O que descartar</a></li>
@@ -929,7 +929,7 @@
       <span class="stat-label">Tipos de resíduo</span>
     </div>
     <div class="stat">
-      <span class="stat-num">12</span>
+      <span class="stat-num">11</span>
       <span class="stat-label">Pontos de descarte no mapa</span>
     </div>
     <div class="stat">
@@ -1043,25 +1043,22 @@
     <h2 class="section-title">Pontos de descarte em Mandaguari — onde levar perto de você</h2>
     <p class="section-desc">Veja todos os pontos de coleta e descarte de resíduos de Mandaguari/PR no mapa. Clique em um ponto para ver o endereço, o que ele aceita e a situação da licença ambiental.</p>
 
-    <div class="mapa-wrapper">
+    <!--MAPA-VIVO--><div id="mapa-vivo" style="width:100%;height:420px;border-radius:12px;border:1px solid #e0e0e0;overflow:hidden;margin:0 0 1.2rem"></div>
+<p style="font-size:0.8rem;color:#777;margin:-0.6rem 0 1.2rem">Mapa atualizado automaticamente a partir da base do Desvia. Cor do ponto = situação da licença: verde válida, laranja vencida ou vencendo, azul serviço público, cinza não localizada.</p>
+<script>
+window.addEventListener('load',function(){var el=document.getElementById('mapa-vivo');if(!el||!window.L)return;
+fetch('residuos/mandaguari/pontos.json').then(function(r){return r.json()}).then(function(pts){
+var cores={valida:'#2A7A2A',vencendo:'#C77700',publico:'#1A3A8F',vencida:'#C77700',nao_localizada:'#7A7F8C'};
+var m=L.map('mapa-vivo',{scrollWheelZoom:false});L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(m);
+var g=L.featureGroup(),e=function(t){return String(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;')};
+pts.forEach(function(p){if(p.a==null)return;L.circleMarker([p.a,p.o],{radius:9,color:'#fff',weight:2,fillColor:cores[p.s]||'#7A7F8C',fillOpacity:.95}).bindPopup('<strong>'+e(p.n)+'</strong><br>'+e(p.e)+(p.r?'<br><small>'+e(p.r)+'</small>':'')+(p.t?'<br>'+e(p.t):'')).addTo(g)});
+g.addTo(m);if(g.getLayers().length)m.fitBounds(g.getBounds().pad(.15),{maxZoom:15});else m.setView([-23.5446,-51.671],13);
+m.on('click',function(){m.scrollWheelZoom.enable()});}).catch(function(){el.innerHTML='<p style="padding:1rem">Não foi possível carregar o mapa. <a href="residuos/mandaguari/">Abrir a lista de pontos</a>.</p>'});});
+</script><!--/MAPA-VIVO-->
+<div class="mapa-wrapper">
       <div class="mapa-info">
-        <h3 style="margin-top:0">O que cada cor significa?</h3>
-        <p>No mapa, cada cor identifica o tipo de resíduo aceito no ponto.</p>
-
-        <div class="legenda" style="margin-top:1rem">
-          <div class="legenda-item"><div class="legenda-dot" style="background:#2D6A4F"></div> ♻️ Reciclagem geral / eletrônicos</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#C9A800"></div> 💡 Lâmpadas</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#1E88E5"></div> 💊 Medicamentos</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#1abc9c"></div> 💻 Eletrônicos / toner</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#7f8c8d"></div> 🚗 Pneus</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#e67e22"></div> 🔋 Pilhas / baterias</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#7B2D8B"></div> 🏥 Saúde / vigilância sanitária</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#27ae60"></div> 🌿 Defensivo agrícola</div>
-          <div class="legenda-item"><div class="legenda-dot" style="background:#B7792A"></div> 🧱 Entulho / RCC</div>
-        </div>
-
         <div style="margin-top:1.5rem">
-          <a href="#seletiva" onclick="setTimeout(function(){var t=document.querySelector('[data-tab=seletiva]');if(t)t.click();},100)" class="btn-primary" style="font-size:0.88rem; padding:0.7rem 1.4rem; display:inline-block">🗺 Ver mapa interativo completo</a>
+          <a href="residuos/mandaguari/" class="btn-primary" style="font-size:0.88rem; padding:0.7rem 1.4rem; display:inline-block">📋 Ver a lista completa com licenças</a>
         </div>
       </div>
     </div>
@@ -1125,24 +1122,8 @@
       <div style="grid-column: 1 / -1;">
 
         <!-- Filtros do mapa -->
-        <div id="mapa-filtros" style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.75rem;">
-          <button onclick="filtrarMapa('todos',this)" class="filtro-ativo" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid var(--verde); background:var(--verde); color:#fff; cursor:pointer; font-weight:600;">Todos</button>
-          <button onclick="filtrarMapa('reciclagem',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #2D6A4F; background:#fff; color:#2D6A4F; cursor:pointer;">♻️ Reciclagem</button>
-          <button onclick="filtrarMapa('lampadas',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #C9A800; background:#fff; color:#896f00; cursor:pointer;">💡 Lâmpadas</button>
-          <button onclick="filtrarMapa('medicamento',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #1E88E5; background:#fff; color:#1E88E5; cursor:pointer;">💊 Medicamentos</button>
-          <button onclick="filtrarMapa('eletronicos',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #1abc9c; background:#fff; color:#0e8a6e; cursor:pointer;">💻 Eletrônicos</button>
-          <button onclick="filtrarMapa('pneus',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #7f8c8d; background:#fff; color:#5a6566; cursor:pointer;">🚗 Pneus</button>
-          <button onclick="filtrarMapa('baterias',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #e67e22; background:#fff; color:#b85e0a; cursor:pointer;">🔋 Pilhas/Baterias</button>
-          <button onclick="filtrarMapa('defensivo',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #27ae60; background:#fff; color:#1a7a44; cursor:pointer;">🌿 Defensivo</button>
-          <button onclick="filtrarMapa('entulho',this)" style="font-size:0.78rem; padding:0.35rem 0.75rem; border-radius:20px; border:1.5px solid #B7792A; background:#fff; color:#7a4e15; cursor:pointer;">🧱 Entulho</button>
-        </div>
-
-        <!-- Mapa de pontos de coleta — Leaflet -->
-        <div id="mapa-pontos" style="width:100%; height:380px; border-radius:12px; border:1px solid var(--borda, #e0e0e0); overflow:hidden; margin-bottom:0.6rem;"></div>
-        <p style="font-size:0.78rem; color:var(--cinza-light, #aaa); line-height:1.5;">
-          Pontos de coleta seletiva e descarte especial em Mandaguari. Clique no marcador para detalhes.
-          Dúvidas? <a href="https://wa.me/5543920024725" style="color:var(--verde);" target="_blank" rel="noopener">Fale com o Projeto Desvia</a>.
-        </p>
+        <p style="margin:1rem 0"><a href="#mapa" class="btn-primary" style="font-size:0.88rem;padding:0.6rem 1.2rem;display:inline-block">🗺 Ver todos os pontos no mapa</a>
+        Dúvidas? <a href="https://wa.me/5543920024725" style="color:var(--verde);" target="_blank" rel="noopener">Fale com o Projeto Desvia</a>.</p>
       </div>
     </div>
 

@@ -522,6 +522,20 @@ def gerar():
             destino.write_text(pagina(titulo, descricao, url, "../../../", corpo, jsonld, mapa=True), encoding="utf-8")
             urls.append((url, "0.7"))
 
+        # dados do mapa da cidade em JSON (usado pela página antiga de Mandaguari e por quem quiser reaproveitar)
+        _js = [{"n": p["Nome"], "a": p["_lat"], "o": p["_lng"], "e": "" if pessoa_fisica(p) else p["Endereço"],
+                "r": p["Resíduos aceitos"], "t": p["Telefone"], "s": p["_status"]} for p in do_lugar]
+        (SAIDA / cid_slug).mkdir(parents=True, exist_ok=True)
+        (SAIDA / cid_slug / "pontos.json").write_text(json.dumps(_js, ensure_ascii=False), encoding="utf-8")
+        if cid_slug == "mandaguari":
+            _mg = RAIZ / "mandaguari.html"
+            if _mg.exists():
+                _n = sum(1 for x in _js if x["a"] is not None)
+                _t = _mg.read_text(encoding="utf-8")
+                _t2 = re.sub(r'(<span class="stat-num">)\d+\+?(</span>\s*<span class="stat-label">Pontos de descarte no mapa)', rf"\g<1>{_n}\2", _t)
+                if _t2 != _t:
+                    _mg.write_text(_t2, encoding="utf-8")
+
         # páginas de serviços
         serv_links = []
         _pags = []
