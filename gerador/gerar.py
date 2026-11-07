@@ -636,16 +636,27 @@ def gerar():
         faq = [
             (f"Qual o dia da coleta de lixo no meu bairro em {cidade}?",
              f"Os dias e horários da coleta comum e da coleta seletiva em {cidade} são definidos pelo responsável pelo serviço ({titular}). Consulte {tipo_link}. Eles podem mudar quando há novo contrato (licitação), então confira sempre a fonte oficial."),
+            (f"Que dia passa o caminhão da reciclagem na minha rua em {cidade}?",
+             f"A coleta seletiva (recicláveis) tem dias próprios, diferentes da coleta comum. Procure o seu endereço ou bairro em {tipo_link} e anote os dois dias: o do lixo comum e o da reciclagem."),
+            (f"Qual o contato da coleta de lixo em {cidade}?",
+             f"O serviço é de responsabilidade de {titular}. Use os canais oficiais da prefeitura (ouvidoria ou central de atendimento) para pedir informações ou registrar reclamação."),
             ("O que não pode ir na coleta comum?",
              "Pilhas, baterias, lâmpadas, eletrônicos, remédios, óleo de cozinha, entulho, móveis, pneus e galhos têm destino próprio. Veja onde levar cada um no Desvia."),
             ("A coleta não passou. O que fazer?",
              f"Primeiro, registre a reclamação com {titular} ou na ouvidoria da prefeitura. Se o problema continuar, comunique a agência reguladora que fiscaliza o serviço de limpeza urbana no município (no Paraná, em muitos municípios, a AGEPAR). Ela fiscaliza o titular do serviço, não o morador."),
         ]
         corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">{esc(cidade)}</a> › Coleta de lixo</nav>
-<h1>Coleta de lixo em {esc(cidade)}: dias e horários por bairro</h1>
+<h1>Que dia passa o lixo na sua rua em {esc(cidade)}?</h1>
 <p class="resposta">Os dias e horários da coleta comum e da coleta seletiva em {esc(cidade)} são definidos pelo responsável pelo serviço: <b>{esc(titular)}</b>. Consulte o seu bairro em {tipo_link}:</p>
 <p><a class="pq-btn" href="{esc(link)}" target="_blank" rel="noopener">Ver dias e horários da coleta em {esc(cidade)} ↗</a></p>
 <p class="regra">Os setores e dias de coleta podem mudar quando há novo contrato do serviço (licitação). Confira sempre a fonte oficial antes de colocar o lixo para fora.</p>
+
+<h2>Como descobrir o dia da coleta na sua rua</h2>
+<ol class="lista-texto">
+<li>Abra {tipo_link} no botão acima.</li>
+<li>Procure o seu endereço ou bairro.</li>
+<li>Anote os <b>dois dias</b>: o da coleta comum (lixo orgânico e rejeito) e o da <b>coleta seletiva</b> (recicláveis), que costumam ser diferentes.</li>
+</ol>
 
 <h2>Dicas para a coleta passar sem problema</h2>
 <ul class="lista-texto">
@@ -675,8 +686,8 @@ def gerar():
         ]
         destino = SAIDA / cid_slug / "coleta-de-lixo" / "index.html"
         destino.parent.mkdir(parents=True, exist_ok=True)
-        destino.write_text(pagina(f"Coleta de lixo em {cidade}: dias e horários por bairro | Desvia",
-                                  f"Dia e horário da coleta de lixo e da coleta seletiva em {cidade}: onde consultar o seu bairro, o que não vai na coleta comum e o que fazer se a coleta não passar.",
+        destino.write_text(pagina(f"Que dia passa o lixo na sua rua em {cidade}? Coleta comum e reciclável | Desvia",
+                                  f"Descubra o dia e o horário da coleta de lixo e da coleta seletiva na sua rua em {cidade}, quem atende o serviço e o que fazer se o caminhão não passar.",
                                   url, "../../../", corpo, jsonld), encoding="utf-8")
         urls.append((url, "0.8"))
 
