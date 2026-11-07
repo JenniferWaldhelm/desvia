@@ -1,3 +1,8 @@
 caminho,titulo,evento,contagem
+/desvia,"Desvia: onde descartar resíduos, com a licença de cada empresa",False,4
+busca/todas/armario,busca/todas/armario,True,1
+busca/todas/brec,busca/todas/brec,True,1
+/desvia/residuos/mandaguari,Coleta e descarte de lixo em Mandaguari: onde levar cada coisa | Desvia,False,1
+/desvia/residuos/rolandia,Coleta e descarte de lixo em Rolândia: onde levar cada coisa | Desvia,False,1
+/desvia/residuos/londrina,Coleta e descarte de lixo em Londrina: onde levar cada coisa | Desvia,False,1
 /desvia/residuos,Onde descartar resíduos: cidades | Desvia,False,1
-/desvia,"Desvia: onde descartar resíduos, com a licença de cada empresa",False,1

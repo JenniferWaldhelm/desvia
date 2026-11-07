@@ -25,19 +25,22 @@ else:
 fim = (inicio.replace(day=28) + timedelta(days=4)).replace(day=1) - timedelta(days=1)
 
 
-def api(caminho, **params):
+def api(caminho, tolera_404=False, **params):
     url = f"{SITE}/api/v0/{caminho}?" + urllib.parse.urlencode(params, doseq=True)
     req = urllib.request.Request(url, headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"})
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
+        if e.code == 404 and tolera_404:
+            return {}
         sys.exit(f"GoatCounter respondeu {e.code} em {caminho}: {e.read()[:300]!r}")
 
 
 hits, excluir = [], []
 while True:
-    d = api("stats/hits", start=f"{inicio}", end=f"{fim}", limit=100, exclude_paths=excluir)
+    # a API devolve 404 quando a página seguinte não existe: fim da lista
+    d = api("stats/hits", tolera_404=bool(excluir), start=f"{inicio}", end=f"{min(fim, date.today())}", limit=100, exclude_paths=excluir)
     for h in d.get("hits", []):
         hits.append(h)
         excluir.append(h.get("path_id"))
