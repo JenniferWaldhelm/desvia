@@ -22,7 +22,7 @@ SINONIMOS = {
                            "rack", "movel", "moveis", "volumoso", "estofado", "box"],
     "poda-e-galhos": ["galho", "poda", "folha", "grama", "mato", "capina", "tronco", "arvore", "jardim", "quintal"],
     "madeira": ["madeira", "palete", "pallet", "compensado", "mdf", "serragem", "caixote"],
-    "medicamentos": ["remedio", "medicamento", "comprimido", "xarope", "remedio vencido", "farmacia", "cartela"],
+    "medicamentos": ["remedio", "medicamento", "comprimido", "xarope", "remedio vencido", "farmacia", "cartela", "blister", "cartela de remedio", "embalagem de remedio"],
     "residuos-de-saude": ["seringa", "agulha", "insulina", "perfurocortante", "curativo", "material hospitalar",
                           "raio x", "radiografia", "luva"],
     "reciclaveis": ["reciclavel", "papel", "papelao", "caixa", "jornal", "revista", "plastico", "garrafa pet", "pet",
