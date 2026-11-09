@@ -37,10 +37,19 @@ def api(caminho, tolera_404=False, **params):
         sys.exit(f"GoatCounter respondeu {e.code} em {caminho}: {e.read()[:300]!r}")
 
 
+# O GoatCounter às vezes devolve 404 quando o último dia ainda não foi processado: recua até 3 dias
+ate = min(fim, date.today())
+for _ in range(4):
+    if api("stats/hits", tolera_404=True, start=f"{inicio}", end=f"{ate}", limit=1):
+        break
+    ate -= timedelta(days=1)
+else:
+    sys.exit("GoatCounter sem dados para o período (404). Nada foi alterado.")
+
 hits, excluir = [], []
 while True:
     # a API devolve 404 quando a página seguinte não existe: fim da lista
-    d = api("stats/hits", tolera_404=bool(excluir), start=f"{inicio}", end=f"{min(fim, date.today())}", limit=100, exclude_paths=excluir)
+    d = api("stats/hits", tolera_404=bool(excluir), start=f"{inicio}", end=f"{ate}", limit=100, exclude_paths=excluir)
     for h in d.get("hits", []):
         hits.append(h)
         excluir.append(h.get("path_id"))
