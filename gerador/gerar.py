@@ -634,8 +634,13 @@ def gerar():
         link, titular = (c.get("Link coleta") or "").strip(), (c.get("Titular coleta") or "").strip() or f"Prefeitura de {cidade}"
         if not link:
             continue
+        # a coluna pode ter mais de um link (separados por espaço, vírgula ou |): o 1º é a coleta comum, o 2º a coleta seletiva
+        links = [l for l in re.split(r"[\s,|]+", link) if l.startswith("http")]
+        link = links[0]
         url = f"{BASE_URL}/residuos/{cid_slug}/coleta-de-lixo/"
         tipo_link = "o cronograma oficial (PDF)" if link.lower().endswith(".pdf") else "o mapa oficial da coleta"
+        if len(links) > 1:
+            tipo_link = "as páginas oficiais da coleta comum e da coleta seletiva"
         cats_cid = [s_ for s_ in ("eletronicos", "pilhas-e-baterias", "lampadas", "medicamentos", "oleo-de-cozinha", "entulho", "moveis-e-volumosos", "poda-e-galhos", "pneus")
                     if (SAIDA / cid_slug / s_).exists()]
         nao_vai = "".join(f'<li><a href="../{s_}/">{esc(nomes[s_][1])}</a></li>' for s_ in cats_cid)
@@ -655,6 +660,7 @@ def gerar():
 <h1>Que dia passa o lixo na sua rua em {esc(cidade)}?</h1>
 <p class="resposta">Os dias e horários da coleta comum e da coleta seletiva em {esc(cidade)} são definidos pelo responsável pelo serviço: <b>{esc(titular)}</b>. Consulte o seu bairro em {tipo_link}:</p>
 <p><a class="pq-btn" href="{esc(link)}" target="_blank" rel="noopener">Ver dias e horários da coleta em {esc(cidade)} ↗</a></p>
+{"".join(f'<p><a class="pq-btn" href="{esc(l)}" target="_blank" rel="noopener">Ver dias da coleta seletiva (recicláveis) ↗</a></p>' for l in links[1:2])}
 <p class="regra">Os setores e dias de coleta podem mudar quando há novo contrato do serviço (licitação). Confira sempre a fonte oficial antes de colocar o lixo para fora.</p>
 
 <h2>Como descobrir o dia da coleta na sua rua</h2>
