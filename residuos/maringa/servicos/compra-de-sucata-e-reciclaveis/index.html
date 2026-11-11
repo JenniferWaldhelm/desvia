@@ -31,7 +31,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Luvitec Comércio de Recicláveis e Serviços Eireli (Luvitec Comércio de Aparas)", "a": -23.45985, "o": -51.99978, "id": "mga-259", "s": "valida"}, {"n": "Cimflex Indústria e Comércio de Plásticos Ltda", "a": -23.45341, "o": -51.99219, "id": "mga-306", "s": "vencida"}, {"n": "GRP Indústria e Comércio de Plásticos Ltda", "a": -23.41846, "o": -51.98134, "id": "mga-303", "s": "vencida"}];
+  var pts = [{"n": "Luvitec Comércio de Recicláveis e Serviços Eireli (Luvitec Comércio de Aparas)", "a": -23.45985, "o": -51.99978, "id": "mga-259", "s": "valida"}, {"n": "So Aço Sucatas e Metais Ltda", "a": -23.46092, "o": -51.91408, "id": "mga-325", "s": "entrega"}, {"n": "Cimflex Indústria e Comércio de Plásticos Ltda", "a": -23.45341, "o": -51.99219, "id": "mga-306", "s": "vencida"}, {"n": "GRP Indústria e Comércio de Plásticos Ltda", "a": -23.41846, "o": -51.98134, "id": "mga-303", "s": "vencida"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);

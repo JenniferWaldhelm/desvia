@@ -6,22 +6,26 @@ APU-007,-23.55148,-51.45434,"Rua Ponta Grossa, 1290, Sala A, Centro","Rua Ponta 
 APU-008,,,"Praça Centro Cívico José de Oliveira Rosa, 25, Centro",
 APU-009,-23.54998,-51.45986,"Rua Professor João Cândido Ferreira, 355","Rua Professor João Cândido Ferreira, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86800-090, Brasil"
 APU-010,-23.55176,-51.46178,"Avenida Curitiba, 1121","Pernambucanas, 1121, Avenida Curitiba, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86803-330, Brasil"
-APU-011,-23.57584,-51.48574,"Rua André Korilo, 35, Residencial Interlagos","Rua André Korilo, Apucarana, Paraná, Região Sul, 86802-814, Brasil"
-APU-012,-23.53535,-51.45802,"Rua João Matiuzzi, 940, Parque Bela Vista","Rua João Matiuzzi, Apucarana, Paraná, Região Sul, 86804-190, Brasil"
-APU-013,-23.55148,-51.45434,"Rua Ponta Grossa, 1325, Centro","Rua Ponta Grossa, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86800-030, Brasil"
-APU-014,-23.61416,-51.34619,"Avenida Getúlio Vargas, s/n","Avenida Getúlio Vargas, Correia de Freitas, Apucarana, Paraná, Região Sul, Brasil"
-APU-015,-23.55106,-51.45770,"Avenida Curitiba, 604, Centro","Avenida Curitiba, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86800-090, Brasil"
+APU-011,-23.57584,-51.48574,"Rua André Korilo, 35, Residencial Interlagos, CEP 86802-783","Rua André Korilo, Apucarana, Paraná, Região Sul, 86802-814, Brasil"
+APU-012,-23.53535,-51.45802,"Rua João Matiuzzi, 940, Parque Bela Vista, CEP 86803-180","Rua João Matiuzzi, Apucarana, Paraná, Região Sul, 86804-190, Brasil"
+APU-013,-23.55334,-51.46215,"Rua Ponta Grossa, 1325, Centro, CEP 86800-970","Rua Ponta Grossa, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86803-330, Brasil"
+APU-014,-23.61416,-51.34619,"Avenida Getúlio Vargas, s/n, CEP 86816-970","Avenida Getúlio Vargas, Correia de Freitas, Apucarana, Paraná, Região Sul, Brasil"
+APU-015,-23.55078,-51.45657,"Avenida Curitiba, 604, Centro, CEP 86801-981","Avenida Curitiba, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86800-030, Brasil"
 APU-016,,,"Rua Principal, s/n, São Pedro",
 APU-017,-23.61123,-51.40549,"Rua Apucarana, 556","Rua Apucarana, Vila Reis, Apucarana, Paraná, Região Sul, Brasil"
 APU-018,-23.55775,-51.46128,"Rua Doutor Oswaldo Cruz, 805, Centro","Rua Doutor Oswaldo Cruz, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86800-280, Brasil"
 APU-019,-23.55272,-51.46451,"Praça Interventor Manoel Ribas, 135, Centro","Praça Interventor Manoel Ribas, Apucarana, Paraná, Região Sul, Brasil"
 APU-020,-23.54000,-51.45629,"Rua Uruguai, 190","Rua Uruguai, Apucarana, Paraná, Região Sul, 86804-190, Brasil"
+APU-021,,,"Rua Mário Cilião Sobrinho, 170, Cidade Industrial",
+APU-024,-23.54135,-51.44348,"Avenida Itararé, 113B, CEP 86805-250","Avenida Itararé, Apucarana, Paraná, Região Sul, 86804-190, Brasil"
+APU-025,,,"Rua José Jacinto Fernandes, s/n, CEP 86814-970",
 CAM-006,-23.28944,-51.23514,"Rodovia Celso Garcia Cid, 1, Gleba Cacadores","Rodovia Celso Garcia Cid, Cambé, Paraná, Região Sul, 86185-470, Brasil"
 CAM-009,,,"Rua Uzen Ajimura, 101, Distrito Industrial Doutor Jehovah Almeida Gomes",
 CAM-026,,,"Rua José Carlos Mufatto, 2550, CEP 86187-025",
 IBI-038,-23.26398,-51.03395,"Avenida Parana, 226 - Centro - 86.200-000","Avenida Paraná, Jardim Bom Pastor, Centro, Ibiporã, Paraná, Região Sul, 86200-000, Brasil"
 IBI-039,-23.26929,-51.04271,"Avenida Parana, 188, Centro, 86200-000","Avenida Paraná, Vila Dutra, Centro, Ibiporã, Paraná, Região Sul, 86200-000, Brasil"
 IBI-040,-23.26776,-51.04530,"Avenida Engenheiro Francisco Beltrao, 169 - Centro 86200-970","Agência de Correios de Ibiporã, 169, Avenida Engenheiro Francisco Beltrão, Jardim Cepil, Centro, Ibiporã, Paraná, Região"
+IBI-041,-23.27195,-51.05308,"Avenida Santos Dumont, 251, Sala 03 - Centro 86200-981","Avenida Santos Dumont, Jardim Beltrão II, Centro, Ibiporã, Paraná, Região Sul, 86200-000, Brasil"
 LDA-023,,,www.joguelimpo.org.br,
 LDA-070,,,Aragarça,
 LDA-074,,,Pontos de recebimento e coleta em casa pelo site greeneletron.org.br,
@@ -82,6 +86,7 @@ LDA-379,,,Theodoro Victorelli 150 Loja 30 Helena - 86027-750,
 LDA-380,-23.31093,-51.16474,Paraná 362 Centro - 86010-390,"Avenida Paraná, Centro, Jardim Agari, Centro, Londrina, Paraná, Região Sul, 86020-050, Brasil"
 LDA-381,,,Americo Deolindo Garla 224 Loja Sln 91 Pacaembu - 86079-225,
 LDA-382,,,Avenida Saul Elkind 1513 Conjunto Habitacional Violim - 86084-000,
+LDA-383,-23.31643,-51.15640,"Rua Mato Grosso, 192 - 86010-180","Rua Mato Grosso, Centro, Londrina, Paraná, Região Sul, 86010-180, Brasil"
 MGA-257,-23.53057,-52.00616,"Estrada Pinguim, 814, Gleba Ribeirao Pinguim","Estrada Pinguim, Maringá, Paraná, Região Sul, 87105-040, Brasil"
 MGA-258,-23.36228,-51.89901,"Rodovia Pr 317, Km 02, Lote 326/339-A, S/N, Gleba Patr. Maringa","PR-317, Parque Industrial 200, Maringá, Paraná, Região Sul, 87035-170, Brasil"
 MGA-259,-23.45985,-51.99978,"Avenida Pioneiro Victorio Marcon, 543, Parque Industrial","Avenida Pioneiro Victório Marcon, Distrito Industrial II, Maringá, Paraná, Região Sul, 87065-160, Brasil"
@@ -125,6 +130,51 @@ MGA-296,-23.44787,-51.99563,"Rua Dinerolli Labatut, 126, Jardim Nilza","Rua Dine
 MGA-297,-23.43027,-51.98854,"Estrada Progresso, 934, Gleba Patrimônio Maringá","Estrada Progresso, Maringá, Paraná, Região Sul, 87065-240, Brasil"
 MGA-298,-23.41665,-51.92825,"Rua Deodoro,Marechal, 530, Zona 07","Rua Marechal Deodoro, Zona 07, Maringá, Paraná, Região Sul, 87030-051, Brasil"
 MGA-299,-23.41821,-51.93962,"Avenida Advogado Horacio Raccanello Filho, 5570, Zona 01","Avenida Advogado Horácio Raccanello Filho, Zona 01, Maringá, Paraná, Região Sul, 87020-015, Brasil"
+MGA-315,-23.42542,-51.96168,"Avenida Brasil, 3409 - 87.013-000","Avenida Brasil, Zona 05, Maringá, Paraná, Região Sul, 87015-320, Brasil"
+MGA-316,-23.41892,-51.96399,"Avenida Colombo, 9357 - 87.070-000","Avenida Colombo, Maringá, Paraná, Região Sul, 87070-000, Brasil"
+MGA-317,-23.42550,-51.91123,"Avenida Tuiuti, 710 - Sala 25 Lote 583a-586a - Vila Morangueira - 87.040-360","Avenida Tuiuti, Zona 09, Maringá, Paraná, Região Sul, 87050-465, Brasil"
+MGA-318,-23.42993,-51.93149,"Avenida Sao Paulo, 743 - Loja I116 - Zona I - 87.013-313","Avenida São Paulo, Zona 02, Maringá, Paraná, Região Sul, 87010-360, Brasil"
+MGA-319,-23.42993,-51.93149,"Avenida Sao Paulo, 1099 - Sala 128, Terreo - Centro - 87.030-025","Avenida São Paulo, Zona 02, Maringá, Paraná, Região Sul, 87010-360, Brasil"
+MGA-320,-23.41892,-51.96399,"Avenida Colombo, 9161 - Luc 53 - Gleba Patrimonio Maringá - 87.070-000","Avenida Colombo, Maringá, Paraná, Região Sul, 87070-000, Brasil"
+MGA-321,-23.42542,-51.96168,"Avenida Brasil, 3207 - Centro - 87.013-000","Avenida Brasil, Zona 05, Maringá, Paraná, Região Sul, 87015-320, Brasil"
+MGA-322,-23.42993,-51.93149,"Av. Sao Paulo, 743 - Shopping Avenida Center - Lojas I-153/ I-154 - Piso Terreo - Zona 1 - 87013-040","Avenida São Paulo, Zona 02, Maringá, Paraná, Região Sul, 87010-360, Brasil"
+MGA-323,-23.42993,-51.93149,"Av. Sao Paulo, 1099 - Maringá Park Shopping - Salas 101,102 e 103 - Centro - 87013-040","Avenida São Paulo, Zona 02, Maringá, Paraná, Região Sul, 87010-360, Brasil"
+MGA-324,-23.44964,-51.92679,"Rua Pioneiro Alberto Biazon, 637 - Vila Marumby - 87005-310","Rua Pioneiro Alberto Biazon, Vila Marumby, Maringá, Paraná, Região Sul, 87005-160, Brasil"
+MGA-325,-23.46092,-51.91408,"Rua Severo de Faria Franco, 70 - Gleba Ribeiro Pinguim - 87053-370","Rua Severo de Faria Franco, Maringá, Paraná, Região Sul, 87053-276, Brasil"
+MGA-326,-23.38338,-51.95101,"Avenida das Palmeiras, 525 - Jardim Paris - 87083-350","Avenida das Palmeiras, Jardim Paris, Maringá, Paraná, Região Sul, 87083-240, Brasil"
+MGA-327,-23.43220,-51.90610,"Avenida Brasil, 3457, Centro, 87013-000","Avenida Brasil, Zona 08, Maringá, Paraná, Região Sul, 87050-490, Brasil"
+MGA-328,-23.42542,-51.96168,"Av. Brasil, 3300 - 87013-000","Avenida Brasil, Zona 05, Maringá, Paraná, Região Sul, 87015-320, Brasil"
+MGA-329,-23.42079,-51.94493,"Av. Brasil, 3414 - 87013-000","Avenida Brasil, Zona 01, Maringá, Paraná, Região Sul, 87013-050, Brasil"
+MGA-330,,,"Av. Adv. Horácio Raccanello Filho, 5120 - 87020-035",
+MGA-331,-23.45060,-51.91145,"Avenida Jose Alves Nendo, 946 - Jardim Sao Silvestre 87055-000","Avenida José Alves Nendo, Jardim São Silvestre, Maringá, Paraná, Região Sul, 87055-000, Brasil"
+MGA-332,-23.43145,-51.91376,"Av Guedner, 2877 - Gleba Ribeirao Pinguim 87053-265","Avenida Guedner, Zona 08, Maringá, Paraná, Região Sul, 87050-400, Brasil"
+MGA-333,-23.41472,-51.88017,"Av Jinroku Kubota, 4350 - Bom Jardim 87047-710","Avenida Jinroku Kubota, Bom Jardim, Maringá, Paraná, Região Sul, 87113-410, Brasil"
+MGA-334,,,"Praça Pioneiro Waldemar Pulzato, 48 - Jd Brasil 87083-290",
+MGA-335,-23.41896,-51.93810,"Avenida Tamandare, 655 - Zona 01 87013-210","Avenida Tamandaré, Zona 01, Maringá, Paraná, Região Sul, 87013-060, Brasil"
+MGA-336,-23.42904,-51.91206,"Av Monteiro Lobato, 191 - Zona 08 87050-280","Avenida Monteiro Lobato, Zona 08, Maringá, Paraná, Região Sul, 87050-465, Brasil"
+MGA-337,-23.44987,-51.97651,"Av Pioneiro Mauricio Mariani, 395 - Jardim Itaipu 87065-510","Avenida Pioneiro Maurício Mariani, Parque Itaipu I, Maringá, Paraná, Região Sul, 87065-290, Brasil"
+MGA-338,-23.39870,-51.91937,"Av Pedro Taques, 4488 - Loteamento Sumare (bairro Jardim Al 87035-000","Avenida Pedro Taques, Jardim Alvorada I, Maringá, Paraná, Região Sul, 87033-000, Brasil"
+MGA-339,-23.40799,-51.91573,"Avenida Lucilio de Held, 1401 - Jardim Alvorada 87033-230","Avenida Lucílio de Held, Jardim Alvorada I, Maringá, Paraná, Região Sul, 87033-080, Brasil"
+MGA-340,,,"Avenida Pioneiro Alicio Arantes Cam, 2882 - Loteamento Alto da Boa Vista 87083-020",
+MGA-341,-23.43495,-51.92745,"Av Sao Paulo, 2589 - Vila Bosque 87005-040","Avenida São Paulo, Vila Bosque, Maringá, Paraná, Região Sul, 87010-360, Brasil"
+MGA-342,-23.40305,-51.89393,"Avenida Tuiuti, 3181 - Jardim Novo Oasis 87043-589","Avenida Tuiuti, Conjunto Residencial Branca de Jesus Camargo Vieira, Maringá, Paraná, Região Sul, 87040-440, Brasil"
+MGA-343,-23.40921,-51.93106,"Rua Sao Silvestre, 261 - Vila Santo Antonio 87030-140","Rua São Silvestre, Vila Santo Antônio, Maringá, Paraná, Região Sul, 87030-260, Brasil"
+MGA-344,-23.44878,-51.94919,"Av Arquiteto Nildo Ribeiro da Rocha, 4884 - Jardim Higienopolis 87060-390","Avenida Arquiteto Nildo Ribeiro da Rocha, Jardim Higienópolis, Maringá, Paraná, Região Sul, 87060-400, Brasil"
+MGA-345,-23.41893,-51.90521,"Av Sao Domingos, 1969 - Vila Morangueira 87040-000","Avenida São Domingos, Vila Morangueira, Maringá, Paraná, Região Sul, 87040-360, Brasil"
+MGA-346,-23.42066,-51.94830,"Avenida Brasil, 4724 - Zona 04 87014-070","Amigão Supermercados, 4724, Avenida Brasil, Zona 04, Maringá, Paraná, Região Sul, 87014-010, Brasil"
+MGA-347,-23.38598,-51.90311,"Rua Pioneiro Jose de Paula, 1504 - Jardim Novo Alvorada 87035-500","Rua Pioneiro José de Paula, Jardim Novo Alvorada, Maringá, Paraná, Região Sul, 87035-270, Brasil"
+MGA-348,-23.44607,-51.91337,"Rua Jose Moreno Junior, 340 - Jardim Aclimacao 87050-710","Rua José Moreno Júnior, Zona 08, Maringá, Paraná, Região Sul, 87050-440, Brasil"
+MGA-349,,,"Praça Dep Renato Celidonio 542 Cc Com, 542 - Zona 01 87001-970",
+MGA-350,-23.42061,-51.92819,"Avenida Pedro Taques, 1142 - Zona 03 87030-981","Avenida Pedro Taques, Zona 03, Maringá, Paraná, Região Sul, 87013-020, Brasil"
+MGA-351,-23.42033,-51.90771,"Avenida Tuiuti, 920 - Vila Morangueira 87040-981","Avenida Tuiuti, Vila Morangueira, Maringá, Paraná, Região Sul, 87030-120, Brasil"
+MGA-352,-23.42079,-51.94493,"Avenida Brasil, 6032, Salas 1 2 e 3 - Zona 05 87015-981","Avenida Brasil, Zona 01, Maringá, Paraná, Região Sul, 87013-050, Brasil"
+MGA-353,-23.42001,-51.93060,"Avenida Maua, 2698 - Zona 01 87013-981","Avenida Mauá, Zona 01, Maringá, Paraná, Região Sul, 87013-020, Brasil"
+MGA-354,-23.52571,-52.05244,"Rua Ernesto Rossini, 555 - Distrito de Floriano 87105-970","Rua Ernesto Rossini, Distrito de Floriano, Maringá, Paraná, Região Sul, 87105-040, Brasil"
+MGA-355,-23.42182,-51.94524,Rua Santos Dumont 2871 Zona 01 - 87013-050,"Rua Santos Dumont, Zona 01, Maringá, Paraná, Região Sul, 87013-050, Brasil"
+MGA-356,-23.42106,-51.93189,Avenida Brasil 3253 Zona 01 - 87013-000,"Avenida Brasil, Zona 01, Maringá, Paraná, Região Sul, 87013-020, Brasil"
+MGI-018,-23.52750,-51.67285,"Avenida Amazonas, 807, Centro, 86975-000","Avenida Amazonas, Centro, Mandaguari, Paraná, Região Sul, 86975-000, Brasil"
+MGI-019,,,"Praça dos Tres Poderes, 281 - Centro 86975-970",
+MGI-020,-23.52891,-51.66992,Amazonas 471 Centro - 86975-000,"Avenida Amazonas, Centro, Mandaguari, Paraná, Região Sul, 86975-000, Brasil"
 ROL-018,-23.31396,-51.36218,"Rua Estilac Leal, 21-A, Centro","Rua Estilac Leal, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-123, Brasil"
 ROL-019,-23.30135,-51.34528,"Avenida Itamaraty, 3180, Pq Industrial","Avenida Itamaraty, Jardim Planalto, Centro, Rolândia, Paraná, Região Sul, 86600-469, Brasil"
 ROL-020,,,"Rua Shoshishi Sasaky, 390, Pq Industrial Bandeirantes",
@@ -133,3 +183,8 @@ ROL-022,-23.35896,-51.39708,"Rodovia Br 369, S/N, Jardim Caviuna","BR-369, Cebol
 ROL-023,,,"Rua Jose Nicola Caliento, 740, Jardim Rosangelo",
 ROL-025,-23.24401,-51.40508,"Rodovia Pr 170 Km 07 Sao Martinho, 0, Zona Rural","Rodovia João Lunardelli, São Martinho, Rolândia, Paraná, Região Sul, 86609-000, Brasil"
 ROL-030,-23.31161,-51.36277,"Avenida Presidente Bernardes, 809, CEP 86600-067","Avenida Presidente Bernardes, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-117, Brasil"
+ROL-037,-23.31505,-51.37191,"Avenida Interventor Manoel Ribas, 1096 - A - Centro - 86.600-105","Avenida Interventor Manoel Ribas, Centro Histórico, Rolândia, Paraná, Região Sul, 86000-147, Brasil"
+ROL-038,-23.31218,-51.36850,"Avenida Interventor Manoel Ribas, 1207, Centro, 86600-061","1207, Avenida Interventor Manoel Ribas, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-057, Brasil"
+ROL-039,-23.31030,-51.36611,"Avenida Interventor Manoel Ribas, 877 - Centro 86600-970","877, Avenida Interventor Manoel Ribas, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-105, Brasil"
+ROL-040,-23.31438,-51.37022,"Avenida Salgado Filho, 142, Lojas 13 e 14 - Centro 86600-981","Avenida Salgado Filho, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-051, Brasil"
+ROL-041,-23.31094,-51.36696,Avenida Interventor Manoel Ribas 995 Centro - 86600-105,"Farmácia Rolândia, 995, Avenida Interventor Manoel Ribas, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-105, Bra"

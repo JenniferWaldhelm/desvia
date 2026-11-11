@@ -1,69 +1,72 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 51 (já aparecem no mapa)
-- Endereços que o OpenStreetMap não achou: 12
-- Possíveis duplicados: 0
+- Coordenadas achadas nesta rodada: 53 (já aparecem no mapa)
+- Endereços que o OpenStreetMap não achou: 18
+- Possíveis duplicados: 1
 
 ## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
 
-- APU-020 V. Farias: -23.54000, -51.45629
-- LDA-328 Magazine Luiza – Filial 182: -23.30872, -51.15789
-- LDA-329 Magazine Luiza – Filial 975: -23.31202, -51.14262
-- LDA-330 Loja Vivo Royal Plaza Shopping: -23.31091, -51.15452
-- LDA-331 Loja Vivo Londrina Norte Shopping: -23.28289, -51.15222
-- LDA-332 Loja Vivo Catuaí Shopping: -23.44208, -51.13619
-- LDA-333 Loja Vivo Boulevard Londrina Shopping: -23.31202, -51.14262
-- LDA-335 Loja Vivo – Avenida Saul Elkind: -23.26072, -51.18970
-- LDA-336 Loja Vivo – Rua Benjamin Constant: -23.30872, -51.15789
-- LDA-337 Loja Vivo – Avenida Paraná: -23.61144, -51.18813
-- LDA-338 Prefeitura de Londrina: ponto de eletroeletrônicos: -23.32349, -51.15509
-- LDA-340 Magazine Luiza – Filial 78: -23.31491, -51.16150
-- LDA-341 Magazine Luiza – Filial 271: -23.25762, -51.15292
-- LDA-342 Casas Bahia – Rua Benjamin Constant: -23.30858, -51.16165
-- LDA-343 Supermercados Angeloni – Gleba Palhano: -23.32896, -51.17485
-- LDA-344 Leroy Merlin – Londrina: -23.31281, -51.14352
-- LDA-345 Casas Bahia – Rod. Celso Garcia Cid: -23.36387, -51.14529
-- LDA-346 Pioneer - dos Anjos e Campana: -23.31116, -51.17782
-- LDA-347 Help Fax - Epson: -23.30561, -51.16809
-- LDA-348 Imperio do Gelato: -23.34751, -51.14775
-- LDA-349 NS Personalizados: -23.31109, -51.12434
-- LDA-350 Gráfica PDB Digital: -23.31557, -51.15729
-- LDA-351 Hortifruti Quintino: -23.30561, -51.16809
-- LDA-352 MP Multi Store: -23.31023, -51.18922
-- LDA-353 Unidade Jadlog Londrina 01: -23.29341, -51.14347
-- LDA-355 Bazar Avenida: -23.31864, -51.12564
-- LDA-356 Controlpot Máquinas Profissionais: -23.36613, -51.14318
-- LDA-357 Ponto Pet: -23.31628, -51.11497
-- LDA-358 Asterísticos Presentes Postal: -23.33186, -51.16988
-- LDA-359 Shop do Cartucho: -23.31864, -51.12564
-- LDA-360 Log Speed Logística Rápida e Segura: -23.34217, -51.17022
-- LDA-361 Eletro Londres: -23.34015, -51.13199
-- LDA-362 O Senhor das Camisetas: -23.28044, -51.17348
-- LDA-363 AC Londrina: -23.31298, -51.15809
-- LDA-364 AC Jardim Bandeirante: -23.31131, -51.20545
-- LDA-365 AGF Shopping Com Tour: -23.29862, -51.19196
-- LDA-366 AGF Saul Elkind: -23.26054, -51.14729
-- LDA-367 AGF Dez de Dezembro: -23.35544, -51.14952
-- LDA-368 AGF do Lago: -23.31682, -51.17710
-- LDA-369 AGF Ipiranga: -23.32349, -51.15509
-- LDA-370 AGF Paço Municipal: -23.32203, -51.15495
-- LDA-371 AGF Palhano: -23.36387, -51.14529
-- LDA-372 AGF Palmares: -23.29399, -51.16280
-- LDA-373 AGF Quintino: -23.30561, -51.16809
-- LDA-374 AGF Jardim Higienópolis: -23.32052, -51.16650
-- LDA-375 AGF Terminal Central: -23.31376, -51.16278
-- LDA-377 Kipresentes: -23.32239, -51.22669
-- LDA-380 Jufap (telefonia) – Centro: -23.31093, -51.16474
-- IBI-038 Loja Vivo – Avenida Parana: -23.26398, -51.03395
-- IBI-039 Magazine Luiza – Filial 183: -23.26929, -51.04271
-- IBI-040 Correios AC Ibiporã: -23.26776, -51.04530
+- APU-011 CE Faria Papelaria e Personalizados (ponto Jadlog): -23.57584, -51.48574
+- APU-012 Jadlog Apucarana 01: -23.53535, -51.45802
+- APU-013 Correios AC Apucarana: -23.55334, -51.46215
+- APU-014 Correios AGC Correia de Freitas: -23.61416, -51.34619
+- APU-015 Correios AGF Cidade Alta: -23.55078, -51.45657
+- APU-024 Pulo do Gato Eletrônicos Ltda: -23.54135, -51.44348
+- IBI-041 Correios AGF Santos Dumont: -23.27195, -51.05308
+- MGI-018 Magazine Luiza – Filial 693: -23.52750, -51.67285
+- MGI-020 Lemar – Centro: -23.52891, -51.66992
+- ROL-037 Loja Vivo – Avenida Interventor Manoel Ribas: -23.31505, -51.37191
+- ROL-038 Magazine Luiza – Filial 961: -23.31218, -51.36850
+- ROL-039 Correios AC Rolândia: -23.31030, -51.36611
+- ROL-040 Correios AGF Salgado Filho: -23.31438, -51.37022
+- ROL-041 Lemar – Centro: -23.31094, -51.36696
+- MGA-315 Magazine Luiza – Filial 67: -23.42542, -51.96168
+- MGA-316 Magazine Luiza – Filial 298: -23.41892, -51.96399
+- MGA-317 Loja Vivo Shopping Cidade: -23.42550, -51.91123
+- MGA-318 Loja Vivo Shopping Avenida Center: -23.42993, -51.93149
+- MGA-319 Loja Vivo Maringá Park Shopping Center: -23.42993, -51.93149
+- MGA-320 Loja Vivo Catuaí Shopping Maringá: -23.41892, -51.96399
+- MGA-321 Loja Vivo – Avenida Brasil: -23.42542, -51.96168
+- MGA-322 Loja TIM Avenida Shopping Maringá: -23.42993, -51.93149
+- MGA-323 Loja TIM Maringá Park Shopping Center: -23.42993, -51.93149
+- MGA-324 Lar Preservação da Vida: -23.44964, -51.92679
+- MGA-325 So Aço Sucatas e Metais Ltda: -23.46092, -51.91408
+- MGA-326 Paraná Metais S.E: -23.38338, -51.95101
+- MGA-327 Magazine Luiza – Filial 940: -23.43220, -51.90610
+- MGA-328 Casas Bahia Maringá – Zona 01: -23.42542, -51.96168
+- MGA-329 Casas Bahia Maringá – Centro: -23.42079, -51.94493
+- MGA-331 Amigo Express: -23.45060, -51.91145
+- MGA-332 Bella Graph: -23.43145, -51.91376
+- MGA-333 Unidade Jadlog Maringá 02: -23.41472, -51.88017
+- MGA-335 Logspeed: -23.41896, -51.93810
+- MGA-336 Eletro Belav: -23.42904, -51.91206
+- MGA-337 1000coisas: -23.44987, -51.97651
+- MGA-338 Petshop Canção: -23.39870, -51.91937
+- MGA-339 Loja K3 Brindes e Copos: -23.40799, -51.91573
+- MGA-341 Okada Produtos Naturais: -23.43495, -51.92745
+- MGA-342 Help Print: -23.40305, -51.89393
+- MGA-343 Escritório Contábil Piratininga: -23.40921, -51.93106
+- MGA-344 Papelaria Maranatha: -23.44878, -51.94919
+- MGA-345 Cãotinho do Focinho: -23.41893, -51.90521
+- MGA-346 Banca Celular Plazza: -23.42066, -51.94830
+- MGA-347 Bela Maringá: -23.38598, -51.90311
+- MGA-348 Clipe Cópias: -23.44607, -51.91337
+- MGA-350 Correios AGF Jardim Alvorada: -23.42061, -51.92819
+- MGA-351 Correios AGF Vila Morangueira: -23.42033, -51.90771
+- MGA-352 Correios AGF Praça Pio XII: -23.42079, -51.94493
+- MGA-353 Correios AGF Praça Rocha Pombo: -23.42001, -51.93060
+- MGA-354 Correios AGC Floriano: -23.52571, -52.05244
+- MGA-355 Batti Maldonado – SDM: -23.42182, -51.94524
+- MGA-356 Batti Maldonado – Zona 01: -23.42106, -51.93189
+- LDA-383 Astro Cartuchos e Toner: -23.31643, -51.15640
 
 ## Sem coordenada (pegar no Google Maps)
 
 - APU-001 COCAP (Cooperativa Mista de Trabalho e Produção de Catadores e Separadores de Materiais Recicláveis de Apucarana) (Travessa Palmeira, 111, Apucarana)
 - APU-008 Prefeitura de Apucarana (Centro Cívico) (Praça Centro Cívico José de Oliveira Rosa, 25, Centro, Apucarana)
 - APU-016 Correios AGC Caixa de São Pedro (Rua Principal, s/n, São Pedro, Apucarana)
-- LDA-327 Magazine Luiza – Filial 980 (Rua Americo Deolindo Garla, 224 - 86.079-225, Londrina)
+- APU-021 Gonçales Pneus Ltda (GP Car Center) (Rua Mário Cilião Sobrinho, 170, Cidade Industrial, Apucarana)
+- APU-025 Correios AGC São Pedro da Taquara (Rua José Jacinto Fernandes, s/n, CEP 86814-970, Apucarana)
 - LDA-334 Loja Vivo Aurora Shopping (Rua Aylton da Silva Senna, 400 - Loja Luc L38/t - Gleba Fazenda Palhano - 86.050-460, Londrina)
 - LDA-339 Alfa Copiadora (Rua Eleonor Rooselt, 322 - Brasilia - 86039-480, Londrina)
 - LDA-354 Agência Posta Ai (Avenida Jules Verne, 895 - Santa Rita 7 86072-450, Londrina)
@@ -72,4 +75,13 @@
 - LDA-379 Jufap (telefonia) – Shopping Boulevard (Theodoro Victorelli 150 Loja 30 Helena - 86027-750, Londrina)
 - LDA-381 Jufap (telefonia) – Shopping Norte (Americo Deolindo Garla 224 Loja Sln 91 Pacaembu - 86079-225, Londrina)
 - LDA-382 Lemar – Cinco Conjuntos (Avenida Saul Elkind 1513 Conjunto Habitacional Violim - 86084-000, Londrina)
+- MGI-019 Correios AC Mandaguari (Praça dos Tres Poderes, 281 - Centro 86975-970, Mandaguari)
+- MGA-330 Supermercados Angeloni Maringá – Armazém (Av. Adv. Horácio Raccanello Filho, 5120 - 87020-035, Maringá)
+- MGA-334 Logstok (Praça Pioneiro Waldemar Pulzato, 48 - Jd Brasil 87083-290, Maringá)
+- MGA-340 Ebox (Avenida Pioneiro Alicio Arantes Cam, 2882 - Loteamento Alto da Boa Vista 87083-020, Maringá)
+- MGA-349 Correios AC Maringá (Praça Dep Renato Celidonio 542 Cc Com, 542 - Zona 01 87001-970, Maringá)
+
+## Possíveis duplicados (decidir qual fica)
+
+- Nome parecido a 0 m: MGA-319 Loja Vivo Maringá Park Shopping Center / MGA-323 Loja TIM Maringá Park Shopping Center
 
