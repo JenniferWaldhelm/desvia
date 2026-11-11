@@ -285,14 +285,16 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     cats_js = json.dumps({s: nomes[s][1] for s in cats_ordem}, ensure_ascii=False)
     return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
 <h1>Onde doar, reciclar e descartar em {esc(cidade)}</h1>
-<p class="resposta">Antes de jogar fora, veja se dá para doar, vender ou reciclar. Aqui estão os pontos de entrega, brechós, cooperativas e empresas de coleta e destinação de {esc(cidade)} e região, com a situação da licença ambiental de cada uma.</p>
-<button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe o que fazer? Me ajude a decidir</button>
-{link_coleta(cidade)}
+<p class="resposta">Pontos de entrega, brechós, cooperativas e empresas de {esc(cidade)}, com a situação da licença de cada uma.</p>
+<div class="atalhos-topo"><button type="button" class="btn-ajuda" data-ajuda>🧭 Me ajude a decidir</button>
+{link_coleta(cidade)}</div>
 
 <section class="ferramenta" aria-label="Mapa e lista com filtros">
   <aside class="painel">
     <div class="filtros">
       <input id="q" type="search" placeholder="O que você tem? sofá, roupa, pilha, remédio, nome da empresa…" autocomplete="off" aria-label="Buscar">
+      <button type="button" class="btn-perto" data-perto>📍 Perto de mim</button>
+      <details class="mais-filtros" id="maisFiltros"><summary>Filtros <span class="n-filtros" id="nFiltros"></span></summary>
       <div>
         <div class="flabel">O que você quer fazer</div>
         <div class="seg" role="group" aria-label="Tipo de atendimento" id="seg">
@@ -309,15 +311,16 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
         <div class="chips" id="chips">{chips}</div>
       </div>
       <div class="checks">
-        <label><input type="checkbox" id="fLic"> Só com licença válida ou serviço público</label>
+        <label><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>
         <label><input type="checkbox" id="fLoc"> Só com sede em {esc(cidade)}</label>
       </div>
+      </details>
     </div>
     <div class="listhead"><span><b id="count">0</b> resultados</span><button type="button" class="limpar" id="limpar">Limpar filtros</button></div>
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>
-    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Licença</b><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Não localizada</button></div>
+    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Situação</b><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="entrega" aria-pressed="true"><i style="background:#2B7A8C"></i>Ponto de entrega</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Não localizada</button></div>
   </div>
 </section>
 

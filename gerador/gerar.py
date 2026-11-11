@@ -152,7 +152,7 @@ REGRAS_LOCAIS = {
     ("londrina", "poda-e-galhos"): "Em Londrina, os PEVs públicos recebem até 1 m³ por pessoa por mês de poda, madeira e entulho.",
 }
 
-ORDEM_STATUS = {"valida": 0, "vencendo": 1, "publico": 2, "vencida": 3, "nao_localizada": 4}
+ORDEM_STATUS = {"valida": 0, "vencendo": 1, "publico": 2, "entrega": 2, "vencida": 3, "nao_localizada": 4}
 EMPRESA_TOKENS = ["ltda", " me", "eireli", "s/a", " sa", "epp", "coop", "associa", "ong ", "programa", "pev ",
                   "cmtu", "prefeitura", "projeto", "central", "ambiental", "comerc", "industr", "recicla",
                   "estopa", "catador", "supermercado", "farmacia", "magazine", "eletro", "vigilancia", "almoxarifado"]
@@ -203,6 +203,8 @@ def status_licenca(p):
         return "valida", validade
     if tipo_ponto in ("PEV público", "Programa logística reversa"):
         return "publico", None
+    if tipo_ponto == "PEV privado":
+        return "entrega", None  # farmácia, mercado, loja: só recebe e repassa; licença não se aplica ao balcão
     return "nao_localizada", None
 
 
@@ -233,6 +235,8 @@ def selo_licenca(p):
         if p["Tipo de ponto"] == "Programa logística reversa":
             return "neutro", "Programa de logística reversa."
         return "neutro", "Serviço público municipal."
+    if st == "entrega":
+        return "neutro", "Ponto de entrega: o estabelecimento recebe o material e repassa para o programa ou a empresa de destinação."
     return "aviso", f"Licença não localizada nas bases consultadas em {verif}."
 
 
@@ -341,7 +345,9 @@ def compartilhar(url, titulo):
 
 def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
     leaflet = ('<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">'
-               '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>') if mapa else ""
+               '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>'
+               '<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha256-YU3qCpj/P06tdPBJGPax0bm6Q1wltfwjsho5TR4+TYc=" crossorigin="">'
+               '<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg=" crossorigin="" defer></script>') if mapa else ""
     ld = "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in jsonld)
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
@@ -377,7 +383,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
   <div><b>Cidades</b>{"".join(f'<a href="{raiz}residuos/{c}/">{esc(n)}</a>' for c, n in CIDADES.items())}</div>
   <div><b>Contato</b><a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div>
 </nav></footer>
-{f'''<div id="cookies" class="cookies" hidden role="dialog" aria-label="Aviso de cookies"><p>Usamos cookies só para medir visitas e melhorar o site (Google Analytics). Não usamos para anúncios. <a href="{raiz}privacidade/">Política de cookies</a></p><div class="cookies-bt"><button type="button" data-c="nao">Recusar opcionais</button><button type="button" data-c="sim" class="cookies-ok">Aceitar</button></div></div>
+{f'''<div id="cookies" class="cookies" hidden role="dialog" aria-label="Aviso de cookies"><p>Cookies só para medir visitas, sem anúncios. <a href="{raiz}privacidade/">Saiba mais</a></p><div class="cookies-bt"><button type="button" data-c="nao">Recusar</button><button type="button" data-c="sim" class="cookies-ok">Aceitar</button></div></div>
 <script>(function(){{var b=document.getElementById("cookies");if(!b)return;var v=null;try{{v=localStorage.getItem("desvia-cookies")}}catch(e){{}}if(!v)b.hidden=false;b.addEventListener("click",function(e){{var c=e.target.getAttribute("data-c");if(!c)return;try{{localStorage.setItem("desvia-cookies",c)}}catch(x){{}}b.hidden=true;if(c==="sim"&&window.desviaGA)desviaGA()}});document.querySelectorAll("[data-cookies-abrir]").forEach(function(a){{a.addEventListener("click",function(ev){{ev.preventDefault();b.hidden=false}})}})}})();</script>''' if GA4 else ""}
 {f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER else ""}
 </body>
@@ -459,7 +465,7 @@ def mapa_js(pts):
 <script>
 window.addEventListener('load', function () {{
   var pts = {json.dumps(dados, ensure_ascii=False)};
-  var cores = {{valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', vencida: '#C77700', nao_localizada: '#7A7F8C'}};
+  var cores = {{valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'}};
   var mapa = L.map('mapa', {{scrollWheelZoom: false}});
   L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{maxZoom: 18, attribution: '&copy; OpenStreetMap'}}).addTo(mapa);
   var grupo = L.featureGroup();

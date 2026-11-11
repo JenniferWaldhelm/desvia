@@ -47,14 +47,15 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     <label class="campo"><span>O que você tem?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="sofá, roupa, pilha, remédio, entulho…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
     <button type="submit">Buscar</button>
-    <div class="busca-filtros">
+    <button type="button" class="btn-perto" data-perto>📍 Perto de mim</button>
+    <details class="mais-filtros mf-home" id="maisFiltros"><summary>Filtros <span class="n-filtros" id="nFiltros"></span></summary><div class="busca-filtros">
       <label class="filtro"><span>O que você quer fazer</span><select id="fQuem" name="quem">
         <option value="todos">Tudo</option><option value="doar">Doar</option><option value="vender">Vender ou trocar</option>
         <option value="reciclar">Reciclar</option><option value="descartar">Descartar com segurança</option>
         <option value="empresa">Empresas: coleta e destinação</option></select></label>
       <label class="filtro"><span>Tipo de resíduo</span><select id="fTipo" name="tipo"><option value="">Todos os tipos</option>{opcoes_tipo}</select></label>
-      <label class="filtro-lic"><input type="checkbox" id="fLic"> Só com licença válida ou serviço público</label>
-    </div>
+      <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>
+    </div></details>
   </form>
   <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe o que fazer? Me ajude a decidir</button>
   <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
@@ -66,7 +67,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>
-    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Licença</b><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Não localizada</button></div>
+    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Situação</b><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="entrega" aria-pressed="true"><i style="background:#2B7A8C"></i>Ponto de entrega</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Não localizada</button></div>
   </div>
 </section>
 

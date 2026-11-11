@@ -351,3 +351,35 @@ a.btn-ajuda { text-decoration: none; margin-left: 8px; }
 .compartilhar-bt [hidden]{display:none}
 
 .sug-titulo{padding:.4rem .8rem;font-size:.78rem;opacity:.7}
+
+/* ── UX nov/2026: filtros recolhíveis, perto de mim, cookies compacto, CTA discreto ── */
+.mais-filtros { border-top: 1px solid var(--cinza-claro); margin-top: 6px; }
+.mais-filtros > summary { cursor: pointer; list-style: none; padding: 10px 2px; font-weight: 700; font-size: .92rem; color: var(--azul, #1A3A8F); display: flex; align-items: center; gap: 6px; }
+.mais-filtros > summary::-webkit-details-marker { display: none; }
+.mais-filtros > summary::before { content: "⚙"; }
+.mais-filtros > summary::after { content: "▾"; margin-left: auto; transition: transform .2s; }
+.mais-filtros[open] > summary::after { transform: rotate(180deg); }
+.mais-filtros > div { margin-bottom: 10px; }
+.mf-home { flex: 1 1 100%; order: 2; margin-top: 0; padding: 0 18px; background: var(--off-white); }
+.mf-home .busca-filtros { border-top: 0; padding: 0 0 12px; background: transparent; }
+.btn-perto { font: inherit; font-weight: 700; font-size: .92rem; border: 1.5px solid var(--cinza-claro); background: #fff; color: var(--escuro); border-radius: 10px; padding: 9px 14px; cursor: pointer; margin-top: 8px; width: 100%; }
+.btn-perto[aria-pressed=true] { background: #E8622A; border-color: #E8622A; color: #fff; }
+.busca > .btn-perto { flex: 1 1 100%; order: 4; margin: 0; border-radius: 0 0 14px 14px; border-width: 1.5px 0 0; }
+.ponto .dist { margin: 0 0 4px; font-size: .82rem; font-weight: 700; color: #E8622A; }
+.ponto .acoes .principal { background: var(--verde); color: #fff !important; border-color: var(--verde); font-weight: 700; }
+.atalhos-topo { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
+.atalhos-topo .btn-ajuda { margin: 0; }
+.cookies { left: 8px; right: 8px; bottom: 8px; padding: 8px 12px; gap: 8px; border-radius: 10px; }
+.cookies p { font-size: .8rem; flex: 1 1 220px; }
+.cookies button { padding: .35rem .7rem; font-size: .85rem; }
+header .menu-cta { background: transparent !important; border: 1.5px solid rgba(255,255,255,.55); color: #fff !important; font-weight: 600; }
+.marker-cluster { background: rgba(26,58,143,.25); border-radius: 50%; }
+.marker-cluster div { background: #1A3A8F; color: #fff; width: 30px; height: 30px; margin: 5px; border-radius: 50%; text-align: center; font: 700 12px/30px system-ui, sans-serif; }
+@media (max-width: 860px) { .busca > .btn-perto { order: 4; } .busca > button[type=submit] { order: 3; border-radius: 0; } }
+.ponto .acoes .principal { padding: 6px 12px !important; border-radius: 8px; text-decoration: none !important; }
+.busca > button.btn-perto { background: #fff; color: var(--escuro); font-weight: 700; }
+.busca > button.btn-perto[aria-pressed=true] { background: #E8622A; color: #fff; }
+.ponto .acoes .principal { white-space: nowrap; }
+.ponto .acoes { display: flex !important; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.ponto .acoes > * { flex: 0 0 auto !important; width: auto !important; }
+.ponto .acoes .informar { flex-basis: 100% !important; font-size: .8rem; font-weight: 500; opacity: .75; }

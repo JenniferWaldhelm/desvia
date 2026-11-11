@@ -1,8 +1,8 @@
 /* Mapa com filtros da página de cada cidade. Dados em PONTOS e CATS (definidos na página). */
 (function () {
-  var CORES = { valida: '#2A7A2A', vencendo: '#C77700', vencida: '#C77700', publico: '#1A3A8F', nao_localizada: '#7A7F8C' };
-  var ORDEM = { valida: 0, vencendo: 1, publico: 2, vencida: 3, nao_localizada: 4 };
-  var estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '', fora: {} };
+  var CORES = { valida: '#2A7A2A', vencendo: '#C77700', vencida: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', nao_localizada: '#7A7F8C' };
+  var ORDEM = { valida: 0, vencendo: 1, publico: 2, entrega: 2, vencida: 3, nao_localizada: 4 };
+  var estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '', fora: {}, pos: null };
   var selCidade = document.getElementById('cidade');
   var fLoc = document.getElementById('fLoc');
   var lista = document.getElementById('lista');
@@ -61,7 +61,7 @@
     if (estado.cid && p.cs.indexOf(estado.cid) < 0) return false;
     if (estado.cat && p.c.indexOf(estado.cat) < 0) return false;
     if (estado.p !== 'todos' && p.pp.indexOf(estado.p) < 0) return false;
-    if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo' || p.st === 'publico')) return false;
+    if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo' || p.st === 'publico' || p.st === 'entrega')) return false;
     if (estado.loc && !p.loc) return false;
     if (estado.fora[p.st === 'vencendo' ? 'vencida' : p.st]) return false;
     if (estado.q) {
@@ -79,8 +79,15 @@
     return dig.length >= 10 ? '<a href="tel:+55' + dig + '">' + esc(t) + '</a>' : esc(t);
   }
 
+  function distKm(a, b) {
+    var r = Math.PI / 180, dLa = (b[0] - a[0]) * r, dLo = (b[1] - a[1]) * r;
+    var x = Math.sin(dLa / 2) * Math.sin(dLa / 2) + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLo / 2) * Math.sin(dLo / 2);
+    return 12742 * Math.asin(Math.sqrt(x));
+  }
+  function fmtKm(d) { return d < 1 ? Math.round(d * 1000 / 50) * 50 + ' m' : d.toFixed(d < 10 ? 1 : 0).replace('.', ',') + ' km'; }
   function cartao(p) {
     var h = '<article class="ponto" id="p-' + p.id + '" data-id="' + p.id + '">';
+    if (estado.pos && p._d != null && isFinite(p._d)) h += '<p class="dist">📍 a ' + fmtKm(p._d) + '</p>';
     h += '<h3>' + esc(p.n) + '</h3>';
     h += '<p class="tipo">' + esc(p.t) + ' · ' + esc(p.sv) + '</p>';
     h += '<p class="residuos">' + esc(p.r) + '</p>';
@@ -97,10 +104,10 @@
     if (p.cnpj) h += '<p class="licenca aviso">' + esc(p.cnpj) + '</p>';
     if (p.obs) h += '<p class="obs">' + esc(p.obs) + '</p>';
     var acoes = [];
-    if (p.a != null) {
-      acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
-      acoes.push('<a href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
-    }
+    if (p.a != null) acoes.push('<a class="principal" href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
+    var dig = (p.tel || '').split('/')[0].replace(/\D/g, '');
+    if (dig.length >= 10) acoes.push('<a class="principal" href="tel:+55' + dig + '">Ligar</a>');
+    if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';
     return h + '</article>';
@@ -130,13 +137,40 @@
       registrar((n ? 'busca/' : 'busca-sem-resultado/') + (estado.cid || 'todas') + '/' + q.replace(/\s+/g, '-'));
     }, 1500);
   }
+  function contaFiltros() {
+    var n = (estado.p !== 'todos' ? 1 : 0) + (estado.cat ? 1 : 0) + (estado.lic ? 1 : 0) + (estado.loc ? 1 : 0);
+    var el = document.getElementById('nFiltros'); if (el) el.textContent = n ? '(' + n + ')' : '';
+  }
+  var det = document.getElementById('maisFiltros');
+  if (det && window.matchMedia && window.matchMedia('(min-width: 861px)').matches && !det.classList.contains('mf-home')) det.open = true;
+  document.querySelectorAll('[data-perto]').forEach(function (bt) {
+    bt.addEventListener('click', function () {
+      if (estado.pos) { estado.pos = null; bt.textContent = '📍 Perto de mim'; bt.setAttribute('aria-pressed', 'false'); render(); return; }
+      if (!navigator.geolocation) { bt.textContent = 'Localização indisponível'; return; }
+      bt.textContent = '📍 Localizando…';
+      navigator.geolocation.getCurrentPosition(function (g) {
+        estado.pos = [g.coords.latitude, g.coords.longitude];
+        bt.textContent = '✕ Ordenado por distância'; bt.setAttribute('aria-pressed', 'true');
+        registrar('perto-de-mim/' + (estado.cid || 'todas'));
+        render();
+        var r = document.getElementById('resultados') || document.getElementById('lista');
+        if (r && r.scrollIntoView) r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, function () { bt.textContent = '📍 Não foi possível localizar'; setTimeout(function () { bt.textContent = '📍 Perto de mim'; }, 3000); },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
+    });
+  });
   var POR_PAGINA = 20, limite = POR_PAGINA, visAtual = [];
   function render(mais) {
     if (!mais) limite = POR_PAGINA;
     estado.qcats = catsDaBusca(estado.q || '');
-    var vis = PONTOS.filter(passa).sort(function (a, b) {
+    var vis = PONTOS.filter(passa);
+    if (estado.pos) {
+      vis.forEach(function (p) { p._d = p.a == null ? Infinity : distKm(estado.pos, [p.a, p.o]); });
+      vis.sort(function (a, b) { return a._d - b._d; });
+    } else vis.sort(function (a, b) {
       return (ORDEM[a.st] - ORDEM[b.st]) || ((a.loc ? 0 : 1) - (b.loc ? 0 : 1)) || a.n.localeCompare(b.n, 'pt-BR');
     });
+    contaFiltros();
     contador.textContent = vis.length;
     visAtual = vis;
     if (!mais) registrarBusca(vis.length);
@@ -178,8 +212,17 @@
       var perto = pts.filter(function (x) { return Math.abs(x[0] - mLat) < 1 && Math.abs(x[1] - mLng) < 1.2; });
       if (perto.length) pts = perto;
     }
+    if (estado.pos) {
+      var perto = vis.filter(function (p) { return p.a != null; }).slice(0, 8).map(function (p) { return [p.a, p.o]; });
+      perto.push(estado.pos);
+      if (eu) eu.setLatLng(estado.pos); else eu = L.circleMarker(estado.pos, { radius: 7, color: '#fff', weight: 3, fillColor: '#E8622A', fillOpacity: 1 }).bindTooltip('Você está aqui').addTo(mapa);
+      mapa.fitBounds(L.latLngBounds(perto).pad(0.2), { maxZoom: 15 });
+      return;
+    }
+    if (eu) { mapa.removeLayer(eu); eu = null; }
     if (pts.length) mapa.fitBounds(L.latLngBounds(pts).pad(0.15), { maxZoom: 15 });
   }
+  var eu = null;
 
   function destacar(id, voar) {
     document.querySelectorAll('.ponto.ativo').forEach(function (c) { c.classList.remove('ativo'); });
@@ -191,8 +234,8 @@
     if (card) { card.classList.add('ativo'); if (!voar) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
     var m = marcadores[id];
     if (voar && m && mapa) {
-      mapa.setView(m.getLatLng(), Math.max(mapa.getZoom(), 14));
-      m.openPopup();
+      if (camada.zoomToShowLayer) camada.zoomToShowLayer(m, function () { m.openPopup(); });
+      else { mapa.setView(m.getLatLng(), Math.max(mapa.getZoom(), 14)); m.openPopup(); }
       if (window.innerWidth < 860) document.getElementById('mapa').scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
@@ -270,9 +313,9 @@
     var b = e.target.closest('[data-st]'); if (!b) return;
     var st = b.dataset.st, ligados = Object.keys(estado.fora).length;
     if (!estado.fora[st] && ligados === 0) {  // primeiro toque: mostra só esta
-      ['valida', 'vencida', 'publico', 'nao_localizada'].forEach(function (x) { if (x !== st) estado.fora[x] = true; });
+      ['valida', 'vencida', 'publico', 'entrega', 'nao_localizada'].forEach(function (x) { if (x !== st) estado.fora[x] = true; });
     } else if (estado.fora[st]) { delete estado.fora[st]; }
-    else { estado.fora[st] = true; if (Object.keys(estado.fora).length === 4) estado.fora = {}; }
+    else { estado.fora[st] = true; if (Object.keys(estado.fora).length === 5) estado.fora = {}; }
     render();
   });
   var fQuem = document.getElementById('fQuem'), fTipo = document.getElementById('fTipo');
@@ -416,7 +459,7 @@
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19 })
     ]);
     L.control.layers({ 'Mapa': ruas, 'Satélite': sat }, null, { position: 'topright', collapsed: false }).addTo(mapa);
-    camada = L.featureGroup().addTo(mapa);
+    camada = (L.markerClusterGroup ? L.markerClusterGroup({ maxClusterRadius: 40, showCoverageOnHover: false, spiderfyOnMaxZoom: true, disableClusteringAtZoom: 16 }) : L.featureGroup()).addTo(mapa);
   }
 
   render();
