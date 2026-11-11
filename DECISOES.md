@@ -73,3 +73,4 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 11/11/2026 | Empresas de Apucarana | Entram: Nova Visão (APU-004), Eletran (APU-005), Gonçales Pneus (APU-021), Reciplast (APU-022), Ecoservice (APU-023). Saem: Marchand, Huanfer, Antares (2 unidades), Plumatex, Organo-Nipo, Rio Bater, RMA Transportes, J.E. Reciclagens, Lesotto, TN Cargo, RT Service, Segban Locações. |
 | 11/11/2026 | Pontos ABREE de Apucarana | Etiqueta: não precisa imprimir em CE Faria, Jadlog 01, Correios AC e AGF Cidade Alta (Balcão Cidadão nos dois Correios); obrigatório imprimir em AGC Correia de Freitas e AGC São Pedro da Taquara. Entram Pulo do Gato Eletrônicos (APU-024) e AGC São Pedro da Taquara (APU-025). |
 | 11/11/2026 | Correios AGC Caixa de São Pedro (Apucarana) | Removido (APU-016 apagado). |
+| 11/11/2026 | Loja Vivo (Apucarana) | Fechou: APU-007 apagado. Correios AGC São Pedro da Taquara fica sem coordenada (não há no mapa). |
