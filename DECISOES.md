@@ -66,3 +66,4 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 06/11/2026 | Mandaguari | Data de verificação 29/10/2026 nos pontos antigos. |
 | 11/11/2026 | Domínio | Site no ar em https://desvia.eco.br (DNS na Umbler, verificado no GitHub). Endereços github.io redirecionam. Search Console: propriedade sc-domain:desvia.eco.br. |
 | 11/11/2026 | Farmácias de Maringá no mesmo endereço | Juntadas mantendo o nome da loja: Econômica, Preço Baixo, Nossa (Av. Brasil e Av. Paraná), Pontual. MGA-107, 109, 119, 135, 191, 200 apagados. |
+| 11/11/2026 | Pontos ABREE/Green Eletron em Londrina | 57 pontos de eletroeletrônicos importados (LDA-326 a 382). Já na base: Casas Bahia Av. Paraná, Ferro Velho Batista, E-Letro, Green Ocean, Catador Eletrônico. MEI Vinicius R. Pires fora (endereço residencial). |
