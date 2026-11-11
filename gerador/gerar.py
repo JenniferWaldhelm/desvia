@@ -395,7 +395,7 @@ def cartao(p, cidade_slug):
     if p["Endereço"] and not pessoa_fisica(p) and not p["Endereço"].startswith("www."):
         local = f'{p["Endereço"]}, {local}' if local else p["Endereço"]
     if local:
-        fora = "" if norm(p["Município sede"]).replace(" ", "-") == cidade_slug or not p["Município sede"] else " (atende a cidade)"
+        fora = "" if norm(p["Município sede"]).replace(" ", "-") == cidade_slug or not p["Município sede"] else ""
         partes.append(f'<p class="local">{esc(local)}{fora}</p>')
     contatos = []
     if p["Telefone"]:
