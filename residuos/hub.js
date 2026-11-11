@@ -85,7 +85,7 @@
     h += '<p class="tipo">' + esc(p.t) + ' · ' + esc(p.sv) + '</p>';
     h += '<p class="residuos">' + esc(p.r) + '</p>';
     var local = p.e ? p.e + (p.m ? ', ' + p.m : '') : p.m;
-    if (local) h += '<p class="local">' + esc(local) + (p.loc || !p.m ? '' : ' (atende a cidade)') + '</p>';
+    if (local) h += '<p class="local">' + esc(local) + '</p>';
     var cont = [];
     if (p.tel) cont.push(telLink(p.tel));
     if (p.site) {
