@@ -5,7 +5,7 @@
   var mc = navigator.modelContext;
   if (!mc || typeof mc.registerTool !== 'function' || typeof PONTOS === 'undefined') return;
 
-  var BASE = 'https://jenniferwaldhelm.github.io/desvia/';
+  var BASE = 'https://desvia.eco.br/';
   var CIDADES = window.DESVIA_CIDADES || {};
   var STATUS = { valida: 'licença válida', vencendo: 'licença vencendo', vencida: 'licença vencida', publico: 'serviço público', nao_localizada: 'licença não localizada nas bases consultadas' };
 
