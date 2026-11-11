@@ -226,13 +226,15 @@
     cats.slice(0, 4).forEach(function (c) {
       var n = contaCat(c); itens.push({ tipo: 'cat', v: c, txt: CATS[c], n: n ? n + (n > 1 ? ' locais' : ' local') : 'nenhum local nesta cidade' });
     });
+    // Nome de estabelecimento só aparece quando o que foi digitado não é um tipo de resíduo
+    // (a pergunta é "O que você tem?": primeiro o material, o local vem depois)
     var vistos = {};
-    PONTOS.forEach(function (p) {
-      if (itens.length >= 8 || vistos[p.n]) return;
+    if (!itens.length && t.length >= 3) PONTOS.forEach(function (p) {
+      if (itens.length >= 5 || vistos[p.n]) return;
       if ((!estado.cid || p.cs.indexOf(estado.cid) >= 0) && norm(p.n).indexOf(t) >= 0) { vistos[p.n] = 1; itens.push({ tipo: 'emp', v: p.n, txt: p.n, n: p.m }); }
     });
     if (!itens.length) { caixa.hidden = true; return; }
-    caixa.innerHTML = itens.map(function (it, i) {
+    caixa.innerHTML = (itens[0].tipo === 'emp' ? '<div class="sug-titulo">Locais com esse nome</div>' : '') + itens.map(function (it, i) {
       return '<button type="button" role="option" data-i="' + i + '" data-tipo="' + it.tipo + '" data-v="' + esc(it.v) + '">' +
         '<span>' + (it.tipo === 'cat' ? '♻ ' : '🏢 ') + esc(it.txt) + '</span><small>' + esc(it.n) + '</small></button>';
     }).join('');

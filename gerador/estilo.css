@@ -349,3 +349,5 @@ a.btn-ajuda { text-decoration: none; margin-left: 8px; }
 .compartilhar-bt a,.compartilhar-bt button{font:inherit;font-size:.9rem;padding:.45rem .85rem;border:1px solid #cfd8d3;border-radius:999px;background:transparent;color:inherit;text-decoration:none;cursor:pointer}
 .compartilhar-bt .nativo{background:#1f6f4a;border-color:#1f6f4a;color:#fff}
 .compartilhar-bt [hidden]{display:none}
+
+.sug-titulo{padding:.4rem .8rem;font-size:.78rem;opacity:.7}
