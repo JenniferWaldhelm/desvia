@@ -62,3 +62,4 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 06/11/2026 | Preço Popular × Super Popular | Fica a mais recente (Super Popular). |
 | 06/11/2026 | Nomes | Nomes em MAIÚSCULAS do IAT/CTF padronizados (85). Regra para os próximos: padronizar. |
 | 06/11/2026 | Mandaguari | Data de verificação 29/10/2026 nos pontos antigos. |
+| 11/11/2026 | Domínio | Site no ar em https://desvia.eco.br (DNS na Umbler, verificado no GitHub). Endereços github.io redirecionam. Search Console: propriedade sc-domain:desvia.eco.br. |
