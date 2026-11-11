@@ -1,8 +1,16 @@
 caminho,titulo,evento,contagem
-/desvia,"Desvia: onde descartar resíduos, com a licença de cada empresa",False,4
+/desvia,"Desvia: onde descartar resíduos, com a licença de cada empresa",False,5
+/desvia/residuos,Onde descartar resíduos: cidades | Desvia,False,2
+/desvia/residuos/londrina/coleta-de-lixo,Que dia passa o lixo na sua rua em Londrina? Coleta comum e reciclável | Desvia,False,1
+busca/todas/ong,busca/todas/ong,True,1
+busca-sem-resultado/todas/blister,busca-sem-resultado/todas/blister,True,1
+busca-sem-resultado/todas/bullet,busca-sem-resultado/todas/bullet,True,1
+busca/todas/remedio,busca/todas/remedio,True,1
+/desvia/guias/pneus,"Como descartar pneus: em casa, na empresa e onde levar | Desvia",False,1
+/desvia/guias,Guias de descarte de resíduos | Desvia,False,1
+/desvia/residuos/maringa/coleta-de-lixo,Coleta de lixo em Maringá: dias e horários por bairro | Desvia,False,1
 busca/todas/armario,busca/todas/armario,True,1
 busca/todas/brec,busca/todas/brec,True,1
 /desvia/residuos/mandaguari,Coleta e descarte de lixo em Mandaguari: onde levar cada coisa | Desvia,False,1
 /desvia/residuos/rolandia,Coleta e descarte de lixo em Rolândia: onde levar cada coisa | Desvia,False,1
 /desvia/residuos/londrina,Coleta e descarte de lixo em Londrina: onde levar cada coisa | Desvia,False,1
-/desvia/residuos,Onde descartar resíduos: cidades | Desvia,False,1

@@ -1,6 +1,6 @@
 name: Exportar métricas do mês
 
-# Dia 2 de cada mês: baixa do GoatCounter as visitas e buscas do mês anterior
+# Dia 2 de cada mês: baixa do GoatCounter (visitas e buscas no site) e do Bing Webmaster (buscas no Bing) do mês anterior
 # e grava em metricas/AAAA-MM/. A análise mensal (dia 3) lê daqui.
 on:
   workflow_dispatch:
@@ -29,10 +29,19 @@ jobs:
           set -o pipefail
           if [ -z "$GOATCOUNTER_TOKEN" ]; then echo "Falta o segredo GOATCOUNTER_TOKEN no GitHub (Settings › Secrets and variables › Actions)." | tee -a "$GITHUB_STEP_SUMMARY"; exit 1; fi
           python3 metricas/exportar.py ${{ inputs.mes }} 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Bing Webmaster
+        continue-on-error: true
+        env:
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+        run: |
+          set -o pipefail
+          if [ -z "$BING_API_KEY" ]; then echo "Sem o segredo BING_API_KEY: Bing pulado." | tee -a "$GITHUB_STEP_SUMMARY"; exit 0; fi
+          python3 metricas/bing.py "${{ inputs.mes }}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Salvar
+        if: always()
         run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
           git add metricas
           git diff --cached --quiet || git commit -m "Métricas do mês"
-          git pull --rebase -q && git push
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 10; done
