@@ -15,6 +15,7 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 02/11/2026 | Serviços de consultoria pelo WhatsApp da Mawé: (43) 92002-4725. |
 | 02/11/2026 | Dias e setores de coleta: só link para a fonte oficial (prefeitura, autarquia), porque mudam com cada licitação. |
 | 04/11/2026 | Empresas que só têm Autorização Ambiental (AA) não entram. RLO vencida pode entrar, com o aviso. |
+| 11/11/2026 | Empresa com DLAE (Declaração de Dispensa do IAT) entra, com Tipo licença "DLAE". Sem texto inventado na Obs. Só AA continua fora. |
 | 04/11/2026 | Empresa nova só entra depois de a Jen conferir se funciona e se recebe resíduo. Na dúvida, fica de fora. |
 | 04/11/2026 | Programas nacionais de logística reversa (Reciclanip etc.): link para o localizador oficial; pontos específicos só quando a Jen passar os dados. |
 | 04/11/2026 | Regra da sede vale também para a lista da prefeitura de Londrina e para Mandaguari: empresa de fora só aparece na página da própria cidade (ou fica guardada, se a cidade não está publicada). |
@@ -29,6 +30,7 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | Ibiporã | Não, só IAT | |
 | Mandaguari | Não, só IAT | |
 | Rolândia | Não, só IAT | |
+| Apucarana | Não, só IAT | Link coleta: prefeitura (comum) e COCAP (seletiva por bairro) |
 | Cambé | Não, só IAT | Prefeitura exige PGRS das empresas |
 
 ## Pontos específicos
