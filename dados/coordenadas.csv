@@ -15,13 +15,73 @@ APU-016,,,"Rua Principal, s/n, São Pedro",
 APU-017,-23.61123,-51.40549,"Rua Apucarana, 556","Rua Apucarana, Vila Reis, Apucarana, Paraná, Região Sul, Brasil"
 APU-018,-23.55775,-51.46128,"Rua Doutor Oswaldo Cruz, 805, Centro","Rua Doutor Oswaldo Cruz, Centro, Apucarana, Apucarana, Paraná, Região Sul, 86800-280, Brasil"
 APU-019,-23.55272,-51.46451,"Praça Interventor Manoel Ribas, 135, Centro","Praça Interventor Manoel Ribas, Apucarana, Paraná, Região Sul, Brasil"
+APU-020,-23.54000,-51.45629,"Rua Uruguai, 190","Rua Uruguai, Apucarana, Paraná, Região Sul, 86804-190, Brasil"
 CAM-006,-23.28944,-51.23514,"Rodovia Celso Garcia Cid, 1, Gleba Cacadores","Rodovia Celso Garcia Cid, Cambé, Paraná, Região Sul, 86185-470, Brasil"
 CAM-009,,,"Rua Uzen Ajimura, 101, Distrito Industrial Doutor Jehovah Almeida Gomes",
 CAM-026,,,"Rua José Carlos Mufatto, 2550, CEP 86187-025",
+IBI-038,-23.26398,-51.03395,"Avenida Parana, 226 - Centro - 86.200-000","Avenida Paraná, Jardim Bom Pastor, Centro, Ibiporã, Paraná, Região Sul, 86200-000, Brasil"
+IBI-039,-23.26929,-51.04271,"Avenida Parana, 188, Centro, 86200-000","Avenida Paraná, Vila Dutra, Centro, Ibiporã, Paraná, Região Sul, 86200-000, Brasil"
+IBI-040,-23.26776,-51.04530,"Avenida Engenheiro Francisco Beltrao, 169 - Centro 86200-970","Agência de Correios de Ibiporã, 169, Avenida Engenheiro Francisco Beltrão, Jardim Cepil, Centro, Ibiporã, Paraná, Região"
 LDA-023,,,www.joguelimpo.org.br,
 LDA-070,,,Aragarça,
 LDA-074,,,Pontos de recebimento e coleta em casa pelo site greeneletron.org.br,
 LDA-135,-23.29391,-51.13710,"Rua Alabastro, 63, CEP 86030-160","Rua Alabastro, Vila Casoni, Parque Waldemar Hauer, Londrina, Paraná, Região Sul, 86030-180, Brasil"
+LDA-327,,,"Rua Americo Deolindo Garla, 224 - 86.079-225",
+LDA-328,-23.30872,-51.15789,"Rua Benjamin Constant, 1220 - 86.010-350","Rua Benjamin Constant, Centro, Londrina, Paraná, Região Sul, 86020-320, Brasil"
+LDA-329,-23.31202,-51.14262,"Avenida Theodoro Victorelli, 150 - 86.027-750","Avenida Theodoro Victorelli, Vila da Fraternidade, Jardim Mairá, Brasilia, Londrina, Paraná, Região Sul, 86027-620, Bras"
+LDA-330,-23.31091,-51.15452,"Rua Maranhao, 240 - Loja 244 - Centro - 86.010-410","Rua Maranhão, Centro, Londrina, Paraná, Região Sul, 86010-380, Brasil"
+LDA-331,-23.28289,-51.15222,"Avenida Americo Deolindo Garla, 224 - Loja Luc 11 - Pacaembu - 86.079-225","Avenida Américo Deolindo Garla, Parque Industrial Alicante, Vila Nova, Londrina, Paraná, Região Sul, 86079-227, Brasil"
+LDA-332,-23.44208,-51.13619,"Rodovia Celso Garcia Cid, 5600 - Scl 00516 Pav 1 - Prq Res Campos Elisios - 86.050-901","Rodovia Celso Garcia Cid, Londrina, Paraná, Região Sul, 86044-768, Brasil"
+LDA-333,-23.31202,-51.14262,"Avenida Theodoro Victorelli, 150 - Lj 29 - Helena - 86.027-750","Avenida Theodoro Victorelli, Vila da Fraternidade, Jardim Mairá, Brasilia, Londrina, Paraná, Região Sul, 86027-620, Bras"
+LDA-334,,,"Rua Aylton da Silva Senna, 400 - Loja Luc L38/t - Gleba Fazenda Palhano - 86.050-460",
+LDA-335,-23.26072,-51.18970,"Avenida Saul Elkind, 1433 - Loja 18 - Conjunto Habitacional Violim - 86.084-000","Avenida Saul Elkind, Chefe Habitacional Chefe Newton Guimarães, Parigot de Souza, Londrina, Paraná, Região Sul, 86082-69"
+LDA-336,-23.30872,-51.15789,"Rua Benjamin Constant, 1185 - Centro - 86.010-350","Rua Benjamin Constant, Centro, Londrina, Paraná, Região Sul, 86020-320, Brasil"
+LDA-337,-23.61144,-51.18813,"Avenida Parana, 203 - Centro - 86.010-390","Avenida Paraná, Londrina, Paraná, Região Sul, Brasil"
+LDA-338,-23.32349,-51.15509,"Avenida Duque de Caxias, 635 - Jardim Mazzei II - 86015-901","Avenida Duque de Caxias, Ipiranga, Vila Brasil, Londrina, Paraná, Região Sul, 86010-981, Brasil"
+LDA-339,,,"Rua Eleonor Rooselt, 322 - Brasilia - 86039-480",
+LDA-340,-23.31491,-51.16150,"Rua Professor Joao Candido, 175, Centro, 86010-000, PR","Rua Professor João Cândido, Centro, Londrina, Paraná, Região Sul, 86010-000, Brasil"
+LDA-341,-23.25762,-51.15292,"Avenida Saul Elkind, 1560, Conjunto Habitacional, 86084-000, PR","1560, Avenida Saul Elkind, Conjunto Habitacional Sebastião de Mello Cesar, Cinco Conjuntos, Londrina, Paraná, Região Sul"
+LDA-342,-23.30858,-51.16165,"R. Benjamin Constant, 1138 - 86010-350","Casas Bahia, 1138, Rua Benjamin Constant, Centro, Jardim Agari, Centro, Londrina, Paraná, Região Sul, 86020-050, Brasil"
+LDA-343,-23.32896,-51.17485,"R. João Huss, 74 - 86050-490","Angeloni, 74, Rua João Huss, Guanabara, Higienópolis, Londrina, Paraná, Região Sul, 86050-490, Brasil"
+LDA-344,-23.31281,-51.14352,"Av. Theodoro Victorelli, 650 - 86027-750","Leroy Merlin, 650L, Avenida Theodoro Victorelli, Vila da Fraternidade, Jardim Mairá, Brasilia, Londrina, Paraná, Região "
+LDA-345,-23.36387,-51.14529,"Rod Celso Garcia Cid, S/N - 86057-350","Rod. Celso Garcia Cid, Rodovia Celso Garcia Cid, Parque Ouro Branco, Parque das Indústrias, Londrina, Paraná, Região Sul"
+LDA-346,-23.31116,-51.17782,"Av. Maringa, 2053 - 86060-000","Avenida Maringá, Quebec, Jardim Agari, Presidente, Londrina, Paraná, Região Sul, 86060-000, Brasil"
+LDA-347,-23.30561,-51.16809,"R. Quintino Bocaiuva, 662 - 86020-150","Rua Quintino Bocaiúva, Centro, Jardim Agari, Centro, Londrina, Paraná, Região Sul, 86020-150, Brasil"
+LDA-348,-23.34751,-51.14775,"Rua Finlandia, 390 - Jardim Vilas Boas 86046-220","Rua Finlândia, Jardim Piza, Inglaterra, Londrina, Paraná, Região Sul, 86046-002, Brasil"
+LDA-349,-23.31109,-51.12434,"Avenida dos Pioneiros, 2170 - Jardim Morumbi 86036-350","Avenida dos Pioneiros, Jardim Morumbi, Cidade Industrial 2, Londrina, Paraná, Região Sul, 86036-430, Brasil"
+LDA-350,-23.31557,-51.15729,"Rua Goias, 623 - Centro 86010-460","Gráfica pdb Digital, 623, Rua Goiás, Centro, Londrina, Paraná, Região Sul, 86010-000, Brasil"
+LDA-351,-23.30561,-51.16809,"Rua Quintino Bocaiuva, 495 - Centro 86020-150","Rua Quintino Bocaiúva, Centro, Jardim Agari, Centro, Londrina, Paraná, Região Sul, 86020-150, Brasil"
+LDA-352,-23.31023,-51.18922,"Rua Quata, 748 - San Remo 86062-580","Rua Quatá, Champagnat, Londrina, Paraná, Região Sul, 86062-480, Brasil"
+LDA-353,-23.29341,-51.14347,"Rua Araguari, 196 - Ideal 86027-080","Rua Araguari, Vila Yara, Vila Casoni, Parque Waldemar Hauer, Londrina, Paraná, Região Sul, 86027-060, Brasil"
+LDA-354,,,"Avenida Jules Verne, 895 - Santa Rita 7 86072-450",
+LDA-355,-23.31864,-51.12564,"Avenida São Joao, 4393 - Cj.armindo Guazzi 86036-030","Avenida São João, Jardim Antares, Gleba Simon Frazer, Brasilia, Londrina, Paraná, Região Sul, 86036-030, Brasil"
+LDA-356,-23.36613,-51.14318,"Av Guilherme de Almeida, 821 - Ouro Branco 86042-001","Avenida Guilherme de Almeida, Parque Ouro Branco, Parque das Indústrias, Londrina, Paraná, Região Sul, 86042-180, Brasil"
+LDA-357,-23.31628,-51.11497,"Avenida Jamil Scaff, 1396 - Conjunto Habitacional Alexandre Urb 86037-000","Avenida Jamil Scaff, Conjunto Habitacional Alexandre Urbanas, Jardim Morumbi, Antares, Londrina, Paraná, Região Sul, 860"
+LDA-358,-23.33186,-51.16988,"Rua Montevideu, 263 - Guanabara 86050-020","Rua Montevidéu, Guanabara, Bela Suíça, Londrina, Paraná, Região Sul, 86050-020, Brasil"
+LDA-359,-23.31864,-51.12564,"Avenida São Joao, 2411 - Antares 86036-030","Avenida São João, Jardim Antares, Gleba Simon Frazer, Brasilia, Londrina, Paraná, Região Sul, 86036-030, Brasil"
+LDA-360,-23.34217,-51.17022,"R Maria Munaretto Mathias, 217 - Vale das Araucarias 86047-690","Rua Maria Munaretto Mathias, Tucanos, Bela Suíça, Londrina, Paraná, Região Sul, 86047-320, Brasil"
+LDA-361,-23.34015,-51.13199,"Av Jose Ventura Pinto, 1220 - California 86040-570","Avenida José Ventura Pinto, Jardim Califórnia, Aeroporto, Londrina, Paraná, Região Sul, 86040-580, Brasil"
+LDA-362,-23.28044,-51.17348,"Rua Quenia, 122 - Ouro Verde 86080-130","Rua Quênia, Ouro Verde, Londrina, Paraná, Região Sul, 86080-120, Brasil"
+LDA-363,-23.31298,-51.15809,"Rua Maestro Egidio Camargo do Amaral, 246, Esquina Com Avenida Rio de Janeiro - Centro 86001-970","Rua Maestro Egídio Camargo do Amaral, Centro, Londrina, Paraná, Região Sul, 86010-070, Brasil"
+LDA-364,-23.31131,-51.20545,"Avenida Arthur Thomas, 2310, Sala 01 - Jardim Novo Sabara 86066-970","Avenida Arthur Thomas, Bandeirantes, Londrina, Paraná, Região Sul, 86065-420, Brasil"
+LDA-365,-23.29862,-51.19196,"Avenida Tiradentes, 1241, Bloco C Loja 6 - Jardim Shangri-La A 86071-981","Avenida Tiradentes, Jardim Shangri-Lá, Jamaica, Londrina, Paraná, Região Sul, 86071-180, Brasil"
+LDA-366,-23.26054,-51.14729,"Rua Capitao do Mato, 249 - Conjunto Habitacional Violim 86085-981","Rua Capitão-do-Mato, Conjunto Semíramis Barros Braga, Cinco Conjuntos, Londrina, Paraná, Região Sul, 86088-070, Brasil"
+LDA-367,-23.35544,-51.14952,"Avenida Dez de Dezembro, 1830, 1830, Loja 39 - Helena 86026-981","Avenida Dez de Dezembro, Jardim Piza, Parque das Indústrias, Londrina, Paraná, Região Sul, 86046-050, Brasil"
+LDA-368,-23.31682,-51.17710,"Avenida Maringa, 2631, Loja 02 - Vitoria 86060-970","Avenida Maringá, Jardim Presidente, Presidente, Londrina, Paraná, Região Sul, 86060-320, Brasil"
+LDA-369,-23.32349,-51.15509,"Avenida Duque de Caxias, 2339 - Jardim Londrilar 86010-981","Avenida Duque de Caxias, Ipiranga, Vila Brasil, Londrina, Paraná, Região Sul, 86010-981, Brasil"
+LDA-370,-23.32203,-51.15495,"Avenida Duque de Caxias, 780 - Centro 86015-981","Avenida Duque de Caxias, Vila Brasil, Londrina, Paraná, Região Sul, 86010-981, Brasil"
+LDA-371,-23.36387,-51.14529,"Rod Celso Garcia Cid, 0, Km 377 Ca 04 - Jardim Portal de Versalhes 1 86050-981","Rod. Celso Garcia Cid, Rodovia Celso Garcia Cid, Parque Ouro Branco, Parque das Indústrias, Londrina, Paraná, Região Sul"
+LDA-372,-23.29399,-51.16280,"Rua Guapore, 787, Loja 10 - Centro 86025-981","Rua Guaporé, Vila Nova, Londrina, Paraná, Região Sul, 86025-220, Brasil"
+LDA-373,-23.30561,-51.16809,"Rua Quintino Bocaiuva, 509 - Centro 86022-981","Rua Quintino Bocaiúva, Centro, Jardim Agari, Centro, Londrina, Paraná, Região Sul, 86020-150, Brasil"
+LDA-374,-23.32052,-51.16650,"Avenida Higienopolis, 1070, Sala 2 - Centro 86020-980","Avenida Higienópolis, Higienópolis, Londrina, Paraná, Região Sul, 86015-240, Brasil"
+LDA-375,-23.31376,-51.16278,"Rua Pernambuco, 21 - Centro 86020-971","Rua Pernambuco, Centro, Jardim Agari, Centro, Londrina, Paraná, Região Sul, 86020-120, Brasil"
+LDA-376,,,"Rua Osorio Duque Estrada, 74, Bairro Itamarati - 86061-230",
+LDA-377,-23.32239,-51.22669,"Rua Aparecida Bernardes Caetano, 180, Bairro Olimpico - 86056-280","Rua Aparecida Bernardes Caetano, Conjunto Habitacional Avelino Antônio Vieira, Jardim João Turquino, Olímpico, Londrina,"
+LDA-378,,,Celso Garcia Cid 5600 Loja 253-254-255 Gleba Fazenda Palhano - 86050-901,
+LDA-379,,,Theodoro Victorelli 150 Loja 30 Helena - 86027-750,
+LDA-380,-23.31093,-51.16474,Paraná 362 Centro - 86010-390,"Avenida Paraná, Centro, Jardim Agari, Centro, Londrina, Paraná, Região Sul, 86020-050, Brasil"
+LDA-381,,,Americo Deolindo Garla 224 Loja Sln 91 Pacaembu - 86079-225,
+LDA-382,,,Avenida Saul Elkind 1513 Conjunto Habitacional Violim - 86084-000,
 MGA-257,-23.53057,-52.00616,"Estrada Pinguim, 814, Gleba Ribeirao Pinguim","Estrada Pinguim, Maringá, Paraná, Região Sul, 87105-040, Brasil"
 MGA-258,-23.36228,-51.89901,"Rodovia Pr 317, Km 02, Lote 326/339-A, S/N, Gleba Patr. Maringa","PR-317, Parque Industrial 200, Maringá, Paraná, Região Sul, 87035-170, Brasil"
 MGA-259,-23.45985,-51.99978,"Avenida Pioneiro Victorio Marcon, 543, Parque Industrial","Avenida Pioneiro Victório Marcon, Distrito Industrial II, Maringá, Paraná, Região Sul, 87065-160, Brasil"

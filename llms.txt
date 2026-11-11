@@ -8,17 +8,18 @@ Dados atualizados em 11/11/2026. A situação da licença reflete as bases públ
 - [Busca por resíduo e cidade](https://desvia.eco.br/): mapa e lista com filtros. Aceita ?q=<resíduo>&cidade=<cidade>&r=<tipo>.
 
 ## Cidades
-- [Mandaguari](https://desvia.eco.br/residuos/mandaguari/): 11 pontos e empresas, 9 tipos de resíduo, obrigações das empresas
+- [Mandaguari](https://desvia.eco.br/residuos/mandaguari/): 14 pontos e empresas, 10 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Mandaguari](https://desvia.eco.br/residuos/mandaguari/pneus/)
   - [Onde descartar eletrônicos em Mandaguari](https://desvia.eco.br/residuos/mandaguari/eletronicos/)
   - [Onde descartar lâmpadas em Mandaguari](https://desvia.eco.br/residuos/mandaguari/lampadas/)
+  - [Onde descartar pilhas e baterias em Mandaguari](https://desvia.eco.br/residuos/mandaguari/pilhas-e-baterias/)
   - [Onde descartar óleo de cozinha em Mandaguari](https://desvia.eco.br/residuos/mandaguari/oleo-de-cozinha/)
   - [Onde descartar entulho e resíduos de construção em Mandaguari](https://desvia.eco.br/residuos/mandaguari/entulho/)
   - [Onde descartar móveis, colchões e volumosos em Mandaguari](https://desvia.eco.br/residuos/mandaguari/moveis-e-volumosos/)
   - [Onde descartar medicamentos vencidos em Mandaguari](https://desvia.eco.br/residuos/mandaguari/medicamentos/)
   - [Onde descartar resíduos de serviços de saúde em Mandaguari](https://desvia.eco.br/residuos/mandaguari/residuos-de-saude/)
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Mandaguari](https://desvia.eco.br/residuos/mandaguari/reciclaveis/)
-- [Londrina](https://desvia.eco.br/residuos/londrina/): 275 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
+- [Londrina](https://desvia.eco.br/residuos/londrina/): 335 pontos e empresas, 20 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Londrina](https://desvia.eco.br/residuos/londrina/pneus/)
   - [Onde descartar eletrônicos em Londrina](https://desvia.eco.br/residuos/londrina/eletronicos/)
   - [Onde descartar lâmpadas em Londrina](https://desvia.eco.br/residuos/londrina/lampadas/)
@@ -39,9 +40,10 @@ Dados atualizados em 11/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Londrina](https://desvia.eco.br/residuos/londrina/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Londrina](https://desvia.eco.br/residuos/londrina/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Londrina](https://desvia.eco.br/residuos/londrina/residuos-classe-ii/)
-- [Ibiporã](https://desvia.eco.br/residuos/ibipora/): 44 pontos e empresas, 13 tipos de resíduo, obrigações das empresas
+- [Ibiporã](https://desvia.eco.br/residuos/ibipora/): 48 pontos e empresas, 14 tipos de resíduo, obrigações das empresas
   - [Onde descartar eletrônicos em Ibiporã](https://desvia.eco.br/residuos/ibipora/eletronicos/)
   - [Onde descartar lâmpadas em Ibiporã](https://desvia.eco.br/residuos/ibipora/lampadas/)
+  - [Onde descartar pilhas e baterias em Ibiporã](https://desvia.eco.br/residuos/ibipora/pilhas-e-baterias/)
   - [Onde descartar óleo de cozinha em Ibiporã](https://desvia.eco.br/residuos/ibipora/oleo-de-cozinha/)
   - [Onde descartar óleo lubrificante em Ibiporã](https://desvia.eco.br/residuos/ibipora/oleo-lubrificante/)
   - [Onde descartar entulho e resíduos de construção em Ibiporã](https://desvia.eco.br/residuos/ibipora/entulho/)
@@ -53,7 +55,7 @@ Dados atualizados em 11/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Ibiporã](https://desvia.eco.br/residuos/ibipora/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Ibiporã](https://desvia.eco.br/residuos/ibipora/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Ibiporã](https://desvia.eco.br/residuos/ibipora/residuos-classe-ii/)
-- [Maringá](https://desvia.eco.br/residuos/maringa/): 295 pontos e empresas, 17 tipos de resíduo, obrigações das empresas
+- [Maringá](https://desvia.eco.br/residuos/maringa/): 339 pontos e empresas, 17 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Maringá](https://desvia.eco.br/residuos/maringa/pneus/)
   - [Onde descartar eletrônicos em Maringá](https://desvia.eco.br/residuos/maringa/eletronicos/)
   - [Onde descartar lâmpadas em Maringá](https://desvia.eco.br/residuos/maringa/lampadas/)
@@ -71,8 +73,9 @@ Dados atualizados em 11/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar escovas de dente e esponjas em Maringá](https://desvia.eco.br/residuos/maringa/escovas-e-esponjas/)
   - [Onde descartar resíduos perigosos (Classe I) em Maringá](https://desvia.eco.br/residuos/maringa/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Maringá](https://desvia.eco.br/residuos/maringa/residuos-classe-ii/)
-- [Rolândia](https://desvia.eco.br/residuos/rolandia/): 29 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
+- [Rolândia](https://desvia.eco.br/residuos/rolandia/): 36 pontos e empresas, 13 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Rolândia](https://desvia.eco.br/residuos/rolandia/pneus/)
+  - [Onde descartar eletrônicos em Rolândia](https://desvia.eco.br/residuos/rolandia/eletronicos/)
   - [Onde descartar pilhas e baterias em Rolândia](https://desvia.eco.br/residuos/rolandia/pilhas-e-baterias/)
   - [Onde descartar óleo lubrificante em Rolândia](https://desvia.eco.br/residuos/rolandia/oleo-lubrificante/)
   - [Onde descartar entulho e resíduos de construção em Rolândia](https://desvia.eco.br/residuos/rolandia/entulho/)
@@ -84,7 +87,7 @@ Dados atualizados em 11/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Rolândia](https://desvia.eco.br/residuos/rolandia/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Rolândia](https://desvia.eco.br/residuos/rolandia/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Rolândia](https://desvia.eco.br/residuos/rolandia/residuos-classe-ii/)
-- [Cambé](https://desvia.eco.br/residuos/cambe/): 29 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
+- [Cambé](https://desvia.eco.br/residuos/cambe/): 36 pontos e empresas, 12 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Cambé](https://desvia.eco.br/residuos/cambe/pneus/)
   - [Onde descartar eletrônicos em Cambé](https://desvia.eco.br/residuos/cambe/eletronicos/)
   - [Onde descartar lâmpadas em Cambé](https://desvia.eco.br/residuos/cambe/lampadas/)
@@ -97,7 +100,7 @@ Dados atualizados em 11/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Cambé](https://desvia.eco.br/residuos/cambe/limpa-fossa/)
   - [Onde descartar embalagens de agrotóxico em Cambé](https://desvia.eco.br/residuos/cambe/embalagens-de-agrotoxico/)
   - [Onde descartar resíduos perigosos (Classe I) em Cambé](https://desvia.eco.br/residuos/cambe/residuos-perigosos/)
-- [Apucarana](https://desvia.eco.br/residuos/apucarana/): 20 pontos e empresas, 7 tipos de resíduo, obrigações das empresas
+- [Apucarana](https://desvia.eco.br/residuos/apucarana/): 21 pontos e empresas, 7 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Apucarana](https://desvia.eco.br/residuos/apucarana/pneus/)
   - [Onde descartar eletrônicos em Apucarana](https://desvia.eco.br/residuos/apucarana/eletronicos/)
   - [Onde descartar pilhas e baterias em Apucarana](https://desvia.eco.br/residuos/apucarana/pilhas-e-baterias/)
