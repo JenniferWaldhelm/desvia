@@ -74,3 +74,4 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 11/11/2026 | Pontos ABREE de Apucarana | Etiqueta: não precisa imprimir em CE Faria, Jadlog 01, Correios AC e AGF Cidade Alta (Balcão Cidadão nos dois Correios); obrigatório imprimir em AGC Correia de Freitas e AGC São Pedro da Taquara. Entram Pulo do Gato Eletrônicos (APU-024) e AGC São Pedro da Taquara (APU-025). |
 | 11/11/2026 | Correios AGC Caixa de São Pedro (Apucarana) | Removido (APU-016 apagado). |
 | 11/11/2026 | Loja Vivo (Apucarana) | Fechou: APU-007 apagado. Correios AGC São Pedro da Taquara fica sem coordenada (não há no mapa). |
+| 12/11/2026 | Pequeno gerador | Grande gerador = mais de 600 L/semana (informado pela Jen; aplicado a Londrina). Demais cidades: "confirme com a prefeitura". |
