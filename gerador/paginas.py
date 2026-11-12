@@ -40,9 +40,12 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
         ("O Desvia é da prefeitura?", "Não. É um projeto independente que reúne informações públicas de várias fontes. Em cada cidade, as regras oficiais são as da prefeitura e do órgão ambiental."),
     ]
     faq_html = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)
-    corpo = f"""<section class="hero-busca">
-  <h1>O que fazer com o que você não usa mais?<br><em>Doar, vender, reciclar ou descartar.</em></h1>
-  <p>O lugar certo para cada coisa na sua cidade: pontos de entrega, brechós, cooperativas e empresas de coleta e destinação, com a situação da licença ambiental de cada uma.</p>
+    tiles = "".join(f'<li><button type="button" data-atalho="{s}" data-k="{s}"><b>{esc(nomes[s][1])}</b><small>{dict(cats_ordem)[s]} locais</small></button></li>'
+                    for s in atalhos if s in dict(cats_ordem))
+    corpo = f"""<section class="abre">
+ <div class="abre-texto">
+  <h1>Onde levar o que você não usa mais</h1>
+  <p class="abre-sub">Doar, vender, reciclar ou descartar. Pontos de entrega, brechós, cooperativas e empresas da sua cidade, com a licença ambiental conferida.</p>
   <form class="busca" id="busca" role="search" toolname="buscar_onde_descartar_formulario" tooldescription="Busca onde descartar um resíduo em uma cidade, com a licença ambiental de cada empresa.">
     <label class="campo"><span>O que você tem?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="sofá, roupa, pilha, remédio, entulho…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
@@ -57,8 +60,13 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
       <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>
     </div></details>
   </form>
-  <button type="button" class="btn-ajuda" data-ajuda>Não sabe o que fazer? Me ajude a decidir</button>
-  <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
+  <p class="abre-nota">{total} locais em {len(cidades)} cidades do Paraná. Não sabe se doa, vende ou descarta? <button type="button" class="link-ajuda" data-ajuda>Responda duas perguntas</button>.</p>
+ </div>
+ <div class="abre-tipos">
+  <h2>Ou escolha pelo tipo</h2>
+  <ul class="tipos">{tiles}</ul>
+  <p class="tipos-nota">A cor de cada tipo é a da lixeira da coleta seletiva.</p>
+ </div>
 </section>
 
 <section class="ferramenta" id="resultados" aria-label="Resultados">
@@ -71,40 +79,40 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   </div>
 </section>
 
-<section class="para-quem" id="empresas">
-  <h2>Para quem é o Desvia</h2>
-  <p class="sub">A informação sobre resíduos está espalhada: a Receita mostra a atividade da empresa, mas não a licença; a licença fica dividida entre IBAMA, IAT e prefeitura, cada um com seu sistema; e a orientação para o morador está no plano municipal (PMGIRS). O Desvia junta tudo para que cada um saiba o seu papel e o lugar certo de cada coisa.</p>
-  <div class="pq-grade">
-    <article class="pq"><span class="pq-tag">Quem precisa descartar</span><h3>Moradores, empresas e técnicos</h3>
-      <p>Saiba o que fazer com cada coisa (doar, vender, reciclar ou descartar), qual é a sua obrigação e onde levar com segurança, sabendo se o destino tem licença.</p>
-      <div class="pq-acoes"><button type="button" class="pq-btn" data-ajuda>Me ajude a decidir</button><a href="empresas/">Sua empresa está em dia?</a></div></article>
-    <article class="pq"><span class="pq-tag">Quem presta serviço</span><h3>Reuso, reciclagem, coleta, transporte e destinação</h3>
-      <p>Apareça para quem procura o seu serviço, com a licença ambiental verificada. Quem está regular ganha destaque; quem está com pendência sabe o que corrigir.</p>
-      <div class="pq-acoes"><a class="pq-btn" href="{CADASTRO}" target="_blank" rel="noopener">Cadastrar minha empresa</a></div></article>
-    <article class="pq"><span class="pq-tag">Prefeituras</span><h3>Gestão de resíduos e PMGIRS</h3>
-      <p>Veja quem opera na cidade, com que licença, onde há pontos de entrega e onde faltam. Informação organizada para o plano municipal, para a fiscalização e para orientar a população.</p>
-      <div class="pq-acoes"><a class="pq-btn" href="{PREFEITURA}" target="_blank" rel="noopener">Falar com o Desvia</a></div></article>
-  </div>
+<section class="faixa-empresas" id="empresas">
+ <div class="fe-texto">
+  <h2>Empresa responde pelo destino do próprio resíduo</h2>
+  <p>Se quem coleta ou recebe não tem licença, a responsabilidade volta para quem gerou. O Desvia mostra a licença de cada empresa, com a fonte e a data da consulta: IAT, CTF/IBAMA e prefeitura.</p>
+ </div>
+ <ul class="fe-links">
+  <li><a href="empresas/"><b>Sua empresa está em dia?</b><span>Checklist de obrigações: PGRS, MTR, inventário e licença.</span></a></li>
+  <li><a href="{CADASTRO}" target="_blank" rel="noopener"><b>Cadastrar minha empresa</b><span>Para quem coleta, transporta, recicla ou destina. Conferimos a licença.</span></a></li>
+  <li><a href="{PREFEITURA}" target="_blank" rel="noopener"><b>Sou da prefeitura</b><span>Quem opera na cidade, com que licença e onde faltam pontos de entrega.</span></a></li>
+ </ul>
 </section>
 
-<section class="passos" id="como-funciona">
+<section class="como" id="como-funciona">
   <h2>Como funciona</h2>
   <ol>
-    <li><b>Reunimos as fontes</b><span>Dados públicos do IAT, do CTF/IBAMA e das prefeituras municipais, que hoje ficam em sites separados.</span></li>
-    <li><b>Conferimos a licença</b><span>Cada empresa mostra se a licença está válida, vencida ou não foi localizada, com a data da consulta.</span></li>
-    <li><b>Você escolhe com segurança</b><span>Filtre pelo resíduo e pela cidade, veja no mapa e fale direto com quem recebe.</span></li>
+    <li><b>Reunimos as fontes</b><span>IAT, CTF/IBAMA e prefeituras, que hoje ficam em sites separados.</span></li>
+    <li><b>Conferimos a licença</b><span>Válida, vencida ou não localizada, com a data da consulta.</span></li>
+    <li><b>Você escolhe</b><span>Filtre pelo resíduo e pela cidade e fale direto com quem recebe.</span></li>
   </ol>
 </section>
 
-<section class="blocos">
-  <div><h2>Guias de descarte</h2><p class="sub">Como descartar cada resíduo em casa e na empresa, o que diz a lei e onde levar.</p><ul class="grade">{guias_html}</ul><p><a href="guias/">Ver todos os guias</a></p></div>
+<div class="duas">
+<section class="lista-sec">
+  <h2>Guias de descarte</h2>
+  <ul class="linhas">{guias_html}</ul>
+  <p><a href="guias/">Todos os guias</a></p>
 </section>
-
-<section class="blocos">
-  <div><h2>Cidades</h2><ul class="grade">{cidades_html}</ul>
+<section class="lista-sec">
+  <h2>Cidades</h2>
+  <ul class="linhas">{cidades_html}</ul>
   {pedir_cidade()}
-  <p class="sub">Guia completo de Mandaguari, com coleta por bairro e regras municipais: <a href="mandaguari.html">abrir</a>.</p></div>
+  <p class="nota">Mandaguari tem um guia completo, com coleta por bairro: <a href="mandaguari.html">abrir</a>.</p>
 </section>
+</div>
 
 <section class="faq"><h2>Perguntas frequentes</h2>{faq_html}</section>
 
