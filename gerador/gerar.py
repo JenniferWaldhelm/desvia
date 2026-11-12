@@ -189,7 +189,8 @@ EXTRA_COLETA = {
 <h2>Viu alguém jogando lixo ou entulho na rua? Denuncie</h2>
 <p>Jogar lixo, entulho ou qualquer resíduo na rua, em terreno vazio, em boca de lobo ou em fundo de vale é proibido pelo Código de Posturas de Londrina (Lei 13.903/2024, art. 181) e dá multa.</p>
 <p>Denuncie ao Serviço de Atendimento (SAC) da CMTU: <a href="tel:+554333797946">(43) 3379-7946</a>, de segunda a sexta, das 8h às 17h, ou pelo e-mail <a href="mailto:sac.cmtu@gmail.com">sac.cmtu@gmail.com</a>. Se puder, mande fotos do descarte e da placa do veículo.</p>
-<p class="nota">Fonte: <a href="https://cmtu.londrina.pr.gov.br/index.php/limpeza-urbana/pev.html" target="_blank" rel="noopener">CMTU, página dos PEVs</a>.</p>
+<p>Você também pode denunciar à Fiscalização Ambiental da Secretaria Municipal do Ambiente (SEMA): telefone <a href="tel:+554333724770">(43) 3372-4770</a> ou <a href="tel:+554333724771">(43) 3372-4771</a>, e-mail <a href="mailto:fiscalizacao.sema@londrina.pr.gov.br">fiscalizacao.sema@londrina.pr.gov.br</a> ou o <a href="https://portal.londrina.pr.gov.br/denuncia-de-danos-ambientais" target="_blank" rel="noopener">formulário de denúncia de danos ambientais</a>.</p>
+<p class="nota">Fontes: <a href="https://cmtu.londrina.pr.gov.br/index.php/limpeza-urbana/pev.html" target="_blank" rel="noopener">CMTU, página dos PEVs</a>; <a href="https://portal.londrina.pr.gov.br/fiscalizacao-ambiental-sema" target="_blank" rel="noopener">SEMA, fiscalização ambiental</a>.</p>
 """,
 }
 
@@ -776,7 +777,7 @@ def gerar():
 <p>Estes itens têm destino próprio em {esc(cidade)}:</p>
 <div class="outras"><ul>{nao_vai}</ul></div>
 
-<h2>A coleta não passou?</h2>
+<h2>A coleta não passou? Reclame na prefeitura, na agência reguladora ou no Ministério Público</h2>
 <ol class="lista-texto">
 <li><b>Reclame com o responsável pelo serviço:</b> {esc(titular)}, ou na ouvidoria da prefeitura. Anote o protocolo.</li>
 <li><b>Se não resolver</b>, comunique a agência reguladora que fiscaliza a limpeza urbana no município. No Paraná, muitos municípios são regulados pela <b>AGEPAR</b>. A agência fiscaliza o titular do serviço (prefeitura, autarquia ou empresa contratada).</li>
