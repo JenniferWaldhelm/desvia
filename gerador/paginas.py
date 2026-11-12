@@ -34,10 +34,10 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     opcoes_tipo = "".join(f'<option value="{s}">{esc(nomes[s][1])}</option>' for s, _ in cats_ordem)
     cats_js = json.dumps({s: nomes[s][1] for s, _ in cats_ordem}, ensure_ascii=False)
     faq = [
-        ("De onde vêm os dados?", "De dados públicos do IAT (licenciamento ambiental), do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. Cada empresa mostra a fonte e a data da consulta."),
-        ("Por que aparecem empresas sem licença?", "Porque elas operam e as pessoas encontram essas empresas de qualquer forma. O Desvia mostra todas, com a situação da licença bem visível: válida, vencida ou não localizada nas bases consultadas. Antes de contratar, peça a licença atual."),
-        ("Sou empresa de coleta ou destinação. Como apareço com licença verificada?", "Mande sua licença pelo WhatsApp. Conferimos no órgão ambiental e atualizamos seu cadastro."),
-        ("O Desvia é da prefeitura?", "Não. É um projeto independente que reúne informações públicas de várias fontes. Em cada cidade, as regras oficiais são as da prefeitura e do órgão ambiental."),
+        ("De onde vêm os dados?", "De três fontes públicas: o Instituto Água e Terra (IAT), que dá a licença ambiental no Paraná; o Cadastro Técnico Federal do Ibama; e as prefeituras. Cada empresa mostra de qual fonte veio a informação e em que data consultamos."),
+        ("Por que aparecem empresas sem licença?", "Porque elas funcionam e você pode encontrá-las de qualquer jeito. O Desvia mostra todas e deixa claro a situação de cada uma: licença válida, vencida ou não localizada nas bases consultadas. Não localizada quer dizer que não achamos a licença nas fontes públicas; a empresa pode ter licença em outro órgão. Antes de contratar, peça a licença atual."),
+        ("Sou empresa de coleta ou destinação. Como apareço com licença verificada?", "Mande sua licença pelo WhatsApp. Conferimos com o órgão que emitiu a licença e atualizamos o seu cadastro."),
+        ("O Desvia é da prefeitura?", "Não. O Desvia é um projeto independente que reúne informações públicas. As regras oficiais de cada cidade são as da prefeitura e do órgão ambiental."),
     ]
     faq_html = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)
     tiles = "".join(f'<li><button type="button" data-atalho="{s}">{esc(nomes[s][1])}</button></li>'
@@ -45,7 +45,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     corpo = f"""<section class="abre">
  <div class="abre-texto">
   <h1>Onde levar o que você não usa mais</h1>
-  <p class="abre-sub">Doar, vender, reciclar ou descartar. Pontos de entrega, brechós, cooperativas e empresas da sua cidade, com a licença ambiental conferida.</p>
+  <p class="abre-sub">Doar, vender, reciclar ou descartar: veja pontos de entrega, brechós, cooperativas e empresas da sua cidade. Em cada empresa, mostramos se ela tem licença ambiental.</p>
   <form class="busca" id="busca" role="search" toolname="buscar_onde_descartar_formulario" tooldescription="Busca onde descartar um resíduo em uma cidade, com a licença ambiental de cada empresa.">
     <label class="campo"><span>O que você tem?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="sofá, roupa, pilha, remédio, entulho…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
@@ -56,10 +56,10 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
         <option value="reciclar">Reciclar</option><option value="descartar">Descartar com segurança</option>
         <option value="empresa">Empresas: coleta e destinação</option></select></label>
       <label class="filtro"><span>Tipo de resíduo</span><select id="fTipo" name="tipo"><option value="">Todos os tipos</option>{opcoes_tipo}</select></label>
-      <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>
+      <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder empresas com licença vencida ou não localizada</label>
     </div></details>
   </form>
-  <p class="abre-nota"><button type="button" class="link-ajuda btn-perto" data-perto>Perto de mim</button> <button type="button" class="link-ajuda" data-ajuda>Não sei o que fazer</button></p>
+  <p class="abre-nota"><button type="button" class="link-ajuda btn-perto" data-perto>Perto de mim</button> <button type="button" class="link-ajuda" data-ajuda>Não sei se doo, vendo ou descarto</button></p>
  </div>
  <div class="abre-tipos">
   <h2>Mais procurados</h2>
@@ -79,8 +79,8 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 
 <section class="faixa-empresas" id="empresas">
  <div class="fe-texto">
-  <h2>Empresa responde pelo destino do próprio resíduo</h2>
-  <p>Se quem coleta ou recebe não tem licença, a responsabilidade volta para quem gerou. O Desvia mostra a licença de cada empresa, com a fonte e a data da consulta: IAT, CTF/IBAMA e prefeitura.</p>
+  <h2>A empresa responde pelo destino do resíduo que gera</h2>
+  <p>Contratar alguém para coletar não tira a responsabilidade de quem gerou o resíduo. Por isso, antes de contratar, confira se a empresa tem licença ambiental.</p><p>No Desvia, cada empresa mostra a licença, de onde veio a informação e quando consultamos.</p>
  </div>
  <ul class="fe-links">
   <li><a href="empresas/"><b>Sua empresa está em dia?</b></a></li>
