@@ -124,35 +124,35 @@ LOCALIZADOR = {
 
 # Orientação curta por categoria (aparece no topo e no FAQ).
 DICAS = {
-    "pneus": "Pneus inservíveis têm logística reversa obrigatória: fabricantes e importadores precisam recolher. Não descarte em terreno baldio nem na coleta comum, porque acumulam água e viram criadouro do Aedes aegypti.",
+    "pneus": "Pneus velhos têm logística reversa obrigatória: fabricantes e importadores precisam recolher. Não descarte em terreno baldio nem na coleta comum, porque acumulam água e viram criadouro do Aedes aegypti.",
     "eletronicos": "Eletrônicos e eletrodomésticos têm logística reversa obrigatória. Leve inteiros, sem desmontar, porque placas e baterias internas contêm metais pesados.",
     "lampadas": "Lâmpadas fluorescentes contêm mercúrio. Entregue inteiras, embaladas na caixa original ou em jornal, para não quebrar no transporte.",
     "pilhas-e-baterias": "Pilhas e baterias têm logística reversa obrigatória e não podem ir para o lixo comum. Baterias de carro e moto voltam para a loja que vende a nova.",
     "oleo-de-cozinha": "Espere o óleo esfriar, coe e guarde em garrafa PET bem fechada. Nunca jogue na pia: um litro de óleo contamina milhares de litros de água.",
-    "oleo-lubrificante": "Óleo lubrificante usado é resíduo perigoso e deve ir para rerrefino. A troca de óleo em oficina já inclui a destinação; peça o comprovante.",
-    "entulho": "Pequenas reformas podem usar os PEVs públicos dentro do limite da prefeitura. Obras maiores precisam contratar caçamba ou transportadora licenciada.",
-    "moveis-e-volumosos": "Móveis, colchões e sofás não vão na coleta comum. Use o serviço da prefeitura ou o PEV dentro do limite permitido.",
-    "poda-e-galhos": "Galhos e poda podem ir para os PEVs públicos ou coleta específica da prefeitura. Corte em pedaços menores para facilitar o transporte.",
-    "madeira": "Madeira limpa (paletes, sobras) pode ser reaproveitada. Madeira tratada ou pintada exige destinação específica.",
+    "oleo-lubrificante": "Óleo lubrificante usado é resíduo perigoso e deve ir para rerrefino, que transforma o óleo usado em óleo novo. A troca de óleo em oficina já inclui a destinação; peça o comprovante.",
+    "entulho": "Pequenas reformas podem usar os pontos de entrega da prefeitura, dentro do limite permitido. Obras maiores precisam contratar caçamba ou transportadora licenciada.",
+    "moveis-e-volumosos": "Móveis, colchões e sofás não vão na coleta comum. Use o serviço da prefeitura ou os pontos de entrega, dentro do limite permitido.",
+    "poda-e-galhos": "Galhos e poda podem ir para os pontos de entrega da prefeitura ou para a coleta específica da prefeitura. Corte em pedaços menores para facilitar o transporte.",
+    "madeira": "Madeira limpa (paletes, sobras) pode ser reaproveitada. Madeira tratada ou pintada precisa de destino específico.",
     "medicamentos": "Medicamentos vencidos ou sem uso devem voltar para farmácias com ponto de coleta. Não jogue no lixo comum nem no vaso sanitário.",
-    "residuos-de-saude": "Resíduos de serviços de saúde (clínicas, consultórios, farmácias) exigem empresa licenciada para coleta e tratamento e plano de gerenciamento (PGRSS).",
+    "residuos-de-saude": "Resíduos de serviços de saúde (clínicas, consultórios, farmácias) exigem empresa licenciada para coleta e tratamento e Plano de Gerenciamento de Resíduos de Serviços de Saúde (PGRSS).",
     "reciclaveis": "Separe recicláveis limpos e secos. Cooperativas e associações de catadores dão destino aos materiais e geram renda local.",
     "sucata-metalica": "Sucata metálica tem valor de mercado. Para empresas, exija nota e comprovante de destinação do comprador.",
     "organicos": "Restos de alimentos e poda podem virar adubo por compostagem. Empresas geradoras de grande volume precisam de destinação licenciada.",
     "texteis": "Roupas em bom estado podem ser doadas. Retalhos e estopas industriais vão para empresas de reaproveitamento.",
     "tintas-e-solventes": "Tintas, thinner e solventes são resíduos perigosos. Guarde na embalagem original fechada e destine com empresa licenciada.",
-    "limpa-fossa": "Fossas e caixas de gordura devem ser esvaziadas por empresa licenciada, que leva o efluente para tratamento.",
+    "limpa-fossa": "Fossas e caixas de gordura devem ser esvaziadas por empresa licenciada, que leva o esgoto para tratamento.",
     "embalagens-de-agrotoxico": "Embalagens vazias de agrotóxico devem passar pela tríplice lavagem e voltar para a central indicada na nota fiscal de compra.",
     "residuos-perigosos": "Resíduos Classe I (perigosos) exigem transportador e destinador licenciados, Manifesto de Transporte de Resíduos (MTR) e Certificado de Destinação Final (CDF).",
-    "residuos-classe-ii": "Resíduos industriais não perigosos (Classe II) também exigem transportador e destinador licenciados, MTR e CDF.",
+    "residuos-classe-ii": "Resíduos industriais não perigosos (Classe II) também exigem transportador e destinador licenciados, o Manifesto de Transporte de Resíduos (MTR) e o Certificado de Destinação Final (CDF).",
 }
 
 # Regras locais por cidade e categoria.
 REGRAS_LOCAIS = {
-    ("mandaguari", "entulho"): "Em Mandaguari, caçambas podem ficar no máximo 72 horas na via pública (Lei Municipal nº 450/1999). Grandes geradores de RCC precisam de PGRCC.",
+    ("mandaguari", "entulho"): "Em Mandaguari, caçambas podem ficar no máximo 72 horas na via pública (Lei Municipal nº 450/1999). Quem gera muito entulho precisa de Plano de Gerenciamento de Resíduos da Construção Civil (PGRCC).",
     ("mandaguari", "*"): "Em Mandaguari, empresas obrigadas a ter PGRS precisam apresentá-lo para obter alvará e certidões municipais (Lei Municipal nº 4.419/2025, art. 17 e 18).",
-    ("londrina", "entulho"): "Em Londrina, os PEVs públicos recebem até 1 m³ por pessoa por mês de entulho, poda e madeira.",
-    ("londrina", "poda-e-galhos"): "Em Londrina, os PEVs públicos recebem até 1 m³ por pessoa por mês de poda, madeira e entulho.",
+    ("londrina", "entulho"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem até 1 metro cúbico (m³) por pessoa por mês de entulho, poda e madeira.",
+    ("londrina", "poda-e-galhos"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem até 1 metro cúbico (m³) por pessoa por mês de poda, madeira e entulho.",
 }
 
 ORDEM_STATUS = {"valida": 0, "vencendo": 1, "publico": 2, "entrega": 2, "vencida": 3, "nao_localizada": 4}
@@ -227,13 +227,13 @@ def selo_licenca(p):
     ident = " ".join(x for x in [tipo, num] if x)
     if orgao:
         ident = f"{ident} ({orgao})" if ident else orgao
-    aviso_lp = " Licença prévia ou de instalação: não autoriza a operação." if tipo.upper() in ("LP", "LI", "LI-A") else ""
+    aviso_lp = " É licença prévia ou de instalação: ainda não permite que a empresa funcione." if tipo.upper() in ("LP", "LI", "LI-A") else ""
     if st == "valida":
         return "ok", f"Licença {ident} válida até {validade:%d/%m/%Y}.{aviso_lp}"
     if st == "vencendo":
         return "alerta", f"Licença {ident} vence em {validade:%d/%m/%Y}.{aviso_lp}"
     if st == "vencida":
-        return "alerta", f"Licença {ident} com validade até {validade:%d/%m/%Y}. Renovação não localizada nas bases consultadas em {verif}."
+        return "alerta", f"Licença {ident} venceu em {validade:%d/%m/%Y}. Renovação não localizada nas bases consultadas em {verif}."
     if st == "publico":
         if p["Tipo de ponto"] == "Programa logística reversa":
             return "neutro", "Programa de logística reversa."
@@ -447,14 +447,14 @@ def faq_categoria(cat_slug, frase, cidade, pts):
         (f"Onde descartar {frase} em {cidade}?",
          f"O Desvia encontrou {len(pts)} {'opção' if len(pts) == 1 else 'opções'} para {frase} em {cidade}, "
          f"sendo {publicos} {'ponto de entrega' if publicos == 1 else 'pontos de entrega'} para a população e "
-         f"{validos} com licença ambiental válida localizada. {DICAS.get(cat_slug, '')}"),
+         f"{validos} com licença ambiental válida. {DICAS.get(cat_slug, '')}"),
         ("Como saber se a empresa tem licença ambiental?",
-         "Cada empresa mostra o tipo, o número e a validade da licença localizada nas bases do IAT, da prefeitura ou do IBAMA. "
-         "Quando nada foi encontrado, o Desvia indica que a licença não foi localizada nas bases consultadas e a data da consulta. "
+         "Cada empresa mostra o tipo, o número e a validade da licença encontrada no Instituto Água e Terra (IAT), na prefeitura ou no Ibama. "
+         "Quando não encontramos nada, a empresa aparece com \"licença não localizada nas bases consultadas\" e a data da consulta. "
          "Antes de contratar, peça a licença atual à empresa."),
         ("Sou empresa. O que preciso exigir de quem leva meu resíduo?",
          "Transportador e destinador precisam de licença ambiental válida para o tipo de resíduo. Cada envio exige o Manifesto de "
-         "Transporte de Resíduos (MTR, no sistema do SINIR) e, depois, o Certificado de Destinação Final (CDF). Guarde os dois."),
+         "Transporte de Resíduos (MTR, emitido no Sistema Nacional de Informações sobre Resíduos, o SINIR) e, depois, o Certificado de Destinação Final (CDF). Guarde os dois."),
     ]
     return perguntas
 
@@ -523,7 +523,7 @@ def gerar():
             outras = "".join(f'<li><a href="../{s}/">{esc(nomes[s][1])}</a></li>' for s in cats_ordem if s != cat)
             corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">{esc(cidade)}</a> › {esc(curto)}</nav>
 <h1>Onde descartar {esc(frase)} em {esc(cidade)}</h1>
-<p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)} e região, {n_val} com licença ambiental válida localizada. {esc(DICAS.get(cat, ''))}</p>
+<p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)} e região, {n_val} com licença ambiental válida. {esc(DICAS.get(cat, ''))}</p>
 {f'<p class="regra">{esc(regra)}</p>' if regra else ''}
 {f'<p class="localizador"><a href="{LOCALIZADOR[cat][1]}" target="_blank" rel="noopener">{esc(LOCALIZADOR[cat][0])} ↗</a></p>' if cat in LOCALIZADOR else ''}
 <p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro. <a href="../?r={cat}#mapa">Abrir no mapa com filtros</a></p>
@@ -581,7 +581,7 @@ def gerar():
                     f"É a que consta nas bases públicas (IAT, CTF/IBAMA e prefeitura) em {HOJE:%d/%m/%Y}. Antes de contratar, peça a licença à empresa.")]
             corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../../">Cidades</a> › <a href="../../">{esc(cidade)}</a> › {esc(sv_nome)}</nav>
 <h1>{esc(sv_nome)} em {esc(cidade)}</h1>
-<p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)}, {n_val} com licença ambiental válida localizada.</p>
+<p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)}, {n_val} com licença ambiental válida.</p>
 <p class="regra">{esc(sv_aviso)}</p>
 <p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro.</p>
 {mapa_js(pts)}

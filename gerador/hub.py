@@ -67,7 +67,7 @@ LOCAL = {
                  None),
         "extra": [
             ("🧱", "Entulho e construção", "Descarte de entulho de obras",
-             "Grandes geradores (acima de 1 m³/mês) contratam transportadora licenciada e garantem destinação em local licenciado. Mandaguari não tem usina de reciclagem de RCD própria: a destinação pode ser feita em municípios vizinhos. Resíduos Classe A (concreto, cerâmica) podem ser doados à prefeitura mediante laudo técnico e termo de doação junto à SMDEMAT.",
+             "Grandes geradores (acima de 1 m³/mês) contratam transportadora licenciada e garantem destinação em local licenciado. Mandaguari não tem usina própria de reciclagem de entulho: a destinação pode ser feita em municípios vizinhos. Resíduos Classe A (concreto, cerâmica) podem ser doados à prefeitura mediante laudo técnico e termo de doação junto à SMDEMAT.",
              ["Base legal: Lei Municipal 4.419/2025 e Resolução CONAMA 307/2002",
               "Caçambas: no máximo 72 horas na via pública (Lei Municipal 450/1999)"], None),
             ("🫙", "Óleo de cozinha", "Óleo de fritura usado",
@@ -79,14 +79,14 @@ LOCAL = {
     "londrina": {
         "extra": [
             ("🧱", "Entulho e construção", "Descarte de entulho de obras",
-             "Os PEVs públicos recebem até 1 m³ por pessoa por mês. Obras maiores contratam caçamba ou transportadora licenciada e garantem destinação em local licenciado.",
+             "Os pontos de entrega da prefeitura (PEVs) recebem até 1 metro cúbico (m³) por pessoa por mês. Obras maiores contratam caçamba ou transportadora licenciada e garantem destinação em local licenciado.",
              ["Base legal: Resolução CONAMA 307/2002"], None),
             ("🫙", "Óleo de cozinha", "Óleo de fritura usado",
              "O Projeto Óleo Solidário, da Cáritas Arquidiocesana, e empresas licenciadas recebem óleo de fritura. Nunca despeje na pia ou no esgoto.",
              [], None),
         ],
         "orgao": "Secretaria Municipal do Ambiente (SEMA) de Londrina",
-        "licenciador": "Em Londrina o licenciamento é municipalizado: a SEMA licencia as atividades de impacto local e o IAT (Instituto Água e Terra) as demais.",
+        "licenciador": "Em Londrina, a licença ambiental pode ser da prefeitura ou do estado: a Secretaria Municipal do Ambiente (SEMA) licencia as atividades de impacto local, e o Instituto Água e Terra (IAT), as demais.",
         "licenca": ("🏛️", "Licença — SEMA ou IAT", "Licença ambiental (SEMA Londrina ou IAT)",
                     "Londrina tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela SEMA; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
                     ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
@@ -95,7 +95,7 @@ LOCAL = {
                     ("Licenciamento ambiental municipal (SEMA)", "https://portal.londrina.pr.gov.br/licenciamento-ambiental-municipal")),
     },
     "maringa": {
-        "licenciador": "Em Maringá o licenciamento é municipalizado: o município licencia as atividades de impacto local e o IAT (Instituto Água e Terra) as demais.",
+        "licenciador": "Em Maringá, a licença ambiental pode ser da prefeitura ou do estado: a prefeitura licencia as atividades de impacto local, e o Instituto Água e Terra (IAT), as demais.",
         "licenca": ("🏛️", "Licença — Município ou IAT", "Licença ambiental (Prefeitura de Maringá ou IAT)",
                     "Maringá tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
                     ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
@@ -154,7 +154,7 @@ def secao_empresas(cid_slug, cidade):
     loc = dict(LOCAL.get(cid_slug, {}))
     municipal, link = licenciamento_municipal(cidade)
     if municipal and "licenca" not in loc:
-        loc["licenciador"] = f"Em {cidade} o licenciamento é municipalizado: o município licencia as atividades de impacto local e o IAT (Instituto Água e Terra) as demais."
+        loc["licenciador"] = f"Em {cidade}, a licença ambiental pode ser da prefeitura ou do estado: a prefeitura licencia as atividades de impacto local, e o Instituto Água e Terra (IAT), as demais."
         loc["licenca"] = ("🏛️", "Licença — Município ou IAT", f"Licença ambiental (Prefeitura de {cidade} ou IAT)",
                           f"{cidade} tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT.",
                           ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
