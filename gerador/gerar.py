@@ -338,7 +338,7 @@ def compartilhar(url, titulo):
              ("X", f"https://twitter.com/intent/tweet?url={u}&text={t}"),
              ("E-mail", f"mailto:?subject={t}&body={u}")]
     links = "".join(f'<a href="{h}" target="_blank" rel="noopener">{n}</a>' for n, h in redes)
-    return (f'<section class="compartilhar" aria-label="Compartilhar esta página"><p>Ajude mais gente a descartar certo: compartilhe esta página</p>'
+    return (f'<section class="compartilhar" aria-label="Compartilhar esta página"><p>Conhece alguém que precisa descartar algo? Compartilhe esta página</p>'
             f'<div class="compartilhar-bt"><button type="button" class="nativo" hidden>Compartilhar…</button>{links}'
             f'<button type="button" class="copiar" data-url="{esc(url)}">Copiar link</button></div></section>'
             '<script>(function(){var s=document.currentScript.previousElementSibling,n=s.querySelector(".nativo"),c=s.querySelector(".copiar");'
@@ -380,7 +380,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {corpo}
 </main>
 {compartilhar(url, titulo)}
-<footer><p>Desvia reúne, em uma só busca, dados públicos do IAT, do Cadastro Técnico Federal do IBAMA e das prefeituras municipais. As informações de licença refletem as bases públicas na data indicada e não substituem a consulta ao órgão ambiental.</p>
+<footer><p>O Desvia reúne, em uma só busca, dados públicos do Instituto Água e Terra (IAT), do Cadastro Técnico Federal do Ibama e das prefeituras. A situação da licença vale para a data da consulta, mostrada em cada empresa. Para ter certeza, consulte o órgão ambiental.</p>
 <nav class="rodape-links" aria-label="Rodapé">
   <div><b>Desvia</b><a href="{raiz}">Buscar onde descartar</a><a href="{raiz}guias/">Guias por resíduo</a><a href="{raiz}empresas/">Para empresas</a><a href="{raiz}privacidade/">Cookies e privacidade</a></div>
   <div><b>Cidades</b>{"".join(f'<a href="{raiz}residuos/{c}/">{esc(n)}</a>' for c, n in CIDADES.items())}</div>
@@ -777,8 +777,8 @@ def gerar():
            "pessoa_fisica": pessoa_fisica, "base": BASE_URL}
     publicados = [p for p in pontos if p["_cidades"] & set(CIDADES)]
     corpo, jsonld = site_desvia.home(publicados, CIDADES, nomes, cats_geral, contagens, ctx, HOJE)
-    html_home = pagina("Onde descartar entulho e resíduos em Londrina e região | Desvia",
-                       "Pontos de entrega, cooperativas e empresas de coleta e destinação de resíduos, com a situação da licença ambiental. Várias fontes, uma só busca.",
+    html_home = pagina("Onde descartar, doar ou reciclar em Londrina e região | Desvia",
+                       "Onde levar pilha, eletrônico, óleo, entulho, remédio e móveis em Londrina, Maringá e região. Pontos de entrega, brechós e empresas com a licença ambiental.",
                        f"{BASE_URL}/", "", corpo, jsonld, mapa=True)
     (RAIZ / "index.html").write_text(html_home.replace("<main>", '<main class="home">', 1), encoding="utf-8")
 
