@@ -737,7 +737,7 @@ def gerar():
             ("O que não pode ir na coleta comum?",
              "Pilhas, baterias, lâmpadas, eletrônicos, remédios, óleo de cozinha, entulho, móveis, pneus e galhos têm destino próprio. Veja onde levar cada um no Desvia."),
             ("A coleta não passou. O que fazer?",
-             f"Primeiro, registre a reclamação com {titular} ou na ouvidoria da prefeitura. Se o problema continuar, comunique a agência reguladora que fiscaliza o serviço de limpeza urbana no município (no Paraná, em muitos municípios, a AGEPAR). Ela fiscaliza o titular do serviço, não o morador. Se mesmo assim o serviço não for feito, procure o Ministério Público do Paraná (MPPR), pela Promotoria de Justiça da sua cidade ou pela ouvidoria do MPPR."),
+             f"Primeiro, registre a reclamação com {titular} ou na ouvidoria da prefeitura. Se o problema continuar, comunique a agência reguladora que fiscaliza o serviço de limpeza urbana no município (no Paraná, em muitos municípios, a AGEPAR). Ela fiscaliza o titular do serviço, não o morador. Se mesmo assim o serviço não for feito, procure o Ministério Público do Paraná (MPPR), pela Promotoria de Justiça da sua cidade ou pelo formulário de atendimento do MPPR (MP Atende)."),
         ]
         corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">{esc(cidade)}</a> › Coleta de lixo</nav>
 <h1>Que dia passa o lixo na sua rua em {esc(cidade)}?</h1>
@@ -780,7 +780,7 @@ def gerar():
 <ol class="lista-texto">
 <li><b>Reclame com o responsável pelo serviço:</b> {esc(titular)}, ou na ouvidoria da prefeitura. Anote o protocolo.</li>
 <li><b>Se não resolver</b>, comunique a agência reguladora que fiscaliza a limpeza urbana no município. No Paraná, muitos municípios são regulados pela <b>AGEPAR</b>. A agência fiscaliza o titular do serviço (prefeitura, autarquia ou empresa contratada).</li>
-<li><b>Se o serviço continuar sem ser feito</b>, procure o <b>Ministério Público do Paraná (MPPR)</b>: a Promotoria de Justiça da sua cidade ou a ouvidoria, pelo <a href="https://mppr.mp.br/" target="_blank" rel="noopener">site do MPPR</a>. A coleta de lixo é um serviço público obrigatório, e o Ministério Público pode cobrar da prefeitura que ele funcione. Leve os protocolos das reclamações anteriores.</li>
+<li><b>Se o serviço continuar sem ser feito</b>, procure o <b>Ministério Público do Paraná (MPPR)</b>: a Promotoria de Justiça da sua cidade ou o <a href="https://site.mppr.mp.br/atendimento/Pagina/MP-Atende-Formulario" target="_blank" rel="noopener">formulário de atendimento do MPPR</a>. A coleta de lixo é um serviço público obrigatório, e o Ministério Público pode cobrar da prefeitura que ele funcione. Leve os protocolos das reclamações anteriores.</li>
 </ol>
 
 <section class="faq"><h2>Perguntas frequentes</h2>{"".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)}</section>"""
