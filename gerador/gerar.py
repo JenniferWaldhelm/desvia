@@ -193,11 +193,27 @@ EXTRA_COLETA = {
 """,
 }
 
+# Informações próprias de um serviço numa cidade (fonte oficial informada pela Jen): (html, perguntas frequentes extras).
+LOCAL_SERVICO = {
+    ("londrina", "cacamba-de-entulho"): ("""<h2>Caçamba na rua precisa de autorização da CMTU</h2>
+<p>Em Londrina, a caçamba só pode ficar em área pública (rua ou calçada) com autorização da Companhia Municipal de Trânsito e Urbanização (CMTU). O pedido é feito em nome da <b>empresa que aluga a caçamba</b>, pelo sistema SEI da prefeitura. Antes de contratar, combine com a empresa quem vai pedir a autorização.</p>
+<ul class="lista-texto">
+<li><b>Quem pode pedir:</b> pessoa física ou jurídica de Londrina.</li>
+<li><b>Documento:</b> formulário próprio, com nome, RG, CPF, telefone, endereço completo e e-mail, preenchido de forma clara e completa.</li>
+<li><b>Vaga:</b> a CMTU avalia se há vaga no local pedido.</li>
+<li><b>Prazo:</b> primeira resposta em até 48 horas, por ordem de protocolo.</li>
+<li><b>Taxa:</b> há taxa, reajustada todo ano.</li>
+</ul>
+<p><a class="pq-btn" href="https://servicos.londrina.pr.gov.br/Servico/Details/50?banner=true" target="_blank" rel="noopener">Ver o serviço na Prefeitura de Londrina ↗</a></p>""",
+     [("Precisa de autorização para colocar caçamba na rua em Londrina?",
+       "Sim. Caçamba em rua ou calçada precisa de autorização da CMTU, pedida pelo sistema SEI da prefeitura em nome da empresa que aluga a caçamba. A primeira resposta sai em até 48 horas e há taxa.")]),
+}
+
 # Regras locais por cidade e categoria.
 REGRAS_LOCAIS = {
     ("mandaguari", "entulho"): "Em Mandaguari, caçambas podem ficar no máximo 72 horas na via pública (Lei Municipal nº 450/1999). Quem gera muito entulho precisa de Plano de Gerenciamento de Resíduos da Construção Civil (PGRCC).",
     ("mandaguari", "*"): "Em Mandaguari, empresas obrigadas a ter PGRS precisam apresentá-lo para obter alvará e certidões municipais (Lei Municipal nº 4.419/2025, art. 17 e 18).",
-    ("londrina", "entulho"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem de graça até 1 metro cúbico (m³) por pessoa por mês, cerca de 8 carrinhos de pedreiro. Leve documento com foto e o resíduo separado. Gesso e telha de amianto não são aceitos.",
+    ("londrina", "entulho"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem de graça até 1 metro cúbico (m³) por pessoa por mês, cerca de 8 carrinhos de pedreiro. Leve documento com foto e o resíduo separado. Gesso e telha de amianto não são aceitos. Caçamba na rua precisa de autorização da CMTU, pedida pela empresa que aluga.",
     ("londrina", "poda-e-galhos"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) das zonas Norte e Sul recebem de graça até 1 metro cúbico (m³) de poda por pessoa por mês. O PEV Zona Leste não recebe poda. Leve documento com foto.",
 }
 
@@ -640,11 +656,12 @@ def gerar():
             faq = [(f"Como escolher {sv_nome.lower()} em {cidade}?",
                     "Prefira quem tem licença ambiental válida, peça o comprovante de destinação e desconfie de preço muito abaixo do mercado."),
                    ("A licença que aparece aqui é a atual?",
-                    f"É a que consta nas bases públicas (IAT, CTF/IBAMA e prefeitura) em {HOJE:%d/%m/%Y}. Antes de contratar, peça a licença à empresa.")]
+                    f"É a que consta nas bases públicas (IAT, CTF/IBAMA e prefeitura) em {HOJE:%d/%m/%Y}. Antes de contratar, peça a licença à empresa.")] + LOCAL_SERVICO.get((cid_slug, sv_slug), ("", []))[1]
             corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../../">Cidades</a> › <a href="../../">{esc(cidade)}</a> › {esc(sv_nome)}</nav>
 <h1>{esc(sv_nome)} em {esc(cidade)}</h1>
 <p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)}, {n_val} com licença ambiental válida.</p>
 <p class="regra">{esc(sv_aviso)}</p>
+{LOCAL_SERVICO.get((cid_slug, sv_slug), ("", []))[0]}
 <p class="atualizado">Dados atualizados em {HOJE:%d/%m/%Y}. Licença válida aparece primeiro.</p>
 {mapa_js(pts)}
 <section class="lista">
