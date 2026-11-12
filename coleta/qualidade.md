@@ -1,8 +1,12 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 1 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 12
 - Possíveis duplicados: 1
+
+## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
+
+- LDA-387 PEV Zona Sul (Conjunto São Lourenço): -23.37907, -51.12482
 
 ## Sem coordenada (pegar no Google Maps)
 
