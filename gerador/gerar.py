@@ -147,6 +147,21 @@ DICAS = {
     "residuos-classe-ii": "Resíduos industriais não perigosos (Classe II) também exigem transportador e destinador licenciados, o Manifesto de Transporte de Resíduos (MTR) e o Certificado de Destinação Final (CDF).",
 }
 
+G_NOMES = {s: n for s, n, _, _ in CATEGORIAS}
+GUIAS_RELACIONADOS = {
+    "pneus": ("oleo-lubrificante", "entulho", "sucata-metalica"), "eletronicos": ("pilhas-e-baterias", "lampadas", "sucata-metalica"),
+    "lampadas": ("pilhas-e-baterias", "eletronicos", "residuos-perigosos"), "pilhas-e-baterias": ("eletronicos", "lampadas", "residuos-perigosos"),
+    "oleo-de-cozinha": ("organicos", "reciclaveis", "limpa-fossa"), "oleo-lubrificante": ("residuos-perigosos", "pneus", "tintas-e-solventes"),
+    "entulho": ("madeira", "moveis-e-volumosos", "poda-e-galhos"), "moveis-e-volumosos": ("entulho", "texteis", "madeira"),
+    "poda-e-galhos": ("organicos", "madeira", "entulho"), "madeira": ("entulho", "poda-e-galhos", "moveis-e-volumosos"),
+    "medicamentos": ("residuos-de-saude", "pilhas-e-baterias", "lampadas"), "residuos-de-saude": ("medicamentos", "residuos-perigosos", "residuos-classe-ii"),
+    "reciclaveis": ("sucata-metalica", "organicos", "oleo-de-cozinha"), "sucata-metalica": ("reciclaveis", "eletronicos", "entulho"),
+    "organicos": ("poda-e-galhos", "oleo-de-cozinha", "reciclaveis"), "texteis": ("moveis-e-volumosos", "reciclaveis", "organicos"),
+    "tintas-e-solventes": ("residuos-perigosos", "oleo-lubrificante", "entulho"), "limpa-fossa": ("oleo-de-cozinha", "residuos-classe-ii", "residuos-perigosos"),
+    "embalagens-de-agrotoxico": ("residuos-perigosos", "reciclaveis", "oleo-lubrificante"), "residuos-perigosos": ("residuos-classe-ii", "tintas-e-solventes", "oleo-lubrificante"),
+    "residuos-classe-ii": ("residuos-perigosos", "reciclaveis", "sucata-metalica"),
+}
+
 # Regras locais por cidade e categoria.
 REGRAS_LOCAIS = {
     ("mandaguari", "entulho"): "Em Mandaguari, caçambas podem ficar no máximo 72 horas na via pública (Lei Municipal nº 450/1999). Quem gera muito entulho precisa de Plano de Gerenciamento de Resíduos da Construção Civil (PGRCC).",
@@ -344,6 +359,22 @@ def compartilhar(url, titulo):
             '<script>(function(){var s=document.currentScript.previousElementSibling,n=s.querySelector(".nativo"),c=s.querySelector(".copiar");'
             'if(navigator.share){n.hidden=false;n.onclick=function(){navigator.share({title:document.title,url:c.dataset.url}).catch(function(){})}}'
             'c.onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(c.dataset.url):Promise.reject()).then(function(){c.textContent="Link copiado ✓"},function(){prompt("Copie o link:",c.dataset.url)})}})();</script>')
+
+
+def artigo(html_pg, raiz, leia=()):
+    """Páginas de leitura (coleta, guias): data e tempo de leitura, perguntas abertas e 'Leia também'."""
+    ini, fim = html_pg.find("<main>"), html_pg.find("</main>")
+    texto = re.sub(r"<[^>]+>", " ", html_pg[ini:fim])
+    minutos = max(1, round(len(texto.split()) / 200))
+    byline = f'<p class="byline">Atualizado em {HOJE:%d/%m/%Y} · Leitura de {minutos} min</p>'
+    html_pg = html_pg.replace("</h1>", "</h1>\n" + byline, 1).replace("<details>", "<details open>")
+    if leia:
+        G = site_desvia.G
+        cards = "".join(f'<li><a href="{raiz}guias/{s}/"><b>Como descartar {esc(G_NOMES.get(s, s))}</b>'
+                        f'<span>{esc(G.GUIAS[s]["intro"][:110].rsplit(" ", 1)[0])}…</span></a></li>'
+                        for s in leia if s in G.GUIAS)
+        html_pg = html_pg.replace("</main>", f'<section class="leia"><h2>Leia também</h2><ul>{cards}</ul></section>\n</main>', 1)
+    return html_pg.replace("<main>", '<main class="artigo">', 1)
 
 
 def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
@@ -649,11 +680,11 @@ def gerar():
         nao_vai = "".join(f'<li><a href="../{s_}/">{esc(nomes[s_][1])}</a></li>' for s_ in cats_cid)
         faq = [
             (f"Qual o dia da coleta de lixo no meu bairro em {cidade}?",
-             f"Os dias e horários da coleta comum e da coleta seletiva em {cidade} são definidos pelo responsável pelo serviço ({titular}). Consulte {tipo_link}. Eles podem mudar quando há novo contrato (licitação), então confira sempre a fonte oficial."),
+             f"Os dias e horários da coleta comum e da coleta seletiva em {cidade} são definidos pelo responsável pelo serviço: {titular}. Consulte {tipo_link}. Eles podem mudar quando há novo contrato (licitação), então confira sempre a fonte oficial."),
             (f"Que dia passa o caminhão da reciclagem na minha rua em {cidade}?",
              f"A coleta seletiva (recicláveis) tem dias próprios, diferentes da coleta comum. Procure o seu endereço ou bairro em {tipo_link} e anote os dois dias: o do lixo comum e o da reciclagem."),
             (f"Qual o contato da coleta de lixo em {cidade}?",
-             f"O serviço é de responsabilidade de {titular}. Use os canais oficiais da prefeitura (ouvidoria ou central de atendimento) para pedir informações ou registrar reclamação."),
+             f"O responsável pelo serviço é: {titular}. Use os canais oficiais da prefeitura (ouvidoria ou central de atendimento) para pedir informações ou registrar reclamação."),
             ("O que não pode ir na coleta comum?",
              "Pilhas, baterias, lâmpadas, eletrônicos, remédios, óleo de cozinha, entulho, móveis, pneus e galhos têm destino próprio. Veja onde levar cada um no Desvia."),
             ("A coleta não passou. O que fazer?",
@@ -712,9 +743,9 @@ def gerar():
         ]
         destino = SAIDA / cid_slug / "coleta-de-lixo" / "index.html"
         destino.parent.mkdir(parents=True, exist_ok=True)
-        destino.write_text(pagina(f"Que dia passa o lixo na sua rua em {cidade}? Coleta comum e reciclável | Desvia",
+        destino.write_text(artigo(pagina(f"Que dia passa o lixo na sua rua em {cidade}? Coleta comum e reciclável | Desvia",
                                   f"Descubra o dia e o horário da coleta de lixo e da coleta seletiva na sua rua em {cidade}, quem atende o serviço e o que fazer se o caminhão não passar.",
-                                  url, "../../../", corpo, jsonld).replace("<main>", '<main class="artigo">', 1), encoding="utf-8")
+                                  url, "../../../", corpo, jsonld), "../../../", ("pilhas-e-baterias", "eletronicos", "oleo-de-cozinha")), encoding="utf-8")
         urls.append((url, "0.8"))
 
     # índice de cidades
@@ -746,7 +777,8 @@ def gerar():
         titulo, descricao, corpo, jsonld = site_desvia.guia(slug, nomes, contagens, CIDADES)
         destino = pasta_guias / slug / "index.html"
         destino.parent.mkdir(parents=True)
-        destino.write_text(pagina(titulo, descricao, f"{BASE_URL}/guias/{slug}/", "../../", corpo, jsonld).replace("<main>", '<main class="artigo">', 1), encoding="utf-8")
+        destino.write_text(artigo(pagina(titulo, descricao, f"{BASE_URL}/guias/{slug}/", "../../", corpo, jsonld), "../../",
+                                  [x for x in GUIAS_RELACIONADOS.get(slug, ("reciclaveis", "eletronicos", "pilhas-e-baterias")) if x != slug][:3]), encoding="utf-8")
         urls.append((f"{BASE_URL}/guias/{slug}/", "0.8"))
     (pasta_guias / "index.html").write_text(
         pagina("Guias de descarte de resíduos | Desvia",

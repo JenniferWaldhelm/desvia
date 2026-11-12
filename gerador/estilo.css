@@ -393,3 +393,18 @@ main.artigo { max-width: 760px; }
 main.artigo .guia, main.artigo .resposta, main.artigo .regra, main.artigo .lista-texto { max-width: none; }
 main.artigo h1 { font-size: clamp(1.6rem, 4.4vw, 2.3rem); }
 main.artigo .cal, main.artigo .checklist ol, main.artigo .ck-resultado { max-width: none; }
+main.artigo .byline { font-size: .88rem; color: var(--cinza); margin: -4px 0 16px; }
+main.artigo .resposta, main.artigo .guia > p:first-of-type { font-size: 1.18rem; line-height: 1.55; }
+main.artigo p, main.artigo li { line-height: 1.7; }
+main.artigo h2 { margin-top: 40px; }
+main.artigo .faq details { background: none; border: 0; border-top: 1px solid var(--cinza-claro); border-radius: 0; padding: 14px 0 4px; margin: 0; }
+main.artigo .faq summary { list-style: none; cursor: default; pointer-events: none; font-size: 1.05rem; }
+main.artigo .faq summary::-webkit-details-marker { display: none; }
+main.artigo .faq details p { margin-top: 6px; }
+.leia { margin-top: 48px; }
+.leia ul { list-style: none; display: grid; gap: 12px; }
+.leia a { display: grid; gap: 4px; background: #fff; border: 1px solid var(--cinza-claro); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--escuro); }
+.leia a:hover { border-color: var(--verde-claro); }
+.leia b { font-family: 'Montserrat', sans-serif; color: var(--verde); }
+.leia span { font-size: .92rem; color: var(--cinza); }
+@media (min-width: 700px) { .leia ul { grid-template-columns: repeat(3, 1fr); } }
