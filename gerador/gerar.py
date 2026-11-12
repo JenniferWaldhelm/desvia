@@ -162,12 +162,43 @@ GUIAS_RELACIONADOS = {
     "residuos-classe-ii": ("residuos-perigosos", "reciclaveis", "sucata-metalica"),
 }
 
+# Informações próprias de cada cidade na página de coleta (fonte oficial informada pela Jen).
+EXTRA_COLETA = {
+    "londrina": """<h2>Coleta seletiva em Londrina: feita por cooperativas</h2>
+<p>Em Londrina, quem faz a coleta seletiva (recicláveis) são 7 cooperativas de catadores, de segunda a sexta-feira: Cepeve, Cooper Refum, Cooper Região, Coopermudança, Coopernorth, Cooperoeste e Ecorecin. Separe os recicláveis limpos e secos e coloque para fora no dia da coleta seletiva do seu bairro.</p>
+
+<h2>Entulho, poda, madeira e móveis: pontos de entrega da prefeitura (PEV)</h2>
+<p>Os pontos de entrega voluntária (PEV) são áreas da Companhia Municipal de Trânsito e Urbanização (CMTU) onde o morador deixa, <b>de graça</b>, até <b>1 metro cúbico (m³) por mês</b>, cerca de 8 carrinhos de pedreiro. Acima disso, você é grande gerador e precisa contratar o transporte e o destino do resíduo.</p>
+<div class="tabela-rolar"><table class="tabela">
+<thead><tr><th>Ponto</th><th>Endereço</th><th>O que recebe</th><th>Horário</th></tr></thead>
+<tbody>
+<tr><td>PEV Zona Norte</td><td>Rua Helmuth Fischer com Rua Annibal Balaroti, Jd. Vista Bela</td><td>Entulho, poda e resíduos verdes, madeira, 1 colchão e 1 sofá por vez</td><td>Segunda a sexta, 8h às 16h45; sábado, 8h às 11h45</td></tr>
+<tr><td>PEV Zona Leste</td><td>Rua Capitão João Busse, Jd. Califórnia (Nova Conquista)</td><td>Entulho, madeira, 1 colchão e 1 sofá por vez. <b>Não recebe poda.</b></td><td>Segunda a sexta, 8h às 16h45; sábado, 8h às 11h45</td></tr>
+<tr><td>PEV Zona Sul</td><td>Rua Mara Rocha, s/n, Conjunto São Lourenço</td><td><b>Só poda e resíduos verdes</b></td><td>Segunda a sexta, 8h às 19h30; sábado, 8h às 15h30</td></tr>
+</tbody></table></div>
+<h3>O que você precisa para usar o PEV</h3>
+<ol class="lista-texto">
+<li>Levar documento com foto: RG, CPF ou CNH.</li>
+<li>Preencher o cadastro na entrada.</li>
+<li>Informar de onde vem o resíduo: rua, número e bairro.</li>
+<li>Levar no máximo 1 m³.</li>
+<li>Levar o resíduo já separado por tipo.</li>
+</ol>
+<p class="regra"><b>Não pode deixar no PEV:</b> lixo orgânico, resíduo industrial, resíduo de saúde, telha de amianto (Eternit), gesso, pilhas e baterias, lâmpadas e pneus. Veja abaixo onde levar cada um.</p>
+
+<h2>Viu alguém jogando lixo ou entulho na rua? Denuncie</h2>
+<p>Jogar lixo, entulho ou qualquer resíduo na rua, em terreno vazio, em boca de lobo ou em fundo de vale é proibido pelo Código de Posturas de Londrina (Lei 13.903/2024, art. 181) e dá multa.</p>
+<p>Denuncie ao Serviço de Atendimento (SAC) da CMTU: <a href="tel:+554333797946">(43) 3379-7946</a>, de segunda a sexta, das 8h às 17h, ou pelo e-mail <a href="mailto:sac.cmtu@gmail.com">sac.cmtu@gmail.com</a>. Se puder, mande fotos do descarte e da placa do veículo.</p>
+<p class="nota">Fonte: <a href="https://cmtu.londrina.pr.gov.br/index.php/limpeza-urbana/pev.html" target="_blank" rel="noopener">CMTU, página dos PEVs</a>.</p>
+""",
+}
+
 # Regras locais por cidade e categoria.
 REGRAS_LOCAIS = {
     ("mandaguari", "entulho"): "Em Mandaguari, caçambas podem ficar no máximo 72 horas na via pública (Lei Municipal nº 450/1999). Quem gera muito entulho precisa de Plano de Gerenciamento de Resíduos da Construção Civil (PGRCC).",
     ("mandaguari", "*"): "Em Mandaguari, empresas obrigadas a ter PGRS precisam apresentá-lo para obter alvará e certidões municipais (Lei Municipal nº 4.419/2025, art. 17 e 18).",
-    ("londrina", "entulho"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem até 1 metro cúbico (m³) por pessoa por mês de entulho, poda e madeira.",
-    ("londrina", "poda-e-galhos"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem até 1 metro cúbico (m³) por pessoa por mês de poda, madeira e entulho.",
+    ("londrina", "entulho"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem de graça até 1 metro cúbico (m³) por pessoa por mês, cerca de 8 carrinhos de pedreiro. Leve documento com foto e o resíduo separado. Gesso e telha de amianto não são aceitos.",
+    ("londrina", "poda-e-galhos"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) das zonas Norte e Sul recebem de graça até 1 metro cúbico (m³) de poda por pessoa por mês. O PEV Zona Leste não recebe poda. Leve documento com foto.",
 }
 
 ORDEM_STATUS = {"valida": 0, "vencendo": 1, "publico": 2, "entrega": 2, "vencida": 3, "nao_localizada": 4}
@@ -723,6 +754,7 @@ def gerar():
 <li>Vidro quebrado e objetos cortantes: embrulhe em jornal ou caixa e avise com um bilhete.</li>
 </ul>
 
+{EXTRA_COLETA.get(cid_slug, "")}
 <h2>O que não vai na coleta comum</h2>
 <p>Estes itens têm destino próprio em {esc(cidade)}:</p>
 <div class="outras"><ul>{nao_vai}</ul></div>
