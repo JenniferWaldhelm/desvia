@@ -47,7 +47,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     <label class="campo"><span>O que você tem?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="sofá, roupa, pilha, remédio, entulho…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
     <button type="submit">Buscar</button>
-    <button type="button" class="btn-perto" data-perto>📍 Perto de mim</button>
+    <button type="button" class="btn-perto" data-perto>Perto de mim</button>
     <details class="mais-filtros mf-home" id="maisFiltros"><summary>Filtros <span class="n-filtros" id="nFiltros"></span></summary><div class="busca-filtros">
       <label class="filtro"><span>O que você quer fazer</span><select id="fQuem" name="quem">
         <option value="todos">Tudo</option><option value="doar">Doar</option><option value="vender">Vender ou trocar</option>
@@ -57,7 +57,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
       <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>
     </div></details>
   </form>
-  <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe o que fazer? Me ajude a decidir</button>
+  <button type="button" class="btn-ajuda" data-ajuda>Não sabe o que fazer? Me ajude a decidir</button>
   <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
 </section>
 
@@ -77,7 +77,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   <div class="pq-grade">
     <article class="pq"><span class="pq-tag">Quem precisa descartar</span><h3>Moradores, empresas e técnicos</h3>
       <p>Saiba o que fazer com cada coisa (doar, vender, reciclar ou descartar), qual é a sua obrigação e onde levar com segurança, sabendo se o destino tem licença.</p>
-      <div class="pq-acoes"><button type="button" class="pq-btn" data-ajuda>Me ajude a decidir</button><a href="empresas/">Sua empresa está em dia? →</a></div></article>
+      <div class="pq-acoes"><button type="button" class="pq-btn" data-ajuda>Me ajude a decidir</button><a href="empresas/">Sua empresa está em dia?</a></div></article>
     <article class="pq"><span class="pq-tag">Quem presta serviço</span><h3>Reuso, reciclagem, coleta, transporte e destinação</h3>
       <p>Apareça para quem procura o seu serviço, com a licença ambiental verificada. Quem está regular ganha destaque; quem está com pendência sabe o que corrigir.</p>
       <div class="pq-acoes"><a class="pq-btn" href="{CADASTRO}" target="_blank" rel="noopener">Cadastrar minha empresa</a></div></article>
@@ -97,7 +97,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 </section>
 
 <section class="blocos">
-  <div><h2>Guias de descarte</h2><p class="sub">Como descartar cada resíduo em casa e na empresa, o que diz a lei e onde levar.</p><ul class="grade">{guias_html}</ul><p><a href="guias/">Ver todos os guias →</a></p></div>
+  <div><h2>Guias de descarte</h2><p class="sub">Como descartar cada resíduo em casa e na empresa, o que diz a lei e onde levar.</p><ul class="grade">{guias_html}</ul><p><a href="guias/">Ver todos os guias</a></p></div>
 </section>
 
 <section class="blocos">

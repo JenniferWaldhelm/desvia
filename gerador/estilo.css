@@ -1,25 +1,25 @@
 /* Estilo das páginas geradas em residuos/ — mesmas cores e fontes do Desvia */
 :root {
   --verde: #1A3A8F;
-  --verde-claro: #E8621A;
+  --verde-claro: #C9500F;
   --verde-menta: #FDE8D8;
   --terra: #2A7A2A;
   --terra-claro: #D8F0D8;
-  --off-white: #F8F8F6;
-  --escuro: #0F1F3D;
+  --off-white: #F3F4F0;
+  --escuro: #16213A;
   --cinza: #5A6070;
-  --cinza-claro: #E0E4ED;
+  --cinza-claro: #D3D8E0;
   --alerta: #8A5300;
   --alerta-claro: #FFF1D6;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Source Sans 3', sans-serif; background: var(--off-white); color: var(--escuro); line-height: 1.6; }
-h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
+body { font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; background: var(--off-white); color: var(--escuro); line-height: 1.6; }
+h1, h2, h3 { font-family: 'Overpass', system-ui, sans-serif; line-height: 1.25; }
 a { color: var(--verde); }
 
 header { background: var(--verde); padding: 0 16px; position: sticky; top: 0; z-index: 1000; }
 header nav { max-width: 1160px; margin: 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between; }
-.logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; white-space: nowrap; }
+.logo { font-family: 'Overpass', system-ui, sans-serif; font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; white-space: nowrap; }
 .logo span { color: var(--verde-claro); }
 .nav-link { color: rgba(255,255,255,.9); text-decoration: none; font-weight: 600; font-size: .95rem; }
 
@@ -135,19 +135,19 @@ main.home { padding-top: 0; }
 .busca .campo span { font-size: .72rem; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--cinza); }
 .busca input, .busca select { border: 0; outline: none; font: inherit; font-size: 1.05rem; padding: 4px 0; background: transparent; color: var(--escuro); width: 100%; }
 .busca .campo-cidade { flex: 0 0 220px; }
-.busca button { border: 0; background: var(--verde-claro); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; padding: 0 32px; cursor: pointer; }
+.busca button { border: 0; background: var(--verde-claro); color: #fff; font-family: 'Overpass', system-ui, sans-serif; font-weight: 700; font-size: 1rem; padding: 0 32px; cursor: pointer; }
 .busca button:hover { background: #cf5512; }
 .busca:focus-within { border-color: var(--verde); }
 .atalhos { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 18px auto 0; max-width: 820px; }
 .atalhos button { border: 1px solid var(--cinza-claro); background: #fff; border-radius: 999px; padding: 6px 14px; font: inherit; font-size: .88rem; cursor: pointer; color: var(--escuro); }
 .atalhos button:hover { border-color: var(--verde-claro); color: var(--verde-claro); }
 .numeros { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; margin-top: 28px; color: var(--cinza); font-size: .92rem; }
-.numeros b { font-family: 'Montserrat', sans-serif; color: var(--verde); font-size: 1.15rem; margin-right: 4px; }
+.numeros b { font-family: 'Overpass', system-ui, sans-serif; color: var(--verde); font-size: 1.15rem; margin-right: 4px; }
 .home .ferramenta { scroll-margin-top: 72px; }
 
 .passos ol { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; counter-reset: passo; }
 .passos li { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 12px; padding: 18px 18px 18px 60px; position: relative; counter-increment: passo; display: grid; gap: 4px; }
-.passos li::before { content: counter(passo); position: absolute; left: 18px; top: 18px; width: 28px; height: 28px; border-radius: 50%; background: var(--verde-menta); color: var(--verde-claro); font-weight: 800; display: grid; place-items: center; font-family: 'Montserrat', sans-serif; }
+.passos li::before { content: counter(passo); position: absolute; left: 18px; top: 18px; width: 28px; height: 28px; border-radius: 50%; background: var(--verde-menta); color: var(--verde-claro); font-weight: 800; display: grid; place-items: center; font-family: 'Overpass', system-ui, sans-serif; }
 .passos span { color: var(--cinza); font-size: .94rem; }
 .blocos .sub { color: var(--cinza); margin: -4px 0 12px; }
 .blocos p { margin-top: 10px; }
@@ -219,7 +219,7 @@ main.home { padding-top: 0; }
 /* ── Rodapé ── */
 .rodape-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px 24px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--cinza-claro); }
 .rodape-links div { display: flex; flex-direction: column; gap: 6px; }
-.rodape-links b { font-family: 'Montserrat', sans-serif; color: var(--escuro); font-size: .85rem; }
+.rodape-links b { font-family: 'Overpass', system-ui, sans-serif; color: var(--escuro); font-size: .85rem; }
 .rodape-links a { color: var(--cinza); text-decoration: none; }
 .rodape-links a:hover { color: var(--verde); text-decoration: underline; }
 
@@ -387,3 +387,109 @@ header .menu-cta { background: transparent !important; border: 1.5px solid rgba(
 .caixa-empresas { background: #FFF6EE; border-left: 4px solid #E8622A; border-radius: 10px; padding: 14px 18px; margin: 24px 0; }
 .caixa-empresas h2 { margin-top: 0; }
 .caixa-acoes { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 0; }
+
+/* ══ Redesign nov/2026: tipografia de sinalização, cores das lixeiras (CONAMA 275), menos enfeite ══ */
+body { font-size: 1.02rem; line-height: 1.55; }
+h1, h2, h3 { color: var(--escuro); letter-spacing: -.01em; }
+h1 { font-weight: 800; line-height: 1.12; }
+h2 { font-weight: 800; font-size: 1.35rem; }
+h3 { font-weight: 700; }
+a { text-underline-offset: .18em; }
+:focus-visible { outline: 3px solid var(--verde-claro); outline-offset: 2px; }
+
+/* cabeçalho: faixa azul fina, sem sombra */
+header { border-bottom: 4px solid var(--verde-claro); }
+.logo { font-weight: 800; letter-spacing: -.02em; font-size: 1.3rem; }
+.logo span { color: #fff; text-decoration: underline; text-decoration-color: var(--verde-claro); text-decoration-thickness: 3px; text-underline-offset: 5px; }
+
+/* rótulos em caixa normal (nada de VERSAL espaçada) */
+.filtros input[type=search], .ajuda-q, .busca-filtros select, .seg { border-radius: 6px !important; }
+.flabel, .busca .campo span, .busca-filtros .filtro span, .legenda b, .pq-tag, .obr-tag {
+  text-transform: none !important; letter-spacing: 0 !important; font-size: .84rem; font-weight: 700; color: var(--cinza); }
+.pq-tag, .obr-tag { background: none !important; padding: 0 !important; border-radius: 0 !important; color: var(--verde-claro) !important; }
+.obr-cta .obr-tag { color: #fff !important; opacity: .8; }
+
+/* home: alinhada à esquerda, busca como formulário de verdade */
+.hero-busca { text-align: left; padding: 44px 0 24px; max-width: 860px; }
+.hero-busca h1 { font-size: clamp(2rem, 5.2vw, 3.3rem); letter-spacing: -.025em; color: var(--escuro); max-width: 18ch; }
+.hero-busca h1 em { display: block; color: inherit; font-weight: 600; font-size: .62em; letter-spacing: -.01em; margin-top: .35em; }
+.hero-busca > p { margin: 0 0 24px; max-width: 58ch; }
+.busca { margin: 0; border: 2px solid var(--escuro); border-radius: 8px; box-shadow: 4px 4px 0 var(--escuro); }
+.busca:focus-within { border-color: var(--escuro); box-shadow: 4px 4px 0 var(--verde-claro); }
+.busca > button[type=submit] { border-radius: 0 5px 0 0; background: var(--verde-claro); font-weight: 800; }
+.busca-filtros { border-radius: 0 0 6px 6px; }
+.busca .campo + .campo, .busca-filtros { border-color: var(--cinza-claro); }
+.atalhos, .numeros { justify-content: flex-start; margin-left: 0; }
+.numeros { gap: 6px 24px; }
+.numeros b { color: var(--escuro); font-size: 1.25rem; }
+.hero-busca .btn-ajuda { margin: 16px 0 0; }
+
+/* botões: retangulares, sem pílula */
+.btn-ajuda, .pq-btn, .cta a, .cta-inline a, .ajuda-ok, .checklist button, .mais, .btn-perto, .localizador a { border-radius: 6px; }
+.btn-ajuda { border-width: 2px; }
+.btn-perto { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.btn-perto::before { content: ""; width: 9px; height: 9px; border: 2.5px solid currentColor; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); flex: none; }
+.btn-perto[aria-pressed=true], .busca > button.btn-perto[aria-pressed=true] { background: var(--escuro); border-color: var(--escuro); color: #fff; }
+.ponto .dist { color: var(--verde-claro); }
+.mais-filtros > summary::before { content: none; }
+.mais-filtros > summary { color: var(--escuro); }
+
+/* cartões: planos, cantos pequenos, hierarquia por borda */
+.ponto, .grade a, .obr, .pq, .serv-box, .faq details, .cal li, .ck-resultado, .passos li { border-radius: 6px; box-shadow: none; }
+.ferramenta { border-radius: 8px; border-color: var(--cinza-claro); }
+.ponto { gap: 5px; }
+.ponto h3 { font-size: 1.05rem; line-height: 1.25; }
+.lista-js .ponto.ativo { border-color: var(--escuro); box-shadow: inset 4px 0 0 var(--verde-claro); }
+.grade a:hover, .outras a:hover, .doar-links a:hover { border-color: var(--escuro); }
+.outras a, .doar-links a, .sumario a, .servicos li a, .compartilhar-bt a, .compartilhar-bt button, .ck-op label { border-radius: 6px; }
+.licenca { border-radius: 4px; font-weight: 700; }
+.passos li::before { border-radius: 4px; background: var(--escuro); color: #fff; }
+.cta { border-radius: 8px; background: #fff; border: 1px solid var(--cinza-claro); border-top: 4px solid var(--verde-claro); }
+.cta-escura { background: var(--verde); border: 0; border-top: 4px solid var(--verde-claro); }
+.cta-inline, .regra, .ajuda-doar, .pedir-cidade { border-radius: 6px; }
+.obr-cta { background: var(--verde); }
+.caixa-empresas { background: #fff; border: 1px solid var(--cinza-claro); border-left: 4px solid var(--verde-claro); border-radius: 6px; }
+
+/* etiquetas de material: cada tipo com a cor da lixeira (CONAMA 275) */
+.chip, .ajuda-cats .chip, .sugere .chip { border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; }
+.chip[data-cat]::before, .chip[data-sug]::before, .etq span::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: var(--c, var(--cinza)); box-shadow: inset 0 0 0 1px rgba(0,0,0,.18); flex: none; }
+.chip[aria-pressed=true] { background: var(--escuro); border-color: var(--escuro); }
+.etq { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: .8rem !important; color: var(--cinza); margin: 1px 0 2px; }
+.etq span { display: inline-flex; align-items: center; gap: 5px; }
+.cores-nota { font-size: .78rem; color: var(--cinza); margin-top: 4px; }
+
+/* consistência de cor em blocos antigos */
+.cookies, .compartilhar-bt a, .compartilhar-bt button, .servicos li a { border-color: var(--cinza-claro); color: var(--escuro); }
+.cookies .cookies-ok, .compartilhar-bt .nativo { background: var(--verde); border-color: var(--verde); color: #fff; }
+.marker-cluster { background: rgba(22,33,58,.2); }
+.marker-cluster div { background: var(--escuro); font-family: 'Overpass', system-ui, sans-serif; }
+@media (max-width: 860px) {
+  .hero-busca { padding-top: 26px; }
+  .busca { box-shadow: 3px 3px 0 var(--escuro); }
+  .busca > button[type=submit] { border-radius: 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+[data-cat="reciclaveis"],[data-k="reciclaveis"],[data-sug="reciclaveis"]{--c:conic-gradient(#1F5FBF 0 25%,#C62D2D 0 50%,#1F8A4C 0 75%,#E2B007 0)}
+[data-cat="sucata-metalica"],[data-k="sucata-metalica"],[data-sug="sucata-metalica"]{--c:#E2B007}
+[data-cat="eletronicos"],[data-k="eletronicos"],[data-sug="eletronicos"]{--c:#E07812}
+[data-cat="lampadas"],[data-k="lampadas"],[data-sug="lampadas"]{--c:#E07812}
+[data-cat="pilhas-e-baterias"],[data-k="pilhas-e-baterias"],[data-sug="pilhas-e-baterias"]{--c:#E07812}
+[data-cat="oleo-lubrificante"],[data-k="oleo-lubrificante"],[data-sug="oleo-lubrificante"]{--c:#E07812}
+[data-cat="tintas-e-solventes"],[data-k="tintas-e-solventes"],[data-sug="tintas-e-solventes"]{--c:#E07812}
+[data-cat="residuos-perigosos"],[data-k="residuos-perigosos"],[data-sug="residuos-perigosos"]{--c:#E07812}
+[data-cat="embalagens-de-agrotoxico"],[data-k="embalagens-de-agrotoxico"],[data-sug="embalagens-de-agrotoxico"]{--c:#E07812}
+[data-cat="oleo-de-cozinha"],[data-k="oleo-de-cozinha"],[data-sug="oleo-de-cozinha"]{--c:#7A4B27}
+[data-cat="organicos"],[data-k="organicos"],[data-sug="organicos"]{--c:#7A4B27}
+[data-cat="poda-e-galhos"],[data-k="poda-e-galhos"],[data-sug="poda-e-galhos"]{--c:#7A4B27}
+[data-cat="madeira"],[data-k="madeira"],[data-sug="madeira"]{--c:#2B2B2B}
+[data-cat="medicamentos"],[data-k="medicamentos"],[data-sug="medicamentos"]{--c:#FFFFFF}
+[data-cat="residuos-de-saude"],[data-k="residuos-de-saude"],[data-sug="residuos-de-saude"]{--c:#FFFFFF}
+[data-cat="pneus"],[data-k="pneus"],[data-sug="pneus"]{--c:#8C9199}
+[data-cat="entulho"],[data-k="entulho"],[data-sug="entulho"]{--c:#8C9199}
+[data-cat="moveis-e-volumosos"],[data-k="moveis-e-volumosos"],[data-sug="moveis-e-volumosos"]{--c:#8C9199}
+[data-cat="texteis"],[data-k="texteis"],[data-sug="texteis"]{--c:#8C9199}
+[data-cat="limpa-fossa"],[data-k="limpa-fossa"],[data-sug="limpa-fossa"]{--c:#8C9199}
+[data-cat="escovas-e-esponjas"],[data-k="escovas-e-esponjas"],[data-sug="escovas-e-esponjas"]{--c:#8C9199}
+[data-cat="residuos-classe-ii"],[data-k="residuos-classe-ii"],[data-sug="residuos-classe-ii"]{--c:#8C9199}
+/* números (telefone, licença, distância) em Overpass: o zero cortado da Atkinson confunde em telefone */
+.contato, .licenca, .dist, .numeros, .listhead, .chip .n { font-family: 'Overpass', system-ui, sans-serif; }

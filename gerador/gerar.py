@@ -325,7 +325,7 @@ COORD_CACHE = _cache_coord()
 CSS_LINK = '<link rel="stylesheet" href="{raiz}residuos/estilo.css">'
 FONTES = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
           '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-          '<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">')
+          '<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">')
 
 
 def compartilhar(url, titulo):
@@ -375,7 +375,7 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
 {f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}var _ok=false;try{{_ok=localStorage.getItem("desvia-cookies")==="sim"}}catch(e){{}}gtag("consent","default",{{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:_ok?"granted":"denied"}});gtag("js",new Date());gtag("config","{GA4}");function desviaGA(){{gtag("consent","update",{{analytics_storage:"granted"}})}}</script>' if GA4 else ""}
 </head>
 <body>
-<header><nav><a class="logo" href="{raiz or './'}">♻ Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}empresas/">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
+<header><nav><a class="logo" href="{raiz or './'}">Projeto <span>Desvia</span></a><div class="menu"><a href="{raiz}#resultados">Buscar</a><a href="{raiz}guias/">Guias</a><a href="{raiz}residuos/">Cidades</a><a href="{raiz}empresas/">Para empresas</a><a class="menu-cta" href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div></nav></header>
 <main>
 {corpo}
 </main>

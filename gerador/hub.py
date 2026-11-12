@@ -134,8 +134,8 @@ LOCAL = {
 def cartao_obrigacao(item):
     icone, tag, titulo, texto, lista, link = item
     ul = "".join(f"<li>{esc(x)}</li>" for x in lista)
-    a = f'<a href="{esc(link[1])}" target="_blank" rel="noopener">{esc(link[0])} →</a>' if link else ""
-    return (f'<article class="obr"><span class="obr-tag">{icone} {esc(tag)}</span><h3>{esc(titulo)}</h3>'
+    a = f'<a href="{esc(link[1])}" target="_blank" rel="noopener">{esc(link[0])}</a>' if link else ""
+    return (f'<article class="obr"><span class="obr-tag">{esc(tag)}</span><h3>{esc(titulo)}</h3>'
             f'<p>{esc(texto)}</p>{f"<ul>{ul}</ul>" if ul else ""}{a}</article>')
 
 
@@ -172,7 +172,7 @@ def secao_empresas(cid_slug, cidade):
 <p class="resposta">A Lei Federal 12.305/2010 (Política Nacional de Resíduos Sólidos) define responsabilidades claras para empresas. Quem descumpre pode receber multa, ter a atividade embargada e responder criminalmente.</p>
 <p class="regra">Isto é obrigação legal, não recomendação. Vale para comércios, indústrias, prestadores de serviço e construtoras em {esc(cidade)}. {esc(licenciador)} Dúvidas sobre o que se aplica à sua empresa: {esc(orgao)}.</p>
 <div class="obr-grade">{cards}
-<article class="obr obr-cta"><span class="obr-tag">💬 Precisa de orientação?</span><h3>Não sabe por onde começar?</h3><p>O Projeto Desvia ajuda a entender o que se aplica ao seu caso. Mande uma mensagem.</p><a href="{WHATSAPP}" target="_blank" rel="noopener">Chamar no WhatsApp →</a></article>
+<article class="obr obr-cta"><span class="obr-tag">Precisa de orientação?</span><h3>Não sabe por onde começar?</h3><p>O Projeto Desvia ajuda a entender o que se aplica ao seu caso. Mande uma mensagem.</p><a href="{WHATSAPP}" target="_blank" rel="noopener">Chamar no WhatsApp</a></article>
 </div>
 </section>"""
 
@@ -273,7 +273,7 @@ def link_coleta(cidade):
     arq = Path(__file__).resolve().parent.parent / "dados" / "cidades.csv"
     for c in csv.DictReader(open(arq, encoding="utf-8")):
         if (c.get("Município") or "").strip() == cidade and (c.get("Link coleta") or "").strip():
-            return f'<a class="btn-ajuda" href="coleta-de-lixo/">🗓️ Dia da coleta de lixo no seu bairro</a>'
+            return f'<a class="btn-ajuda" href="coleta-de-lixo/">Dia da coleta de lixo no seu bairro</a>'
     return ""
 
 
@@ -286,14 +286,14 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
 <h1>Onde doar, reciclar e descartar em {esc(cidade)}</h1>
 <p class="resposta">Pontos de entrega, brechós, cooperativas e empresas de {esc(cidade)}, com a situação da licença de cada uma.</p>
-<div class="atalhos-topo"><button type="button" class="btn-ajuda" data-ajuda>🧭 Me ajude a decidir</button>
+<div class="atalhos-topo"><button type="button" class="btn-ajuda" data-ajuda>Me ajude a decidir</button>
 {link_coleta(cidade)}</div>
 
 <section class="ferramenta" aria-label="Mapa e lista com filtros">
   <aside class="painel">
     <div class="filtros">
       <input id="q" type="search" placeholder="O que você tem? sofá, roupa, pilha, remédio, nome da empresa…" autocomplete="off" aria-label="Buscar">
-      <button type="button" class="btn-perto" data-perto>📍 Perto de mim</button>
+      <button type="button" class="btn-perto" data-perto>Perto de mim</button>
       <details class="mais-filtros" id="maisFiltros"><summary>Filtros <span class="n-filtros" id="nFiltros"></span></summary>
       <div>
         <div class="flabel">O que você quer fazer</div>
@@ -308,7 +308,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
       </div>
       <div>
         <div class="flabel">Tipo de resíduo</div>
-        <div class="chips" id="chips">{chips}</div>
+        <div class="chips" id="chips">{chips}</div><p class="cores-nota">A cor de cada tipo segue as lixeiras da coleta seletiva.</p>
       </div>
       <div class="checks">
         <label><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>

@@ -87,8 +87,9 @@
   function fmtKm(d) { return d < 1 ? Math.round(d * 1000 / 50) * 50 + ' m' : d.toFixed(d < 10 ? 1 : 0).replace('.', ',') + ' km'; }
   function cartao(p) {
     var h = '<article class="ponto" id="p-' + p.id + '" data-id="' + p.id + '">';
-    if (estado.pos && p._d != null && isFinite(p._d)) h += '<p class="dist">📍 a ' + fmtKm(p._d) + '</p>';
+    if (estado.pos && p._d != null && isFinite(p._d)) h += '<p class="dist">a ' + fmtKm(p._d) + '</p>';
     h += '<h3>' + esc(p.n) + '</h3>';
+    if (p.c && p.c.length) h += '<p class="etq">' + p.c.slice(0, 5).map(function (c) { return '<span data-k="' + c + '">' + esc(CATS[c] || c) + '</span>'; }).join('') + '</p>';
     h += '<p class="tipo">' + esc(p.t) + ' · ' + esc(p.sv) + '</p>';
     h += '<p class="residuos">' + esc(p.r) + '</p>';
     var local = p.e ? p.e + (p.m ? ', ' + p.m : '') : p.m;
@@ -145,9 +146,9 @@
   if (det && window.matchMedia && window.matchMedia('(min-width: 861px)').matches && !det.classList.contains('mf-home')) det.open = true;
   document.querySelectorAll('[data-perto]').forEach(function (bt) {
     bt.addEventListener('click', function () {
-      if (estado.pos) { estado.pos = null; bt.textContent = '📍 Perto de mim'; bt.setAttribute('aria-pressed', 'false'); render(); return; }
+      if (estado.pos) { estado.pos = null; bt.textContent = 'Perto de mim'; bt.setAttribute('aria-pressed', 'false'); render(); return; }
       if (!navigator.geolocation) { bt.textContent = 'Localização indisponível'; return; }
-      bt.textContent = '📍 Localizando…';
+      bt.textContent = 'Localizando…';
       navigator.geolocation.getCurrentPosition(function (g) {
         estado.pos = [g.coords.latitude, g.coords.longitude];
         bt.textContent = '✕ Ordenado por distância'; bt.setAttribute('aria-pressed', 'true');
@@ -155,7 +156,7 @@
         render();
         var r = document.getElementById('resultados') || document.getElementById('lista');
         if (r && r.scrollIntoView) r.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, function () { bt.textContent = '📍 Não foi possível localizar'; setTimeout(function () { bt.textContent = '📍 Perto de mim'; }, 3000); },
+      }, function () { bt.textContent = 'Não foi possível localizar'; setTimeout(function () { bt.textContent = 'Perto de mim'; }, 3000); },
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
     });
   });
@@ -279,7 +280,7 @@
     if (!itens.length) { caixa.hidden = true; return; }
     caixa.innerHTML = (itens[0].tipo === 'emp' ? '<div class="sug-titulo">Locais com esse nome</div>' : '') + itens.map(function (it, i) {
       return '<button type="button" role="option" data-i="' + i + '" data-tipo="' + it.tipo + '" data-v="' + esc(it.v) + '">' +
-        '<span>' + (it.tipo === 'cat' ? '♻ ' : '🏢 ') + esc(it.txt) + '</span><small>' + esc(it.n) + '</small></button>';
+        '<span>' + esc(it.txt) + '</span><small>' + esc(it.n) + '</small></button>';
     }).join('');
     caixa.hidden = false;
   }
