@@ -408,3 +408,8 @@ main.artigo .faq details p { margin-top: 6px; }
 .leia b { font-family: 'Montserrat', sans-serif; color: var(--verde); }
 .leia span { font-size: .92rem; color: var(--cinza); }
 @media (min-width: 700px) { .leia ul { grid-template-columns: repeat(3, 1fr); } }
+.tabela-rolar { overflow-x: auto; margin: 12px 0 8px; }
+.tabela { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 560px; }
+.tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--cinza-claro); }
+.tabela th { font-family: 'Montserrat', sans-serif; font-size: .85rem; color: var(--verde); border-bottom: 2px solid var(--verde); }
+.tabela td:first-child { font-weight: 600; white-space: nowrap; }
