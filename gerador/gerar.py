@@ -772,6 +772,14 @@ def gerar():
 <li>Vidro quebrado e objetos cortantes: embrulhe em jornal ou caixa e avise com um bilhete.</li>
 </ul>
 
+<h2>Dicas para separar o lixo em casa</h2>
+<ul class="lista-texto">
+<li><b>Deixe um pote para restos de comida perto da pia.</b> Use um balde pequeno com tampa, só para o lixo orgânico, ao lado da pia ou da bancada. Quanto menos você precisar andar para jogar fora, mais fácil fica criar o hábito.</li>
+<li><b>Combine metas com quem mora com você.</b> Escolham juntos uma meta pequena por semana, por exemplo: lavar e separar todas as embalagens. Quando todos se comprometem, a separação vira rotina.</li>
+<li><b>Use os serviços do seu bairro.</b> Coloque os recicláveis na coleta seletiva ou leve a um ponto de entrega perto de você. <a href="../">Veja os pontos de {esc(cidade)} no mapa</a>.</li>
+<li><b>Se tiver quintal, faça compostagem.</b> Uma composteira caseira, feita com caixas ou baldes empilhados, transforma restos de comida em adubo. <a href="../../../guias/organicos/">Veja como descartar orgânicos</a>.</li>
+<li><b>Evite cheiro, moscas e bichos.</b> Use recipientes com tampa bem fechada. Na composteira, cubra os restos de comida com material seco, como folhas secas ou serragem.</li>
+</ul>
 {EXTRA_COLETA.get(cid_slug, "")}
 <h2>O que não vai na coleta comum</h2>
 <p>Estes itens têm destino próprio em {esc(cidade)}:</p>
