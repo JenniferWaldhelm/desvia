@@ -387,3 +387,9 @@ header .menu-cta { background: transparent !important; border: 1.5px solid rgba(
 .caixa-empresas { background: #FFF6EE; border-left: 4px solid #E8622A; border-radius: 10px; padding: 14px 18px; margin: 24px 0; }
 .caixa-empresas h2 { margin-top: 0; }
 .caixa-acoes { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 0; }
+
+/* Páginas de leitura (coleta de lixo, guias): coluna central, como um artigo */
+main.artigo { max-width: 760px; }
+main.artigo .guia, main.artigo .resposta, main.artigo .regra, main.artigo .lista-texto { max-width: none; }
+main.artigo h1 { font-size: clamp(1.6rem, 4.4vw, 2.3rem); }
+main.artigo .cal, main.artigo .checklist ol, main.artigo .ck-resultado { max-width: none; }

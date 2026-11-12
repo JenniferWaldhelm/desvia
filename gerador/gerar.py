@@ -693,11 +693,11 @@ def gerar():
 
 <h2>O que não vai na coleta comum</h2>
 <p>Estes itens têm destino próprio em {esc(cidade)}:</p>
-<ul class="outras">{nao_vai}</ul>
+<div class="outras"><ul>{nao_vai}</ul></div>
 
 <h2>A coleta não passou?</h2>
 <ol class="lista-texto">
-<li><b>Reclame com o responsável pelo serviço</b> ({esc(titular)}) ou na ouvidoria da prefeitura. Anote o protocolo.</li>
+<li><b>Reclame com o responsável pelo serviço:</b> {esc(titular)}, ou na ouvidoria da prefeitura. Anote o protocolo.</li>
 <li><b>Se não resolver</b>, comunique a agência reguladora que fiscaliza a limpeza urbana no município. No Paraná, muitos municípios são regulados pela <b>AGEPAR</b>. A agência fiscaliza o titular do serviço (prefeitura, autarquia ou empresa contratada).</li>
 </ol>
 
@@ -714,7 +714,7 @@ def gerar():
         destino.parent.mkdir(parents=True, exist_ok=True)
         destino.write_text(pagina(f"Que dia passa o lixo na sua rua em {cidade}? Coleta comum e reciclável | Desvia",
                                   f"Descubra o dia e o horário da coleta de lixo e da coleta seletiva na sua rua em {cidade}, quem atende o serviço e o que fazer se o caminhão não passar.",
-                                  url, "../../../", corpo, jsonld), encoding="utf-8")
+                                  url, "../../../", corpo, jsonld).replace("<main>", '<main class="artigo">', 1), encoding="utf-8")
         urls.append((url, "0.8"))
 
     # índice de cidades
@@ -746,7 +746,7 @@ def gerar():
         titulo, descricao, corpo, jsonld = site_desvia.guia(slug, nomes, contagens, CIDADES)
         destino = pasta_guias / slug / "index.html"
         destino.parent.mkdir(parents=True)
-        destino.write_text(pagina(titulo, descricao, f"{BASE_URL}/guias/{slug}/", "../../", corpo, jsonld), encoding="utf-8")
+        destino.write_text(pagina(titulo, descricao, f"{BASE_URL}/guias/{slug}/", "../../", corpo, jsonld).replace("<main>", '<main class="artigo">', 1), encoding="utf-8")
         urls.append((f"{BASE_URL}/guias/{slug}/", "0.8"))
     (pasta_guias / "index.html").write_text(
         pagina("Guias de descarte de resíduos | Desvia",
