@@ -89,7 +89,6 @@
     var h = '<article class="ponto" id="p-' + p.id + '" data-id="' + p.id + '">';
     if (estado.pos && p._d != null && isFinite(p._d)) h += '<p class="dist">a ' + fmtKm(p._d) + '</p>';
     h += '<h3>' + esc(p.n) + '</h3>';
-    if (p.c && p.c.length) h += '<p class="etq">' + p.c.slice(0, 5).map(function (c) { return '<span data-k="' + c + '">' + esc(CATS[c] || c) + '</span>'; }).join('') + '</p>';
     h += '<p class="tipo">' + esc(p.t) + ' · ' + esc(p.sv) + '</p>';
     h += '<p class="residuos">' + esc(p.r) + '</p>';
     var local = p.e ? p.e + (p.m ? ', ' + p.m : '') : p.m;

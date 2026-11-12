@@ -577,3 +577,25 @@ main.home .faq details:first-of-type { border-top: 1px solid var(--escuro); }
   .abre .busca .campo-cidade { flex: 1 1 auto; border-left: 0; border-top: 1.5px solid var(--cinza-claro); }
   .abre .busca > button[type=submit] { border-radius: 0; border-top: 1.5px solid var(--cinza-claro); padding: 0 40px; }
 }
+/* versão mais limpa (Jen: "muito poluída") */
+body:has(main.home) header::after { content: none; }
+.tipos { border-top: 0; gap: 8px; }
+.tipos li, .tipos li:nth-child(odd) { border: 0; }
+.tipos button { display: block; padding: 12px 14px; border: 1px solid var(--cinza-claro); border-radius: 6px; font-family: 'Overpass', system-ui, sans-serif; font-weight: 700; }
+.tipos button::before { content: none; }
+.tipos button:hover { border-color: var(--verde); color: var(--verde); background: #fff; }
+.abre-tipos h2 { font-size: .95rem; }
+.abre-nota { display: flex; gap: 20px; flex-wrap: wrap; }
+.abre-nota .btn-perto { width: auto; margin: 0; border: 0; padding: 0; background: none; color: var(--verde); display: inline-flex; gap: 6px; }
+.abre-nota .btn-perto[aria-pressed=true] { background: none; color: var(--verde-claro); }
+.linhas { column-count: 2; column-gap: 32px; border-top: 0; }
+.linhas li { break-inside: avoid; border: 0; }
+.linhas a { padding: 5px 0; }
+.linhas a small { display: none; }
+.linhas a span { font-family: inherit; font-weight: 400; color: var(--verde); }
+.lista-sec h2, main.home .faq h2 { font-size: 1.15rem; margin-bottom: 10px; }
+.duas { margin-top: 48px; gap: 40px; }
+.faixa-empresas { padding-top: 44px; padding-bottom: 44px; margin-top: 48px; }
+.fe-links a { padding: 13px 0; }
+main.home .faq { margin-top: 48px; }
+.ponto .etq { display: none; }

@@ -40,7 +40,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
         ("O Desvia é da prefeitura?", "Não. É um projeto independente que reúne informações públicas de várias fontes. Em cada cidade, as regras oficiais são as da prefeitura e do órgão ambiental."),
     ]
     faq_html = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)
-    tiles = "".join(f'<li><button type="button" data-atalho="{s}" data-k="{s}"><b>{esc(nomes[s][1])}</b><small>{dict(cats_ordem)[s]} locais</small></button></li>'
+    tiles = "".join(f'<li><button type="button" data-atalho="{s}">{esc(nomes[s][1])}</button></li>'
                     for s in atalhos if s in dict(cats_ordem))
     corpo = f"""<section class="abre">
  <div class="abre-texto">
@@ -50,7 +50,6 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     <label class="campo"><span>O que você tem?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="sofá, roupa, pilha, remédio, entulho…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
     <button type="submit">Buscar</button>
-    <button type="button" class="btn-perto" data-perto>Perto de mim</button>
     <details class="mais-filtros mf-home" id="maisFiltros"><summary>Filtros <span class="n-filtros" id="nFiltros"></span></summary><div class="busca-filtros">
       <label class="filtro"><span>O que você quer fazer</span><select id="fQuem" name="quem">
         <option value="todos">Tudo</option><option value="doar">Doar</option><option value="vender">Vender ou trocar</option>
@@ -60,12 +59,11 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
       <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>
     </div></details>
   </form>
-  <p class="abre-nota">{total} locais em {len(cidades)} cidades do Paraná. Não sabe se doa, vende ou descarta? <button type="button" class="link-ajuda" data-ajuda>Responda duas perguntas</button>.</p>
+  <p class="abre-nota"><button type="button" class="link-ajuda btn-perto" data-perto>Perto de mim</button> <button type="button" class="link-ajuda" data-ajuda>Não sei o que fazer</button></p>
  </div>
  <div class="abre-tipos">
-  <h2>Ou escolha pelo tipo</h2>
+  <h2>Mais procurados</h2>
   <ul class="tipos">{tiles}</ul>
-  <p class="tipos-nota">A cor de cada tipo é a da lixeira da coleta seletiva.</p>
  </div>
 </section>
 
@@ -85,19 +83,10 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   <p>Se quem coleta ou recebe não tem licença, a responsabilidade volta para quem gerou. O Desvia mostra a licença de cada empresa, com a fonte e a data da consulta: IAT, CTF/IBAMA e prefeitura.</p>
  </div>
  <ul class="fe-links">
-  <li><a href="empresas/"><b>Sua empresa está em dia?</b><span>Checklist de obrigações: PGRS, MTR, inventário e licença.</span></a></li>
-  <li><a href="{CADASTRO}" target="_blank" rel="noopener"><b>Cadastrar minha empresa</b><span>Para quem coleta, transporta, recicla ou destina. Conferimos a licença.</span></a></li>
-  <li><a href="{PREFEITURA}" target="_blank" rel="noopener"><b>Sou da prefeitura</b><span>Quem opera na cidade, com que licença e onde faltam pontos de entrega.</span></a></li>
+  <li><a href="empresas/"><b>Sua empresa está em dia?</b></a></li>
+  <li><a href="{CADASTRO}" target="_blank" rel="noopener"><b>Cadastrar minha empresa</b></a></li>
+  <li><a href="{PREFEITURA}" target="_blank" rel="noopener"><b>Sou da prefeitura</b></a></li>
  </ul>
-</section>
-
-<section class="como" id="como-funciona">
-  <h2>Como funciona</h2>
-  <ol>
-    <li><b>Reunimos as fontes</b><span>IAT, CTF/IBAMA e prefeituras, que hoje ficam em sites separados.</span></li>
-    <li><b>Conferimos a licença</b><span>Válida, vencida ou não localizada, com a data da consulta.</span></li>
-    <li><b>Você escolhe</b><span>Filtre pelo resíduo e pela cidade e fale direto com quem recebe.</span></li>
-  </ol>
 </section>
 
 <div class="duas">
