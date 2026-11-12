@@ -76,3 +76,5 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 11/11/2026 | Correios AGC Caixa de São Pedro (Apucarana) | Removido (APU-016 apagado). |
 | 11/11/2026 | Loja Vivo (Apucarana) | Fechou: APU-007 apagado. Correios AGC São Pedro da Taquara fica sem coordenada (não há no mapa). |
 | 12/11/2026 | Pequeno gerador | Grande gerador = mais de 600 L/semana (informado pela Jen; aplicado a Londrina). Demais cidades: "confirme com a prefeitura". |
+| 12/11/2026 | PEVs de Londrina (CMTU) | Página de coleta ganhou cooperativas, tabela dos 3 PEVs, regras de uso e denúncia (SAC CMTU). PEV Zona Sul entrou como LDA-387 (só poda e resíduos verdes). LDA-132 (Zona Leste) não recebe poda. |
+| 12/11/2026 | Caçambas em Londrina | Caçamba em área pública precisa de autorização da CMTU (SEI), pedida em nome da locadora. Texto na página de caçambas e na regra de entulho de Londrina. |
