@@ -105,6 +105,9 @@ SERVICOS = [
      lambda p: p["Serviço"] == "Compra de recicláveis" or p["Tipo de ponto"] == "Comprador informal" or any(k in norm(p["Nome"]) for k in ("sucata", "ferro velho", "ferro-velho", "aparas"))),
 ]
 
+# Limite de pequeno gerador (coleta pública) por cidade, informado pela Jen
+LIMITE_GERADOR = {"londrina": "600 litros por semana"}
+
 # Termo mais buscado por tipo de resíduo (Google Keyword Planner, Londrina, out/2025 a set/2026): vai no <title>
 TERMO_BUSCA = {
     "eletronicos": "Lixo eletrônico", "entulho": "Descarte de entulho e caçamba", "pilhas-e-baterias": "Descarte de pilhas e baterias",
@@ -669,6 +672,17 @@ def gerar():
 <li>Procure o seu endereço ou bairro.</li>
 <li>Anote os <b>dois dias</b>: o da coleta comum (lixo orgânico e rejeito) e o da <b>coleta seletiva</b> (recicláveis), que costumam ser diferentes.</li>
 </ol>
+
+<section class="caixa-empresas">
+<h2>Tem empresa ou comércio? O descarte é diferente</h2>
+<p>A coleta da prefeitura é para o resíduo doméstico. Comércio e serviço só podem usá-la como <b>pequeno gerador</b>{(", até <b>" + LIMITE_GERADOR[cid_slug] + "</b>") if cid_slug in LIMITE_GERADOR else " (o limite de volume é definido pela prefeitura: confirme antes)"}. Acima disso, ou com resíduo de indústria, obra ou serviço de saúde, a empresa é <b>grande gerador</b> e precisa:</p>
+<ul class="lista-texto">
+<li>contratar coleta e destinação com empresa <b>licenciada</b>;</li>
+<li>emitir o <b>MTR</b> (Manifesto de Transporte de Resíduos) e guardar o <b>CDF</b> (Certificado de Destinação Final) de cada envio;</li>
+<li>ter o <b>PGRS</b> (Plano de Gerenciamento de Resíduos Sólidos) quando a lei exigir.</li>
+</ul>
+<p class="caixa-acoes">{f'<a class="pq-btn" href="../servicos/coleta-de-residuos-para-empresas/">Ver empresas de coleta em {esc(cidade)}</a>' if (SAIDA / cid_slug / "servicos" / "coleta-de-residuos-para-empresas").exists() else ""}<a href="../../../empresas/">Checklist para empresas</a><a href="https://wa.me/5543920024725?text=Ol%C3%A1%2C%20vim%20pelo%20Desvia%20e%20preciso%20de%20ajuda%20com%20res%C3%ADduos%20da%20minha%20empresa" target="_blank" rel="noopener" data-goatcounter-click="mawe-coleta-{cid_slug}">Fale com uma especialista</a></p>
+</section>
 
 <h2>Dicas para a coleta passar sem problema</h2>
 <ul class="lista-texto">
