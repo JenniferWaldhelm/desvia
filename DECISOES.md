@@ -20,6 +20,7 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 04/11/2026 | Programas nacionais de logística reversa (Reciclanip etc.): link para o localizador oficial; pontos específicos só quando a Jen passar os dados. |
 | 04/11/2026 | Regra da sede vale também para a lista da prefeitura de Londrina e para Mandaguari: empresa de fora só aparece na página da própria cidade (ou fica guardada, se a cidade não está publicada). |
 | 04/11/2026 | Ponto que ainda não funciona: Obs começando com "Ainda não está em funcionamento" tira do site até mudar. |
+| 12/11/2026 | Design do site fica como está (redesenho recusado). Textos em Linguagem Simples, pensando também no SEO. |
 
 ## Licenciamento por município
 
