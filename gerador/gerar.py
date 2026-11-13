@@ -166,7 +166,7 @@ GUIAS_RELACIONADOS = {
 NUMEROS_COLETA = {
     "londrina": """<h2>Quanto lixo Londrina gera</h2>
 <p>Cada morador de Londrina gera, em média, <b>0,69 kg de lixo doméstico por dia</b>, cerca de 21 kg por mês.</p>
-<p>Desse lixo, <b>só 6,51% dos recicláveis e orgânicos deixam de ir para o aterro sanitário</b>. Todo o resto é enterrado, inclusive muito material que poderia ser reciclado ou virar adubo. Separar em casa é o primeiro passo para mudar esse número.</p>
+<p>De todo o lixo doméstico coletado na cidade, <b>só 6,51% deixa de ir para o aterro sanitário</b>, porque foi reciclado ou virou adubo. Todo o resto é enterrado, inclusive muito material que poderia ser reciclado ou virar adubo. Separar em casa é o primeiro passo para mudar esse número.</p>
 <p class="nota">Fonte: Sistema Nacional de Informações em Saneamento Básico (SINISA), 2025.</p>
 """,
 }
