@@ -162,6 +162,15 @@ GUIAS_RELACIONADOS = {
     "residuos-classe-ii": ("residuos-perigosos", "reciclaveis", "sucata-metalica"),
 }
 
+# Números de geração e desvio de resíduos por cidade (informados pela Jen).
+NUMEROS_COLETA = {
+    "londrina": """<h2>Quanto lixo Londrina gera</h2>
+<p>Cada morador de Londrina gera, em média, <b>0,69 kg de lixo doméstico por dia</b>, cerca de 21 kg por mês.</p>
+<p>Desse lixo, <b>só 6,51% dos recicláveis e orgânicos deixam de ir para o aterro sanitário</b>. Todo o resto é enterrado, inclusive muito material que poderia ser reciclado ou virar adubo. Separar em casa é o primeiro passo para mudar esse número.</p>
+<p class="nota">Fonte: Sistema Nacional de Informações em Saneamento Básico (SINISA), 2025.</p>
+""",
+}
+
 # Informações próprias de cada cidade na página de coleta (fonte oficial informada pela Jen).
 EXTRA_COLETA = {
     "londrina": """<h2>Coleta seletiva em Londrina: feita por cooperativas</h2>
@@ -772,6 +781,7 @@ def gerar():
 <li>Vidro quebrado e objetos cortantes: embrulhe em jornal ou caixa e avise com um bilhete.</li>
 </ul>
 
+{NUMEROS_COLETA.get(cid_slug, "")}
 <h2>Dicas para separar o lixo em casa</h2>
 <ul class="lista-texto">
 <li><b>Deixe um pote para restos de comida perto da pia.</b> Use um balde pequeno com tampa, só para o lixo orgânico, ao lado da pia ou da bancada. Quanto menos você precisar andar para jogar fora, mais fácil fica criar o hábito.</li>
