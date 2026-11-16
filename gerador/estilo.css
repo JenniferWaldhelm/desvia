@@ -413,3 +413,7 @@ main.artigo .faq details p { margin-top: 6px; }
 .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--cinza-claro); }
 .tabela th { font-family: 'Montserrat', sans-serif; font-size: .85rem; color: var(--verde); border-bottom: 2px solid var(--verde); }
 .tabela td:first-child { font-weight: 600; white-space: nowrap; }
+.capa-cidade { position: relative; margin: 8px 0 18px; border-radius: 10px; overflow: hidden; background: var(--cinza-claro); }
+.capa-cidade img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 3; object-fit: cover; }
+.capa-cidade figcaption { position: absolute; right: 8px; bottom: 6px; font-size: .72rem; color: #fff; background: rgba(0,0,0,.45); padding: 2px 6px; border-radius: 4px; }
+.capa-cidade figcaption a { color: #fff; }

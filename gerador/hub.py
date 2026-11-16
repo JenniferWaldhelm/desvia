@@ -277,13 +277,25 @@ def link_coleta(cidade):
     return ""
 
 
+# Foto de capa da página da cidade: (arquivo em img/ sem tamanho, texto alternativo, crédito, link da foto)
+CAPA = {
+    "londrina": ("londrina", "Vista aérea do centro de Londrina, com a Catedral Metropolitana", "Rodolfo Gaion / Pexels",
+                 "https://www.pexels.com/pt-br/foto/cidade-meio-urbano-ponto-de-referencia-ponto-historico-17204341/"),
+}
+
+
 def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     chips = "".join(
         f'<button type="button" class="chip" data-cat="{s}" aria-pressed="false">{esc(nomes[s][1])} <span class="n">{len(por_cat[s])}</span></button>'
         for s in cats_ordem)
     paginas = "".join(f'<li><a href="{s}/">Onde descartar {esc(nomes[s][0])}</a></li>' for s in cats_ordem)
     cats_js = json.dumps({s: nomes[s][1] for s in cats_ordem}, ensure_ascii=False)
+    capa = CAPA.get(cid_slug)
+    capa_html = (f'<figure class="capa-cidade"><img src="../../img/{capa[0]}-1280.webp" srcset="../../img/{capa[0]}-640.webp 640w, ../../img/{capa[0]}-1280.webp 1280w" '
+                 f'sizes="(max-width: 1160px) 100vw, 1128px" width="1280" height="480" alt="{esc(capa[1])}" fetchpriority="high">'
+                 f'<figcaption>Foto: <a href="{capa[3]}" target="_blank" rel="noopener">{esc(capa[2])}</a></figcaption></figure>') if capa else ""
     return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
+{capa_html}
 <h1>Onde doar, reciclar e descartar em {esc(cidade)}</h1>
 <p class="resposta">Pontos de entrega, brechós, cooperativas e empresas de {esc(cidade)}, com a situação da licença de cada uma.</p>
 <div class="atalhos-topo"><button type="button" class="btn-ajuda" data-ajuda>🧭 Me ajude a decidir</button>
