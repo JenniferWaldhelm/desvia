@@ -277,18 +277,53 @@ def link_coleta(cidade):
     return ""
 
 
+# Ícones dos cartões de tipo de resíduo (mesmos da página de Mandaguari)
+ICONES = {"reciclaveis": "♻️", "eletronicos": "💻", "pilhas-e-baterias": "🔋", "lampadas": "💡", "medicamentos": "💊",
+          "oleo-de-cozinha": "🫙", "oleo-lubrificante": "🛢️", "pneus": "🚗", "entulho": "🧱", "moveis-e-volumosos": "🛋️",
+          "madeira": "🪵", "poda-e-galhos": "🌿", "organicos": "🥦", "texteis": "👕", "sucata-metalica": "🔩",
+          "tintas-e-solventes": "🎨", "residuos-perigosos": "☢️", "residuos-de-saude": "🩺", "embalagens-de-agrotoxico": "🧪",
+          "limpa-fossa": "🚽", "residuos-classe-ii": "🏭", "escovas-e-esponjas": "🧽"}
+
+
 def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     chips = "".join(
         f'<button type="button" class="chip" data-cat="{s}" aria-pressed="false">{esc(nomes[s][1])} <span class="n">{len(por_cat[s])}</span></button>'
         for s in cats_ordem)
     paginas = "".join(f'<li><a href="{s}/">Onde descartar {esc(nomes[s][0])}</a></li>' for s in cats_ordem)
     cats_js = json.dumps({s: nomes[s][1] for s in cats_ordem}, ensure_ascii=False)
-    return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
-<h1>Onde doar, reciclar e descartar em {esc(cidade)}</h1>
-<p class="resposta">Pontos de entrega, brechós, cooperativas e empresas de {esc(cidade)}, com a situação da licença de cada uma.</p>
-<div class="atalhos-topo"><button type="button" class="btn-ajuda" data-ajuda>🧭 Me ajude a decidir</button>
-{link_coleta(cidade)}</div>
+    n_val = sum(1 for p in pts if ctx["selo"](p)[0] == "ok")
+    cards = "".join(f'<a class="cat-card" href="{s}/"><span class="cat-icon" aria-hidden="true">{ICONES.get(s, "♻️")}</span>'
+                    f'<span>{esc(nomes[s][1])}</span><small>{len(por_cat[s])} {"local" if len(por_cat[s]) == 1 else "locais"}</small></a>' for s in cats_ordem)
+    return f"""<section class="hub-hero">
+ <div class="hub-hero-inner">
+  <nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
+  <span class="hero-badge">{esc(cidade)} · PR</span>
+  <h1>Onde doar, reciclar e descartar <em>em {esc(cidade)}</em></h1>
+  <p class="resposta">Pontos de entrega, brechós, cooperativas e empresas de {esc(cidade)}, com a situação da licença de cada uma.</p>
+  <div class="hero-btns"><a class="btn-primary" href="#categorias">O que você quer descartar?</a><a class="btn-secondary" href="#pontos">Ver mapa de pontos</a></div>
+ </div>
+</section>
+<div class="hub-stats">
+ <div class="stat"><b>{len(pts)}</b><span>locais no mapa</span></div>
+ <div class="stat"><b>{n_val}</b><span>com licença válida</span></div>
+ <div class="stat"><b>{len(cats_ordem)}</b><span>tipos de resíduo</span></div>
+ <div class="stat"><b>100%</b><span>grátis e sem cadastro</span></div>
+</div>
 
+<section class="hub-sec" id="categorias">
+ <span class="section-tag">O que descartar</span>
+ <h2 class="section-title">O que você quer descartar?</h2>
+ <p class="section-desc">Escolha o tipo de resíduo e veja onde levar em {esc(cidade)}.</p>
+ <div class="cat-grid">{cards}</div>
+ <div class="atalhos-topo"><button type="button" class="btn-ajuda" data-ajuda>🧭 Não sei se doo, vendo ou descarto</button>
+ {link_coleta(cidade)}</div>
+</section>
+
+<section class="hub-sec hub-sec-pontos" id="pontos">
+ <span class="section-tag">Mapa de pontos</span>
+ <h2 class="section-title">Pontos de descarte em {esc(cidade)}</h2>
+ <p class="section-desc">Busque pelo resíduo ou pelo nome. Clique num ponto para ver endereço, telefone e a situação da licença.</p>
+</section>
 <section class="ferramenta" aria-label="Mapa e lista com filtros">
   <aside class="painel">
     <div class="filtros">
