@@ -121,6 +121,8 @@ TERMO_BUSCA = {
 LOCALIZADOR = {
     "pneus": ("Ver todos os pontos de coleta da Reciclanip", "https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/"),
     "lampadas": ("Procurar pontos de entrega de lâmpadas na Reciclus", "https://reciclus.org.br/onde-descartar/"),
+    "pilhas-e-baterias": ("Procurar pontos de entrega de pilhas e baterias na Green Eletron", "https://greeneletron.org.br/onde-descartar/"),
+    "eletronicos": ("Procurar pontos de entrega de eletrônicos na Green Eletron", "https://greeneletron.org.br/onde-descartar/"),
 }
 
 # Orientação curta por categoria (aparece no topo e no FAQ).

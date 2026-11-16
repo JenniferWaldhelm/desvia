@@ -87,3 +87,4 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 16/11/2026 | Jufap (LDA-378 a 381) | Revenda TIM: nomes "Jufap (TIM) – …". |
 | 16/11/2026 | Xavantes, Óleo Bauru e Aramepar | Saem da lista de conferência; não entram. |
 | 16/11/2026 | Ambiprim | Fica em Maringá: MGI-012 virou MGA-359; licença ambiental não localizada. Caçamba Martins (ROL-036) com pino no pátio. |
+| 16/11/2026 | Mandaguari: lâmpadas e pilhas | Pontos Reciclus de lâmpadas já na base (Amigão/antigo Canção, Coprosid, Camilo/antigo GCA, Eletro Mandaguari). Amigão também recebe pilhas (Green Eletron), com a coordenada da Jen. Novo: MGI-021 Sicoob Metropolitano (pilhas). Botões para os localizadores da Reciclus (lâmpadas) e da Green Eletron (pilhas e eletrônicos). |
