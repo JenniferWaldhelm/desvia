@@ -54,7 +54,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
         <option value="reciclar">Reciclar</option><option value="descartar">Descartar com segurança</option>
         <option value="empresa">Empresas: coleta e destinação</option></select></label>
       <label class="filtro"><span>Tipo de resíduo</span><select id="fTipo" name="tipo"><option value="">Todos os tipos</option>{opcoes_tipo}</select></label>
-      <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder empresas com licença vencida ou não localizada</label>
+      <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder empresas com licença ambiental vencida ou não localizada</label>
     </div></details>
   </form>
   <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe se doa, vende ou descarta? Me ajude a decidir</button>
@@ -67,7 +67,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>
-    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Cor dos pontos</b><small>Toque para mostrar ou esconder</small><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Licença válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Licença vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="entrega" aria-pressed="true"><i style="background:#2B7A8C"></i>Ponto de entrega</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Licença não localizada</button></div>
+    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Cor dos pontos</b><small>Toque para mostrar ou esconder</small><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Licença ambiental válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Licença ambiental vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="entrega" aria-pressed="true"><i style="background:#2B7A8C"></i>Ponto de entrega</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Licença ambiental não localizada</button></div>
   </div>
 </section>
 

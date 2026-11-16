@@ -367,7 +367,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
         <div class="chips" id="chips">{chips}</div>
       </div>
       <div class="checks">
-        <label><input type="checkbox" id="fLic"> Esconder licença vencida ou não localizada</label>
+        <label><input type="checkbox" id="fLic"> Esconder licença ambiental vencida ou não localizada</label>
         <label><input type="checkbox" id="fLoc"> Só com sede em {esc(cidade)}</label>
       </div>
       </details>
@@ -376,7 +376,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>
-    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Cor dos pontos</b><small>Toque para mostrar ou esconder</small><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Licença válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Licença vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="entrega" aria-pressed="true"><i style="background:#2B7A8C"></i>Ponto de entrega</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Licença não localizada</button></div>
+    <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Cor dos pontos</b><small>Toque para mostrar ou esconder</small><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Licença ambiental válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Licença ambiental vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="entrega" aria-pressed="true"><i style="background:#2B7A8C"></i>Ponto de entrega</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Licença ambiental não localizada</button></div>
   </div>
 </section>
 

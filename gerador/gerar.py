@@ -301,18 +301,18 @@ def selo_licenca(p):
         ident = f"{ident} ({orgao})" if ident else orgao
     aviso_lp = " É licença prévia ou de instalação: ainda não permite que a empresa funcione." if tipo.upper() in ("LP", "LI", "LI-A") else ""
     if st == "valida":
-        return "ok", f"Licença {ident} válida até {validade:%d/%m/%Y}.{aviso_lp}"
+        return "ok", f"Licença ambiental {ident} válida até {validade:%d/%m/%Y}.{aviso_lp}"
     if st == "vencendo":
-        return "alerta", f"Licença {ident} vence em {validade:%d/%m/%Y}.{aviso_lp}"
+        return "alerta", f"Licença ambiental {ident} vence em {validade:%d/%m/%Y}.{aviso_lp}"
     if st == "vencida":
-        return "alerta", f"Licença {ident} venceu em {validade:%d/%m/%Y}. Renovação não localizada nas bases consultadas em {verif}."
+        return "alerta", f"Licença ambiental {ident} venceu em {validade:%d/%m/%Y}. Renovação não localizada nas bases consultadas em {verif}."
     if st == "publico":
         if p["Tipo de ponto"] == "Programa logística reversa":
             return "neutro", "Programa de logística reversa."
         return "neutro", "Serviço público municipal."
     if st == "entrega":
         return "neutro", "Ponto de entrega: o estabelecimento recebe o material e repassa para o programa ou a empresa de destinação."
-    return "aviso", f"Licença não localizada nas bases consultadas em {verif}."
+    return "aviso", f"Licença ambiental não localizada nas bases consultadas em {verif}."
 
 
 def aviso_cnpj(p):
