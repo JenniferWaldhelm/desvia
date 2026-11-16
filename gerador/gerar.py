@@ -120,7 +120,7 @@ TERMO_BUSCA = {
 # Localizadores oficiais dos programas nacionais de logística reversa (link, sem copiar os pontos).
 LOCALIZADOR = {
     "pneus": ("Ver todos os pontos de coleta da Reciclanip", "https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/"),
-    "lampadas": ("Procurar pontos de entrega de lâmpadas na Reciclus", "https://reciclus.org.br/"),
+    "lampadas": ("Procurar pontos de entrega de lâmpadas na Reciclus", "https://reciclus.org.br/onde-descartar/"),
 }
 
 # Orientação curta por categoria (aparece no topo e no FAQ).
