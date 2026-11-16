@@ -80,3 +80,4 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 12/11/2026 | Caçambas em Londrina | Caçamba em área pública precisa de autorização da CMTU (SEI), pedida em nome da locadora. Texto na página de caçambas e na regra de entulho de Londrina. |
 | 16/11/2026 | Fonte em cada local | Cartão mostra "Fonte: … · consulta em …". Planilha unificada e levantamentos próprios aparecem como "Levantamento do Desvia". ABREE, Green Eletron e Reciclanip podem ser citados. |
 | 16/11/2026 | ROL-001 Farmácia Nossa Sra. Aparecida | Fica em Cambé: virou CAM-036. |
+| 16/11/2026 | Visual das páginas das cidades | Modelo de Mandaguari: faixa azul, números, cartões por tipo de resíduo e seções com etiqueta. Página inicial abre sem mapa; mapa aparece depois da busca. |
