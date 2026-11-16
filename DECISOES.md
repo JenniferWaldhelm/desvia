@@ -81,3 +81,7 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 16/11/2026 | Fonte em cada local | Cartão mostra "Fonte: … · consulta em …". Planilha unificada e levantamentos próprios aparecem como "Levantamento do Desvia". ABREE, Green Eletron e Reciclanip podem ser citados. |
 | 16/11/2026 | ROL-001 Farmácia Nossa Sra. Aparecida | Fica em Cambé: virou CAM-036. |
 | 16/11/2026 | Visual das páginas das cidades | Modelo de Mandaguari: faixa azul, números, cartões por tipo de resíduo e seções com etiqueta. Página inicial abre sem mapa; mapa aparece depois da busca. |
+| 16/11/2026 | Empresas conferidas | Saem: IBI-030 AGRISA, ROL-024 Rigo Pet, ROL-026 California, MGA-265 Transmarinho; não entram MGA-308, ROL-031, 034, 035. Entram: MGA-301 R.P.M., MGA-304 Ambipar Glass, MGA-307 Kopp Comercial de Ferro Velho (DLAM até 18/01/2033), ROL-032 W A Marin, ROL-033 Mundi Ambiental, ROL-036 Caçamba Martins (sem pino até confirmar que não é residência). |
+| 16/11/2026 | Processa Tecnologia Ambiental (ex-CAM-002) | Sede em Colombo: saiu de Cambé, guardada em Pendências. |
+| 16/11/2026 | Favato Transportes | Fica em Cambé: LDA-087 virou CAM-037. |
+| 16/11/2026 | Jufap (LDA-378 a 381) | Revenda TIM: nomes "Jufap (TIM) – …". |
