@@ -102,6 +102,7 @@
     if (cont.length) h += '<p class="contato">' + cont.join(' · ') + '</p>';
     h += '<p class="licenca ' + p.lc + '">' + esc(p.lic) + '</p>';
     if (p.cnpj) h += '<p class="licenca aviso">' + esc(p.cnpj) + '</p>';
+    if (p.fo) h += '<p class="fonte">' + esc(p.fo) + '</p>';
     if (p.obs) h += '<p class="obs">' + esc(p.obs) + '</p>';
     var acoes = [];
     if (p.a != null) acoes.push('<a class="principal" href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');

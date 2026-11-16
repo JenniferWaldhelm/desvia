@@ -222,6 +222,25 @@ def papel(p):
     return r or ["recebe"]
 
 
+# Fonte mostrada no cartão: nomes públicos das bases (decisão da Jen, 16/11/2026)
+def fonte_publica(p):
+    t = (p.get("Fonte") or "").lower()
+    regras = [("abree", "ABREE"), ("green eletron", "Green Eletron"), ("reciclanip", "Reciclanip"),
+              (("iat", "geopr", "sga"), "IAT"), ("ctf", "CTF/Ibama"), ("receita", "Receita Federal"),
+              ("sema", "SEMA"), ("cmtu", "CMTU"), ("prefeitura", "prefeitura")]
+    nomes = []
+    for chave, nome in regras:
+        chaves = chave if isinstance(chave, tuple) else (chave,)
+        if any(re.search(r"\b" + re.escape(c), t) for c in chaves) and nome not in nomes:
+            nomes.append(nome)
+    if not nomes:
+        nomes = ["Levantamento do Desvia"]
+    txt = nomes[0] if len(nomes) == 1 else ", ".join(nomes[:-1]) + " e " + nomes[-1]
+    data = (p.get("Data verificação") or "").strip()
+    txt = txt[0].upper() + txt[1:]
+    return f"Fonte: {txt}" + (f" · consulta em {data}" if data else "")
+
+
 def dados_js(pts, cid_slug, ctx):
     norm, selo, aviso_cnpj, obs_publica, pessoa_fisica = ctx["norm"], ctx["selo"], ctx["aviso_cnpj"], ctx["obs_publica"], ctx["pessoa_fisica"]
     out = []
@@ -235,6 +254,7 @@ def dados_js(pts, cid_slug, ctx):
             "id": p["ID"].lower(), "n": p["Nome"], "t": p["Tipo de ponto"], "sv": p["Serviço"],
             "r": p["Resíduos aceitos"], "c": p["_cats"], "e": end, "m": p["Município sede"],
             "loc": norm(p["Município sede"]).replace(" ", "-") == cid_slug,
+            "fo": fonte_publica(p),
             "a": p["_lat"], "o": p["_lng"], "tel": p["Telefone"], "site": site,
             "st": p["_status"], "lic": lic, "lc": cls, "cnpj": aviso_cnpj(p), "obs": obs_publica(p),
             "pp": acoes(p, norm), "cs": sorted(p["_cidades"]),
