@@ -85,3 +85,5 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 | 16/11/2026 | Processa Tecnologia Ambiental (ex-CAM-002) | Sede em Colombo: saiu de Cambé, guardada em Pendências. |
 | 16/11/2026 | Favato Transportes | Fica em Cambé: LDA-087 virou CAM-037. |
 | 16/11/2026 | Jufap (LDA-378 a 381) | Revenda TIM: nomes "Jufap (TIM) – …". |
+| 16/11/2026 | Xavantes, Óleo Bauru e Aramepar | Saem da lista de conferência; não entram. |
+| 16/11/2026 | Ambiprim | Fica em Maringá: MGI-012 virou MGA-359; licença ambiental não localizada. Caçamba Martins (ROL-036) com pino no pátio. |
