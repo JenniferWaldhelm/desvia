@@ -61,7 +61,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
 </section>
 
-<section class="ferramenta" id="resultados" aria-label="Resultados">
+<section class="ferramenta" id="resultados" data-esperar hidden aria-label="Resultados">
   <aside class="painel">
     <div class="listhead"><span><b id="count">0</b> resultados</span><button type="button" class="limpar" id="limpar">Limpar filtros</button></div>
     <div class="lista-js" id="lista" aria-live="polite"></div>

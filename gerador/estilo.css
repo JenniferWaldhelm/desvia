@@ -446,3 +446,4 @@ main.artigo .faq details p { margin-top: 6px; }
 .cat-card small { font-size: .78rem; color: var(--cinza); }
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } .hub-stats { gap: 1rem 2rem; } .hub-stats b { font-size: 1.4rem; } }
 body { overflow-x: clip; }
+.ferramenta[hidden] { display: none; }

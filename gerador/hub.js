@@ -161,6 +161,12 @@
   });
   var POR_PAGINA = 20, limite = POR_PAGINA, visAtual = [];
   function render(mais) {
+    // Página inicial: mapa e lista só aparecem depois de uma busca, cidade ou atalho
+    var res = document.getElementById('resultados');
+    if (res && res.hasAttribute('data-esperar')) {
+      if (!(estado.q || estado.cat || estado.cid || estado.pos || estado.ver)) { res.hidden = true; return; }
+      if (res.hidden) { res.hidden = false; if (mapa) setTimeout(function () { mapa.invalidateSize(); render(); }, 0); }
+    }
     if (!mais) limite = POR_PAGINA;
     estado.qcats = catsDaBusca(estado.q || '');
     var vis = PONTOS.filter(passa);
@@ -337,7 +343,7 @@
   if (selCidade) selCidade.addEventListener('change', function (e) { estado.cid = e.target.value; render(); });
   var form = document.getElementById('busca');
   if (form) form.addEventListener('submit', function (e) {
-    e.preventDefault(); caixa.hidden = true; render();
+    e.preventDefault(); caixa.hidden = true; estado.ver = true; render();
     document.getElementById('resultados').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   document.querySelectorAll('[data-atalho]').forEach(function (b) {
