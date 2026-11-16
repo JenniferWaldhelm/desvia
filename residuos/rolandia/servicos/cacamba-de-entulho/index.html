@@ -29,7 +29,22 @@
 <p class="regra">Quem gera o entulho responde pelo destino dele. Prefira empresa com licença válida e peça o comprovante de onde a caçamba foi descarregada.</p>
 
 <p class="atualizado">Dados atualizados em 16/11/2026. Licença válida aparece primeiro.</p>
-
+<div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
+<script>
+window.addEventListener('load', function () {
+  var pts = [{"n": "Caçamba Martins", "a": -23.313371, "o": -51.4020827, "id": "rol-036", "s": "vencida"}];
+  var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
+  var mapa = L.map('mapa', {scrollWheelZoom: false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
+  var grupo = L.featureGroup();
+  pts.forEach(function (p) {
+    L.circleMarker([p.a, p.o], {radius: 8, color: '#fff', weight: 2, fillColor: cores[p.s] || '#7A7F8C', fillOpacity: 0.95})
+      .bindPopup('<a href="#' + p.id + '">' + p.n.replace(/</g, '&lt;') + '</a>').addTo(grupo);
+  });
+  grupo.addTo(mapa);
+  mapa.fitBounds(grupo.getBounds().pad(0.15), {maxZoom: 15});
+});
+</script>
 <section class="lista">
 <article class="ponto" id="rol-036">
 <h3>Caçamba Martins</h3>
