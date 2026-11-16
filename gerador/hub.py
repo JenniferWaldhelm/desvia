@@ -277,6 +277,17 @@ def link_coleta(cidade):
     return ""
 
 
+# Rabiscos à mão por cima da foto de capa (estilo dos posts da Mawé, nas cores do Desvia)
+RABISCOS = ('<svg class="rabiscos" viewBox="0 0 800 300" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
+    '<g fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">'
+    '<path d="M38 70 C 30 40, 52 18, 80 14 C 84 44, 66 66, 38 70 Z M38 70 C 52 52, 64 38, 78 18" stroke="#2A7A2A" stroke-width="5" vector-effect="non-scaling-stroke"/>'
+    '<path d="M92 34 C 98 22, 110 18, 118 26" stroke="#2A7A2A" stroke-width="5" vector-effect="non-scaling-stroke"/>'
+    '<path d="M-10 250 C 30 205, 70 290, 110 240 S 170 200, 150 262 S 210 300, 240 270" stroke="#E8621A" stroke-width="6" vector-effect="non-scaling-stroke"/>'
+    '<path d="M560 292 C 600 250, 640 300, 680 262 S 735 230, 720 280 S 790 290, 812 250" stroke="#1A3A8F" stroke-width="6" vector-effect="non-scaling-stroke"/>'
+    '<path d="M700 30 C 730 10, 760 40, 790 18" stroke="#E8621A" stroke-width="5" vector-effect="non-scaling-stroke"/>'
+    '</g></svg>')
+
+
 # Foto de capa da página da cidade: (arquivo em img/ sem tamanho, texto alternativo, crédito, link da foto)
 CAPA = {
     "londrina": ("londrina", "Vista aérea do centro de Londrina, com a Catedral Metropolitana", "Rodolfo Gaion / Pexels",
@@ -293,7 +304,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     capa = CAPA.get(cid_slug)
     capa_html = (f'<figure class="capa-cidade"><img src="../../img/{capa[0]}-1280.webp" srcset="../../img/{capa[0]}-640.webp 640w, ../../img/{capa[0]}-1280.webp 1280w" '
                  f'sizes="(max-width: 1160px) 100vw, 1128px" width="1280" height="480" alt="{esc(capa[1])}" fetchpriority="high">'
-                 f'<figcaption>Foto: <a href="{capa[3]}" target="_blank" rel="noopener">{esc(capa[2])}</a></figcaption></figure>') if capa else ""
+                 f'{RABISCOS}<figcaption>Foto: <a href="{capa[3]}" target="_blank" rel="noopener">{esc(capa[2])}</a></figcaption></figure>') if capa else ""
     return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Cidades</a> › {esc(cidade)}</nav>
 {capa_html}
 <h1>Onde doar, reciclar e descartar em {esc(cidade)}</h1>
