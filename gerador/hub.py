@@ -88,7 +88,7 @@ LOCAL = {
         "orgao": "Secretaria Municipal do Ambiente (SEMA) de Londrina",
         "licenciador": "Em Londrina, a licença ambiental pode ser da prefeitura ou do estado: a Secretaria Municipal do Ambiente (SEMA) licencia as atividades de impacto local, e o Instituto Água e Terra (IAT), as demais.",
         "licenca": ("🏛️", "Licença — SEMA ou IAT", "Licença ambiental (SEMA Londrina ou IAT)",
-                    "Londrina tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela SEMA; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
+                    "Em Londrina, a prefeitura também dá licença ambiental. Atividades de impacto local são licenciadas pela SEMA; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
                     ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
                      "Confira na SEMA se a atividade é de impacto local; se não for, o processo é no IAT",
                      "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
@@ -97,7 +97,7 @@ LOCAL = {
     "maringa": {
         "licenciador": "Em Maringá, a licença ambiental pode ser da prefeitura ou do estado: a prefeitura licencia as atividades de impacto local, e o Instituto Água e Terra (IAT), as demais.",
         "licenca": ("🏛️", "Licença — Município ou IAT", "Licença ambiental (Prefeitura de Maringá ou IAT)",
-                    "Maringá tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
+                    "Em Maringá, a prefeitura também dá licença ambiental. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT. Gerar, transportar ou tratar resíduos perigosos costuma exigir licença ou autorização antes de operar.",
                     ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
                      "Confira na Secretaria Municipal de Meio Ambiente se a atividade é de impacto local; se não for, o processo é no IAT",
                      "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
@@ -156,7 +156,7 @@ def secao_empresas(cid_slug, cidade):
     if municipal and "licenca" not in loc:
         loc["licenciador"] = f"Em {cidade}, a licença ambiental pode ser da prefeitura ou do estado: a prefeitura licencia as atividades de impacto local, e o Instituto Água e Terra (IAT), as demais."
         loc["licenca"] = ("🏛️", "Licença — Município ou IAT", f"Licença ambiental (Prefeitura de {cidade} ou IAT)",
-                          f"{cidade} tem licenciamento ambiental municipalizado. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT.",
+                          f"Em {cidade}, a prefeitura também dá licença ambiental. Atividades de impacto local são licenciadas pela Prefeitura; as de impacto maior, pelo IAT.",
                           ["Licença Prévia (LP), de Instalação (LI) e de Operação (LO), ou licença simplificada",
                            "Confira na Prefeitura se a atividade é de impacto local; se não for, o processo é no IAT",
                            "Operar sem licença é crime ambiental (Lei 9.605/1998)"],
@@ -167,8 +167,9 @@ def secao_empresas(cid_slug, cidade):
     licenciador = loc.get("licenciador", "O órgão estadual é o IAT (Instituto Água e Terra).")
     orgao = loc.get("orgao", f"Secretaria de Meio Ambiente de {cidade}")
     cards = "".join(cartao_obrigacao(i) for i in itens)
-    return f"""<section class="empresas" id="empresas">
-<h2>Sua empresa tem obrigações com os resíduos que gera</h2>
+    return f"""<section class="empresas hub-sec" id="empresas">
+<span class="section-tag">Para empresas</span>
+<h2 class="section-title">Sua empresa tem obrigações com os resíduos que gera</h2>
 <p class="resposta">A Lei Federal 12.305/2010 (Política Nacional de Resíduos Sólidos) define responsabilidades claras para empresas. Quem descumpre pode receber multa, ter a atividade embargada e responder criminalmente.</p>
 <p class="regra">Isto é obrigação legal, não recomendação. Vale para comércios, indústrias, prestadores de serviço e construtoras em {esc(cidade)}. {esc(licenciador)} Dúvidas sobre o que se aplica à sua empresa: {esc(orgao)}.</p>
 <div class="obr-grade">{cards}
@@ -279,8 +280,9 @@ def secao_doar(cid_slug, cidade, ctx):
     if not gs:
         return ""
     lis = "".join(f'<li><a href="{esc(g["l"])}" target="_blank" rel="noopener nofollow">{esc(g["n"])} ↗</a></li>' for g in gs)
-    return f"""<section class="doar" id="doar">
-<h2>Doar ou desapegar em {esc(cidade)}</h2>
+    return f"""<section class="doar hub-sec" id="doar">
+<span class="section-tag">Doação</span>
+<h2 class="section-title">Doar ou desapegar em {esc(cidade)}</h2>
 <p class="resposta">Móveis, roupas, eletrônicos que funcionam e utensílios em bom estado costumam ir mais rápido por doação direta, em grupos da cidade, do que para um ponto de coleta. Anuncie com foto, bairro e se precisa retirar.</p>
 <ul class="doar-links">{lis}</ul>
 <p class="sub">Conhece um grupo ou instituição que recebe doações em {esc(cidade)}? <a href="{WHATSAPP}" target="_blank" rel="noopener">Indique para o Desvia</a>.</p>
@@ -309,7 +311,6 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
     chips = "".join(
         f'<button type="button" class="chip" data-cat="{s}" aria-pressed="false">{esc(nomes[s][1])} <span class="n">{len(por_cat[s])}</span></button>'
         for s in cats_ordem)
-    paginas = "".join(f'<li><a href="{s}/">Onde descartar {esc(nomes[s][0])}</a></li>' for s in cats_ordem)
     cats_js = json.dumps({s: nomes[s][1] for s in cats_ordem}, ensure_ascii=False)
     n_val = sum(1 for p in pts if ctx["selo"](p)[0] == "ok")
     cards = "".join(f'<a class="cat-card" href="{s}/"><span class="cat-icon" aria-hidden="true">{ICONES.get(s, "♻️")}</span>'
@@ -385,7 +386,6 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
 
 {ctx.get("servicos", "")}
 
-<section class="outras"><h2>Páginas por tipo de resíduo</h2><ul>{paginas}</ul></section>
 
 <script>
 var PONTOS = {dados_js(pts, cid_slug, ctx)};

@@ -700,7 +700,7 @@ def gerar():
             destino.parent.mkdir(parents=True, exist_ok=True)
             destino.write_text(pagina(titulo, descricao, url, "../../../../", corpo, jsonld, mapa=True), encoding="utf-8")
             urls.append((url, "0.7"))
-        servicos_html = ("<section class=\"servicos\"><h2>Serviços em " + esc(cidade) + "</h2><p>Quem vem buscar, compra ou recebe.</p><ul>"
+        servicos_html = ("<section class=\"servicos hub-sec\"><span class=\"section-tag\">Serviços</span><h2 class=\"section-title\">Serviços em " + esc(cidade) + "</h2><p class=\"section-desc\">Quem vem buscar, compra ou recebe.</p><ul>"
                          + "".join(f'<li><a href="servicos/{s}/">{esc(n)} <span class="n">{k}</span></a></li>' for s, n, k in serv_links)
                          + "</ul></section>") if serv_links else ""
 
