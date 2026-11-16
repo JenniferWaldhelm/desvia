@@ -413,3 +413,4 @@ main.artigo .faq details p { margin-top: 6px; }
 .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--cinza-claro); }
 .tabela th { font-family: 'Montserrat', sans-serif; font-size: .85rem; color: var(--verde); border-bottom: 2px solid var(--verde); }
 .tabela td:first-child { font-weight: 600; white-space: nowrap; }
+.ponto .fonte { font-size: .78rem; color: var(--cinza); margin: 0; }
