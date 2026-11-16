@@ -455,3 +455,4 @@ body { overflow-x: clip; }
 .servicos.hub-sec li a { display: flex; justify-content: space-between; align-items: center; background: var(--off-white); border: 1.5px solid var(--cinza-claro); border-radius: 14px; padding: 1rem 1.1rem; font-weight: 600; text-decoration: none; color: var(--escuro); }
 .servicos.hub-sec li a:hover { border-color: var(--verde-claro); background: var(--verde-menta); }
 .doar-links a, .obr { border-radius: 14px; }
+.legenda small { display: block; font-size: .72rem; color: var(--cinza); margin: -2px 0 4px; }
