@@ -4,7 +4,7 @@ MGI-002,Almoxarifado Municipal — Prefeitura de Mandaguari,,PEV público,Recebi
 MGI-003,Líder Multicoisas,28.508.469/0001-55,Coleta e transporte,Coleta,Entulho/RCC,,"Av. Amazonas, 150-A — Centro",Mandaguari,-23.5215422,-51.6793386,Mandaguari,,LAS,,09/12/2034,Válida,(44) 3133-2030,,Site Desvia,29/10/2026,Só coleta e transporte; destinação fica com o gerador
 MGI-004,Vigilância Sanitária de Mandaguari,,PEV público,Recebimento,Medicamentos vencidos; resíduos de saúde domiciliar; animais,,,Mandaguari,-23.5218052,-51.6896359,Mandaguari,,,,,Não localizada,,,Site Desvia,29/10/2026,
 MGI-005,Coprosid Materiais Elétricos,,PEV privado,Recebimento,Lâmpadas,,,Mandaguari,-23.5327406,-51.6707402,Mandaguari,,,,,Não localizada,,,Site Desvia,29/10/2026,Consultar horário
-MGI-006,Amigão Supermercados,,PEV privado,Recebimento,Lâmpadas,,,Mandaguari,-23.525424,-51.674015,Mandaguari,,DLAM,,04/03/2032,Válida,,,Site Desvia + KMZ,29/10/2026,
+MGI-006,Amigão Supermercados,,PEV privado,Recebimento,Lâmpadas; pilhas e baterias,,Rua Manoel Antunes Pereira (antigo Canção),Mandaguari,-23.5266493,-51.6747261,Mandaguari,,DLAM,,04/03/2032,Válida,,,"Reciclus, Green Eletron",16/11/2026,
 MGI-007,Camilo Supermercados,,PEV privado,Recebimento,Lâmpadas,,,Mandaguari,-23.5178117,-51.6813042,Mandaguari,,DLAM,,12/08/2035,Válida,,,Site Desvia + KMZ,29/10/2026,
 MGI-008,Eletro Mandaguari,,PEV privado,Recebimento,Lâmpadas,,,Mandaguari,-23.517471,-51.6834733,Mandaguari,,,,,Não localizada,,,Site Desvia,29/10/2026,Consultar horário
 MGI-009,Magazine Luiza,,PEV privado,Recebimento,Eletroeletrônicos,,,Mandaguari,-23.5267046,-51.6747515,Mandaguari,,DLAM,,25/07/2033,Válida,,,Site Desvia + KMZ,29/10/2026,
@@ -852,3 +852,4 @@ MGA-307,Kopp Comercial de Ferro Velho,,Tratamento/destinação final,Compra de r
 ROL-032,W A Marin Resíduos,07.562.669/0001-16,Coleta e transporte,Transporte,Armazenamento de resíduos,,"Rua Ivaí, Parque Industrial Bandeirantes",Rolândia,-23.3027437,-51.3918775,Rolândia,IAT,RLO,120715,10/05/2021,Vencida,,,"IAT GeoPR, Receita",16/11/2026,
 ROL-033,Mundi Ambiental (desentupidora e transportadora de resíduos),15.341.061/0001-90,Coleta e transporte,Transporte,Limpa-fossa e desentupimento; transporte de resíduos,,"Rua Estilac Leal, 801, Centro",Rolândia,-23.30166,-51.39038,Rolândia,IAT,LAS,127999,24/07/2019,Vencida,(43) 3561-1112,,"IAT GeoPR, Receita",16/11/2026,
 ROL-036,Caçamba Martins,22.550.015/0001-66,Coleta e transporte,Transporte,Entulho/RCC (caçambas),,,Rolândia,-23.313371,-51.4020827,Rolândia,IAT,LAS,3691,03/12/2018,Vencida,,,"IAT GeoPR, Receita",16/11/2026,
+MGI-021,Sicoob Metropolitano,,PEV privado,Recebimento,Pilhas e baterias,,"Rua José Ferreira Nhôdelo, 173",Mandaguari,-23.5265965,-51.6766331,Mandaguari,,,,,Não localizada,,,Green Eletron,16/11/2026,
