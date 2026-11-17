@@ -456,3 +456,22 @@ body { overflow-x: clip; }
 .servicos.hub-sec li a:hover { border-color: var(--verde-claro); background: var(--verde-menta); }
 .doar-links a, .obr { border-radius: 14px; }
 .legenda small { display: block; font-size: .72rem; color: var(--cinza); margin: -2px 0 4px; }
+/* Indicadores do SINISA na página de coleta */
+.sinisa { margin-top: 2.5rem; }
+.sinisa-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .75rem; margin: 1rem 0 .5rem; }
+.sinisa-stats .stat { background: var(--off-white); border: 1.5px solid var(--cinza-claro); border-radius: 14px; padding: 1rem; }
+.sinisa-stats b { display: block; font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--verde); line-height: 1.1; }
+.sinisa-stats span { font-size: .85rem; color: var(--cinza); }
+.graficos { display: grid; gap: 1rem; margin: 1rem 0; }
+@media (min-width: 760px) { main.artigo .graficos { grid-template-columns: 1fr; } }
+.grafico { margin: 0; background: #fff; border: 1.5px solid var(--cinza-claro); border-radius: 14px; padding: .9rem 1rem .4rem; }
+.grafico figcaption { font-size: .95rem; margin-bottom: .25rem; }
+.grafico figcaption span { color: var(--cinza); font-size: .85rem; }
+.grafico svg { width: 100%; height: auto; display: block; }
+.g-eixo { stroke: var(--cinza-claro); stroke-width: 1.5; }
+.g-linha { fill: none; stroke: var(--verde); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.g-ponto { fill: #fff; stroke: var(--verde); stroke-width: 2.5; }
+.g-valor { font-size: 12px; font-weight: 700; fill: var(--escuro); font-family: 'Montserrat', sans-serif; }
+.g-ano { font-size: 12px; fill: var(--cinza); }
+.g-troca { stroke: var(--verde-claro); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.g-nota { font-size: 11px; fill: var(--verde-claro); font-weight: 700; }

@@ -206,6 +206,103 @@ NUMEROS_COLETA = {
 """,
 }
 
+
+# ── Indicadores do SNIS (até 2022) e do SINISA (2023 em diante), em dados/sinisa.csv ──
+SINISA_CIDADES = {"mandaguari"}  # cidades com o bloco de gráficos ligado (Jen aprova cidade a cidade)
+
+
+def ler_sinisa():
+    arq = RAIZ / "dados" / "sinisa.csv"
+    if not arq.exists():
+        return {}
+    serie = {}
+    with open(arq, encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            v = {k: (float(r[k]) if r[k] not in ("", None) else None)
+                 for k in ("kg_hab_dia", "recuperacao_pct", "cobertura_seletiva_pct", "despesa_hab_ano", "catadores_mil_hab")}
+            serie.setdefault(r["cidade"], []).append({"ano": int(r["ano"]), "fonte": r["fonte"], **v})
+    for c in serie:
+        serie[c].sort(key=lambda x: x["ano"])
+    return serie
+
+
+def fmt_br(v, casas=2):
+    return f"{v:.{casas}f}".replace(".", ",")
+
+
+def grafico_linha(pontos, titulo, unidade, casas=2):
+    """SVG simples: linha por ano, buracos onde falta dado, linha pontilhada na troca SNIS → SINISA."""
+    pts = [(p["ano"], p["v"], p["fonte"]) for p in pontos]
+    validos = [p for p in pts if p[1] is not None]
+    if len(validos) < 2:
+        return ""
+    anos = [p[0] for p in pts]
+    a0, a1 = min(anos), max(anos)
+    vmax = max(v for _, v, _ in validos) * 1.25 or 1
+    W, H, ml, mr, mt, mb = 640, 230, 16, 16, 28, 34
+    x = lambda a: ml + (a - a0) * (W - ml - mr) / max(1, a1 - a0)
+    y = lambda v: mt + (H - mt - mb) * (1 - v / vmax)
+    partes, atual = [], []
+    for i, (a, v, fo) in enumerate(pts):
+        quebra = v is None or (atual and atual[-1][2] != fo)
+        if quebra and atual:
+            partes.append(atual); atual = []
+        if v is not None:
+            atual.append((a, v, fo))
+    if atual:
+        partes.append(atual)
+    svg = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="{esc(titulo)}">']
+    svg.append(f'<line x1="{ml}" y1="{H-mb}" x2="{W-mr}" y2="{H-mb}" class="g-eixo"/>')
+    troca = [a for a, _, fo in pts if fo == "SINISA"]
+    if troca and min(troca) > a0:
+        xt = (x(min(troca)) + x(min(troca) - 1)) / 2
+        svg.append(f'<line x1="{xt:.1f}" y1="{mt-14}" x2="{xt:.1f}" y2="{H-mb}" class="g-troca"/>'
+                   f'<text x="{xt-4:.1f}" y="{mt-6}" text-anchor="end" class="g-nota">SNIS</text>'
+                   f'<text x="{xt+4:.1f}" y="{mt-6}" class="g-nota">SINISA</text>')
+    for parte in partes:
+        d = " ".join(f"{x(a):.1f},{y(v):.1f}" for a, v, _ in parte)
+        svg.append(f'<polyline points="{d}" class="g-linha"/>')
+    for a, v, _ in validos:
+        svg.append(f'<circle cx="{x(a):.1f}" cy="{y(v):.1f}" r="4" class="g-ponto"><title>{a}: {fmt_br(v, casas)} {esc(unidade)}</title></circle>'
+                   f'<text x="{x(a):.1f}" y="{y(v)-9:.1f}" text-anchor="middle" class="g-valor">{fmt_br(v, casas)}</text>')
+    passo = 1 if a1 - a0 <= 8 else 2
+    for a in range(a0, a1 + 1):
+        if (a - a0) % passo == 0 or a == a1:
+            svg.append(f'<text x="{x(a):.1f}" y="{H-12}" text-anchor="middle" class="g-ano">{a}</text>')
+    svg.append("</svg>")
+    return f'<figure class="grafico"><figcaption><b>{esc(titulo)}</b> <span>({esc(unidade)})</span></figcaption>{"".join(svg)}</figure>'
+
+
+def bloco_sinisa(cid_slug, cidade, serie):
+    dados = serie.get(cid_slug)
+    if cid_slug not in SINISA_CIDADES or not dados:
+        return ""
+    ult = dados[-1]
+    num = []
+    if ult["kg_hab_dia"] is not None:
+        num.append((fmt_br(ult["kg_hab_dia"]) + " kg", "de lixo doméstico por morador, por dia"))
+    if ult["recuperacao_pct"] is not None:
+        num.append((fmt_br(ult["recuperacao_pct"]) + "%", "do lixo coletado foi reciclado ou virou adubo"))
+    if ult["cobertura_seletiva_pct"] is not None:
+        num.append((fmt_br(ult["cobertura_seletiva_pct"], 0) + "%", "dos moradores atendidos pela coleta seletiva"))
+    if ult["catadores_mil_hab"] is not None:
+        num.append((fmt_br(ult["catadores_mil_hab"]), "catadores em cooperativas a cada mil moradores"))
+    numeros = "".join(f'<div class="stat"><b>{n}</b><span>{esc(t)}</span></div>' for n, t in num)
+    g1 = grafico_linha([{"ano": d["ano"], "v": d["kg_hab_dia"], "fonte": d["fonte"]} for d in dados],
+                       "Lixo doméstico por morador", "kg por dia")
+    g2 = grafico_linha([{"ano": d["ano"], "v": d["recuperacao_pct"], "fonte": d["fonte"]} for d in dados],
+                       "Lixo coletado que deixou de ir para o aterro", "%", 1)
+    return f"""<section class="sinisa">
+<h2>Quanto lixo {esc(cidade)} gera</h2>
+<div class="sinisa-stats">{numeros}</div>
+<p class="nota">Dados de {ult["ano"]} informados pela prefeitura ao Sistema Nacional de Informações em Saneamento Básico (SINISA).</p>
+<div class="graficos">{g1}{g2}</div>
+<p class="nota">Até 2022 os dados vêm do sistema anterior (SNIS), que calculava de outro jeito: o lixo por morador incluía o da varrição das ruas, e a reciclagem não contava os orgânicos. Por isso pode haver um salto na linha pontilhada. Anos sem ponto: a prefeitura não informou. Fontes: <a href="https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/saneamento/sinisa/resultados-sinisa" target="_blank" rel="noopener">SINISA</a> e <a href="https://app4.cidades.gov.br/serieHistorica/" target="_blank" rel="noopener">série histórica do SNIS</a>.</p>
+</section>
+"""
+
+SERIE_SINISA = ler_sinisa()
+
 # Informações próprias de cada cidade na página de coleta (fonte oficial informada pela Jen).
 EXTRA_COLETA = {
     "rolandia": """<h2>Recolhimento de galhadas e volumosos em Rolândia</h2>
@@ -830,7 +927,7 @@ def gerar():
 <li>Vidro quebrado e objetos cortantes: embrulhe em jornal ou caixa e avise com um bilhete.</li>
 </ul>
 
-{NUMEROS_COLETA.get(cid_slug, "")}
+{NUMEROS_COLETA.get(cid_slug, "")}{bloco_sinisa(cid_slug, cidade, SERIE_SINISA)}
 <h2>Dicas para separar o lixo em casa</h2>
 <ul class="lista-texto">
 <li><b>Deixe um pote para restos de comida perto da pia.</b> Use um balde pequeno com tampa, só para o lixo orgânico, ao lado da pia ou da bancada. Quanto menos você precisar andar para jogar fora, mais fácil fica criar o hábito.</li>
