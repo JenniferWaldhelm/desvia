@@ -1,13 +1,8 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 2 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 2
 - Possíveis duplicados: 1
-
-## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
-
-- SAR-041 Locamar Disk Entulho: -23.44766, -51.88338
-- SAR-042 Disk Entulho Silva Ltda: -23.41712, -51.86726
 
 ## Sem coordenada (pegar no Google Maps)
 
