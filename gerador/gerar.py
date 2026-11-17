@@ -302,6 +302,11 @@ SERIE_SINISA = ler_sinisa()
 
 # Informações próprias de cada cidade na página de coleta (fonte oficial informada pela Jen).
 EXTRA_COLETA = {
+    "sarandi": """<h2>Recicláveis em Sarandi: cooperativa de catadores</h2>
+<p>Em Sarandi, os recicláveis são triados pela Cooperecológica, a cooperativa de catadores da cidade, no Parque Industrial (Rua 25 de Dezembro, s/n). Telefone: <a href="tel:+554430262525">(44) 3026-2525</a>. Separe os recicláveis limpos e secos e coloque para fora no dia da coleta do seu bairro.</p>
+<h2>A coleta não passou ou tem lixo acumulado na rua?</h2>
+<p>Avise a Secretaria de Meio Ambiente pelo WhatsApp <a href="https://wa.me/554432169530">(44) 3216-9530</a>.</p>
+""",
     "rolandia": """<h2>Recolhimento de galhadas e volumosos em Rolândia</h2>
 <p>A prefeitura passa por bairro, num calendário que muda todo mês, recolhendo:</p>
 <ul class="lista-texto">
