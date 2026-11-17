@@ -155,6 +155,7 @@ LOCALIZADOR = {
     "lampadas": ("Procurar pontos de entrega de lâmpadas na Reciclus", "https://reciclus.org.br/onde-descartar/"),
     "pilhas-e-baterias": ("Procurar pontos de entrega de pilhas e baterias na Green Eletron", "https://greeneletron.org.br/onde-descartar/"),
     "eletronicos": ("Procurar pontos de entrega de eletrônicos na Green Eletron", "https://greeneletron.org.br/onde-descartar/"),
+    "medicamentos": ("Procurar farmácias que recebem remédios no LogMed", "https://logmed.org.br/onde-descartar"),
 }
 
 # Orientação curta por categoria (aparece no topo e no FAQ).
