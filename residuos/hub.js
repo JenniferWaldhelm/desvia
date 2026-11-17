@@ -110,7 +110,7 @@
     if (p.a != null) acoes.push('<a class="principal" href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
     var dig = (p.tel || '').split('/')[0].replace(/\D/g, '');
     if (dig.length >= 10) acoes.push('<a class="principal" href="tel:+55' + dig + '">Ligar</a>');
-    if (p.a != null && !viz) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
+    if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';
     return h + '</article>';
@@ -211,7 +211,8 @@
     lista.innerHTML = vis.length ? vis.slice(0, limite).map(cartao).join('') +
       (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') : sugestoes();
     var vz = vizinhos();
-    if (vz.length) lista.innerHTML += '<section class="vizinhos"><h3>Também perto de você, em cidades vizinhas</h3>' +
+    if (vz.length) lista.insertAdjacentHTML('afterbegin', '<p class="ir-viz"><a href="#vizinhos">+ ' + vz.length + (vz.length === 1 ? ' ponto' : ' pontos') + ' perto de você em cidades vizinhas</a></p>');
+    if (vz.length) lista.innerHTML += '<section class="vizinhos" id="vizinhos"><h3>Também perto de você, em cidades vizinhas</h3>' +
       '<p class="nota">Pontos a até ' + RAIO_VIZ + ' km de você, fora de ' + esc((window.DESVIA_CIDADES || {})[estado.cid || Object.keys(DESVIA_CIDADES)[0]] || 'sua cidade') + '.</p>' +
       vz.map(function (p) { return cartao(p, true); }).join('') + '</section>';
     document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.cat === estado.cat ? 'true' : 'false'); });
@@ -219,7 +220,7 @@
     document.querySelectorAll('#seg button').forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.p === estado.p ? 'true' : 'false'); });
     var fq = document.getElementById('fQuem'), ft = document.getElementById('fTipo');
     if (fq) fq.value = estado.p; if (ft) ft.value = estado.cat || '';
-    if (mapa && !mais) desenhar(vis);
+    if (mapa && !mais) desenhar(vz.length ? vis.concat(vz) : vis);
     var url = new URL(location.href);
     if (estado.cat) url.searchParams.set('r', estado.cat); else url.searchParams.delete('r');
     if (estado.cid) url.searchParams.set('cidade', estado.cid); else url.searchParams.delete('cidade');
@@ -263,7 +264,7 @@
 
   function destacar(id, voar) {
     document.querySelectorAll('.ponto.ativo').forEach(function (c) { c.classList.remove('ativo'); });
-    var card = document.getElementById('p-' + id);
+    var card = document.getElementById('p-' + id) || document.getElementById('v-' + id);
     if (!card) {  // cartão ainda não exibido: abre a lista até ele
       var pos = visAtual.map(function (p) { return p.id; }).indexOf(id);
       if (pos >= limite) { limite = pos + 1; var y = window.scrollY; render(true); window.scrollTo(0, y); card = document.getElementById('p-' + id); }
