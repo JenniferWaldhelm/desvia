@@ -27,7 +27,9 @@ jobs:
       - name: Buscar
         env:
           MUNICIPIO: ${{ inputs.municipio }}
-        run: python3 coleta/buscar_receita.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY"
+        run: |
+          set -o pipefail
+          python3 coleta/buscar_receita.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Salvar resultado
         env:

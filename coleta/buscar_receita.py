@@ -27,6 +27,10 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 TMP = Path("/tmp/receita")
 UA = {"User-Agent": "Desvia/1.0 (+https://desvia.eco.br/)"}
+# Desde 2025 os arquivos ficam num compartilhamento público (Nextcloud/WebDAV) da Receita
+SHARE = "YggdBLfdninEJX9"
+WEBDAV = "https://arquivos.receitafederal.gov.br/public.php/webdav/"
+AUTH = {"Authorization": "Basic " + __import__("base64").b64encode(f"{SHARE}:".encode()).decode()}
 HOJE = date.today().strftime("%d/%m/%Y")
 BASES = [
     "https://arquivos.receitafederal.gov.br/dados/cnpj/dados_abertos_cnpj/",
@@ -66,8 +70,12 @@ def norm(s):
     return unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().upper().strip()
 
 
-def get(url, timeout=120):
-    req = urllib.request.Request(url, headers=UA)
+def cab(url):
+    return {**UA, **AUTH} if url.startswith(WEBDAV) else UA
+
+
+def get(url, timeout=120, method="GET", extra=None):
+    req = urllib.request.Request(url, headers={**cab(url), **(extra or {})}, method=method)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
@@ -75,7 +83,7 @@ def get(url, timeout=120):
 def baixar(url, destino):
     for tentativa in range(4):
         try:
-            req = urllib.request.Request(url, headers=UA)
+            req = urllib.request.Request(url, headers=cab(url))
             with urllib.request.urlopen(req, timeout=600) as r, open(destino, "wb") as f:
                 while True:
                     bloco = r.read(1 << 20)
@@ -91,6 +99,16 @@ def baixar(url, destino):
 
 def pasta_recente():
     """Acha a pasta do mês mais recente que já tem os arquivos."""
+    try:
+        xml = get(WEBDAV, timeout=60, method="PROPFIND", extra={"Depth": "1"}).decode("utf-8", "ignore")
+        meses = sorted(set(re.findall(r"/(\d{4}-\d{2})/?</d:href>", xml)), reverse=True)
+        for m in meses[:3]:
+            lista = get(f"{WEBDAV}{m}/", timeout=60, method="PROPFIND", extra={"Depth": "1"}).decode("utf-8", "ignore")
+            if "Estabelecimentos0.zip" in lista:
+                return f"{WEBDAV}{m}/", m
+        print(f"WebDAV sem pasta completa. Meses vistos: {meses[:5]}", file=sys.stderr)
+    except Exception as e:  # noqa: BLE001
+        print(f"WebDAV indisponível: {e}", file=sys.stderr)
     for base in BASES:
         try:
             html = get(base, timeout=60).decode("utf-8", "ignore")
@@ -203,7 +221,7 @@ def main():
     na_base = set()
     p = RAIZ / "dados" / "pontos.csv"
     if p.exists():
-        na_base = {re.sub(r"\D", "", r.get("CNPJ", "")) for r in csv.DictReader(open(p, encoding="utf-8"))}
+        na_base = {re.sub(r"[^0-9A-Za-z]", "", r.get("CNPJ", "")).upper() for r in csv.DictReader(open(p, encoding="utf-8"))}
 
     linhas, fora_nome = [], 0
     for a in sorted(achados, key=lambda x: x["cnpj"]):
