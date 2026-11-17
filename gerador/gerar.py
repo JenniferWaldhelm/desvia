@@ -106,7 +106,27 @@ SERVICOS = [
 ]
 
 # Limite de pequeno gerador (coleta pública) por cidade, informado pela Jen
-LIMITE_GERADOR = {"londrina": "600 litros por semana"}
+# Limite do pequeno gerador por cidade: (limite, observação, fonte, link). Informado pela Jen em 12 e 17/11/2026.
+LIMITE_GERADOR = {
+    "londrina": ("600 litros por semana", "", "", ""),
+    "cambe": ("200 litros por dia ou 1.000 litros por semana",
+              "Mesmo abaixo desse volume, quem gera resíduo perigoso (Classe I) continua responsável pelo destino dele.",
+              "Decreto Municipal nº 545/2026 (PGRS Digital)", "https://www.cambe.pr.gov.br/index.php/pgrs-digital/"),
+    "ibipora": ("600 litros por semana", "",
+                "Lei Municipal nº 2.449/2011, com redação da Lei nº 2.726/2014",
+                "https://leis.org/municipais/pr/ibipora/lei/lei-ordinaria/2011/2449/lei-ordinaria-n-2449-2011-institui-a-politica-municipal-de-residuos-solidos-de-ibipora-e-da-outras"),
+    "maringa": ("100 litros ou 50 kg por dia",
+                "Também é grande gerador quem se encaixa em pelo menos dois destes casos: área construída acima de 500 m²; mais de 30 funcionários no local; shopping, galeria ou condomínio comercial; vários serviços no mesmo espaço. O grande gerador contrata a própria coleta e pode pedir isenção da taxa de coleta.",
+                "Lei Complementar nº 1.090/2017", "https://sapl.cmm.pr.gov.br/ta/59/text"),
+    "mandaguari": ("300 litros por dia",
+                   "Para condomínios não residenciais ou mistos, o limite é de 1.000 litros por dia.",
+                   "Lei Municipal nº 4.419/2025 (Política Municipal de Resíduos Sólidos)",
+                   "https://www.controlemunicipal.com.br/inga/sistema/arquivos/68/270226110249_lei_municipal_44192025__politica_municipal_de_residuos_solidospmgirs_pdf.pdf"),
+    "apucarana": ("200 litros ou 50 kg por dia",
+                  "A lei trata dos condomínios não residenciais e mistos: acima desse volume, precisam separar recicláveis, orgânicos e rejeitos.",
+                  "Lei nº 103/2017 (Plano de Gestão Integrada de Resíduos Sólidos)",
+                  "https://leis.org/camara/pr/apucarana/lei/lei-ordinaria/2017/103/lei-ordinaria-n-103-2017-institui-o-plano-de-gestao-integrada-de-residuos-solidos-pgirs-como/"),
+}
 
 # Termo mais buscado por tipo de resíduo (Google Keyword Planner, Londrina, out/2025 a set/2026): vai no <title>
 TERMO_BUSCA = {
@@ -176,6 +196,16 @@ NUMEROS_COLETA = {
 
 # Informações próprias de cada cidade na página de coleta (fonte oficial informada pela Jen).
 EXTRA_COLETA = {
+    "rolandia": """<h2>Recolhimento de galhadas e volumosos em Rolândia</h2>
+<p>A prefeitura passa por bairro, num calendário que muda todo mês, recolhendo:</p>
+<ul class="lista-texto">
+<li>móveis, como sofás;</li>
+<li>eletrodomésticos da linha branca, como geladeira e fogão;</li>
+<li>restos de jardinagem e galhos de árvore.</li>
+</ul>
+<p class="regra"><b>Não recolhe entulho nem restos de construção.</b> Quem gera o entulho é responsável pelo descarte.</p>
+<p>Para saber quando passa no seu bairro, veja o calendário do mês nas redes da Prefeitura de Rolândia ou ligue <a href="tel:+554332554742">(43) 3255-4742</a> ou <a href="tel:+554331560333">(43) 3156-0333</a>.</p>
+""",
     "londrina": """<h2>Coleta seletiva em Londrina: feita por cooperativas</h2>
 <p>Em Londrina, quem faz a coleta seletiva (recicláveis) são 7 cooperativas de catadores, de segunda a sexta-feira: Cepeve, Cooper Refum, Cooper Região, Coopermudança, Coopernorth, Cooperoeste e Ecorecin. Separe os recicláveis limpos e secos e coloque para fora no dia da coleta seletiva do seu bairro.</p>
 
@@ -224,6 +254,9 @@ LOCAL_SERVICO = {
 
 # Regras locais por cidade e categoria.
 REGRAS_LOCAIS = {
+    ("rolandia", "entulho"): "Em Rolândia, é grande gerador de entulho quem gera mais de 1 metro cúbico (m³) a cada 30 dias, ou faz construção a partir de 300 m², reforma a partir de 100 m² ou demolição a partir de 50 m². O recolhimento de galhadas e volumosos da prefeitura não leva entulho.",
+    ("rolandia", "moveis-e-volumosos"): "Em Rolândia, a prefeitura recolhe sofás, móveis e eletrodomésticos da linha branca (geladeira, fogão) por bairro, em calendário mensal. Dúvidas: (43) 3255-4742 ou (43) 3156-0333.",
+    ("rolandia", "poda-e-galhos"): "Em Rolândia, a prefeitura recolhe galhos e restos de jardinagem por bairro, em calendário mensal. Dúvidas: (43) 3255-4742 ou (43) 3156-0333.",
     ("mandaguari", "entulho"): "Em Mandaguari, caçambas podem ficar no máximo 72 horas na via pública (Lei Municipal nº 450/1999). Quem gera muito entulho precisa de Plano de Gerenciamento de Resíduos da Construção Civil (PGRCC).",
     ("mandaguari", "*"): "Em Mandaguari, empresas obrigadas a ter PGRS precisam apresentá-lo para obter alvará e certidões municipais (Lei Municipal nº 4.419/2025, art. 17 e 18).",
     ("londrina", "entulho"): "Em Londrina, os pontos de entrega da prefeitura (PEVs) recebem de graça até 1 metro cúbico (m³) por pessoa por mês, cerca de 8 carrinhos de pedreiro. Leve documento com foto e o resíduo separado. Gesso e telha de amianto não são aceitos. Caçamba na rua precisa de autorização da CMTU, pedida pela empresa que aluga.",
@@ -768,12 +801,13 @@ def gerar():
 
 <section class="caixa-empresas">
 <h2>Tem empresa ou comércio? O descarte é diferente</h2>
-<p>A coleta da prefeitura é para o resíduo doméstico. Comércio e serviço só podem usá-la como <b>pequeno gerador</b>{(", até <b>" + LIMITE_GERADOR[cid_slug] + "</b>") if cid_slug in LIMITE_GERADOR else " (o limite de volume é definido pela prefeitura: confirme antes)"}. Acima disso, ou com resíduo de indústria, obra ou serviço de saúde, a empresa é <b>grande gerador</b> e precisa:</p>
+<p>A coleta da prefeitura é para o resíduo doméstico. Comércio e serviço só podem usá-la como <b>pequeno gerador</b>{(", até <b>" + LIMITE_GERADOR[cid_slug][0] + "</b>") if cid_slug in LIMITE_GERADOR else " (o limite de volume é definido pela prefeitura: confirme antes)"}. Acima disso, ou com resíduo de indústria, obra ou serviço de saúde, a empresa é <b>grande gerador</b> e precisa:</p>
 <ul class="lista-texto">
 <li>contratar coleta e destinação com empresa <b>licenciada</b>;</li>
 <li>emitir o <b>MTR</b> (Manifesto de Transporte de Resíduos) e guardar o <b>CDF</b> (Certificado de Destinação Final) de cada envio;</li>
 <li>ter o <b>PGRS</b> (Plano de Gerenciamento de Resíduos Sólidos), que é obrigatório para o grande gerador.</li>
 </ul>
+{(f'<p>{esc(LIMITE_GERADOR[cid_slug][1])}</p>' if LIMITE_GERADOR.get(cid_slug, ("", ""))[1] else "")}{(f'<p class="nota">Fonte: <a href="{LIMITE_GERADOR[cid_slug][3]}" target="_blank" rel="noopener">{esc(LIMITE_GERADOR[cid_slug][2])}</a>.</p>' if LIMITE_GERADOR.get(cid_slug, ("", "", "", ""))[3] else "")}
 <p class="caixa-acoes">{f'<a class="pq-btn" href="../servicos/coleta-de-residuos-para-empresas/">Ver empresas de coleta em {esc(cidade)}</a>' if (SAIDA / cid_slug / "servicos" / "coleta-de-residuos-para-empresas").exists() else ""}<a href="../../../empresas/">Checklist para empresas</a><a href="https://wa.me/5543920024725?text=Ol%C3%A1%2C%20vim%20pelo%20Desvia%20e%20preciso%20de%20ajuda%20com%20res%C3%ADduos%20da%20minha%20empresa" target="_blank" rel="noopener" data-goatcounter-click="mawe-coleta-{cid_slug}">Fale com uma especialista</a></p>
 </section>
 
