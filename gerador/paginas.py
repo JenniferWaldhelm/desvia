@@ -15,8 +15,26 @@ def esc(t):
     return _esc(t or "", quote=True)
 
 
+# Fontes públicas e programas de logística reversa consultados (palavra-chave na coluna Fonte -> nome)
+FONTES = [("iat", "IAT"), ("ibama", "Ibama (CTF)"), ("ctf", "Ibama (CTF)"), ("receita", "Receita Federal"),
+          ("sema", "SEMA Londrina"), ("sga", "SEMA Londrina"), ("prefeitura", "Prefeituras"), ("cmtu", "Prefeituras"),
+          ("samae", "Prefeituras"), ("abree", "ABREE"), ("green eletron", "Green Eletron"), ("reciclus", "Reciclus"),
+          ("reciclanip", "Reciclanip"), ("ecomed", "EcoMed"), ("logmed", "LogMed")]
+
+
+def fontes_usadas(pontos):
+    achadas = {"SINISA"}  # indicadores das páginas de coleta
+    for p in pontos:
+        f = (p.get("Fonte") or "").lower()
+        for chave, nome in FONTES:
+            if chave in f:
+                achadas.add(nome)
+    return sorted(achadas)
+
+
 def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     total = len(pontos)
+    fontes = fontes_usadas(pontos)
     n_lic = sum(1 for p in pontos if p["_status"] in ("valida", "vencendo"))
     opcoes_cidade = "".join(f'<option value="{s}">{esc(c)}</option>' for s, c in cidades.items())
     chips = "".join(
@@ -58,7 +76,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     </div></details>
   </form>
   <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe se doa, vende ou descarta? Me ajude a decidir</button>
-  <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li><b>4</b> fontes oficiais</li></ul>
+  <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li title="{esc(", ".join(fontes))}"><b>{len(fontes)}</b> fontes consultadas</li></ul>
 </section>
 
 <section class="ferramenta" id="resultados" data-esperar hidden aria-label="Resultados">
