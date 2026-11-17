@@ -233,11 +233,11 @@ def empresas():
 <div class="tabela-rolar"><table class="tabela">
 <thead><tr><th>Se a sua loja vende</th><th>O que fazer</th><th>Entidade do setor</th></tr></thead>
 <tbody>
-<tr><td>Pilhas e baterias portáteis</td><td>Receber as pilhas usadas dos clientes e ter um coletor.</td><td>Green Eletron</td></tr>
+<tr><td>Pilhas e baterias portáteis</td><td>Receber dos clientes as pilhas e baterias usadas do mesmo tipo que a loja vende e manter um ponto de recolhimento adequado (Resolução CONAMA 401/2008, arts. 4º e 19). Receber outras marcas é opcional.</td><td>Green Eletron</td></tr>
 <tr><td>Eletroeletrônicos</td><td>Participar do sistema do setor e informar o cliente onde devolver.</td><td>Green Eletron, ABREE</td></tr>
 <tr><td>Lâmpadas fluorescentes e de vapor de mercúrio</td><td>Receber as lâmpadas usadas e entregar ao sistema do setor.</td><td>Reciclus</td></tr>
-<tr><td>Pneus</td><td>Receber o pneu usado na troca e encaminhar a um ponto de coleta.</td><td>Reciclanip</td></tr>
-<tr><td>Óleo lubrificante</td><td>Receber o óleo usado e as embalagens vazias e entregar a coletor autorizado.</td><td>Jogue Limpo (embalagens); rerrefino (óleo usado)</td></tr>
+<tr><td>Pneus</td><td>Na troca por pneu novo ou reformado, receber e guardar o pneu usado sem cobrar do cliente (Resolução CONAMA 416/2009, art. 9º). Receber pneus sem troca, como ponto de coleta, é opcional.</td><td>Reciclanip</td></tr>
+<tr><td>Óleo lubrificante</td><td>Receber o óleo usado dos clientes, guardar em instalação segura e entregar só a coletor autorizado (Resolução CONAMA 362/2005, art. 17). As embalagens vazias seguem o sistema do setor.</td><td>Jogue Limpo (embalagens); coletor autorizado e rerrefino (óleo usado)</td></tr>
 <tr><td>Agrotóxicos</td><td>Indicar na nota fiscal onde devolver as embalagens vazias.</td><td>inpEV (Sistema Campo Limpo)</td></tr>
 <tr><td>Medicamentos</td><td>Farmácias e drogarias são pontos de recebimento de remédios vencidos.</td><td>Sistema do setor farmacêutico</td></tr>
 <tr><td>Produtos em embalagens (alimentos, bebidas, cosméticos, limpeza, latas de aço)</td><td>Aderir a uma entidade gestora de embalagens ou ter plano próprio.</td><td>No Paraná são 14 entidades gestoras; latas de aço: Prolata</td></tr>
@@ -248,7 +248,7 @@ def empresas():
 <li>Ter o Plano de Logística Reversa (PLR) aprovado pela SEDEST, na plataforma Contabilizando Resíduos.</li>
 <li>Enviar todo ano o Relatório Comprobatório (RCPLR) na mesma plataforma.</li>
 </ol>
-<p>Para empresas com licença ambiental, a licença de operação depende do plano aprovado (Resolução Conjunta SEDEST/IAT 22/2021). Quem não cumpre pode ser multado (Decreto 6.514/2008, art. 62).</p>
+<p>Para empresas com licença ambiental, a licença de operação depende do plano aprovado (Resolução Conjunta SEDEST/IAT 22/2021). Descumprir obrigação de um sistema de logística reversa é infração ambiental (Decreto 6.514/2008, art. 62, XII, na redação atualizada). O valor da multa depende do enquadramento de cada caso.</p>
 <p class="sub">Dica para o cliente: nem toda entidade mostra onde ficam os pontos dos associados. Se a sua loja recebe, <a href="{CADASTRO}" target="_blank" rel="noopener">cadastre o ponto no Desvia</a> para que as pessoas encontrem.</p>
 </section>
 
