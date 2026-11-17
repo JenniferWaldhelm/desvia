@@ -32,7 +32,7 @@ UA = {"User-Agent": "Desvia/1.0 (+https://desvia.eco.br/)"}
 
 # Atividades do IAT que indicam prestação de serviço de resíduos
 IAT_INCLUI = re.compile(r"Disposição de resíduos|Gerenciamento de resíduos|Reciclagem|Recuperação e refino|"
-                        r"cargas em geral e de resíduos classe|transporte de resíduos|Transportadora de resíduos", re.I)
+                        r"cargas em geral e de resíduos|transporte de resíduos|Transportadora de resíduos", re.I)
 IAT_EXCLUI = re.compile(r"Autom|sem resíduos", re.I)
 # Atividades do CTF: 017.* (tratamento/destinação), 018.014 (transporte OLUC), 018.074 (transporte resíduos perigosos)
 CTF_INCLUI = re.compile(r"\b(017\.\d{3}|018\.014|018\.074)\b|tratamento e destina|destinação de resíduos|transporte de cargas perigosas - (lei n|resolu)", re.I)
