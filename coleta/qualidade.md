@@ -1,8 +1,12 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 1 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 2
 - Possíveis duplicados: 1
+
+## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
+
+- SAR-017 Ecoponto de Sarandi (Prefeitura): -23.44885, -51.86354
 
 ## Sem coordenada (pegar no Google Maps)
 
