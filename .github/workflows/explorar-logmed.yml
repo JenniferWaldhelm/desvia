@@ -1,0 +1,21 @@
+name: explorar-logmed
+on:
+  push:
+    branches: [tmp-logmed]
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir out && cd out
+          UA="Mozilla/5.0 (X11; Linux x86_64) Chrome/120 Safari/537.36"
+          curl -sSL -A "$UA" -o pagina.html https://logmed.org.br/onde-descartar || true
+          ls -la
+          grep -oE '(src|href)="[^"]+\.js[^"]*"' pagina.html | sed -E 's/.*="([^"]+)"/\1/' | sort -u > js.txt || true
+          i=0; while read u; do case "$u" in http*) url="$u";; /*) url="https://logmed.org.br$u";; *) url="https://logmed.org.br/$u";; esac; i=$((i+1)); curl -sSL -A "$UA" -o js_$i.js "$url" || true; done < js.txt
+          grep -ohE '(https?:)?//[a-zA-Z0-9./_-]*(api|json|ponto|descart)[a-zA-Z0-9./_?=&-]*' *.js pagina.html | sort -u > urls.txt || true
+          head -50 urls.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: logmed
+          path: out
