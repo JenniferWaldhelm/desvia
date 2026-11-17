@@ -31,6 +31,11 @@ jobs:
           set -o pipefail
           python3 coleta/buscar_receita.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY"
 
+      - name: Conferir licenças (IAT e CTF/IBAMA)
+        env:
+          MUNICIPIO: ${{ inputs.municipio }}
+        run: python3 coleta/conferir_licencas.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY" || echo "Conferência falhou; rodar a ação Conferir licenças"
+
       - name: Salvar resultado
         env:
           MUNICIPIO: ${{ inputs.municipio }}
