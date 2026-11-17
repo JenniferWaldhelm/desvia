@@ -185,6 +185,8 @@ PERGUNTAS = [
      "Destinação e CDF", "O gerador continua responsável pelo resíduo até a destinação final correta. O CDF é a prova de que ele chegou a um destino licenciado."),
     ("relatorios", "Entrega as declarações periódicas (DMR no SINIR e, se tiver CTF, o RAPP do IBAMA até 31 de março)?",
      "Declarações e relatórios", "A falta das declarações gera pendência no CTF/IBAMA e no SINIR, e pode impedir certidões e renovações."),
+    ("lr", "Se vende pilhas, pneus, lâmpadas, eletrônicos, óleo lubrificante, agrotóxicos, medicamentos ou produtos embalados: participa de um sistema de logística reversa?",
+     "Logística reversa", "Quem vende esses produtos também é obrigado, mesmo sem precisar de licença ambiental (Lei 12.305/2010, art. 33). No Paraná, a Resolução Conjunta SEDEST/IAT 22/2021 vale também para o comércio."),
     ("equipe", "A equipe sabe separar, armazenar e registrar os resíduos?",
      "Treinamento da equipe", "Separação e armazenamento errados contaminam recicláveis, aumentam o custo da destinação e geram autuação em fiscalização."),
 ]
@@ -195,11 +197,12 @@ CALENDARIO = [
     ("Periodicamente", "Declarar no SINIR a movimentação de resíduos (DMR), no prazo do sistema."),
     ("Até 31 de março", "Entregar o RAPP do IBAMA referente ao ano anterior (empresas com CTF)."),
     ("120 dias antes do vencimento", "Pedir a renovação da licença ambiental, para que ela continue valendo durante a análise."),
+    ("Todo ano (Paraná)", "Enviar o Relatório Comprobatório do Plano de Logística Reversa (RCPLR) na plataforma Contabilizando Resíduos, se a empresa fabrica, importa, distribui ou vende produtos com logística reversa."),
     ("Quando mudar o processo", "Atualizar o PGRS e treinar a equipe."),
 ]
 
 SERVICOS = ["Licenciamento ambiental (IAT e municípios)", "PGRS: elaboração e atualização", "MTR e declarações no SINIR",
-            "Inventário e relatórios de resíduos (RAPP/CTF)", "Treinamento de equipes", "Regularização de pendências e renovações"]
+            "Inventário e relatórios de resíduos (RAPP/CTF)", "Logística reversa: adesão a entidade gestora e plano no Contabilizando Resíduos", "Treinamento de equipes", "Regularização de pendências e renovações"]
 
 
 def empresas():
@@ -214,13 +217,40 @@ def empresas():
     serv = "".join(f"<li>{esc(s)}</li>" for s in SERVICOS)
     return f"""<nav class="trilha" aria-label="Você está em"><a href="../">Início</a> › Para empresas</nav>
 <h1>Sua empresa está em dia com os resíduos?</h1>
-<p class="resposta">Responda 6 perguntas e veja o que falta para cumprir a Política Nacional de Resíduos Sólidos. Leva um minuto e nada é enviado sem você pedir.</p>
+<p class="resposta">Responda 7 perguntas e veja o que falta para cumprir a Política Nacional de Resíduos Sólidos. Leva um minuto e nada é enviado sem você pedir.</p>
 
 <form class="checklist" id="checklist">
 <ol>{perguntas}</ol>
 <button type="submit">Ver resultado</button>
 </form>
 <div class="ck-resultado" id="ck-resultado" hidden></div>
+
+
+<section class="calendario" id="logistica-reversa">
+<h2>Quem vende também precisa fazer a logística reversa</h2>
+<p>Logística reversa é o caminho de volta do produto depois do uso: o consumidor devolve, e o setor que fabricou e vendeu dá o destino certo. A lei obriga fabricantes, importadores, distribuidores <b>e comerciantes</b> de alguns produtos a participar (Lei 12.305/2010, art. 33).</p>
+<p><b>Ser dispensado de licença ambiental não dispensa a logística reversa.</b> Muitas lojas não precisam de licença, e por isso a informação não chega até elas. Mas a obrigação vale do mesmo jeito.</p>
+<div class="tabela-rolar"><table class="tabela">
+<thead><tr><th>Se a sua loja vende</th><th>O que fazer</th><th>Entidade do setor</th></tr></thead>
+<tbody>
+<tr><td>Pilhas e baterias portáteis</td><td>Receber as pilhas usadas dos clientes e ter um coletor.</td><td>Green Eletron</td></tr>
+<tr><td>Eletroeletrônicos</td><td>Participar do sistema do setor e informar o cliente onde devolver.</td><td>Green Eletron, ABREE</td></tr>
+<tr><td>Lâmpadas fluorescentes e de vapor de mercúrio</td><td>Receber as lâmpadas usadas e entregar ao sistema do setor.</td><td>Reciclus</td></tr>
+<tr><td>Pneus</td><td>Receber o pneu usado na troca e encaminhar a um ponto de coleta.</td><td>Reciclanip</td></tr>
+<tr><td>Óleo lubrificante</td><td>Receber o óleo usado e as embalagens vazias e entregar a coletor autorizado.</td><td>Jogue Limpo (embalagens); rerrefino (óleo usado)</td></tr>
+<tr><td>Agrotóxicos</td><td>Indicar na nota fiscal onde devolver as embalagens vazias.</td><td>inpEV (Sistema Campo Limpo)</td></tr>
+<tr><td>Medicamentos</td><td>Farmácias e drogarias são pontos de recebimento de remédios vencidos.</td><td>Sistema do setor farmacêutico</td></tr>
+<tr><td>Produtos em embalagens (alimentos, bebidas, cosméticos, limpeza, latas de aço)</td><td>Aderir a uma entidade gestora de embalagens ou ter plano próprio.</td><td>No Paraná são 14 entidades gestoras; latas de aço: Prolata</td></tr>
+</tbody></table></div>
+<h3>Como provar que cumpre no Paraná</h3>
+<ol class="lista-texto">
+<li>Aderir à entidade gestora do seu setor (ou montar um sistema próprio).</li>
+<li>Ter o Plano de Logística Reversa (PLR) aprovado pela SEDEST, na plataforma Contabilizando Resíduos.</li>
+<li>Enviar todo ano o Relatório Comprobatório (RCPLR) na mesma plataforma.</li>
+</ol>
+<p>Para empresas com licença ambiental, a licença de operação depende do plano aprovado (Resolução Conjunta SEDEST/IAT 22/2021). Quem não cumpre pode ser multado (Decreto 6.514/2008, art. 62).</p>
+<p class="sub">Dica para o cliente: nem toda entidade mostra onde ficam os pontos dos associados. Se a sua loja recebe, <a href="{CADASTRO}" target="_blank" rel="noopener">cadastre o ponto no Desvia</a> para que as pessoas encontrem.</p>
+</section>
 
 <section class="calendario">
 <h2>Calendário de obrigações</h2>
@@ -256,7 +286,7 @@ def empresas():
     var item = function (k) {{ return '<li><b>' + EXPLICA[k][0] + ':</b> ' + EXPLICA[k][1] + '</li>'; }};
     var txt = 'Olá! Fiz o checklist do Desvia. ' + (falta.length ? 'Pendências: ' + falta.map(function (k) {{ return EXPLICA[k][0]; }}).join(', ') + '. ' : '') +
       (duvida.length ? 'Não sei: ' + duvida.map(function (k) {{ return EXPLICA[k][0]; }}).join(', ') + '. ' : '') + 'Quero um diagnóstico gratuito.';
-    out.innerHTML = '<h2>' + (falta.length || duvida.length ? ok + ' de 6 em dia' : 'Tudo em dia. Parabéns!') + '</h2>' +
+    out.innerHTML = '<h2>' + (falta.length || duvida.length ? ok + ' de ' + Object.keys(EXPLICA).length + ' em dia' : 'Tudo em dia. Parabéns!') + '</h2>' +
       (falta.length ? '<h3>O que falta</h3><ul>' + falta.map(item).join('') + '</ul>' : '') +
       (duvida.length ? '<h3>Vale conferir</h3><ul>' + duvida.map(item).join('') + '</ul>' : '') +
       (falta.length || duvida.length ? '<a class="pq-btn" target="_blank" rel="noopener" href="{MAWE}?text=' + encodeURIComponent(txt) + '">Pedir diagnóstico gratuito com estas respostas</a>' : '<p>Mantenha o calendário abaixo em dia.</p>');
