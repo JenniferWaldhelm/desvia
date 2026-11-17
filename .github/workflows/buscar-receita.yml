@@ -1,0 +1,40 @@
+name: Buscar empresas na Receita
+
+# Procura na base aberta de CNPJs da Receita as empresas de um município com
+# atividade de resíduo (inclusive sem licença). Grava coleta/<cidade>-receita.csv
+# e coleta/<cidade>-receita-resumo.md. Não altera o site.
+on:
+  workflow_dispatch:
+    inputs:
+      municipio:
+        description: "Município do Paraná (ex.: Sarandi)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Buscar
+        env:
+          MUNICIPIO: ${{ inputs.municipio }}
+        run: python3 coleta/buscar_receita.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Salvar resultado
+        env:
+          MUNICIPIO: ${{ inputs.municipio }}
+        run: |
+          git config user.name "Desvia (automático)"
+          git config user.email "actions@users.noreply.github.com"
+          git add coleta/*-receita.csv coleta/*-receita-resumo.md
+          git diff --cached --quiet || git commit -m "Receita: empresas de resíduo em $MUNICIPIO"
+          git pull --rebase -q && git push
