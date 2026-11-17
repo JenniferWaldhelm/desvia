@@ -45,6 +45,29 @@ def _cidades():
 
 
 CIDADES = _cidades()
+
+# Centro aproximado de cada cidade, só para achar cidades próximas (links "em cidades próximas")
+CENTRO_CIDADE = {
+    "londrina": (-23.3045, -51.1696), "cambe": (-23.2766, -51.2798), "ibipora": (-23.2659, -51.0480),
+    "rolandia": (-23.3101, -51.3659), "arapongas": (-23.4153, -51.4259), "apucarana": (-23.5508, -51.4608),
+    "mandaguari": (-23.5478, -51.6710), "sarandi": (-23.4441, -51.8740), "maringa": (-23.4205, -51.9333),
+}
+
+
+def cidades_proximas(cid_slug, raio_km=40):
+    import math
+    if cid_slug not in CENTRO_CIDADE:
+        return []
+    a = CENTRO_CIDADE[cid_slug]
+    out = []
+    for s, b in CENTRO_CIDADE.items():
+        if s == cid_slug or s not in CIDADES:
+            continue
+        dx = (b[1] - a[1]) * 111.32 * math.cos(math.radians(a[0])); dy = (b[0] - a[0]) * 110.57
+        d = math.hypot(dx, dy)
+        if d <= raio_km:
+            out.append((d, s))
+    return [s for _, s in sorted(out)]
 UF = "PR"
 
 # Token do teste de origem do WebMCP no Chrome (deixe vazio até cadastrar o site).
@@ -743,6 +766,7 @@ def gerar():
     nomes = {s: (f, c) for s, f, c, _ in CATEGORIAS}
     resumo_cidades = []
     contagens = {}
+    cats_por_cidade = {cs: {c for p in pontos if cs in p["_cidades"] for c in p["_cats"]} for cs in CIDADES}
 
     for cid_slug, cidade in CIDADES.items():
         do_lugar = [p for p in pontos if cid_slug in p["_cidades"]]
@@ -768,6 +792,10 @@ def gerar():
             regra = REGRAS_LOCAIS.get((cid_slug, cat)) or REGRAS_LOCAIS.get((cid_slug, "*"), "")
             faq = faq_categoria(cat, frase, cidade, pts)
             outras = "".join(f'<li><a href="../{s}/">{esc(nomes[s][1])}</a></li>' for s in cats_ordem if s != cat)
+            viz = [s for s in cidades_proximas(cid_slug) if cat in cats_por_cidade.get(s, ())]
+            proximas = (f'<section class="outras"><h2>{esc(curto)} em cidades próximas</h2><ul>'
+                        + "".join(f'<li><a href="../../{s}/{cat}/">{esc(CIDADES[s])}</a></li>' for s in viz)
+                        + "</ul></section>") if viz else ""
             corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">{esc(cidade)}</a> › {esc(curto)}</nav>
 <h1>Onde descartar {esc(frase)} em {esc(cidade)}</h1>
 <p class="resposta"><strong>{len(pts)} {'opção' if len(pts) == 1 else 'opções'}</strong> em {esc(cidade)} e região, {n_val} com licença ambiental válida. {esc(DICAS.get(cat, ''))}</p>
@@ -781,7 +809,7 @@ def gerar():
 <section class="faq"><h2>Perguntas frequentes</h2>
 {''.join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)}
 </section>
-<section class="outras"><h2>Outros resíduos em {esc(cidade)}</h2><ul>{outras}</ul></section>"""
+{proximas}<section class="outras"><h2>Outros resíduos em {esc(cidade)}</h2><ul>{outras}</ul></section>"""
             jsonld = [
                 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Cidades", "item": f"{BASE_URL}/residuos/"},
@@ -1038,6 +1066,8 @@ def gerar():
     ctx = {"norm": norm, "selo": selo_licenca, "aviso_cnpj": aviso_cnpj, "obs_publica": obs_publica,
            "pessoa_fisica": pessoa_fisica, "base": BASE_URL}
     publicados = [p for p in pontos if p["_cidades"] & set(CIDADES)]
+    # todos os pontos publicados, carregados sob demanda nas páginas de cidade ("perto de mim" em cidades vizinhas)
+    (SAIDA / "todos.json").write_text(hub.dados_js(publicados, "", ctx), encoding="utf-8")
     corpo, jsonld = site_desvia.home(publicados, CIDADES, nomes, cats_geral, contagens, ctx, HOJE)
     html_home = pagina("Onde descartar, doar ou reciclar em Londrina e região | Desvia",
                        "Onde levar pilha, eletrônico, óleo, entulho, remédio e móveis em Londrina, Maringá e região. Pontos de entrega, brechós e empresas com a licença ambiental.",

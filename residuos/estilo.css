@@ -475,3 +475,9 @@ body { overflow-x: clip; }
 .g-ano { font-size: 12px; fill: var(--cinza); }
 .g-troca { stroke: var(--verde-claro); stroke-width: 1.5; stroke-dasharray: 4 4; }
 .g-nota { font-size: 11px; fill: var(--verde-claro); font-weight: 700; }
+
+/* Perto de mim: pontos de cidades vizinhas */
+.vizinhos { grid-column: 1 / -1; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--linha, #dde2ea); display: grid; gap: .75rem; }
+.vizinhos h3 { margin: 0; font-size: 1.05rem; }
+.vizinhos .nota { margin: 0 0 .25rem; }
+.ponto .aviso-viz { font-style: normal; color: #8a5300; }

@@ -12,9 +12,10 @@
   function norm(t) { return (t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
   function esc(t) { return String(t || '').replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
-  PONTOS.forEach(function (p) {
+  function prep(p) {
     p._txt = norm([p.n, p.r, p.t, p.sv, p.m, p.c.map(function (c) { return CATS[c] || ''; }).join(' ')].join(' '));
-  });
+  }
+  PONTOS.forEach(prep);
 
   // filtro inicial pela URL: ?r=pneus
   // Palavras do dia a dia → tipo de resíduo ("cabo usb" → Eletrônicos)
@@ -57,8 +58,8 @@
   if (selCidade && busca.get('cidade')) { selCidade.value = busca.get('cidade'); estado.cid = selCidade.value; }
   if (busca.get('q')) { estado.q = busca.get('q'); document.getElementById('q').value = estado.q; }
 
-  function passa(p) {
-    if (estado.cid && p.cs.indexOf(estado.cid) < 0) return false;
+  function passa(p, semCidade) {
+    if (!semCidade && estado.cid && p.cs.indexOf(estado.cid) < 0) return false;
     if (estado.cat && p.c.indexOf(estado.cat) < 0) return false;
     if (estado.p !== 'todos' && p.pp.indexOf(estado.p) < 0) return false;
     if (estado.lic && !(p.st === 'valida' || p.st === 'vencendo' || p.st === 'publico' || p.st === 'entrega')) return false;
@@ -85,8 +86,8 @@
     return 12742 * Math.asin(Math.sqrt(x));
   }
   function fmtKm(d) { return d < 1 ? Math.round(d * 1000 / 50) * 50 + ' m' : d.toFixed(d < 10 ? 1 : 0).replace('.', ',') + ' km'; }
-  function cartao(p) {
-    var h = '<article class="ponto" id="p-' + p.id + '" data-id="' + p.id + '">';
+  function cartao(p, viz) {
+    var h = '<article class="ponto" id="' + (viz ? 'v-' : 'p-') + p.id + '" data-id="' + p.id + '">';
     if (estado.pos && p._d != null && isFinite(p._d)) h += '<p class="dist">📍 a ' + fmtKm(p._d) + '</p>';
     h += '<h3>' + esc(p.n) + '</h3>';
     h += '<p class="tipo">' + esc(p.t) + ' · ' + esc(p.sv) + '</p>';
@@ -104,11 +105,12 @@
     if (p.cnpj) h += '<p class="licenca aviso">' + esc(p.cnpj) + '</p>';
     if (p.fo) h += '<p class="fonte">' + esc(p.fo) + '</p>';
     if (p.obs) h += '<p class="obs">' + esc(p.obs) + '</p>';
+    if (viz && (p.t === 'PEV público' || p.st === 'publico')) h += '<p class="obs aviso-viz">Ponto público de ' + esc(p.m) + ': pode aceitar só moradores da cidade. Confirme antes de ir.</p>';
     var acoes = [];
     if (p.a != null) acoes.push('<a class="principal" href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
     var dig = (p.tel || '').split('/')[0].replace(/\D/g, '');
     if (dig.length >= 10) acoes.push('<a class="principal" href="tel:+55' + dig + '">Ligar</a>');
-    if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
+    if (p.a != null && !viz) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';
     return h + '</article>';
@@ -160,6 +162,30 @@
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
     });
   });
+  // "Perto de mim": pontos de cidades vizinhas a até RAIO_VIZ km, abaixo dos resultados da cidade
+  var RAIO_VIZ = 5, TODOS = null, carregando = false;
+  var UMA_CIDADE = Object.keys(window.DESVIA_CIDADES || {}).length === 1;
+  function vizinhos() {
+    var cid = estado.cid || (UMA_CIDADE ? Object.keys(DESVIA_CIDADES)[0] : '');
+    if (!estado.pos || !cid) return [];
+    var fonte = UMA_CIDADE ? TODOS : PONTOS;
+    if (!fonte) {
+      if (!carregando) {
+        carregando = true;
+        var sc = document.querySelector('script[src$="hub.js"]');
+        fetch(new URL('todos.json', sc ? sc.src : location.href)).then(function (r) { return r.json(); })
+          .then(function (d) { d.forEach(prep); TODOS = d; render(); }).catch(function () {});
+      }
+      return [];
+    }
+    var out = [];
+    fonte.forEach(function (p) {
+      if (p.a == null || p.cs.indexOf(cid) >= 0 || !passa(p, true)) return;
+      p._d = distKm(estado.pos, [p.a, p.o]);
+      if (p._d <= RAIO_VIZ) out.push(p);
+    });
+    return out.sort(function (a, b) { return a._d - b._d; }).slice(0, 10);
+  }
   var POR_PAGINA = 20, limite = POR_PAGINA, visAtual = [];
   function render(mais) {
     // Página inicial: mapa e lista só aparecem depois de uma busca, cidade ou atalho
@@ -184,6 +210,10 @@
     var resto = vis.length - limite;
     lista.innerHTML = vis.length ? vis.slice(0, limite).map(cartao).join('') +
       (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') : sugestoes();
+    var vz = vizinhos();
+    if (vz.length) lista.innerHTML += '<section class="vizinhos"><h3>Também perto de você, em cidades vizinhas</h3>' +
+      '<p class="nota">Pontos a até ' + RAIO_VIZ + ' km de você, fora de ' + esc((window.DESVIA_CIDADES || {})[estado.cid || Object.keys(DESVIA_CIDADES)[0]] || 'sua cidade') + '.</p>' +
+      vz.map(function (p) { return cartao(p, true); }).join('') + '</section>';
     document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.cat === estado.cat ? 'true' : 'false'); });
     document.querySelectorAll('.legenda [data-st]').forEach(function (b) { b.setAttribute('aria-pressed', estado.fora[b.dataset.st] ? 'false' : 'true'); });
     document.querySelectorAll('#seg button').forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.p === estado.p ? 'true' : 'false'); });
