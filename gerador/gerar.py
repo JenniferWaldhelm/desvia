@@ -281,6 +281,8 @@ def bloco_sinisa(cid_slug, cidade, serie):
         num.append((fmt_br(ult["cobertura_seletiva_pct"], 0) + "%", "dos moradores atendidos pela coleta seletiva"))
     if ult["catadores_mil_hab"]:
         num.append((fmt_br(ult["catadores_mil_hab"]), "catadores em cooperativas a cada mil moradores"))
+    elif ult["catadores_mil_hab"] == 0:
+        num.append(("Nenhuma", "cooperativa de catadores na cidade"))
     numeros = "".join(f'<div class="stat"><b>{n}</b><span>{esc(t)}</span></div>' for n, t in num)
     g1 = grafico_linha([{"ano": d["ano"], "v": d["kg_hab_dia"], "fonte": d["fonte"]} for d in dados],
                        "Lixo doméstico por morador", "kg por dia")
