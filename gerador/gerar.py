@@ -198,17 +198,11 @@ GUIAS_RELACIONADOS = {
 }
 
 # Números de geração e desvio de resíduos por cidade (informados pela Jen).
-NUMEROS_COLETA = {
-    "londrina": """<h2>Quanto lixo Londrina gera</h2>
-<p>Cada morador de Londrina gera, em média, <b>0,69 kg de lixo doméstico por dia</b>, cerca de 21 kg por mês.</p>
-<p>De todo o lixo doméstico coletado na cidade, <b>só 6,51% deixa de ir para o aterro sanitário</b>, porque foi reciclado ou virou adubo. Todo o resto é enterrado, inclusive muito material que poderia ser reciclado ou virar adubo. Separar em casa é o primeiro passo para mudar esse número.</p>
-<p class="nota">Fonte: Sistema Nacional de Informações em Saneamento Básico (SINISA) 2025, dados de 2024.</p>
-""",
-}
+NUMEROS_COLETA = {}  # substituído pelo bloco do SINISA (17/11/2026)
 
 
 # ── Indicadores do SNIS (até 2022) e do SINISA (2023 em diante), em dados/sinisa.csv ──
-SINISA_CIDADES = {"mandaguari"}  # cidades com o bloco de gráficos ligado (Jen aprova cidade a cidade)
+SINISA_CIDADES = {"mandaguari", "londrina", "maringa", "cambe", "ibipora", "rolandia", "apucarana", "sarandi", "arapongas"}  # cidades com o bloco de gráficos ligado (Jen aprova cidade a cidade)
 
 
 def ler_sinisa():
@@ -285,7 +279,7 @@ def bloco_sinisa(cid_slug, cidade, serie):
         num.append((fmt_br(ult["recuperacao_pct"]) + "%", "do lixo coletado foi reciclado ou virou adubo"))
     if ult["cobertura_seletiva_pct"] is not None:
         num.append((fmt_br(ult["cobertura_seletiva_pct"], 0) + "%", "dos moradores atendidos pela coleta seletiva"))
-    if ult["catadores_mil_hab"] is not None:
+    if ult["catadores_mil_hab"]:
         num.append((fmt_br(ult["catadores_mil_hab"]), "catadores em cooperativas a cada mil moradores"))
     numeros = "".join(f'<div class="stat"><b>{n}</b><span>{esc(t)}</span></div>' for n, t in num)
     g1 = grafico_linha([{"ano": d["ano"], "v": d["kg_hab_dia"], "fonte": d["fonte"]} for d in dados],
@@ -297,6 +291,7 @@ def bloco_sinisa(cid_slug, cidade, serie):
 <div class="sinisa-stats">{numeros}</div>
 <p class="nota">Dados de {ult["ano"]} informados pela prefeitura ao Sistema Nacional de Informações em Saneamento Básico (SINISA).</p>
 <div class="graficos">{g1}{g2}</div>
+<p>Quase todo o resto vai para o aterro sanitário, inclusive muito material que poderia ser reciclado ou virar adubo. Separar em casa é o primeiro passo para mudar esse número.</p>
 <p class="nota">Até 2022 os dados vêm do sistema anterior (SNIS), que calculava de outro jeito: o lixo por morador incluía o da varrição das ruas, e a reciclagem não contava os orgânicos. Por isso pode haver um salto na linha pontilhada. Anos sem ponto: a prefeitura não informou. Fontes: <a href="https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/saneamento/sinisa/resultados-sinisa" target="_blank" rel="noopener">SINISA</a> e <a href="https://app4.cidades.gov.br/serieHistorica/" target="_blank" rel="noopener">série histórica do SNIS</a>.</p>
 </section>
 """
