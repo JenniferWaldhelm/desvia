@@ -305,6 +305,17 @@ SERIE_SINISA = ler_sinisa()
 EXTRA_COLETA = {
     "sarandi": """<h2>Recicláveis em Sarandi: cooperativa de catadores</h2>
 <p>Em Sarandi, os recicláveis são triados pela Cooperecológica, a cooperativa de catadores da cidade, no Parque Industrial (Rua 25 de Dezembro, s/n). Telefone: <a href="tel:+554430262525">(44) 3026-2525</a>. Separe os recicláveis limpos e secos e coloque para fora no dia da coleta do seu bairro.</p>
+<h2>Ecoponto de Sarandi: móveis, colchões, galhos e recicláveis</h2>
+<p>O Ecoponto da prefeitura fica na Rua José Galindo Garcia, 805-B, Jardim Verão, em frente à Secretaria de Saneamento e Meio Ambiente. Funciona das 7h às 11h30 e das 13h às 17h (o horário pode mudar).</p>
+<p>Recebe de graça, só de moradores de Sarandi:</p>
+<ul class="lista-texto">
+<li>recicláveis: plástico, papel e metal;</li>
+<li>lâmpadas e eletrônicos;</li>
+<li>colchões, sofás e móveis de madeira;</li>
+<li>galhos e restos de poda;</li>
+<li>pneus.</li>
+</ul>
+<p>Leve documento com foto e comprovante de residência. O cadastro é feito na hora.</p>
 <h2>A coleta não passou ou tem lixo acumulado na rua?</h2>
 <p>Avise a Secretaria de Meio Ambiente pelo WhatsApp <a href="https://wa.me/554432169530">(44) 3216-9530</a>.</p>
 """,
