@@ -1,0 +1,33 @@
+name: "Receita: arquivo mensal do Paraná"
+
+# Uma vez por mês baixa os dados abertos do CNPJ e guarda só as empresas do Paraná com
+# atividade de resíduo (qualquer situação) no release "receita-pr" do repositório.
+# Com isso, "Buscar empresas na Receita" de uma cidade leva minutos, não horas.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 7 20 * *"   # dia 20, 4h23 em Brasília (a Receita publica a pasta do mês por volta do meio do mês)
+
+permissions:
+  contents: write
+
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Baixar e filtrar o Paraná
+        run: |
+          set -o pipefail
+          python3 coleta/buscar_receita.py --pr /tmp/receita-pr | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Publicar no release receita-pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view receita-pr >/dev/null 2>&1 || gh release create receita-pr --title "Receita: Paraná (resíduos)" --notes "Arquivo mensal gerado automaticamente. Não é uma versão do site."
+          gh release upload receita-pr /tmp/receita-pr/receita-pr.csv.gz /tmp/receita-pr/cnaes.csv /tmp/receita-pr/mes.txt --clobber
+          echo "Mês: $(cat /tmp/receita-pr/mes.txt)" >> "$GITHUB_STEP_SUMMARY"

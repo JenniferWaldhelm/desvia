@@ -24,9 +24,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Arquivo mensal do Paraná (se existir)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download receita-pr -D /tmp/receita-pr && cat /tmp/receita-pr/mes.txt || echo "Sem arquivo mensal; baixando direto da Receita (lento)"
+
       - name: Buscar
         env:
           MUNICIPIO: ${{ inputs.municipio }}
+          RECEITA_PR: /tmp/receita-pr
         run: |
           set -o pipefail
           python3 coleta/buscar_receita.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY"

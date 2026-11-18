@@ -7,7 +7,8 @@ Fonte: dados abertos do CNPJ (arquivos Estabelecimentos, Municipios e Cnaes),
 publicados todo mês pela Receita. Razão social e natureza jurídica vêm da
 BrasilAPI / minhareceita.org, só para as empresas filtradas.
 
-Uso: python3 coleta/buscar_receita.py "Sarandi"
+Uso: python3 coleta/buscar_receita.py "Sarandi"   (com RECEITA_PR=<pasta> usa o arquivo mensal, em segundos)
+     python3 coleta/buscar_receita.py --pr <pasta>  (gera o arquivo mensal do Paraná)
 Saída: coleta/<cidade>-receita.csv e coleta/<cidade>-receita-resumo.md
 Não altera o site nem a planilha: a Jen confere a lista antes.
 """
@@ -20,6 +21,8 @@ import time
 import unicodedata
 import urllib.request
 import zipfile
+import gzip
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
 from pathlib import Path
@@ -152,33 +155,96 @@ def descricoes_cnae(url):
         return {}
 
 
-def filtrar_arquivo(url, i, cods):
+def linha_estab(l, mun=None):
+    """Converte uma linha de Estabelecimentos no registro usado aqui (None se não for de resíduo)."""
+    principal = l[11]
+    secundarias = [c for c in l[12].split(",") if c]
+    todas = [principal] + secundarias
+    fortes = [c for c in todas if c in FORTES]
+    fracos = [c for c in todas if c in FRACOS]
+    if not fortes and not fracos:
+        return None
+    return {
+        "cnpj": l[0] + l[1] + l[2], "fantasia": l[4].strip(), "situacao": SITUACAO.get(l[5], l[5]), "inicio": l[10],
+        "principal": principal, "fortes": fortes, "fracos": fracos,
+        "endereco": " ".join(x for x in [l[13], l[14]] if x).strip() + (f", {l[15]}" if l[15] else "")
+                    + (f", {l[17]}" if l[17] else ""),
+        "cep": l[18], "telefone": f"({l[21]}) {l[22]}" if l[21] and l[22] else "",
+        "municipio": (mun or {}).get(l[20], l[20]),
+    }
+
+
+def filtrar_arquivo(url, i, cods, mun=None):
+    """cods=None: guarda o Paraná inteiro (todas as situações), para o arquivo mensal."""
     arq = baixar(f"{url}Estabelecimentos{i}.zip", TMP / f"Estabelecimentos{i}.zip")
     achados, outras = [], {}
     for l in ler_zip_csv(arq):
-        if len(l) < 28 or l[19] != "PR" or l[20] not in cods:
+        if len(l) < 28 or l[19] != "PR" or (cods is not None and l[20] not in cods):
             continue
-        principal = l[11]
-        secundarias = [c for c in l[12].split(",") if c]
-        todas = [principal] + secundarias
-        fortes = [c for c in todas if c in FORTES]
-        fracos = [c for c in todas if c in FRACOS]
-        if not fortes and not fracos:
+        a = linha_estab(l, mun)
+        if not a:
             continue
-        sit = SITUACAO.get(l[5], l[5])
-        if sit != "Ativa":
-            outras[sit] = outras.get(sit, 0) + 1
+        if cods is not None and a["situacao"] != "Ativa":
+            outras[a["situacao"]] = outras.get(a["situacao"], 0) + 1
             continue
-        achados.append({
-            "cnpj": l[0] + l[1] + l[2], "fantasia": l[4].strip(), "situacao": sit, "inicio": l[10],
-            "principal": principal, "fortes": fortes, "fracos": fracos,
-            "endereco": " ".join(x for x in [l[13], l[14]] if x).strip() + (f", {l[15]}" if l[15] else "")
-                        + (f", {l[17]}" if l[17] else ""),
-            "cep": l[18], "telefone": f"({l[21]}) {l[22]}" if l[21] and l[22] else "",
-        })
+        achados.append(a)
     arq.unlink(missing_ok=True)
-    print(f"  Estabelecimentos{i}: {len(achados)} ativas", file=sys.stderr)
+    print(f"  Estabelecimentos{i}: {len(achados)} registros", file=sys.stderr)
     return achados, outras
+
+
+CAMPOS_PR = ["cnpj", "fantasia", "situacao", "inicio", "principal", "fortes", "fracos", "endereco", "cep", "telefone", "municipio"]
+
+
+def baixar_pr(destino):
+    """Arquivo mensal: todas as empresas do PR com atividade de resíduo (qualquer situação).
+    Grava <destino>/receita-pr.csv.gz, <destino>/cnaes.csv e <destino>/mes.txt."""
+    destino = Path(destino)
+    destino.mkdir(parents=True, exist_ok=True)
+    TMP.mkdir(parents=True, exist_ok=True)
+    url, mes = pasta_recente()
+    print(f"Dados abertos do CNPJ: {mes}", file=sys.stderr)
+    arq = baixar(url + "Municipios.zip", TMP / "Municipios.zip")
+    mun = {l[0]: l[1] for l in ler_zip_csv(arq) if len(l) >= 2}
+    cnaes = descricoes_cnae(url)
+    todos = []
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        for fut in as_completed([ex.submit(filtrar_arquivo, url, i, None, mun) for i in range(10)]):
+            todos += fut.result()[0]
+    with gzip.open(destino / "receita-pr.csv.gz", "wt", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=CAMPOS_PR)
+        w.writeheader()
+        for a in sorted(todos, key=lambda x: x["cnpj"]):
+            w.writerow({**a, "fortes": ",".join(a["fortes"]), "fracos": ",".join(a["fracos"])})
+    with open(destino / "cnaes.csv", "w", encoding="utf-8", newline="") as f:
+        csv.writer(f).writerows(sorted(cnaes.items()))
+    (destino / "mes.txt").write_text(mes + "\n", encoding="utf-8")
+    ativas = sum(1 for a in todos if a["situacao"] == "Ativa")
+    print(f"# Receita Federal: Paraná ({mes})\n\n- Empresas com atividade de resíduo: {len(todos)} (ativas: {ativas})")
+
+
+def ler_pr(pasta, cidade):
+    """Lê o arquivo mensal do PR e devolve (achados ativos, outras situações, cnaes, mês) da cidade."""
+    pasta = Path(pasta)
+    alvo = norm(cidade)
+    achados, outras = [], {}
+    with gzip.open(pasta / "receita-pr.csv.gz", "rt", encoding="utf-8", newline="") as f:
+        for a in csv.DictReader(f):
+            if norm(a["municipio"]) != alvo:
+                continue
+            a["fortes"] = [c for c in a["fortes"].split(",") if c]
+            a["fracos"] = [c for c in a["fracos"].split(",") if c]
+            if a["situacao"] != "Ativa":
+                outras[a["situacao"]] = outras.get(a["situacao"], 0) + 1
+            else:
+                achados.append(a)
+    if not achados and not outras:
+        raise SystemExit(f"Município {cidade} não achado no arquivo mensal da Receita.")
+    cnaes = {}
+    if (pasta / "cnaes.csv").exists():
+        cnaes = {l[0]: l[1] for l in csv.reader(open(pasta / "cnaes.csv", encoding="utf-8")) if len(l) >= 2}
+    mes = (pasta / "mes.txt").read_text(encoding="utf-8").strip() if (pasta / "mes.txt").exists() else "?"
+    return achados, outras, cnaes, mes
 
 
 def receita(cnpj):
@@ -202,21 +268,28 @@ def titulo(s):
 
 
 def main():
+    if sys.argv[1] == "--pr":
+        return baixar_pr(sys.argv[2] if len(sys.argv) > 2 else "/tmp/receita-pr")
     cidade = sys.argv[1]
     slug = re.sub(r"[^a-z0-9]+", "-", norm(cidade).lower()).strip("-")
-    TMP.mkdir(parents=True, exist_ok=True)
-    url, mes = pasta_recente()
-    print(f"Dados abertos do CNPJ: {mes}", file=sys.stderr)
-    cods = codigos_municipio(url, cidade)
-    cnaes = descricoes_cnae(url)
-
-    achados, outras = [], {}
-    with ThreadPoolExecutor(max_workers=3) as ex:
-        for fut in as_completed([ex.submit(filtrar_arquivo, url, i, cods) for i in range(10)]):
-            a, o = fut.result()
-            achados += a
-            for k, v in o.items():
-                outras[k] = outras.get(k, 0) + v
+    pasta_pr = os.environ.get("RECEITA_PR", "")
+    if pasta_pr and (Path(pasta_pr) / "receita-pr.csv.gz").exists():
+        # rápido: usa o arquivo mensal do Paraná (ação "Receita: arquivo mensal do Paraná")
+        achados, outras, cnaes, mes = ler_pr(pasta_pr, cidade)
+        print(f"Arquivo mensal do PR: {mes}", file=sys.stderr)
+    else:
+        TMP.mkdir(parents=True, exist_ok=True)
+        url, mes = pasta_recente()
+        print(f"Dados abertos do CNPJ: {mes}", file=sys.stderr)
+        cods = codigos_municipio(url, cidade)
+        cnaes = descricoes_cnae(url)
+        achados, outras = [], {}
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            for fut in as_completed([ex.submit(filtrar_arquivo, url, i, cods) for i in range(10)]):
+                a, o = fut.result()
+                achados += a
+                for k, v in o.items():
+                    outras[k] = outras.get(k, 0) + v
 
     na_base = set()
     p = RAIZ / "dados" / "pontos.csv"
