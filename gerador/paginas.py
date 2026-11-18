@@ -120,8 +120,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 
 <section class="blocos">
   <div><h2>Cidades</h2><ul class="grade">{cidades_html}</ul>
-  {pedir_cidade()}
-  <p class="sub">Guia completo de Mandaguari, com coleta por bairro e regras municipais: <a href="mandaguari.html">abrir</a>.</p></div>
+  {pedir_cidade()}</div>
 </section>
 
 <section class="faq"><h2>Perguntas frequentes</h2>{faq_html}</section>

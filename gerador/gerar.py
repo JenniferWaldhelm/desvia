@@ -78,7 +78,7 @@ GOATCOUNTER = "projetodesvia"
 GA4 = "G-2SCQNPX98Z"
 
 # Páginas fixas do site que continuam no sitemap.
-PAGINAS_FIXAS = [("", "1.0"), ("mandaguari.html", "0.8"), ("mapa-pev.html", "0.6")]
+PAGINAS_FIXAS = [("", "1.0")]
 
 # slug, nome na frase ("Onde descartar ..."), nome curto, palavras-chave
 CATEGORIAS = [
@@ -326,6 +326,14 @@ SERIE_SINISA = ler_sinisa()
 
 # Informações próprias de cada cidade na página de coleta (fonte oficial informada pela Jen).
 EXTRA_COLETA = {
+    "mandaguari": """<h2 id="bairros">Dias da coleta seletiva por bairro em Mandaguari</h2>
+<p>A coleta seletiva de recicláveis em Mandaguari é feita pela ACAMAN (Associação dos Catadores de Mandaguari). Os bairros são divididos em dois grupos:</p>
+<table class="tabela"><thead><tr><th>Dias</th><th>Bairros</th></tr></thead><tbody>
+<tr><td>Segunda e quinta-feira</td><td>Centro, Conjunto Ernesto Troleza, Ipacaray, Boa Vista, Mandaguari, Vila Dr. Paulo Pimentel, Tancredo Neves, Vila Verde, Jardim Itália, Jardim Alípio Costa, Jardim Esplanada, Jardim Primavera, Jardim Soriá, Jardim Cristina, Jardim Madrid, Jardim América e outros</td></tr>
+<tr><td>Terça e sexta-feira</td><td>Conjunto Padre Max Kaufmann, Roque Pedroni, América, Cristina I, Cristina II, Cristina Central, Cristina Central II, Jardim Imperial, Jardim Lorena, Jardim Murumbi, Jardim Palma, Jardim Progresso, Jardim Vitória, Vila Diaz, Vila Diniz e outros</td></tr>
+</tbody></table>
+<p>Às quartas-feiras, a ACAMAN faz coleta só em locais específicos, quando alguém pede. Se o seu bairro não está na lista, fale com a ACAMAN para saber o dia ou pedir uma coleta.</p>
+""",
     "sarandi": """<h2>Recicláveis em Sarandi: cooperativa de catadores</h2>
 <p>Em Sarandi, os recicláveis são triados pela Cooperecológica, a cooperativa de catadores da cidade, no Parque Industrial (Rua 25 de Dezembro, s/n). Telefone: <a href="tel:+554430262525">(44) 3026-2525</a>. Separe os recicláveis limpos e secos e coloque para fora no dia da coleta do seu bairro.</p>
 <h2>Ecoponto de Sarandi: móveis, colchões, galhos e recicláveis</h2>
@@ -936,10 +944,13 @@ def gerar():
             ("A coleta não passou. O que fazer?",
              f"Primeiro, registre a reclamação com {titular} ou na ouvidoria da prefeitura. Se o problema continuar, comunique a agência reguladora que fiscaliza o serviço de limpeza urbana no município (no Paraná, em muitos municípios, a AGEPAR). Ela fiscaliza o titular do serviço, não o morador. Se mesmo assim o serviço não for feito, procure o Ministério Público do Paraná (MPPR), pela Promotoria de Justiça da sua cidade ou pelo formulário de atendimento do MPPR (MP Atende)."),
         ]
+        alvo = ' target="_blank" rel="noopener"'
+        if "mandaguari.html" in link:  # página antiga: os bairros agora estão nesta página
+            link, alvo = "#bairros", ""
         corpo = f"""<nav class="trilha" aria-label="Você está em"><a href="../../">Cidades</a> › <a href="../">{esc(cidade)}</a> › Coleta de lixo</nav>
 <h1>Que dia passa o lixo na sua rua em {esc(cidade)}?</h1>
 <p class="resposta">Os dias e horários da coleta comum e da coleta seletiva em {esc(cidade)} são definidos pelo responsável pelo serviço: <b>{esc(titular)}</b>. Consulte o seu bairro {em_link}:</p>
-<p><a class="pq-btn" href="{esc(link)}" target="_blank" rel="noopener">Ver dias e horários da coleta em {esc(cidade)} ↗</a></p>
+<p><a class="pq-btn" href="{esc(link)}"{alvo}>Ver dias e horários da coleta em {esc(cidade)}{" ↗" if alvo else ""}</a></p>
 {"".join(f'<p><a class="pq-btn" href="{esc(l)}" target="_blank" rel="noopener">Ver dias da coleta seletiva (recicláveis) ↗</a></p>' for l in links[1:2])}
 <p class="regra">Os setores e dias de coleta podem mudar quando há novo contrato do serviço (licitação). Confira sempre a fonte oficial antes de colocar o lixo para fora.</p>
 
@@ -1099,7 +1110,7 @@ def gerar():
         if slug in site_desvia.G.GUIAS:
             linhas_llms.append(f"- [Como descartar {nomes[slug][0]}]({BASE_URL}/guias/{slug}/): {site_desvia.G.GUIAS[slug]['intro']}")
     linhas_llms += ["", "## Opcional",
-                    f"- [Guia de Mandaguari]({BASE_URL}/mandaguari.html): coleta por bairro, regras municipais (Lei 4.419/2025) e PGRS",
+                    f"- [Coleta de lixo em Mandaguari]({BASE_URL}/residuos/mandaguari/coleta-de-lixo/): dias da coleta seletiva por bairro",
                     f"- [Contato]({site_desvia.WHATSAPP}): orientação gratuita e cadastro de empresas", ""]
     (RAIZ / "llms.txt").write_text("\n".join(linhas_llms), encoding="utf-8")
 
