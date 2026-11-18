@@ -1,12 +1,11 @@
 # Qualidade da base
 
 - Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
-- Endereços que o OpenStreetMap não achou: 2
+- Endereços que o OpenStreetMap não achou: 1
 - Possíveis duplicados: 1
 
 ## Sem coordenada (pegar no Google Maps)
 
-- APU-021 Gonçales Pneus Ltda (GP Car Center) (Rua Mário Cilião Sobrinho, 170, Cidade Industrial, Apucarana)
 - APU-025 Correios AGC São Pedro da Taquara (Rua José Jacinto Fernandes, s/n, CEP 86814-970, Apucarana)
 
 ## Possíveis duplicados (decidir qual fica)
