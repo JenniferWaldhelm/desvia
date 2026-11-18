@@ -177,7 +177,15 @@ def linha_estab(l, mun=None):
 
 def filtrar_arquivo(url, i, cods, mun=None):
     """cods=None: guarda o Paraná inteiro (todas as situações), para o arquivo mensal."""
-    arq = baixar(f"{url}Estabelecimentos{i}.zip", TMP / f"Estabelecimentos{i}.zip")
+    for tentativa in range(4):  # o servidor da Receita às vezes corta o download no meio
+        arq = baixar(f"{url}Estabelecimentos{i}.zip", TMP / f"Estabelecimentos{i}.zip")
+        if zipfile.is_zipfile(arq):
+            break
+        print(f"  Estabelecimentos{i}: arquivo incompleto, baixando de novo ({tentativa + 1})", file=sys.stderr)
+        arq.unlink(missing_ok=True)
+        time.sleep(30 * (tentativa + 1))
+    else:
+        raise RuntimeError(f"Estabelecimentos{i}.zip veio incompleto 4 vezes")
     achados, outras = [], {}
     for l in ler_zip_csv(arq):
         if len(l) < 28 or l[19] != "PR" or (cods is not None and l[20] not in cods):
