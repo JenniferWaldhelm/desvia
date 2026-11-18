@@ -110,10 +110,17 @@ def green_pilhas(cidades):
 
 # ── Green Eletron eletroeletrônicos (inclui ABREE): POST devolve o Brasil inteiro em JSON ──
 def green_eletro(cidades):
-    t = get("https://green.care-br.com/busca_empresa.php", {"lat": "-23.3045", "lng": "-51.1696"}, enc="latin-1", timeout=180)
-    d = json.loads(t)
+    pts, vistos = [], set()
+    for lat, lng in (("-23.3045", "-51.1696"), ("-23.4205", "-51.9333"), ("-23.5508", "-51.4608")):
+        t = get("https://green.care-br.com/busca_empresa.php", {"lat": lat, "lng": lng}, enc="latin-1", timeout=180)
+        for p in json.loads(t).get("msg", []):
+            k = (p.get("name"), p.get("lat"), p.get("lng"))
+            if k not in vistos:
+                vistos.add(k)
+                pts.append(p)
+        time.sleep(1)
     out = []
-    for p in d.get("msg", []):
+    for p in pts:
         end = p.get("end") or ""
         m = re.search(r"CEP:\s*([\d-]+)\.\s*(.+?)-([A-Z]{2})\s*$", end)
         if not m or m.group(3) != "PR":
@@ -140,22 +147,24 @@ def reciclus(cidades):
         t = get(url)
         if pg == 1:
             guardar_diag("reciclus", t)
-        itens = re.findall(r'<div class="jet-listing-grid__item[^"]*"[^>]*data-post-id="(\d+)"(.*?)(?=<div class="jet-listing-grid__item|</div>\s*</div>\s*</div>\s*</div>\s*</div>\s*$)', t, re.S)
         novos = 0
-        for pid, bloco in itens:
+        for bloco in t.split('<div class="jet-listing-grid__item jet-listing-dynamic-post-')[1:]:
+            pid = bloco.split(" ", 1)[0]
             if pid in vistos:
                 continue
             vistos.add(pid)
             novos += 1
-            txt = [limpa(x) for x in re.findall(r'<div class="jet-listing-dynamic-field__content"[^>]*>(.*?)</div>', bloco, re.S)]
-            txt = [x for x in txt if x]
-            if not txt:
+            h = [limpa(x) for x in re.findall(r'elementor-heading-title[^>]*>(.*?)</div>', bloco[:6000], re.S)]
+            h = [x for x in h if x]
+            if len(h) < 2:
                 continue
-            nome, resto = txt[0], txt[1:]
-            cidade = next((x for x in resto if norm(x) in {norm(c) for c in CIDADES} or re.search(r"[-/]\s*PR\b", x)), "")
-            out.append({"Programa": "Reciclus", "Resíduo": "Lâmpadas", "Nome": nome, "Endereço": "; ".join(resto)[:250],
-                        "Cidade": re.sub(r"\s*[-/]\s*PR\b.*", "", cidade), "Obs": "Ponto de entrega de lâmpadas da Reciclus.",
-                        "Fonte": "Reciclus (pontos de entrega)"})
+            nome, end = h[0], h[1]
+            cep = next((x for x in h[2:] if re.fullmatch(r"\d{5}-?\d{3}", x)), "")
+            partes = [x.strip() for x in end.split(",")]
+            cidade = partes[-2] if len(partes) >= 2 and partes[-1].strip().upper() == "PR" else ""
+            out.append({"Programa": "Reciclus", "Resíduo": "Lâmpadas", "Nome": nome,
+                        "Endereço": ", ".join(partes[:-2]) if cidade else end, "Cidade": cidade, "CEP": cep,
+                        "Obs": "Ponto de entrega de lâmpadas da Reciclus.", "Fonte": "Reciclus (pontos de entrega)"})
         if not novos:
             break
         time.sleep(1)
@@ -172,14 +181,15 @@ def jogue_limpo(cidades):
         except Exception:  # noqa: BLE001
             continue
         guardar_diag("joguelimpo_" + tipo, t)
-        for bloco in re.split(r"<(?:div|li|tr)[^>]*class=['\"][^'\"]*(?:card|item|pev|central)[^'\"]*['\"][^>]*>", t)[1:]:
-            linhas = [limpa(x) for x in re.split(r"<br\s*/?>|</p>|</h\d>|</div>|</td>", bloco) if limpa(x)]
-            if len(linhas) < 2:
+        for nome, corpo in re.findall(r"<h6[^>]*>(.*?)</h6>\s*<p[^>]*>(.*?)</div>", t, re.S):
+            linhas = [limpa(x) for x in re.split(r"<br\s*/?>", corpo) if limpa(x)]
+            if not linhas:
                 continue
-            cidade = next((re.sub(r"\s*[-/]\s*PR.*", "", x) for x in linhas if re.search(r"[-/]\s*PR\b", x)), "")
-            fone = next((x for x in linhas if re.search(r"\(\d{2}\)\s*\d", x)), "")
-            out.append({"Programa": "Jogue Limpo", "Resíduo": "Embalagens de óleo lubrificante",
-                        "Nome": linhas[0], "Endereço": "; ".join(x for x in linhas[1:4] if x != fone)[:250], "Cidade": cidade,
+            m = re.match(r"(.*?)\s+-\s+([^-]+?)\s+-\s+PR$", linhas[0])
+            cep = next((x.split(":", 1)[1].strip() for x in linhas if x.upper().startswith("CEP")), "")
+            fone = next((x.split(":", 1)[1].strip() for x in linhas if x.upper().startswith("TEL")), "")
+            out.append({"Programa": "Jogue Limpo", "Resíduo": "Embalagens de óleo lubrificante", "Nome": limpa(nome),
+                        "Endereço": m.group(1) if m else linhas[0], "Cidade": m.group(2) if m else "", "CEP": cep,
                         "Telefone": fone, "Obs": f"{tipo} do Jogue Limpo: embalagens plásticas de óleo lubrificante, escorridas e tampadas.",
                         "Fonte": "Jogue Limpo (pontos de entrega)"})
     return out
@@ -242,25 +252,32 @@ def mapa_oscs(cidades):
                     if n in k:
                         return i
             return None
-        i_uf, i_mun = col("UF", "SG_UF", "ESTADO"), col("MUNICIPIO", "MUN")
-        i_nome = col("FANTASIA", "NOME", "RAZAO")
-        i_cnpj, i_end = col("CNPJ"), col("ENDERECO", "LOGRADOURO")
-        i_area = col("AREA_ATUACAO", "AREA")
-        i_lat, i_lng = col("LATITUDE", "LAT"), col("LONGITUDE", "LON")
+        def exata(*nomes):
+            for n in nomes:
+                if norm(n) in idx:
+                    return idx[norm(n)]
+            return None
+        i_uf, i_mun = exata("UF_Sigla"), exata("municipio_nome")
+        i_fant, i_raz = exata("tx_nome_fantasia_osc"), exata("tx_razao_social_osc")
+        i_cnpj, i_end = exata("cnpj"), exata("tx_endereco_completo")
+        i_sit, i_rem = exata("situacao_cadastral"), exata("removida_do_mosc")
+        i_lat, i_lng = exata("latitude"), exata("longitude")
+        areas = [(i, c[5:].replace("_", " ")) for i, c in enumerate(cab) if c.lower().startswith("area_")]
         for linha in csv.reader(texto, delimiter=sep):
             try:
-                if i_uf is not None and norm(linha[i_uf]) not in ("PR", "PARANA", "41"):
+                if norm(linha[i_uf]) != "PR" or norm(linha[i_mun]) not in alvo:
                     continue
-                if i_mun is None or norm(linha[i_mun]) not in alvo:
+                if i_sit is not None and linha[i_sit] and "ATIV" not in norm(linha[i_sit]):
                     continue
-                nome = linha[i_nome] if i_nome is not None else ""
-                area = linha[i_area] if i_area is not None else ""
-                if not DOACAO.search(norm(nome) + " " + norm(area)):
+                if i_rem is not None and norm(linha[i_rem]) in ("TRUE", "1", "SIM", "S"):
+                    continue
+                nome = (linha[i_fant] if i_fant is not None else "") or linha[i_raz]
+                area = ", ".join(n for i, n in areas if norm(linha[i]) not in ("", "0", "FALSE", "NAO", "N", "NA"))
+                if not DOACAO.search(norm(nome) + " " + norm(linha[i_raz])) and "MEIO AMBIENTE" not in norm(area):
                     continue
                 out.append({"Programa": "Mapa das OSCs", "Resíduo": "Doação (conferir o que aceita)", "Nome": nome,
-                            "Endereço": linha[i_end] if i_end is not None else "", "Cidade": linha[i_mun],
-                            "CNPJ": linha[i_cnpj] if i_cnpj is not None else "",
-                            "Lat": linha[i_lat] if i_lat is not None else "", "Lng": linha[i_lng] if i_lng is not None else "",
+                            "Endereço": linha[i_end], "Cidade": linha[i_mun], "CNPJ": linha[i_cnpj],
+                            "Lat": linha[i_lat], "Lng": linha[i_lng],
                             "Obs": ("Área: " + area)[:200], "Fonte": "Mapa das Organizações da Sociedade Civil (Ipea)"})
             except IndexError:
                 continue
