@@ -436,6 +436,10 @@
   var segEl = document.getElementById('seg') || document.createElement('div');
   var chipsEl = document.getElementById('chips') || document.createElement('div');
   var leg = document.querySelector('.legenda');
+  if (leg) {
+    var legLabel = leg.querySelector('b');
+    if (legLabel) legLabel.addEventListener('click', function () { leg.classList.toggle('aberta'); });
+  }
   if (leg) leg.addEventListener('click', function (e) {
     var b = e.target.closest('[data-st]'); if (!b) return;
     var st = b.dataset.st, ligados = Object.keys(estado.fora).length;
