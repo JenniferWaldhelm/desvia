@@ -99,3 +99,5 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 
 - 17/11/2026: "Perto de mim" mostra também pontos de cidades vizinhas a até 5 km (bloco abaixo da lista, atalho no topo, pontos no mapa). Ponto público de outra cidade leva aviso "pode aceitar só moradores". Páginas de resíduo ganham links "em cidades próximas" (até 40 km, só cidades publicadas). Filtro principal continua sendo a cidade.
 | 18/11/2026 | Gonçales Pneus (Apucarana) | Removida (APU-021 apagado): o CTF não confirma que recebe pneus da população. |
+
+- 18/11/2026: Fluxo do levantamento auditado (ver coleta/LEIA-ME.md). Receita do PR baixada uma vez por mês (release receita-pr); busca por cidade lê esse arquivo. A conferência de licença (IAT e CTF/IBAMA) passa a ser feita também nos pontos dos localizadores de logística reversa, inclusive farmácia e mercado. Licença achada aparece no selo; sem licença, balcão (farmácia, mercado, loja) mantém "ponto de entrega"; recicladora, sucata, ferro-velho, borracharia que armazena pneus ou empresa ambiental entra como empresa, com o selo de licença.
