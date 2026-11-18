@@ -139,7 +139,7 @@
         '<form class="avise-form" action="https://us9.list-manage.com/subscribe/post" method="POST" target="_blank" novalidate>' +
         '<input type="hidden" name="u" value="605c10e63f">' +
         '<input type="hidden" name="id" value="dbf2b174bd">' +
-        (estado.cid ? '<input type="hidden" name="MERGE2" value="' + esc(nomeCidade || estado.cid) + '">' : '') +
+        (estado.cid ? '<input type="hidden" name="MERGE7" value="' + esc(nomeCidade || estado.cid) + '">' : '') +
         '<input type="email" name="EMAIL" placeholder="seu@email.com" required autocomplete="email">' +
         '<button type="submit">Avisar-me</button>' +
         '<div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_605c10e63f_dbf2b174bd" tabindex="-1" value=""></div>' +
