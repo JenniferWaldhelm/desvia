@@ -1,15 +1,15 @@
-# Maringá: coleta automática em 04/11/2026
+# Maringá: coleta automática em 18/11/2026
 
 - Licenças do IAT no município: 7331
-- Empresas de resíduos no IAT: 102
+- Empresas de resíduos no IAT: 186
 - Empresas de resíduos no CTF/IBAMA: 114
-- Total (sem repetição): 187
-- Já na base: 44
-- Novas: 143
-- CNPJ não ativo na Receita: 40
+- Total (sem repetição): 258
+- Já na base: 50
+- Novas: 208
+- CNPJ não ativo na Receita: 42
 
 - IAT: consulta direta, 7331 registros
 
 ## Diagnóstico CTF
 
-- CTF pessoas-juridicas-inscritas-no-ctf-app1_PR.csv: 3460 atividades no município, 163 de resíduos
+- CTF pessoas-juridicas-inscritas-no-ctf-app1_PR.csv: 3466 atividades no município, 163 de resíduos
