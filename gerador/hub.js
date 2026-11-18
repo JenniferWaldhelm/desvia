@@ -130,6 +130,21 @@
       }).length;
       if (nSemCidade > 0) html += '<p class="vazio">Mas encontramos <b>' + nSemCidade + '</b> ' + (nSemCidade === 1 ? 'local' : 'locais') + ' em outras cidades. <button type="button" class="chip" data-ampliar="1">Ver tudo</button></p>';
     }
+    // Captura de email: aparece quando buscou cidade não coberta ou sem resultado com cidade
+    var todasCidades = Object.keys(window.DESVIA_CIDADES || {});
+    var cidadeNaoCoberta = estado.cid && todasCidades.indexOf(estado.cid) < 0;
+    if (cidadeNaoCoberta || (!estado.q && estado.cid)) {
+      html += '<div class="avise-me">' +
+        '<p><b>Quer saber quando chegar na sua cidade?</b></p>' +
+        '<form class="avise-form" action="https://us9.list-manage.com/subscribe/post" method="POST" target="_blank" novalidate>' +
+        '<input type="hidden" name="u" value="605c10e63f">' +
+        '<input type="hidden" name="id" value="dbf2b174bd">' +
+        (estado.cid ? '<input type="hidden" name="MERGE2" value="' + esc(nomeCidade || estado.cid) + '">' : '') +
+        '<input type="email" name="EMAIL" placeholder="seu@email.com" required autocomplete="email">' +
+        '<button type="submit">Avisar-me</button>' +
+        '<div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_605c10e63f_dbf2b174bd" tabindex="-1" value=""></div>' +
+        '</form></div>';
+    }
     if (ids.length) html += '<p class="vazio">Isso costuma ir para: ' + ids.map(function (c) {
       return '<button type="button" class="chip" data-sug="' + c + '">' + esc(CATS[c]) + '</button>'; }).join(' ') + '</p>';
     html += '<p class="vazio">Veja todos os tipos: ' + Object.keys(CATS).map(function (c) {

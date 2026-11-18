@@ -482,3 +482,12 @@ body { overflow-x: clip; }
 .vizinhos .nota { margin: 0 0 .25rem; }
 .ponto .aviso-viz { font-style: normal; color: #8a5300; }
 .ir-viz { grid-column: 1 / -1; margin: 0 0 .5rem; font-size: .9rem; font-weight: 600; }
+
+/* Captura de email — avise-me quando chegar na cidade */
+.avise-me { background: var(--verde-menta, #FDE8D8); border: 1.5px solid var(--verde-claro); border-radius: 14px; padding: 16px 20px; margin: 16px 0; }
+.avise-me p { margin: 0 0 10px; color: var(--escuro); }
+.avise-form { display: flex; gap: 8px; flex-wrap: wrap; }
+.avise-form input[type=email] { flex: 1 1 200px; padding: 8px 12px; border: 1.5px solid var(--cinza-claro); border-radius: 8px; font: inherit; font-size: .95rem; color: var(--escuro); background: #fff; }
+.avise-form input[type=email]:focus { outline: 2px solid var(--verde-claro); border-color: var(--verde-claro); }
+.avise-form button { background: var(--verde-claro); color: #fff; border: none; border-radius: 8px; padding: 8px 18px; font: inherit; font-size: .95rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.avise-form button:hover { opacity: .88; }
