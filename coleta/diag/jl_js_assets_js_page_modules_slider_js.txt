@@ -1,9 +1,0 @@
-# https://www.joguelimpo.org.br/institucional/assets/js/page/modules-slider.js
-# status 200 application/javascript 171 bytes
-"use strict";
-
-$("#slider1,#slider2").owlCarousel({
-  items: 1,
-  nav: true,
-  navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>']
-});

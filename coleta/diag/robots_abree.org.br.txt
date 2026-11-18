@@ -1,3 +1,0 @@
-# https://abree.org.br/robots.txt
-# status ERRO  25 bytes
-<urlopen error timed out>

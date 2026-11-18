@@ -1,3 +1,0 @@
-# https://www.sistemacampolimpo.org.br/robots.txt
-# status ERRO  128 bytes
-<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>

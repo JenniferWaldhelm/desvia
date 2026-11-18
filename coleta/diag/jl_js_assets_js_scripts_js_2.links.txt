@@ -1,3 +1,0 @@
-search
-search-gone
-search-show

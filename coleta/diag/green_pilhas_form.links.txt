@@ -1,3 +1,0 @@
-https://maps.googleapis.com/maps/api/js?key=AIzaSyClWe4vI4dON0fMtTmnxxJXONNkXgkXTZE&callback=initMap&libraries=&v=weekly
-search_city
-search_state

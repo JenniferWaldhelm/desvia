@@ -1,7 +1,0 @@
-# https://overpass-api.de/robots.txt
-# status 200 text/plain 114 bytes
-User-agent: *
-Disallow: /api/
-Disallow: /munin/
-Disallow: /achavi/
-Sitemap: https://z.overpass-api.de/api/sitemap

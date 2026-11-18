@@ -1,6 +1,0 @@
-# https://www.joguelimpo.org.br/robots.txt
-# status 200 text/plain 52 bytes
-User-agent: *
-Allow: /institucional/*
-Disallow: /*
-

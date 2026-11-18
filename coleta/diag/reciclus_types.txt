@@ -1,3 +1,0 @@
-# https://reciclus.org.br/wp-json/wp/v2/types
-# status ERRO  28 bytes
-HTTP Error 401: Unauthorized

@@ -1,8 +1,0 @@
-# https://www.reciclanip.org.br/robots.txt
-# status 200 text/plain 91 bytes
-User-agent: *
-Disallow: 
-Disallow: /admin
-Disallow: /os
-Disallow: /sistema_os
-Disallow: /v2

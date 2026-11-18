@@ -1,3 +1,0 @@
-# https://abree.org.br/pontos-de-recebimento
-# status ERRO  25 bytes
-<urlopen error timed out>

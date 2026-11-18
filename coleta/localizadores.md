@@ -29,3 +29,19 @@ Anotado em 17/11/2026, na busca de Sarandi (skill desvia-localizadores). Todos f
 - Traz CNPJ de cada farmácia (redes da Abrafarma e Febrafar: Raia Drogasil, Nissei, Drogamais, Pague Menos, Hiperfarma). Endereço às vezes vem cortado.
 - O EcoMed mostra as farmácias da LogMed e mais as UBS e outras redes: usar os dois. Em Sarandi, as 3 farmácias da LogMed já tinham entrado pelo EcoMed.
 - Resultado da leitura: `coleta/logmed-cidades.csv` (cidades do Desvia, com o ID se já está na base) e `coleta/logmed-revisao.csv` (novos, para a aba Revisão).
+
+## Leitura automática (18/11/2026)
+
+Ação "Localizadores de logística reversa" (dia 21 de cada mês, ou à mão). Como cada fonte é lida em `coleta/localizadores.py`:
+
+| Fonte | Como | PR em 18/11/2026 |
+|---|---|---|
+| Reciclanip | POST `/ajax/pontos.php` com `uf=PR` → JSON do estado | 57 |
+| Green Eletron pilhas | GET `sistema.reciclelog.com.br/info/green?search_state=PR&search_city=<CIDADE>` → tabela | 97 (só as cidades da lista) |
+| Green Eletron eletroeletrônicos + ABREE | POST `green.care-br.com/busca_empresa.php` com lat/lng → JSON (3 centros: Londrina, Maringá, Apucarana) | 380 |
+| Reciclus | GET `/lista-pontos-entrega/?jsf=jet-engine:pontos-entrega-lista&tax=estado:11&pagenum=N` (PR = 11) | 716 |
+| Jogue Limpo | POST `/institucional/pevs_tratar.php` e `centrais_tratar.php` com `estado=PR` | 62 |
+| OpenStreetMap | Overpass, `amenity=recycling` e `waste_transfer_station` na região | 10 |
+| Mapa das OSCs (Ipea) | CSV da base de divulgação; filtra PR, cidades da lista, ativas, nome ou área ligados a doação, reciclagem ou meio ambiente | 91 |
+
+Fora da ação: EcoMed (robots.txt proíbe /api: só pelo navegador da Jen; as farmácias dele vêm da LogMed), LogMed (PDF), inpEV (unidade em Maringá; certificado do site incompleto), Prolata (mapa sem lista legível; tentar de novo), ANP (não há lista aberta de coletores de óleo lubrificante; procurar de novo).

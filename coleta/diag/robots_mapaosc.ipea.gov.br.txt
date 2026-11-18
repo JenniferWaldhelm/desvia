@@ -1,4 +1,0 @@
-# https://mapaosc.ipea.gov.br/robots.txt
-# status 200 text/plain 24 bytes
-User-agent: *
-Disallow:
