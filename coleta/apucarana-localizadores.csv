@@ -1,0 +1,48 @@
+programa,nome,endereco,cep,telefone,recebe,lat,lng
+Green Eletron pilhas,Casas Bahia Apucarana,"Rua Professor João Cândido Ferreira, 355, Centro",,,pilhas e baterias,,
+Green Eletron pilhas,Pernambucanas Apucarana,"Avenida Curitiba, 1121, Centro",,,pilhas e baterias,,
+Green Eletron pilhas,Droga Raia Apucarana Centro,"Avenida Curitiba, 1066, Centro",,,pilhas e baterias,,
+Green Eletron pilhas,Droga Raia Apucarana Jardim Presidente Kennedy,"Rua Doutor Oswaldo Cruz, 2225, Jardim Presidente Kennedy",,,pilhas e baterias,,
+Green Eletron pilhas,Droga Raia Apucarana Vila Ivone,"Avenida Paraná, 13, Vila Ivone",,,pilhas e baterias,,
+Green Eletron pilhas,Cidade Canção Loja 56,"Avenida Curitiba, 2256, Centro",,,pilhas e baterias,,
+Green Eletron pilhas,Sicoob Aliança,"Rua Galdino Gluck Junior, 280, Sala 201, Centro",,,pilhas e baterias,,
+Green Eletron pilhas,Sicoob PA Oswaldo Cruz,"Rua Doutor Oswaldo Cruz, 806, Centro",,,pilhas e baterias,,
+Green Eletron pilhas,Sicoob PA Avenida,"Avenida Curitiba, 1335, Centro",,,pilhas e baterias,,
+Reciclus,Amigão Apucarana,"Avenida Curitiba, 2256-A, Centro",86800-000,,lâmpadas,,
+Reciclus,Condor Loja 15,"Rua Minas Gerais, 881, Jardim Apucarana",86804-000,,lâmpadas,,
+Reciclus,Eletroluz Apucarana,"Avenida Paraná, 333, Vila Ivone",86804-340,,lâmpadas,,
+Reciclus,Jaú Elétrica e Casa,"Avenida Curitiba, 2152, Centro",86800-704,,lâmpadas,,
+Reciclus,Molicenter Apucarana,"Rua Clóvis da Fonseca, 366",86800-110,,lâmpadas,,
+Reciclus,Muffato Apucarana 60,"Avenida Minas Gerais, 385, Jardim Apucarana",86804-000,,lâmpadas,,
+Reciclus,Muffato Max Bela Vista 104,"Rua Bela Vista, 99, Santa Adélia",86802-330,,lâmpadas,,
+Reciclus,Todimo Jardim Apucarana,"Avenida Minas Gerais, 440, Jardim Apucarana",86804-000,,lâmpadas,,
+EcoMed,Droga Raia (Drogasil) Centro,"Avenida Curitiba, 1066, Centro",,,medicamentos,-23.55106,-51.45770
+EcoMed,Droga Raia (Drogasil) Vila Ivone,"Avenida Paraná, 13, Vila Ivone",,,medicamentos,,
+EcoMed,Droga Raia (Drogasil) Jardim Presidente Kennedy,"Rua Doutor Oswaldo Cruz, 2225, Jardim Presidente Kennedy",,,medicamentos,,
+EcoMed,Nissei,"Rua Galdino Gluck Junior, 197, Centro",,,medicamentos,,
+EcoMed,UBS João Marioto,"Rua Ítalo Ado Fontanini, 525, Vila Formosa",,(43) 3424-0131,medicamentos; agulhas e seringas,-23.55820,-51.45290
+EcoMed,UBS Benedito Pinga Fogo de Oliveira,"Rua Tereza Santos, 1200, Solo Sagrado",,,medicamentos; agulhas e seringas,-23.54778,-51.45679
+EcoMed,UBS Myioji Kogure,"Rua Arthur Milher, s/n, Aclimação",,,medicamentos; agulhas e seringas,-23.55987,-51.44832
+EcoMed,Unidade de Saúde da Família Dr. Romeu Milani,"Rua Oswaldo Cruz, 400, Centro",,,medicamentos; agulhas e seringas,-23.56041,-51.46055
+EcoMed,UBS Irmã Izilia Folador,"Rua Rubens de Morais, s/n, Residencial Fariz Gebrim",,,medicamentos; agulhas e seringas,-23.54788,-51.46096
+EcoMed,Núcleo de Aconselhamento Testagem e Tratamento,"Rua Jamil Soni, s/n, Centro",,(43) 3901-1066,medicamentos; agulhas e seringas,-23.54769,-51.46137
+EcoMed,UBS Mário Verussa,"Avenida Getúlio Vargas, s/n, Correia de Freitas",,,medicamentos; agulhas e seringas,-23.55044,-51.46397
+EcoMed,Escola da Gestante,"Rua Rodrigues Alves, 313, Centro",,(43) 3901-1036,medicamentos; agulhas e seringas,-23.54557,-51.45881
+EcoMed,UBS Bolívar Pavão,"Avenida Central do Paraná, s/n, Jardim América",,(43) 3308-1560,medicamentos; agulhas e seringas,-23.54921,-51.44593
+EcoMed,UBS Philipe Weckwerth,"Rua Quintino Bocaiúva, s/n, Jardim Milani",,,medicamentos; agulhas e seringas,-23.55815,-51.44463
+EcoMed,UBS Dr. Massayoshi Tatesuzi,"Rua Sebastiana Vieira Corrêa, 187, Jardim Primavera",,(43) 3308-1515,medicamentos; agulhas e seringas,-23.56480,-51.46201
+EcoMed,UBS Rodrigo Yoshii Tramontin,"Rua São Carlos, 756, Vila Apucaraninha",,(43) 3901-1052,medicamentos; agulhas e seringas,-23.54760,-51.46645
+EcoMed,UBS Valdecir de Paula,"Rua Nossa Senhora Conceição, s/n, Jardim das Flores",,,medicamentos; agulhas e seringas,-23.56703,-51.45626
+EcoMed,UBS Ana Maria Pepato,"Rua José Manoel de Oliveira, s/n, Jardim Trabalhista",,,medicamentos; agulhas e seringas,-23.55075,-51.44055
+EcoMed,UBS Walter Lazarini,"Rua Augusto Ferreira Chagas, s/n, Pirapó",,(43) 3308-1564,medicamentos; agulhas e seringas,,
+EcoMed,UBS Antônio Carlos Eisfeld Sachelli,"Avenida Aviação, s/n, Jardim Colonial",,(43) 3308-1562,medicamentos; agulhas e seringas,-23.55368,-51.43851
+EcoMed,UBS Dona Maria do Café,"Rua Emiliano Perneta, 475, Jardim Ponta Grossa",,(43) 3308-1552,medicamentos; agulhas e seringas,-23.54123,-51.44327
+EcoMed,UBS Osvaldo Damin,"Rua Rolândia, s/n, Centro",,(43) 3308-1550,medicamentos; agulhas e seringas,-23.55937,-51.47283
+EcoMed,UBS Mercedes Silva Moreno,"Rua Emílio Kretuchi, s/n, Vila Regina",,,medicamentos; agulhas e seringas,-23.54791,-51.47563
+EcoMed,UBS Emília Cretuchi Quantin,"Rua João Matiuzzi, 279, Parque Bela Vista",,(43) 3901-1068,medicamentos; agulhas e seringas,-23.53332,-51.45714
+EcoMed,UBS Ruth Eugênio da Silva,"Rua México, s/n, Vale Verde",,(43) 3901-1074,medicamentos; agulhas e seringas,-23.54003,-51.43561
+EcoMed,UBS Eunice Penharbel,"Rua Ilson Ferreira Guerra, s/n, Sumatra I",,(43) 3308-1512,medicamentos; agulhas e seringas,-23.57104,-51.47186
+EcoMed,UBS Leopoldo Hartwig Jr.,"Rua Marcílio Dias, s/n, Vila Nova",,(43) 3308-1553,medicamentos; agulhas e seringas,-23.55552,-51.42888
+EcoMed,UBS Oreste Gonçalves Marquito,"Rua Jair Fidelis Marques, s/n, Jardim Garcia",,(43) 3308-1525,medicamentos; agulhas e seringas,-23.54415,-51.43020
+EcoMed,UBS Eros Pacheco,"Rua Guapuruvu, s/n, Afonso Camargo",,,medicamentos; agulhas e seringas,-23.52882,-51.45766
+EcoMed,UBS Júlia Renczkowski,"Rua Ibaté, s/n, Marcos Freire",,,medicamentos; agulhas e seringas,-23.53938,-51.43147

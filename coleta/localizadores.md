@@ -10,3 +10,14 @@ Anotado em 17/11/2026, na busca de Sarandi (skill desvia-localizadores). Todos f
 | Green Eletron, eletroeletrônicos (inclui pontos ABREE) | https://greeneletron.org.br/onde-descartar/ | Busca por endereço (Google Maps) e `POST https://green.care-br.com/busca_empresa.php`. Lista lateral com nome, endereço, CEP e distância. | Pontos da ABREE aparecem com "- Abree" no nome. |
 | Reciclus (lâmpadas) | https://reciclus.org.br/lista-pontos-entrega/ | Select `estado` (PR) carrega o select `cidade` (Sarandi = 319). A lista aparece como texto (nome, endereço, CEP). | |
 | inpEV (embalagens de agrotóxico) | https://www.inpev.org.br | Não lido: a unidade da região fica em Maringá (regra da sede). | Na página da cidade, só orientação e botão. |
+
+## Atualização em 18/11/2026 (Apucarana)
+
+- Reciclanip: `POST /ajax/pontos.php` com corpo `uf=PR` devolve JSON (razao_social, nome_comercial, endereco, cidade, cep, telefone). Em 18/11/2026: 57 pontos no PR, nenhum em Apucarana. Dá para pôr na ação do GitHub.
+- Reciclus: Apucarana = código 180 no select `cidade`; 8 pontos.
+- Green Eletron pilhas (reciclelog): `search_city=APUCARANA`, 9 pontos.
+- EcoMed: depois de buscar a cidade, a lista fica nas props do React (procurar no fiber de qualquer elemento um array com `latitude` e `address`); 30 pontos (UBS e farmácias). Coordenadas -23.55000, -51.46350 repetidas = centro da cidade, não usar.
+- Jogue Limpo (PEVs, PR): nenhum em Apucarana.
+- inpEV: página de unidades deu erro no navegador em 18/11/2026.
+- Prolata: o mapa do Brasil não abriu a lista do PR pelo clique; não lido.
+- Resultado salvo em `coleta/apucarana-localizadores.csv`.
