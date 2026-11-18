@@ -49,8 +49,14 @@ def chave_rua(end):
     return (pal[0] if pal else "", num.group(1) if num else "")
 
 
-def tokens(nome):
-    return {w for w in re.findall(r"[A-Z0-9]{3,}", n(nome)) if w not in {"LTDA", "LOJA", "FILIAL", "COMERCIO", "PARANA", "SUPERMERCADOS", "FARMACIA"}}
+GENERICOS = {"LTDA", "LOJA", "FILIAL", "COMERCIO", "PARANA", "SUPERMERCADO", "SUPERMERCADOS", "FARMACIA", "FARMACIAS",
+             "DROGARIA", "CASAS", "MAGAZINE", "ABREE", "ATACADO", "CENTRO", "MATERIAIS", "ELETRICOS", "SECRETARIA",
+             "MUNICIPAL", "PREFEITURA", "ASSOCIACAO", "AVENIDA", "RUA", "UNIDADE", "AGENCIA", "POSTO", "AUTO"}
+
+
+def tokens(nome, cidade=""):
+    fora = GENERICOS | set(n(cidade).split())
+    return {w for w in re.findall(r"[A-Z0-9]{3,}", n(nome)) if w not in fora}
 
 
 def ler_receita(pasta, cidades):
@@ -130,8 +136,12 @@ def main():
                 rk = chave_rua(l["Endereço"])
                 achado = next((p for p in por_rua.get(rk, []) if rk[1]), None)
             if not achado:
-                tk = tokens(l["Nome"])
-                achado = next((p for p in b if tk and len(tk & tokens(p["Nome"])) >= max(2, len(tk) - 1)), None)
+                # pelo nome: aceita se só um ponto da cidade divide uma palavra marcante (5+ letras) com o nome;
+                # rede com várias lojas na cidade (Raia, Nissei) precisa do endereço
+                tk = {w for w in tokens(l["Nome"], cid) if len(w) >= 5}
+                parecidos = [p for p in b if tk & {w for w in tokens(p["Nome"], cid) if len(w) >= 5}]
+                if len(parecidos) == 1:
+                    achado = parecidos[0]
             palavra = RESIDUO_SITE.get(l["Resíduo"])
             if achado:
                 if palavra and palavra not in achado["Resíduos aceitos"].lower():
