@@ -42,12 +42,19 @@ jobs:
           MUNICIPIO: ${{ inputs.municipio }}
         run: python3 coleta/conferir_licencas.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY" || echo "Conferência falhou; rodar a ação Conferir licenças"
 
+      - name: Preparar revisão (checagens e nota de confiança)
+        env:
+          MUNICIPIO: ${{ inputs.municipio }}
+        run: |
+          pip install -q shapely
+          python3 coleta/preparar.py "$MUNICIPIO" | tee -a "$GITHUB_STEP_SUMMARY" || echo "Preparação falhou"
+
       - name: Salvar resultado
         env:
           MUNICIPIO: ${{ inputs.municipio }}
         run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
-          git add coleta/*-receita.csv coleta/*-receita-resumo.md
+          git add coleta/*-receita.csv coleta/*-receita-resumo.md coleta/*-revisao.csv coleta/*-revisao-resumo.md
           git diff --cached --quiet || git commit -m "Receita: empresas de resíduo em $MUNICIPIO"
           git pull --rebase -q && git push
