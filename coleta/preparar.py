@@ -30,7 +30,7 @@ CACHE = Path("/tmp/geojs-41-mun.json")
 PONTOS = ["ID", "Nome", "CNPJ", "Tipo de ponto", "Serviço", "Resíduos aceitos", "Classe NBR 10004", "Endereço",
           "Município sede", "Lat", "Lng", "Municípios atendidos", "Órgão licença", "Tipo licença", "Nº licença",
           "Validade licença", "Status licença (auto)", "Telefone", "Site/rede", "Fonte", "Data verificação", "Obs"]
-DECISAO = ["Confiança", "Por quê", "Funciona?", "Recebe do público?", "Nota da Jen"]
+DECISAO = ["Confiança", "Por quê", "Funciona?", "Recebe resíduo?", "Nota da Jen"]
 EXTRA = ["Atividades (original)", "Situação CNPJ", "Origem"]
 PREFIXO = {"londrina": "LDA", "mandaguari": "MGI", "ibipora": "IBI", "maringa": "MGA", "rolandia": "ROL",
            "cambe": "CAM", "apucarana": "APU", "sarandi": "SAR", "arapongas": "ARA", "marialva": "MRV",
@@ -279,10 +279,12 @@ def principal(cidade):
             motivos.append("resíduo não identificado: escrever à mão")
         if c["Tipo licença"] and c["Tipo licença"].upper() in FORTES_LIC:
             v = data(c["Validade licença"])
-            pts += 2 if v and v >= HOJE else 1
             motivos.append(f"licença {c['Tipo licença']} {'válida' if v and v >= HOJE else 'vencida'}")
             if c["Tipo licença"].upper() in ("LP", "LI", "LI-A"):
+                pts -= 1
                 motivos.append("só LP/LI: ainda não pode funcionar")
+            else:
+                pts += 2 if v and v >= HOJE else 1
         elif c.get("_ctf"):
             pts += 1
             motivos.append("só CTF/IBAMA")
@@ -329,7 +331,7 @@ def principal(cidade):
         w = csv.DictWriter(f, fieldnames=DECISAO + PONTOS + EXTRA, extrasaction="ignore")
         w.writeheader()
         for c in saida:
-            w.writerow({**c, "Funciona?": "", "Recebe do público?": "", "Nota da Jen": ""})
+            w.writerow({**c, "Funciona?": "", "Recebe resíduo?": "", "Nota da Jen": ""})
 
     n = Counter(c["Confiança"] for c in saida)
     resumo = [f"# {cidade}: candidatos para revisão ({HOJE:%d/%m/%Y})", "",
