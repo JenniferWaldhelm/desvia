@@ -151,7 +151,11 @@ def tipo_servico(texto):
     return "Tratamento/destinação final", "Destinação final"
 
 
+_FEATS = None
+
+
 def poligono(cidade):
+    global _FEATS
     try:
         from shapely.geometry import shape
     except ImportError:
@@ -160,7 +164,9 @@ def poligono(cidade):
         if not CACHE.exists():
             req = urllib.request.Request(GEOJSON, headers={"User-Agent": "Desvia/1.0"})
             CACHE.write_bytes(urllib.request.urlopen(req, timeout=60).read())
-        for f in json.loads(CACHE.read_text(encoding="utf-8"))["features"]:
+        if _FEATS is None:
+            _FEATS = json.loads(CACHE.read_text(encoding="utf-8"))["features"]
+        for f in _FEATS:
             if norm(f["properties"].get("name", "")) == norm(cidade):
                 return shape(f["geometry"])
     except Exception as e:  # noqa: BLE001
