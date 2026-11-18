@@ -1,4 +1,4 @@
-# Mandaguari: coleta automática em 17/11/2026
+# Mandaguari: coleta automática em 18/11/2026
 
 - Licenças do IAT no município: 1294
 - Empresas de resíduos no IAT: 16
