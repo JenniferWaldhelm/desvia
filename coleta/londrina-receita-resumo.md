@@ -1,0 +1,103 @@
+# Londrina: empresas de resíduo na Receita Federal (18/11/2026)
+
+- Base: dados abertos do CNPJ, pasta 2026-11
+- Ativas com atividade de resíduo: 707 (já na base: 55; novas: 652)
+- Novas com a atividade de resíduo como principal: 259
+- Pessoa física/MEI entre as novas: 267
+- Descartadas por CNAE fraco sem nome de resíduo: 7774
+- Não ativas (fora da lista): Baixada 5681, Inapta 1803, Nula 10, Suspensa 22
+
+Lista completa em londrina-receita.csv. Conferir com a Jen antes de gravar na planilha.
+
+## Licenças (conferido em 18/11/2026)
+
+- IAT por CNPJ: 707 consultados, 546 registros de licença
+- Novas com licença no IAT: 84 (só AA: 1; vencidas: 51)
+- Novas com inscrição de resíduos no CTF/IBAMA: 17
+- Novas sem licença nem CTF: 558
+
+Com licença no IAT:
+- Vasilhames Moura Ltda (00.967.784/0001-21): DLAE 224792 até 12/03/2031
+- Vgb Conservacao De Rodovias Ltda (01.208.709/0001-40): AA 21451 até 06/12/2008
+- Plastperola Industria E Comercio De Plasticos Ltda (01.339.015/0001-41): RLO 178903 até 08/04/2025
+- Cobrao Comercio De Sucata De Metais Ltda (03.293.219/0001-14): DLAE 123175 até 05/04/2023
+- Mundial - Industria E Comercio De Tubos E Conexoes Ltda Falido (03.517.774/0001-82): RLO 5088 até 27/09/2008
+- Perez Comercio De Papeis Usados Ltda (03.645.484/0001-14): RLO 178902 até 08/04/2025
+- Adriana Maria Andrade Dos Santos (03.777.970/0001-96): DLAE 291531 até 09/03/2033
+- Axial Solucoes Em Pavimentacao Ltda (04.427.195/0001-01): DLAE 306977 até 05/10/2033
+- Bomba & Bacili Ltda (04.483.878/0001-86): DLAE 343316 até 10/03/2035
+- Lucienne Souza Maximiano (04.580.902/0001-03): DLAE 213549 até 14/12/2030
+- Recimag Industria E Comercio De Embalagens Ltda (04.945.206/0001-45): RLO 8324 até 04/04/2017
+- Ms Motos Comercio De Pecas Ltda (05.054.365/0001-12): RLO 7545 até 20/06/2010
+- Gmtex Industria E Comercio Ltda (05.556.563/0001-84): LO 332862 até 08/10/2028
+- K M P Industria E Comercio De Plasticos Ltda (05.754.606/0001-36): DLAE 182790 até 02/06/2030
+- Atual Industria E Comercio De Confeccoes Ltda (05.768.567/0001-26): DLAE 107042 até 15/12/2021
+- Construtora Zancheta Ltda (06.253.325/0001-62): DLAE 120816 até 27/01/2023
+- Ldo Comercio De Metais Ltda (06.315.663/0001-81): LI 7237 até 29/08/2009
+- L.C. Grillo & Cia Ltda (07.498.679/0001-30): RLO 249071 até 03/08/2025
+- M S Higashi & Cia Ltda (07.507.210/0001-10): RLO 248517 até 28/07/2026
+- Republica Da Sucata - Comercio De Sucatas Ltda (07.552.794/0001-45): RLO 123280 até 10/05/2021
+- Kurica Ambiental S/A (07.706.588/0001-42): LI 7851 até 03/02/2011
+- Masironi & Nascimento Ltda. (08.164.119/0001-01): DLAE 183492 até 14/06/2030
+- Romaliga Industria E Comercio De Ligas Metalicas Ltda (08.995.891/0001-75): LO 202748 até 21/09/2025
+- Jose Antonio Pinha - Cacambas (09.565.667/0001-06): RLO 114998 até 18/08/2021
+- Ambiental Produtos E Servicos Ltda (10.234.206/0001-30): RLO 18890 até 15/01/2018
+- E Basilio De Oliveira E Oliveira Ltda (11.272.918/0001-06): DLAE 129944 até 31/07/2023
+- Cooperativa De Trabalho De Catadores De Materiais Reciclaveis E De Residuos Solidos Da Regiao Metropolitana De Londrina - Cooper Regiao (11.334.167/0001-05): RLO 21507 até 01/06/2019
+- Transmestre Transporte Ltda (11.580.058/0001-78): LAS 166881 até 17/09/2023
+- J.V.S. Ferro Velho Ltda (11.657.439/0001-08): DLAE 208533 até 14/10/2030
+- A L Locacao Ltda (11.667.591/0001-71): RLAS 182476 até 28/05/2024
+- Wilana Embalagens Ltda (11.968.598/0001-23): LO 326489 até 25/07/2029
+- Imuninseto Controle De Pragas E Servicos Tecnicos Ltda (12.127.976/0001-09): DLAE 146921 até 03/08/2024
+- Engeope - Servicos, Maquinas E Operacoes Ltda. (12.323.001/0001-56): LI 20561 até 01/12/2017
+- Cooperativa De Trabalho Dos Profissionais Da Reciclagem De Londrina (Coo-Cepeve) (13.403.158/0001-54): RLAS 243805 até 24/06/2026
+- Femin Industria E Comercio De Madeiras Ltda (14.391.128/0001-38): LP 105405 até 26/10/2017
+- M. R. Morgan Comercial E Servicos Ltda (14.616.909/0001-83): DLAE 109335 até 18/03/2022
+- Sos Cacambas Ltda (15.174.306/0001-31): LO 34146 até 19/04/2022
+- Imagem Plast Ambiental Recicladora Ltda (17.327.421/0001-24): LP 36963 até 25/04/2016
+- Cleiton Carlos Leite (17.964.220/0001-38): DLAE 122763 até 27/03/2023
+- Alamax Comercio De Cavacos De Madeira Ltda (18.217.202/0001-55): DLAE 268670 até 29/04/2032
+- Txo Systems Comercio De Equipamentos Para Infraestrutura De Telecomunicacao Do Brasil Ltda. (18.276.508/0001-82): DLAE 160802 até 14/05/2025
+- Lavol Prestadora De Servicos Ltda (18.534.258/0001-33): LAS 169572 até 29/10/2024
+- Coopermudanca Cooperativa Dos Catadores De Materiais Reciclaveis De Londrina (19.452.012/0001-85): LAS 1992 até 31/03/2018
+- Vitorio & Camargo Ltda (20.101.950/0001-10): DLAE 221209 até 18/02/2031
+- Claudecir Bortoli - Terraplanagem (20.138.750/0001-31): DLAE 102327 até 01/08/2021
+- Transportes Vitorelli Ltda (20.279.918/0001-29): DLAE 340448 até 27/01/2035
+- Cooperativa Dos Catadores De Materiais Reciclaveis E De Residuos Da Regiao Norte De Londrina (21.656.529/0001-38): LAS 4172 até 01/10/2020
+- V.C. Cacambas Ltda (21.792.052/0001-18): LAS 3316 até 10/06/2019
+- Ecorecin - Cooperativa De Coleta De Materiais Reciclaveis E Reutilizaveis (21.923.508/0001-31): LAS 255138 até 06/10/2026
+- For You Pizzaria & Hamburgeria Ltda (22.206.063/0001-31): RLAS 267316 até 07/04/2027
+- R.J Fiuza Coletas Ltda (22.543.249/0001-86): RLAS 270088 até 19/05/2027
+- 23.335.111 Daniel Arlindo (23.335.111/0001-54): DLAE 216799 até 15/01/2031
+- Mixterra - Terraplenagem Ltda. (24.751.330/0001-87): DLAE 299482 até 03/07/2033
+- Estrella Dedetizacao E Desentupidora Ltda (25.275.452/0001-07): DLAE 152826 até 17/11/2024
+- Pe Vermelho Ambiental Consultoria, Assessoria Ambiental E Civil Ltda (25.333.730/0001-35): DLAE 138690 até 20/02/2024
+- Arena Metais Comercio De Ferragens Ltda (26.005.849/0001-41): DLAE 312498 até 30/12/2033
+- Maklon Instalacao E Manutencao Eletrica Ltda (26.142.421/0001-40): DLAE 146109 até 20/07/2024
+- Desentupidora M 3 Ltda (29.049.622/0001-96): DLAE 329161 até 23/08/2034
+- Oleobras Residuos Industriais Ltda (29.274.345/0001-15): DLAE 145597 até 12/07/2024
+- Zandona Cacambas Ltda (29.555.757/0001-23): DLAE 300893 até 20/07/2033
+- Filipe Lourenco Bentlin - Transporte (30.941.057/0001-56): DLAE 300169 até 11/07/2033
+- D De O L Da Silva Embalagens De Madeira (32.121.807/0001-79): DLAE 318765 até 10/04/2034
+- A Impecavel Desentupidora Ltda (32.670.195/0001-73): DLAE 322231 até 28/05/2034
+- Agnaldo Laranjeira Tratamento De Residuo Organico (35.108.402/0001-99): LAS 160230 até 10/06/2023
+- Eaq Exacty Ltda (37.651.891/0001-56): DLAE 186791 até 22/07/2030
+- V. N. Terraplanagem Ltda (39.281.222/0001-65): DLAE 299502 até 03/07/2033
+- Oziel Hidro Desentupimento E Solucoes Hidraulicas Ltda (40.663.805/0001-30): DLAE 322439 até 31/05/2034
+- Gael Engenharia Ltda (43.228.739/0001-68): DLAE 269599 até 12/05/2032
+- J S Ambiental Coleta De Residuos Ltda (44.070.239/0001-03): LAS 295092 até 08/05/2026
+- Isa Ambiental Parana Ltda (46.328.007/0001-38): DLAE 269709 até 15/05/2032
+- Betel Ambiental Comercio De Sucatas Ltda (48.534.811/0001-07): DLAE 285038 até 22/11/2032
+- Polim-Agri Agricola Ltda (72.413.115/0002-08): DLAE 265077 até 08/03/2032
+- Ager - Comercio De Produtos Agricolas Ltda (73.402.695/0001-01): DILA 13648 até 15/10/2020
+- Auto Ferro Velho Brasilia Ltda (76.794.031/0001-23): RLO 178905 até 08/04/2025
+- Odebrecht Comercio E Industria De Cafe Ltda (78.597.150/0001-11): RLO 224045 até 18/03/2024
+- Odebrecht Comercio E Industria De Cafe Ltda (78.597.150/0002-00): RLO 196121 até 18/08/2023
+- Transmendes Transportes De Entulhos Ltda (78.697.414/0001-09): LP 27182 até 22/06/2012
+- Transcardoso Ltda (79.112.645/0001-76): LAS 298209 até 20/06/2028
+- Vergoti Comercio De Metais Ltda (81.709.800/0001-88): DLAE 165762 até 28/07/2025
+- Silvano Aparecido De Angelo Ltda (81.888.968/0001-06): DLAE 319035 até 15/04/2034
+- Ucelo S/A (82.316.621/0003-05): LP 326514 até 25/07/2026
+- Recalon - Comercio E Recauchutagem De Pneus Ltda (84.966.589/0001-77): RLO 211045 até 17/11/2024
+- Joao Leonardo Dos Santos (86.997.004/0001-01): DLAE 291883 até 15/03/2033
+- Fazfertil Produtos Agropecuarios Ltda (95.419.123/0001-78): RLO 257738 até 04/11/2025
