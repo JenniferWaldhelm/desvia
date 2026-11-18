@@ -224,9 +224,11 @@ def main():
         na_base = {re.sub(r"[^0-9A-Za-z]", "", r.get("CNPJ", "")).upper() for r in csv.DictReader(open(p, encoding="utf-8"))}
 
     linhas, fora_nome = [], 0
-    for a in sorted(achados, key=lambda x: x["cnpj"]):
-        rf = receita(a["cnpj"])
-        time.sleep(0.5)
+    ordem = sorted(achados, key=lambda x: x["cnpj"])
+    # Consultas em paralelo: cidades grandes (Londrina) têm milhares de CNPJs
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        dados_rf = list(ex.map(lambda a: receita(a["cnpj"]), ordem))
+    for a, rf in zip(ordem, dados_rf):
         nome = rf["razao"] or a["fantasia"]
         if not a["fortes"] and not NOME_RESIDUO.search(f"{nome} {a['fantasia']}"):
             fora_nome += 1
