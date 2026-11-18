@@ -457,7 +457,7 @@
   });
   document.querySelectorAll('[data-ajuda]').forEach(function (b) { b.addEventListener('click', passo1); });
 
-  document.getElementById('limpar').addEventListener('click', function () {
+  function limparTudo() {
     estado = { q: '', p: 'todos', cat: null, lic: false, loc: false, cid: '', fora: {} };
     document.getElementById('q').value = ''; mostraX();
     document.getElementById('fLic').checked = false;
@@ -465,6 +465,9 @@
     if (selCidade) selCidade.value = '';
     document.querySelectorAll('#seg button').forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.p === 'todos' ? 'true' : 'false'); });
     render();
+  }
+  document.querySelectorAll('[data-limpar]').forEach(function (b) {
+    b.addEventListener('click', limparTudo);
   });
   lista.addEventListener('click', function (e) {
     if (e.target.closest('[data-mais]')) { limite += POR_PAGINA; render(true); return; }
