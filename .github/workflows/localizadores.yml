@@ -1,0 +1,47 @@
+name: Localizadores de logística reversa
+
+# Uma vez por mês lê os localizadores (Reciclanip, Green Eletron, ABREE, Reciclus, Jogue Limpo),
+# o OpenStreetMap e o Mapa das OSCs para o Paraná e grava coleta/localizadores-pr.csv.
+# Depois prepara a revisão de cada cidade (coleta/preparar_localizadores.py). Não altera o site.
+on:
+  workflow_dispatch:
+    inputs:
+      cidades:
+        description: "Cidades (separadas por vírgula). Vazio = todas da lista"
+        required: false
+  schedule:
+    - cron: "37 8 21 * *"   # dia 21, 5h37 em Brasília (depois do arquivo mensal da Receita)
+
+permissions:
+  contents: write
+
+jobs:
+  ler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Ler localizadores
+        env:
+          CIDADES: ${{ inputs.cidades }}
+        run: |
+          set -o pipefail
+          IFS=',' read -ra C <<< "$CIDADES"
+          python3 coleta/localizadores.py "${C[@]}" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Preparar revisão por cidade
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pip install -q shapely
+          gh release download receita-pr -D /tmp/receita-pr || true
+          if [ -f coleta/preparar_localizadores.py ]; then RECEITA_PR=/tmp/receita-pr python3 coleta/preparar_localizadores.py | tee -a "$GITHUB_STEP_SUMMARY" || echo "Preparação falhou"; fi
+      - name: Salvar
+        run: |
+          git config user.name "Desvia (automático)"
+          git config user.email "actions@users.noreply.github.com"
+          git add coleta
+          git diff --cached --quiet || git commit -m "Localizadores do mês"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 10; done
