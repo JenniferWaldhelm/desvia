@@ -118,8 +118,18 @@
 
   function sugestoes() {
     var ids = (estado.qcats && estado.qcats.length ? estado.qcats : []).slice(0, 4);
-    var html = '<p class="vazio">Não encontramos <b>' + esc(estado.q || 'resultados') + '</b>' +
-      (estado.cid || estado.cat || estado.lic || estado.loc || estado.p !== 'todos' ? ' com esses filtros.' : ' nesta cidade.') + '</p>';
+    var nomeCidade = estado.cid ? (window.DESVIA_CIDADES || {})[estado.cid] || estado.cid : '';
+    var onde = nomeCidade ? ' em <b>' + esc(nomeCidade) + '</b>' : '';
+    var busca = estado.q ? ' <b>' + esc(estado.q) + '</b>' : '';
+    var extra = (estado.cat || estado.lic || estado.loc || estado.p !== 'todos') ? ' com esses filtros' : '';
+    var html = '<p class="vazio">Não encontramos' + busca + onde + (extra || (!estado.cid && !estado.q ? ' nesta cidade' : '')) + '.</p>';
+    // Se filtrou por cidade e há resultado sem o filtro de cidade, sugere ampliar
+    if (estado.cid && !estado.q) {
+      var nSemCidade = PONTOS.filter(function (p) {
+        return (!estado.cat || p.c.indexOf(estado.cat) >= 0) && (!estado.p || estado.p === 'todos' || p.pp.indexOf(estado.p) >= 0);
+      }).length;
+      if (nSemCidade > 0) html += '<p class="vazio">Mas encontramos <b>' + nSemCidade + '</b> ' + (nSemCidade === 1 ? 'local' : 'locais') + ' em outras cidades. <button type="button" class="chip" data-ampliar="1">Ver tudo</button></p>';
+    }
     if (ids.length) html += '<p class="vazio">Isso costuma ir para: ' + ids.map(function (c) {
       return '<button type="button" class="chip" data-sug="' + c + '">' + esc(CATS[c]) + '</button>'; }).join(' ') + '</p>';
     html += '<p class="vazio">Veja todos os tipos: ' + Object.keys(CATS).map(function (c) {
@@ -471,6 +481,9 @@
   });
   lista.addEventListener('click', function (e) {
     if (e.target.closest('[data-mais]')) { limite += POR_PAGINA; render(true); return; }
+    if (e.target.closest('[data-ampliar]')) {
+      estado.cid = ''; if (selCidade) selCidade.value = ''; render(); return;
+    }
     var sg = e.target.closest('[data-sug]');
     if (sg) { estado.q = ''; document.getElementById('q').value = ''; estado.cat = sg.dataset.sug; render(); return; }
     var b = e.target.closest('[data-ver]'); if (b) destacar(b.dataset.ver, true);
