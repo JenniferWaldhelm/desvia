@@ -1,0 +1,23 @@
+name: Procurar sites das empresas
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sites:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download receita-pr -D /tmp/receita-pr
+          RECEITA_PR=/tmp/receita-pr python3 coleta/sites.py | tee -a "$GITHUB_STEP_SUMMARY"
+          git config user.name "Desvia (automático)"
+          git config user.email "actions@users.noreply.github.com"
+          git add coleta/sites-revisao.csv
+          git diff --cached --quiet || git commit -m "Sites das empresas da revisão"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 15; done

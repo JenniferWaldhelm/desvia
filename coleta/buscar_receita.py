@@ -171,6 +171,7 @@ def linha_estab(l, mun=None):
                     + (f", {l[17]}" if l[17] else ""),
         "cep": l[18], "telefone": f"({l[21]}) {l[22]}" if l[21] and l[22] else "",
         "municipio": (mun or {}).get(l[20], l[20]),
+        "email": (l[27] if len(l) > 27 else "").strip().lower(),
     }
 
 
@@ -193,7 +194,7 @@ def filtrar_arquivo(url, i, cods, mun=None):
     return achados, outras
 
 
-CAMPOS_PR = ["cnpj", "fantasia", "situacao", "inicio", "principal", "fortes", "fracos", "endereco", "cep", "telefone", "municipio"]
+CAMPOS_PR = ["cnpj", "fantasia", "situacao", "inicio", "principal", "fortes", "fracos", "endereco", "cep", "telefone", "municipio", "email"]
 
 
 def baixar_pr(destino):

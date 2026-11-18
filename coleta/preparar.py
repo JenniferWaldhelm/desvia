@@ -152,6 +152,7 @@ def tipo_servico(texto):
 
 
 _FEATS = None
+SITES = {}
 
 
 def poligono(cidade):
@@ -172,6 +173,39 @@ def poligono(cidade):
     except Exception as e:  # noqa: BLE001
         print(f"Limite do município indisponível: {e}", file=sys.stderr)
     return None
+
+
+GRATIS = {"gmail.com", "hotmail.com", "outlook.com", "yahoo.com", "yahoo.com.br", "bol.com.br", "uol.com.br", "terra.com.br",
+          "live.com", "icloud.com", "ig.com.br", "globo.com", "msn.com", "hotmail.com.br", "outlook.com.br", "r7.com", "zipmail.com.br"}
+
+
+def sites_da_receita():
+    """CNPJ -> site provável (domínio do e-mail na Receita, se não for e-mail gratuito nem de contador)."""
+    import gzip
+    pasta = Path(__import__("os").environ.get("RECEITA_PR", "") or "/nao")
+    arq = pasta / "receita-pr.csv.gz"
+    if not arq.exists():
+        return {}
+    out = {}
+    with gzip.open(arq, "rt", encoding="utf-8", newline="") as f:
+        for a in csv.DictReader(f):
+            e = (a.get("email") or "").lower()
+            dom = e.split("@", 1)[1] if "@" in e else ""
+            if dom and dom not in GRATIS and not re.search(r"contab|contador|escritorio|assessoria|cont\.", dom):
+                out[a["cnpj"]] = dom
+    return out
+
+
+def site_no_ar(dom):
+    for url in (f"https://{dom}", f"https://www.{dom}"):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Desvia/1.0 (+https://desvia.eco.br/)"})
+            with urllib.request.urlopen(req, timeout=8) as r:
+                if r.status < 400:
+                    return url
+        except Exception:  # noqa: BLE001
+            continue
+    return ""
 
 
 def melhor_licenca(linhas):
@@ -263,6 +297,8 @@ def principal(cidade):
             if candidatos.pop(digitos(r["CNPJ"]), None):
                 fora["recusado antes pela Jen"] += 1
 
+    global SITES
+    SITES = sites_da_receita()
     pol = poligono(cidade)
     coords = Counter((c["Lat"], c["Lng"]) for c in candidatos.values() if c["Lat"])
     ends = defaultdict(list)
@@ -302,6 +338,12 @@ def principal(cidade):
         if NOME_RESIDUO.search(norm(c["Nome"])):
             pts += 1
             motivos.append("nome indica resíduo")
+        dom = SITES.get(cnpj, "")
+        site = site_no_ar(dom) if dom else ""
+        if site:
+            pts += 1
+            c["Site/rede"] = c.get("Site/rede") or site
+            motivos.append(f"tem site ({site.split('//')[1]})")
         if c["Telefone"]:
             pts += 1
         else:
