@@ -1,0 +1,14 @@
+# Localizadores: revisão por cidade (18/11/2026)
+
+- **Londrina**: 201 nos localizadores; novos 127 (Mapa das OSCs 59, Reciclus 39, Green Eletron 25, OpenStreetMap 3, ABREE 1); acrescentar resíduo 50; já na base 17
+- **Maringá**: 57 nos localizadores; novos 18 (Reciclus 11, Jogue Limpo 4, Green Eletron 2, ABREE 1); acrescentar resíduo 12; já na base 27
+- **Apucarana**: 28 nos localizadores; novos 22 (Mapa das OSCs 8, Green Eletron 7, Reciclus 6, ABREE 1); acrescentar resíduo 2; já na base 3
+- **Arapongas**: 30 nos localizadores; novos 28 (Green Eletron 11, Reciclus 7, Mapa das OSCs 7, ABREE 3); acrescentar resíduo 1; já na base 0
+- **Rolândia**: 7 nos localizadores; novos 3 (Reciclus 3); acrescentar resíduo 2; já na base 2
+- **Cambé**: 14 nos localizadores; novos 8 (Green Eletron 4, Reciclus 3, ABREE 1); acrescentar resíduo 1; já na base 5
+- **Cambira**: 2 nos localizadores; novos 2 (Mapa das OSCs 2); acrescentar resíduo 0; já na base 0
+- **Ibiporã**: 8 nos localizadores; novos 2 (Green Eletron 1, OpenStreetMap 1); acrescentar resíduo 1; já na base 5
+- **Mandaguari**: 12 nos localizadores; novos 10 (Mapa das OSCs 4, Green Eletron 3, Reciclus 3); acrescentar resíduo 0; já na base 2
+- **Jandaia do Sul**: 12 nos localizadores; novos 12 (Mapa das OSCs 5, Green Eletron 2, ABREE 2, Reciclus 2, Reciclanip 1); acrescentar resíduo 0; já na base 0
+- **Marialva**: 14 nos localizadores; novos 14 (Green Eletron 4, Mapa das OSCs 4, ABREE 3, Reciclus 2, OpenStreetMap 1); acrescentar resíduo 0; já na base 0
+- **Sarandi**: 20 nos localizadores; novos 4 (ABREE 2, Mapa das OSCs 2); acrescentar resíduo 1; já na base 14
