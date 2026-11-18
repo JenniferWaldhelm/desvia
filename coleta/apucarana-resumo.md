@@ -1,15 +1,14 @@
-# Apucarana: coleta automática em 11/11/2026
+# Apucarana: coleta automática em 18/11/2026
 
-- Licenças do IAT no município: 266
-- Empresas de resíduos no IAT: 26
+- Licenças do IAT no município: 4284
+- Empresas de resíduos no IAT: 70
 - Empresas de resíduos no CTF/IBAMA: 31
-- Total (sem repetição): 31
-- Já na base: 1
-- Novas: 30
-- CNPJ não ativo na Receita: 2
+- Total (sem repetição): 87
+- Já na base: 6
+- Novas: 81
+- CNPJ não ativo na Receita: 20
 
-- IAT: consulta pelo município falhou (The read operation timed out); usando os CNPJs conhecidos
-- IAT por CNPJ: 31 CNPJs consultados, 266 licenças achadas
+- IAT: consulta direta, 4284 registros
 
 ## Diagnóstico CTF
 
