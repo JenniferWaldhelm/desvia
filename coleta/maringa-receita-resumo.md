@@ -1,0 +1,131 @@
+# Maringá: empresas de resíduo na Receita Federal (18/11/2026)
+
+- Base: dados abertos do CNPJ, pasta 2026-11
+- Ativas com atividade de resíduo: 627 (já na base: 39; novas: 588)
+- Novas com a atividade de resíduo como principal: 240
+- Pessoa física/MEI entre as novas: 209
+- Descartadas por CNAE fraco sem nome de resíduo: 7433
+- Não ativas (fora da lista): Baixada 4590, Inapta 1367, Nula 7, Suspensa 30
+
+Lista completa em maringa-receita.csv. Conferir com a Jen antes de gravar na planilha.
+
+## Licenças (conferido em 18/11/2026)
+
+- IAT por CNPJ: 627 consultados, 449 registros de licença
+- Novas com licença no IAT: 112 (só AA: 6; vencidas: 45)
+- Novas com inscrição de resíduos no CTF/IBAMA: 17
+- Novas sem licença nem CTF: 470
+
+Com licença no IAT:
+- Ferro Velho Do Polaco Ltda (00.103.136/0001-27): RLO 208079 até 09/10/2026
+- Hospitalav Do Brasil Ltda (00.942.435/0001-55): RLO 267389 até 08/04/2027
+- Recicladora Maranata Ltda (01.111.664/0001-90): LASR 339669 até 15/01/2029
+- Transpanorama Transportes S.A. (01.937.440/0001-32): RLO 256273 até 25/10/2027
+- V. L. Mendes Ltda (02.288.639/0001-40): RLAS 334579 até 29/10/2027
+- J M Galheira & Galheira Ltda (02.388.917/0001-30): LAS 31067 até 20/04/2017
+- Extracon Mineracao E Obras S.A. (02.539.384/0001-40): RLO 138045 até 07/03/2022
+- Borrachas Xetal - Comercio E Reciclagem Ltda. (02.999.391/0001-25): RLO 317800 até 27/03/2030
+- Paviservice Engenharia E Servicos Ltda (03.210.810/0008-37): LP 297268 até 06/06/2024
+- Domingues Comercio De Metais Ltda (03.336.686/0001-84): LP 35829 até 11/12/2014
+- Cib Mineracao Ltda (03.816.593/0001-57): RLO 8699 até 04/12/2025
+- Plamasul Empreendimentos Imobiliarios Ltda (03.821.103/0001-00): LP 336256 até 19/11/2026
+- Demotay Servicos E Manutencao Ltda (03.894.550/0001-90): DLAE 300350 até 12/07/2033
+- Pinheiro & Drigo Ltda (04.034.961/0001-78): DLAE 116614 até 29/09/2022
+- Voidelo Comercio De Aparas Ltda (04.087.322/0001-70): LAS 283087 até 24/10/2028
+- Auto Fossa E Desentupidora Everest Ltda (04.274.219/0001-30): DLAE 292328 até 22/03/2033
+- Espildora De Barros Ltda (04.490.069/0001-00): AA 24086 até 07/04/2010
+- Valdemar Fais - Locacao De Maquinas - Ltda (04.781.941/0001-60): AA 23667 até 27/02/2010
+- Entec Locacoes Ltda (05.079.229/0001-87): AA 23673 até 02/03/2010
+- Semix Comercio De Insumos Agropecuarios Ltda (05.229.719/0001-12): LO 267100 até 06/04/2028
+- Ingaban - Locacao De Estruturas Para Eventos Ltda (05.400.332/0001-87): DLAE 254278 até 23/09/2031
+- H J Industria E Comercio De Artefatos Em Aco Inoxidavel Ltda (05.812.462/0001-27): LP 17053 até 03/06/2009
+- Natura Locadora E Prestadora De Servicos De Terraplenagem Ltda (05.924.291/0001-28): LAS 264509 até 03/03/2028
+- Extinpragas Servicos E Controle De Pragas Urbanas Ltda (06.110.633/0001-39): DLAE 250133 até 16/08/2031
+- Constroeste Construtora E Participacoes Ltda (06.291.846/0020-77): DLAE 119477 até 13/12/2022
+- Cooperativa Norte De Maringa De Separadores E Separadoras De Materiais Reciclaveis E Prest. De Servicos-Coopernorte (06.772.700/0001-80): LAS 3314 até 09/06/2017
+- Cimflex-Industria E Comercio De Plasticos Ltda (07.009.980/0004-85): LO 320192 até 29/04/2030
+- Panini & Cia Ltda (07.046.437/0001-05): LI 333243 até 11/10/2026
+- Mpr - Maringa Comercio De Papeis E Reciclaveis Ltda (07.119.958/0001-45): LO-A 266980 até 04/04/2028
+- Cooperativa Central Do Complexo De Transformacao E Comercializacao De Materiais Reciclaveis (07.218.045/0001-86): LAS 3165 até 14/04/2018
+- M.S. Barbosa Reciclaveis (07.343.832/0001-50): LAS 2476 até 01/10/2020
+- Morais Comercio De Metais Ltda (07.609.984/0001-51): LP 18541 até 17/10/2009
+- Transportes Ro Ltda (07.630.854/0001-09): LP 22319 até 24/11/2010
+- Qnq Comercio De Produtos Quimicos Ltda (07.815.987/0001-41): LI 171288 até 25/11/2021
+- D. L. Santana & Cia Ltda (07.874.630/0001-34): DLAE 217233 até 20/01/2031
+- Ecoalumi Aluminio Sa (07.911.773/0001-79): RLO 266386 até 29/03/2028
+- Ecoalumi Aluminio Sa (07.911.773/0002-50): LO 276188 até 01/08/2028
+- Cooperativa De Materiais Reciclaveis Dos Conjuntos Joao De Barro E Santa Felicidade (07.979.384/0001-85): LAS 196 até 03/07/2018
+- Higieclean Servicos De Auto Fossa Ltda (08.102.532/0001-41): DLAE 308215 até 25/10/2033
+- Cta Obras E Manutencao Ltda (08.242.975/0001-38): DLAE 300867 até 19/07/2033
+- Germojeschi Comercio De Metais Ltda (08.363.452/0001-40): DLAE 113228 até 29/06/2022
+- Ferreira & Oliveira Comercio De Terras E Remocao De Entulhos Ltda (09.126.340/0001-38): AA 23774 até 14/03/2010
+- Cooperativa De Materiais Reciclaveis Do Parque Das Palmeiras (09.224.566/0001-71): LAS 3312 até 09/06/2017
+- Maringa Lixo Zero Tratamento De Residuos Solidos Urbanos Ltda (10.333.139/0001-00): AA 24475 até 16/08/2009
+- Forselli Industria E Comercio Ltda (10.433.863/0001-06): LP 318290 até 03/04/2025
+- Prmax Comercio De Acumuladores Ltda (10.457.223/0005-60): LAS 4874 até 16/08/2019
+- Rodrigues E Barreiros Ltda (10.699.720/0001-40): AA 24097 até 07/04/2010
+- R. Inga - Terraplenagem E Pavimentacao Ltda. (10.982.413/0001-72): LAS 266161 até 24/03/2028
+- Solution Servicos Terceirizados Ltda (10.989.026/0001-68): DLAE 173958 até 16/11/2025
+- Polixpan Reciclagem Ltda (11.157.917/0001-10): LO 186510 até 22/07/2026
+- C. Da Silva Lomes Ltda (11.231.874/0001-76): DLAE 324362 até 25/06/2034
+- R. M. Campos Servicos Ambientais Ltda (11.316.876/0003-20): LP 293112 até 04/04/2025
+- E.R. Munhoes - Transportes (11.406.902/0001-49): LP 236067 até 14/05/2023
+- Labsam - Servicos Ambientais Lab. Tec. Ltda (11.898.088/0001-27): RLO 250020 até 13/08/2027
+- R.R. Loures & Cia Ltda (11.954.835/0001-05): RLI 165049 até 09/08/2021
+- Quality Ink Laser Suprimentos Para Informatica Ltda (12.304.896/0001-81): DLAE 262261 até 19/01/2032
+- Quality Ink Laser Suprimentos Para Informatica Ltda (12.304.896/0002-62): DLAE 298189 até 20/06/2033
+- Agiliza Rua Limpa Entulhos Ltda (13.341.461/0001-70): LAS 1245 até 22/08/2019
+- Bandeirantes Comercio De Papeis Ltda (14.350.612/0001-19): DLAE 279369 até 02/09/2032
+- Desentupidora Avanci Ltda (15.538.902/0001-53): DLAE 291955 até 16/03/2033
+- R. Gardim Locacoes (16.096.071/0001-70): DLAE 289523 até 07/02/2033
+- Rp Construcoes E Servicos Ltda (16.104.594/0001-10): DLAE 300392 até 13/07/2033
+- R A Choma - Locacoes (16.672.711/0001-42): RLO 297161 até 06/06/2029
+- Disk Entulho Operaria Ltda. (17.249.552/0001-30): DLAE 112890 até 22/06/2022
+- Galiani Negri & Cipriano Ltda (17.849.887/0001-90): LAS 3257 até 15/05/2018
+- Bulla Sinalizacoes Ltda (17.980.945/0001-10): LO 333947 até 22/10/2029
+- Silva Manutencao Ltda (20.643.715/0001-70): DLAE 328714 até 19/08/2034
+- Alltech Ocupacional - Seg. Do Trabalho E Meio Ambiente Ltda (20.745.305/0001-30): DLAE 299251 até 29/06/2033
+- Comerciagro Comercio De Cereais Ltda Em Recuperacao Judicial (24.148.548/0001-41): LAS 304597 até 04/09/2029
+- G L Costa Prestadora De Servicos Ltda (24.627.860/0001-18): DLAE 328805 até 20/08/2034
+- Silva & Silveira Ltda (25.118.003/0001-55): DLAE 314429 até 07/02/2034
+- Manu Transporte E Comercio De Produtos Reciclaveis Ltda (26.108.394/0001-90): LAS 165714 até 28/07/2025
+- Hc Panini Terraplenagem Ltda (27.185.158/0001-30): LP 333244 até 11/10/2025
+- Auto Fossa E Desentupidora Ltda (27.459.088/0001-60): DLAE 281857 até 05/10/2032
+- R. L. Santos Dobix Dedetizadora Ltda (27.762.719/0001-16): LAS 179593 até 23/04/2030
+- Dd Tecnica Controle De Pragas Ltda (29.315.244/0001-45): LAS 278710 até 30/08/2028
+- R Galvani Becker Engenharia Ltda (31.064.412/0001-19): LAS 297129 até 06/06/2029
+- Desentop Servicos Ambientais Ltda. (31.317.901/0001-35): LAS 209765 até 04/11/2026
+- Giumarize Franzoi Coutinho (34.831.561/0001-54): LAS 315094 até 21/02/2034
+- J T P Comercio De Sacarias E Pallets Ltda (34.859.564/0001-04): LAS 342991 até 07/03/2030
+- Bmp Industria De Polimeros Ltda (36.977.828/0001-41): LP 335830 até 13/11/2025
+- A-Ws Ambiental Ltda (37.537.254/0001-53): DLAE 299838 até 06/07/2033
+- Tapajos Big Bag Ltda (37.723.978/0001-91): LAS 254396 até 27/09/2027
+- Germojeschi Materiais Ferrosos E Nao Ferrosos Ltda (39.970.145/0001-50): DLAE 312138 até 19/12/2033
+- Ms Plasticos Ltda (42.506.679/0001-35): LO 265870 até 21/03/2028
+- Solucao Auto Fossa Ltda (42.601.941/0001-20): LAS 258000 até 17/11/2027
+- Original Clean Servicos De Auto Fossa Ltda (43.441.919/0001-23): DLAE 267068 até 04/04/2032
+- Cabocla Servicos Ambientais Ltda (43.964.557/0001-55): LAS 280824 até 26/09/2028
+- Lima Engenharia Ltda (44.567.668/0001-90): DLAE 334345 até 24/10/2034
+- Leonardo Da Silva Zbronski Sucatas Ltda. (44.664.067/0001-04): DLAE 323349 até 12/06/2034
+- Erc Engenharia Ltda (45.587.720/0001-33): DLAE 269977 até 18/05/2032
+- 45.729.632 Carlos Alexandre Tenorio De Oliveira (45.729.632/0001-29): DLAE 318731 até 10/04/2034
+- Petrolmarques Comercio De Oleos Lubrificantes Ltda (47.351.288/0001-02): LO 257125 até 26/10/2027
+- Maringa Sinalizacao Ltda (47.959.001/0001-21): DLAE 283084 até 24/10/2032
+- Aliisa Produtos E Servicos Tecnicos Industriais Ltda (50.962.052/0001-17): LO 305497 até 18/09/2028
+- Alunova Refusao Ltda (51.776.495/0001-86): RLO 261882 até 18/01/2028
+- Pst - Locadora E Prestadora De Servicos Ltda (52.659.904/0001-27): LAS 338660 até 19/12/2034
+- Ipx Construcao Civil Ltda (52.935.212/0001-64): DLAE 311499 até 11/12/2033
+- 57.684.058 Ivo Prado (57.684.058/0001-19): DLAE 341830 até 14/02/2035
+- Desinsetizadora Baratek 10 Ltda (72.159.817/0001-18): DLAE 116679 até 03/10/2022
+- Pooltecnica Quimica Ltda (72.441.454/0001-09): LAS 341257 até 07/02/2030
+- Pedreira Inga Ind E Com Ltda (77.282.002/0001-45): LO 37295 até 27/02/2029
+- Walter Gimenez (77.456.267/0001-12): LAS 315089 até 21/02/2034
+- Transmoviterra-Transportes E Servicos Ltda (78.446.713/0001-70): RLAS 324259 até 24/06/2028
+- B2M Petroleo Ltda (79.145.405/0001-78): RLO 5237 até 12/03/2010
+- Sisa Construcoes Civis Ltda (79.150.538/0001-32): LI 21112 até 08/04/2016
+- Plush Comercio De Papeis Ltda (80.214.356/0001-67): DLAE 281447 até 29/09/2032
+- Luzia Lopes De Souza & Cia Ltda (80.333.339/0001-49): LAS 2698 até 09/10/2020
+- Kopp Comercial De Ferro Velho Ltda (80.669.526/0001-06): DLAE 288231 até 18/01/2033
+- J C V Palma & Cia Ltda (82.421.827/0001-33): RLO 21662 até 14/03/2018
+- Ferro Velho Bill Avelar Ltda (82.528.381/0001-40): DLAE 115171 até 22/08/2022
+- Auto Fossa Parana Ltda (85.448.439/0001-34): LAS 324905 até 02/07/2028
