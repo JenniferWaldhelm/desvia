@@ -464,7 +464,13 @@
   if (selCidade) selCidade.addEventListener('change', function (e) { estado.cid = e.target.value; render(); });
   var form = document.getElementById('busca');
   if (form) form.addEventListener('submit', function (e) {
-    e.preventDefault(); caixa.hidden = true; estado.ver = true; render();
+    e.preventDefault(); caixa.hidden = true; estado.ver = true;
+    // Garante que o estado reflete os selects atuais (evita dessincronização)
+    if (selCidade) estado.cid = selCidade.value;
+    var fq2 = document.getElementById('fQuem'), ft2 = document.getElementById('fTipo');
+    if (fq2) estado.p = fq2.value || 'todos';
+    if (ft2) estado.cat = ft2.value || null;
+    render();
     document.getElementById('resultados').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   document.querySelectorAll('[data-atalho]').forEach(function (b) {
