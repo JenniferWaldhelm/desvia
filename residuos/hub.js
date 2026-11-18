@@ -133,7 +133,6 @@
     // Captura de email: aparece quando buscou cidade não coberta ou sem resultado com cidade
     var todasCidades = Object.keys(window.DESVIA_CIDADES || {});
     var cidadeNaoCoberta = estado.cid && todasCidades.indexOf(estado.cid) < 0;
-    var semResultadoNaCidade = estado.cid && todasCidades.indexOf(estado.cid) >= 0;
     if (cidadeNaoCoberta || (!estado.q && estado.cid)) {
       html += '<div class="avise-me">' +
         '<p><b>Quer saber quando chegar na sua cidade?</b></p>' +
