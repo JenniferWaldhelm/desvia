@@ -12,4 +12,4 @@
 
 ## Diagnóstico CTF
 
-- CTF pessoas-juridicas-inscritas-no-ctf-app1_PR.csv: 3915 atividades no município, 202 de resíduos
+- CTF pessoas-juridicas-inscritas-no-ctf-app1_PR.csv: 3916 atividades no município, 202 de resíduos
