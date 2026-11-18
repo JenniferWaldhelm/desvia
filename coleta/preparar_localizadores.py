@@ -83,8 +83,9 @@ def achar_cnpj(p, empresas):
             continue
         if (cep and cep == re.sub(r"\D", "", a["cep"])) or (rua and r2 == rua):
             peso = len(tokens(p["Nome"]) & tokens(a["fantasia"]))
-            if not melhor or peso > melhor[0]:
+            if peso and (not melhor or peso > melhor[0]):
                 melhor = (peso, a)
+    # só aceita com o nome batendo: no mesmo número pode haver outra empresa (galeria, shopping)
     return melhor[1]["cnpj"] if melhor else ""
 
 
