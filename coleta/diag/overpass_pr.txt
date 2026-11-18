@@ -1,0 +1,3 @@
+# https://overpass-api.de/api/interpreter
+# status ERRO  30 bytes
+HTTP Error 406: Not Acceptable

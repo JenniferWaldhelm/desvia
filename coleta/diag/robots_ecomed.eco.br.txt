@@ -1,0 +1,124 @@
+# https://ecomed.eco.br/robots.txt
+# status 200 text/plain 1780 bytes
+User-Agent: GPTBot
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: ChatGPT-User
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: OAI-SearchBot
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: ClaudeBot
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: anthropic-ai
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: PerplexityBot
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: Google-Extended
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: Googlebot
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: Bytespider
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: cohere-ai
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+User-Agent: *
+Allow: /
+Allow: /mapa
+Allow: /blog
+Allow: /ranking
+Allow: /faq
+Disallow: /app/
+Disallow: /parceiro/
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://ecomed.eco.br/sitemap.xml

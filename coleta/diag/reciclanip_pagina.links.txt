@@ -1,0 +1,16 @@
+ajax/pontos.php
+application/json
+box-busca
+form-busca
+http://facebook.com/share.php?u=https
+https://api.w.org/
+https://www.reciclanip.org.br/pontos-de-coleta/
+https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/
+https://www.reciclanip.org.br/pontos-de-coleta/solicite-uma-coleta/
+https://www.reciclanip.org.br/sitewp/xmlrpc.php?rsd
+https://www.reciclanip.org.br/wp-json/
+https://www.reciclanip.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.reciclanip.org.br%2Fpontos-de-coleta%2Fcoleta-no-brasil%2F
+https://www.reciclanip.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.reciclanip.org.br%2Fpontos-de-coleta%2Fcoleta-no-brasil%2F&
+https://www.reciclanip.org.br/wp-json/wp/v2/pages/32
+pontos
+span-search

@@ -1,0 +1,1391 @@
+# https://reciclus.org.br/lista-pontos-entrega/
+# status 200 text/html; charset=UTF-8 131455 bytes
+<!doctype html>
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+<!-- Otimização para mecanismos de pesquisa pelo Rank Math - https://rankmath.com/ -->
+<title>Pontos de Entrega | Reciclus</title>
+<meta name="description" content="Conte com a Reciclus"/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://reciclus.org.br/lista-pontos-entrega/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Pontos de Entrega | Reciclus" />
+<meta property="og:description" content="Conte com a Reciclus" />
+<meta property="og:url" content="https://reciclus.org.br/lista-pontos-entrega/" />
+<meta property="og:site_name" content="Reciclus" />
+<meta property="article:publisher" content="https://www.facebook.com/Reciclus/" />
+<meta property="og:updated_time" content="2023-08-03T19:00:47-03:00" />
+<meta property="og:image" content="https://reciclus.org.br/wp-content/uploads/2023/06/onde-descartar-banner.jpg" />
+<meta property="og:image:secure_url" content="https://reciclus.org.br/wp-content/uploads/2023/06/onde-descartar-banner.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="511" />
+<meta property="og:image:alt" content="Pontos de Entrega" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2023-06-05T03:37:43-03:00" />
+<meta property="article:modified_time" content="2023-08-03T19:00:47-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pontos de Entrega | Reciclus" />
+<meta name="twitter:description" content="Conte com a Reciclus" />
+<meta name="twitter:image" content="https://reciclus.org.br/wp-content/uploads/2023/06/onde-descartar-banner.jpg" />
+<meta name="twitter:label1" content="Tempo para leitura" />
+<meta name="twitter:data1" content="Menos de um minuto" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://reciclus.org.br/#organization","name":"Reciclus","sameAs":["https://www.facebook.com/Reciclus/"],"logo":{"@type":"ImageObject","@id":"https://reciclus.org.br/#logo","url":"https://reciclus.org.br/wp-content/uploads/2023/06/topo-logo-reciclus-m.png","contentUrl":"https://reciclus.org.br/wp-content/uploads/2023/06/topo-logo-reciclus-m.png","caption":"Reciclus","inLanguage":"pt-BR","width":"188","height":"57"}},{"@type":"WebSite","@id":"https://reciclus.org.br/#website","url":"https://reciclus.org.br","name":"Reciclus","publisher":{"@id":"https://reciclus.org.br/#organization"},"inLanguage":"pt-BR"},{"@type":"ImageObject","@id":"https://reciclus.org.br/wp-content/uploads/2023/06/onde-descartar-banner.jpg","url":"https://reciclus.org.br/wp-content/uploads/2023/06/onde-descartar-banner.jpg","width":"1920","height":"511","inLanguage":"pt-BR"},{"@type":"WebPage","@id":"https://reciclus.org.br/lista-pontos-entrega/#webpage","url":"https://reciclus.org.br/lista-pontos-entrega/","name":"Pontos de Entrega | Reciclus","datePublished":"2023-06-05T03:37:43-03:00","dateModified":"2023-08-03T19:00:47-03:00","isPartOf":{"@id":"https://reciclus.org.br/#website"},"primaryImageOfPage":{"@id":"https://reciclus.org.br/wp-content/uploads/2023/06/onde-descartar-banner.jpg"},"inLanguage":"pt-BR"},{"@type":"Person","@id":"https://reciclus.org.br/lista-pontos-entrega/#author","name":"Marketing Reciclus","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/5d64ead3d44f5f60fa5ff57a74928a7f4e612b7105df6d2b0e627d3d5db56a2f?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/5d64ead3d44f5f60fa5ff57a74928a7f4e612b7105df6d2b0e627d3d5db56a2f?s=96&amp;d=mm&amp;r=g","caption":"Marketing Reciclus","inLanguage":"pt-BR"},"worksFor":{"@id":"https://reciclus.org.br/#organization"}},{"@type":"Article","headline":"Pontos de Entrega | Reciclus","datePublished":"2023-06-05T03:37:43-03:00","dateModified":"2023-08-03T19:00:47-03:00","author":{"@id":"https://reciclus.org.br/lista-pontos-entrega/#author","name":"Marketing Reciclus"},"publisher":{"@id":"https://reciclus.org.br/#organization"},"description":"Conte com a Reciclus","name":"Pontos de Entrega | Reciclus","@id":"https://reciclus.org.br/lista-pontos-entrega/#richSnippet","isPartOf":{"@id":"https://reciclus.org.br/lista-pontos-entrega/#webpage"},"image":{"@id":"https://reciclus.org.br/wp-content/uploads/2023/06/onde-descartar-banner.jpg"},"inLanguage":"pt-BR","mainEntityOfPage":{"@id":"https://reciclus.org.br/lista-pontos-entrega/#webpage"}}]}</script>
+<!-- /Plugin de SEO Rank Math para WordPress -->
+
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://reciclus.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Freciclus.org.br%2Flista-pontos-entrega%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://reciclus.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Freciclus.org.br%2Flista-pontos-entrega%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="https://use.typekit.net/aza8bow.css"><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+ 
+<link rel='stylesheet' id='jet-engine-frontend-css' href='https://reciclus.org.br/wp-content/plugins/jet-engine/assets/css/frontend.css?ver=3.9.1' media='all' />
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='hello-elementor-css' href='https://reciclus.org.br/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.5.2' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='https://reciclus.org.br/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-search-form-css' href='https://reciclus.org.br/wp-content/plugins/elementor-pro/assets/css/widget-search-form.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='e-animation-fadeIn-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='e-popup-css' href='https://reciclus.org.br/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=4.4.1' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.57.0' media='all' />
+<link rel='stylesheet' id='elementor-post-8-css' href='https://reciclus.org.br/wp-content/uploads/elementor/css/post-8.css?ver=1794987028' media='all' />
+<link rel='stylesheet' id='elementor-post-4100-css' href='https://reciclus.org.br/wp-content/uploads/elementor/css/post-4100.css?ver=1794987028' media='all' />
+<link rel='stylesheet' id='elementor-post-7476-css' href='https://reciclus.org.br/wp-content/uploads/elementor/css/post-7476.css?ver=1794987028' media='all' />
+<link rel='stylesheet' id='elementor-post-4127-css' href='https://reciclus.org.br/wp-content/uploads/elementor/css/post-4127.css?ver=1794987028' media='all' />
+<link rel='stylesheet' id='elementor-post-4130-css' href='https://reciclus.org.br/wp-content/uploads/elementor/css/post-4130.css?ver=1794987028' media='all' />
+<link rel='stylesheet' id='elementor-post-16733-css' href='https://reciclus.org.br/wp-content/uploads/elementor/css/post-16733.css?ver=1794987028' media='all' />
+<link rel='stylesheet' id='elementor-gf-montserrat-css' href='https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://reciclus.org.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' />
+<script id="jquery-js" src="https://code.jquery.com/jquery-3.7.1.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://code.jquery.com/jquery-migrate-3.5.2.min.js?ver=3.5.2"></script>
+
+<!-- Snippet da tag do Google (gtag.js) adicionado pelo Site Kit -->
+<!-- Snippet do Google Anúncios adicionado pelo Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=AW-773134470" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "AW-773134470");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit", ...( data && data.user_data ? {"developer_id.dZjRkOT":true} : {} ) } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<meta name="generator" content="Site Kit by Google 1.192.0" /><meta name="generator" content="Elementor 4.4.1; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB2XBPL');</script>
+<!-- End Google Tag Manager --><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T3STF1F0D6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T3STF1F0D6');
+</script><link rel="icon" href="https://reciclus.org.br/wp-content/uploads/2023/06/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://reciclus.org.br/wp-content/uploads/2023/06/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://reciclus.org.br/wp-content/uploads/2023/06/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://reciclus.org.br/wp-content/uploads/2023/06/cropped-favicon-270x270.png" />
+<style id="wp-custom-css">
+/* GERAL */
+*,*:hover,*:active,*:focus,*:focus-visible{outline:none!important}
+.maiusculas,.maiusculas select{text-transform:uppercase!important}
+.maiusculas select option:first-child{text-transform:initial!important}
+.link-sublinhado a{text-decoration:underline!important}
+.link-bdbdbd{color:#bdbdbd}
+.cor-verdereciclus{color:#2eb195}
+.cor-laranjareciclus{color:#F1672A}
+.botao-detalhe-verde .elementor-button-wrapper{position:relative}
+.botao-detalhe-verde .elementor-button-wrapper:before{content:"";display:block;position:absolute;top:50%;margin-top:-0.15em;left:-2em;width:3em;height:0.3em;background-color:#2eb195}
+.botao-detalhe-laranja .elementor-button-wrapper{position:relative}
+.botao-detalhe-laranja .elementor-button-wrapper:before{content:"";display:block;position:absolute;top:50%;margin-top:-0.15em;left:-2em;width:3em;height:0.3em;background-color:#F1672A}
+.imagem-fundo-50right{background-position:top right calc(50vw + 15px)}
+.imagem-fundo-60right{background-position:top right calc(50vw + 130px)}
+.topicos-espaco-maior li{margin-bottom:0.5em}
+.box-preto-fullright:before{content:"";display:block;position:absolute;top:0;bottom:0;left:0;width:9999px;background-color:#000;z-index:-1}
+.box-reciclus-educa:after{content:"";display:block;position:absolute;top:0;bottom:0;left:0;right:0;border:2px solid #42EBBC;border-radius:12px;pointer-events:none}
+
+@media (max-width:960px){
+.imagem-fundo-60right{background-position:center right calc(50vw + 95px)}
+}
+
+@media (max-width:767px){
+.imagem-fundo-50right,
+.imagem-fundo-60right{background-position:-9999999999px -9999999999px}
+.cor-branco-mobile .elementor-heading-title{color:#fff!important;text-shadow:1px 1px 9px #000}
+.cor-branco-mobile .elementor-button{color:#fff!important;border-color:#fff;background-color:#00000033!important;text-shadow:1px 1px 3px #000}
+.cor-branco-mobile .elementor-button:hover{background-color:#2eb195!important;text-shadow:none}
+}
+
+
+
+/* TOPO */
+ul.elementor-nav-menu--dropdown a{border-left:0!important}
+.elementor-lightbox .dialog-lightbox-close-button{right:20px;top:20px;margin-top:0!important}
+.topo-icone-pesquisa.elementor-search-form--skin-full_screen .elementor-search-form__toggle{background:url(/wp-content/uploads/2023/06/topo-icone-pesquisar.png) no-repeat center}
+.topo-icone-pesquisa.elementor-search-form--skin-full_screen .elementor-search-form__toggle i{opacity:0}
+
+
+
+/* HOME */
+.home-banner .jet-slick-dots{position:absolute;bottom:10px;left:0;right:0}
+.home-box-esticado>div{z-index:1}
+.home-box-esticado>div:before{content:"";display:block;position:absolute;top:0;bottom:0;left:-9999px;right:0;background-color:#202020;z-index:-1}
+#mapabrasil{position:relative;width:100%;height:auto;pointer-events:none}
+#mapabrasil #svg-map{width:100%;height:100%}
+#mapabrasil #svg-map .regiaonorte path{fill:#dadada}
+#mapabrasil #svg-map .regiaonordeste path{fill:#ececec}
+#mapabrasil #svg-map .regiaocentro path{fill:#c5c5c5}
+#mapabrasil #svg-map .regiaosudeste path{fill:#dadada}
+#mapabrasil #svg-map .regiaosul path{fill:#ececec}
+
+.posts-blog article{position:relative}
+.posts-blog article:after{content:"";display:block;position:absolute;top:10px;bottom:10px;left:10px;right:10px;border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #fff;border-radius:12px;pointer-events:none}
+.posts-blog article .elementor-post__text .elementor-post__read-more-wrapper{text-align:center;z-index:1}
+.posts-blog article .elementor-post__text .elementor-post__read-more-wrapper:before{content:"";display:block;position:absolute;top:50%;bottom:10px;left:10px;right:calc(50% + 60px);border-bottom:2px solid #fff;border-left:2px solid #fff;border-bottom-left-radius:12px;pointer-events:none}
+.posts-blog article .elementor-post__text .elementor-post__read-more-wrapper:after{content:"";display:block;position:absolute;top:50%;bottom:10px;right:10px;left:calc(50% + 60px);border-bottom:2px solid #fff;border-right:2px solid #fff;border-bottom-right-radius:12px;pointer-events:none}
+
+.posts-blog.blog article:after{border-top-color:#dedede;border-left-color:#dedede;border-right-color:#dedede}
+.posts-blog.blog article .elementor-post__text .elementor-post__read-more-wrapper:before{border-bottom-color:#dedede;border-left-color:#dedede}
+.posts-blog.blog article .elementor-post__text .elementor-post__read-more-wrapper:after{border-bottom-color:#dedede;border-right-color:#dedede}
+
+.posts-blog.busca article .elementor-post__title{padding:30px 30px 0 30px}
+.posts-blog.busca .elementor-posts-nothing-found{margin-top:-1em;margin-bottom:5em}
+
+.posts-noticias .jet-listing-grid .jet-listing-grid__item .elementor-widget-image:before{content:"";display:block;position:absolute;top:0;bottom:0;left:0;right:0}
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(1) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(4) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(7) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(10) .elementor-widget-image:before{background:url(/wp-content/uploads/2023/06/noticias-logo-reciclus-laranja.png) no-repeat center;background-size:100% auto;pointer-events:none}
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(2) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(5) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(8) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(11) .elementor-widget-image:before{background:url(/wp-content/uploads/2023/06/noticias-logo-reciclus-verde.png) no-repeat center;background-size:100% auto;pointer-events:none}
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(3) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(6) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(9) .elementor-widget-image:before,
+.posts-noticias .jet-listing-grid .jet-listing-grid__item:nth-child(12) .elementor-widget-image:before{background:url(/wp-content/uploads/2023/06/noticias-logo-reciclus-cinza.png) no-repeat center;background-size:100% auto;pointer-events:none}
+
+@media (min-width:1025px){
+.posts-blog.home article.elementor-post:nth-child(4),
+.posts-relacionados article.elementor-post:nth-child(4),
+.posts-noticias.home .jet-listing-grid__item:nth-child(4){display:none}
+}
+
+@media (max-width:767px){
+.video-player{min-height:50vw}
+.posts-blog.home article.elementor-post:nth-child(4),
+.posts-relacionados article.elementor-post:nth-child(4),
+.posts-noticias.home .jet-listing-grid__item:nth-child(4){display:none}
+}
+
+
+
+/* SOBRE */
+.quem-somos-botao-texto{font-weight:700;color:#f1672a!important;border:2px solid #f1672a;padding-left:3px;padding-right:3px}
+.slider-setas-reciclus .jet-arrow.prev-arrow{background:url(/wp-content/uploads/2023/06/seja-associado-motivos-botao-retroceder.png) no-repeat center transparent!important}
+.slider-setas-reciclus .jet-arrow.next-arrow{background:url(/wp-content/uploads/2023/06/seja-associado-motivos-botao-avancar.png) no-repeat center transparent!important}
+.slider-setas-reciclus .jet-arrow.prev-arrow i,
+.slider-setas-reciclus .jet-arrow.next-arrow i{display:none}
+.slider-setas-reciclus .jet-arrow.prev-arrow:before{content:"";display:block;position:absolute;top:-30px;bottom:-30px;left:-110px;width:392px;border:2px solid #f1672a;pointer-events:none}
+.slider-setas-reciclus .jet-arrow.prev-arrow:after{content:"";display:block;position:absolute;top:50%;margin-top:-4px;left:-155px;width:92px;height:8px;background-color:#f1672a;pointer-events:none}
+.governanca-itens ul{list-style:none}
+.governanca-itens ul li:before{font-weight:bold;position:absolute;left:0}
+.governanca-itens ul li:nth-child(1):before{content:"I"}
+.governanca-itens ul li:nth-child(2):before{content:"II"}
+.governanca-itens ul li:nth-child(3):before{content:"III"}
+.governanca-itens ul li:nth-child(4):before{content:"IV"}
+.governanca-itens ul li:nth-child(5):before{content:"V"}
+.governanca-botao-detalhe:before{content:"";display:block;position:absolute;top:50%;margin-top:-2px;left:-10px;width:32px;height:4px;background-color:#fff;pointer-events:none}
+
+@media (max-width:1024px){
+.slider-setas-reciclus .jet-arrow.prev-arrow,
+.slider-setas-reciclus .jet-arrow.next-arrow{background-size:24px auto!important}
+.slider-setas-reciclus .jet-arrow.prev-arrow:before{top:-8px;bottom:-8px;left:-60px;width:261px}
+.slider-setas-reciclus .jet-arrow.prev-arrow:after{margin-top:-3px;left:-90px;width:62px;height:6px}
+}
+
+@media (max-width:767px){
+.slider-setas-reciclus .jet-arrow.prev-arrow:after{left:-80px;width:42px}
+}
+
+
+
+/* ONDE DESCARTAR */
+#wpsl-wrap{margin-bottom:0}
+#wpsl-wrap .wpsl-search{padding:0;background-color:transparent}
+#wpsl-search-wrap form{display:flex;flex-direction:row;justify-content:space-between;padding:0;margin:0;height:38px!important}
+#wpsl-search-wrap form div{display:flex!important;flex-direction:row;align-items:center;padding:0;margin:0}
+#wpsl-search-wrap label{width:auto!important;margin-right:10px!important}
+#wpsl-search-wrap .wpsl-input,
+#wpsl-search-wrap input{width:100%;border:0;border-radius:0;margin-bottom:0!important}
+#wpsl-search-wrap .wpsl-select-wrap>div{margin-left:20px}
+#wpsl-wrap .wpsl-dropdown{width:108px;border:0;border-radius:0;box-shadow:none!important}
+#wpsl-wrap #wpsl-results .wpsl-dropdown{width:84px}
+#wpsl-wrap .wpsl-selected-item{height:38px}
+#wpsl-search-btn{width:50px!important;height:38px;margin:0 0 0 10px;box-shadow:none!important;background:#000!important;color:#fff}
+#wpsl-result-list{background-color:#fff}
+#wpsl-stores li .wpsl-store-location p{margin-bottom:3px;font-size:15px}
+#wpsl-stores li .wpsl-store-location p span:nth-child(3){display:none!important}
+#wpsl-stores li .wpsl-direction-wrap a{font-size:13px;text-transform:uppercase;color:#F1672A!important}
+
+#wpsl-wrap .wpsl-info-window p{font-family:Montserrat,sans-serif}
+#wpsl-gmap > div > div > div > div > div > div > div > div > p > strong{font-weight:700;color:#000}
+#wpsl-gmap > div > div > div > div > div > div > div > div > p > span:nth-child(3){display:none!important}
+#wpsl-gmap > div > div > div > div > div > div > div > div > p > span{font-weight:400;color:#000}
+
+@media (max-width:1023px){
+#wpsl-wrap #wpsl-stores,#wpsl-wrap #wpsl-direction-details,#wpsl-wrap #wpsl-gmap{height:540px!important}
+#wpsl-result-list{width:39.5%!important}
+#wpsl-gmap{width:60%!important}
+#wpsl-stores li .wpsl-store-location p{font-size:14px}
+}
+
+@media (max-width:767px){
+#wpsl-search-wrap form{flex-wrap:wrap;height:180px!important}
+#wpsl-search-wrap form div{flex-direction:row;align-items:center;padding:0;margin:0}
+#wpsl-search-wrap label{width:95px!important}
+#wpsl-search-wrap .wpsl-select-wrap{flex-direction:column}
+#wpsl-search-wrap .wpsl-select-wrap>div{margin-left:0;margin-top:10px}
+#wpsl-wrap #wpsl-radius,#wpsl-wrap #wpsl-results{width:100%!important}
+#wpsl-wrap .wpsl-dropdown{width:calc(100% - 105px)!important}
+.wpsl-search-btn-wrap{width:100%!important}
+#wpsl-search-btn{margin:10px 0 0 0!important;width:100%!important}
+#wpsl-result-list,#wpsl-gmap{width:100%!important}
+#wpsl-wrap #wpsl-gmap{height:400px!important}
+#wpsl-wrap #wpsl-result-list ul li{padding-left:10px!important}
+}
+
+
+
+/* SEJA PARCEIRO */
+.grid-slider .prev-arrow.slick-arrow,
+.grid-slider .next-arrow.slick-arrow{background:url(/wp-content/uploads/2023/06/seja-associado-motivos-botao-retroceder.png) no-repeat center transparent!important}
+
+@media (min-width:1025px){
+.seja-parceiro-fundo-imagem:before{content:"";display:block;position:absolute;top:0;bottom:0;left:initial;right:calc(50vw + 750px);background-color:#fff}
+}
+
+
+
+/* EDUCACAO AMBIENTAL */
+@media (min-width:768px){
+.criancas-jovens-img-fundo:before{content:"";display:block;position:absolute;top:0;left:-9999px;width:99999px;height:40px;background:#fff}
+.criancas-jovens-img-fundo:after{content:"";display:block;position:absolute;top:0;bottom:0;left:50px;width:9999px;background:url(/wp-content/uploads/2023/06/educacao-ambiental-img-criancas-jovens-fundo.png) no-repeat top left/auto 100%}
+}
+
+
+
+/* FORMULARIOS */
+.form-reciclus select{-webkit-appearance:none;-moz-appearance:none;appearance:none;color:#000!important}
+.form-reciclus select option{background-color:#f0f0f0;color:#000}
+.form-reciclus select option:nth-child(1){display:none}
+.form-reciclus .select-caret-down-wrapper{color:#F1672A}
+.form-reciclus .elementor-field-type-acceptance + .elementor-field-type-acceptance{margin-top:-10px!important}
+.form-reciclus .elementor-field-type-acceptance label:before{content:"";position:absolute;top:2px;left:10px;height:20px;width:20px;background-color:#fff;transition:background-color 0.25s ease;border-radius:6px}
+.form-reciclus .elementor-field-type-acceptance label:after{content:"";position:absolute;left:16px;top:4px;width:8px;height:13px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg);opacity:0;transition:opacity 0.25s ease}
+.form-reciclus .elementor-field-type-acceptance label{font-size:13px!important;padding-left:24px;cursor:pointer}
+.form-reciclus .elementor-field-type-acceptance input{position:absolute;cursor:pointer;opacity:0;height:0;width:0}
+.form-reciclus .elementor-field-type-acceptance input:checked ~ label:before{background-color:#2eb195;border-color:#2eb195}
+.form-reciclus .elementor-field-type-acceptance input:checked ~ label:after{opacity:1}
+.form-reciclus .elementor-button{position:relative;margin-top:12px}
+.form-reciclus .elementor-button:before{content:"";display:block;position:absolute;top:50%;margin-top:-0.15em;left:-1em;width:2em;height:0.3em;background-color:#F1672A}
+
+
+
+/* BLOG */
+.post-conteudo h2{font-weight:700;font-size:1.5em;margin:0}
+.post-conteudo h3{font-weight:700;font-size:1.25em;margin:0}
+.post-conteudo h4{font-weight:600;font-size:1.125em;margin:0}
+.post-conteudo h5{font-weight:500;font-size:1.1em;margin:0}
+.post-conteudo h6{font-weight:600;font-size:0.7em;margin:0}
+.post-conteudo a{color:#F1672A!important;text-decoration:underline}
+.post-conteudo blockquote{font-weight:500;font-style:italic;margin:40px 20px 40px 60px;font-size:20px;line-height:26px;color:#777}
+.post-conteudo p + h2,.post-conteudo ul + h2,.post-conteudo ol + h2,
+.post-conteudo p + h3,.post-conteudo ul + h3,.post-conteudo ol + h3,
+.post-conteudo p + h4,.post-conteudo ul + h4,.post-conteudo ol + h4,
+.post-conteudo p + h5,.post-conteudo ul + h5,.post-conteudo ol + h5,
+.post-conteudo p + h6,.post-conteudo ul + h6,.post-conteudo ol + h6{padding-top:1em;padding-bottom:0.35em}
+.post-conteudo > div > h2:nth-child(1){padding-bottom:0.35em}
+.post-conteudo h2 + h3{padding-top:15px}
+.post-conteudo li + li{margin-top:0.3em}
+.post-conteudo ul,.post-conteudo ol{padding-bottom:1em}
+
+
+
+/* FALE CONOSCO */
+.fale-conosco-faq .elementor-toggle-item{border:1px solid #fff;border-radius:10px;margin-bottom:40px!important;position:relative}
+.fale-conosco-faq .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-right{float:none;position:absolute;bottom:0;right:10px;background-color:#fff;text-align:center!important;width:20px;height:20px}
+.fale-conosco-faq .elementor-tab-content a{text-decoration:underline;color:#F1672A}
+
+
+
+body.postid-15689 .elementor-6446 .elementor-element.elementor-element-ec88944>.elementor-widget-container{margin-top:380px}
+
+@media (max-width:767px){
+body.postid-15689 .elementor-6446 .elementor-element.elementor-element-ec88944>.elementor-widget-container{margin-top:250px}
+}
+</style>
+</head>
+<body class="wp-singular page-template page-template-elementor_header_footer page page-id-4100 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-8 elementor-page elementor-page-4100">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB2XBPL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+		<header data-elementor-type="header" data-elementor-id="4127" class="elementor elementor-4127 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-3432eed elementor-hidden-tablet elementor-hidden-mobile e-flex e-con-boxed e-con e-parent" data-id="3432eed" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-31786a5 e-con-full e-flex e-con e-child" data-id="31786a5" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-19337d8 elementor-absolute elementor-widget elementor-widget-image" data-id="19337d8" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://reciclus.org.br">
+							<img width="69" height="240" src="https://reciclus.org.br/wp-content/uploads/2023/06/topo-logo-reciclus.png" class="attachment-full size-full wp-image-4874" alt="" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-ef95515 elementor-nav-menu__align-end elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="ef95515" data-element_type="widget" data-e-type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-ef95515" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4941"><a href="https://reciclus.org.br/fale-conosco/" class="elementor-item">Fale Conosco</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4943"><a target="_blank" href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" rel="noopener noreferrer nofollow">Pedido de coleta</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16651"><a href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" target="_blank" rel="noopener noreferrer nofollow">Declarações</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-ef95515" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4941"><a href="https://reciclus.org.br/fale-conosco/" class="elementor-item" tabindex="-1">Fale Conosco</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4943"><a target="_blank" href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" tabindex="-1" rel="noopener noreferrer nofollow">Pedido de coleta</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16651"><a href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" tabindex="-1" target="_blank" rel="noopener noreferrer nofollow">Declarações</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-902b0d7 elementor-search-form--skin-full_screen topo-icone-pesquisa elementor-widget elementor-widget-search-form" data-id="902b0d7" data-element_type="widget" data-e-type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+							<search role="search">
+			<form class="elementor-search-form" action="https://reciclus.org.br" method="get">
+												<div class="elementor-search-form__toggle" role="button" tabindex="0" aria-label="Pesquisar">
+					<i aria-hidden="true" class="fas fa-search"></i>				</div>
+								<div class="elementor-search-form__container">
+					<label class="elementor-screen-only" for="elementor-search-form-902b0d7">Pesquisar</label>
+
+					
+					<input id="elementor-search-form-902b0d7" placeholder="Pesquisar..." class="elementor-search-form__input" type="search" name="s" value="">
+					
+					
+										<div class="dialog-lightbox-close-button dialog-close-button" role="button" tabindex="0" aria-label="Feche esta caixa de pesquisa.">
+						<i aria-hidden="true" class="eicon-close"></i>					</div>
+									</div>
+			</form>
+		</search>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-99079cc e-con-full e-flex e-con e-child" data-id="99079cc" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-57a7ff3 elementor-nav-menu__align-end elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="57a7ff3" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-57a7ff3" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4944"><a href="https://reciclus.org.br/sobre/" class="elementor-item">Sobre a Reciclus<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4945"><a href="https://reciclus.org.br/sustentabilidade/" class="elementor-sub-item">Sustentabilidade</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4946"><a href="https://reciclus.org.br/legislacao/" class="elementor-sub-item">Legislação</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4947"><a href="https://reciclus.org.br/seja-associado/" class="elementor-sub-item">Seja Associado</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4948"><a href="https://reciclus.org.br/onde-descartar/" class="elementor-item">Onde Descartar</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4949"><a href="https://reciclus.org.br/seja-um-parceiro/" class="elementor-item">Seja um Parceiro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4950"><a href="https://reciclus.org.br/educacao-ambiental/" class="elementor-item">Educação Ambiental<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4951"><a href="https://reciclus.org.br/reciclus-educa/" class="elementor-sub-item">Reciclus Educa</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17391"><a href="https://reciclus.org.br/reciclus-educa-inscreva-se/" class="elementor-sub-item">Curso Online</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4952"><a href="https://reciclus.org.br/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4953"><a href="https://reciclus.org.br/noticias/" class="elementor-item">Notícias</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-57a7ff3" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4944"><a href="https://reciclus.org.br/sobre/" class="elementor-item" tabindex="-1">Sobre a Reciclus<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4945"><a href="https://reciclus.org.br/sustentabilidade/" class="elementor-sub-item" tabindex="-1">Sustentabilidade</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4946"><a href="https://reciclus.org.br/legislacao/" class="elementor-sub-item" tabindex="-1">Legislação</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4947"><a href="https://reciclus.org.br/seja-associado/" class="elementor-sub-item" tabindex="-1">Seja Associado</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4948"><a href="https://reciclus.org.br/onde-descartar/" class="elementor-item" tabindex="-1">Onde Descartar</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4949"><a href="https://reciclus.org.br/seja-um-parceiro/" class="elementor-item" tabindex="-1">Seja um Parceiro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4950"><a href="https://reciclus.org.br/educacao-ambiental/" class="elementor-item" tabindex="-1">Educação Ambiental<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4951"><a href="https://reciclus.org.br/reciclus-educa/" class="elementor-sub-item" tabindex="-1">Reciclus Educa</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17391"><a href="https://reciclus.org.br/reciclus-educa-inscreva-se/" class="elementor-sub-item" tabindex="-1">Curso Online</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4952"><a href="https://reciclus.org.br/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4953"><a href="https://reciclus.org.br/noticias/" class="elementor-item" tabindex="-1">Notícias</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-c39294a elementor-hidden-desktop e-flex e-con-boxed e-con e-parent" data-id="c39294a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-1894570 elementor-widget elementor-widget-image" data-id="1894570" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://reciclus.org.br">
+							<img width="188" height="57" src="https://reciclus.org.br/wp-content/uploads/2023/06/topo-logo-reciclus-m.png" class="attachment-full size-full wp-image-4875" alt="" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-3053a21 elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="3053a21" data-element_type="widget" data-e-type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-3053a21" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4958"><a href="https://reciclus.org.br/onde-descartar/" class="elementor-item">Onde Descartar</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4965"><a target="_blank" href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" rel="noopener noreferrer nofollow">Pedido de coleta</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4959"><a href="https://reciclus.org.br/seja-um-parceiro/" class="elementor-item">Seja um Parceiro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4964"><a href="https://reciclus.org.br/fale-conosco/" class="elementor-item">Fale Conosco</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4960"><a href="https://reciclus.org.br/educacao-ambiental/" class="elementor-item">Educação Ambiental</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4961"><a href="https://reciclus.org.br/reciclus-educa/" class="elementor-item">Reciclus Educa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17390"><a href="https://reciclus.org.br/reciclus-educa-inscreva-se/" class="elementor-item">Curso Online</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4962"><a href="https://reciclus.org.br/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4963"><a href="https://reciclus.org.br/noticias/" class="elementor-item">Notícias</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4957"><a href="https://reciclus.org.br/seja-associado/" class="elementor-item">Seja Associado</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4955"><a href="https://reciclus.org.br/sustentabilidade/" class="elementor-item">Sustentabilidade</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4956"><a href="https://reciclus.org.br/legislacao/" class="elementor-item">Legislação</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4954"><a href="https://reciclus.org.br/sobre/" class="elementor-item">Sobre a Reciclus</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Alternar menu" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-3053a21" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4958"><a href="https://reciclus.org.br/onde-descartar/" class="elementor-item" tabindex="-1">Onde Descartar</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4965"><a target="_blank" href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" tabindex="-1" rel="noopener noreferrer nofollow">Pedido de coleta</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4959"><a href="https://reciclus.org.br/seja-um-parceiro/" class="elementor-item" tabindex="-1">Seja um Parceiro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4964"><a href="https://reciclus.org.br/fale-conosco/" class="elementor-item" tabindex="-1">Fale Conosco</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4960"><a href="https://reciclus.org.br/educacao-ambiental/" class="elementor-item" tabindex="-1">Educação Ambiental</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4961"><a href="https://reciclus.org.br/reciclus-educa/" class="elementor-item" tabindex="-1">Reciclus Educa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17390"><a href="https://reciclus.org.br/reciclus-educa-inscreva-se/" class="elementor-item" tabindex="-1">Curso Online</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4962"><a href="https://reciclus.org.br/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4963"><a href="https://reciclus.org.br/noticias/" class="elementor-item" tabindex="-1">Notícias</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4957"><a href="https://reciclus.org.br/seja-associado/" class="elementor-item" tabindex="-1">Seja Associado</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4955"><a href="https://reciclus.org.br/sustentabilidade/" class="elementor-item" tabindex="-1">Sustentabilidade</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4956"><a href="https://reciclus.org.br/legislacao/" class="elementor-item" tabindex="-1">Legislação</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4954"><a href="https://reciclus.org.br/sobre/" class="elementor-item" tabindex="-1">Sobre a Reciclus</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-b73ca24 elementor-search-form--skin-full_screen topo-icone-pesquisa elementor-widget elementor-widget-search-form" data-id="b73ca24" data-element_type="widget" data-e-type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+							<search role="search">
+			<form class="elementor-search-form" action="https://reciclus.org.br" method="get">
+												<div class="elementor-search-form__toggle" role="button" tabindex="0" aria-label="Pesquisar">
+					<i aria-hidden="true" class="fas fa-search"></i>				</div>
+								<div class="elementor-search-form__container">
+					<label class="elementor-screen-only" for="elementor-search-form-b73ca24">Pesquisar</label>
+
+					
+					<input id="elementor-search-form-b73ca24" placeholder="Pesquisar..." class="elementor-search-form__input" type="search" name="s" value="">
+					
+					
+										<div class="dialog-lightbox-close-button dialog-close-button" role="button" tabindex="0" aria-label="Feche esta caixa de pesquisa.">
+						<i aria-hidden="true" class="eicon-close"></i>					</div>
+									</div>
+			</form>
+		</search>
+						</div>
+				</div>
+					</div>
+				</div>
+				</header>
+				<div data-elementor-type="wp-page" data-elementor-id="4100" class="elementor elementor-4100" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-163a7e9 e-flex e-con-boxed e-con e-parent" data-id="163a7e9" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-bf70ccd elementor-widget__width-initial cor-branco-mobile elementor-widget elementor-widget-heading" data-id="bf70ccd" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Não jogue a lâmpada no lixo comum</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-b355cc3 elementor-widget elementor-widget-heading" data-id="b355cc3" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Conte com a Reciclus</div>				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-a5fecc2 e-flex e-con-boxed e-con e-parent" data-id="a5fecc2" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-5823f09 elementor-widget elementor-widget-heading" data-id="5823f09" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h1 class="elementor-heading-title elementor-size-default">Lista dos Pontos de Entrega</h1>				</div>
+				</div>
+				<div class="elementor-element elementor-element-fd2e940 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="fd2e940" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Todas as pessoas físicas que desejarem descartar suas lâmpadas poderão deposita-las nos coletores Reciclus.</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e39a2a8 elementor-widget elementor-widget-text-editor" data-id="e39a2a8" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Você não precisa ser um cliente do estabelecimento, mas deve ficar atento a quantidade máxima de lâmpadas permitida por loja. Assim que o coletor atinge 80% de sua capacidade, o responsável do local deve solicitar a coleta exclusivamente via sistema, com uma senha que recebeu após a instalação do ponto.</p>								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-b0ee9cf e-flex e-con-boxed e-con e-parent" data-id="b0ee9cf" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<link rel='stylesheet' id='jet-smart-filters-css' href='https://reciclus.org.br/wp-content/plugins/jet-smart-filters/assets/css/public.css?ver=3.8.6.3' media='all' />
+<style id="jet-smart-filters-inline-css">
+
+				.jet-filter {
+					--tabindex-color: #0085f2;
+					--tabindex-shadow-color: rgba(0,133,242,0.4);
+				}
+			
+/*# sourceURL=jet-smart-filters-inline-css */
+</style>
+		<div class="elementor-element elementor-element-7fa0108 jet-smart-filter-group-position-line elementor-widget__width-inherit jet-smart-filter-content-position-column jet-smart-filter-group-position-line maiusculas jet-smart-filter-content-position-column elementor-widget elementor-widget-jet-smart-filters-select" data-id="7fa0108" data-element_type="widget" data-e-type="widget" data-widget_type="jet-smart-filters-select.default">
+				<div class="elementor-widget-container">
+					<div class="jet-smart-filters-hierarchy jet-filter " data-indexer-rule="show" data-show-counter="" data-change-counter="always"><div class="jet-filters-group">
+<div class="jet-select" data-query-type="tax_query" data-query-var="estado" data-smart-filter="select" data-filter-id="5824" data-apply-type="ajax" data-content-provider="jet-engine" data-additional-providers="" data-query-id="pontos-entrega-lista" data-active-label="" data-layout-options="{&quot;show_label&quot;:true,&quot;display_options&quot;:{&quot;show_items_label&quot;:false,&quot;show_decorator&quot;:false,&quot;filter_image_size&quot;:&quot;full&quot;,&quot;show_counter&quot;:false}}" data-query-var-suffix="" data-apply-on="value" data-hierarchical="1" data-hierarchy-context="{&quot;signature&quot;:&quot;v2:d1a4a60f37e57a3239ce5f4386898222a8d846b888b79255cadbcfcc689e4b03&quot;}">
+	<div class="jet-filter-label">Estado</div>
+			<select
+			class="jet-select__control depth-0"
+			name="estado"
+						aria-label="Estado"
+		>
+							<option value="">
+					Selecione um Estado...				</option>
+										<option
+					value="284"
+					data-label="AC"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					AC				</option>
+								<option
+					value="217"
+					data-label="AL"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					AL				</option>
+								<option
+					value="22"
+					data-label="AM"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					AM				</option>
+								<option
+					value="282"
+					data-label="AP"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					AP				</option>
+								<option
+					value="114"
+					data-label="BA"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					BA				</option>
+								<option
+					value="108"
+					data-label="CE"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					CE				</option>
+								<option
+					value="267"
+					data-label="DF"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					DF				</option>
+								<option
+					value="96"
+					data-label="ES"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					ES				</option>
+								<option
+					value="24"
+					data-label="GO"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					GO				</option>
+								<option
+					value="264"
+					data-label="MA"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					MA				</option>
+								<option
+					value="39"
+					data-label="MG"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					MG				</option>
+								<option
+					value="42"
+					data-label="MS"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					MS				</option>
+								<option
+					value="213"
+					data-label="MT"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					MT				</option>
+								<option
+					value="211"
+					data-label="PA"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					PA				</option>
+								<option
+					value="144"
+					data-label="PB"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					PB				</option>
+								<option
+					value="13"
+					data-label="PE"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					PE				</option>
+								<option
+					value="251"
+					data-label="PI"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					PI				</option>
+								<option
+					value="11"
+					data-label="PR"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					PR				</option>
+								<option
+					value="126"
+					data-label="RJ"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					RJ				</option>
+								<option
+					value="15"
+					data-label="RN"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					RN				</option>
+								<option
+					value="238"
+					data-label="RO"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					RO				</option>
+								<option
+					value="240"
+					data-label="RR"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					RR				</option>
+								<option
+					value="140"
+					data-label="RS"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					RS				</option>
+								<option
+					value="33"
+					data-label="SC"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					SC				</option>
+								<option
+					value="182"
+					data-label="SE"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					SE				</option>
+								<option
+					value="20"
+					data-label="SP"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					SP				</option>
+								<option
+					value="168"
+					data-label="TO"
+					data-counter-prefix=""
+					data-counter-suffix=""
+														>
+					TO				</option>
+				</select>
+	</div>
+<div class="jet-select" data-query-type="tax_query" data-query-var="cidade" data-smart-filter="select" data-filter-id="5824" data-apply-type="ajax" data-content-provider="jet-engine" data-additional-providers="" data-query-id="pontos-entrega-lista" data-active-label="" data-layout-options="{&quot;show_label&quot;:true,&quot;display_options&quot;:{&quot;show_items_label&quot;:false,&quot;show_decorator&quot;:false,&quot;filter_image_size&quot;:&quot;full&quot;,&quot;show_counter&quot;:false}}" data-query-var-suffix="" data-apply-on="value" data-hierarchical="1" data-hierarchy-context="{&quot;signature&quot;:&quot;v2:d1a4a60f37e57a3239ce5f4386898222a8d846b888b79255cadbcfcc689e4b03&quot;}">
+	<div class="jet-filter-label">Cidade</div>
+			<select
+			class="jet-select__control depth-1"
+			name="cidade"
+						aria-label="Cidade"
+		>
+							<option value="">
+					Selecione uma Cidade...				</option>
+						</select>
+	</div>
+</div>
+</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-21d86ee elementor-widget elementor-widget-jet-smart-filters-search" data-id="21d86ee" data-element_type="widget" data-e-type="widget" data-widget_type="jet-smart-filters-search.default">
+				<div class="elementor-widget-container">
+					<div class="jet-smart-filters-search jet-filter"><div class="jet-filter-label">Pesquisar</div>
+
+<div
+	class="jet-search-filter"
+	data-query-type="meta_query" data-query-var="sl-titulo-repetido,wpsl_address,wpsl_zip" data-smart-filter="search" data-filter-id="5807" data-apply-type="ajax-ontyping" data-content-provider="jet-engine" data-additional-providers="" data-query-id="pontos-entrega-lista" data-active-label="Pesquisar" data-layout-options="{&quot;show_label&quot;:&quot;&quot;,&quot;display_options&quot;:[]}" data-query-var-suffix="search" data-min-letters-count="3">
+	<div class="jet-search-filter__input-wrapper">
+		<input
+			class="jet-search-filter__input"
+			type="search"
+			autocomplete="off"
+			name="sl-titulo-repetido,wpsl_address,wpsl_zip"
+			value=""
+			placeholder="Digite..."
+			aria-label="Pesquisar"
+					>
+					<div class="jet-search-filter__input-clear">
+				<svg width="22" height="28" viewBox="0 0 22 28" xmlns="http://www.w3.org/2000/svg">
+	<path d="M20.281 20.656c0 0.391-0.156 0.781-0.438 1.062l-2.125 2.125c-0.281 0.281-0.672 0.438-1.062 0.438s-0.781-0.156-1.062-0.438l-4.594-4.594-4.594 4.594c-0.281 0.281-0.672 0.438-1.062 0.438s-0.781-0.156-1.062-0.438l-2.125-2.125c-0.281-0.281-0.438-0.672-0.438-1.062s0.156-0.781 0.438-1.062l4.594-4.594-4.594-4.594c-0.281-0.281-0.438-0.672-0.438-1.062s0.156-0.781 0.438-1.062l2.125-2.125c0.281-0.281 0.672-0.438 1.062-0.438s0.781 0.156 1.062 0.438l4.594 4.594 4.594-4.594c0.281-0.281 0.672-0.438 1.062-0.438s0.781 0.156 1.062 0.438l2.125 2.125c0.281 0.281 0.438 0.672 0.438 1.062s-0.156 0.781-0.438 1.062l-4.594 4.594 4.594 4.594c0.281 0.281 0.438 0.672 0.438 1.062z"></path>
+</svg>
+			</div>
+			<div class="jet-search-filter__input-loading"></div>
+			</div>
+
+	</div>
+</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-5d0dc40 elementor-widget elementor-widget-jet-listing-grid" data-id="5d0dc40" data-element_type="widget" data-e-type="widget" id="pontos-entrega-lista" data-settings="{&quot;columns&quot;:&quot;1&quot;}" data-widget_type="jet-listing-grid.default">
+				<div class="elementor-widget-container">
+					<div class="jet-listing-grid jet-listing"><div class="jet-listing-grid__items grid-col-desk-1 grid-col-tablet-1 grid-col-mobile-1 jet-listing-grid--7476" data-queried-id="4100|WP_Post" data-nav="{&quot;enabled&quot;:false,&quot;type&quot;:null,&quot;more_el&quot;:null,&quot;query&quot;:{&quot;allowed_query_ids&quot;:[&quot;&quot;],&quot;signature&quot;:&quot;ffbc94c36e3ab864a0699c3763479f22b07b00bad422701de41a06bf681421ec&quot;},&quot;widget_settings&quot;:{&quot;lisitng_id&quot;:7476,&quot;posts_num&quot;:20,&quot;columns&quot;:1,&quot;columns_tablet&quot;:1,&quot;columns_mobile&quot;:1,&quot;column_min_width&quot;:240,&quot;column_min_width_tablet&quot;:240,&quot;column_min_width_mobile&quot;:240,&quot;inline_columns_css&quot;:false,&quot;is_archive_template&quot;:&quot;&quot;,&quot;post_status&quot;:[&quot;publish&quot;],&quot;use_random_posts_num&quot;:&quot;&quot;,&quot;max_posts_num&quot;:9,&quot;not_found_message&quot;:&quot;&lt;strong&gt;Busca sem resultados&lt;\/strong&gt;, tente novamente&quot;,&quot;is_masonry&quot;:false,&quot;equal_columns_height&quot;:&quot;&quot;,&quot;use_load_more&quot;:&quot;&quot;,&quot;load_more_id&quot;:&quot;&quot;,&quot;load_more_type&quot;:&quot;click&quot;,&quot;load_more_offset&quot;:null,&quot;use_custom_post_types&quot;:&quot;&quot;,&quot;custom_post_types&quot;:[],&quot;hide_widget_if&quot;:&quot;&quot;,&quot;carousel_enabled&quot;:&quot;&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;arrows&quot;:&quot;true&quot;,&quot;arrow_icon&quot;:&quot;fa fa-angle-left&quot;,&quot;dots&quot;:&quot;&quot;,&quot;autoplay&quot;:&quot;true&quot;,&quot;pause_on_hover&quot;:&quot;true&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;true&quot;,&quot;center_mode&quot;:&quot;&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500,&quot;inject_alternative_items&quot;:&quot;&quot;,&quot;injection_items&quot;:[],&quot;scroll_slider_enabled&quot;:&quot;&quot;,&quot;scroll_slider_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;custom_query&quot;:false,&quot;custom_query_id&quot;:&quot;&quot;,&quot;_element_id&quot;:&quot;pontos-entrega-lista&quot;,&quot;collapse_first_last_gap&quot;:false,&quot;list_tag_selection&quot;:&quot;&quot;,&quot;allowed_listing_ids&quot;:[7476],&quot;list_items_wrapper_tag&quot;:&quot;div&quot;,&quot;list_item_tag&quot;:&quot;div&quot;,&quot;empty_items_wrapper_tag&quot;:&quot;div&quot;,&quot;_jet_engine_settings_signature&quot;:&quot;6c2ba30ecda10d9fa55c9c88f4d4e557811f9484364ae20a7945e573efa79282&quot;}}" data-page="1" data-pages="196" data-listing-source="posts" data-listing-id="7476" data-query-id=""><div class="jet-listing-grid__item jet-listing-dynamic-post-17494 elementor-dcss-6737210557337322" data-post-id="17494"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">1 CLASSE ELETROLED &#8211; FATIMA</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. Jose Bonifacio, 62, Fátima, Belém, PA</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">66090-363</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-17496 elementor-dcss-6737210588337254" data-post-id="17496"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">1 CLASSE ELETROLED &#8211; MARCO</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. Duque de Caxias, 643, Marco, Belém, PA</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">66093-026</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-15651 elementor-dcss-6737210605980145" data-post-id="15651"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">1 CLASSE ELETROLED &#8211; PARQUE VERDE</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Rod. Augusto Montenegro, 6955, Parque Verde, Belém, PA</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">66635110</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-9284 elementor-dcss-6737210620833655" data-post-id="9284"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">A POPULAR MATERIAIS PARA CONSTRUCAO</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. Antonio Miguel Dos Santos, 475, Vl. Santa Rosa, Guarujá, SP</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">11431-050</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11381 elementor-dcss-6737210636302571" data-post-id="11381"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">A.S. MATERIAIS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Antônio Ataíde, 1845/1645, Divino Espírito Santo, Vila Velha, ES</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">29107-200</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11379 elementor-dcss-6737210651318436" data-post-id="11379"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ABAGE 1 &#8211; PAROLIN</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Anne Frank, 3344 - Centro de Distribuição Irmãos Abage, Boqueirão, Curitiba, PR</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">81650020</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10577 elementor-dcss-6737210666278671" data-post-id="10577"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ABASTANCIA 369 LTDA</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Sapoti, 2052, Jardim Alvorada, Maringá, PR</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">86035-060</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-7708 elementor-dcss-6737210681670854" data-post-id="7708"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ABEVÊ DOM PEDRO II &#8211; LOJA 23</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Dom Pedro II, 130, Centro, Ponta Porã, MS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">79904-706</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-15787 elementor-dcss-6737210696264730" data-post-id="15787"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ABEVÊ PARANAÍBA &#8211; FLIAL 27</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. Durval Rodrigues Lopes, 1200, Vila Santo Antônio, Paranaíba, MS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">79500-000</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11378 elementor-dcss-6737210711177591" data-post-id="11378"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ABR FERRAGENS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Cleto Campelo, Centro, Gravatá, PE</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">55641-170</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11376 elementor-dcss-6737210726335414" data-post-id="11376"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ABT COMERCIAL SÃO GERALDO</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. São Pedro, 924, Sao Geraldo, Porto Alegre, RS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">90230-123</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8666 elementor-dcss-6737210741751497" data-post-id="8666"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ACAMAR</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Brasilia Soares De Almeida 51, Santa Isabel, Capão Bonito, SP</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">18306-050</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16146 elementor-dcss-6737210763720895" data-post-id="16146"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ACENDE MATERIAIS ELETRICOS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Benedito Salles, 467, Centro, Carlópolis, PR</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">86420-000</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11374 elementor-dcss-6737210782022826" data-post-id="11374"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ACRUX</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Diamantino, 162, Santa Isabel, Viamão, RS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">94480-350</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16252 elementor-dcss-6737210797254996" data-post-id="16252"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ADR HOME CENTER</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. Manoel Ribas, 1125, Centro, Itapejara D'Oeste, PR</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">85580-000</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11373 elementor-dcss-6737210812115379" data-post-id="11373"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ADROALDO MATERIAIS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">R. Capitão Moraes, 537, Cotianos, Piedade, SP</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">18170-000</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11371 elementor-dcss-6737210826803145" data-post-id="11371"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">ADS ELETRO</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. Rui Barbosa, 8583, , São José dos Pinhais, PR</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">83005-340</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8859 elementor-dcss-6737210842066697" data-post-id="8859"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">AEC ELÉTRICA</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Av. Das Hortensias, 3833, Avenida Central, Gramado, RS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">95670-000</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11372 elementor-dcss-6737210856811141" data-post-id="11372"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">AG RESERVA DO PAIVA</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Al. Das Mangabas, S/N, Reserva Do Paiva, Cabo de Santo Agostinho, PE</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">54522-080</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11370 elementor-dcss-6737210871428860" data-post-id="11370"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">AGATTI</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1afc maiusculas elementor-widget elementor-widget-heading" data-id="79f1afc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Trav. Raul Cisilotto, 54, Centro, Garibaldi, RS</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e495e96 maiusculas elementor-widget elementor-widget-heading" data-id="e495e96" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">95720-000</div>				</div>
+				</div>
+				</div>
+				</div>
+		</div></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2f2c0ca elementor-widget elementor-widget-jet-smart-filters-pagination" data-id="2f2c0ca" data-element_type="widget" data-e-type="widget" data-widget_type="jet-smart-filters-pagination.default">
+				<div class="elementor-widget-container">
+					<div
+				class="jet-smart-filters-pagination jet-filter"
+				data-apply-provider="jet-engine"
+				data-content-provider="jet-engine"
+				data-query-id="pontos-entrega-lista"
+				data-controls="{&quot;items_enabled&quot;:true,&quot;pages_mid_size&quot;:13,&quot;pages_end_size&quot;:0,&quot;nav_enabled&quot;:false,&quot;load_more_enabled&quot;:false,&quot;provider_top_offset&quot;:120}"
+				data-apply-type="reload"
+			></div>				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+				<footer data-elementor-type="footer" data-elementor-id="4130" class="elementor elementor-4130 elementor-location-footer" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-a87a5f8 e-flex e-con-boxed e-con e-parent" data-id="a87a5f8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-3c44091 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="3c44091" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-d73f7ea elementor-widget elementor-widget-image" data-id="d73f7ea" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://reciclus.org.br">
+							<img width="39" height="158" src="https://reciclus.org.br/wp-content/uploads/2023/06/rodape-logo-reciclus.png" class="attachment-full size-full wp-image-4864" alt="" />								</a>
+															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-5f44699 e-con-full e-flex e-con e-child" data-id="5f44699" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-9c080f9 elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="9c080f9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&quot;,&quot;library&quot;:&quot;&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none">
+				<ul id="menu-1-9c080f9" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4966"><a href="https://reciclus.org.br/fale-conosco/" class="elementor-item">Fale Conosco</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4967"><a target="_blank" href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" rel="noopener noreferrer nofollow">Pedido de coleta</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4968"><a href="https://reciclus.org.br/sobre/" class="elementor-item">Sobre a Reciclus</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4969"><a href="https://reciclus.org.br/sustentabilidade/" class="elementor-item">Sustentabilidade</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4970"><a href="https://reciclus.org.br/legislacao/" class="elementor-item">Legislação</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4971"><a href="https://reciclus.org.br/seja-associado/" class="elementor-item">Seja Associado</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4100 current_page_item menu-item-4982"><a href="https://reciclus.org.br/lista-pontos-entrega/" aria-current="page" class="elementor-item elementor-item-active">Pontos de Entrega</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4973"><a href="https://reciclus.org.br/onde-descartar/" class="elementor-item">Onde Descartar</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4975"><a href="https://reciclus.org.br/seja-um-parceiro/" class="elementor-item">Seja um Parceiro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4974"><a href="https://reciclus.org.br/educacao-ambiental/" class="elementor-item">Educação Ambiental</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17392"><a href="https://reciclus.org.br/reciclus-educa-inscreva-se/" class="elementor-item">Curso Online</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4976"><a href="https://reciclus.org.br/reciclus-educa/" class="elementor-item">Reciclus Educa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4977"><a href="https://reciclus.org.br/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4978"><a href="https://reciclus.org.br/noticias/" class="elementor-item">Notícias</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-9c080f9" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4966"><a href="https://reciclus.org.br/fale-conosco/" class="elementor-item" tabindex="-1">Fale Conosco</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4967"><a target="_blank" href="https://sistemareciclus.com.br/ctrSEGM000/" class="elementor-item" tabindex="-1" rel="noopener noreferrer nofollow">Pedido de coleta</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4968"><a href="https://reciclus.org.br/sobre/" class="elementor-item" tabindex="-1">Sobre a Reciclus</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4969"><a href="https://reciclus.org.br/sustentabilidade/" class="elementor-item" tabindex="-1">Sustentabilidade</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4970"><a href="https://reciclus.org.br/legislacao/" class="elementor-item" tabindex="-1">Legislação</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4971"><a href="https://reciclus.org.br/seja-associado/" class="elementor-item" tabindex="-1">Seja Associado</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4100 current_page_item menu-item-4982"><a href="https://reciclus.org.br/lista-pontos-entrega/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Pontos de Entrega</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4973"><a href="https://reciclus.org.br/onde-descartar/" class="elementor-item" tabindex="-1">Onde Descartar</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4975"><a href="https://reciclus.org.br/seja-um-parceiro/" class="elementor-item" tabindex="-1">Seja um Parceiro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4974"><a href="https://reciclus.org.br/educacao-ambiental/" class="elementor-item" tabindex="-1">Educação Ambiental</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17392"><a href="https://reciclus.org.br/reciclus-educa-inscreva-se/" class="elementor-item" tabindex="-1">Curso Online</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4976"><a href="https://reciclus.org.br/reciclus-educa/" class="elementor-item" tabindex="-1">Reciclus Educa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4977"><a href="https://reciclus.org.br/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4978"><a href="https://reciclus.org.br/noticias/" class="elementor-item" tabindex="-1">Notícias</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-f23eb92 e-con-full e-flex e-con e-child" data-id="f23eb92" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-0bdfd5e elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor" data-id="0bdfd5e" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Sede Administrativa </strong><br />Rua Dr. Tirso Martins, 44 – Conjunto 86<br />Vila Mariana | São Paulo – SP<br />CEP 04120-050<br />Telefone: (11) 5574-5708</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-65c75d2 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-id="65c75d2" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="261" height="261" src="https://reciclus.org.br/wp-content/uploads/2023/06/handtalk-selo-branco.png" class="attachment-full size-full wp-image-15780" alt="" srcset="https://reciclus.org.br/wp-content/uploads/2023/06/handtalk-selo-branco.png 261w, https://reciclus.org.br/wp-content/uploads/2023/06/handtalk-selo-branco-150x150.png 150w" sizes="(max-width: 261px) 100vw, 261px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-6c7167f elementor-hidden-desktop elementor-view-default elementor-widget elementor-widget-icon" data-id="6c7167f" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="https://api.whatsapp.com/send?phone=5511953710085" target="_blank" rel="noopener noreferrer nofollow">
+			<i aria-hidden="true" class="fab fa-whatsapp"></i>			</a>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-ff4869e elementor-shape-circle e-grid-align-right elementor-hidden-desktop elementor-grid-5 elementor-widget elementor-widget-social-icons" data-id="ff4869e" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-f170f47" href="https://www.instagram.com/reciclus.oficial/" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Instagram</span>
+						<i aria-hidden="true" class="fab fa-instagram"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-0c1e929" href="https://www.linkedin.com/company/reciclusoficial/" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Linkedin-in</span>
+						<i aria-hidden="true" class="fab fa-linkedin-in"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-7fe2e33" href="https://www.youtube.com/channel/UCG5BRnMgj-tklrmxEm5d5DQ" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Youtube</span>
+						<i aria-hidden="true" class="fab fa-youtube"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-b6bf9e1" href="https://www.facebook.com/Reciclus/" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Facebook-f</span>
+						<i aria-hidden="true" class="fab fa-facebook-f"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-tiktok elementor-repeater-item-e90cdaf" href="https://www.tiktok.com/@reciclus" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Tiktok</span>
+						<i aria-hidden="true" class="fab fa-tiktok"></i>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-19cfc16 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="19cfc16" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-a2dc9b6 elementor-view-default elementor-widget elementor-widget-icon" data-id="a2dc9b6" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="https://api.whatsapp.com/send?phone=5511953710085" target="_blank" rel="noopener noreferrer nofollow">
+			<i aria-hidden="true" class="fab fa-whatsapp"></i>			</a>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-9eb69d9 elementor-shape-circle e-grid-align-right elementor-grid-5 elementor-widget elementor-widget-social-icons" data-id="9eb69d9" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-f170f47" href="https://www.instagram.com/reciclus.oficial/" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Instagram</span>
+						<i aria-hidden="true" class="fab fa-instagram"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-0c1e929" href="https://www.linkedin.com/company/reciclusoficial/" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Linkedin-in</span>
+						<i aria-hidden="true" class="fab fa-linkedin-in"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-7fe2e33" href="https://www.youtube.com/channel/UCG5BRnMgj-tklrmxEm5d5DQ" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Youtube</span>
+						<i aria-hidden="true" class="fab fa-youtube"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-b6bf9e1" href="https://www.facebook.com/Reciclus/" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Facebook-f</span>
+						<i aria-hidden="true" class="fab fa-facebook-f"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-tiktok elementor-repeater-item-e90cdaf" href="https://www.tiktok.com/@reciclus" target="_blank" rel="noopener noreferrer nofollow">
+						<span class="elementor-screen-only">Tiktok</span>
+						<i aria-hidden="true" class="fab fa-tiktok"></i>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-2f21378 e-flex e-con-boxed e-con e-parent" data-id="2f21378" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-4c0d735 link-sublinhado elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="4c0d735" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">© Reciclus 2023 – Todos os Direitos Reservados – <a href="/politica-de-privacidade/" class="link-bdbdbd">Política de Privacidade</a></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9d566e5 elementor-fixed botao-tenha-um-coletor-reciclus elementor-widget elementor-widget-image" data-id="9d566e5" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://api.whatsapp.com/send?phone=5511953710085" target="_blank" rel="noopener noreferrer nofollow">
+							<img width="191" height="190" src="https://reciclus.org.br/wp-content/uploads/2023/10/icone-fale-com-luzia.svg" class="attachment-full size-full wp-image-15618" alt="" />								</a>
+															</div>
+				</div>
+					</div>
+				</div>
+				</footer>
+		
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<div data-elementor-type="popup" data-elementor-id="16733" class="elementor elementor-16733 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.3,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:{&quot;page_load_delay&quot;:0.2,&quot;page_load&quot;:&quot;yes&quot;},&quot;timing&quot;:{&quot;times_times&quot;:1,&quot;times_period&quot;:&quot;session&quot;,&quot;times_count&quot;:&quot;close&quot;,&quot;times&quot;:&quot;yes&quot;}}" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-9bce495 e-flex e-con-boxed e-con e-parent" data-id="9bce495" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-ddaed65 elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="ddaed65" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Este site utiliza cookies para sua melhor experiência</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-391cd72 elementor-widget elementor-widget-button" data-id="391cd72" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">OK</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		        <script type="text/javascript" src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+        <script type="text/javascript">
+            var ht = new HT({"token":"1f0bbc6dd9854331673fc86b59620b13","avatar":"MAYA"});
+        </script>
+        <link rel='stylesheet' id='fme-frontend-css-css' href='https://reciclus.org.br/wp-content/plugins/form-masks-for-elementor/assets/css/mask-frontend.css?ver=1' media='all' />
+<script id="elementor-webpack-runtime-js" src="https://reciclus.org.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.4.1"></script>
+<script id="elementor-frontend-modules-js" src="https://reciclus.org.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.4.1"></script>
+<script id="jquery-ui-core-js-before">
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+</script>
+<script id="jquery-ui-core-js" src="https://reciclus.org.br/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnX":"Compartilhar no X","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.4.1","is_static":false,"experimentalFeatures":{"container":true,"e_mcp_revision_snapshots":true,"nested-elements":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_collection_loop":true},"urls":{"assets":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/reciclus.org.br\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/reciclus.org.br\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"8b340dfc4a","atomicFormsSendForm":"b14a1a0440"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes"},"post":{"id":4100,"title":"Pontos%20de%20Entrega%20%7C%20Reciclus","excerpt":"","featuredImage":"https:\/\/reciclus.org.br\/wp-content\/uploads\/2023\/06\/onde-descartar-banner-1024x273.jpg"}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script id="elementor-frontend-js" src="https://reciclus.org.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.4.1"></script>
+<script id="smartmenus-js" src="https://reciclus.org.br/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1"></script>
+<script id="googlesitekit-events-provider-content-events-js-before">
+window._googlesitekit = window._googlesitekit || {};
+window._googlesitekit.contentEvents = {"postID":4100,"isReadableSinglePost":false,"hasVimeoEmbed":false,"wordCount":0,"estimatedReadTimeSeconds":0,"isLastPageOfMultiPagePost":false,"readTimeThresholdPercent":85,"minimumReadTimeSeconds":5};
+//# sourceURL=googlesitekit-events-provider-content-events-js-before
+</script>
+<script id="googlesitekit-events-provider-content-events-js" src="https://reciclus.org.br/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-90bacb156ab34fa090db.js" defer></script>
+<script id="jet-plugins-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/assets/lib/jet-plugins/jet-plugins.js?ver=1.1.0"></script>
+<script id="jet-engine-jet-smart-filters-compatibility-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/assets/js/frontend/modules/jet-smart-filters.js?ver=3.9.1"></script>
+<script id="jet-engine-frontend-js-extra">
+var JetEngineSettings = {"ajaxurl":"https://reciclus.org.br/wp-admin/admin-ajax.php","ajaxlisting":"https://reciclus.org.br/lista-pontos-entrega/?nocache=1","restNonce":"8b51829028","hoverActionTimeout":"400","post_id":"4100","sliderLibrary":"swiper","query_builder":{"custom_ids":[]},"addedPostCSS":["7476"],"maps_api_disabled":"1","queried_object_id":"4100","queried_object_class":"WP_Post"};
+//# sourceURL=jet-engine-frontend-js-extra
+</script>
+<script id="jet-engine-frontend-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/assets/js/frontend/frontend.js?ver=3.9.1"></script>
+<script id="wp-hooks-js" src="https://reciclus.org.br/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://reciclus.org.br/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/reciclus.org.br\/wp-admin\/admin-ajax.php","nonce":"3d3861043d","urls":{"assets":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/reciclus.org.br\/wp-json\/"},"settings":{"lazy_load_background_images":false},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script id="elementor-pro-frontend-js" src="https://reciclus.org.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.4.1"></script>
+<script id="pro-elements-handlers-js" src="https://reciclus.org.br/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.4.1"></script>
+<script id="fme-custom-mask-script-js-extra">
+var fmeData = {"pluginUrl":"https://reciclus.org.br/wp-content/plugins/form-masks-for-elementor/","errorMessages":{"mask-cnpj":"CNPJ inv\u00e1lido.","mask-cpf":"CPF inv\u00e1lido.","mask-cep":"CEP inv\u00e1lido (XXXXX-XXX).","mask-phus":"N\u00famero inv\u00e1lido: (123) 456-7890","mask-ph8":"N\u00famero inv\u00e1lido: 1234-5678","mask-ddd8":"N\u00famero inv\u00e1lido: (DDD) 1234-5678","mask-ddd9":"N\u00famero inv\u00e1lido: (DDD) 91234-5678","mask-dmy":"Data inv\u00e1lida: dd/mm/aaaa","mask-mdy":"Data inv\u00e1lida: mm/dd/aaaa","mask-hms":"Hora inv\u00e1lida: hh:mm:ss","mask-hm":"Hora inv\u00e1lida: hh:mm","mask-dmyhm":"Data inv\u00e1lida: dd/mm/aaaa hh:mm","mask-mdyhm":"Data inv\u00e1lida: mm/dd/aaaa hh:mm","mask-my":"Data inv\u00e1lida: mm/aaaa","mask-ccs":"N\u00famero de cart\u00e3o de cr\u00e9dito inv\u00e1lido.","mask-cch":"N\u00famero de cart\u00e3o de cr\u00e9dito inv\u00e1lido.","mask-ccmy":"Data inv\u00e1lida.","mask-ccmyy":"Data inv\u00e1lida.","mask-ipv4":"Endere\u00e7o IPv4 inv\u00e1lido."}};
+//# sourceURL=fme-custom-mask-script-js-extra
+</script>
+<script id="fme-custom-mask-script-js" src="https://reciclus.org.br/wp-content/plugins/form-masks-for-elementor/assets/js/custom-mask-script.js?ver=2.7.4"></script>
+<script id="fme-new-input-mask-js" src="https://reciclus.org.br/wp-content/plugins/form-masks-for-elementor/assets/js/new-input-mask.js?ver=2.7.4"></script>
+<script id="jquery-ui-datepicker-js" src="https://reciclus.org.br/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.14.2"></script>
+<script id="jet-maps-listings-user-geolocation-js-extra">
+var JetMapListingGeolocationFilterData = {"initEvent":"jet-smart-filters/before-init"};
+//# sourceURL=jet-maps-listings-user-geolocation-js-extra
+</script>
+<script id="jet-maps-listings-user-geolocation-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/user-geolocation.js?ver=3.9.1"></script>
+<script id="jet-maps-listings-location-distance-js-extra">
+var JetMapListingLocationDistanceFilterData = {"apiAutocomplete":"https://reciclus.org.br/wp-json/jet-engine/v2/get-map-autocomplete-data/"};
+//# sourceURL=jet-maps-listings-location-distance-js-extra
+</script>
+<script id="jet-maps-listings-location-distance-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/location-distance.js?ver=3.9.1"></script>
+<script id="jet-maps-listings-map-sync-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/map-sync.js?ver=3.9.1"></script>
+<script id="jet-smart-filters-js-extra">
+var JetSmartFilterSettings = {"ajaxurl":"https://reciclus.org.br/wp-admin/admin-ajax.php","siteurl":"https://reciclus.org.br","sitepath":"","baseurl":"/lista-pontos-entrega/","selectors":{"epro-loop-builder":{"selector":".elementor-loop-container","action":"replace","inDepth":true,"idPrefix":"#"},"jet-engine":{"selector":".jet-listing-grid.jet-listing","action":"replace","inDepth":true,"idPrefix":"#","list":".jet-listing-grid__items"},"jsf-listing":{"selector":".jsf-listing","action":"replace","inDepth":true,"idPrefix":"#","item":".jsf-listing__item"},"default-woo-archive":{"selector":".woocommerce .products","action":"insert","inDepth":false,"idPrefix":"#","list":".products","item":".product"},"jet-engine-maps":{"selector":".jet-map-listing","action":"insert","inDepth":true,"idPrefix":"#"}},"queries":{"jet-engine":{"pontos-entrega-lista":{"post_status":["publish"],"post_type":"wpsl_stores","posts_per_page":"20","paged":"1","ignore_sticky_posts":"1","order":"ASC","orderby":"title","_jsf_query_signature":"v2:eb39c13442e7fb3f4ae22ac14f03c932c3c852c3c71aa2ac980d8eee79047af6","_jsf_query_context":{"rules":{"_meta_query_sl-titulo-repetido,wpsl_address,wpsl_zip|search":{"type":"filter"},"_tax_query_cidade":{"type":"filter"},"_tax_query_estado":{"type":"filter"},"jet_paged":{"type":"pagination","max":196}},"signature":"v2:a88fdeee4ae875a8707535d148f5c7a53f3aa50b0e7aa9fddb9e3aece806d2f2"}}}},"settings":{"jet-engine":{"pontos-entrega-lista":{"lisitng_id":"7476","allowed_listing_ids":"","columns":"1","columns_tablet":"","columns_mobile":"","column_min_width":240,"column_min_width_tablet":240,"column_min_width_mobile":240,"inline_columns_css":false,"post_status":["publish"],"use_random_posts_num":"","posts_num":20,"max_posts_num":9,"not_found_message":"\u003Cstrong\u003EBusca sem resultados\u003C/strong\u003E, tente novamente","is_masonry":"","equal_columns_height":"","use_load_more":"","load_more_id":"","load_more_type":"click","loader_text":"","loader_spinner":"","use_custom_post_types":"","custom_post_types":[],"hide_widget_if":"","carousel_enabled":"","slides_to_scroll":"1","arrows":"true","arrow_icon":"fa fa-angle-left","dots":"","autoplay":"true","pause_on_hover":"true","autoplay_speed":5000,"infinite":"true","center_mode":"","effect":"slide","speed":500,"inject_alternative_items":"","injection_items":[],"scroll_slider_enabled":"","scroll_slider_on":["desktop","tablet","mobile"],"custom_query":"","_element_id":"pontos-entrega-lista","collapse_first_last_gap":"","list_items_wrapper_tag":"div","list_item_tag":"div","empty_items_wrapper_tag":"div","list_tags_selection":"","jsf_signature":"v3:99819c4a6ab8e91750e54d327667d96750875954f73384845f318dd44ee7456f"}}},"misc":{"week_start":"0","url_type":"plain","valid_url_params":["jsf","tax","meta","date","sort","alphabet","_s","_sm","pagenum","plain_query","jet-smart-filters","jet_paged","search","_tax_query_","_meta_query_","_date_query_","_sort_","__s_","geo_query","map_sync"]},"props":{"jet-engine":{"pontos-entrega-lista":{"found_posts":3905,"max_num_pages":196,"page":1}}},"extra_props":{},"templates":{"active_tag":{"label":"\u003Cdiv class=\"jet-active-tag__label\"\u003E/% $value %/\u003Cspan class=\"jet-active-tag__label-separator\"\u003E:\u003C/span\u003E\u003C/div\u003E","value":"\u003Cdiv class=\"jet-active-tag__val\"\u003E/% $value %/\u003C/div\u003E","remove":"\u003Cdiv class=\"jet-active-tag__remove\"\u003E&times;\u003C/div\u003E"},"active_filter":{"label":"\u003Cdiv class=\"jet-active-filter__label\"\u003E/% $value %/\u003Cspan class=\"jet-active-filter__label-separator\"\u003E:\u003C/span\u003E\u003C/div\u003E","value":"\u003Cdiv class=\"jet-active-filter__val\"\u003E/% $value %/\u003C/div\u003E","remove":"\u003Cdiv class=\"jet-active-filter__remove\"\u003E&times;\u003C/div\u003E"},"pagination":{"item":"\u003Cdiv class=\"jet-filters-pagination__link\"\u003E/% $value %/\u003C/div\u003E","dots":"\u003Cdiv class=\"jet-filters-pagination__dots\"\u003E&hellip;\u003C/div\u003E","load_more":"\u003Cdiv class=\"jet-filters-pagination__link\"\u003E/% $value %/\u003C/div\u003E"}},"plugin_settings":{"use_tabindex":"false","use_url_aliases":"false","url_aliases":[{"needle":"/jsf/jet-engine/","replacement":"/filter/"}],"provider_preloader":{"template":"","fixed_position":false,"fixed_edge_gap":80},"url_custom_symbols":""},"datePickerData":{"closeText":"Done","prevText":"Prev","nextText":"Next","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"weekHeader":"Wk"},"query_context":{"jet-engine":{"pontos-entrega-lista":{"rules":{"_meta_query_sl-titulo-repetido,wpsl_address,wpsl_zip|search":{"type":"filter"},"_tax_query_cidade":{"type":"filter"},"_tax_query_estado":{"type":"filter"},"jet_paged":{"type":"pagination","max":196}},"signature":"v2:a88fdeee4ae875a8707535d148f5c7a53f3aa50b0e7aa9fddb9e3aece806d2f2"}}}};
+//# sourceURL=jet-smart-filters-js-extra
+</script>
+<script id="jet-smart-filters-js" src="https://reciclus.org.br/wp-content/plugins/jet-smart-filters/assets/js/public.js?ver=3.8.6.3"></script>
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/cec81894-813b-4ec5-b8ca-7384b50663ca-loader.js" ></script>
+
+</body>
+</html>
+
+
+<!-- Page cached by LiteSpeed Cache 7.9.3 on 2026-11-18 06:13:35 -->

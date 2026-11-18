@@ -1,0 +1,390 @@
+# https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/
+# status 200 text/html; charset=UTF-8 42400 bytes
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/css/fontawesome-all.css">
+        <link rel="stylesheet" href="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/css/style.css?v=440">
+        <link rel="stylesheet" href="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/css/slider.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107616150-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107616150-5');
+</script>
+
+        <title>Encontre um ponto de coleta - ReciclANIP</title>
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- This site is optimized with the Yoast SEO plugin v8.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Encontre um ponto de coleta - ReciclANIP" />
+<meta property="og:description" content="A operação de logística reversa de pneus inservíveis é regulamentada pela Política Nacional de Resíduos Sólidos, a PNRS, lei Nº 12.305, de 2 de agosto de 2010. A política prevê a responsabilidade compartilhada, onde consumidores deverão efetuar a devolução dos pneus aos comerciantes ou distribuidores, que deverão encaminhar para os fabricantes ou aos importadores, que &hellip;" />
+<meta property="og:url" content="https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/" />
+<meta property="og:site_name" content="ReciclANIP" />
+<meta property="og:image" content="https://www.reciclanip.org.br/sitewp/wp-content/uploads/2018/07/banner-oquesao.jpg" />
+<meta property="og:image:secure_url" content="https://www.reciclanip.org.br/sitewp/wp-content/uploads/2018/07/banner-oquesao.jpg" />
+<meta property="og:image:width" content="1500" />
+<meta property="og:image:height" content="431" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="A operação de logística reversa de pneus inservíveis é regulamentada pela Política Nacional de Resíduos Sólidos, a PNRS, lei Nº 12.305, de 2 de agosto de 2010. A política prevê a responsabilidade compartilhada, onde consumidores deverão efetuar a devolução dos pneus aos comerciantes ou distribuidores, que deverão encaminhar para os fabricantes ou aos importadores, que [&hellip;]" />
+<meta name="twitter:title" content="Encontre um ponto de coleta - ReciclANIP" />
+<meta name="twitter:image" content="https://www.reciclanip.org.br/sitewp/wp-content/uploads/2018/07/banner-oquesao.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.reciclanip.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.reciclanip.org.br%2Fpontos-de-coleta%2Fcoleta-no-brasil%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.reciclanip.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.reciclanip.org.br%2Fpontos-de-coleta%2Fcoleta-no-brasil%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='awsm-ead-public-css' href='https://www.reciclanip.org.br/sitewp/wp-content/plugins/embed-any-document/css/embed-public.min.css?ver=2.7.1' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<script id="jquery-core-js" src="https://www.reciclanip.org.br/sitewp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.reciclanip.org.br/sitewp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://www.reciclanip.org.br/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.reciclanip.org.br/wp-json/wp/v2/pages/32" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.reciclanip.org.br/sitewp/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.4" />
+<link rel='shortlink' href='https://www.reciclanip.org.br/?p=32' />
+        <link rel="shortcut icon" href="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/imgs/favicon.ico'" />
+    </head>
+<body>
+    <header>
+        <div class="green-start">
+            <div class="wrapper">
+                <div class="icons-container">
+
+                    <!-- Extranet -->
+             <!--        <div class="extranet-link lock">
+                        <img src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/imgs/extranet.png" alt="Lock">
+                        <span><a target="_blank" title="Extranet Reciclanip" href="https://reciclanip.com.br/extranet">Extranet</a></span>
+                    </div> -->
+
+                    <!-- Fornecedores -->
+                    <div class="fornecedores-link lock">
+                        <img src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/imgs/lock.png" alt="Lock">
+                        <span><a title="Fornecedores" href="https://www.reciclanip.org.br/sitewp/fornecedores/">fornecedores</a></span> 
+                    </div>
+
+
+                    <div style="margin: 0px 2px;" class="circle">
+                                    <a href="https://www.facebook.com/AnipReciclanip" target="_blank" title="Facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div><div style="margin: 0px 2px;" class="circle">
+                                    <a href="https://twitter.com/AnipeReciclanip" target="_blank" title="Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div><div style="margin: 0px 2px;" class="circle">
+                                    <a href="https://www.linkedin.com/company/anip-industria-e-reciclagem-de-pneus/%20" target="_blank" title="Linkedin">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>                </div>
+            </div>
+        </div>
+        <div class="container-header">
+            <div class="wrapper">
+                <div class="box-logBusca">
+                    <h1 id="logo">
+                        <a href="https://www.reciclanip.org.br" title="ReciclANIP">
+                            <img src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/imgs/logo.png" alt="Reciclanip">
+                        </a>
+                    </h1>
+                    <div class="box-busca">
+                        <form class="form-busca" method="get" action="https://www.reciclanip.org.br">
+                            <label>
+                                Busca
+                                <span class="span-search">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" name="s" value="">
+                                </span>
+                            </label>
+                            
+                        </form>
+                    </div>
+                        <button id="call-menu-mobile"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="wrapper">
+            <nav class="menu">
+                <ul id="menu-principal" class="menu"><li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-73"><a href="https://www.reciclanip.org.br/">Inicio</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-74"><a href="https://www.reciclanip.org.br/quem-somos/">Quem Somos</a>
+<ul class="sub-menu">
+	<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="https://www.reciclanip.org.br/quem-somos/institucional/">Institucional</a></li>
+	<li id="menu-item-1540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1540"><a href="https://www.reciclanip.org.br/quem-somos/missao-visao-e-valores/">Missão e Visão</a></li>
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="https://www.reciclanip.org.br/quem-somos/associadas/">Associados</a></li>
+	<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://www.reciclanip.org.br/quem-somos/diretoria/">Diretoria ANIP</a></li>
+	<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://www.reciclanip.org.br/quem-somos/etica-e-integridade/">Código de Ética &#8211; SISTEMA ANIP</a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://www.reciclanip.org.br/quem-somos/etica-e-integridade-fornecedores/">Código de Ética Fornecedores</a></li>
+</ul>
+</li>
+<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-80"><a href="https://www.reciclanip.org.br/pontos-de-coleta/">Pontos de Coleta</a>
+<ul class="sub-menu">
+	<li id="menu-item-2085" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-32 current_page_item menu-item-2085"><a href="https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/" aria-current="page">Encontre um ponto de coleta</a></li>
+	<li id="menu-item-2438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2438"><a href="https://www.reciclanip.org.br/pontos-de-coleta/solicite-uma-coleta/">TORNE-SE UM PONTO DE COLETA</a></li>
+</ul>
+</li>
+<li id="menu-item-1501" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1501"><a href="#">Transporte</a>
+<ul class="sub-menu">
+	<li id="menu-item-1504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1504"><a href="https://www.reciclanip.org.br/veiculos-contratados/">Veículos Contratados</a></li>
+	<li id="menu-item-1503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1503"><a href="https://www.reciclanip.org.br/como-prestar-servico-de-transporte-para-a-reciclanip/">Como Prestar Serviço</a></li>
+	<li id="menu-item-1502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1502"><a href="https://www.reciclanip.org.br/regras-de-operacao/">Regras de Operação</a></li>
+</ul>
+</li>
+<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-84"><a href="https://www.reciclanip.org.br/formas-de-destinacao/">Formas de destinação</a>
+<ul class="sub-menu">
+	<li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86"><a href="https://www.reciclanip.org.br/formas-de-destinacao/principais-destinacoes/">Principais Destinações</a></li>
+	<li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="https://www.reciclanip.org.br/formas-de-destinacao/ciclo-do-pneu/">Ciclo do Pneu</a></li>
+	<li id="menu-item-2124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2124"><a href="https://www.reciclanip.org.br/destinados/">Destinados</a></li>
+</ul>
+</li>
+<li id="menu-item-2176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2176"><a href="https://www.reciclanip.org.br/canal-de-etica/">Canal de Ética</a></li>
+<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-87"><a href="https://www.reciclanip.org.br/fale-conosco/">Fale Conosco</a>
+<ul class="sub-menu">
+	<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="https://www.reciclanip.org.br/fale-conosco/contato/">Contato</a></li>
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="https://www.reciclanip.org.br/fale-conosco/imprensa/">ASSESSORIA DE IMPRENSA</a></li>
+	<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="https://www.reciclanip.org.br/fale-conosco/sala-de-imprensa/">Releases</a></li>
+	<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://www.reciclanip.org.br/fale-conosco/perguntas-frequentes/">Perguntas Frequentes</a></li>
+</ul>
+</li>
+</ul>            </nav>
+        </article>        <div class="banner__institucional" style="background-image: url('https://www.reciclanip.org.br/sitewp/wp-content/uploads/2018/07/banner-oquesao.jpg');">
+            <article class="wrapper">
+                <div class="banner__institucional--wrap">
+                    <div class="banner__institucional--slide">
+                        <p><strong>Encontre um ponto de coleta</strong></p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <article class="conteudo">
+    <div class="wrapper">
+        <nav class="conteudo__redesSociais">
+        <ul>
+            <li><a href="http://facebook.com/share.php?u=https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/&t=Encontre+um+ponto+de+coleta" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="http://twitter.com/intent/tweet?text=Encontre um ponto de coleta&url=https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+         
+            <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/&title=Encontre um ponto de coleta" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+        </nav>
+    </div>
+</article>
+        <article class="conteudo">
+        <div class="wrapper">
+            <div class="conteudo__coleta">
+                <h2>encontre os pontos de coleta pelo brasil</h2>
+                <p>A operação de logística reversa de pneus inservíveis é regulamentada pela Política Nacional de Resíduos Sólidos, a PNRS, lei Nº 12.305, de 2 de agosto de 2010. A política prevê a responsabilidade compartilhada, onde consumidores deverão efetuar a devolução dos pneus aos comerciantes ou distribuidores, que deverão encaminhar para os fabricantes ou aos importadores, que farão o processo de destinação ambientalmente adequada dos pneus inservíveis. De acordo com a PNRS, a responsabilidade do Ponto de Coleta é do varejo, uma vez que este deve retornar os produtos para as fabricantes, cabendo a estes, apenas a destinação ambientalmente adequada.</p>
+                <p>&nbsp;</p>
+                <p>Abaixo lista indicativa dos pontos de coleta:</p>
+                <div  class="conteudo__coleta--conteudo">
+                    <form method="get" action="#">
+                    <select name="uf" id="uf">
+                        <option value="">Escolha um Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    </form>
+                    <div class="conteudo__btn"></div>
+                    <div style="display: none;" id="blocoConteudo" class="conteudo_wrapcols">
+                        <div id="loadPontosColeta" class="conteudo__coleta--colUm">
+                        </div>
+
+                        <div class="conteudo__coleta--colDois">
+                            <span class="conteudo__coleta--location"><i class="fas fa-map-marker-alt"></i></span>
+                            <h2 id="estadoNome"></h2>
+                            <span>Total de pontos de coleta:</span>
+                            <span id="totalPontosColetaEstado" class="pontos"></span>
+                        </div>
+                    </div>
+          
+                </div>
+            </div>
+        </div>
+    </article>
+<div class="conteudo">
+    <iframe title="mapa de coletas" style="width: 100%;" src="https://www.google.com/maps/d/u/0/embed?mid=1uO2-jMqSAQUu9pOUwTRF_O6Cu-lHARw&ehbc=2E312F&noprof=1" width="100%" height="480"></iframe>
+</div>
+
+
+<script type="text/javascript">
+jQuery(function () {
+    $ = jQuery;
+
+    $(document).ready(function () {
+  
+    });
+
+
+
+    $('#uf').on('change', function() {
+        var selectedValue = $(this).val();
+        $("#estadoNome").text($(this).find('option:selected').text());
+        if(selectedValue != ""){
+           loadPontos(selectedValue); 
+           $("#blocoConteudo").show();
+       }else{
+           $("#blocoConteudo").hide();
+       } 
+    });
+
+});
+var urlbase = "https://www.reciclanip.org.br/";
+
+function loadPontos(uf){
+    if(!uf)return;
+    $("#loadPontosColeta").html("");
+    $.post(urlbase+'ajax/pontos.php',{uf: uf} ,function(data){
+        if(data.length > 0){
+              $(data).each(function(i,v){
+                var htmlCards = '<div class="item_ponto conteudo__coleta--item">'+
+                    '<div class="dados">'+
+                        '<span>'+v.cidade+'</span>&nbsp;-&nbsp'+
+                        '<span>'+v.telefone_formatado+'</span>'+
+                        '</div>'+
+                        '<p style="text-transform:capitalize;" class="text-captalize">'+v.endereco_lower+' - '+v.cep+'</p>'+
+                    '</div>'+
+                    '</div>';
+                   $("#loadPontosColeta").append(htmlCards);
+                  if(data.length == (i+1)){
+                    $("#totalPontosColetaEstado").text($(".item_ponto").length);
+                  }
+              });
+          }
+    });
+  
+}
+</script>
+        
+
+        </main>
+        <footer>
+            <div class="container-footer">
+                <div class="wrapper">
+                    <nav class="container-menu-footer">
+                        <div class="mapa-site">
+                            <i class="fas fa-sitemap"></i>
+                            <span>mapa do site</span>
+                        </div>
+                        <ul class="main-ul-footer">
+
+                            <li class="menu-list">
+                                        <ul><li class="li-main">
+                                                <a href="https://www.reciclanip.org.br/" >Inicio</a>
+                                            </li><li class="li-main">
+                                                <a href="https://www.reciclanip.org.br/quem-somos/" >Quem Somos</a>
+                                            </li><ul class="dropdown" aria-label="submenu"><li><a href="https://www.reciclanip.org.br/quem-somos/institucional/" >Institucional</a></li><li><a href="https://www.reciclanip.org.br/quem-somos/missao-visao-e-valores/" >Missão e Visão</a></li><li><a href="https://www.reciclanip.org.br/quem-somos/associadas/" >Associados</a></li><li><a href="https://www.reciclanip.org.br/quem-somos/diretoria/" >Diretoria ANIP</a></li><li><a href="https://www.reciclanip.org.br/quem-somos/etica-e-integridade/" >Código de Ética - Sistema ANIP</a></li><li><a href="https://www.reciclanip.org.br/quem-somos/etica-e-integridade-fornecedores/" >Código de Ética Fornecedores</a></li></ul>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-list">
+                                                <ul><li class="li-main">
+                                                <a href="https://www.reciclanip.org.br/pontos-de-coleta/" >Pontos de Coleta</a>
+                                            </li><ul class="dropdown" aria-label="submenu"><li><a href="https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/" >Encontre um ponto de coleta</a></li><li><a href="https://www.reciclanip.org.br/pontos-de-coleta/solicite-uma-coleta/" >TORNE-SE UM PONTO DE COLETA</a></li></ul>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-list">
+                                                <ul><li class="li-main">
+                                                <a href="" >Transporte</a>
+                                            </li><li><a href="https://www.reciclanip.org.br/veiculos-contratados/" >Veículos Contratados</a></li><li><a href="https://www.reciclanip.org.br/como-prestar-servico-de-transporte-para-a-reciclanip/" >Como Prestar Serviço</a></li><li><a href="https://www.reciclanip.org.br/regras-de-operacao/" >Regras de Operação</a></li><li class="li-main">
+                                                <a href="https://www.reciclanip.org.br/formas-de-destinacao/" >Formas de destinação</a>
+                                            </li><ul class="dropdown" aria-label="submenu"><li><a href="https://www.reciclanip.org.br/formas-de-destinacao/principais-destinacoes/" >Principais Destinações</a></li><li><a href="https://www.reciclanip.org.br/formas-de-destinacao/ciclo-do-pneu/" >Ciclo do Pneu</a></li><li><a href="https://www.reciclanip.org.br/destinados/" >Destinados</a></li></ul>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-list">
+                                                <ul><li class="li-main">
+                                                <a href="https://www.reciclanip.org.br/fale-conosco/" >Fale Conosco</a>
+                                            </li><ul class="dropdown" aria-label="submenu"><li><a href="https://www.reciclanip.org.br/fale-conosco/contato/" >Contato</a></li><li><a href="https://www.reciclanip.org.br/fale-conosco/imprensa/" >Assessoria de Imprensa</a></li><li><a href="https://www.reciclanip.org.br/fale-conosco/sala-de-imprensa/" >Releases</a></li><li><a href="https://www.reciclanip.org.br/fale-conosco/perguntas-frequentes/" >Perguntas Frequentes</a></li></ul>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-list">
+                                                <ul><li class="li-main">
+                                                <a href="https://www.reciclanip.org.br/fornecedores/" >Fornecedores</a>
+                                            </li>
+                        </ul>
+                    </nav>
+                    <div class="informacoes-adicionais">
+                        <img id="logo-footer" src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/imgs/logo-footer.png">
+                        <div class="infoFinais">
+                            <span><i class="fas fa-map-marker-alt"></i> Rua André Ampere, 65 – 3º andar – Brooklin Paulista – São Paulo/SP – CEP 04562-080 <i class="fas fa-phone-volume"></i>+55 11 3165-4430</li></span>
+                            <img id="anip" src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/imgs/anip.png" alt="Anip">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-copyright">
+                <small>&copy;2019 Associação Nacional da Indústria de Pneumáticos  |  <a title="Aviso de Privacidade" href="https://www.reciclanip.org.br/aviso-de-privacidade">Aviso de Privacidade</a></small>
+            </div>
+        </footer>
+
+        <script src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/js/jquery-3.3.1.min.js"></script>
+        <script src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/js/app.js"></script>
+        <script src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/js/jquery.mask.js"></script>
+        <script src="https://www.reciclanip.org.br/sitewp/wp-content/themes/reciclaip/js/slider.js"></script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/sitewp/wp-*.php","/sitewp/wp-admin/*","/sitewp/wp-content/uploads/*","/sitewp/wp-content/*","/sitewp/wp-content/plugins/*","/sitewp/wp-content/themes/reciclaip/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="awsm-ead-pdf-object-js" src="https://www.reciclanip.org.br/sitewp/wp-content/plugins/embed-any-document/js/pdfobject.min.js?ver=2.7.1"></script>
+<script id="awsm-ead-public-js-extra">
+var eadPublic = [];
+//# sourceURL=awsm-ead-public-js-extra
+</script>
+<script id="awsm-ead-public-js" src="https://www.reciclanip.org.br/sitewp/wp-content/plugins/embed-any-document/js/embed-public.min.js?ver=2.7.1"></script>
+<script id="wpcf7-redirect-script-js-extra">
+var wpcf7_redirect_forms = {"211":{"page_id":"1645","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"subject","delay_redirect":"1500","after_sent_script":"","thankyou_page_url":"https://www.reciclanip.org.br/fale-conosco/contato/sucesso/"},"194":{"page_id":"0","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"","after_sent_script":"","thankyou_page_url":""}};
+//# sourceURL=wpcf7-redirect-script-js-extra
+</script>
+<script id="wpcf7-redirect-script-js" src="https://www.reciclanip.org.br/sitewp/wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js"></script>
+    </body>
+</html>

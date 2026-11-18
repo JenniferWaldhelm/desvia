@@ -1,0 +1,794 @@
+# https://sistema.reciclelog.com.br/info/green?search_state=PR&search_city=LONDRINA&button=
+# status 200 text/html; charset=utf-8 22428 bytes
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ambipar Environment</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="QBkDn4f2r5tEYzgxUN8imyBWMvwmYcVNsmOsex8aJye9T11TmJNXwRtRVyRWI9KbEYIMfl53umhSPOt8WzAmXg" />
+    
+
+    <link rel="stylesheet" media="screen" href="/assets/public-acc7272764e31a7eedfb19c333879dfd8d66b1030290b664e5a65a9344a0687f.css" />
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-12">
+
+          
+  <div class="row">
+    <div class="col-4 text-center mt-2">
+      <img width="200" src="/assets/ambipar_logo_medio-278933d026d16c7f9bd35eab52bec69c0f6206b82996a054ba95ebbb69fea3a0.png" />
+    </div>
+    <div class="col-8 text-right">
+      <img width="620" src="/assets/mtr_topo-eedc5b879453feb5fe41608baf21c15628bc2040a5442d900a21bb4eadc170e5.png" />
+    </div>
+  </div>
+
+
+
+<div class="row">
+  <div class="col-12 text-center mt-3 mb-3">
+    <h1>RECICLA PILHAS</h1> 
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12 text-center mt-3 mb-3">
+
+    <strong>Residuômetro:</strong>
+    <br />
+    <div class="odometer_gmc"></div>
+    <br/>Kg de resíduos processados
+
+  </div>
+</div>
+
+<form action="/info/green" accept-charset="UTF-8" method="get">
+
+  <div class="row justify-content-center mt-3 mb-3">
+
+    <div class="col-12 mb-3 text-center">
+      Consulte aqui em seu Estado ou Cidade o Posto de Recebimento mais próximo:
+    </div>
+
+    <div class="col-2">
+      <select class="form-control" name="search_state" id="search_state"><option value="">Todos Estados</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AP">AP</option>
+<option value="AM">AM</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MT">MT</option>
+<option value="MS">MS</option>
+<option value="MG">MG</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option selected="selected" value="PR">PR</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RS">RS</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="SC">SC</option>
+<option value="SP">SP</option>
+<option value="SE">SE</option>
+<option value="TO">TO</option></select>
+    </div>
+
+    <div class="col-3">
+      <select class="form-control" name="search_city" id="search_city"><option value="">Todas Cidades</option>
+<option selected="selected" value="LONDRINA">LONDRINA</option></select>
+    </div>
+
+    <div class="col-2">
+      <button name="button" type="submit" class="form-control btn btn-primary">
+        <span class="oi oi-magnifying-glass"></span>&nbsp;Buscar
+</button>    </div>
+  </div>
+
+</form>
+<div class="row justify-content-center">
+  <div class="col-7">
+    <div id="map"></div>
+  </div>
+</div>
+
+
+<div class="table-responsive mt-5">
+  <table class="table table-hover table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+      <tr class="text-center">
+        <th class="">Posto de Coleta</th>
+        <th class="">Endereço</th>
+        <th class="">Bairro</th>
+        <th class="">Cidade</th>
+        <th class="">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+          <td>171 - ATACADÃO LONDRINA NORTE</td>
+          <td>AVENIDA BRASÍLIA, 5650, -</td>
+          <td>IDEAL</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAÍ 162</td>
+          <td>AVENIDA SAUL ELKIND, 2211, -</td>
+          <td>CONJUNTO VIVI XAVIER</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAÍ 71</td>
+          <td>AVENIDA TIRADENTES, 4650, -</td>
+          <td>JARDIM ROSICLER</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ATACADÃO LONDRINA</td>
+          <td>AVENIDA TIRADENTES, 281, -</td>
+          <td>JARDIM SHANGRI-LA A</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR LONDRINA</td>
+          <td>RODOVIA CELSO GARCIA CID KM 377, S/N, -</td>
+          <td>CATUAÍ</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR - LONDRINA</td>
+          <td>RODOVIA CELSO GARCIA CID, 5500</td>
+          <td>GLEBA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - LONDRINA</td>
+          <td>Rod Celso Garcia Cid, S/N</td>
+          <td>Gleba Fazenda Palhano</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA LONDRINA - BENJAMIN</td>
+          <td>Rua Benjamin Constant, 1138</td>
+          <td>Centro</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA LONDRINA - CENTRO</td>
+          <td>Av. Paraná, 203</td>
+          <td>Centro</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - BELA SUÍÇA</td>
+          <td>AVENIDA MADRE LEÔNIA MILITO, 680</td>
+          <td>BELA SUÍÇA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - CENTRO</td>
+          <td>AVENIDA JUSCELINO KUBITSCHEK, 799</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - CENTRO</td>
+          <td>RUA QUINTINO BOCAIUVA, 1330</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - CENTRO</td>
+          <td>AVENIDA HIGIENÓPOLIS, 460</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - CJ V XAVIER</td>
+          <td>AVENIDA SAUL ELKIND, 3990</td>
+          <td>CJ V XAVIER</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - COHAB JACOMO VIOLIN</td>
+          <td>AVENIDA SAUL ELKIND, 1525</td>
+          <td>COHAB JACOMO VIOLIN</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - FAZENDA PALHANO</td>
+          <td>RODOVIA MABIO GONCALVES PALHANO, 680</td>
+          <td>FAZENDA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - G FAZ PALHANO</td>
+          <td>RODOVIA CELSO GARCIA CID KM 376, 5600</td>
+          <td>G FAZ PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - GLEBA FAZENDA PALHANO</td>
+          <td>AVENIDA AYRTON SENNA DA SILVA, 580</td>
+          <td>GLEBA FAZENDA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - JARDIM COLISEU</td>
+          <td>RUA WINSTON CHURCHILL, 865</td>
+          <td>JARDIM COLISEU</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - JARDIM LONDRINA</td>
+          <td>AVENIDA BANDEIRANTES, 471</td>
+          <td>JARDIM LONDRINA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - JARDIM NOVA LONDRES</td>
+          <td>AVENIDA DUQUE DE CAXIAS, 1187</td>
+          <td>JARDIM NOVA LONDRES</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - JARDIM V BOAS</td>
+          <td>RUA FINLÂNDIA, 290</td>
+          <td>JARDIM V BOAS</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - NIKKO</td>
+          <td>RUA FUNCIONÁRIOS , S/N</td>
+          <td>NIKKO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - RODOCENTRO</td>
+          <td>AVENIDA ARTHUR THOMAS, 700</td>
+          <td>RODOCENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - VILA JUDITH</td>
+          <td>AVENIDA MARINGÁ, 556</td>
+          <td>VILA JUDITH</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - VILA SIAM</td>
+          <td>RUA SÃO PEDRO, 380</td>
+          <td>VILA SIAM</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGA RAIA LONDRINA - VIVENDAS DO ARVOREDO</td>
+          <td>AV MARIA ALVES BERGAMO , 950</td>
+          <td>VIVENDAS DO ARVOREDO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGARIAS PACHECO LONDRINA - BOA VISTA</td>
+          <td>AVENIDA SANTOS DUMONT, 1415</td>
+          <td>BOA VISTA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>DROGARIAS PACHECO LONDRINA - IGAPO</td>
+          <td>AVENIDA INGLATERRA, 678</td>
+          <td>IGAPO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>E-LETRO</td>
+          <td>RUA ERMELINO LEÃO, 385, -</td>
+          <td>VILA RICA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ELETRONICA ROLANDIA LTDA - ME</td>
+          <td>RUA GUSTAVO BARROSO, 1270, -</td>
+          <td>JARDIM SHANGRI-LA A</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ELETRONICA VALTECH LTDA</td>
+          <td>RUA BELO HORIZONTE, 177, -</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>HAYAMAX DISTRIBUIDORA DE PRODUTOS ELETRONICOS LTDA</td>
+          <td>RUA SENADOR SOUZA NAVES , 9, SUBSOLO LOJA SOBRELOJ</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>HELP FAX - EPSON</td>
+          <td>RUA  QUINTINO BOCAIUVA, 662</td>
+          <td>LONDRINA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>KALUNGA - PR-LON-SCATUAI</td>
+          <td>RODOVIA CELSO GARCIA CID KM 377, 5600, -</td>
+          <td>GLEBA FAZENDA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>KALUNGA - PR-LON-SHOP LONDRINA</td>
+          <td>AVENIDA THEODORO VICTORELLI, 150, -</td>
+          <td>HELENA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>Leroy Merlin - Londrina</td>
+          <td>AVENIDA THEODORO VICTORELLI, 60, .</td>
+          <td>HELENA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>LOJA 10 - STOCK LONDRINA</td>
+          <td>AVENIDA BRASÍLIA, 1855, .</td>
+          <td>RODOCENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>LOJA 18 - CIDADE CANÇÃO LONDRINA I</td>
+          <td>AVENIDA MARINGÁ, 830, .</td>
+          <td>JARDIM QUEBEC</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>LOJA 19 - CIDADE CANÇÃO LONDRINA II</td>
+          <td>AV. TIRADENTES , 1241, .</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>MULTICOISAS LOJA 307 </td>
+          <td>AVENIDA AYRTON SENNA DA SILVA, 605, .</td>
+          <td>GLEBA FAZENDA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>MULTICOISAS - LOJA 33</td>
+          <td>AVENIDA MARINGÁ, 360, .</td>
+          <td>VILA JUDITE</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>MULTICOISAS - LOJA 6 </td>
+          <td>RODOVIA CELSO GARCIA CID KM 377, S/N, -</td>
+          <td>GLEBA FAZENDA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - BELA SUÍÇA</td>
+          <td>AVENIDA MADRE LEONIA MILITO, 914</td>
+          <td>BELA SUÍÇA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - CENTRO</td>
+          <td>RUA BELO HORIZONTE, 1038</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - CENTRO</td>
+          <td>RUA ESPÍRITO SANTO, 1340</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - CENTRO</td>
+          <td>RUA SENADOR SOUZA NAVES, 796</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - CONJUNTO VIVI XAVIER</td>
+          <td>AVENIDA SAUL ELKIND, 2187</td>
+          <td>CONJUNTO VIVI XAVIER</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - GLEBA FAZENDA PALHANO</td>
+          <td>RODOVIA MABIO GONÇALVES PALHANO, 758</td>
+          <td>GLEBA FAZENDA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - GLEBA FAZENDA PALHANO</td>
+          <td>AVENIDA AYRTON SENNA DA SILVA, 760</td>
+          <td>GLEBA FAZENDA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - TUCANO</td>
+          <td>RUA VILA-LOBOS, 169</td>
+          <td>TUCANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - VILA IPIRANGA</td>
+          <td>AVENIDA JUSCELINO KUBITSCHEK, 829</td>
+          <td>VILA IPIRANGA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - VILA IPIRANGA</td>
+          <td>AVENIDA BANDEIRANTES, 903</td>
+          <td>VILA IPIRANGA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PANVEL FARMÁCIAS - VILA IPIRANGA</td>
+          <td>AVENIDA BANDEIRANTES, 327</td>
+          <td>VILA IPIRANGA</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>PIONEER - DOS ANJOS E CAMPANA</td>
+          <td>Avenida Maringa, 2053</td>
+          <td>Jardim Quebec</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>SUPERMERCADOS ANGELONI LONDRINA - GLEBA FAZENDA PALHANO</td>
+          <td>RUA JOÃO HUSS, 74</td>
+          <td>CENTRO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="row">
+  <div class="col-12 text-center mt-3 mb-3">
+    <strong>56</strong> posto(s) de coleta encontrado(s)!
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12">
+    
+  </div>
+</div>
+
+<div class="row border-top">
+  <div class="col-9 text-left">
+    <img style="width: 75%" src="/assets/mtr_rodape-f508660c49b2eb42113e115740dc1caeab3adcabfaf48f1ed6a7faf006034695.png" />
+  </div>
+  <div class="col-3 text-right">
+      <a target="blank" href="https://reciclelog.com.br"><img style="width: 85%" src="/assets/gmc_iso-d34caeff7d357e625b8bec4cf892399b529221484d34b47cb7d746032af344e0.png" /></a>
+
+  </div>
+</div>
+
+
+
+
+
+        </div>
+      </div>
+    </main><!-- /.container -->
+
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClWe4vI4dON0fMtTmnxxJXONNkXgkXTZE&callback=initMap&libraries=&v=weekly" defer ></script>
+
+    <script src="/assets/public-b371723a46dc4f1d39005bfc02da2c79a11290949f04a0199accce0a3519fad3.js"></script>
+
+      <script type="text/javascript">
+
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 5,
+        center: { lat: -20.177247, lng: -45.849813 },
+      });
+      // Create an array of alphabetical characters used to label the markers.
+      const labels = "";
+      // Add some markers to the map.
+      // Note: The code uses the JavaScript Array.prototype.map() method to
+      // create an array of markers based on a given "locations" array.
+      // The map() method here has nothing to do with the Google Maps API.
+      const markers = locations.map((location, i) => {
+        return new google.maps.Marker({
+          position: location,
+          label: "",
+          title: location.title,
+        });
+      });
+      // Add a marker clusterer to manage the markers.
+
+      new MarkerClusterer(map, markers, {
+        imagePath:
+          "/marker_cluster/m",
+      });
+    }
+    const locations = [
+  {
+    "lat": -23.2930274,
+    "lng": -51.1430071,
+    "title": "171 - ATACADÃO LONDRINA NORTE, AVENIDA BRASÍLIA, 5650, -, IDEAL"
+  },
+  {
+    "lat": -23.2596214,
+    "lng": -51.1641961,
+    "title": "ASSAÍ 162, AVENIDA SAUL ELKIND, 2211, -, CONJUNTO VIVI XAVIER"
+  },
+  {
+    "lat": -23.296688,
+    "lng": -51.2049541,
+    "title": "ASSAÍ 71, AVENIDA TIRADENTES, 4650, -, JARDIM ROSICLER"
+  },
+  {
+    "lat": -23.3012134,
+    "lng": -51.1791968,
+    "title": "ATACADÃO LONDRINA, AVENIDA TIRADENTES, 281, -, JARDIM SHANGRI-LA A"
+  },
+  {
+    "lat": -23.3418227,
+    "lng": -51.1857364,
+    "title": "CARREFOUR LONDRINA, RODOVIA CELSO GARCIA CID KM 377, S/N, -, CATUAÍ"
+  },
+  {
+    "lat": -23.2941392,
+    "lng": -51.1526587,
+    "title": "E-LETRO, RUA ERMELINO LEÃO, 385, -, VILA RICA"
+  },
+  {
+    "lat": -23.3006276,
+    "lng": -51.178413,
+    "title": "ELETRONICA ROLANDIA LTDA - ME, RUA GUSTAVO BARROSO, 1270, -, JARDIM SHANGRI-LA A"
+  },
+  {
+    "lat": -23.3121192,
+    "lng": -51.166716,
+    "title": "ELETRONICA VALTECH LTDA, RUA BELO HORIZONTE, 177, -, CENTRO"
+  },
+  {
+    "lat": -23.3136197,
+    "lng": -51.1579081,
+    "title": "HAYAMAX DISTRIBUIDORA DE PRODUTOS ELETRONICOS LTDA, RUA SENADOR SOUZA NAVES , 9, SUBSOLO LOJA SOBRELOJ, CENTRO"
+  },
+  {
+    "lat": -23.3433997,
+    "lng": -51.183622,
+    "title": "KALUNGA - PR-LON-SCATUAI, RODOVIA CELSO GARCIA CID KM 377, 5600, -, GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -23.3114175,
+    "lng": -51.1483532,
+    "title": "KALUNGA - PR-LON-SHOP LONDRINA, AVENIDA THEODORO VICTORELLI, 150, -, HELENA"
+  },
+  {
+    "lat": -23.3114175,
+    "lng": -51.1483532,
+    "title": "Leroy Merlin - Londrina, AVENIDA THEODORO VICTORELLI, 60, ., HELENA"
+  },
+  {
+    "lat": -23.2974657,
+    "lng": -51.1932535,
+    "title": "LOJA 10 - STOCK LONDRINA, AVENIDA BRASÍLIA, 1855, ., RODOCENTRO"
+  },
+  {
+    "lat": -23.3120214,
+    "lng": -51.1777593,
+    "title": "LOJA 18 - CIDADE CANÇÃO LONDRINA I, AVENIDA MARINGÁ, 830, ., JARDIM QUEBEC"
+  },
+  {
+    "lat": -23.3017834,
+    "lng": -51.1738618,
+    "title": "LOJA 19 - CIDADE CANÇÃO LONDRINA II, AV. TIRADENTES , 1241, ., CENTRO"
+  },
+  {
+    "lat": -23.3339591,
+    "lng": -51.177583,
+    "title": "MULTICOISAS LOJA 307 , AVENIDA AYRTON SENNA DA SILVA, 605, ., GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -23.3092766,
+    "lng": -51.1780086,
+    "title": "MULTICOISAS - LOJA 33, AVENIDA MARINGÁ, 360, ., VILA JUDITE"
+  },
+  {
+    "lat": -23.3433997,
+    "lng": -51.183622,
+    "title": "MULTICOISAS - LOJA 6 , RODOVIA CELSO GARCIA CID KM 377, S/N, -, GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -23.3351304,
+    "lng": -51.1656807,
+    "title": "PANVEL FARMÁCIAS - BELA SUÍÇA, AVENIDA MADRE LEONIA MILITO, 914, BELA SUÍÇA"
+  },
+  {
+    "lat": -23.3137017,
+    "lng": -51.1576734,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA SENADOR SOUZA NAVES, 796, CENTRO"
+  },
+  {
+    "lat": -23.3121192,
+    "lng": -51.166716,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA BELO HORIZONTE, 1038, CENTRO"
+  },
+  {
+    "lat": -23.3165325,
+    "lng": -51.1615151,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA ESPÍRITO SANTO, 1340, CENTRO"
+  },
+  {
+    "lat": -23.2596214,
+    "lng": -51.1641961,
+    "title": "PANVEL FARMÁCIAS - CONJUNTO VIVI XAVIER, AVENIDA SAUL ELKIND, 2187, CONJUNTO VIVI XAVIER"
+  },
+  {
+    "lat": -23.3339591,
+    "lng": -51.177583,
+    "title": "PANVEL FARMÁCIAS - GLEBA FAZENDA PALHANO, AVENIDA AYRTON SENNA DA SILVA, 760, GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -23.3447874,
+    "lng": -51.1889511,
+    "title": "PANVEL FARMÁCIAS - GLEBA FAZENDA PALHANO, RODOVIA MABIO GONÇALVES PALHANO, 758, GLEBA FAZENDA PALHANO"
+  }
+];
+
+
+
+    function start_odometer()
+    {
+      var el = document.querySelector('.odometer_gmc');
+
+        od = new Odometer({
+          auto: false,
+          el: el,
+          duration: 3000,
+          format: '(.ddd),dd',
+          value: 0,
+          theme: 'car'
+        });
+        var valor_total = '3258908.24'
+        //od.update('3258908.24');
+        el.innerHTML = valor_total.replace(".", ",");
+    }
+
+    $(document).ready(function()
+    {
+      start_odometer();
+    });
+
+  </script>
+
+
+  </body>
+</html>
+
+

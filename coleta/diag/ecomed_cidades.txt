@@ -1,0 +1,3 @@
+# https://ecomed.eco.br/api/geo/cidades?q=Londrina
+# status 200 application/json 218 bytes
+[{"city":"Londrina","state":"PR","latitude":-23.321229738482746,"longitude":-51.16210566148578,"pontos":144},{"city":"Nova Londrina","state":"PR","latitude":-22.7634806730702,"longitude":-52.98897709208741,"pontos":5}]

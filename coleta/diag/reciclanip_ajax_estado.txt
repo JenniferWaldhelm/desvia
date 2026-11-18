@@ -1,0 +1,2 @@
+# https://www.reciclanip.org.br/ajax/pontos.php
+# status 200 text/html; charset=UTF-8 0 bytes

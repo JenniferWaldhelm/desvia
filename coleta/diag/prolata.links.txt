@@ -1,0 +1,11 @@
+application/json
+https://api.w.org/
+https://fonts.googleapis.com/css2?family=Oswald
+https://www.prolata.com.br/mercados-de-atuacao/pontos-de-entrega-voluntaria/
+https://www.prolata.com.br/sitenovo/wp-admin/admin-ajax.php
+https://www.prolata.com.br/sitenovo/xmlrpc.php?rsd
+https://www.prolata.com.br/wp-json/
+https://www.prolata.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.prolata.com.br%2Frota-da-reciclagem%2F
+https://www.prolata.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.prolata.com.br%2Frota-da-reciclagem%2F&
+https://www.prolata.com.br/wp-json/wp/v2/pages/2111
+search_term_string

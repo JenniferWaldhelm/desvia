@@ -1,0 +1,3 @@
+# https://green.care-br.com/robots.txt
+# status ERRO  25 bytes
+HTTP Error 404: Not Found

@@ -1,0 +1,7 @@
+# https://reciclus.org.br/robots.txt
+# status 200 text/plain; charset=utf-8 119 bytes
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://reciclus.org.br/sitemap_index.xml
