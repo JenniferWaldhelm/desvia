@@ -22,6 +22,27 @@ def get(name, url, data=None, headers=None, limit=250000):
     print(name, st, len(raw))
     return txt
 
+import sys as _s
+if len(_s.argv) > 1 and _s.argv[1] == "2":
+    t = get("jl_pevs_full", "https://www.joguelimpo.org.br/institucional/pevs.php", limit=10**7)
+    for src in re.findall(r"<script[^>]+src=['\"]([^'\"]+)['\"]", t):
+        if "jquery" in src or "bootstrap" in src or "http" in src and "joguelimpo" not in src: continue
+        u = urllib.parse.urljoin("https://www.joguelimpo.org.br/institucional/pevs.php", src)
+        get("jl_js_" + re.sub(r"\W", "_", src)[-40:], u, limit=10**6)
+    for uf in ("PR",):
+        for path in ("pevs_estado.php", "ajax/pevs.php", "pevs.php?uf=PR"):
+            get("jl_try_" + re.sub(r"\W", "_", path), "https://www.joguelimpo.org.br/institucional/" + path, data={"uf": uf, "estado": uf})
+    get("reciclus_full", "https://reciclus.org.br/lista-pontos-entrega/", limit=10**7)
+    get("reciclus_types", "https://reciclus.org.br/wp-json/wp/v2/types", limit=10**6)
+    get("reciclus_tax", "https://reciclus.org.br/wp-json/wp/v2/taxonomies", limit=10**6)
+    get("prolata_pev", "https://www.prolata.com.br/mercados-de-atuacao/pontos-de-entrega-voluntaria/", limit=10**6)
+    get("anp_lub", "https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/lubrificantes", limit=10**6)
+    get("green_pilhas_pr", "https://sistema.reciclelog.com.br/info/green?search_state=PR&search_city=&button=", limit=10**7)
+    q = '[out:json][timeout:90];(nwr["amenity"="recycling"](-23.8,-52.2,-23.0,-50.9););out center tags;'
+    get("overpass_reg", "https://overpass-api.de/api/interpreter", data={"data": q}, limit=10**7)
+    get("overpass_reg2", "https://overpass.kumi.systems/api/interpreter", data={"data": q}, limit=10**7)
+    _s.exit()
+
 for dom in ["www.reciclanip.org.br", "reciclus.org.br", "sistema.reciclelog.com.br", "greeneletron.org.br", "green.care-br.com",
             "www.joguelimpo.org.br", "www.prolata.com.br", "www.sistemacampolimpo.org.br", "ecomed.eco.br", "mapaosc.ipea.gov.br",
             "www.gov.br", "overpass-api.de", "abree.org.br"]:

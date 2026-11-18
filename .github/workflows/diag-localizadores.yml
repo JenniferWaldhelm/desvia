@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: python3 coleta/diag_localizadores.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - run: python3 coleta/diag_localizadores.py 2 | tee -a "$GITHUB_STEP_SUMMARY"
       - run: |
           git config user.name "Desvia (automático)"
           git config user.email "actions@users.noreply.github.com"
