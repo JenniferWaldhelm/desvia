@@ -1,0 +1,3 @@
+# https://reciclus.org.br/wp-json/wp/v2/taxonomies
+# status ERRO  28 bytes
+HTTP Error 401: Unauthorized

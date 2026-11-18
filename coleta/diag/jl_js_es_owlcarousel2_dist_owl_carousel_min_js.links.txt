@@ -1,0 +1,4 @@
+.json
+//vimeo.com/api/v2/video/
+//vzaar.com/api/videos/
+jsonp

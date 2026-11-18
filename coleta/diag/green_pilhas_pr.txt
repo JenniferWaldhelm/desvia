@@ -1,0 +1,3236 @@
+# https://sistema.reciclelog.com.br/info/green?search_state=PR&search_city=&button=
+# status 200 text/html; charset=utf-8 96172 bytes
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ambipar Environment</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="7vCSQmVIi9JBaeG1OhPiqAFvJdMqOakf2xwj9fALwL5xC1X0fBeB0jhnDdoB1nDWDisqagK3jdQhKUXO25Y_sg" />
+    
+
+    <link rel="stylesheet" media="screen" href="/assets/public-acc7272764e31a7eedfb19c333879dfd8d66b1030290b664e5a65a9344a0687f.css" />
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-12">
+
+          
+  <div class="row">
+    <div class="col-4 text-center mt-2">
+      <img width="200" src="/assets/ambipar_logo_medio-278933d026d16c7f9bd35eab52bec69c0f6206b82996a054ba95ebbb69fea3a0.png" />
+    </div>
+    <div class="col-8 text-right">
+      <img width="620" src="/assets/mtr_topo-eedc5b879453feb5fe41608baf21c15628bc2040a5442d900a21bb4eadc170e5.png" />
+    </div>
+  </div>
+
+
+
+<div class="row">
+  <div class="col-12 text-center mt-3 mb-3">
+    <h1>RECICLA PILHAS</h1> 
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12 text-center mt-3 mb-3">
+
+    <strong>Residuômetro:</strong>
+    <br />
+    <div class="odometer_gmc"></div>
+    <br/>Kg de resíduos processados
+
+  </div>
+</div>
+
+<form action="/info/green" accept-charset="UTF-8" method="get">
+
+  <div class="row justify-content-center mt-3 mb-3">
+
+    <div class="col-12 mb-3 text-center">
+      Consulte aqui em seu Estado ou Cidade o Posto de Recebimento mais próximo:
+    </div>
+
+    <div class="col-2">
+      <select class="form-control" name="search_state" id="search_state"><option value="">Todos Estados</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AP">AP</option>
+<option value="AM">AM</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MT">MT</option>
+<option value="MS">MS</option>
+<option value="MG">MG</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option selected="selected" value="PR">PR</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RS">RS</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="SC">SC</option>
+<option value="SP">SP</option>
+<option value="SE">SE</option>
+<option value="TO">TO</option></select>
+    </div>
+
+    <div class="col-3">
+      <select class="form-control" name="search_city" id="search_city"><option value="">Todas Cidades</option>
+<option value="ALMIRANTE TAMANDARÉ">ALMIRANTE TAMANDARÉ</option>
+<option value="ALTÔNIA">ALTÔNIA</option>
+<option value="ALTO PARANÁ">ALTO PARANÁ</option>
+<option value="Apucarana">Apucarana</option>
+<option value="APUCARANA">APUCARANA</option>
+<option value="ARAPONGAS">ARAPONGAS</option>
+<option value="ARAPOTI">ARAPOTI</option>
+<option value="ARARUNA">ARARUNA</option>
+<option value="ARAUCÁRIA">ARAUCÁRIA</option>
+<option value="ASSIS CHATEAUBRIAND">ASSIS CHATEAUBRIAND</option>
+<option value="ASTORGA">ASTORGA</option>
+<option value="BANDEIRANTES">BANDEIRANTES</option>
+<option value="BARBOSA FERRAZ">BARBOSA FERRAZ</option>
+<option value="BITURUNA">BITURUNA</option>
+<option value="CAMBE">CAMBE</option>
+<option value="CAMBÉ">CAMBÉ</option>
+<option value="CAMPINA DA LAGOA">CAMPINA DA LAGOA</option>
+<option value="CAMPINA GRANDE DO SUL">CAMPINA GRANDE DO SUL</option>
+<option value="CAMPO LARGO">CAMPO LARGO</option>
+<option value="CAMPO MOURÃO">CAMPO MOURÃO</option>
+<option value="CANDÓI">CANDÓI</option>
+<option value="CANTAGALO">CANTAGALO</option>
+<option value="CAPANEMA">CAPANEMA</option>
+<option value="CARLÓPOLIS">CARLÓPOLIS</option>
+<option value="CASCAVEL">CASCAVEL</option>
+<option value="CASTRO">CASTRO</option>
+<option value="CAXIAS DO SUL">CAXIAS DO SUL</option>
+<option value="CENTENÁRIO DO SUL">CENTENÁRIO DO SUL</option>
+<option value="CHOPINZINHO">CHOPINZINHO</option>
+<option value="CIANORTE">CIANORTE</option>
+<option value="CIDADE GAÚCHA">CIDADE GAÚCHA</option>
+<option value="CLEVELÂNDIA">CLEVELÂNDIA</option>
+<option value="COLOMBO">COLOMBO</option>
+<option value="COLORADO">COLORADO</option>
+<option value="CORBÉLIA">CORBÉLIA</option>
+<option value="CORNÉLIO PROCÓPIO">CORNÉLIO PROCÓPIO</option>
+<option value="CORONEL VIVIDA">CORONEL VIVIDA</option>
+<option value="CRUZEIRO DO OESTE">CRUZEIRO DO OESTE</option>
+<option value="CURITIBA">CURITIBA</option>
+<option value="DOIS VIZINHOS">DOIS VIZINHOS</option>
+<option value="DOURADINA">DOURADINA</option>
+<option value="ENGENHEIRO BELTRÃO">ENGENHEIRO BELTRÃO</option>
+<option value="FAXINAL">FAXINAL</option>
+<option value="Fazenda Rio Grande">Fazenda Rio Grande</option>
+<option value="FAZENDA RIO GRANDE">FAZENDA RIO GRANDE</option>
+<option value="FOZ DO IGUAÇU">FOZ DO IGUAÇU</option>
+<option value="FOZ DO JORDÃO">FOZ DO JORDÃO</option>
+<option value="FRANCISCO BELTRÃO">FRANCISCO BELTRÃO</option>
+<option value="GENERAL CARNEIRO">GENERAL CARNEIRO</option>
+<option value="GOIOERÊ">GOIOERÊ</option>
+<option value="GUAÍRA">GUAÍRA</option>
+<option value="GUARAPUAVA">GUARAPUAVA</option>
+<option value="GUARATUBA">GUARATUBA</option>
+<option value="IBAITI">IBAITI</option>
+<option value="IBIPORA">IBIPORA</option>
+<option value="IBIPORÃ">IBIPORÃ</option>
+<option value="ICARAÍMA">ICARAÍMA</option>
+<option value="IMBÉ">IMBÉ</option>
+<option value="IPORÃ">IPORÃ</option>
+<option value="IRATI">IRATI</option>
+<option value="ITAIPULÂNDIA">ITAIPULÂNDIA</option>
+<option value="ITAPEJARA D&#39;OESTE">ITAPEJARA D&#39;OESTE</option>
+<option value="IVAIPORÃ">IVAIPORÃ</option>
+<option value="IVATÉ">IVATÉ</option>
+<option value="JACAREZINHO">JACAREZINHO</option>
+<option value="JAGUAPITÃ">JAGUAPITÃ</option>
+<option value="JANDAIA DO SUL">JANDAIA DO SUL</option>
+<option value="JAPURÁ">JAPURÁ</option>
+<option value="JARDIM ALEGRE">JARDIM ALEGRE</option>
+<option value="JOAQUIM TÁVORA">JOAQUIM TÁVORA</option>
+<option value="JURANDA">JURANDA</option>
+<option value="LOANDA">LOANDA</option>
+<option value="Londrina">Londrina</option>
+<option value="LONDRINA">LONDRINA</option>
+<option value="LUPIONÓPOLIS">LUPIONÓPOLIS</option>
+<option value="MAMBORÊ">MAMBORÊ</option>
+<option value="MANDAGUAÇU">MANDAGUAÇU</option>
+<option value="MANDAGUARI">MANDAGUARI</option>
+<option value="MANFRINÓPOLIS">MANFRINÓPOLIS</option>
+<option value="MANGUEIRINHA">MANGUEIRINHA</option>
+<option value="MANOEL RIBAS">MANOEL RIBAS</option>
+<option value="MARECHAL CÂNDIDO RONDON">MARECHAL CÂNDIDO RONDON</option>
+<option value="MARIALVA">MARIALVA</option>
+<option value="MARILUZ">MARILUZ</option>
+<option value="MARINGA">MARINGA</option>
+<option value="MARINGÁ">MARINGÁ</option>
+<option value="MARIPÁ">MARIPÁ</option>
+<option value="MATELÂNDIA">MATELÂNDIA</option>
+<option value="MATINHOS">MATINHOS</option>
+<option value="MEDIANEIRA">MEDIANEIRA</option>
+<option value="MISSAL">MISSAL</option>
+<option value="MOREIRA SALES">MOREIRA SALES</option>
+<option value="NOVA ESPERANÇA">NOVA ESPERANÇA</option>
+<option value="NOVA LONDRINA">NOVA LONDRINA</option>
+<option value="NOVA OLÍMPIA">NOVA OLÍMPIA</option>
+<option value="NOVA SANTA ROSA">NOVA SANTA ROSA</option>
+<option value="NOVA SANTA SANTA">NOVA SANTA SANTA</option>
+<option value="OURO VERDE DO OESTE">OURO VERDE DO OESTE</option>
+<option value="PAIÇANDU">PAIÇANDU</option>
+<option value="PALMAS">PALMAS</option>
+<option value="PALMITAL">PALMITAL</option>
+<option value="PALOTINA">PALOTINA</option>
+<option value="PARAÍSO DO NORTE">PARAÍSO DO NORTE</option>
+<option value="PARANAGUÁ">PARANAGUÁ</option>
+<option value="PARANAVAÍ">PARANAVAÍ</option>
+<option value="PATO BRAGADO">PATO BRAGADO</option>
+<option value="PATO BRANCO">PATO BRANCO</option>
+<option value="PEABRIU">PEABRIU</option>
+<option value="PÉROLA">PÉROLA</option>
+<option value="PINHAIS">PINHAIS</option>
+<option value="PINHÃO">PINHÃO</option>
+<option value="PIRAÍ DO SUL">PIRAÍ DO SUL</option>
+<option value="Piraquara">Piraquara</option>
+<option value="PIRAQUARA">PIRAQUARA</option>
+<option value="PITANGA">PITANGA</option>
+<option value="Ponta Grossa">Ponta Grossa</option>
+<option value="PONTA GROSSA">PONTA GROSSA</option>
+<option value="PORTO ALEGRE">PORTO ALEGRE</option>
+<option value="PORTO RICO">PORTO RICO</option>
+<option value="PRESIDENTE CASTELO BRANCO">PRESIDENTE CASTELO BRANCO</option>
+<option value="QUATRO PONTES ">QUATRO PONTES </option>
+<option value="QUERÊNCIA DO NORTE">QUERÊNCIA DO NORTE</option>
+<option value="REALEZA">REALEZA</option>
+<option value="RESERVA">RESERVA</option>
+<option value="RESERVA DO IGUAÇU">RESERVA DO IGUAÇU</option>
+<option value="ROLÂNDIA">ROLÂNDIA</option>
+<option value="RONCADOR">RONCADOR</option>
+<option value="RONDON">RONDON</option>
+<option value="SABÁUDIA">SABÁUDIA</option>
+<option value="SANTA CRUZ DE MONTE CASTELO">SANTA CRUZ DE MONTE CASTELO</option>
+<option value="SANTA FÉ">SANTA FÉ</option>
+<option value="SANTA HELENA">SANTA HELENA</option>
+<option value="SANTA ISABEL DO IVAÍ">SANTA ISABEL DO IVAÍ</option>
+<option value="SANTA MARIANA">SANTA MARIANA</option>
+<option value="SANTA TEREZINHA DE ITAIPU">SANTA TEREZINHA DE ITAIPU</option>
+<option value="SANTO ANTÔNIO DA PLATINA">SANTO ANTÔNIO DA PLATINA</option>
+<option value="SANTO INÁCIO">SANTO INÁCIO</option>
+<option value="SÃO CARLOS DO IVAÍ">SÃO CARLOS DO IVAÍ</option>
+<option value="SÃO JOÃO">SÃO JOÃO</option>
+<option value="SÃO JORGE DO PATROCÍNIO">SÃO JORGE DO PATROCÍNIO</option>
+<option value="SÃO JOSE DOS PINHAIS">SÃO JOSE DOS PINHAIS</option>
+<option value="SÃO JOSÉ DOS PINHAIS">SÃO JOSÉ DOS PINHAIS</option>
+<option value="SÃO MANOEL DO PARANÁ">SÃO MANOEL DO PARANÁ</option>
+<option value="SÃO MIGUEL DO IGUAÇU">SÃO MIGUEL DO IGUAÇU</option>
+<option value="SÃO PEDRO DO IGUAÇU">SÃO PEDRO DO IGUAÇU</option>
+<option value="SARANDI">SARANDI</option>
+<option value="SIQUEIRA CAMPOS">SIQUEIRA CAMPOS</option>
+<option value="TAPEJARA">TAPEJARA</option>
+<option value="TAPIRA">TAPIRA</option>
+<option value="TELÊMACO BORBA">TELÊMACO BORBA</option>
+<option value="TERRA BOA">TERRA BOA</option>
+<option value="TERRA RICA">TERRA RICA</option>
+<option value="TERRA ROXA">TERRA ROXA</option>
+<option value="TIBAGI">TIBAGI</option>
+<option value="TOLEDO">TOLEDO</option>
+<option value="TUNEIRAS DO OESTE">TUNEIRAS DO OESTE</option>
+<option value="UBIRATÃ">UBIRATÃ</option>
+<option value="UMUARAMA">UMUARAMA</option>
+<option value="UNIÃO DA VITÓRIA">UNIÃO DA VITÓRIA</option>
+<option value="VERA CRUZ DO OESTE">VERA CRUZ DO OESTE</option>
+<option value="VITORINO">VITORINO</option>
+<option value="WENCESLAU BRAZ">WENCESLAU BRAZ</option></select>
+    </div>
+
+    <div class="col-2">
+      <button name="button" type="submit" class="form-control btn btn-primary">
+        <span class="oi oi-magnifying-glass"></span>&nbsp;Buscar
+</button>    </div>
+  </div>
+
+</form>
+<div class="row justify-content-center">
+  <div class="col-7">
+    <div id="map"></div>
+  </div>
+</div>
+
+
+<div class="table-responsive mt-5">
+  <table class="table table-hover table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+      <tr class="text-center">
+        <th class="">Posto de Coleta</th>
+        <th class="">Endereço</th>
+        <th class="">Bairro</th>
+        <th class="">Cidade</th>
+        <th class="">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+          <td>135 - ATACADÃO PONTA GROSSA</td>
+          <td>AV. VISCONDE DE TAUNAY, S/N, -</td>
+          <td>CONTORNO</td>
+          <td>PONTA GROSSA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>171 - ATACADÃO LONDRINA NORTE</td>
+          <td>AVENIDA BRASÍLIA, 5650, -</td>
+          <td>IDEAL</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>172 - ATACADÃO CASCAVEL</td>
+          <td>AVENIDA TANCREDO NEVES, 3401, -</td>
+          <td>PIONEIROS CATARINENSES</td>
+          <td>CASCAVEL</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>178 - ATACADÃO FOZ DO IGUAÇU</td>
+          <td>RUA NELSON DA CUNHA JUNIOR, 350, -</td>
+          <td>VILA PÉROLA</td>
+          <td>FOZ DO IGUAÇU</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>1 - CIDADE CANÇÃO BRASIL</td>
+          <td>AVENIDA BRASIL, S/N, .</td>
+          <td>ZONA 05</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>222 - ATACADÃO SÃO JOSÉ DOS PINHAIS</td>
+          <td>AVENIDA RUI BARBOSA, 7992, -</td>
+          <td>ÁGUAS BELAS</td>
+          <td>SÃO JOSÉ DOS PINHAIS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>227 - ATACADÃO MARINGÁ COLOMBO</td>
+          <td>AVENIDA COLOMBO, 67, -</td>
+          <td>VILA NOVA</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>246 - ATACADÃO CURITIBA BAIRRO ALTO</td>
+          <td>RODOVIA BR-116, 3041, -</td>
+          <td>BAIRRO ALTO</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>258 - ATACADÃO CAMBÉ</td>
+          <td>RODOVIA MELLO PEIXOTO, 1314, BR 369</td>
+          <td>JARDIM UNIÃO</td>
+          <td>CAMBÉ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>260 - ATACADÃO GUARAPUAVA</td>
+          <td>AVENIDA ARAGÃO DE MATTOS LEÃO FILHO, 293, -</td>
+          <td>DOS ESTADOS</td>
+          <td>GUARAPUAVA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>261 - ATACADÃO UMUARAMA</td>
+          <td>AVENIDA PORTUGAL, 7039, -</td>
+          <td>ZONA I-A</td>
+          <td>UMUARAMA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>2 - CIDADE CANÇÃO PALMEIRAS</td>
+          <td>AV. DEAS PALMEIRAS, 356, .</td>
+          <td>PARQUE DAS PALMEIRAS</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>300 - ATACADÃO CURITIBA PAROLIN</td>
+          <td>AVENIDA PRESIDENTE WENCESLAU BRAZ, 1172, -</td>
+          <td>LINDÓIA</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>42 - ATACADÃO MARINGÁ</td>
+          <td>RUA FERNÃO DIAS, 300, -</td>
+          <td>CENTRO</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>4 - CIDADE CANÇÃO PARANAVAI</td>
+          <td>RUA PERNAMBUCO, 999, .</td>
+          <td>CENTRO</td>
+          <td>PARANAVAÍ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ACOMAR</td>
+          <td>RUA ANCHIETA, 181</td>
+          <td>JARDIM VERA LUCIA</td>
+          <td>CORBÉLIA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>AMIGÃO SUPERMERCADOS - MARINGÁ</td>
+          <td>AVENIDA ARQUITETO NILDO RIBEIRO DA ROCHA, 343, .</td>
+          <td>JARDIM IPANEMA</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ANGELONI SUPERMERCADO</td>
+          <td>RUA PE AGOSTINHO, 2885, -</td>
+          <td>BIGORRILHO</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ANGELONI SUPERMERCADO</td>
+          <td>ALAMEDA DR. CARLOS DE CARVALHO, 2050, -</td>
+          <td>BATEL</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ANGELONI SUPERMERCADO</td>
+          <td>R QUINZE DE NOVEMBRO , 2900, -</td>
+          <td>CENTRO</td>
+          <td>SÃO JOSÉ DOS PINHAIS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ANGELONI SUPERMERCADO</td>
+          <td>AVENIDA ADV HORACIO RACCANELLO FILHO, 5120, -</td>
+          <td>NOVO CENTRO</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ANGELONI SUPERMERCADO 7</td>
+          <td>AVENIDA REPÚBLICA ARGENTINA, 900, -</td>
+          <td>VILA IZABEL</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAÍ 162</td>
+          <td>AVENIDA SAUL ELKIND, 2211, -</td>
+          <td>CONJUNTO VIVI XAVIER</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAÍ - 195</td>
+          <td>AVENIDA JUSCELINO KUBITSCHEK DE OLIVEIRA, 2511, -</td>
+          <td>CIDADE INDUSTRIAL</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAI 215</td>
+          <td>AVENIDA COLOMBO, 9322, -</td>
+          <td>GLEBA PATRIMÔNIO MARINGÁ</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAI 229</td>
+          <td>RODOVIA BR-476, 1801, -</td>
+          <td>CIDADE INDUSTRIAL</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAI 257</td>
+          <td>AVENIDA PRESIDENTE KENNEDY, 1000, -</td>
+          <td>ÁGUA VERDE</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAI 259</td>
+          <td>AVENIDA MARECHAL HUMBERTO DE ALENCAR CASTELO BRANCO, 230, -</td>
+          <td>CRISTO REI</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAÍ 71</td>
+          <td>AVENIDA TIRADENTES, 4650, -</td>
+          <td>JARDIM ROSICLER</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSAÍ 79</td>
+          <td>RUA RUBENS SEBASTIÃO MARIN, 1820, -</td>
+          <td>PARQUE INDUSTRIAL</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSOCIAÇÃO COMERCIAL E EMPRESARIAL DE FAXINAL</td>
+          <td>RUA URIAS MIRANDA , 52, .</td>
+          <td>N.</td>
+          <td>FAXINAL</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>Associação de Catadores de Materiais Recicláveis Comunidade Unida de Fazenda Rio Grande</td>
+          <td>Avenida São Paulo, 600</td>
+          <td>Estados</td>
+          <td>Fazenda Rio Grande</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSOCIAÇÃO DE CATADORES DE MATERIAIS RECICLÁVEIS COMUNIDADE UNIDA DE FAZENDA RIO GRANDE - PR</td>
+          <td>AVENIDA SÃO PAULO, 600</td>
+          <td>ESTADOS</td>
+          <td>FAZENDA RIO GRANDE</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSOCIAÇÃO DE CATADORES DE MATERIAIS RECICLÁVEIS E/OU APROVEITÁVEIS DE NOVA SANTA ROSA – ASCAROSA</td>
+          <td>RUA AUGUSTO BREDLAU, S/N</td>
+          <td>PARQUE INDUSTRIAL II</td>
+          <td>NOVA SANTA ROSA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ASSOCIACAO DE CATADORES DE MATERIAIS RECICLAVEIS POR DO SOL</td>
+          <td>Avenida Guaira, 340</td>
+          <td>Carvoeiro</td>
+          <td>GUARATUBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ATACADÃO LONDRINA</td>
+          <td>AVENIDA TIRADENTES, 281, -</td>
+          <td>JARDIM SHANGRI-LA A</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>ATACADÃO - UMUARAMA</td>
+          <td>AVENIDA PORTUGAL, 7039</td>
+          <td>ZONA I-A</td>
+          <td>UMUARAMA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>BALAROTI COM DE MATS DE CONSTRUCAO S.A</td>
+          <td>Rua Ilo Antoninho Mozer, 271, -</td>
+          <td>Guatupê</td>
+          <td>SÃO JOSÉ DOS PINHAIS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERADOS MANDAGUAÇU</td>
+          <td>MARGINAL LAURINDO BORGONHONI, 445A, -</td>
+          <td>PARQUE INDUSTRIAL PAULO SAES</td>
+          <td>MANDAGUAÇU</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERADOS MANDAGUAÇU</td>
+          <td>AV. MUNHOZ DA ROCHA, 1136, -</td>
+          <td>VILA CARRARO</td>
+          <td>MANDAGUAÇU</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERADOS MARINGÁ</td>
+          <td>AVENIDA BRASIL, 4170, -</td>
+          <td>ZONA 01</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERADOS MARINGÁ</td>
+          <td>AVENIDA VEREADOR ANTÔNIO BORTOLOTTO, 551 á 586, -</td>
+          <td>DISTRITO DE IGUATEMI (IGUATEMI)</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERADOS NOVA ESPERANÇA</td>
+          <td>AV. ROCHA POMBO, 1519, -</td>
+          <td>CENTRO</td>
+          <td>NOVA ESPERANÇA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERADOS PAIÇANDU</td>
+          <td>MARGINAL MARECHAL CASTELO BRANCO , 1178, Esquina com João Luiz Barbosa</td>
+          <td>GLEBA PATRIMÔNIO PAIÇANDU</td>
+          <td>PAIÇANDU</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERADOS SARANDI</td>
+          <td>AVENIDA MARINGÁ, 1043, -</td>
+          <td>JARDIM EUROPA</td>
+          <td>SARANDI</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERCADO COLORADO</td>
+          <td>RUA RIO GRANDE DO SUL, 948, -</td>
+          <td>CENTRO</td>
+          <td>COLORADO</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CAMILO SUPERMERCADO  PARANAVAÍ</td>
+          <td>AVENIDA HEITOR ALENCAR FURTADO, 4200, -</td>
+          <td>JARDIM CURITIBA</td>
+          <td>PARANAVAÍ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR - CHAMPAGNAT</td>
+          <td>RUA DEPUTADO HEITOR ALENCAR FURTADO, 1210, -</td>
+          <td>MOSSUNGUÊ</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR - CURITIBA - CABRAL</td>
+          <td>Avenida Parana, 1250</td>
+          <td>Cabral</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR - CURITIBA - PORTÃO</td>
+          <td>Avenida Presidente Arthur Bernardes, 2200</td>
+          <td>Portão</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR LONDRINA</td>
+          <td>RODOVIA CELSO GARCIA CID KM 377, S/N, -</td>
+          <td>CATUAÍ</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR - LONDRINA</td>
+          <td>RODOVIA CELSO GARCIA CID, 5500</td>
+          <td>GLEBA PALHANO</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR -  PAROLIN</td>
+          <td>AVENIDA MARECHAL FLORIANO PEIXOTO, 3031, -</td>
+          <td>PRADO VELHO</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CARREFOUR PINHAIS</td>
+          <td>ROD. DEP. JOÃO LEOPOLDO JACOMEL , 10154, -</td>
+          <td>JD AMELIA</td>
+          <td>PINHAIS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - APUCARANA</td>
+          <td>Rua Professor João Cândido Ferreira, 355</td>
+          <td>Centro</td>
+          <td>APUCARANA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA ARAUCÁRIA - CENTRO</td>
+          <td>R. Presidente Carlos Cavalcanti, 239</td>
+          <td>Centro</td>
+          <td>ARAUCÁRIA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CAMPO MOURÃO - CENTRO</td>
+          <td>Av. Capitão Índio Bandeira, 1641</td>
+          <td>Centro</td>
+          <td>CAMPO MOURÃO</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CASCAVEL - CENTRO</td>
+          <td>Av. Brasil, 5964</td>
+          <td>Centro</td>
+          <td>CASCAVEL</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CIANORTE - ZONA 01</td>
+          <td>Avenida Goiás, 734</td>
+          <td>Zona 01</td>
+          <td>CIANORTE</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA COLOMBO - MARACANÃ</td>
+          <td>Rua Arquimedes, 142</td>
+          <td>Maracanã</td>
+          <td>COLOMBO</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CURITIBA - BACACHERI</td>
+          <td>Avenida Prefeito Erasto Gaertner, 149</td>
+          <td>Bacacheri</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - CURITIBA - CENTRO</td>
+          <td>Avenida Marechal Floriano Peixoto, 6274</td>
+          <td>Hauer</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CURITIBA - CENTRO 2</td>
+          <td>R. Marechal Deodoro, 113</td>
+          <td>Centro</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - CURITIBA - JARDIM DAS AMÉRICAS </td>
+          <td>Avenida Nossa Senhora De Lourdes, 63</td>
+          <td>Jardim das Américas</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CURITIBA - MARECHAL DEODORO</td>
+          <td>Rua Marechal Deodoro, 327</td>
+          <td>Centro</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CURITIBA - NOVO MUNDO</td>
+          <td>Avenida Rep. Argentina, 4499</td>
+          <td>Novo Mundo</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CURITIBA - PINHEIRINHO</td>
+          <td>Avenida Winston Churchill, 2399</td>
+          <td>Capão Raso</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - CURITIBA - PORTÃO 1</td>
+          <td>Avenida Presidente Kennedy, 4121</td>
+          <td>Portão</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - CURITIBA - PORTÃO 2</td>
+          <td>Avenida Presidente Kennedy, 4121</td>
+          <td>Portão</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CURITIBA - PRAÇA TIRADENTES</td>
+          <td>Praça Tiradentes, 356</td>
+          <td>Centro</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA CURITIBA - SÍTIO CERCADO</td>
+          <td>Rua Izaac Ferreira Da Cruz, 3632</td>
+          <td>Sitio Cercado</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - CURITIBA - TARUMÃ</td>
+          <td>Avenida Victor Ferreira Do Amaral, 2633</td>
+          <td>Tarumã</td>
+          <td>CURITIBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA FAZENDA RIO GRANDE - EUCALIPTOS</td>
+          <td>Rua Jacarandá, 462</td>
+          <td>Eucaliptos</td>
+          <td>FAZENDA RIO GRANDE</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA FOZ DO IGUAÇU - AV BRASIL</td>
+          <td>Avenida Brasil, 1054</td>
+          <td>Centro</td>
+          <td>FOZ DO IGUAÇU</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA FOZ DO IGUAÇU - CENTRO</td>
+          <td>R. Quintino Bocaiúva, 710</td>
+          <td>Centro</td>
+          <td>FOZ DO IGUAÇU</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA GUARAPUAVA - CENTRO</td>
+          <td>R. Xv De Novembro, 7798</td>
+          <td>Centro</td>
+          <td>GUARAPUAVA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - LONDRINA</td>
+          <td>Rod Celso Garcia Cid, S/N</td>
+          <td>Gleba Fazenda Palhano</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA LONDRINA - BENJAMIN</td>
+          <td>Rua Benjamin Constant, 1138</td>
+          <td>Centro</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA LONDRINA - CENTRO</td>
+          <td>Av. Paraná, 203</td>
+          <td>Centro</td>
+          <td>LONDRINA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA MARINGÁ - CENTRO</td>
+          <td>Av. Brasil, 3414</td>
+          <td>Centro</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA MARINGÁ - ZONA 01</td>
+          <td>Avenida Brasil, 3300</td>
+          <td>Centro</td>
+          <td>MARINGÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA PARANAGUÁ - CENTRO HISTÓRICO</td>
+          <td>Rua Doutor Leocádio, 58</td>
+          <td>Centro Histórico</td>
+          <td>PARANAGUÁ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA PARANAVAÍ - CENTRO</td>
+          <td>R. Getúlio Vargas, 1020</td>
+          <td>Centro</td>
+          <td>PARANAVAÍ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA PINHAIS - JD GUAIRACA</td>
+          <td>Avenida Jacob Macanhan, 449</td>
+          <td>Jardim Guairaca</td>
+          <td>PINHAIS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - PIRAQUARA</td>
+          <td>Avenida Getulio Vargas, 946</td>
+          <td>Centro</td>
+          <td>PIRAQUARA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA PONTA GROSSA - CENTRO</td>
+          <td>Av. Doutor. Vicente Machado, 216</td>
+          <td>Centro</td>
+          <td>PONTA GROSSA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA SÃO JOSÉ DOS PINHAIS - CENTRO</td>
+          <td>R. Quinze De Novembro, 1510</td>
+          <td>Centro</td>
+          <td>SÃO JOSÉ DOS PINHAIS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA SARANDI - CENTRO</td>
+          <td>Av. Londrina, 455</td>
+          <td>Centro</td>
+          <td>SARANDI</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA - TELÊMACO BORBA</td>
+          <td>Avenida Horacio Klabin, 89</td>
+          <td>Centro</td>
+          <td>TELÊMACO BORBA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA TOLEDO - CENTRO</td>
+          <td>R. Rui Barbosa, 1186</td>
+          <td>Centro</td>
+          <td>TOLEDO</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS BAHIA UMUARAMA - ZONA 01</td>
+          <td>Avenida Paraná, 4448</td>
+          <td>Zona 01</td>
+          <td>UMUARAMA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS PERNAMBUCANAS - CAMBÉ</td>
+          <td>AV. INGLATERRA, 1020</td>
+          <td>CENTRO</td>
+          <td>CAMBÉ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS PERNAMBUCANAS - CAMPO LARGO</td>
+          <td>PRAÇA ATTILIO DE ALMEIDA BARBOSA, 1156</td>
+          <td>CENTRO</td>
+          <td>CAMPO LARGO</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS PERNAMBUCAS - ALMIRANTE TAMANDARÉ</td>
+          <td>AV. EMÍLIO JOHNSON , 827</td>
+          <td>CENTRO</td>
+          <td>ALMIRANTE TAMANDARÉ</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS PERNAMBUCAS - APUCARANA</td>
+          <td>AV. CURITIBA, 1121</td>
+          <td>CENTRO</td>
+          <td>APUCARANA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CASAS PERNAMBUCAS - ARAPONGAS</td>
+          <td>AV. ARAPONGAS, 433</td>
+          <td>CENTRO</td>
+          <td>ARAPONGAS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CATUAÍ SHOPPING CASCAVEL</td>
+          <td>Avenida Brasil, 3545</td>
+          <td>Região do Lago</td>
+          <td>CASCAVEL</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CD: APARA - ASSOCIAÇÃO DE APOIO AOS AGENTES AMBIENTAIS DE REALEZA</td>
+          <td>RUA DAS PALMAS, S/N, -</td>
+          <td>BAIRRO JARDIM PRIMAVERA</td>
+          <td>REALEZA</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CENTRAL #1: SETE AMBIENTAL</td>
+          <td>RUA TENENTE SANDRO LUIZ KAMPA, 170, -</td>
+          <td>PARQUE DA FONTE</td>
+          <td>SÃO JOSÉ DOS PINHAIS</td>
+          <td class="text-center">PR</td>
+        </tr>
+
+        <tr>
+          <td>CENTRO AGROPECUÁRIO, SEDE DA SECRETARIA DO MEIO AMBIENTE</td>
+          <td>MANOEL RIBAS , 200, -</td>
+          <td>CENTRO</td>
+          <td>JAGUAPITÃ</td>
+          <td class="text-center">PR</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="row">
+  <div class="col-12 text-center mt-3 mb-3">
+    <strong>748</strong> posto(s) de coleta encontrado(s)!
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12">
+    
+  <nav>
+    <ul class="pagination">
+      
+      
+            <li class="page-item active">
+    <a data-remote="false" class="page-link">1</a>
+  </li>
+
+            <li class="page-item">
+    <a rel="next" class="page-link" href="/info/green?button=&amp;page=2&amp;search_city=&amp;search_state=PR">2</a>
+  </li>
+
+            <li class="page-item">
+    <a class="page-link" href="/info/green?button=&amp;page=3&amp;search_city=&amp;search_state=PR">3</a>
+  </li>
+
+            <li class="page-item">
+    <a class="page-link" href="/info/green?button=&amp;page=4&amp;search_city=&amp;search_state=PR">4</a>
+  </li>
+
+            <li class="page-item">
+    <a class="page-link" href="/info/green?button=&amp;page=5&amp;search_city=&amp;search_state=PR">5</a>
+  </li>
+
+          <li class='page-item disabled'>
+  <a class="page-link" href="#">&hellip;</a>
+</li>
+
+      <li class="page-item">
+  <a rel="next" class="page-link" href="/info/green?button=&amp;page=2&amp;search_city=&amp;search_state=PR">Próximo &rsaquo;</a>
+</li>
+
+      <li class="page-item">
+  <a class="page-link" href="/info/green?button=&amp;page=8&amp;search_city=&amp;search_state=PR">Último &raquo;</a>
+</li>
+
+    </ul>
+  </nav>
+
+  </div>
+</div>
+
+<div class="row border-top">
+  <div class="col-9 text-left">
+    <img style="width: 75%" src="/assets/mtr_rodape-f508660c49b2eb42113e115740dc1caeab3adcabfaf48f1ed6a7faf006034695.png" />
+  </div>
+  <div class="col-3 text-right">
+      <a target="blank" href="https://reciclelog.com.br"><img style="width: 85%" src="/assets/gmc_iso-d34caeff7d357e625b8bec4cf892399b529221484d34b47cb7d746032af344e0.png" /></a>
+
+  </div>
+</div>
+
+
+
+
+
+        </div>
+      </div>
+    </main><!-- /.container -->
+
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClWe4vI4dON0fMtTmnxxJXONNkXgkXTZE&callback=initMap&libraries=&v=weekly" defer ></script>
+
+    <script src="/assets/public-b371723a46dc4f1d39005bfc02da2c79a11290949f04a0199accce0a3519fad3.js"></script>
+
+      <script type="text/javascript">
+
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 5,
+        center: { lat: -20.177247, lng: -45.849813 },
+      });
+      // Create an array of alphabetical characters used to label the markers.
+      const labels = "";
+      // Add some markers to the map.
+      // Note: The code uses the JavaScript Array.prototype.map() method to
+      // create an array of markers based on a given "locations" array.
+      // The map() method here has nothing to do with the Google Maps API.
+      const markers = locations.map((location, i) => {
+        return new google.maps.Marker({
+          position: location,
+          label: "",
+          title: location.title,
+        });
+      });
+      // Add a marker clusterer to manage the markers.
+
+      new MarkerClusterer(map, markers, {
+        imagePath:
+          "/marker_cluster/m",
+      });
+    }
+    const locations = [
+  {
+    "lat": -25.0992825,
+    "lng": -50.1820019,
+    "title": "135 - ATACADÃO PONTA GROSSA, AV. VISCONDE DE TAUNAY, S/N, -, CONTORNO"
+  },
+  {
+    "lat": -23.2930274,
+    "lng": -51.1430071,
+    "title": "171 - ATACADÃO LONDRINA NORTE, AVENIDA BRASÍLIA, 5650, -, IDEAL"
+  },
+  {
+    "lat": -24.9681858,
+    "lng": -53.4848722,
+    "title": "172 - ATACADÃO CASCAVEL, AVENIDA TANCREDO NEVES, 3401, -, PIONEIROS CATARINENSES"
+  },
+  {
+    "lat": -25.5171055,
+    "lng": -54.5750153,
+    "title": "178 - ATACADÃO FOZ DO IGUAÇU, RUA NELSON DA CUNHA JUNIOR, 350, -, VILA PÉROLA"
+  },
+  {
+    "lat": -23.4244612,
+    "lng": -51.9594362,
+    "title": "1 - CIDADE CANÇÃO BRASIL, AVENIDA BRASIL, S/N, ., ZONA 05"
+  },
+  {
+    "lat": -25.5270741,
+    "lng": -49.1921941,
+    "title": "222 - ATACADÃO SÃO JOSÉ DOS PINHAIS, AVENIDA RUI BARBOSA, 7992, -, ÁGUAS BELAS"
+  },
+  {
+    "lat": -23.4302957,
+    "lng": -51.8900534,
+    "title": "227 - ATACADÃO MARINGÁ COLOMBO, AVENIDA COLOMBO, 67, -, VILA NOVA"
+  },
+  {
+    "lat": -25.4077613,
+    "lng": -49.2190191,
+    "title": "246 - ATACADÃO CURITIBA BAIRRO ALTO, RODOVIA BR-116, 3041, -, BAIRRO ALTO"
+  },
+  {
+    "lat": -23.2956653,
+    "lng": -51.2842373,
+    "title": "258 - ATACADÃO CAMBÉ, RODOVIA MELLO PEIXOTO, 1314, BR 369, JARDIM UNIÃO"
+  },
+  {
+    "lat": -25.3920342,
+    "lng": -51.5001502,
+    "title": "260 - ATACADÃO GUARAPUAVA, AVENIDA ARAGÃO DE MATTOS LEÃO FILHO, 293, -, DOS ESTADOS"
+  },
+  {
+    "lat": -23.7483084,
+    "lng": -53.2855758,
+    "title": "261 - ATACADÃO UMUARAMA, AVENIDA PORTUGAL, 7039, -, ZONA I-A"
+  },
+  {
+    "lat": -23.3838384,
+    "lng": -51.9451993,
+    "title": "2 - CIDADE CANÇÃO PALMEIRAS, AV. DEAS PALMEIRAS, 356, ., PARQUE DAS PALMEIRAS"
+  },
+  {
+    "lat": -25.4780486,
+    "lng": -49.2862746,
+    "title": "300 - ATACADÃO CURITIBA PAROLIN, AVENIDA PRESIDENTE WENCESLAU BRAZ, 1172, -, LINDÓIA"
+  },
+  {
+    "lat": -23.4190316,
+    "lng": -51.9433512,
+    "title": "42 - ATACADÃO MARINGÁ, RUA FERNÃO DIAS, 300, -, CENTRO"
+  },
+  {
+    "lat": -23.0803466,
+    "lng": -52.4572501,
+    "title": "4 - CIDADE CANÇÃO PARANAVAI, RUA PERNAMBUCO, 999, ., CENTRO"
+  },
+  {
+    "lat": -23.4506093,
+    "lng": -51.9260912,
+    "title": "AMIGÃO SUPERMERCADOS - MARINGÁ, AVENIDA ARQUITETO NILDO RIBEIRO DA ROCHA, 343, ., JARDIM IPANEMA"
+  },
+  {
+    "lat": -25.4387359,
+    "lng": -49.2950407,
+    "title": "ANGELONI SUPERMERCADO, ALAMEDA DR. CARLOS DE CARVALHO, 2050, -, BATEL"
+  },
+  {
+    "lat": -23.4224579,
+    "lng": -51.921939,
+    "title": "ANGELONI SUPERMERCADO, AVENIDA ADV HORACIO RACCANELLO FILHO, 5120, -, NOVO CENTRO"
+  },
+  {
+    "lat": -25.5381512,
+    "lng": -49.2001438,
+    "title": "ANGELONI SUPERMERCADO, R QUINZE DE NOVEMBRO , 2900, -, CENTRO"
+  },
+  {
+    "lat": -25.4347497,
+    "lng": -49.3063277,
+    "title": "ANGELONI SUPERMERCADO, RUA PE AGOSTINHO, 2885, -, BIGORRILHO"
+  },
+  {
+    "lat": -25.4713135,
+    "lng": -49.2943263,
+    "title": "ANGELONI SUPERMERCADO 7, AVENIDA REPÚBLICA ARGENTINA, 900, -, VILA IZABEL"
+  },
+  {
+    "lat": -23.2596214,
+    "lng": -51.1641961,
+    "title": "ASSAÍ 162, AVENIDA SAUL ELKIND, 2211, -, CONJUNTO VIVI XAVIER"
+  },
+  {
+    "lat": -25.4484399,
+    "lng": -49.3629994,
+    "title": "ASSAÍ - 195, AVENIDA JUSCELINO KUBITSCHEK DE OLIVEIRA, 2511, -, CIDADE INDUSTRIAL"
+  },
+  {
+    "lat": -23.412286,
+    "lng": -51.9429376,
+    "title": "ASSAI 215, AVENIDA COLOMBO, 9322, -, GLEBA PATRIMÔNIO MARINGÁ"
+  },
+  {
+    "lat": -25.475444,
+    "lng": -49.2595221,
+    "title": "ASSAI 229, RODOVIA BR-476, 1801, -, CIDADE INDUSTRIAL"
+  },
+  {
+    "lat": -25.4643155,
+    "lng": -49.2772274,
+    "title": "ASSAI 257, AVENIDA PRESIDENTE KENNEDY, 1000, -, ÁGUA VERDE"
+  },
+  {
+    "lat": -25.4319988,
+    "lng": -49.2391727,
+    "title": "ASSAI 259, AVENIDA MARECHAL HUMBERTO DE ALENCAR CASTELO BRANCO, 230, -, CRISTO REI"
+  },
+  {
+    "lat": -23.296688,
+    "lng": -51.2049541,
+    "title": "ASSAÍ 71, AVENIDA TIRADENTES, 4650, -, JARDIM ROSICLER"
+  },
+  {
+    "lat": -23.4273131,
+    "lng": -51.8948229,
+    "title": "ASSAÍ 79, RUA RUBENS SEBASTIÃO MARIN, 1820, -, PARQUE INDUSTRIAL"
+  },
+  {
+    "lat": -23.989503,
+    "lng": -51.312909,
+    "title": "ASSOCIAÇÃO COMERCIAL E EMPRESARIAL DE FAXINAL, RUA URIAS MIRANDA , 52, ., N."
+  },
+  {
+    "lat": -23.3012134,
+    "lng": -51.1791968,
+    "title": "ATACADÃO LONDRINA, AVENIDA TIRADENTES, 281, -, JARDIM SHANGRI-LA A"
+  },
+  {
+    "lat": -25.505445,
+    "lng": -49.1356783,
+    "title": "BALAROTI COM DE MATS DE CONSTRUCAO S.A, Rua Ilo Antoninho Mozer, 271, -, Guatupê"
+  },
+  {
+    "lat": -23.3572043,
+    "lng": -52.0887161,
+    "title": "CAMILO SUPERMERADOS MANDAGUAÇU, MARGINAL LAURINDO BORGONHONI, 445A, -, PARQUE INDUSTRIAL PAULO SAES"
+  },
+  {
+    "lat": -23.3444169,
+    "lng": -52.0956494,
+    "title": "CAMILO SUPERMERADOS MANDAGUAÇU, AV. MUNHOZ DA ROCHA, 1136, -, VILA CARRARO"
+  },
+  {
+    "lat": -23.366699,
+    "lng": -52.0672156,
+    "title": "CAMILO SUPERMERADOS MARINGÁ, AVENIDA VEREADOR ANTÔNIO BORTOLOTTO, 551 á 586, -, DISTRITO DE IGUATEMI (IGUATEMI)"
+  },
+  {
+    "lat": -23.4209922,
+    "lng": -51.9380717,
+    "title": "CAMILO SUPERMERADOS MARINGÁ, AVENIDA BRASIL, 4170, -, ZONA 01"
+  },
+  {
+    "lat": -23.1907887,
+    "lng": -52.1992054,
+    "title": "CAMILO SUPERMERADOS NOVA ESPERANÇA, AV. ROCHA POMBO, 1519, -, CENTRO"
+  },
+  {
+    "lat": -23.4626325,
+    "lng": -52.0424725,
+    "title": "CAMILO SUPERMERADOS PAIÇANDU, MARGINAL MARECHAL CASTELO BRANCO , 1178, Esquina com João Luiz Barbosa, GLEBA PATRIMÔNIO PAIÇANDU"
+  },
+  {
+    "lat": -23.4409192,
+    "lng": -51.8794281,
+    "title": "CAMILO SUPERMERADOS SARANDI, AVENIDA MARINGÁ, 1043, -, JARDIM EUROPA"
+  },
+  {
+    "lat": -22.834867,
+    "lng": -51.9756935,
+    "title": "CAMILO SUPERMERCADO COLORADO, RUA RIO GRANDE DO SUL, 948, -, CENTRO"
+  },
+  {
+    "lat": -23.0848448,
+    "lng": -52.4605369,
+    "title": "CAMILO SUPERMERCADO  PARANAVAÍ, AVENIDA HEITOR ALENCAR FURTADO, 4200, -, JARDIM CURITIBA"
+  },
+  {
+    "lat": -25.4388008,
+    "lng": -49.3333796,
+    "title": "CARREFOUR - CHAMPAGNAT, RUA DEPUTADO HEITOR ALENCAR FURTADO, 1210, -, MOSSUNGUÊ"
+  },
+  {
+    "lat": -23.3418227,
+    "lng": -51.1857364,
+    "title": "CARREFOUR LONDRINA, RODOVIA CELSO GARCIA CID KM 377, S/N, -, CATUAÍ"
+  },
+  {
+    "lat": -25.479955,
+    "lng": -49.2479242,
+    "title": "CARREFOUR -  PAROLIN, AVENIDA MARECHAL FLORIANO PEIXOTO, 3031, -, PRADO VELHO"
+  },
+  {
+    "lat": -25.4372727,
+    "lng": -49.1656533,
+    "title": "CARREFOUR PINHAIS, ROD. DEP. JOÃO LEOPOLDO JACOMEL , 10154, -, JD AMELIA"
+  },
+  {
+    "lat": -25.7829937,
+    "lng": -53.5272532,
+    "title": "CD: APARA - ASSOCIAÇÃO DE APOIO AOS AGENTES AMBIENTAIS DE REALEZA, RUA DAS PALMAS, S/N, -, BAIRRO JARDIM PRIMAVERA"
+  },
+  {
+    "lat": -25.4950888,
+    "lng": -49.1664928,
+    "title": "CENTRAL #1: SETE AMBIENTAL, RUA TENENTE SANDRO LUIZ KAMPA, 170, -, PARQUE DA FONTE"
+  },
+  {
+    "lat": -23.1138448,
+    "lng": -51.5360941,
+    "title": "CENTRO AGROPECUÁRIO, SEDE DA SECRETARIA DO MEIO AMBIENTE, MANOEL RIBAS , 200, -, CENTRO"
+  },
+  {
+    "lat": -23.3975764,
+    "lng": -51.9189119,
+    "title": "COOP METROPOLITANO, AVENIDA PEDRO TAQUES, 294, -, ZONA ARMAZÉM"
+  },
+  {
+    "lat": -25.5430559,
+    "lng": -49.0849408,
+    "title": "ECO PONTO BORDA DO CAMPO, RUA MANOEL CORRÊA, 98, ., BORDA DO CAMPO"
+  },
+  {
+    "lat": -25.5332685,
+    "lng": -49.2102828,
+    "title": "ECOPONTO PASSO MUNICIPAL, RUA PASSOS DE OLIVEIRA, 1101, ., CENTRO"
+  },
+  {
+    "lat": -25.4822751,
+    "lng": -49.1663108,
+    "title": "ECO PONTO IPÊ, RUA LAERTE FENELON, 1001, ., IPÊ"
+  },
+  {
+    "lat": -23.2941392,
+    "lng": -51.1526587,
+    "title": "E-LETRO, RUA ERMELINO LEÃO, 385, -, VILA RICA"
+  },
+  {
+    "lat": -24.0472217,
+    "lng": -52.382582,
+    "title": "ELETROMAG REFRIGERAÇÃO, AV. CAP. ÍNDIO BANDEIRA, 101, -, CENTRO"
+  },
+  {
+    "lat": -24.9541222,
+    "lng": -53.4635365,
+    "title": "ELETRONICA CORAL LTDA, R. PARANÁ, 3168, -, CENTRO"
+  },
+  {
+    "lat": -23.3006276,
+    "lng": -51.178413,
+    "title": "ELETRONICA ROLANDIA LTDA - ME, RUA GUSTAVO BARROSO, 1270, -, JARDIM SHANGRI-LA A"
+  },
+  {
+    "lat": -23.3121192,
+    "lng": -51.166716,
+    "title": "ELETRONICA VALTECH LTDA, RUA BELO HORIZONTE, 177, -, CENTRO"
+  },
+  {
+    "lat": -25.501142,
+    "lng": -49.2350968,
+    "title": "ESTER AMBIENTAL, RUA BOM JESUS DE IGUAPE, 3761, -, BOQUEIRÃO"
+  },
+  {
+    "lat": -25.4435004,
+    "lng": -49.2910746,
+    "title": "FAST SHOP - CURITIBA - PÁTIO BATEL, AVENIDA DO BATEL, 1868, -, BATEL"
+  },
+  {
+    "lat": -25.4783237,
+    "lng": -49.2915054,
+    "title": "FAST SHOP - CURITIBA - SHOPPING PALLADIUM, AVENIDA PRESIDENTE KENNEDY, 4124, PISO 2, PORTÃO"
+  },
+  {
+    "lat": -23.5260773,
+    "lng": -51.6757535,
+    "title": "GCA - MANDAGUARI, AVENIDA AMAZONAS, 2024, ., CENTRO"
+  },
+  {
+    "lat": -23.3226059,
+    "lng": -51.2183452,
+    "title": "HAYAMAX DISTRIBUIDORA DE PRODUTOS ELETRONICOS LTDA, Rua Joao Marques de Nobrega, 300, -, Setor 3"
+  },
+  {
+    "lat": -23.3136197,
+    "lng": -51.1579081,
+    "title": "HAYAMAX DISTRIBUIDORA DE PRODUTOS ELETRONICOS LTDA, RUA SENADOR SOUZA NAVES , 9, SUBSOLO LOJA SOBRELOJ, CENTRO"
+  },
+  {
+    "lat": -23.4184394,
+    "lng": -51.9398431,
+    "title": "ICOOB CENTRAL UNICOOB, AVENIDA DUQUE DE CAXIAS, 882, SOBRELOJA 02, ZONA 07"
+  },
+  {
+    "lat": -25.4404022,
+    "lng": -49.2740806,
+    "title": "KALUNGA - PR-CTB-SHOP ESTACAO, AVENIDA SETE DE SETEMBRO, 2775, -, REBOUÇAS"
+  },
+  {
+    "lat": -25.4303271,
+    "lng": -49.2105883,
+    "title": "KALUNGA - PR-CTB-SJOCKEY, AVENIDA VICTOR FERREIRA DO AMARAL, 2633, -, TARUMÃ"
+  },
+  {
+    "lat": -25.4569188,
+    "lng": -49.2686784,
+    "title": "KALUNGA - PR-CTB-SPALLADIUM, AVENIDA PRESIDENTE KENNEDY , 4121, -, PORTÃO"
+  },
+  {
+    "lat": -25.4493621,
+    "lng": -49.3040569,
+    "title": "KALUNGA - PR-CUR-SEMINARIO, AVENIDA NOSSA SENHORA APARECIDA, 582, -, SEMINÁRIO"
+  },
+  {
+    "lat": -23.3433997,
+    "lng": -51.183622,
+    "title": "KALUNGA - PR-LON-SCATUAI, RODOVIA CELSO GARCIA CID KM 377, 5600, -, GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -23.3114175,
+    "lng": -51.1483532,
+    "title": "KALUNGA - PR-LON-SHOP LONDRINA, AVENIDA THEODORO VICTORELLI, 150, -, HELENA"
+  },
+  {
+    "lat": -23.412286,
+    "lng": -51.9429376,
+    "title": "KALUNGA - PR-MAR-SCATUAI, AVENIDA COLOMBO, 9161, -, GLEBA PATRIMÔNIO MARINGÁ"
+  },
+  {
+    "lat": -25.1013978,
+    "lng": -50.1557359,
+    "title": "KALUNGA - PR-PTG-SHP PALLADIUM, RUA ERMELINO DE LEÃO, 703, -, OLARIAS"
+  },
+  {
+    "lat": -23.4197334,
+    "lng": -51.9350568,
+    "title": "K  OSATO & CIA LTDA, R. JOUBERT DE CARVALHO, 394, -, CENTRO"
+  },
+  {
+    "lat": -25.5003353,
+    "lng": -49.279025,
+    "title": "Leroy Merlin - Curitiba Atuba, RODOVIA BR-116, 600, LOTE 9C-1, ATUBA"
+  },
+  {
+    "lat": -25.470696,
+    "lng": -49.2561253,
+    "title": "LEROY MERLIN - CURITIBA SUL, AVENIDA PRESIDENTE WENCESLAU BRAZ, 88, -, FANNY"
+  },
+  {
+    "lat": -23.3114175,
+    "lng": -51.1483532,
+    "title": "Leroy Merlin - Londrina, AVENIDA THEODORO VICTORELLI, 60, ., HELENA"
+  },
+  {
+    "lat": -23.2974657,
+    "lng": -51.1932535,
+    "title": "LOJA 10 - STOCK LONDRINA, AVENIDA BRASÍLIA, 1855, ., RODOCENTRO"
+  },
+  {
+    "lat": -23.4192048,
+    "lng": -51.9332275,
+    "title": "LOJA 11 - CIDADE CANÇÃO TAMANDARÉ, AVENIDA TAMANDARÉ, 903, ., CENTRO"
+  },
+  {
+    "lat": -23.6477058,
+    "lng": -52.6096408,
+    "title": "LOJA 13 - CIDADE CANÇÃO CIANORTE, AV. EDSON LIMA SOUTO, 40, ., ZONA 02"
+  },
+  {
+    "lat": -23.4153065,
+    "lng": -51.9544417,
+    "title": "LOJA 14 - CIDADE CANÇÃO MANDACARÚ, AVENIDA MANDACARU, 2824, ., JARDIM BRASIL"
+  },
+  {
+    "lat": -23.6579112,
+    "lng": -52.6044393,
+    "title": "LOJA 17 - STOCK CIANORTE, AV. GOIAIS, 1066, ., CENTRO"
+  },
+  {
+    "lat": -23.3120214,
+    "lng": -51.1777593,
+    "title": "LOJA 18 - CIDADE CANÇÃO LONDRINA I, AVENIDA MARINGÁ, 830, ., JARDIM QUEBEC"
+  },
+  {
+    "lat": -23.3017834,
+    "lng": -51.1738618,
+    "title": "LOJA 19 - CIDADE CANÇÃO LONDRINA II, AV. TIRADENTES , 1241, ., CENTRO"
+  },
+  {
+    "lat": -23.421212,
+    "lng": -51.9290883,
+    "title": "LOJA 22 - CIDADE CANÇÃO BRASIL ROCHA POMBO, AV. BRASIL, 2821, ., ZONA 01"
+  },
+  {
+    "lat": -24.7209496,
+    "lng": -53.7169266,
+    "title": "LOJA 23 - STOCK TOLEDO, AVENIDA JOSÉ JOÃO MURARO, 1790, ., JARDIM CONCÓRDIA"
+  },
+  {
+    "lat": -23.3994355,
+    "lng": -51.4465328,
+    "title": "LOJA 24 - CIDADE CANÇÃO ARAPONGAS, RUA DANÇARINO ROSADO, 556, ., PARQUE VENEZA"
+  },
+  {
+    "lat": -24.7342612,
+    "lng": -53.7426523,
+    "title": "LOJA 25 - CIDADE CANÇÃO TOLEDO, AVENIDA MARIPÁ, 5267, ., CENTRO"
+  },
+  {
+    "lat": -23.1785108,
+    "lng": -50.6462093,
+    "title": "LOJA 30 - CIDADE CANÇÃO CORNÉLIO PROCÓPIO II, RUA BENJAMIN CONSTANT,, 669, ., CENTRO"
+  },
+  {
+    "lat": -23.1086798,
+    "lng": -50.3743,
+    "title": "LOJA 33 - CIDADE CANÇÃO BANDEIRANTES, AVENIDA BANDEIRANTES,, 1597, ., CENTRO"
+  },
+  {
+    "lat": -7.1195614,
+    "lng": -34.8817282,
+    "title": "LOJA 34 - CIDADE CANÇÃO - ROLÂNDIA, AVENIDA PRESIDENTE GETÚLIO VARGAS, 1614, ., CENTRO"
+  },
+  {
+    "lat": -23.6600051,
+    "lng": -52.6131932,
+    "title": "LOJA 35 - CIDADE CANÇÃO CIANORTE III, AVENIDA PARÁ, 437, ., NOVO CENTRO"
+  },
+  {
+    "lat": -23.7583243,
+    "lng": -53.3137367,
+    "title": "LOJA 37 - CIDADE CANÇÃO UMUARAMA II, AVENIDA MANAUS, 2595, ., ZONA I"
+  },
+  {
+    "lat": -23.4031342,
+    "lng": -51.8792813,
+    "title": "LOJA 38 - CIDADE CANÇÃO GUAIAPÓ, AVENIDA GUAIAPÓ, 1881, ., BOM JARDIM"
+  },
+  {
+    "lat": -23.4144367,
+    "lng": -51.913918,
+    "title": "LOJA 51 - CIDADE CANÇÃO SÃO DOMINGOS, AVENIDA SÃO DOMINGOS, 1215, ., VILA MORANGUEIRA"
+  },
+  {
+    "lat": -23.4083299,
+    "lng": -51.9000524,
+    "title": "LOJA 52 - CIDADE CANÇÃO TUIUTI, AVENIDA TUIUTI, 1672, ., VILA MORANGUEIRA"
+  },
+  {
+    "lat": -23.4407677,
+    "lng": -51.8749006,
+    "title": "LOJA 54 - CIDADE CANÇÃO SARANDI, RUA GUIAPÓ, 483, ., CENTRO"
+  },
+  {
+    "lat": -23.5249799,
+    "lng": -51.6753354,
+    "title": "LOJA 55 - CIDADE CANÇÃO MANDAGUARI, RUA MANOEL ANTUNES PEREIRA , S/N, ., CENTRO"
+  },
+  {
+    "lat": -23.5505649,
+    "lng": -51.4733841,
+    "title": "LOJA 56 - CIDADE CANÇÃO APUCARANA, AV. CURITIBA, 2256, ., CENTRO"
+  },
+  {
+    "lat": -23.4261894,
+    "lng": -51.9634173,
+    "title": "LOJA 57 - CIDADE CANCAO BRASIL III, AV. BRASIL, 7225, ., ZONA 05"
+  },
+  {
+    "lat": -23.4067894,
+    "lng": -51.9151674,
+    "title": "LOJA 58 - CIDADE CANÇÃO ALVORADA, AVENIDA LUCÍLIO DE HELD, 1477, ., JARDIM ALVORADA"
+  },
+  {
+    "lat": -23.3991393,
+    "lng": -51.966221,
+    "title": "LOJA 59 - CIDADE CANÇÃO NEY BRAGA, AV. ALZIRO ZARUR, 1575, ., CONJ. RES. NEY BRAGA"
+  },
+  {
+    "lat": -23.1853808,
+    "lng": -50.649467,
+    "title": "LOJA 60 - CIDADE CANÇÃO CORNÉLIO PROCÓPIO, RUA PARAÍBA, 433, ., CENTRO"
+  },
+  {
+    "lat": -23.3857456,
+    "lng": -51.9570269,
+    "title": "LOJA 62 - CIDADE CANÇÃO MANDACARÚ SHOPPING, AVENIDA MANDACARU, 277, ., JARDIM MARAVILHA"
+  },
+  {
+    "lat": -23.3975764,
+    "lng": -51.9189119,
+    "title": "LOJA 63 - CIDADE CANÇÃO BENTO MUNHOZ, AVENIDA PEDRO TAQUES, 294, ., ZONA INDUSTRIAL"
+  },
+  {
+    "lat": -23.4811557,
+    "lng": -51.7953474,
+    "title": "LOJA 64 - CIDADE CANÇÃO MARIALVA, RUA CYPRIANO PARPINELLI, 1070, ., CENTRO"
+  },
+  {
+    "lat": -23.7597557,
+    "lng": -53.3018613,
+    "title": " LOJA 65 - CIDADE CANÇÃO UMUARAMA, AVENIDA PARANÁ, 5885, ., ZONA III"
+  },
+  {
+    "lat": -23.4397823,
+    "lng": -51.9329077,
+    "title": "LOJA 6 - CIDADE CANÇÃO CERRO AZUL, AVENIDA CERRO AZUL, 979, ., ZONA 02"
+  },
+  {
+    "lat": -23.604575,
+    "lng": -51.6466162,
+    "title": "LOJA 7 - CIDADE CANÇÃO JANDAIA DO SUL, RUA MARECHAL CANDIDO RONDON,, 744, ., CENTRO"
+  },
+  {
+    "lat": -23.0772288,
+    "lng": -52.4535946,
+    "title": "LOJA 8 - CIDADE CANÇÃO PARANAVAÍ, RUA MANOEL RIBAS, 2444, ., CENTRO"
+  },
+  {
+    "lat": -23.3940821,
+    "lng": -51.9237212,
+    "title": "LOJA 9 - CIDADE CANÇÃO MORANGUEIRA, AVENIDA MORANGUEIRA, 1505, ., VILA MORANGUEIRA"
+  },
+  {
+    "lat": -25.5485862,
+    "lng": -49.1894841,
+    "title": "LOJAS BALAROTI - AEROPORTO, AVENIDA DAS TORRES, 3001, -, SÃO PEDRO"
+  },
+  {
+    "lat": -25.5892193,
+    "lng": -49.4017712,
+    "title": "LOJAS BALAROTI - ARAUCÁRIA, AV. DR. VICTOR DO AMARAL, 1314, -, CENTRO"
+  },
+  {
+    "lat": -25.3871003,
+    "lng": -49.2163273,
+    "title": "LOJAS BALAROTI - ATUBA, AVENIDA MONTEIRO TOURINHO, 1936, -, TINGUI"
+  },
+  {
+    "lat": -25.396027,
+    "lng": -49.2318707,
+    "title": "LOJAS BALAROTI - BACACHERI, AVENIDA PREFEITO ERASTO GAERTNER, 2016, -, BACACHERI"
+  },
+  {
+    "lat": -25.4412078,
+    "lng": -49.3083735,
+    "title": "LOJAS BALAROTI - BARIGUI, RUA MAJOR HEITOR GUIMARÃES, 2059, -, CAMPINA DO SIQUEIRA"
+  },
+  {
+    "lat": -25.4517403,
+    "lng": -49.5206445,
+    "title": "LOJAS BALAROTI - CAMPO LARGO, RUA IRENE CASTAGNOLI SOUTO, 27, -, VILA SOLENE"
+  },
+  {
+    "lat": -25.6479857,
+    "lng": -49.3122249,
+    "title": "LOJAS BALAROTI - FAZENDA RIO GRANDE, AVENIDA DAS AMÉRICAS, 2761, -, NAÇÕES"
+  },
+  {
+    "lat": -25.473853,
+    "lng": -49.339866,
+    "title": "LOJAS BALAROTI - FAZENDINHA, RUA JOÃO DEMBINSKI, 3389, -, CIDADE INDUSTRIAL"
+  },
+  {
+    "lat": -25.3802072,
+    "lng": -51.4706912,
+    "title": "LOJAS BALAROTI - GUARAPUAVA, AVENIDA MANOEL RIBAS, 1836, -, CENTRO"
+  },
+  {
+    "lat": -25.505445,
+    "lng": -49.1356783,
+    "title": "LOJAS BALAROTI - GUATUPE (ADM), RUA ILO ANTONINHO MOZER, 271, -, GUATUPÊ"
+  },
+  {
+    "lat": -25.4826716,
+    "lng": -49.2462359,
+    "title": "LOJAS BALAROTI - HAUER, RUA WALDEMAR KOST, 701, -, HAUER"
+  },
+  {
+    "lat": -25.4362231,
+    "lng": -49.2880713,
+    "title": "LOJAS BALAROTI - KINTA, ALAMEDA DOUTOR CARLOS DE CARVALHO, 1645, -, BATEL"
+  },
+  {
+    "lat": -18.6761034,
+    "lng": -41.9888488,
+    "title": "LOJAS BALAROTI - LINHA VERDE, RODOVIA BR-116, 12475, -, XAXIM"
+  },
+  {
+    "lat": -25.4158629,
+    "lng": -49.2965909,
+    "title": "LOJAS BALAROTI - MERCÊS, AVENIDA MANOEL RIBAS, 1649, -, MERCÊS"
+  },
+  {
+    "lat": -25.0849312,
+    "lng": -50.1761728,
+    "title": "LOJAS BALAROTI - NOVA RUSSIA, AVENIDA ERNESTO VILELA, 1080, -, NOVA RÚSSIA"
+  },
+  {
+    "lat": -25.5583168,
+    "lng": -48.5585443,
+    "title": "LOJAS BALAROTI - PARANAGUÁ, AVENIDA BENTO MUNHOZ DA ROCHA NETO, 2676, -, JARDIM SAMAMBAIA"
+  },
+  {
+    "lat": -25.0926819,
+    "lng": -50.120442,
+    "title": "LOJAS BALAROTI - PG HOME CENTER, AVENIDA GENERAL CARLOS CAVALCANTI, 265, -, UVARANAS"
+  },
+  {
+    "lat": -25.4307757,
+    "lng": -49.1812202,
+    "title": "LOJAS BALAROTI - PINHAIS, RUA CUBA, 11925, -, CENTRO"
+  },
+  {
+    "lat": -25.5092298,
+    "lng": -49.2873116,
+    "title": "LOJAS BALAROTI - PINHEIRINHO, RODOVIA BR-116, 19250, -, XAXIM"
+  },
+  {
+    "lat": -25.4773708,
+    "lng": -49.29572,
+    "title": "LOJAS BALAROTI - PORTÃO, RUA DOUTOR JOÃO TOBIAS PINTO REBELO, 3680, -, PORTÃO"
+  },
+  {
+    "lat": -25.4354321,
+    "lng": -49.2727246,
+    "title": "LOJAS BALAROTI - RUI BARBOSA, PRAÇA RUI BARBOSA, 513, -, CENTRO"
+  },
+  {
+    "lat": -25.4708234,
+    "lng": -49.230079,
+    "title": "LOJAS BALAROTI - TORRES, AVENIDA COMENDADOR FRANCO, 3711, -, JARDIM DAS AMÉRICAS"
+  },
+  {
+    "lat": -25.4335839,
+    "lng": -49.2606991,
+    "title": "LOJAS BALAROTI - VISCONDE, AVENIDA VISCONDE DE GUARAPUAVA, 2131, -, CENTRO"
+  },
+  {
+    "lat": -25.5201196,
+    "lng": -49.2553467,
+    "title": "LOJAS BALAROTI - XAXIM, RUA FRANCISCO DEROSSO, 3073, -, ALTO BOQUEIRÃO"
+  },
+  {
+    "lat": -23.412286,
+    "lng": -51.9429376,
+    "title": "MULTICOISAS - LOJA 163, AV. COLOMBO, 9161, -, PQ. INDL. BAND."
+  },
+  {
+    "lat": -23.4261894,
+    "lng": -51.9634173,
+    "title": "MULTICOISAS - LOJA 1 - ANGAI COMERCIAL DE FERRAGENS LTDA., AVENIDA BRASIL, 5010, ., ZONA 04"
+  },
+  {
+    "lat": -25.4713135,
+    "lng": -49.2943263,
+    "title": "MULTICOISAS LOJA 210, AVENIDA REPÚBLICA ARGENTINA, 1423, ., AGUA VERDE"
+  },
+  {
+    "lat": -25.1013978,
+    "lng": -50.1557359,
+    "title": "MULTICOISAS LOJA 220 , RUA ERMELINO DE LEÃO, 703, ., OLARIAS"
+  },
+  {
+    "lat": -25.4404022,
+    "lng": -49.2740806,
+    "title": "MULTICOISAS - LOJA 26, AVENIDA SETE DE SETEMBRO, 6703, ., SEMINÁRIO"
+  },
+  {
+    "lat": -25.4443531,
+    "lng": -49.2751205,
+    "title": "MULTICOISAS - LOJA 299 , RUA BRIGADEIRO FRANCO, 2300, -, CENTRO"
+  },
+  {
+    "lat": -23.3339591,
+    "lng": -51.177583,
+    "title": "MULTICOISAS LOJA 307 , AVENIDA AYRTON SENNA DA SILVA, 605, ., GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -25.4372154,
+    "lng": -49.3348343,
+    "title": "MULTICOISAS LOJA 318 , RUA PROFESSOR PEDRO VIRIATO PARIGOT DE SOUZA, 600, ., MOSSUNGUÊ"
+  },
+  {
+    "lat": -23.3092766,
+    "lng": -51.1780086,
+    "title": "MULTICOISAS - LOJA 33, AVENIDA MARINGÁ, 360, ., VILA JUDITE"
+  },
+  {
+    "lat": -25.4170897,
+    "lng": -49.2513792,
+    "title": "MULTICOISAS - LOJA 52, RUA AUGUSTO STRESSER, 1734, ., JUVEVÊ"
+  },
+  {
+    "lat": -23.4295158,
+    "lng": -51.9316165,
+    "title": "MULTICOISAS - LOJA 57 , AVENIDA SÃO PAULO, 458, LJE32, ZONA 09"
+  },
+  {
+    "lat": -23.3433997,
+    "lng": -51.183622,
+    "title": "MULTICOISAS - LOJA 6 , RODOVIA CELSO GARCIA CID KM 377, S/N, -, GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -25.4317519,
+    "lng": -49.2717316,
+    "title": "PANATEC ASSISTENCIA ELETRONICA LTDA, AV. MARECHAL FLORIANO PEIXOTO , 727, -, CENTRO"
+  },
+  {
+    "lat": -25.4539185,
+    "lng": -49.2907817,
+    "title": "PANVEL FARMÁCIAS - ÁGUA VERDE, RUA CÂNDIDO XAVIER, 340, ÁGUA VERDE"
+  },
+  {
+    "lat": -25.446631,
+    "lng": -49.2810114,
+    "title": "PANVEL FARMÁCIAS - ÁGUA VERDE, AVENIDA IGUAÇÚ, 2064, ÁGUA VERDE"
+  },
+  {
+    "lat": -25.4504485,
+    "lng": -49.2914288,
+    "title": "PANVEL FARMÁCIAS - ÁGUA VERDE, AVENIDA IGUAÇU, 2536, Sala 01, ÁGUA VERDE"
+  },
+  {
+    "lat": -25.4663334,
+    "lng": -49.2857607,
+    "title": "PANVEL FARMÁCIAS - ÁGUA VERDE, AVENIDA DOS ESTADOS, 597, ÁGUA VERDE"
+  },
+  {
+    "lat": -25.4677546,
+    "lng": -49.281263,
+    "title": "PANVEL FARMÁCIAS - ÁGUA VERDE, AVENIDA PRESIDENTE KENNEDY, 2434, Loja 1, ÁGUA VERDE"
+  },
+  {
+    "lat": -25.4535612,
+    "lng": -49.2837508,
+    "title": "PANVEL FARMÁCIAS - ÁGUA VERDE, AVENIDA ÁGUA VERDE, 568, ÁGUA VERDE"
+  },
+  {
+    "lat": -25.4076807,
+    "lng": -49.2642386,
+    "title": "PANVEL FARMÁCIAS - AHÚ, RUA ALBERTO FOLLONI, 1572, AHÚ"
+  },
+  {
+    "lat": -25.4235323,
+    "lng": -49.2641947,
+    "title": "PANVEL FARMÁCIAS - ALTO DA GLORIA, RUA PADRE ANTÔNIO, 273, ALTO DA GLORIA"
+  },
+  {
+    "lat": -25.4240419,
+    "lng": -49.252202,
+    "title": "PANVEL FARMÁCIAS - ALTO DA RUA XV, RUA PROFESSOR BRANDÃO, 25, ALTO DA RUA XV"
+  },
+  {
+    "lat": -23.3063041,
+    "lng": -51.1776992,
+    "title": "PANVEL FARMÁCIAS - AURORA, RUA IBIPORÃ, 253, AURORA"
+  },
+  {
+    "lat": -25.396027,
+    "lng": -49.2318707,
+    "title": "PANVEL FARMÁCIAS - BACACHERI, AVENIDA PREFEITO ERASTO GAERTNER, 1678, BACACHERI"
+  },
+  {
+    "lat": -25.4089234,
+    "lng": -49.2373424,
+    "title": "PANVEL FARMÁCIAS - BACACHERI, RUA MÉXICO, 600, Loja 07, BACACHERI"
+  },
+  {
+    "lat": -25.4414401,
+    "lng": -49.2931776,
+    "title": "PANVEL FARMÁCIAS - BATEL, RUA DESEMBARGADOR COSTA CARVALHO, 605, BATEL"
+  },
+  {
+    "lat": -25.4424851,
+    "lng": -49.2879152,
+    "title": "PANVEL FARMÁCIAS - BATEL, AVENIDA DO BATEL, 1868, Loja 334 e 335, BATEL"
+  },
+  {
+    "lat": -25.4404022,
+    "lng": -49.2740806,
+    "title": "PANVEL FARMÁCIAS - BATEL, AVENIDA SETE DE SETEMBRO, 6923, BATEL"
+  },
+  {
+    "lat": -30.0368176,
+    "lng": -51.2089887,
+    "title": "PANVEL FARMÁCIAS - BATEL, RUA BENJAMIN LINS, 680, Loja 01, BATEL"
+  },
+  {
+    "lat": -23.3351304,
+    "lng": -51.1656807,
+    "title": "PANVEL FARMÁCIAS - BELA SUÍÇA, AVENIDA MADRE LEONIA MILITO, 914, BELA SUÍÇA"
+  },
+  {
+    "lat": -25.4410262,
+    "lng": -49.2897727,
+    "title": "PANVEL FARMÁCIAS - BIGORRILHO, RUA FRANCISCO ROCHA, 2195, BIGORRILHO"
+  },
+  {
+    "lat": -25.3958098,
+    "lng": -49.2504588,
+    "title": "PANVEL FARMÁCIAS - BOA VISTA, RUA HOLANDA, 1150, BOA VISTA"
+  },
+  {
+    "lat": -25.5605389,
+    "lng": -49.1703987,
+    "title": "PANVEL FARMÁCIAS - BOA VISTA, RUA FERNANDO DE NORONHA, 317, BOA VISTA"
+  },
+  {
+    "lat": -25.3949881,
+    "lng": -49.2579612,
+    "title": "PANVEL FARMÁCIAS - BOA VISTA, AVENIDA ANITA GARIBALDI, 2132, BOA VISTA"
+  },
+  {
+    "lat": -25.4095562,
+    "lng": -49.2758912,
+    "title": "PANVEL FARMÁCIAS - BOM RETIRO, RUA NILO PEÇANHA, 1167, BOM RETIRO"
+  },
+  {
+    "lat": -25.4989644,
+    "lng": -49.2484676,
+    "title": "PANVEL FARMÁCIAS - BOQUEIRÃO, RUA CEL. LUIZ JOSÉ DOS SANTOS, 2506, Loja 01, BOQUEIRÃO"
+  },
+  {
+    "lat": -25.520978,
+    "lng": -49.237412,
+    "title": "PANVEL FARMÁCIAS - BOQUEIRÃO , RUA MAESTRO CARLOS FRANK, 1706, BOQUEIRÃO "
+  },
+  {
+    "lat": -25.4086654,
+    "lng": -49.25129,
+    "title": "PANVEL FARMÁCIAS - CABRAL, AVENIDA MUNHOZ DA ROCHA, 944, CABRAL"
+  },
+  {
+    "lat": -23.0864052,
+    "lng": -52.4669835,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA DISTRITO FEDERAL, 734, CENTRO"
+  },
+  {
+    "lat": -25.4314227,
+    "lng": -49.2621961,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA MARIANO TORRES, 597, Loja 01, CENTRO"
+  },
+  {
+    "lat": -25.2520888,
+    "lng": -52.0215415,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA IZABEL A. REDENTORA, 103, Lojas 101, 102, 103, CENTRO"
+  },
+  {
+    "lat": -30.0368176,
+    "lng": -51.2089887,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA VICENTE MACHADO, 15, Lojas 4, 5 e 6, CENTRO"
+  },
+  {
+    "lat": -23.3165325,
+    "lng": -51.1615151,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA ESPÍRITO SANTO, 1340, CENTRO"
+  },
+  {
+    "lat": -25.5391136,
+    "lng": -49.2005962,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA IZABEL A. REDENTORA, 2270, CENTRO"
+  },
+  {
+    "lat": -23.3121192,
+    "lng": -51.166716,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA BELO HORIZONTE, 1038, CENTRO"
+  },
+  {
+    "lat": -25.0860865,
+    "lng": -50.16015,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA BONIFÁCIO VILELA, 384, CENTRO"
+  },
+  {
+    "lat": -23.3103674,
+    "lng": -51.1658267,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA HIGIENÓPOLIS, 300, CENTRO"
+  },
+  {
+    "lat": -25.2520888,
+    "lng": -52.0215415,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA QUINTINO BOCAIUVA, 970, CENTRO"
+  },
+  {
+    "lat": -25.5469068,
+    "lng": -54.5831237,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA JORGE SCHIMMELPFENG, 500, CENTRO"
+  },
+  {
+    "lat": -25.3945421,
+    "lng": -51.4687948,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA PRESIDENTE GETÚLIO VARGAS, 1246, CENTRO"
+  },
+  {
+    "lat": -25.4449623,
+    "lng": -49.0635038,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA GETULIO VARGAS, 1072, CENTRO"
+  },
+  {
+    "lat": -23.2834959,
+    "lng": -51.2798454,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA BRASIL, 242, CENTRO"
+  },
+  {
+    "lat": -25.3950708,
+    "lng": -51.4693992,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA PADRE CHAGAS, 2730, CENTRO"
+  },
+  {
+    "lat": -25.2767132,
+    "lng": -54.0968332,
+    "title": "PANVEL FARMÁCIAS - CENTRO, AVENIDA BRASILIA, 1360, CENTRO"
+  },
+  {
+    "lat": -27.5968578,
+    "lng": -48.5468118,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA PARANÁ, 2962, CENTRO"
+  },
+  {
+    "lat": -23.3137017,
+    "lng": -51.1576734,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA SENADOR SOUZA NAVES, 796, CENTRO"
+  },
+  {
+    "lat": -25.4284277,
+    "lng": -49.243096799999996,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA SETE DE SETEMBRO, 2704, Sala 01, CENTRO"
+  },
+  {
+    "lat": -25.4309949,
+    "lng": -49.2708064,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA XV DE NOVEMBRO, 310, CENTRO"
+  },
+  {
+    "lat": -25.4291245,
+    "lng": -49.2640759,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA MARECHAL DEODORO, 261, Loja 02, CENTRO"
+  },
+  {
+    "lat": -29.6877757,
+    "lng": -53.8136388,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA FLAMINGOS, 973, Loja 07, Centro"
+  },
+  {
+    "lat": -24.9460967,
+    "lng": -53.4456579,
+    "title": "PANVEL FARMÁCIAS - CENTRO, RUA MINAS GERAIS, 2260, CENTRO"
+  },
+  {
+    "lat": -25.4159926,
+    "lng": -49.2714453,
+    "title": "PANVEL FARMÁCIAS - CENTRO CÍVICO, RUA MATEUS LEME, 2690, CENTRO CÍVICO"
+  },
+  {
+    "lat": -25.4162609,
+    "lng": -49.2682167,
+    "title": "PANVEL FARMÁCIAS - CENTRO CÍVICO, AVENIDACANDIDO DE ABREU, 127, CENTRO CÍVICO"
+  },
+  {
+    "lat": -25.0930395,
+    "lng": -50.1569117,
+    "title": "PANVEL FARMÁCIAS - CENTRO CÍVICO, RUA GENERAL CARNEIRO, 580, CENTRO CÍVICO"
+  },
+  {
+    "lat": -23.2596214,
+    "lng": -51.1641961,
+    "title": "PANVEL FARMÁCIAS - CONJUNTO VIVI XAVIER, AVENIDA SAUL ELKIND, 2187, CONJUNTO VIVI XAVIER"
+  },
+  {
+    "lat": -25.532707,
+    "lng": -49.2116663,
+    "title": "PANVEL FARMÁCIAS - CRISTO REI, AVENIDA SENADOR SOUZA NAVES, 1772, CRISTO REI"
+  },
+  {
+    "lat": -25.1048617,
+    "lng": -50.1616499,
+    "title": "PANVEL FARMÁCIAS - ESTRELA, RUA BALDUÍNO TAQUES, 431, ESTRELA"
+  },
+  {
+    "lat": -23.3339591,
+    "lng": -51.177583,
+    "title": "PANVEL FARMÁCIAS - GLEBA FAZENDA PALHANO, AVENIDA AYRTON SENNA DA SILVA, 760, GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -23.3447874,
+    "lng": -51.1889511,
+    "title": "PANVEL FARMÁCIAS - GLEBA FAZENDA PALHANO, RODOVIA MABIO GONÇALVES PALHANO, 758, GLEBA FAZENDA PALHANO"
+  },
+  {
+    "lat": -23.412286,
+    "lng": -51.9429376,
+    "title": "PANVEL FARMÁCIAS - GLEBA PATRIMONIO MARINGÁ, AVENIDA COLOMBO, 9161, Loja 105, GLEBA PATRIMONIO MARINGÁ"
+  },
+  {
+    "lat": -30.0368176,
+    "lng": -51.2089887,
+    "title": "PANVEL FARMÁCIAS - HAUER, RUA ALCINO GUANABARA, 907, HAUER"
+  },
+  {
+    "lat": -25.4170897,
+    "lng": -49.2513792,
+    "title": "PANVEL FARMÁCIAS - HUGO LANGE, RUA AUGUSTO STRESSER, 1790, HUGO LANGE"
+  },
+  {
+    "lat": -25.4630362,
+    "lng": -49.2230018,
+    "title": "PANVEL FARMÁCIAS - JARDIM DAS AMÉRICAS, RUA PROFESSOR JOÃO DOETZER, 544, JARDIM DAS AMÉRICAS"
+  },
+  {
+    "lat": -25.46765,
+    "lng": -49.2350337,
+    "title": "PANVEL FARMÁCIAS - JARDIM DAS AMÉRICAS, AVENIDA CEL. FRANCISCO HERACLITO DOS SANTOS, 609, JARDIM DAS AMÉRICAS"
+  },
+  {
+    "lat": -23.4413122,
+    "lng": -51.9611871,
+    "title": "PANVEL FARMÁCIAS - JARDIM SAN REMO, RUA PIONEIRO WALDEMAR GOMES DA CUNHA, 484, JARDIM SAN REMO"
+  },
+  {
+    "lat": -25.4236048,
+    "lng": -49.2418348,
+    "title": "PANVEL FARMÁCIAS - JARDIM SOCIAL, AVENIDA NOSSA SENHORA DA LUZ, 2341, JARDIM SOCIAL"
+  },
+  {
+    "lat": -25.4076807,
+    "lng": -49.2642386,
+    "title": "PANVEL FARMÁCIAS - JUVEVÊ, RUA ALBERTO FOLLONI, 520, JUVEVÊ"
+  },
+  {
+    "lat": -25.4153035,
+    "lng": -49.2571963,
+    "title": "PANVEL FARMÁCIAS - JUVEVÊ, RUA ROCHA POMBO, 346, JUVEVÊ"
+  },
+  {
+    "lat": -25.4225666,
+    "lng": -49.2507487,
+    "title": "PANVEL FARMÁCIAS - JUVEVÊ, RUA ITUPAVA, 753, Loja 2, JUVEVÊ"
+  },
+  {
+    "lat": -25.439492,
+    "lng": -49.2498252,
+    "title": "PHILIPS - EXCLUSIVA COM  EQUIP LTDA, AVENIDA PREFEITO OMAR SABBAG, 281, -, JARDIM BOTÂNICO"
+  },
+  {
+    "lat": -25.4638599,
+    "lng": -49.5234483,
+    "title": "PREFEITURA DE CAMPO LARGO\t\t, RUA DA SUBESTAÇÃO DE ENOLOGIA, 1444, O acesso acontece pela Rua Harrold (continuação da Rua Barão do Rio Branco) e a pé pela Rua Subestação de Enologia., VILA BANCÁRIA"
+  },
+  {
+    "lat": -23.4196222,
+    "lng": -51.4391854,
+    "title": "PREFEITURA MUNICIPAL DE ARAPONGAS, RUA ANU-COROA, 80, -, PQ. INDUSTRIAL IV"
+  },
+  {
+    "lat": -24.9437969,
+    "lng": -53.4646707,
+    "title": "PREFEITURA MUNICIPAL DE CASCAVEL, RUA MANAUS, 1524, ., COUNTRY"
+  },
+  {
+    "lat": -26.1440138,
+    "lng": -53.3116816,
+    "title": "SECRETARIA MUNICIPAL DE MEIO AMBIENTE E SANEAMENTO, AVENIDA SÃO CRISTÓVÃO, 810, -, CENTRO"
+  },
+  {
+    "lat": -19.919168,
+    "lng": -43.9386558,
+    "title": "SEDE DA PREFEITURA MUNICIPAL, MINAS GERAIS , 220, -, CENTRO"
+  },
+  {
+    "lat": -23.4886552,
+    "lng": -51.7929108,
+    "title": "SEMA-SECRETARIA MUNICIPAL DE MEIO AMBIENTE, CRISTÓVÃO COLOMBO, 2793, -, CENTRO"
+  },
+  {
+    "lat": -25.451409,
+    "lng": -49.228768,
+    "title": "SHOPPING JARDIM DAS AMÉRICAS - CURITIBA, AVENIDA NOSSA SENHORA DE LOURDES, 63, -, JARDIM DAS AMÉRICAS"
+  },
+  {
+    "lat": -23.5506273,
+    "lng": -51.4560295,
+    "title": "SICOOB ALIANÇA, RUA GALDINO GLUCK JUNIOR, 280, Ed. Comercial Mendes - 2º Andar, Sala 201, CENTRO"
+  },
+  {
+    "lat": -23.7693737,
+    "lng": -53.3183512,
+    "title": " SICOOB ARENITO, AVENIDA PADRE JOSÉ GERMANO NETTO JÚNIOR, 3382, -, ZONA VI"
+  },
+  {
+    "lat": -24.5660471,
+    "lng": -54.0605343,
+    "title": "SICOOB CONFIANÇA, RUA GOIÁS, 1231, -, CENTRO"
+  },
+  {
+    "lat": -23.4128537,
+    "lng": -51.4332962,
+    "title": " SICOOB HORIZONTE, AVENIDA ARAPONGAS, 446, -, CENTRO"
+  },
+  {
+    "lat": -26.2212777,
+    "lng": -52.6732905,
+    "title": "SICOOB INTEGRADO, RUA TAPAJÓS, 440, -, CENTRO"
+  },
+  {
+    "lat": -24.7254253,
+    "lng": -53.7268758,
+    "title": "SICOOB MERIDIONAL , AVENIDA JOSÉ JOÃO MURARO, 1587, -, JARDIM PORTO ALEGRE"
+  },
+  {
+    "lat": -25.5507139,
+    "lng": -54.5868625,
+    "title": "SICOOB PA - ACIFI, RUA PADRE MONTOYA, 490, -, CENTRO"
+  },
+  {
+    "lat": -23.4685977,
+    "lng": -51.9954559,
+    "title": "SICOOB PA - AEROPORTO, RODOVIA PR 317, 5765, LOJA E 01, E 02, SHOP. AVG FASHION, PARQUE INDUSTRIAL"
+  },
+  {
+    "lat": -23.4145959,
+    "lng": -51.9365238,
+    "title": "SICOOB PA - AG. JOVEM, AVENIDA HERVAL, 969, -, ZONA 07"
+  },
+  {
+    "lat": -23.8715505,
+    "lng": -53.8981607,
+    "title": "SICOOB - PA ALTÔNIA, AVENIDA SETE DE SETEMBRO, 130, -, CENTRO"
+  },
+  {
+    "lat": -23.1329409,
+    "lng": -52.3242099,
+    "title": "SICOOB PA - ALTO PARANÁ, AVENIDA PARANÁ, 2311, -, CENTRO"
+  },
+  {
+    "lat": -23.4029601,
+    "lng": -51.9156824,
+    "title": "SICOOB PA - ALVORADA, AVENIDA DR. ALEXANDRE RASGULAEFF, 469, -, JARDIM ALVORADA"
+  },
+  {
+    "lat": -23.6700094,
+    "lng": -52.6288998,
+    "title": "SICOOB PA - AMÉRICA, AV. AMERICA , 1705, -, ZONA 06"
+  },
+  {
+    "lat": -23.7791102,
+    "lng": -53.3242177,
+    "title": "SICOOB - PA ANGELO MOREIRA DA FONSECA, AVENIDA ANGELO MOREIRA DA FONSECA, 2130, COMERCIAL, PARQUE DANIELLE"
+  },
+  {
+    "lat": -23.5511691,
+    "lng": -51.4631757,
+    "title": "SICOOB - PA APUC OSWALDO CRUZ, RUA DOUTOR OSWALDO CRUZ, 806, -, CENTRO"
+  },
+  {
+    "lat": -23.4128537,
+    "lng": -51.4332962,
+    "title": "SICOOB - PA ARAPONGAS CENTRO, AVENIDA ARAPONGAS , 446, -, CENTRO"
+  },
+  {
+    "lat": -23.390912,
+    "lng": -51.4154026,
+    "title": "SICOOB - PA ARAPONGAS FLAMINGOS, RUA ALBATROZ REAL, 93, -, CONJUNTO DEL CONDOR"
+  },
+  {
+    "lat": -23.4074825,
+    "lng": -51.4414287,
+    "title": "SICOOB - PA ARAPONGAS - PIONEIRA, AVENIDA ARAPONGAS, 1425, -, CENTRO"
+  },
+  {
+    "lat": -24.1492148,
+    "lng": -49.821744,
+    "title": "SICOOB - PA ARAPOTI, RUA TELÊMACO CARNEIRO, 556, -, CENTRO"
+  },
+  {
+    "lat": -23.933716,
+    "lng": -52.4971905,
+    "title": "SICOOB PA - ARARUNA, AVENIDA PRESIDENTE VARGAS, 521, -, CENTRO"
+  },
+  {
+    "lat": -23.6628917,
+    "lng": -52.5917267,
+    "title": "SICOOB PA - ASA MODA, AVENIDA PARAÍBA, 1163, -, ZONA 03"
+  },
+  {
+    "lat": -23.2370107,
+    "lng": -51.6590818,
+    "title": "SICOOB PA - ASTORGA, AVENIDA PRESIDENTE VARGAS, 208, -, CENTRO"
+  },
+  {
+    "lat": -25.301405,
+    "lng": -54.1141333,
+    "title": "SICOOB PA - AV. BRASIL, AVENIDA BRASIL, 4030, Sala 01, PARQUE INDEPENDÊNCIA"
+  },
+  {
+    "lat": -23.5522921,
+    "lng": -51.4628472,
+    "title": "SICOOB - PA AVENIDA, AVENIDA CURITIBA, 1335, -, CENTRO"
+  },
+  {
+    "lat": -24.5437645,
+    "lng": -54.0527096,
+    "title": "SICOOB - PA AVENIDA, AVENIDA MARIPA, 2159, -, ALVORADA"
+  },
+  {
+    "lat": -23.4205406,
+    "lng": -51.9329875,
+    "title": "SICOOB PA - AVENIDA CENTER, AVENIDA SÃO PAULO, 686, CENTRO, ZONA 07"
+  },
+  {
+    "lat": -23.7693737,
+    "lng": -53.3183512,
+    "title": "SICOOB - PA AVENIDA PADRE GERMANO, AVENIDA PADRE GERMANO NETO JÚNIOR, 3334, -, ZONA VI"
+  },
+  {
+    "lat": -23.7597557,
+    "lng": -53.3018613,
+    "title": "SICOOB - PA AVENIDA PARANÁ, AVENIDA PARANÁ, 5717, -, ZONA III"
+  },
+  {
+    "lat": -24.0278934,
+    "lng": -52.0083672,
+    "title": "SICOOB PA - BARBOSA FERRAZ, AVENIDA PRESIDENTE KENEDY, 743, -, CENTRO"
+  },
+  {
+    "lat": -25.6763808,
+    "lng": -49.5329827,
+    "title": "SICOOB PA - BITURUNA, AVENIDA GOVERNADOR MOISES LUPION, 420, -, CENTRO"
+  },
+  {
+    "lat": -24.5945994,
+    "lng": -52.8072445,
+    "title": "SICOOB PA - CAMPINA DA LAGOA, AVENIDA BRASIL, 364, -, CENTRO"
+  },
+  {
+    "lat": -24.0472217,
+    "lng": -52.382582,
+    "title": "SICOOB PA - CAMPO MOURÃO, AVENIDA CAPITÃO INDIO BANDEIRA, 761, -, CENTRO"
+  },
+  {
+    "lat": -3.7329688,
+    "lng": -38.5264661,
+    "title": "SICOOB - PA CANDÓI, RUA GERVÁSIO HITOSHI DOY, 322, SALA 02, CENTRO"
+  },
+  {
+    "lat": -25.3727431,
+    "lng": -52.1255026,
+    "title": "SICOOB - PA CANTAGALO, RUA BOM JESUS, 126, -, CENTRO"
+  },
+  {
+    "lat": -23.4249126,
+    "lng": -49.7176587,
+    "title": "SICOOB - PA CARLÓPOLIS, AVENIDA BENEDITO SALLES, 583, ESQUINA COM A RUA CALIL KEDER, CENTRO"
+  },
+  {
+    "lat": -23.4521485,
+    "lng": -51.9536847,
+    "title": "SICOOB PA - CARLOS BORGES, AVENIDA CARLOS CORREA BORGES, 862, -, CONJ. HAB. INOCENTE VILA NOVA JÚNIOR"
+  },
+  {
+    "lat": -23.2789361,
+    "lng": -52.1557788,
+    "title": "SICOOB PA - CASTELO BRANCO, AVENIDA JÚLIO FACCIN, 315, -, CENTRO"
+  },
+  {
+    "lat": -22.8182653,
+    "lng": -51.5966247,
+    "title": "SICOOB PA - CENTENÁRIO DO SUL, AVENIDA PREFEITO WANDERLEY A. DE MORAES, 437, -, CENTRO"
+  },
+  {
+    "lat": -25.5447847,
+    "lng": -54.5850351,
+    "title": "SICOOB - PA CENTRO, RUA ALMIRANTE BARROSO, 2077, -, CENTRO"
+  },
+  {
+    "lat": -23.7618312,
+    "lng": -53.3121806,
+    "title": "SICOOB - PA CENTRO, AVENIDA PRESIDENTE CASTELO BRANCO, 417, -, ZONA I"
+  },
+  {
+    "lat": -24.5623534,
+    "lng": -54.0611638,
+    "title": "SICOOB PA - CENTRO, RUA SANTA CATARINA, 577, SICOOB, CENTRO"
+  },
+  {
+    "lat": -24.7331166,
+    "lng": -53.7372802,
+    "title": "SICOOB - PA CENTRO TOLEDO, RUA SETE DE SETEMBRO, 1141, -, CENTRO"
+  },
+  {
+    "lat": -23.4397823,
+    "lng": -51.9329077,
+    "title": "SICOOB PA - CERRO AZUL, AVENIDA CERRO AZUL, 771, -, ZONA 02"
+  },
+  {
+    "lat": -25.856076,
+    "lng": -52.5307787,
+    "title": "SICOOB - PA CHOPINZINHO, AVENIDA XV DE NOVEMBRO, 4186, CONDOMÍNIO RESIDENCIAL MONTE, CENTRO"
+  },
+  {
+    "lat": -23.6547714,
+    "lng": -52.610569,
+    "title": "SICOOB PA - CIANORTE, AVENIDA SANTA CATARINA, 214, -, ZONA 01"
+  },
+  {
+    "lat": -23.3754339,
+    "lng": -52.9379279,
+    "title": "SICOOB - PA CIDADE GAÚCHA, AV. COMENDADOR GENTIL GIRALDI, 2994, COMERCIAL, CENTRO"
+  },
+  {
+    "lat": -26.4060213,
+    "lng": -52.3556781,
+    "title": "SICOOB - PA CLEVELÂNDIA, RUA MAJOR SANSÃO CARNEIRO, 555, -, CENTRO"
+  },
+  {
+    "lat": -22.8381455,
+    "lng": -51.9727719,
+    "title": "SICOOB PA - COLORADO, AVENIDA BRASIL, 1180, -, CENTRO"
+  },
+  {
+    "lat": -24.7254253,
+    "lng": -53.7268758,
+    "title": "SICOOB PA CONSIGNADO, AVENIDA JOSÉ JOÃO MURARO, 1587, ANDAR 02, JARDIM PORTO ALEGRE"
+  },
+  {
+    "lat": -24.7578088,
+    "lng": -53.7348366,
+    "title": "SICOOB - PA COOFATO, AVENIDA SENADOR ATTILIO FONTANA, 3330, -, JARDIM PANORAMA"
+  },
+  {
+    "lat": -24.6806129,
+    "lng": -53.7631708,
+    "title": "SICOOB PA COOPAGRO, AVENIDA MINISTRO CIRNE LIMA, 3469, -, JARDIM COOPAGRO"
+  },
+  {
+    "lat": -26.2037792,
+    "lng": -52.6819153,
+    "title": "SICOOB - PA COOPERTRADIÇÃO, VIA DO CONHECIMENTO, 1911, KM 2, FRARON"
+  },
+  {
+    "lat": -26.0806807,
+    "lng": -53.0499233,
+    "title": "SICOOB - PA CORONEL VIVIDA, RUA DOUTOR FRANCISCO BELTRÃO, 49, SALA 01, CENTRO"
+  },
+  {
+    "lat": -25.9828627,
+    "lng": -52.5606601,
+    "title": "SICOOB PA - CORONEL VIVIDA PIONEIRA, RUA DR. FRANCISCO BELTRÃO, 69, -, CENTRO"
+  },
+  {
+    "lat": -23.7842114,
+    "lng": -53.074626,
+    "title": "SICOOB - PA CRUZEIRO DO OESTE, AVENIDA BRASIL, 2155, -, CENTRO"
+  },
+  {
+    "lat": -24.5588566,
+    "lng": -54.0548748,
+    "title": "SICOOB - PA DOM PEDRO, RUA DOM PEDRO I, 248, EDIFICIO DOM PEDRO, CENTRO"
+  },
+  {
+    "lat": -23.3832005,
+    "lng": -53.2941968,
+    "title": "SICOOB PA DOURADINA, AVENIDA BRASIL, 674, -, CENTRO"
+  },
+  {
+    "lat": -23.8002411,
+    "lng": -52.2587445,
+    "title": "SICOOB PA - ENGENHEIRO BELTRÃO, AVENIDA BRASIL, 297, -, CENTRO"
+  },
+  {
+    "lat": -25.7390008,
+    "lng": -52.1215033,
+    "title": "SICOOB - PA FOZ DO JORDÃO, RUA SÃO PAULO, 295, -, CENTRO"
+  },
+  {
+    "lat": -23.4441429,
+    "lng": -51.912219,
+    "title": "SICOOB PA - GASTÃO VIDIGAL, AVENIDA DOUTOR GASTÃO VIDIGAL, 3023, -, PARQUE DA GÁVEA"
+  },
+  {
+    "lat": -26.4263069,
+    "lng": -51.313564,
+    "title": "SICOOB - PA GENERAL CARNEIRO, RUA NOSSA SENHORA DAS GRAÇAS, 25, -, CENTRO"
+  },
+  {
+    "lat": -24.1828248,
+    "lng": -53.0293972,
+    "title": "SICOOB PA - GOIOERÊ, AVENIDA MOISÉS LUPION, 266, -, CENTRO"
+  },
+  {
+    "lat": -24.7492306,
+    "lng": -53.7244912,
+    "title": "SICOOB PA GRANDE PIONEIRO, RUA PRIMEIRO DE MAIO, 1736, ESQUINA COM A RUA DOS PIONEIROS, VILA PIONEIRO"
+  },
+  {
+    "lat": -24.0833264,
+    "lng": -54.2568724,
+    "title": "SICOOB - PA GUAÍRA, AVENIDA CORONEL OTAVIO TOSTA, 229, -, CENTRO"
+  },
+  {
+    "lat": -23.8453024,
+    "lng": -50.1888476,
+    "title": "SICOOB - PA IBAITI, RUA VEREADOR JOSE DE MOURA BUENO, 348, -, CENTRO"
+  },
+  {
+    "lat": -23.3953979,
+    "lng": -53.6216383,
+    "title": "SICOOB - PA ICARAÍMA, AVENIDA HERMES VISSOTO, 796, -, CENTRO"
+  },
+  {
+    "lat": -23.4318721,
+    "lng": -51.8778959,
+    "title": "SICOOB PA - INDEPENDÊNCIA , AV. RIO DE JANEIRO, 715, -, JARDIM INDEPENDENCIA II"
+  },
+  {
+    "lat": -24.0375714,
+    "lng": -52.372844,
+    "title": "SICOOB PA - INDIO BANDEIRA, AVENIDA MENDES CAMARGO, 2.25, -, CENTRO"
+  },
+  {
+    "lat": -24.0014562,
+    "lng": -53.7073964,
+    "title": "SICOOB PA - IPORÃ, AVENIDA PRESIDENTE CASTELO BRANCO, 2260, -, CENTRO"
+  },
+  {
+    "lat": -25.1394245,
+    "lng": -54.300709,
+    "title": "SICOOB - PA ITAIPULÂNDIA, AVENIDA TIRADENTES, 1938, -, CENTRO"
+  },
+  {
+    "lat": -25.9680265,
+    "lng": -52.8145025,
+    "title": "SICOOB - PA ITAPEJARA D'OESTE, AVENIDA MANOEL RIBAS, 342, -, CENTRO"
+  },
+  {
+    "lat": -24.2434226,
+    "lng": -51.6761327,
+    "title": "SICOOB - PA IVAIPORÃ, AVENIDA PARANÁ, 115, COMERCIAL, CENTRO"
+  },
+  {
+    "lat": -23.4095008,
+    "lng": -53.3727721,
+    "title": "SICOOB - PA IVATÉ, RUA SERRA DOURADA, 3455, -, CENTRO"
+  },
+  {
+    "lat": -23.6011144,
+    "lng": -51.6390388,
+    "title": "SICOOB - PA JANDAIA DO SUL, AVENIDA GETULIO VARGAS, 1.109, COMERCIAL, CENTRO"
+  },
+  {
+    "lat": -23.4704797,
+    "lng": -52.555294,
+    "title": "SICOOB PA - JAPURÁ, PRAÇA BRASIL, 180, -, CENTRO"
+  },
+  {
+    "lat": -24.1801406,
+    "lng": -51.6833438,
+    "title": "SICOOB - PA JARDIM ALEGRE, AVENIDA PARANÁ, 105, -, CENTRO"
+  },
+  {
+    "lat": -23.0741278,
+    "lng": -52.4355194,
+    "title": "SICOOB PA - JARDIM IPE, AVENIDA HEITOR DE ALENCAR FURTADO, 5.775, -, JARDIM SANTOS DUMONT"
+  },
+  {
+    "lat": -23.499511,
+    "lng": -49.9244157,
+    "title": "SICOOB - PA JOAQUIM TÁVORA, RUA DOUTOR LINCON GRACA, 190, -, CENTRO"
+  },
+  {
+    "lat": -24.421095,
+    "lng": -52.8365333,
+    "title": "SICOOB PA JURANDA, AVENIDA BRASIL, 2550, -, CENTRO"
+  },
+  {
+    "lat": -23.402012,
+    "lng": -51.8780926,
+    "title": "SICOOB PA - LIBERDADE, AVENIDA GUAIAPÓ, 2.91, -, JARDIM OÁSIS"
+  },
+  {
+    "lat": -22.9308413,
+    "lng": -53.1361389,
+    "title": "SICOOB PA - LOANDA, AVENIDA PARANÁ, 1374, -, CENTRO"
+  },
+  {
+    "lat": -22.7554381,
+    "lng": -51.6591009,
+    "title": "SICOOB PA - LUPIONÓPOLIS, AV. BARRA DOURADA, 850, -, CENTRO"
+  },
+  {
+    "lat": -24.3058571,
+    "lng": -52.531698,
+    "title": "SICOOB PA - MAMBORÊ, RUA RICARDO KAUFFMANN, 461, -, CENTRO"
+  },
+  {
+    "lat": -23.3788059,
+    "lng": -51.9584054,
+    "title": "SICOOB PA - MANDACARU, AVENIDA MANDACARU, 277, LOJA 15, ZONA 07"
+  },
+  {
+    "lat": -23.345806,
+    "lng": -52.0961617,
+    "title": "SICOOB PA - MANDAGUAÇU, RUA 14 DE DEZEMBRO, 125, -, CENTRO"
+  },
+  {
+    "lat": -23.5260773,
+    "lng": -51.6757535,
+    "title": "SICOOB PA - MANDAGUARI, AVENIDA AMAZONAS, 756, -, CENTRO"
+  },
+  {
+    "lat": -25.4302424,
+    "lng": -49.269178,
+    "title": "SICOOB - PA MANGUEIRINHA, RUA BARÃO DO RIO BRANCO, 195, -, CENTRO"
+  },
+  {
+    "lat": -24.5207129,
+    "lng": -51.6700408,
+    "title": "SICOOB - PA MANOEL RIBAS, AVENIDA BRASIL, 1180, -, CENTRO"
+  },
+  {
+    "lat": -23.4886552,
+    "lng": -51.7929108,
+    "title": "SICOOB PA - MARIALVA, AVENIDA CRISTOVÃO COLOMBO, 1353, -, CENTRO"
+  },
+  {
+    "lat": -23.9914048,
+    "lng": -53.1463988,
+    "title": "SICOOB - PA MARILUZ, AVENIDA MARILIA, 1635, -, CENTRO"
+  },
+  {
+    "lat": -23.4244612,
+    "lng": -51.9594362,
+    "title": "SICOOB PA - MARINGÁ VELHO, AVENIDA BRASIL, 5.856, LOJA 03, ZONA 5"
+  },
+  {
+    "lat": -24.4182711,
+    "lng": -53.8293331,
+    "title": "SICOOB PA MARIPÁ, RUA FERNANDES VIEIRA, 1296, -, CENTRO"
+  },
+  {
+    "lat": -25.2410241,
+    "lng": -53.9817357,
+    "title": "SICOOB - PA MATELÂNDIA, AVENIDA BORGES DE MEDEIROS, 855, -, CENTRO"
+  },
+  {
+    "lat": -25.2863327,
+    "lng": -54.094856299999996,
+    "title": "SICOOB - PA MEDIANEIRA, RUA PARAGUAI, 1.26, -, CENTRO"
+  },
+  {
+    "lat": -25.0941565,
+    "lng": -54.24094,
+    "title": "SICOOB - PA MISSAL, RUA DOM GERALDO SIGAUD, 245, -, CENTRO"
+  },
+  {
+    "lat": -22.9554654,
+    "lng": -53.2933613,
+    "title": "SICOOB PA - MONTE CASTELO, AVENIDA PAULO LIBANIO, 328, -, CENTRO"
+  },
+  {
+    "lat": -24.0506919,
+    "lng": -53.0107124,
+    "title": "SICOOB PA - MOREIRA SALES, AVENIDA JOÃO TEOTONIO MOREIRA SALES NETO, 909, -, CENTRO"
+  },
+  {
+    "lat": -23.0817206,
+    "lng": -52.4610012,
+    "title": "SICOOB PA - MORUMBI, AVENIDA SOUZA NAVES, 935, -, CENTRO"
+  },
+  {
+    "lat": -23.3975764,
+    "lng": -51.9189119,
+    "title": "SICOOB PA - MULHER, AVENIDA PEDRO TAQUES, 294, ED. ATRIUM, SALA 09, TÉRREO, ZONA 03"
+  },
+  {
+    "lat": -25.5507139,
+    "lng": -54.5868625,
+    "title": "SICOOB PA NEGÓCIOS DIGITAIS, RUA PADRE MONTOYA, 490, -, CENTRO"
+  },
+  {
+    "lat": -23.3975764,
+    "lng": -51.9189119,
+    "title": "SICOOB PA NEGÓCIOS DIGITAIS, AVENIDA PEDRO TAQUES, 294, SLJ02 SALA 10, CENTRO"
+  },
+  {
+    "lat": -23.181893,
+    "lng": -52.2065365,
+    "title": "SICOOB PA - NOVA ESPERANÇA, AVENIDA 14 DE DEZEMBRO, 3551, -, CENTRO"
+  },
+  {
+    "lat": -22.7631234,
+    "lng": -52.987813,
+    "title": "SICOOB PA - NOVA LONDRINA, AVENIDA LONDRINA, 755, -, CENTRO"
+  },
+  {
+    "lat": -23.4726344,
+    "lng": -53.0902539,
+    "title": "SICOOB PA NOVA OLIMPIA, RUA PARANÁ, 667, -, CENTRO"
+  },
+  {
+    "lat": -24.4667343,
+    "lng": -53.9547029,
+    "title": "SICOOB - PA NOVA SANTA ROSA, AVENIDA HORIZONTINA, 1600, -, CENTRO"
+  },
+  {
+    "lat": -24.774147,
+    "lng": -53.9023933,
+    "title": "SICOOB PA - OURO VERDE DO OESTE, AVENIDA BELO HORIZONTE, 260, -, CENTRO"
+  },
+  {
+    "lat": -23.4639416,
+    "lng": -52.0472163,
+    "title": "SICOOB PA - PAIÇANDU, AVENIDA CURITIBA , 29, -, CENTRO"
+  },
+  {
+    "lat": -26.4835515,
+    "lng": -51.9903455,
+    "title": "SICOOB - PA PALMAS, RUA CAP. FREDERICO TEIXEIRA GUIMARÃES, 448, -, CENTRO"
+  },
+  {
+    "lat": -23.3838384,
+    "lng": -51.9451993,
+    "title": "SICOOB PA - PALMEIRAS, AVENIDA DAS PALMEIRAS, 141, -, PARQUE DAS PAMEIRAS"
+  },
+  {
+    "lat": -24.8823767,
+    "lng": -52.2150818,
+    "title": "SICOOB PA - PALMITAL, RUA MAXIMILIANO VICENTIN, 542, -, CENTRO"
+  },
+  {
+    "lat": -24.2842862,
+    "lng": -53.8395964,
+    "title": "SICOOB - PA PALOTINA, AVENIDA PRESIDENTE KENNEDY, 450, -, CENTRO"
+  },
+  {
+    "lat": -24.7578088,
+    "lng": -53.7348366,
+    "title": "SICOOB - PA PANORAMA, AVENIDA SENADOR ATTILIO FONTANA, 3.33, -, JARDIM PANORAMA"
+  },
+  {
+    "lat": -23.2862853,
+    "lng": -52.6029444,
+    "title": "SICOOB PA - PARAÍSO DO NORTE, AVENIDA TAPEJARA, 285, -, CENTRO"
+  },
+  {
+    "lat": -23.4195518,
+    "lng": -51.9431926,
+    "title": "SICOOB PA - PARANÁ, AVENIDA PARANÁ, 1.554, -, ZONA 07"
+  },
+  {
+    "lat": -23.0772288,
+    "lng": -52.4535946,
+    "title": "SICOOB PA - PARANAVAÍ, RUA MANOEL RIBAS, 1196, -, CENTRO"
+  },
+  {
+    "lat": -24.7199944,
+    "lng": -53.7308677,
+    "title": "SICOOB - PA PARIGOT, AVENIDA PARIGOT DE SOUSA, 1894, -, JARDIM GISELA"
+  },
+  {
+    "lat": -24.6258356,
+    "lng": -54.2251598,
+    "title": "SICOOB PA PATO BRAGADO, AVENIDA WILLY BARTH, 2941, -, CENTRO"
+  },
+  {
+    "lat": -26.2222333,
+    "lng": -52.6752341,
+    "title": "SICOOB - PA PATO BRANCO, RUA GUARANI, 357, -, CENTRO"
+  },
+  {
+    "lat": -26.2212777,
+    "lng": -52.6732905,
+    "title": "SICOOB PA - PATO BRANCO MOBILE, RUA TAPAJÓS, 435, -, CENTRO"
+  },
+  {
+    "lat": -23.9143933,
+    "lng": -52.3464914,
+    "title": "SICOOB PA - PEABIRU, RUA JUVENAL PORTELA, 735, -, CENTRO"
+  },
+  {
+    "lat": -23.3975764,
+    "lng": -51.9189119,
+    "title": "SICOOB PA - PEDRO TAQUES, AVENIDA PEDRO TAQUES, 294, SALAS 12, 14, 16 E 20, ZONA 03"
+  },
+  {
+    "lat": -23.803417,
+    "lng": -53.6810703,
+    "title": "SICOOB - PA PEROLA, AVENIDA DONA PEROLA BYINGTON, 1470, -, CENTRO"
+  },
+  {
+    "lat": -25.6962063,
+    "lng": -51.6567939,
+    "title": "SICOOB - PA PINHÃO, AVENIDA QUINZE DE NOVEMBRO, 117, -, CENTRO"
+  },
+  {
+    "lat": -24.5337505,
+    "lng": -49.9372864,
+    "title": "SICOOB - PA PIRAI DO SUL, AVENIDA CINCO DE MARÇO, 81, -, CENTRO"
+  },
+  {
+    "lat": -24.7667421,
+    "lng": -51.7649243,
+    "title": "SICOOB PA - PITANGA, RUA JOÃO G. PADILHA, 150, -, CENTRO"
+  },
+  {
+    "lat": -26.242075,
+    "lng": -52.704593,
+    "title": "SICOOB PA - PLANALTO, RUA DAS GARÇAS, 457, -, PLANALTO"
+  },
+  {
+    "lat": -25.5769192,
+    "lng": -54.5690853,
+    "title": "SICOOB PA - PORTO MEIRA, AVENIDA MORENITAS, 243, -, JARDIM DAS FLORES"
+  },
+  {
+    "lat": -22.7767556,
+    "lng": -53.267522,
+    "title": "SICOOB PA - PORTO RICO, RUA JOÃO CARRARO, 396, -, CENTRO"
+  },
+  {
+    "lat": -23.4409192,
+    "lng": -51.8794281,
+    "title": "SICOOB PA - PRAÇA DOS PIONEIROS, AVENIDA MARINGÁ, 149, -, JARDIM EUROPA"
+  },
+  {
+    "lat": -24.5701139,
+    "lng": -53.9751322,
+    "title": "SICOOB - PA QUATRO PONTES, RUA 1º DE MAIO, 569, -, CENTRO"
+  },
+  {
+    "lat": -23.0779563,
+    "lng": -53.4830566,
+    "title": "SICOOB PA - QUERÊNCIA, AVENIDA RIO GRANDE DO SUL, 1264, -, CENTRO"
+  },
+  {
+    "lat": -23.4444761,
+    "lng": -51.9355645,
+    "title": "SICOOB PA - RECUP, RUA ANTÔNIO VALDIR ZANUTTO, 272, -, JARDIM NOVO HORIZONTE"
+  },
+  {
+    "lat": -25.5356942,
+    "lng": -54.5575026,
+    "title": "SICOOB - PA REPUBLICA ARGENTINA, AVENIDA REPÚBLICA ARGENTINA, 4314, -, BAIRRO PANORAMA"
+  },
+  {
+    "lat": -24.6497446,
+    "lng": -50.8489143,
+    "title": "SICOOB - PA RESERVA, AVENIDA CORONEL ROGÉRIO BORBA, 705, -, CENTRO"
+  },
+  {
+    "lat": -25.8343937,
+    "lng": -52.0281058,
+    "title": "SICOOB PA - RESERVA DO IGUAÇU, RUA PEDRO SIQUEIRA, 272, -, CENTRO"
+  },
+  {
+    "lat": -24.5963663,
+    "lng": -52.2739976,
+    "title": "SICOOB PA - RONCADOR, RUA SÃO PAULO, 752, -, CENTRO"
+  },
+  {
+    "lat": -23.4160449,
+    "lng": -52.7711891,
+    "title": "SICOOB PA - RONDON, AVENIDA BRASIL, 1298, -, CENTRO"
+  },
+  {
+    "lat": -23.3190646,
+    "lng": -51.5542274,
+    "title": "SICOOB PA - SABAUDIA, AVENIDA PRESIDENTE CAMPOS SALES, 1720, -, CENTRO"
+  },
+  {
+    "lat": -23.0385806,
+    "lng": -51.8103345,
+    "title": "SICOOB PA - SANTA FÉ, AVENIDA GETÚLIO VARGAS, 930, -, CENTRO"
+  },
+  {
+    "lat": -24.8582076,
+    "lng": -54.334257,
+    "title": "SICOOB - PA SANTA HELENA, AVENIDA BRASIL, 1641, TÉRREO, CENTRO"
+  },
+  {
+    "lat": -23.0045611,
+    "lng": -53.1967972,
+    "title": "SICOOB PA - SANTA ISABEL, AVENIDA SANTOS DUMONT, 318, -, CENTRO"
+  },
+  {
+    "lat": -23.4221587,
+    "lng": -51.9514446,
+    "title": "SICOOB PA - SANTA RITA, AVENIDA BRASIL, 5126, -, ZONA 04"
+  },
+  {
+    "lat": -25.438089,
+    "lng": -54.4008227,
+    "title": "SICOOB - PA SANTA TEREZINHA DE ITAIPU, AVENIDA DOS ESTADOS, 1912, -, CENTRO"
+  },
+  {
+    "lat": -22.6957764,
+    "lng": -51.7901261,
+    "title": "SICOOB PA - SANTO INÁCIO, AVENIDA RAPOSO TAVARES, 762, -, CENTRO"
+  },
+  {
+    "lat": -23.4219656,
+    "lng": -51.9304137,
+    "title": "SICOOB PA - SANTOS DUMONT, RUA SANTOS DUMMONT, 2.937, -, CENTRO"
+  },
+  {
+    "lat": -23.3154823,
+    "lng": -52.4739584,
+    "title": "SICOOB PA - SÃO CARLOS DO IVAI, RUA DONA IZABEL, 1088, -, CENTRO"
+  },
+  {
+    "lat": -25.8249526,
+    "lng": -52.7269626,
+    "title": "SICOOB - PA SÃO JOÃO, AVENIDA XV DE NOVEMBRO, 553, -, CENTRO"
+  },
+  {
+    "lat": -23.7611158,
+    "lng": -53.87907,
+    "title": "SICOOB - PA SÃO JORGE, RUA CEZAL TINA MARQUES AFONSO, 19, -, CENTRO"
+  },
+  {
+    "lat": -23.0839306,
+    "lng": -52.4517185,
+    "title": "SICOOB PA - SÃO JORGE, AVENIDA HEITOR ALENCAR FURTADO, 2890, -, JARDIM SÃO JORGE"
+  },
+  {
+    "lat": -23.3954399,
+    "lng": -52.6431993,
+    "title": "SICOOB PA - SÃO MANOEL, AVENIDA IVAÍ, S/N, PRAÇA PARANÁ, CENTRO"
+  },
+  {
+    "lat": -25.3440667,
+    "lng": -54.2391671,
+    "title": "SICOOB - PA SÃO MIGUEL DO IGUAÇU, RUA VÂNIO GHELLERE, 55, -, CENTRO"
+  },
+  {
+    "lat": -24.9650675,
+    "lng": -53.764503499999996,
+    "title": "SICOOB PA - SÃO PEDRO DO IGUAÇU, AVENIDA SÃO PAULO, 611, -, CENTRO"
+  },
+  {
+    "lat": -23.4377713,
+    "lng": -51.8701472,
+    "title": "SICOOB PA - SARANDI, AVENIDA LONDRINA, 1185, -, JARDIM INDEPENDÊNCIA"
+  },
+  {
+    "lat": -25.5510311,
+    "lng": -54.5723249,
+    "title": "SICOOB PA - SHOPPING CATUAÍ PALLADIUM, AVENIDA DAS CATARATAS, 3570, LOJA 1000, VILA YOLANDA"
+  },
+  {
+    "lat": -23.6860916,
+    "lng": -49.8288516,
+    "title": "SICOOB - PA SIQUEIRA CAMPOS, RUA EXPEDICIONÁRIOS, 1.54, COMERCIAL, CENTRO"
+  },
+  {
+    "lat": -26.2389248,
+    "lng": -52.6722556,
+    "title": "SICOOB - PA SUL, AVENIDA TUPI, 4.84, -, PINHEIRINHO"
+  },
+  {
+    "lat": -26.2212777,
+    "lng": -52.6732905,
+    "title": "SICOOB - PA TAPAJÓS, RUA TAPAJÓS, 440, -, CENTRO"
+  },
+  {
+    "lat": -23.7354921,
+    "lng": -52.8605105,
+    "title": "SICOOB - PA TAPEJARA, AVENIDA RUI BARBOSA, 300, -, CENTRO"
+  },
+  {
+    "lat": -23.3239462,
+    "lng": -53.071386,
+    "title": "SICOOB PA TAPIRA, AVENIDA CURITIBA, 739, -, CENTRO"
+  },
+  {
+    "lat": -24.325045,
+    "lng": -50.6171771,
+    "title": "SICOOB - PA TELEMACO BORBA, AVENIDA PARANÁ, 480, -, CENTRO"
+  },
+  {
+    "lat": -23.7648829,
+    "lng": -52.4445935,
+    "title": "SICOOB PA - TERRA BOA, AVENIDA BRASIL, 586, -, CENTRO"
+  },
+  {
+    "lat": -22.7264398,
+    "lng": -52.6203317,
+    "title": "SICOOB PA - TERRA RICA, RUA EUCLIDES DA CUNHA, 811, -, CENTRO"
+  },
+  {
+    "lat": -24.1689716,
+    "lng": -54.0946283,
+    "title": "SICOOB - PA TERRA ROXA, AVENIDA PRESIDENTE CASTELO BRANCO, 712, -, CENTRO"
+  },
+  {
+    "lat": -24.515397,
+    "lng": -50.4094952,
+    "title": "SICOOB - PA TIBAGI, PRAÇA EDMUNDO MERCER, 160, -, CENTRO"
+  },
+  {
+    "lat": -23.451685,
+    "lng": -52.0330185,
+    "title": "SICOOB PA - TRADIÇÃO, AV. VEREADOR SILVIO ALVES, 1283, -, JARDIM PIONEIRO II"
+  },
+  {
+    "lat": -24.0501504,
+    "lng": -52.3860134,
+    "title": "SICOOB PA TREVO DAS TORRES, AVENIDA CAPITÃO INDIO BANDEIRA, 3035, -, JARDIM CURITIBA"
+  },
+  {
+    "lat": -23.3944192,
+    "lng": -51.9562564,
+    "title": "SICOOB PA - TROPICAL, AVENIDA MANDACARU, 2099, -, JARDIM TROPICAL"
+  },
+  {
+    "lat": -23.4150381,
+    "lng": -51.9039562,
+    "title": "SICOOB - PA TUIUTI, AVENIDA TUIUTI, 1497, -, VILA MORANGUEIRA"
+  },
+  {
+    "lat": -23.8712216,
+    "lng": -52.8762325,
+    "title": "SICOOB PA TUNEIRAS DO OESTE, AVENIDA RIO DE JANEIRO, 173, -, CENTRO"
+  },
+  {
+    "lat": -24.5441778,
+    "lng": -52.9903123,
+    "title": "SICOOB PA - UBIRATÃ, RUA PEDRO DE OLIVEIRA, 852, -, CENTRO"
+  },
+  {
+    "lat": -26.2277043,
+    "lng": -51.0906239,
+    "title": "SICOOB PA - UNIÃO DA VITÓRIA, RUA PROFESSORA AMAZÍLIA, 348, -, CENTRO"
+  },
+  {
+    "lat": -26.2526945,
+    "lng": -51.0930746,
+    "title": "SICOOB PA - UNIÃO DA VITORIA SUL, RUA MARECHAL DEODORO DA FONSECA, 2090, -, NOSSA SENHORA DO ROCIO"
+  },
+  {
+    "lat": -25.0527593,
+    "lng": -53.8750561,
+    "title": "SICOOB - PA VERA CRUZ DO OESTE, AVENIDA ANTONIO VILAS BOAS, 203, -, CENTRO"
+  },
+  {
+    "lat": -25.4943636,
+    "lng": -54.5628965,
+    "title": "SICOOB PA - VILA A, AVENIDA SÍLVIO AMÉRICO SASDELLI, 1685, -, JARDIM LANCASTER"
+  },
+  {
+    "lat": -23.4291481,
+    "lng": -51.9245795,
+    "title": "SICOOB PA - VILA OPERÁRIA, AVENIDA BRASIL, 2060, -, VILA OPERÁRIA"
+  },
+  {
+    "lat": -25.5278506,
+    "lng": -54.5861077,
+    "title": "SICOOB - PA VILA PORTES, AVENIDA JUSCELINO KUBITSCHEK, 3450, -, VILA PARAGUAIA"
+  },
+  {
+    "lat": -26.2635748,
+    "lng": -52.7791346,
+    "title": "SICOOB - PA VITORINO, AVENIDA BRASIL ARGENTINA, 742, -, CENTRO"
+  },
+  {
+    "lat": -23.8766963,
+    "lng": -49.8027298,
+    "title": "SICOOB - PA WENCESLAU BRAZ, RUA SETE SETEMBRO, 72, -, CENTRO"
+  },
+  {
+    "lat": -25.5507139,
+    "lng": -54.5868625,
+    "title": "SICOOB TRÊS FRONTEIRAS, RUA PADRE MONTOYA, 490, -, CENTRO"
+  },
+  {
+    "lat": -25.4864579,
+    "lng": -54.5050459,
+    "title": "SICOOB - TRÊS LAGOAS, AVENIDA JOÃO RICIEIRI MARAN, 173, -, TRÊS LAGOAS"
+  },
+  {
+    "lat": -23.4563654,
+    "lng": -52.0454138,
+    "title": "SUPERMERCADO CIDADE CANCAO, AVENIDA IVAÍ, SN, Lotes 85, 86 E 87 , CENTRO"
+  },
+  {
+    "lat": -25.4525815,
+    "lng": -49.2668444,
+    "title": "WAL MART SUPERMERCADOS DO BRASIL LTDA, RUA 24 DE MAIO, 765, -, REBOUÇAS"
+  }
+];
+
+
+
+    function start_odometer()
+    {
+      var el = document.querySelector('.odometer_gmc');
+
+        od = new Odometer({
+          auto: false,
+          el: el,
+          duration: 3000,
+          format: '(.ddd),dd',
+          value: 0,
+          theme: 'car'
+        });
+        var valor_total = '3258908.24'
+        //od.update('3258908.24');
+        el.innerHTML = valor_total.replace(".", ",");
+    }
+
+    $(document).ready(function()
+    {
+      start_odometer();
+    });
+
+  </script>
+
+
+  </body>
+</html>
+
+

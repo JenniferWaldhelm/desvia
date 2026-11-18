@@ -1,0 +1,333 @@
+# https://www.prolata.com.br/mercados-de-atuacao/pontos-de-entrega-voluntaria/
+# status 200 text/html; charset=UTF-8 32803 bytes
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Pontos de entrega voluntária - Prolata</title>
+	<link rel="canonical" href="https://www.prolata.com.br/mercados-de-atuacao/pontos-de-entrega-voluntaria/" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Pontos de entrega voluntária - Prolata" />
+	<meta property="og:url" content="https://www.prolata.com.br/mercados-de-atuacao/pontos-de-entrega-voluntaria/" />
+	<meta property="og:site_name" content="Prolata" />
+	<meta property="article:modified_time" content="2026-03-17T18:32:12+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.prolata.com.br\/mercados-de-atuacao\/pontos-de-entrega-voluntaria\/","url":"https:\/\/www.prolata.com.br\/mercados-de-atuacao\/pontos-de-entrega-voluntaria\/","name":"Pontos de entrega voluntária - Prolata","isPartOf":{"@id":"https:\/\/www.prolata.com.br\/#website"},"datePublished":"2020-04-24T15:59:54+00:00","dateModified":"2026-03-17T18:32:12+00:00","breadcrumb":{"@id":"https:\/\/www.prolata.com.br\/mercados-de-atuacao\/pontos-de-entrega-voluntaria\/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.prolata.com.br\/mercados-de-atuacao\/pontos-de-entrega-voluntaria\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/www.prolata.com.br\/mercados-de-atuacao\/pontos-de-entrega-voluntaria\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.prolata.com.br\/"},{"@type":"ListItem","position":2,"name":"Mercados de Atuação","item":"https:\/\/www.prolata.com.br\/mercados-de-atuacao\/"},{"@type":"ListItem","position":3,"name":"Pontos de entrega voluntária"}]},{"@type":"WebSite","@id":"https:\/\/www.prolata.com.br\/#website","url":"https:\/\/www.prolata.com.br\/","name":"Prolata","description":"Só mais um site WordPress","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.prolata.com.br\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-BR"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.prolata.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.prolata.com.br%2Fmercados-de-atuacao%2Fpontos-de-entrega-voluntaria%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.prolata.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.prolata.com.br%2Fmercados-de-atuacao%2Fpontos-de-entrega-voluntaria%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='sbi_styles-css' href='https://www.prolata.com.br/sitenovo/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=1.0.0' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6afdbed2044b8*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style>
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='slick-css' href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/js/slick/slick.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='prosite-css' href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/css/style.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='custom-css' href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/css/custom.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='defaultcss-css' href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/style.css?ver=1.0.0' media='all' />
+<script id="jquery-js" src="https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/js/jquery.js?ver=3.3.1"></script>
+<script id="slick-js" src="https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/js/slick/slick.js?ver=7.0.8"></script>
+<script id="home-js" src="https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/js/before-after.min.js?ver=7.0.8"></script>
+
+<!-- Snippet da tag do Google (gtag.js) adicionado pelo Site Kit -->
+<!-- Snippet do Google Analytics adicionado pelo Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-PLW5HF3C" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.prolata.com.br"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PLW5HF3C");
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="https://api.w.org/" href="https://www.prolata.com.br/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.prolata.com.br/wp-json/wp/v2/pages/21" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.prolata.com.br/sitenovo/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.8" />
+<link rel='shortlink' href='https://www.prolata.com.br/?p=21' />
+<meta name="generator" content="Site Kit by Google 1.180.0" />
+<!-- Meta tags do Google AdSense adicionadas pelo Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- Fim das meta tags do Google AdSense adicionadas pelo Site Kit -->
+<link rel="icon" href="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/07/cropped-logo@2x-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/07/cropped-logo@2x-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/07/cropped-logo@2x-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/07/cropped-logo@2x-270x270.png" />
+
+
+</head>
+
+<body class="wp-singular page-template page-template-page-templates page-template-pontos-de-entrega-voluntaria page-template-page-templatespontos-de-entrega-voluntaria-php page page-id-21 page-child parent-pageid-265 wp-theme-prolata">
+	<nav class="siteHeader">
+		<div class="wrapper">
+			<a href="https://www.prolata.com.br" class="siteLogo">
+				<img srcset="https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/logo.png 1x, https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/logo@2x.png 2x" src="https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/logo.png" alt="Prolata Reciclagem" />
+			</a>
+
+			<button class="callMenu icon-toggle">
+				<svg class='icon-main' viewBox="0 0 3.8 3.3">
+					<use xlink:href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/sprite.svg#icon-menu' /></svg>
+				<svg class='icon-alt' viewBox="0 0 6.4 6.2">
+					<use xlink:href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/sprite.svg#icon-fechar' /></svg>
+			</button>
+
+			<ul id="menu-menu-principal-no-topo" class="siteMenu"><li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-163"><a href="https://www.prolata.com.br/">Home</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-262"><a href="https://www.prolata.com.br/prolata/">Prolata</a>
+<ul class="sub-menu">
+	<li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="https://www.prolata.com.br/prolata/conhecendo-a-prolata/">Conhecendo a Prolata</a></li>
+	<li id="menu-item-1656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1656"><a href="https://www.prolata.com.br/prolata/historia-e-resultados/">Missão e Bandeiras Institucionais</a></li>
+	<li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="https://www.prolata.com.br/prolata/educacao-ambiental/">Educação Ambiental e Publicações</a></li>
+	<li id="menu-item-3501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3501"><a href="https://www.prolata.com.br/associados/">Associados</a></li>
+</ul>
+</li>
+<li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-276"><a href="https://www.prolata.com.br/mercados-de-atuacao/">Mercados de Atuação</a>
+<ul class="sub-menu">
+	<li id="menu-item-171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><a href="https://www.prolata.com.br/mercados-de-atuacao/centro-prolata/">Entreposto Prolata</a></li>
+	<li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a href="https://www.prolata.com.br/mercados-de-atuacao/cooperativas/">Cooperativas</a></li>
+	<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-21 current_page_item menu-item-173"><a href="https://www.prolata.com.br/mercados-de-atuacao/pontos-de-entrega-voluntaria/" aria-current="page">Pontos de entrega voluntária</a></li>
+</ul>
+</li>
+<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-275"><a href="https://www.prolata.com.br/universo-reciclagem/">Universo Reciclagem</a>
+<ul class="sub-menu">
+	<li id="menu-item-175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-175"><a href="https://www.prolata.com.br/universo-reciclagem/voce-e-o-meio-ambiente/">Você e o Meio Ambiente</a></li>
+	<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="https://www.prolata.com.br/universo-reciclagem/circularidade-do-aco/">Circularidade do aço</a></li>
+	<li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="https://www.prolata.com.br/universo-reciclagem/reciclagem-de-latas-de-aco/">Reciclagem de latas de Aço</a></li>
+	<li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="https://www.prolata.com.br/universo-reciclagem/como-separar-e-descartar/">Como Separar e Descartar</a></li>
+	<li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="https://www.prolata.com.br/universo-reciclagem/separacao-magnetica/">Separação Magnética</a></li>
+	<li id="menu-item-180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a href="https://www.prolata.com.br/universo-reciclagem/destinacao-ambientalmente-adequada/">Destinação Ambientalmente Adequada</a></li>
+	<li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a href="https://www.prolata.com.br/universo-reciclagem/reducao-do-impacto-ambiental/">Redução do Impacto Ambiental</a></li>
+</ul>
+</li>
+<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-274"><a href="https://www.prolata.com.br/legislacao/">Legislação</a>
+<ul class="sub-menu">
+	<li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-513"><a href="https://www.prolata.com.br/legislacao/politicas-de-residuos/">Políticas de Resíduos</a></li>
+	<li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-512"><a href="https://www.prolata.com.br/legislacao/pnrs/">pnrs</a></li>
+</ul>
+</li>
+<li id="menu-item-193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-193"><a>Acontece</a>
+<ul class="sub-menu">
+	<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a href="https://www.prolata.com.br/acontece/noticias/">Notícias</a></li>
+	<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="https://www.prolata.com.br/acontece/videos/">Vídeos</a></li>
+</ul>
+</li>
+<li id="menu-item-194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-194"><a>Plataforma</a>
+<ul class="sub-menu">
+	<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186"><a href="https://www.prolata.com.br/acesso/">Acesso</a></li>
+</ul>
+</li>
+<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-273"><a href="https://www.prolata.com.br/faq/">Faq</a>
+<ul class="sub-menu">
+	<li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="https://www.prolata.com.br/faq/perguntas-frequentes/">Perguntas Frequentes</a></li>
+</ul>
+</li>
+</ul>		</div>
+	</nav><article>
+	<div class="pageHeader" style="background-image: url('https://www.prolata.com.br/sitenovo/wp-content/uploads/2024/06/PROLATA_PEVS.jpg')">
+	</div>
+<div class="wrapper">
+
+        <div class="siteSec text pagePontosEntregas__module1">
+        <h2 class="title title--line">
+            O que é PEV?        </h2>
+        <h3 class="subtitle color--teal">Pontos de Entrega Voluntária </h3>
+        <div class="text">
+            <p>A Política Nacional de Resíduos Sólidos (PNRS) está sustentada no conceito da responsabilidade compartilhada, incluindo os atores da cadeia de valor das embalagens e produtos nela envasados, governo e consumidores.</p>
+            <img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/06/DSC9154-aa.jpg" alt="" class="alignleft">
+            <p>A coleta seletiva e a reciclagem das embalagens pós consumo são, portanto, um compromisso conjunto do governo, da população, das empresas, de organizações não governamentais e associações para que todos entendam – e exerçam – seu papel para assegurar a destinação adequada dos materiais recicláveis.</p>
+<p>Esse compromisso passa por tornar o descarte mais acessível a todos, mas nem sempre ela é realizada no sistema porta a porta, e a presença de PEVs (Pontos de Entrega Voluntária) fazem a diferença para que as embalagens pós-consumo sejam corretamente encaminhadas à revalorização.</p>
+<p>Foi com esse compromisso que a Prolata iniciou o Programa de Pontos de Entrega Voluntária (PEVs).</p>
+        </div>
+    </div>
+
+    <div class="box siteSec pagePontosEntregas__module2">
+        <div class="text">
+            <h2 class="title title--line">
+                PEV Parceiro            </h2>
+            <div class="text">
+                                <img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/06/retorna-machine.png" alt="" class="alignright">
+                <p>Em julho de 2018, a Prolata iniciou uma parceria com a Triciclo Soluções Sustentáveis para operação de recebimento de embalagens de aço pós-consumo pelos PEVs retorna machines.</p>
+<p>As retorna machines Triciclo são máquinas com telas touch screen capazes de recolher resíduos sólidos (embalagens pós-consumo vazias) como latas de aço, garrafas PET, latas de alumínio e embalagens assépticas. Ao inserir a embalagem na máquina, o código de barras é verificado e os pontos referentes ao tipo de resíduo descartado é creditado na conta do usuário. Estes pontos podem posteriormente ser revertidos em benefícios como créditos em bilhetes de transporte público, desconto na conta de energia elétrica ou telefonia pré-paga, pontos na livraria Saraiva, ou até mesmo podem ser doados para instituições filantrópicas. Embora não seja exclusivo para o recebimento de latas de aço, os PEVs Retorna Machine possuem a particularidade de reverter créditos aos usuários. Esta característica se faz interessante neste primeiro momento, pois conecta ao consumidor final, garantindo maior aderência, principalmente, daqueles que não se engajam facilmente com o tema da logística reversa.</p>
+<p>As embalagens coletadas pelos PEVs retorna machine também possuem destinação final ambientalmente adequada. A rastreabilidade é garantida pela comprovação via nota fiscal de venda das latas de aço à siderúrgica parceira Prolata.</p>
+<p>O Programa Prolata já conta com mais de 330 PEVs Retorna Machine em operação para recebimento de latas de aço pós consumo. Veja a relação de PEVs Retorna Machine e encontre o mais perto de você.</p>
+<p class="bold-sans"><strong>Saiba mais em <a href="http://www.triciclo.eco.br">www.triciclo.eco.br</a></strong></p>
+                <a href="https://www.prolata.com.br/rota-da-reciclagem/" class="btn btn--outside show-onHover">
+                    onde encontrar pevs retorna machine
+                </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="siteSec text clearfix pagePontosEntregas__module3">
+
+        <h2 class="title title--line">
+            PEV Prolata        </h2>
+
+        <p>Devido à assinatura do Termo de Cooperação Ambiental entre a Cadeia de Latas de Aço e o Ministério Público do Estado de São Paulo, Gaema - Grupo de Atuação Especial núcleo Baixada Santista, o Programa Prolata iniciou em 2018 as tratativas com o varejo de tintas e construção para implementação de PEV´s exclusivos para latas de aço na Baixada Santista.</p>
+        <img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/08/PEV_Prolata.jpg" class="ilust alignright" alt="">
+        <p>Em 2019, o programa articulou a instalação dos primeiros PEVs próprios do Prolata junto ao Baratão das Tintas, rede de varejo das tintas da Baixada Santista, e junto à Contrudecor (Dicico-Sodimac), grande rede de varejo de construção.</p>
+<p>Até o momento, existem mais de 300 PEVs ou PRs (Pontos de Recebimento) próprios em operação, localizados nos estados da BA, GO, PR, RS, SC e SP.</p>
+
+    </div>
+
+    <div class=" siteSec box twoColumn pagePontosEntregas__module4" style="background-color: #d4cd6a;">
+        <div class="twoColumn-left">
+            <h2 class="title title--line">
+               Como implementar um PEV Prolata            </h2>
+        </div>
+
+        <div class="twoColumn-right">
+            <div class="text">
+                <p>Consulte nossa equipe para ser um ponto de entrega voluntária parceiro Prolata.</p>
+<p>Entre em contato com <a href="mailto:gabriela@prolata.com.br" target="_blank" rel="noopener">gabriela@prolata.com.br</a></p>
+            </div>
+        </div>
+    </div>
+
+        <div class="siteSec box pagePontosEntregas__module5" style="background-image: url('https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/06/pagePontosEntregas5-1-1024x573.jpg');">
+
+        <div class="text">
+            <h2 class="title title--line">
+                Construtoras e demais segmentos geradores de embalagens            </h2>
+            <h3 class="subtitle">Descarte de lata no canteiro de obras </h3>
+            <div class="">
+                <p>A lata de tinta é classificada como resíduo comum de acordo com a Resolução CONAMA 469. Sendo assim, a lata de tinta pós consumo vai para a logística reversa comum de embalagens de aço.</p>
+<p>As latas de tinta e demais latas de aço oriundas de grandes geradores são recebidas pelo Prolata e a elas dada a destinação ambientalmente adequada. Não há investimento por parte do gerador, apenas responsável pelo transporte. Ao gerador é emitido um certificado de destinação do material.</p>
+<p>Quer ser um parceiro de descarte? Consulte nossa equipe.</p>
+<p>Entre em contato com <a href="mailto:cristine@prolata.com.br" target="_blank" rel="noopener">cristine@prolata.com.br</a></p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+</article>
+<article class="siteSec footer">
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/sitenovo/wp-*.php","/sitenovo/wp-admin/*","/sitenovo/wp-content/uploads/*","/sitenovo/wp-content/*","/sitenovo/wp-content/plugins/*","/sitenovo/wp-content/themes/prolata/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://www.prolata.com.br/sitenovo/wp-admin/admin-ajax.php";
+</script>
+<script id="site-js" src="https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/js/site.js?ver=7.0.8"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.prolata.com.br/sitenovo/wp-includes/js/wp-emoji-release.min.js?ver=7.0.8"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.prolata.com.br/sitenovo/wp-includes/js/wp-emoji-loader.min.js
+</script>
+	<div class="footerContato">
+		<div class="wrapper">
+			<h2 class="title">Contato</h2>
+						<a href="tel:+55113807-8868">+55 11 3807-8868</a>
+			<a href="mailto:prolata@prolata.com.br"> prolata@prolata.com.br </a>
+
+			<div class="social">
+				<a href="https://www.facebook.com/prolatareciclagem/"> <svg class='icon' viewBox='0 0 1792 1792'>
+						<use xlink:href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/sprite.svg#icon-facebook' /></svg> </a>
+				<a href="https://www.instagram.com/prolata_reciclagem/"> <svg class='icon' viewBox='0 0 1792 1792'>
+						<use xlink:href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/sprite.svg#icon-instagram' /></svg> </a>
+				<a href="https://www.linkedin.com/company/prolata-reciclagem/"> <svg class='icon' viewBox='0 0 1792 1792'>
+						<use xlink:href='https://www.prolata.com.br/sitenovo/wp-content/themes/prolata/assets/images/sprite.svg#icon-linkedin' /></svg> </a>
+			</div>
+
+		</div>
+	</div>
+			<div class="footerApoio">
+			<div class="wrapper">
+									<div>
+						<h3 class="title">Realização</h3>
+													<div class="footerApoio__logos">
+																	<a href="">
+										<img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2026/01/Logo-Abeaco-Horizontal-Preferencial-1-e1768314190787-300x102.png" class="footerApoio__logo-small">
+									</a>
+															</div>
+											</div>
+									<div>
+						<h3 class="title">Apoio</h3>
+													<div class="footerApoio__logos">
+																	<a href="">
+										<img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2020/09/Abrafati-menor.jpg" class="footerApoio__logo-small">
+									</a>
+																	<a href="">
+										<img src="" class="footerApoio__logo-small">
+									</a>
+																	<a href="">
+										<img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2023/09/looooo.png" class="footerApoio__logo-small">
+									</a>
+																	<a href="">
+										<img src="" class="footerApoio__logo-small">
+									</a>
+																	<a href="">
+										<img src="" class="footerApoio__logo-small">
+									</a>
+																	<a href="">
+										<img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2021/12/Gerdau.png" class="footerApoio__logo-small">
+									</a>
+															</div>
+											</div>
+									<div>
+						<h3 class="title">Conheça:</h3>
+													<div class="footerApoio__logos">
+																	<a href="http://lataco.com.br/">
+										<img src="https://www.prolata.com.br/sitenovo/wp-content/uploads/2022/09/latacologo-300x226.jpeg" class="footerApoio__logo-small">
+									</a>
+															</div>
+											</div>
+							</div>
+		</div>
+	</article>
+</body>
+
+</html>

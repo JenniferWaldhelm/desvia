@@ -1,0 +1,3 @@
+# https://www.joguelimpo.org.br/institucional/ajax/pevs.php
+# status ERRO  25 bytes
+HTTP Error 404: Not Found
