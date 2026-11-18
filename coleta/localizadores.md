@@ -21,3 +21,11 @@ Anotado em 17/11/2026, na busca de Sarandi (skill desvia-localizadores). Todos f
 - inpEV: página de unidades deu erro no navegador em 18/11/2026.
 - Prolata: o mapa do Brasil não abriu a lista do PR pelo clique; não lido.
 - Resultado salvo em `coleta/apucarana-localizadores.csv`.
+
+## LogMed (medicamentos), anotado em 18/11/2026
+
+- O site tem proteção Cloudflare: não contornar. A Jen baixa o PDF em https://logmed.org.br/onde-descartar/pdf (400 páginas, ~8.000 pontos, atualizado em 09/09/2026) e anexa na conversa.
+- O PDF é desenho (sem texto): ler com `coleta/logmed_pdf.py <página>` (OCR com tesseract, tira as linhas da tabela e lê a coluna da farmácia célula por célula). Páginas giradas; cabeçalho mostra a faixa "UF - CIDADE". Paraná: páginas 130 a 159 nesta versão.
+- Traz CNPJ de cada farmácia (redes da Abrafarma e Febrafar: Raia Drogasil, Nissei, Drogamais, Pague Menos, Hiperfarma). Endereço às vezes vem cortado.
+- O EcoMed mostra as farmácias da LogMed e mais as UBS e outras redes: usar os dois. Em Sarandi, as 3 farmácias da LogMed já tinham entrado pelo EcoMed.
+- Resultado da leitura: `coleta/logmed-cidades.csv` (cidades do Desvia, com o ID se já está na base) e `coleta/logmed-revisao.csv` (novos, para a aba Revisão).
