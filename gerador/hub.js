@@ -202,6 +202,31 @@
     var n = (estado.p !== 'todos' ? 1 : 0) + (estado.cat ? 1 : 0) + (estado.lic ? 1 : 0) + (estado.loc ? 1 : 0);
     var el = document.getElementById('nFiltros'); if (el) el.textContent = n ? '(' + n + ')' : '';
   }
+  var _numerosOrig = null;
+  function atualizaNumeros() {
+    var ul = document.querySelector('.numeros');
+    if (!ul) return;
+    var lis = ul.querySelectorAll('li');
+    var bs = ul.querySelectorAll('b');
+    if (!bs.length) return;
+    // guarda estado original na primeira vez
+    if (!_numerosOrig) _numerosOrig = Array.from(lis).map(function (li) { return li.innerHTML; });
+    if (!estado.cid) {
+      lis.forEach(function (li, i) { li.innerHTML = _numerosOrig[i]; });
+      ul.removeAttribute('data-cidade');
+      return;
+    }
+    var pts = PONTOS.filter(function (p) { return p.cs.indexOf(estado.cid) >= 0; });
+    var comLic = pts.filter(function (p) { return p.st === 'valida' || p.st === 'vencendo'; }).length;
+    var tipos = {};
+    pts.forEach(function (p) { p.c.forEach(function (c) { tipos[c] = true; }); });
+    var nTipos = Object.keys(tipos).length;
+    if (lis[0]) lis[0].innerHTML = '<b>' + pts.length + '</b> pontos e empresas';
+    if (lis[1]) lis[1].innerHTML = '<b>' + comLic + '</b> com licença válida';
+    if (lis[2]) lis[2].innerHTML = '<b>' + nTipos + '</b> tipo' + (nTipos !== 1 ? 's' : '') + ' de resíduo';
+    // lis[3] (fontes) mantém original
+    ul.setAttribute('data-cidade', (window.DESVIA_CIDADES || {})[estado.cid] || estado.cid);
+  }
   var det = document.getElementById('maisFiltros');
   if (det && window.matchMedia && window.matchMedia('(min-width: 861px)').matches && !det.classList.contains('mf-home')) det.open = true;
   document.querySelectorAll('[data-perto]').forEach(function (bt) {
@@ -262,6 +287,7 @@
       return (ORDEM[a.st] - ORDEM[b.st]) || ((a.loc ? 0 : 1) - (b.loc ? 0 : 1)) || a.n.localeCompare(b.n, 'pt-BR');
     });
     contaFiltros();
+    atualizaNumeros();
     contador.textContent = vis.length;
     visAtual = vis;
     if (!mais) registrarBusca(vis.length);
