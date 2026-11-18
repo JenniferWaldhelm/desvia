@@ -7,7 +7,7 @@ Fontes lidas aqui (sem navegador, uma vez por mês, respeitando o robots.txt de 
   (inclui ABREE), Reciclus (lâmpadas), Jogue Limpo (embalagens de óleo lubrificante),
   OpenStreetMap (ecopontos e contêineres de reciclagem) e Mapa das OSCs do Ipea (entidades que
   podem receber doação).
-Fora daqui: LogMed (PDF que a Jen baixa; coleta/logmed_pdf.py), EcoMed (decisão da Jen em 18/11/2026: não usar mais;
+Fora daqui: LogMed (PDF que a Jen baixa; coleta/logmed_pdf.py), EcoMed (robots.txt proíbe /api:
 só pelo navegador da Jen), inpEV (unidade regional em Maringá; certificado do site incompleto).
 
 Uso: python3 coleta/localizadores.py [cidade ...]   (sem cidade: as cidades da lista CIDADES)

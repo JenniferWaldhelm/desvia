@@ -4,7 +4,7 @@ Anotado em 17/11/2026, na busca de Sarandi (skill desvia-localizadores). Todos f
 
 | Programa | Página | Como os dados chegam | Observação |
 |---|---|---|---|
-| ~~EcoMed~~ (NÃO USAR desde 18/11/2026) | https://ecomed.eco.br/mapa | `GET /api/geo/cidades?q=<cidade>` devolve a cidade e o número de pontos. Os pontos vêm do servidor (Next.js) e ficam no estado do React. Ler com JavaScript: subir pelo `__reactFiber` do `.leaflet-container` até achar a lista com `name, address, city, state, latitude, longitude, phone, residueTypes`. Filtrar por `city`. | Na busca, digitar só o nome da cidade e escolher a sugestão com seta para baixo + Enter. |
+| EcoMed (medicamentos, agulhas e seringas) | https://ecomed.eco.br/mapa | `GET /api/geo/cidades?q=<cidade>` devolve a cidade e o número de pontos. Os pontos vêm do servidor (Next.js) e ficam no estado do React. Ler com JavaScript: subir pelo `__reactFiber` do `.leaflet-container` até achar a lista com `name, address, city, state, latitude, longitude, phone, residueTypes`. Filtrar por `city`. | Na busca, digitar só o nome da cidade e escolher a sugestão com seta para baixo + Enter. |
 | Reciclanip (pneus) | https://www.reciclanip.org.br/pontos-de-coleta/coleta-no-brasil/ | `POST /ajax/pontos.php` ao escolher o estado no select `#uf`. A lista do estado inteiro aparece como texto na página (cidade, telefone, endereço, CEP). | PR: 114 pontos em 17/11/2026. Sarandi: nenhum. |
 | Green Eletron, pilhas e baterias | https://sistema.reciclelog.com.br/info/green | Formulário GET `?search_state=PR&search_city=SARANDI&button=` (página da Ambipar). Resultado em tabela HTML. | O nome da cidade vai em maiúsculas, como no select. |
 | Green Eletron, eletroeletrônicos (inclui pontos ABREE) | https://greeneletron.org.br/onde-descartar/ | Busca por endereço (Google Maps) e `POST https://green.care-br.com/busca_empresa.php`. Lista lateral com nome, endereço, CEP e distância. | Pontos da ABREE aparecem com "- Abree" no nome. |
@@ -27,7 +27,7 @@ Anotado em 17/11/2026, na busca de Sarandi (skill desvia-localizadores). Todos f
 - O site tem proteção Cloudflare: não contornar. A Jen baixa o PDF em https://logmed.org.br/onde-descartar/pdf (400 páginas, ~8.000 pontos, atualizado em 09/09/2026) e anexa na conversa.
 - O PDF é desenho (sem texto): ler com `coleta/logmed_pdf.py <página>` (OCR com tesseract, tira as linhas da tabela e lê a coluna da farmácia célula por célula). Páginas giradas; cabeçalho mostra a faixa "UF - CIDADE". Paraná: páginas 130 a 159 nesta versão.
 - Traz CNPJ de cada farmácia (redes da Abrafarma e Febrafar: Raia Drogasil, Nissei, Drogamais, Pague Menos, Hiperfarma). Endereço às vezes vem cortado.
-- **EcoMed: não usar mais (decisão da Jen em 18/11/2026).** Medicamentos vêm só da LogMed (PDF) e da prefeitura (UBS). Em Sarandi, as 3 farmácias da LogMed já tinham entrado pelo EcoMed.
+- O EcoMed mostra as farmácias da LogMed e mais as UBS e outras redes: usar os dois. Em Sarandi, as 3 farmácias da LogMed já tinham entrado pelo EcoMed.
 - Resultado da leitura: `coleta/logmed-cidades.csv` (cidades do Desvia, com o ID se já está na base) e `coleta/logmed-revisao.csv` (novos, para a aba Revisão).
 
 ## Leitura automática (18/11/2026)
@@ -44,4 +44,4 @@ Ação "Localizadores de logística reversa" (dia 21 de cada mês, ou à mão). 
 | OpenStreetMap | Overpass, `amenity=recycling` e `waste_transfer_station` na região | 10 |
 | Mapa das OSCs (Ipea) | CSV da base de divulgação; filtra PR, cidades da lista, ativas, nome ou área ligados a doação, reciclagem ou meio ambiente | 91 |
 
-Fora da ação: EcoMed (não usar mais, decisão de 18/11/2026), LogMed (PDF), inpEV (unidade em Maringá; certificado do site incompleto), Prolata (mapa sem lista legível; tentar de novo), ANP (não há lista aberta de coletores de óleo lubrificante; procurar de novo).
+Fora da ação: EcoMed (robots.txt proíbe /api: só pelo navegador da Jen; as farmácias dele vêm da LogMed), LogMed (PDF), inpEV (unidade em Maringá; certificado do site incompleto), Prolata (mapa sem lista legível; tentar de novo), ANP (não há lista aberta de coletores de óleo lubrificante; procurar de novo).
