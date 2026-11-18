@@ -74,6 +74,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
       <label class="filtro"><span>Tipo de resíduo</span><select id="fTipo" name="tipo"><option value="">Todos os tipos</option>{opcoes_tipo}</select></label>
       <label class="filtro-lic"><input type="checkbox" id="fLic"> Esconder empresas com licença ambiental vencida ou não localizada</label>
     </div></details>
+  <button type="button" class="limpar limpar-form" data-limpar>✕ Limpar filtros</button>
   </form>
   <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe se doa, vende ou descarta? Me ajude a decidir</button>
   <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li title="{esc(", ".join(fontes))}"><b>{len(fontes)}</b> fontes consultadas</li></ul>
@@ -81,7 +82,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
 
 <section class="ferramenta" id="resultados" data-esperar hidden aria-label="Resultados">
   <aside class="painel">
-    <div class="listhead"><span><b id="count">0</b> resultados</span><button type="button" class="limpar" id="limpar">Limpar filtros</button></div>
+    <div class="listhead"><span><b id="count">0</b> resultados</span><button type="button" class="limpar" id="limpar" data-limpar>Limpar filtros</button></div>
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>

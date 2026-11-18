@@ -372,7 +372,7 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
       </div>
       </details>
     </div>
-    <div class="listhead"><span><b id="count">0</b> resultados</span><button type="button" class="limpar" id="limpar">Limpar filtros</button></div>
+    <div class="listhead"><span><b id="count">0</b> resultados</span><button type="button" class="limpar" id="limpar" data-limpar>Limpar filtros</button></div>
     <div class="lista-js" id="lista" aria-live="polite"></div>
   </aside>
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>
