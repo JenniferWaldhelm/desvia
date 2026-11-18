@@ -116,6 +116,37 @@
     return h + '</article>';
   }
 
+  // Inscrição Mailchimp via JSONP (evita redirect, mostra confirmação inline)
+  function inscreveMailchimp(form, callback) {
+    var email = form.querySelector('input[type=email]').value.trim();
+    if (!email) return;
+    var params = 'u=605c10e63f&id=dbf2b174bd&EMAIL=' + encodeURIComponent(email);
+    form.querySelectorAll('input[type=hidden]').forEach(function (el) {
+      if (el.name !== 'u' && el.name !== 'id') params += '&' + el.name + '=' + encodeURIComponent(el.value);
+    });
+    var cb = 'mc_cb_' + Date.now();
+    window[cb] = function (data) {
+      delete window[cb]; document.head.removeChild(script);
+      callback(data.result === 'success');
+    };
+    var script = document.createElement('script');
+    script.src = 'https://us9.list-manage.com/subscribe/post-json?' + params + '&c=' + cb;
+    document.head.appendChild(script);
+  }
+
+  function htmlAviseme(nomeCidade, catLabel) {
+    var msg = catLabel && nomeCidade ? 'Avisar quando novos locais de <b>' + esc(catLabel) + '</b> forem adicionados em <b>' + esc(nomeCidade) + '</b>' :
+      nomeCidade ? 'Avisar quando o Desvia chegar em <b>' + esc(nomeCidade) + '</b>' : 'Avisar quando novos locais forem adicionados';
+    return '<div class="avise-me" data-avise>' +
+      '<p>' + msg + ':</p>' +
+      '<form class="avise-form" data-avise-form novalidate>' +
+      '<input type="hidden" name="MERGE7" value="' + esc(nomeCidade || '') + '">' +
+      (catLabel ? '<input type="hidden" name="MERGE8" value="' + esc(catLabel) + '">' : '') +
+      '<input type="email" placeholder="seu@email.com" required autocomplete="email">' +
+      '<button type="submit">Avisar-me</button>' +
+      '</form></div>';
+  }
+
   function sugestoes() {
     var ids = (estado.qcats && estado.qcats.length ? estado.qcats : []).slice(0, 4);
     var nomeCidade = estado.cid ? (window.DESVIA_CIDADES || {})[estado.cid] || estado.cid : '';
@@ -130,26 +161,28 @@
       }).length;
       if (nSemCidade > 0) html += '<p class="vazio">Mas encontramos <b>' + nSemCidade + '</b> ' + (nSemCidade === 1 ? 'local' : 'locais') + ' em outras cidades. <button type="button" class="chip" data-ampliar="1">Ver tudo</button></p>';
     }
-    // Captura de email: aparece quando buscou cidade não coberta ou sem resultado com cidade
-    var todasCidades = Object.keys(window.DESVIA_CIDADES || {});
-    var cidadeNaoCoberta = estado.cid && todasCidades.indexOf(estado.cid) < 0;
-    if (cidadeNaoCoberta || (!estado.q && estado.cid)) {
-      html += '<div class="avise-me">' +
-        '<p><b>Quer saber quando chegar na sua cidade?</b></p>' +
-        '<form class="avise-form" action="https://us9.list-manage.com/subscribe/post" method="POST" target="_blank" novalidate>' +
-        '<input type="hidden" name="u" value="605c10e63f">' +
-        '<input type="hidden" name="id" value="dbf2b174bd">' +
-        (estado.cid ? '<input type="hidden" name="MERGE7" value="' + esc(nomeCidade || estado.cid) + '">' : '') +
-        '<input type="email" name="EMAIL" placeholder="seu@email.com" required autocomplete="email">' +
-        '<button type="submit">Avisar-me</button>' +
-        '<div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_605c10e63f_dbf2b174bd" tabindex="-1" value=""></div>' +
-        '</form></div>';
+    // Captura de email quando não há resultado com cidade selecionada
+    if (estado.cid) {
+      var catLabel = estado.cat ? (CATS[estado.cat] || '') : '';
+      html += htmlAviseme(nomeCidade, catLabel);
     }
     if (ids.length) html += '<p class="vazio">Isso costuma ir para: ' + ids.map(function (c) {
       return '<button type="button" class="chip" data-sug="' + c + '">' + esc(CATS[c]) + '</button>'; }).join(' ') + '</p>';
     html += '<p class="vazio">Veja todos os tipos: ' + Object.keys(CATS).map(function (c) {
       return '<button type="button" class="chip" data-sug="' + c + '">' + esc(CATS[c]) + '</button>'; }).join(' ') + '</p>';
     return html;
+  }
+
+  // Captura de email quando há poucos resultados (exibida abaixo da lista)
+  function htmlAvisePoucos(nomeCidade, catLabel) {
+    if (!nomeCidade) return '';
+    return '<div class="avise-me avise-me--slim" data-avise>' +
+      '<form class="avise-form" data-avise-form novalidate>' +
+      '<input type="hidden" name="MERGE7" value="' + esc(nomeCidade) + '">' +
+      (catLabel ? '<input type="hidden" name="MERGE8" value="' + esc(catLabel) + '">' : '') +
+      '<input type="email" placeholder="Avisar-me se novos locais forem adicionados…" required autocomplete="email">' +
+      '<button type="submit">Avisar</button>' +
+      '</form></div>';
   }
 
   // Registra o que as pessoas buscam (e o que não acham) no contador de visitas, se estiver ligado
@@ -233,8 +266,13 @@
     visAtual = vis;
     if (!mais) registrarBusca(vis.length);
     var resto = vis.length - limite;
+    var POUCOS = 3;
+    var avisePoucos = (vis.length > 0 && vis.length <= POUCOS && estado.cid)
+      ? htmlAvisePoucos((window.DESVIA_CIDADES || {})[estado.cid] || estado.cid, estado.cat ? (CATS[estado.cat] || '') : '')
+      : '';
     lista.innerHTML = vis.length ? vis.slice(0, limite).map(cartao).join('') +
-      (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') : sugestoes();
+      (resto > 0 ? '<button type="button" class="mais" data-mais="1">Mostrar mais ' + Math.min(resto, POR_PAGINA) + ' (faltam ' + resto + ')</button>' : '') +
+      avisePoucos : sugestoes();
     var vz = vizinhos();
     if (vz.length) lista.insertAdjacentHTML('afterbegin', '<p class="ir-viz"><a href="#vizinhos">+ ' + vz.length + (vz.length === 1 ? ' ponto' : ' pontos') + ' perto de você em cidades vizinhas</a></p>');
     if (vz.length) lista.innerHTML += '<section class="vizinhos" id="vizinhos"><h3>Também perto de você, em cidades vizinhas</h3>' +
@@ -502,6 +540,28 @@
     var sg = e.target.closest('[data-sug]');
     if (sg) { estado.q = ''; document.getElementById('q').value = ''; estado.cat = sg.dataset.sug; render(); return; }
     var b = e.target.closest('[data-ver]'); if (b) destacar(b.dataset.ver, true);
+  });
+  lista.addEventListener('submit', function (e) {
+    var frm = e.target.closest('[data-avise-form]');
+    if (!frm) return;
+    e.preventDefault();
+    var email = frm.querySelector('input[type=email]');
+    if (!email || !email.value.trim()) { email && email.focus(); return; }
+    var btn = frm.querySelector('button[type=submit]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+    inscreveMailchimp(frm, function (ok) {
+      var avise = frm.closest('[data-avise]');
+      if (!avise) return;
+      if (ok) {
+        var nomeCid = (frm.querySelector('[name=MERGE7]') || {}).value || '';
+        avise.innerHTML = '<p class="avise-ok">✓ ' + (nomeCid ? 'Avisaremos quando o Desvia chegar em <b>' + esc(nomeCid) + '</b>!' : 'Combinado! Avisaremos quando houver novidades.') + '</p>';
+      } else {
+        if (btn) { btn.disabled = false; btn.textContent = 'Avisar-me'; }
+        var erro = avise.querySelector('.avise-erro');
+        if (!erro) { erro = document.createElement('p'); erro.className = 'avise-erro'; frm.appendChild(erro); }
+        erro.textContent = 'Não conseguimos registrar. Tente novamente.';
+      }
+    });
   });
 
   function iniciarMapa() {
