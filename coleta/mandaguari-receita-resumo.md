@@ -1,4 +1,4 @@
-# Mandaguari: empresas de resíduo na Receita Federal (17/11/2026)
+# Mandaguari: empresas de resíduo na Receita Federal (18/11/2026)
 
 - Base: dados abertos do CNPJ, pasta 2026-11
 - Ativas com atividade de resíduo: 93 (já na base: 1; novas: 92)
@@ -9,7 +9,7 @@
 
 Lista completa em mandaguari-receita.csv. Conferir com a Jen antes de gravar na planilha.
 
-## Licenças (conferido em 17/11/2026)
+## Licenças (conferido em 18/11/2026)
 
 - IAT por CNPJ: 93 consultados, 100 registros de licença
 - Novas com licença no IAT: 37 (só AA: 0; vencidas: 13)
