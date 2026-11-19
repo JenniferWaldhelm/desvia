@@ -1,4 +1,4 @@
-# Marialva: candidatos para revisão (18/11/2026)
+# Marialva: candidatos para revisão (19/11/2026)
 
 - Candidatos: 92 (Alta 14, Média 12, Baixa 66)
 - Para a Jen conferir (Alta + Média): 26

@@ -1,4 +1,4 @@
-# Marialva: empresas de resíduo na Receita Federal (18/11/2026)
+# Marialva: empresas de resíduo na Receita Federal (19/11/2026)
 
 - Base: dados abertos do CNPJ, pasta 2026-11
 - Ativas com atividade de resíduo: 79 (já na base: 0; novas: 79)
@@ -9,7 +9,7 @@
 
 Lista completa em marialva-receita.csv. Conferir com a Jen antes de gravar na planilha.
 
-## Licenças (conferido em 18/11/2026)
+## Licenças (conferido em 19/11/2026)
 
 - IAT por CNPJ: 79 consultados, 48 registros de licença
 - Novas com licença no IAT: 16 (só AA: 0; vencidas: 9)
