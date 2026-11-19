@@ -388,6 +388,15 @@ EXTRA_COLETA = {
 <p>Você também pode denunciar à Fiscalização Ambiental da Secretaria Municipal do Ambiente (SEMA): telefone <a href="tel:+554333724770">(43) 3372-4770</a> ou <a href="tel:+554333724771">(43) 3372-4771</a>, e-mail <a href="mailto:fiscalizacao.sema@londrina.pr.gov.br">fiscalizacao.sema@londrina.pr.gov.br</a> ou o <a href="https://portal.londrina.pr.gov.br/denuncia-de-danos-ambientais" target="_blank" rel="noopener">formulário de denúncia de danos ambientais</a>.</p>
 <p class="nota">Fontes: <a href="https://cmtu.londrina.pr.gov.br/index.php/limpeza-urbana/pev.html" target="_blank" rel="noopener">CMTU, página dos PEVs</a>; <a href="https://portal.londrina.pr.gov.br/fiscalizacao-ambiental-sema" target="_blank" rel="noopener">SEMA, fiscalização ambiental</a>.</p>
 """,
+    "cambira": """<h2 id="bairros">Dias da coleta seletiva por setor em Cambira</h2>
+<p>A coleta seletiva de recicláveis em Cambira é feita de porta em porta pela ASCAMAR, a associação de catadores da cidade, em parceria com a Prefeitura. A cidade é dividida em quatro setores:</p>
+<table class="tabela"><thead><tr><th>Setor</th><th>Dias</th><th>Onde</th></tr></thead><tbody>
+<tr><td>Verde</td><td>Segunda e quarta</td><td>Parque Industrial, Pérola, São José, Danielle, Centro, Vila Formosa, São Francisco e outros</td></tr>
+<tr><td>Vermelho</td><td>Terça e quinta</td><td>Jardim Tiradentes, Jardim das Flores, Jardim Brasil, Jardim Primavera, Jardim Sanchez e outros</td></tr>
+<tr><td>Amarelo</td><td>Todos os dias</td><td>Área comercial das avenidas Brasil, Belo Horizonte e Canadá</td></tr>
+<tr><td>Azul</td><td>Sexta-feira</td><td>Distrito de Sete de Maio</td></tr>
+</tbody></table>
+<p>Atenção: este cronograma foi publicado pela Prefeitura em fevereiro de 2021. Confirme os dias pelo telefone da Prefeitura, <a href="tel:+554334368000">(43) 3436-8000</a>.</p>""",
 }
 
 # Informações próprias de um serviço numa cidade (fonte oficial informada pela Jen): (html, perguntas frequentes extras).
