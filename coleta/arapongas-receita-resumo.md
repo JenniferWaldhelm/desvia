@@ -1,19 +1,19 @@
-# Arapongas: empresas de resíduo na Receita Federal (18/11/2026)
+# Arapongas: empresas de resíduo na Receita Federal (19/11/2026)
 
 - Base: dados abertos do CNPJ, pasta 2026-11
-- Ativas com atividade de resíduo: 220 (já na base: 0; novas: 220)
-- Novas com a atividade de resíduo como principal: 107
+- Ativas com atividade de resíduo: 220 (já na base: 5; novas: 215)
+- Novas com a atividade de resíduo como principal: 103
 - Pessoa física/MEI entre as novas: 61
 - Descartadas por CNAE fraco sem nome de resíduo: 1914
 - Não ativas (fora da lista): Baixada 1191, Inapta 323, Nula 1, Suspensa 16
 
 Lista completa em arapongas-receita.csv. Conferir com a Jen antes de gravar na planilha.
 
-## Licenças (conferido em 18/11/2026)
+## Licenças (conferido em 19/11/2026)
 
 - IAT por CNPJ: 220 consultados, 595 registros de licença
-- Novas com licença no IAT: 61 (só AA: 0; vencidas: 19)
-- Novas com inscrição de resíduos no CTF/IBAMA: 12
+- Novas com licença no IAT: 56 (só AA: 0; vencidas: 17)
+- Novas com inscrição de resíduos no CTF/IBAMA: 7
 - Novas sem licença nem CTF: 157
 
 Com licença no IAT:
@@ -21,12 +21,10 @@ Com licença no IAT:
 - Leplast Embalagens E Acessorios Ltda (00.890.837/0001-53): DLAE 339948 até 18/01/2035
 - Leplast Embalagens E Acessorios Ltda (00.890.837/0002-34): DLAE 258676 até 17/11/2031
 - Hidrogeron Do Brasil Comercio De Equipamentos Para Saneamento Ambiental Ltda (01.049.474/0001-90): LP 25898 até 16/02/2012
-- Pontalti - Industria E Comercio De Biomassa Ltda (02.224.840/0001-63): RLO 266140 até 24/03/2026
 - Reciclaplast - Industria E Comercio De Artigos Plasticos Ltda (02.443.251/0001-76): DLAE 299089 até 28/06/2033
 - Araponga Quimica Ltda (04.801.578/0001-06): RLO 328664 até 21/08/2027
 - A. Manhani Filho Materiais Eletricos Ltda (04.976.188/0001-69): DLAE 315406 até 22/02/2034
 - Semix Comercio De Insumos Agropecuarios Ltda (05.229.719/0004-65): RLO 144147 até 01/10/2020
-- Termo Vinil Fabricacao E Comercio De Residuos Industriais Ltda. (05.243.617/0001-51): LAS 270017 até 19/05/2026
 - A. G. De Freitas Manhani Materiais Eletricos Ltda (05.768.579/0001-50): DLAE 255754 até 14/10/2031
 - S. L. Vicentini - Plasticos (07.865.346/0001-00): DLAE 185757 até 10/07/2030
 - Galuch Servicos Ltda (08.164.670/0001-55): LAS 3824 até 11/03/2020
@@ -70,11 +68,8 @@ Com licença no IAT:
 - Paulo Cesar De Faria & Cia Ltda (47.024.689/0001-58): DLAE 328131 até 10/08/2034
 - Terra Verde Solucoes Ltda (49.507.588/0001-63): DLAE 289877 até 11/02/2033
 - Reciclamais Sucatas Comercio De Metais Ltda (49.942.416/0001-18): DLAE 310259 até 23/11/2033
-- Faria & Faria Ltda (72.471.675/0001-20): DLAE 325961 até 16/07/2034
 - Nortox Sa (75.263.400/0001-99): RLO 339143 até 09/01/2028
-- D J Laminacao De Pneus Ltda (76.745.850/0001-80): RLO 310313 até 24/11/2026
 - D J Laminacao De Pneus Ltda (76.745.850/0002-61): RLO 335833 até 13/11/2029
 - Poquema Industria E Comercio De Moveis Ltda (79.189.957/0001-88): RLO 198191 até 25/08/2024
-- Genaro G Santana & Cia Ltda (79.733.655/0001-29): DLAE 185418 até 07/07/2030
 - Laminadora De Pneus Aricanduva Ltda (80.396.799/0001-16): RLO 254616 até 29/09/2025
 - Elias Pelegrini & Cia Ltda (86.711.371/0001-05): RLAS 281020 até 27/09/2027
