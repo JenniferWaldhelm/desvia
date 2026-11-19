@@ -2,9 +2,9 @@
 
 - Linhas do Paraná: 232648
 - Empresas (CNPJ) do Paraná: 9329
-- Já estão no Desvia: 70 (45 com categorias que faltam no cadastro)
+- Já estão no Desvia: 70 (21 com categorias que faltam no cadastro)
 - Recebem resíduo de terceiros e não estão no Desvia: 273
-- Recebem cinza (destinador, armazenador ou reciclador): 51
+- Recebem cinza (destinador, armazenador ou reciclador): 38
 
 ## Avisos
 
@@ -18,7 +18,7 @@ Confira se cada campo caiu na coluna certa. Se não, ajuste CAMPOS ou NAO_SAO no
 
 - Arquivo: 73.5 MB, separador `;`, codificação utf-8-sig
 - Linhas: 170400; no Paraná: 13141
-- Campos: cnpj → `CNPJ do destinador`; razao → `Razão Social do destinador`; uf → `Estado`; municipio → `Município`; codigo_residuo → `Cód. Resíduo`; residuo → `Desc. Resíduo`; ano → `Ano - destinação`; unidade → `Unidade`; destinacao → `Tipo de destinação`; outro_cnpj → `CNPJ do gerador do resíduo`
+- Campos: cnpj → `CNPJ do destinador`; razao → `Razão Social do destinador`; uf → `Estado`; municipio → `Município`; codigo_residuo → `Cód. Resíduo`; residuo → `Desc. Resíduo`; ano → `Ano - destinação`; quantidade → `Quant. destinada`; unidade → `Unidade`; destinacao → `Tipo de destinação`; outro_cnpj → `CNPJ do gerador do resíduo`
 - Cabeçalho completo: `CNPJ do destinador` | `Razão Social do destinador` | `Estado` | `Município` | `Código da Categoria` | `Categoria de Atividade` | `Código do Detalhe` | `Detalhe` | `CNPJ do gerador do resíduo` | `Raz soc do gerador do resíduo` | `Cód. Resíduo` | `Desc. Resíduo` | `Ano - destinação` | `Quant. destinada` | `Unidade` | `Tipo de destinação` | `Situação Cadastral`
 
 ### armazenador (armazenador)
