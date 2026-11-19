@@ -1,0 +1,40 @@
+name: Resíduos declarados ao IBAMA (RAPP)
+
+# Baixa as bases do RAPP (destinador, armazenador, gerador, produtos reciclados, pilhas e baterias),
+# fica com o Paraná e cruza pelo CNPJ com dados/pontos.csv.
+# Grava coleta/ibama-residuos-empresas.csv, coleta/ibama-rapp-pr.csv e coleta/ibama-rapp-resumo.md.
+# Não altera o site nem a planilha.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - coleta/ibama_rapp.py
+      - .github/workflows/ibama-rapp.yml
+  schedule:
+    - cron: "53 9 25 * *"   # dia 25, 6h53 em Brasília
+
+permissions:
+  contents: write
+
+jobs:
+  rapp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Baixar e cruzar
+        run: |
+          set -o pipefail
+          python3 coleta/ibama_rapp.py /tmp/ibama-rapp | tee -a "$GITHUB_STEP_SUMMARY"
+          cat coleta/ibama-rapp-resumo.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Salvar resultado
+        run: |
+          git config user.name "Desvia (automático)"
+          git config user.email "actions@users.noreply.github.com"
+          git add coleta/ibama-rapp-pr.csv coleta/ibama-residuos-empresas.csv coleta/ibama-rapp-resumo.md
+          git diff --cached --quiet || git commit -m "IBAMA: resíduos declarados no RAPP (PR)"
+          git pull --rebase -q && git push
