@@ -64,7 +64,7 @@ CAMPOS = {
                 r"descricao", r"produto", r"tipo de pilha", r"tipo"],
     "classe": [r"periculosidade", r"classifica", r"classe"],
     "ano": [r"^ano", r"ano\b", r"exercicio"],
-    "quantidade": [r"quantidade", r"\bqtd", r"peso", r"massa"],
+    "quantidade": [r"quantidade", r"\bquant", r"\bqtd", r"peso total", r"peso", r"massa"],
     "unidade": [r"unidade", r"\bund\b"],
     "destinacao": [r"tipo.*destina", r"destinacao", r"tratamento", r"armazenamento", r"finalidade", r"destino"],
 }
@@ -244,9 +244,13 @@ def main():
             por[l["_cnpj"]].append(l)
     saida = []
     for cnpj, ls in por.items():
-        res = Counter(re.sub(r"\s+", " ", l["Resíduo declarado"]).strip(" .;") for l in ls if l["Resíduo declarado"])
-        cods = sorted({l["Código resíduo"] for l in ls if l["Código resíduo"]})
-        dest = Counter(l["Destinação/tratamento"] for l in ls if l["Destinação/tratamento"])
+        rec = [l for l in ls if l["Papel"] != "gerador"]   # o que a empresa recebe de terceiros
+        ger = [l for l in ls if l["Papel"] == "gerador"]   # o que ela mesma gera
+        limpa = lambda t: re.sub(r"\s+", " ", t).strip(" .;")  # noqa: E731
+        res = Counter(limpa(l["Resíduo declarado"]) for l in rec if l["Resíduo declarado"])
+        res_ger = Counter(limpa(l["Resíduo declarado"]) for l in ger if l["Resíduo declarado"])
+        cods = sorted({l["Código resíduo"] for l in rec if l["Código resíduo"]})
+        dest = Counter(l["Destinação/tratamento"] for l in rec if l["Destinação/tratamento"])
         anos = sorted({l["Ano"][:4] for l in ls if re.match(r"\d{4}", l["Ano"])})
         papeis = sorted({l["Papel"] for l in ls})
         texto_res = norm(" ".join(res))
@@ -255,16 +259,16 @@ def main():
         aceitos_hoje = " | ".join(p["Resíduos aceitos"] for p in desvia)
         ja_tem = norm(aceitos_hoje)
         novas = [n for _, n, chaves in cats if n in sugeridas and not any(c in ja_tem for c in chaves)] if desvia else []
+        mais = lambda campo: Counter(l[campo] for l in ls if l[campo]).most_common(1)[0][0] if any(l[campo] for l in ls) else ""  # noqa: E731
         saida.append({
-            "CNPJ": fmt_cnpj(cnpj),
-            "Razão social": Counter(l["Razão social"] for l in ls if l["Razão social"]).most_common(1)[0][0] if any(l["Razão social"] for l in ls) else "",
-            "Município": Counter(l["Município"] for l in ls if l["Município"]).most_common(1)[0][0] if any(l["Município"] for l in ls) else "",
+            "CNPJ": fmt_cnpj(cnpj), "Razão social": mais("Razão social"), "Município": mais("Município"),
             "Papel no RAPP": ", ".join(papeis),
             "Anos": f"{anos[0]}–{anos[-1]}" if len(anos) > 1 else "".join(anos),
-            "Nº de tipos de resíduo": len(res),
-            "Resíduos declarados (mais frequentes)": "; ".join(r for r, _ in res.most_common(25)),
-            "Códigos de resíduo": ", ".join(cods[:40]),
+            "Nº de tipos que recebe": len(res),
+            "Resíduos que recebe (mais frequentes)": "; ".join(r for r, _ in res.most_common(25)),
+            "Códigos que recebe": ", ".join(cods[:40]),
             "Destinação/tratamento": "; ".join(d for d, _ in dest.most_common(8)),
+            "Resíduos que gera (mais frequentes)": "; ".join(r for r, _ in res_ger.most_common(10)),
             "Categorias do Desvia sugeridas": ", ".join(sugeridas),
             "No Desvia (ID)": "; ".join(p["ID"] for p in desvia),
             "Resíduos aceitos hoje no Desvia": aceitos_hoje,
@@ -274,9 +278,9 @@ def main():
     ordem = {"destinador": 0, "armazenador": 1, "reciclador": 2, "gerador": 3}
     saida.sort(key=lambda s: (0 if s["No Desvia (ID)"] else 1,
                               min(ordem.get(p, 9) for p in s["Papel no RAPP"].split(", ")), s["Município"], s["Razão social"]))
-    campos2 = ["CNPJ", "Razão social", "Município", "Papel no RAPP", "Anos", "Nº de tipos de resíduo",
-               "Resíduos declarados (mais frequentes)", "Códigos de resíduo", "Destinação/tratamento",
-               "Categorias do Desvia sugeridas", "No Desvia (ID)", "Resíduos aceitos hoje no Desvia",
+    campos2 = ["CNPJ", "Razão social", "Município", "Papel no RAPP", "Anos", "Nº de tipos que recebe",
+               "Resíduos que recebe (mais frequentes)", "Códigos que recebe", "Destinação/tratamento",
+               "Resíduos que gera (mais frequentes)", "Categorias do Desvia sugeridas", "No Desvia (ID)", "Resíduos aceitos hoje no Desvia",
                "Categorias que faltam no Desvia"]
     with open(RAIZ / "coleta" / "ibama-residuos-empresas.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=campos2)
@@ -286,7 +290,7 @@ def main():
     # 3) resumo
     no_desvia = [s for s in saida if s["No Desvia (ID)"]]
     receptores = [s for s in saida if not s["No Desvia (ID)"] and s["Papel no RAPP"] != "gerador"]
-    cinza = [s for s in saida if "cinza" in norm(s["Resíduos declarados (mais frequentes)"]) and s["Papel no RAPP"] != "gerador"]
+    cinza = [s for s in saida if "cinza" in norm(s["Resíduos que recebe (mais frequentes)"])]
     r = [f"# RAPP/IBAMA no Paraná ({date.today():%d/%m/%Y})", "",
          f"- Linhas do Paraná: {len(linhas)}",
          f"- Empresas (CNPJ) do Paraná: {len(saida)}",
