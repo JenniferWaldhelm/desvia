@@ -1,9 +1,9 @@
-# Cambira: candidatos para revisão (18/11/2026)
+# Cambira: candidatos para revisão (19/11/2026)
 
-- Candidatos: 20 (Alta 2, Média 4, Baixa 14)
-- Para a Jen conferir (Alta + Média): 6
-- Fora antes da nota: CNPJ inapta 1
+- Candidatos: 19 (Alta 1, Média 4, Baixa 14)
+- Para a Jen conferir (Alta + Média): 5
+- Fora antes da nota: já na base 2, CNPJ inapta 1
 - Limite oficial do município: conferido
-- IDs provisórios a partir de CBR-001 (conferir a coluna A da planilha antes de gravar)
+- IDs provisórios a partir de CBR-002 (conferir a coluna A da planilha antes de gravar)
 
 Lista em cambira-revisao.csv. Nada foi gravado na planilha.
