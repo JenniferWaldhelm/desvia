@@ -1,4 +1,4 @@
-# Jandaia do Sul: coleta automática em 18/11/2026
+# Jandaia do Sul: coleta automática em 19/11/2026
 
 - Licenças do IAT no município: 775
 - Empresas de resíduos no IAT: 12
