@@ -1,4 +1,4 @@
-# Marialva: coleta automática em 18/11/2026
+# Marialva: coleta automática em 19/11/2026
 
 - Licenças do IAT no município: 1100
 - Empresas de resíduos no IAT: 21
