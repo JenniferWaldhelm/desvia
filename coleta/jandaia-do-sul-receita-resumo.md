@@ -1,4 +1,4 @@
-# Jandaia do Sul: empresas de resíduo na Receita Federal (18/11/2026)
+# Jandaia do Sul: empresas de resíduo na Receita Federal (19/11/2026)
 
 - Base: dados abertos do CNPJ, pasta 2026-11
 - Ativas com atividade de resíduo: 45 (já na base: 0; novas: 45)
@@ -9,7 +9,7 @@
 
 Lista completa em jandaia-do-sul-receita.csv. Conferir com a Jen antes de gravar na planilha.
 
-## Licenças (conferido em 18/11/2026)
+## Licenças (conferido em 19/11/2026)
 
 - IAT por CNPJ: 45 consultados, 56 registros de licença
 - Novas com licença no IAT: 11 (só AA: 1; vencidas: 8)

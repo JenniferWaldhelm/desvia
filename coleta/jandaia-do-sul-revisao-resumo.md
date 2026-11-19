@@ -1,4 +1,4 @@
-# Jandaia do Sul: candidatos para revisão (18/11/2026)
+# Jandaia do Sul: candidatos para revisão (19/11/2026)
 
 - Candidatos: 55 (Alta 11, Média 13, Baixa 31)
 - Para a Jen conferir (Alta + Média): 24
