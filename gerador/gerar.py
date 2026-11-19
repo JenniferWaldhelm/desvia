@@ -442,13 +442,14 @@ def data_br(txt):
 
 
 def categorias_do_ponto(p):
-    texto = norm(p["Resíduos aceitos"])
+    # "não perigosos" não é Classe I: troca antes de procurar "perigos"
+    texto = re.sub(r"\bnao[ -]perigos\w*", "classe ii", norm(p["Resíduos aceitos"]))
     achadas = []
     for slug, _, _, chaves in CATEGORIAS:
         if any(c in texto for c in chaves):
             achadas.append(slug)
     # Classe I (sem confundir com Classe II)
-    classe = norm(p["Classe NBR 10004"] + " " + p["Resíduos aceitos"])
+    classe = re.sub(r"\bnao[ -]perigos\w*", "classe ii", norm(p["Classe NBR 10004"] + " " + p["Resíduos aceitos"]))
     if p["Tipo de ponto"] not in ("Coleta e transporte", "Tratamento/destinação final"):
         return achadas
     if re.search(r"classes? i\b(?! ?i)|classe i a|classes i e|hospitalar", classe) and "residuos-perigosos" not in achadas:
