@@ -1,13 +1,13 @@
-# Localizadores: Paraná (18/11/2026)
+# Localizadores: Paraná (21/11/2026)
 
-- Reciclanip: 57 pontos no PR (1 s)
-- Green Eletron pilhas: 97 pontos no PR (15 s)
-- Green Eletron eletroeletrônicos e ABREE: 380 pontos no PR (13 s)
-- Reciclus: 716 pontos no PR (85 s)
+- Reciclanip: 57 pontos no PR (2 s)
+- Green Eletron pilhas: 97 pontos no PR (16 s)
+- Green Eletron eletroeletrônicos e ABREE: 380 pontos no PR (14 s)
+- Reciclus: 716 pontos no PR (152 s)
 - Jogue Limpo: 62 pontos no PR (0 s)
-- OpenStreetMap: 10 pontos no PR (43 s)
+- OpenStreetMap: 10 pontos no PR (49 s)
   (Mapa das OSCs, colunas: cnpj, tx_razao_social_osc, tx_nome_fantasia_osc, natureza_juridica, matriz_filial, situacao_cadastral, dt_fundacao_osc, removida_do_mosc, data_fechamento, ano_fechamento, tx_endereco_completo, cd_municipio, municipio_nome, UF_Sigla, longitude, latitude, cnae, cnae_secundaria, Area_Assistencia_social, Area_Associacoes_patronais_e_profissionais, Area_Cultura_e_recreacao, Area_Desenvolvimento_e_defesa_de_direitos_e_interesses, Area_Educacao_e_pesquisa, Area_Outras_atividades_associativas, Area_Religiao, Area_Saude, SubArea_Assistencia_social, SubArea_Associacoes_de_atividades_nao_especificadas_anteriormente, SubArea_Associacoes_de_produtores_rurais_pescadores_e_similares, SubArea_Associacoes_empresariais_e_patronais, SubArea_Associacoes_profissionais, SubArea_Atividades_de_apoio_a_educacao, SubArea_Cultura_e_arte, SubArea_Desenvolvimento_e_defesa_de_direitos, SubArea_Educacao_infantil, SubArea_Educacao_profissional, SubArea_Ensino_fundamental, SubArea_Ensino_superior, SubArea_Esportes_e_recreacao, SubArea_Estudos_e_pesquisas)
-- Mapa das OSCs: 91 pontos no PR (16 s)
+- Mapa das OSCs: 91 pontos no PR (17 s)
 
 ## Nas cidades do Desvia
 

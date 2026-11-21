@@ -2141,7 +2141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-5d0dc40 elementor-widget elementor-widget-jet-listing-grid" data-id="5d0dc40" data-element_type="widget" data-e-type="widget" id="pontos-entrega-lista" data-settings="{&quot;columns&quot;:&quot;1&quot;}" data-widget_type="jet-listing-grid.default">
 				<div class="elementor-widget-container">
-					<div class="jet-listing-grid jet-listing"><div class="jet-listing-grid__items grid-col-desk-1 grid-col-tablet-1 grid-col-mobile-1 jet-listing-grid--7476" data-queried-id="4100|WP_Post" data-nav="{&quot;enabled&quot;:false,&quot;type&quot;:null,&quot;more_el&quot;:null,&quot;query&quot;:{&quot;allowed_query_ids&quot;:[&quot;&quot;],&quot;signature&quot;:&quot;ffbc94c36e3ab864a0699c3763479f22b07b00bad422701de41a06bf681421ec&quot;},&quot;widget_settings&quot;:{&quot;lisitng_id&quot;:7476,&quot;posts_num&quot;:20,&quot;columns&quot;:1,&quot;columns_tablet&quot;:1,&quot;columns_mobile&quot;:1,&quot;column_min_width&quot;:240,&quot;column_min_width_tablet&quot;:240,&quot;column_min_width_mobile&quot;:240,&quot;inline_columns_css&quot;:false,&quot;is_archive_template&quot;:&quot;&quot;,&quot;post_status&quot;:[&quot;publish&quot;],&quot;use_random_posts_num&quot;:&quot;&quot;,&quot;max_posts_num&quot;:9,&quot;not_found_message&quot;:&quot;&lt;strong&gt;Busca sem resultados&lt;\/strong&gt;, tente novamente&quot;,&quot;is_masonry&quot;:false,&quot;equal_columns_height&quot;:&quot;&quot;,&quot;use_load_more&quot;:&quot;&quot;,&quot;load_more_id&quot;:&quot;&quot;,&quot;load_more_type&quot;:&quot;click&quot;,&quot;load_more_offset&quot;:null,&quot;use_custom_post_types&quot;:&quot;&quot;,&quot;custom_post_types&quot;:[],&quot;hide_widget_if&quot;:&quot;&quot;,&quot;carousel_enabled&quot;:&quot;&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;arrows&quot;:&quot;true&quot;,&quot;arrow_icon&quot;:&quot;fa fa-angle-left&quot;,&quot;dots&quot;:&quot;&quot;,&quot;autoplay&quot;:&quot;true&quot;,&quot;pause_on_hover&quot;:&quot;true&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;true&quot;,&quot;center_mode&quot;:&quot;&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500,&quot;inject_alternative_items&quot;:&quot;&quot;,&quot;injection_items&quot;:[],&quot;scroll_slider_enabled&quot;:&quot;&quot;,&quot;scroll_slider_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;custom_query&quot;:false,&quot;custom_query_id&quot;:&quot;&quot;,&quot;_element_id&quot;:&quot;pontos-entrega-lista&quot;,&quot;collapse_first_last_gap&quot;:false,&quot;list_tag_selection&quot;:&quot;&quot;,&quot;allowed_listing_ids&quot;:[7476],&quot;list_items_wrapper_tag&quot;:&quot;div&quot;,&quot;list_item_tag&quot;:&quot;div&quot;,&quot;empty_items_wrapper_tag&quot;:&quot;div&quot;,&quot;_jet_engine_settings_signature&quot;:&quot;6c2ba30ecda10d9fa55c9c88f4d4e557811f9484364ae20a7945e573efa79282&quot;}}" data-page="1" data-pages="36" data-listing-source="posts" data-listing-id="7476" data-query-id=""><div class="jet-listing-grid__item jet-listing-dynamic-post-11379 elementor-dcss-6758576503733844" data-post-id="11379"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+					<div class="jet-listing-grid jet-listing"><div class="jet-listing-grid__items grid-col-desk-1 grid-col-tablet-1 grid-col-mobile-1 jet-listing-grid--7476" data-queried-id="4100|WP_Post" data-nav="{&quot;enabled&quot;:false,&quot;type&quot;:null,&quot;more_el&quot;:null,&quot;query&quot;:{&quot;allowed_query_ids&quot;:[&quot;&quot;],&quot;signature&quot;:&quot;ffbc94c36e3ab864a0699c3763479f22b07b00bad422701de41a06bf681421ec&quot;},&quot;widget_settings&quot;:{&quot;lisitng_id&quot;:7476,&quot;posts_num&quot;:20,&quot;columns&quot;:1,&quot;columns_tablet&quot;:1,&quot;columns_mobile&quot;:1,&quot;column_min_width&quot;:240,&quot;column_min_width_tablet&quot;:240,&quot;column_min_width_mobile&quot;:240,&quot;inline_columns_css&quot;:false,&quot;is_archive_template&quot;:&quot;&quot;,&quot;post_status&quot;:[&quot;publish&quot;],&quot;use_random_posts_num&quot;:&quot;&quot;,&quot;max_posts_num&quot;:9,&quot;not_found_message&quot;:&quot;&lt;strong&gt;Busca sem resultados&lt;\/strong&gt;, tente novamente&quot;,&quot;is_masonry&quot;:false,&quot;equal_columns_height&quot;:&quot;&quot;,&quot;use_load_more&quot;:&quot;&quot;,&quot;load_more_id&quot;:&quot;&quot;,&quot;load_more_type&quot;:&quot;click&quot;,&quot;load_more_offset&quot;:null,&quot;use_custom_post_types&quot;:&quot;&quot;,&quot;custom_post_types&quot;:[],&quot;hide_widget_if&quot;:&quot;&quot;,&quot;carousel_enabled&quot;:&quot;&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;arrows&quot;:&quot;true&quot;,&quot;arrow_icon&quot;:&quot;fa fa-angle-left&quot;,&quot;dots&quot;:&quot;&quot;,&quot;autoplay&quot;:&quot;true&quot;,&quot;pause_on_hover&quot;:&quot;true&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;true&quot;,&quot;center_mode&quot;:&quot;&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500,&quot;inject_alternative_items&quot;:&quot;&quot;,&quot;injection_items&quot;:[],&quot;scroll_slider_enabled&quot;:&quot;&quot;,&quot;scroll_slider_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;custom_query&quot;:false,&quot;custom_query_id&quot;:&quot;&quot;,&quot;_element_id&quot;:&quot;pontos-entrega-lista&quot;,&quot;collapse_first_last_gap&quot;:false,&quot;list_tag_selection&quot;:&quot;&quot;,&quot;allowed_listing_ids&quot;:[7476],&quot;list_items_wrapper_tag&quot;:&quot;div&quot;,&quot;list_item_tag&quot;:&quot;div&quot;,&quot;empty_items_wrapper_tag&quot;:&quot;div&quot;,&quot;_jet_engine_settings_signature&quot;:&quot;6c2ba30ecda10d9fa55c9c88f4d4e557811f9484364ae20a7945e573efa79282&quot;}}" data-page="1" data-pages="36" data-listing-source="posts" data-listing-id="7476" data-query-id=""><div class="jet-listing-grid__item jet-listing-dynamic-post-11379 elementor-dcss-7022180813779686" data-post-id="11379"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2157,7 +2157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10577 elementor-dcss-6758576534965499" data-post-id="10577"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10577 elementor-dcss-7022180845037270" data-post-id="10577"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2173,7 +2173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16146 elementor-dcss-6758576549425482" data-post-id="16146"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16146 elementor-dcss-7022180859481267" data-post-id="16146"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2189,7 +2189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16252 elementor-dcss-6758576563969112" data-post-id="16252"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16252 elementor-dcss-7022180873862780" data-post-id="16252"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2205,7 +2205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11371 elementor-dcss-6758576578519203" data-post-id="11371"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-11371 elementor-dcss-7022180888830507" data-post-id="11371"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2221,7 +2221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16055 elementor-dcss-6758576592898167" data-post-id="16055"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16055 elementor-dcss-7022180908923897" data-post-id="16055"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2237,7 +2237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16991 elementor-dcss-6758576615812676" data-post-id="16991"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16991 elementor-dcss-7022180924424543" data-post-id="16991"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2253,7 +2253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16904 elementor-dcss-6758576641092921" data-post-id="16904"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16904 elementor-dcss-7022180939103545" data-post-id="16904"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2269,7 +2269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16992 elementor-dcss-6758576665871847" data-post-id="16992"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16992 elementor-dcss-7022180953666114" data-post-id="16992"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2285,7 +2285,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16993 elementor-dcss-6758576689595222" data-post-id="16993"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16993 elementor-dcss-7022180968118051" data-post-id="16993"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2301,7 +2301,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16994 elementor-dcss-6758576706792265" data-post-id="16994"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16994 elementor-dcss-7022180982373288" data-post-id="16994"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2317,7 +2317,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16995 elementor-dcss-6758576726588498" data-post-id="16995"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-16995 elementor-dcss-7022180996696626" data-post-id="16995"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2333,7 +2333,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10905 elementor-dcss-6758576741417650" data-post-id="10905"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10905 elementor-dcss-7022181011081052" data-post-id="10905"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2349,7 +2349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8776 elementor-dcss-6758576775037722" data-post-id="8776"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8776 elementor-dcss-7022181025384900" data-post-id="8776"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2365,7 +2365,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8792 elementor-dcss-6758576795199712" data-post-id="8792"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8792 elementor-dcss-7022181040047726" data-post-id="8792"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2381,7 +2381,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8789 elementor-dcss-6758576816648736" data-post-id="8789"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8789 elementor-dcss-7022181054319376" data-post-id="8789"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2397,7 +2397,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10906 elementor-dcss-6758576831571162" data-post-id="10906"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10906 elementor-dcss-7022181069235966" data-post-id="10906"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2413,7 +2413,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10903 elementor-dcss-6758576846225856" data-post-id="10903"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10903 elementor-dcss-7022181084080691" data-post-id="10903"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2429,7 +2429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8129 elementor-dcss-6758576867726360" data-post-id="8129"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-8129 elementor-dcss-7022181098829292" data-post-id="8129"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2445,7 +2445,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</div>
 				</div>
-		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10902 elementor-dcss-6758576894198109" data-post-id="10902"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
+		</div><div class="jet-listing-grid__item jet-listing-dynamic-post-10902 elementor-dcss-7022181113360683" data-post-id="10902"  >		<div data-elementor-type="jet-listing-items" data-elementor-id="7476" class="elementor elementor-7476" data-elementor-post-type="jet-engine">
 				<div class="elementor-element elementor-element-b68da96 e-con-full e-flex e-con e-parent" data-id="b68da96" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2ad428b maiusculas elementor-widget elementor-widget-heading" data-id="2ad428b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -2671,7 +2671,7 @@ jQuery.uiBackCompat = true;
 </script>
 <script id="jquery-ui-core-js" src="https://reciclus.org.br/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
 <script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnX":"Compartilhar no X","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.4.1","is_static":false,"experimentalFeatures":{"container":true,"e_mcp_revision_snapshots":true,"nested-elements":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_collection_loop":true},"urls":{"assets":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/reciclus.org.br\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/reciclus.org.br\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"48cd4eba2b","atomicFormsSendForm":"20304fb9c3"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes"},"post":{"id":4100,"title":"Pontos%20de%20Entrega%20%7C%20Reciclus","excerpt":"","featuredImage":"https:\/\/reciclus.org.br\/wp-content\/uploads\/2023\/06\/onde-descartar-banner-1024x273.jpg"}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnX":"Compartilhar no X","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.4.1","is_static":false,"experimentalFeatures":{"container":true,"e_mcp_revision_snapshots":true,"nested-elements":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_collection_loop":true},"urls":{"assets":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/reciclus.org.br\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/reciclus.org.br\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"d49dd79749","atomicFormsSendForm":"c4a757c9b7"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes"},"post":{"id":4100,"title":"Pontos%20de%20Entrega%20%7C%20Reciclus","excerpt":"","featuredImage":"https:\/\/reciclus.org.br\/wp-content\/uploads\/2023\/06\/onde-descartar-banner-1024x273.jpg"}};
 //# sourceURL=elementor-frontend-js-before
 </script>
 <script id="elementor-frontend-js" src="https://reciclus.org.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.4.1"></script>
@@ -2685,7 +2685,7 @@ window._googlesitekit.contentEvents = {"postID":4100,"isReadableSinglePost":fals
 <script id="jet-plugins-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/assets/lib/jet-plugins/jet-plugins.js?ver=1.1.0"></script>
 <script id="jet-engine-jet-smart-filters-compatibility-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/assets/js/frontend/modules/jet-smart-filters.js?ver=3.9.1"></script>
 <script id="jet-engine-frontend-js-extra">
-var JetEngineSettings = {"ajaxurl":"https://reciclus.org.br/wp-admin/admin-ajax.php","ajaxlisting":"https://reciclus.org.br/lista-pontos-entrega/?jsf=jet-engine%3Apontos-entrega-lista&tax=estado%3A11&pagenum=1&nocache=1","restNonce":"e7718a4c3d","hoverActionTimeout":"400","post_id":"4100","sliderLibrary":"swiper","query_builder":{"custom_ids":[]},"addedPostCSS":["7476"],"maps_api_disabled":"1","queried_object_id":"4100","queried_object_class":"WP_Post"};
+var JetEngineSettings = {"ajaxurl":"https://reciclus.org.br/wp-admin/admin-ajax.php","ajaxlisting":"https://reciclus.org.br/lista-pontos-entrega/?jsf=jet-engine%3Apontos-entrega-lista&tax=estado%3A11&pagenum=1&nocache=1","restNonce":"f14f845a48","hoverActionTimeout":"400","post_id":"4100","sliderLibrary":"swiper","query_builder":{"custom_ids":[]},"addedPostCSS":["7476"],"maps_api_disabled":"1","queried_object_id":"4100","queried_object_class":"WP_Post"};
 //# sourceURL=jet-engine-frontend-js-extra
 </script>
 <script id="jet-engine-frontend-js" src="https://reciclus.org.br/wp-content/plugins/jet-engine/assets/js/frontend/frontend.js?ver=3.9.1"></script>
@@ -2696,7 +2696,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
 </script>
 <script id="elementor-pro-frontend-js-before">
-var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/reciclus.org.br\/wp-admin\/admin-ajax.php","nonce":"bbdd553ddc","urls":{"assets":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/reciclus.org.br\/wp-json\/"},"settings":{"lazy_load_background_images":false},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/reciclus.org.br\/wp-admin\/admin-ajax.php","nonce":"60dcd0fe7b","urls":{"assets":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/reciclus.org.br\/wp-json\/"},"settings":{"lazy_load_background_images":false},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/reciclus.org.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
 //# sourceURL=elementor-pro-frontend-js-before
 </script>
 <script id="elementor-pro-frontend-js" src="https://reciclus.org.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.4.1"></script>
@@ -2730,4 +2730,4 @@ var JetSmartFilterSettings = {"ajaxurl":"https://reciclus.org.br/wp-admin/admin-
 </html>
 
 
-<!-- Page cached by LiteSpeed Cache 7.9.3 on 2026-11-18 12:09:41 -->
+<!-- Page cached by LiteSpeed Cache 7.9.3 on 2026-11-21 13:23:05 -->
