@@ -49,18 +49,35 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
     cidades_html = "".join(
         f'<li><a href="residuos/{s}/"><span>{esc(c)}</span><small>{len(contagens[s])} tipos de resíduo</small></a></li>'
         for s, c in cidades.items())
+    n_pts = {cs: sum(1 for p in pontos if cs in p["_cidades"]) for cs in cidades}
+    REGIOES = [("Região de Londrina", ["londrina", "cambe", "ibipora", "rolandia", "arapongas", "apucarana", "cambira", "jandaia-do-sul"]),
+               ("Região de Maringá", ["maringa", "sarandi", "marialva", "mandaguari"])]
+    regioes_html = "".join(
+        f'<div class="regiao"><h3>{esc(nome)}</h3><ul>'
+        + "".join(f'<li><a href="residuos/{s}/"><span>{esc(cidades[s])}</span><small>{n_pts[s]} pontos</small></a></li>'
+                  for s in lista if s in cidades)
+        + "</ul></div>" for nome, lista in REGIOES)
+    FONTES_TXT = [
+        ("IAT", "Instituto Água e Terra: licença ambiental das empresas no Paraná."),
+        ("Ibama (CTF)", "Cadastro Técnico Federal: quem declara atividade com resíduos."),
+        ("Receita Federal", "CNPJ, atividade, endereço e situação de cada empresa."),
+        ("Prefeituras", "Ecopontos, coleta, cooperativas e regras de cada cidade."),
+        ("SINISA", "Quanto lixo cada cidade gera e quanto recicla."),
+        ("Programas de logística reversa", "Reciclus, Green Eletron, ABREE, Reciclanip, Jogue Limpo e LogMed: onde entregar lâmpadas, pilhas, eletrônicos, pneus, embalagens e remédios."),
+    ]
+    fontes_html = "".join(f'<li><b>{esc(n)}</b><span>{esc(t)}</span></li>' for n, t in FONTES_TXT)
     opcoes_tipo = "".join(f'<option value="{s}">{esc(nomes[s][1])}</option>' for s, _ in cats_ordem)
     cats_js = json.dumps({s: nomes[s][1] for s, _ in cats_ordem}, ensure_ascii=False)
     faq = [
-        ("De onde vêm os dados?", "De três fontes públicas: o Instituto Água e Terra (IAT), que dá a licença ambiental no Paraná; o Cadastro Técnico Federal do Ibama; e as prefeituras. Cada empresa mostra de qual fonte veio a informação e em que data consultamos."),
+        ("De onde vêm os dados?", "De fontes públicas: o Instituto Água e Terra (IAT), que dá a licença ambiental no Paraná; o Cadastro Técnico Federal do Ibama; a Receita Federal; as prefeituras; e os programas oficiais de logística reversa. Cada local mostra de qual fonte veio a informação e em que data consultamos."),
         ("Por que aparecem empresas sem licença?", "Porque elas funcionam e você pode encontrá-las de qualquer jeito. O Desvia mostra todas e deixa claro a situação de cada uma: licença válida, vencida ou não localizada nas bases consultadas. Não localizada quer dizer que não achamos a licença nas fontes públicas; a empresa pode ter licença em outro órgão. Antes de contratar, peça a licença atual."),
         ("Sou empresa de coleta ou destinação. Como apareço com licença verificada?", "Mande sua licença pelo WhatsApp. Conferimos com o órgão que emitiu a licença e atualizamos o seu cadastro."),
         ("O Desvia é da prefeitura?", "Não. O Desvia é um projeto independente que reúne informações públicas. As regras oficiais de cada cidade são as da prefeitura e do órgão ambiental."),
     ]
     faq_html = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)
     corpo = f"""<section class="hero-busca">
-  <h1>O que fazer com o que você não usa mais?<br><em>Doar, vender, reciclar ou descartar.</em></h1>
-  <p>Veja onde levar cada coisa em Londrina, Maringá e região: pontos de entrega, brechós, cooperativas e empresas de coleta. Em cada empresa, mostramos a situação da licença ambiental.</p>
+  <h1>Onde descartar, doar ou reciclar no norte do Paraná</h1>
+  <p>Pontos de entrega, brechós, cooperativas e empresas de coleta em {len(cidades)} cidades, com a situação da licença ambiental de cada empresa.</p>
   <form class="busca" id="busca" role="search" toolname="buscar_onde_descartar_formulario" tooldescription="Busca onde descartar um resíduo em uma cidade, com a licença ambiental de cada empresa.">
     <label class="campo"><span>O que você tem?</span><input id="q" name="q" type="search" toolparamdescription="Resíduo a descartar, por exemplo pilha, óleo, entulho" placeholder="sofá, roupa, pilha, remédio, entulho…" autocomplete="off"></label>
     <label class="campo campo-cidade"><span>Cidade</span><select id="cidade" name="cidade" toolparamdescription="Cidade"><option value="">Todas as cidades</option>{opcoes_cidade}</select></label>
@@ -77,7 +94,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   <button type="button" class="limpar limpar-form" data-limpar>✕ Limpar filtros</button>
   </form>
   <button type="button" class="btn-ajuda" data-ajuda>🧭 Não sabe se doa, vende ou descarta? Me ajude a decidir</button>
-  <ul class="numeros"><li><b>{total}</b> pontos e empresas</li><li><b>{n_lic}</b> com licença válida</li><li><b>{len(cidades)}</b> cidades</li><li title="{esc(", ".join(fontes))}"><b>{len(fontes)}</b> fontes consultadas</li></ul>
+  <ul class="selos"><li>{total} pontos e empresas</li><li>{len(cidades)} cidades</li><li title="{esc(", ".join(fontes))}">{len(fontes)} fontes consultadas</li><li>Licença ambiental conferida</li></ul>
 </section>
 
 <section class="ferramenta" id="resultados" data-esperar hidden aria-label="Resultados">
@@ -88,6 +105,22 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   <div class="mapa-wrap"><div id="mapa" role="region" aria-label="Mapa"></div>
     <div class="legenda" role="group" aria-label="Filtrar pela situação da licença"><b>Cor dos pontos</b><small>Toque para mostrar ou esconder</small><button type="button" data-st="valida" aria-pressed="true"><i style="background:#2A7A2A"></i>Licença ambiental válida</button><button type="button" data-st="vencida" aria-pressed="true"><i style="background:#C77700"></i>Licença ambiental vencendo ou vencida</button><button type="button" data-st="publico" aria-pressed="true"><i style="background:#1A3A8F"></i>Serviço público</button><button type="button" data-st="entrega" aria-pressed="true"><i style="background:#2B7A8C"></i>Ponto de entrega</button><button type="button" data-st="nao_localizada" aria-pressed="true"><i style="background:#7A7F8C"></i>Licença ambiental não localizada</button></div>
   </div>
+</section>
+
+<section class="fontes-sec" id="como-funciona">
+  <h2>De onde vêm os dados</h2>
+  <p class="sub">Informações públicas que hoje ficam espalhadas em vários sites, reunidas numa só busca e conferidas todo mês.</p>
+  <ul class="fontes-grade">{fontes_html}</ul>
+</section>
+
+<section class="cidades-sec">
+  <h2>Cidades</h2>
+  <div class="regioes">{regioes_html}</div>
+  {pedir_cidade()}
+</section>
+
+<section class="blocos">
+  <div><h2>Guias de descarte</h2><p class="sub">Como descartar cada resíduo em casa e na empresa: onde levar e o que diz a lei.</p><ul class="grade">{guias_html}</ul><p><a href="guias/">Ver todos os guias →</a></p></div>
 </section>
 
 <section class="para-quem" id="empresas">
@@ -106,23 +139,7 @@ def home(pontos, cidades, nomes, cats_ordem, contagens, ctx, hoje):
   </div>
 </section>
 
-<section class="passos" id="como-funciona">
-  <h2>Como funciona</h2>
-  <ol>
-    <li><b>Reunimos as fontes</b><span>Dados públicos do Instituto Água e Terra (IAT), do Cadastro Técnico Federal do Ibama e das prefeituras, que hoje ficam em sites separados.</span></li>
-    <li><b>Conferimos a licença</b><span>Cada empresa mostra se a licença está válida, vencida ou não localizada, e em que data consultamos.</span></li>
-    <li><b>Você escolhe com segurança</b><span>Filtre pelo resíduo e pela cidade, veja no mapa e fale direto com quem recebe.</span></li>
-  </ol>
-</section>
 
-<section class="blocos">
-  <div><h2>Guias de descarte</h2><p class="sub">Como descartar cada resíduo em casa e na empresa: onde levar e o que diz a lei.</p><ul class="grade">{guias_html}</ul><p><a href="guias/">Ver todos os guias →</a></p></div>
-</section>
-
-<section class="blocos">
-  <div><h2>Cidades</h2><ul class="grade">{cidades_html}</ul>
-  {pedir_cidade()}</div>
-</section>
 
 <section class="faq"><h2>Perguntas frequentes</h2>{faq_html}</section>
 

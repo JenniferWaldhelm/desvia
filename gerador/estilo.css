@@ -501,3 +501,25 @@ body { overflow-x: clip; }
 .avise-me--slim .avise-form button { font-size: .88rem; padding: 7px 14px; }
 .avise-ok { margin: 0; color: var(--escuro); font-weight: 600; }
 .avise-erro { margin: 6px 0 0; color: #c00; font-size: .9rem; }
+
+/* Página inicial limpa (modelo da Jen, 23/11/2026) */
+.hero-busca h1 { font-size: clamp(1.7rem, 4.4vw, 2.6rem); }
+.hero-busca > p { max-width: 620px; margin: 0 auto 22px; color: var(--cinza); }
+.selos { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+.selos li { font-size: .82rem; color: var(--cinza); background: #fff; border: 1px solid var(--cinza-claro); border-radius: 999px; padding: 3px 12px; }
+.fontes-sec, .cidades-sec { padding: 24px 0 8px; }
+.fontes-sec .sub { max-width: 680px; margin: 0 0 16px; color: var(--cinza); }
+.fontes-grade { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 800px) { .fontes-grade { grid-template-columns: 1fr; } }
+.fontes-grade li { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 12px; padding: 18px 16px; }
+.fontes-grade b { display: block; font-family: 'Montserrat', sans-serif; color: var(--escuro); margin-bottom: 4px; }
+.fontes-grade span { font-size: .9rem; color: var(--cinza); }
+.regioes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; text-align: left; }
+.regiao { background: #fff; border: 1px solid var(--cinza-claro); border-radius: 12px; overflow: hidden; }
+.regiao h3 { font-size: 1rem; padding: 12px; border-bottom: 1px solid var(--cinza-claro); color: var(--escuro); }
+.regiao ul { list-style: none; padding: 6px 0; }
+.regiao a { display: flex; justify-content: space-between; gap: 12px; padding: 8px 16px; text-decoration: none; color: var(--escuro); font-weight: 600; }
+.regiao a:hover { background: var(--off-white); }
+.regiao small { color: var(--cinza); font-weight: 400; }
+.cidades-sec .pedir-cidade { margin-top: 14px; text-align: center; }
+.busca .limpar-form { display: none; } /* já existe "Limpar filtros" na lista de resultados */
