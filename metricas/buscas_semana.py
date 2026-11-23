@@ -27,6 +27,7 @@ def api(caminho, **params):
             return json.load(r)
     except urllib.error.HTTPError as e:
         if e.code == 404:
+            print(f"GoatCounter 404 em {caminho}: {e.read()[:200]!r}")
             return {}
         sys.exit(f"GoatCounter respondeu {e.code}: {e.read()[:300]!r}")
 
@@ -40,6 +41,7 @@ while True:
     if not d.get("more"):
         break
 
+print(f"GoatCounter: {len(hits)} caminhos no período; exemplos: {[h.get('path') for h in hits[:8]]}")
 PASTA = Path(__file__).resolve().parent
 semana = f"{inicio:%d/%m/%Y}-{fim:%d/%m/%Y}"
 
