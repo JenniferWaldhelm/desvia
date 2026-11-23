@@ -1,12 +1,8 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 1 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 2
 - Possíveis duplicados: 1
-
-## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
-
-- CBR-003 Almoxarifado da Prefeitura de Cambira (lâmpadas): -23.60062, -51.57786
 
 ## Sem coordenada (pegar no Google Maps)
 
