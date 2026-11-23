@@ -1,8 +1,12 @@
+import urllib.parse
 """Página da cidade: mapa com filtros (estilo da ferramenta de Londrina) + obrigações das empresas."""
 import json
 import re
 from sinonimos import SINONIMOS
 from html import escape as _esc
+
+
+PEDIR_RESIDUO = "https://docs.google.com/forms/d/e/1FAIpQLSdVWXuT2sFSa57aPxEIei0YLQuAFriagAevpUHBohCyu9sAWQ/viewform?usp=pp_url"  # formulário "Pedir um resíduo ou ponto" (entry.2064153661 = resíduo, entry.1952163065 = cidade)
 
 
 def esc(t):
@@ -386,11 +390,13 @@ def corpo_hub(cid_slug, cidade, pts, cats_ordem, nomes, por_cat, ctx):
 
 {ctx.get("servicos", "")}
 
+<p class="pedir-cidade">Não achou o resíduo que procurava em {esc(cidade)}? <a href="{PEDIR_RESIDUO}&entry.1952163065={urllib.parse.quote(cidade)}" target="_blank" rel="noopener">Peça para incluir</a>. Os pedidos mais frequentes entram primeiro.</p>
 
 <script>
 var PONTOS = {dados_js(pts, cid_slug, ctx)};
 var CATS = {cats_js};
 var SINONIMOS = {json.dumps(SINONIMOS, ensure_ascii=False)};
+var PEDIR_RESIDUO = "https://docs.google.com/forms/d/e/1FAIpQLSdVWXuT2sFSa57aPxEIei0YLQuAFriagAevpUHBohCyu9sAWQ/viewform?usp=pp_url";
 var DESVIA_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdV7aBhtu6Lx6uHXM5MxB13WXaX9or0uAkJa9rJz395m_Rj4Q/viewform";
 var GRUPOS = {json.dumps(grupos(ctx), ensure_ascii=False)};
 var DESVIA_CIDADES = {json.dumps({cid_slug: cidade}, ensure_ascii=False)};

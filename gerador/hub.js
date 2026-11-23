@@ -154,6 +154,11 @@
     var busca = estado.q ? ' <b>' + esc(estado.q) + '</b>' : '';
     var extra = (estado.cat || estado.lic || estado.loc || estado.p !== 'todos') ? ' com esses filtros' : '';
     var html = '<p class="vazio">Não encontramos' + busca + onde + (extra || (!estado.cid && !estado.q ? ' nesta cidade' : '')) + '.</p>';
+    if (window.PEDIR_RESIDUO && (estado.q || estado.cat)) {
+      var oque = estado.q || (CATS[estado.cat] || '');
+      html += '<p class="vazio pedir">Não achou? <a href="' + PEDIR_RESIDUO + '&entry.2064153661=' + encodeURIComponent(oque) +
+        ((nomeCidade || (UMA_CIDADE ? DESVIA_CIDADES[Object.keys(DESVIA_CIDADES)[0]] : '')) ? '&entry.1952163065=' + encodeURIComponent(nomeCidade || DESVIA_CIDADES[Object.keys(DESVIA_CIDADES)[0]]) : '') + '" target="_blank" rel="noopener">Peça para incluir ' + esc(oque) + '</a>. Os pedidos mais frequentes entram primeiro.</p>';
+    }
     // Se filtrou por cidade e há resultado sem o filtro de cidade, sugere ampliar
     if (estado.cid && !estado.q) {
       var nSemCidade = PONTOS.filter(function (p) {
