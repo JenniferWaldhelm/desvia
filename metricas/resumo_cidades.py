@@ -7,6 +7,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 PASTA = Path(__file__).resolve().parent
+NOMES = {"maringa": "Maringá", "rolandia": "Rolândia", "cambe": "Cambé", "ibipora": "Ibiporã",
+         "jandaia-do-sul": "Jandaia do Sul"}
 
 
 def ler(nome):
@@ -41,7 +43,7 @@ for c in cidades:
     if c == "todas":
         nome = "Busca geral (sem cidade escolhida)"
     else:
-        nome = c.replace("-", " ").title()
+        nome = NOMES.get(c, c.replace("-", " ").title())
     out += [f"## {nome}", ""]
     if pag[c]:
         out.append("Páginas de resíduo mais visitadas: " + "; ".join(f"{k} ({v})" for k, v in pag[c].most_common(8)) + ".")
