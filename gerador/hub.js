@@ -24,6 +24,11 @@
     if (!CATS[cat]) return;
     SINONIMOS[cat].concat([CATS[cat]]).forEach(function (w) { SIN.push([norm(w), cat]); });
   });
+  // palavras que não dizem qual é o resíduo: ignoradas na busca ("fralda usada" não pode virar "óleo usado")
+  var VAZIAS = ['de', 'da', 'do', 'das', 'dos', 'e', 'o', 'a', 'os', 'as', 'um', 'uma', 'para', 'pra', 'onde', 'como', 'descartar',
+    'descarte', 'jogar', 'fora', 'levar', 'doar', 'usado', 'usada', 'usados', 'usadas', 'velho', 'velha', 'velhos', 'velhas',
+    'quebrado', 'quebrada', 'quebrados', 'quebradas', 'antigo', 'antiga', 'antigos', 'antigas', 'estragado', 'estragada',
+    'vencido', 'vencida', 'vencidos', 'vencidas', 'sem', 'uso', 'meu', 'minha', 'em', 'no', 'na'];
   function parecido(a, b) {  // tolera um erro de digitação em palavras de 5+ letras
     if (a === b) return true;
     if (a.length < 5 || Math.abs(a.length - b.length) > 1) return false;
@@ -37,7 +42,7 @@
   }
   function catsDaBusca(q) {
     var t = norm(q).trim(); if (!t) return [];
-    var palavras = t.split(/\s+/).filter(function (w) { return w.length > 1 && ['de', 'da', 'do', 'e', 'o', 'a', 'os', 'as', 'para', 'onde', 'descartar', 'jogar', 'fora'].indexOf(w) < 0; });
+    var palavras = t.split(/\s+/).filter(function (w) { return w.length > 1 && VAZIAS.indexOf(w) < 0; });
     var achou = {};
     SIN.forEach(function (s) {
       var w = s[0], cat = s[1];
@@ -68,7 +73,7 @@
     if (estado.q) {
       var qc = estado.qcats || [];
       for (var k = 0; k < qc.length; k++) if (p.c.indexOf(qc[k]) >= 0) return true;
-      var termos = norm(estado.q).split(/\s+/).filter(Boolean);
+      var termos = norm(estado.q).split(/\s+/).filter(function (w) { return w && VAZIAS.indexOf(w) < 0; });
       for (var i = 0; i < termos.length; i++) if (p._txt.indexOf(termos[i]) < 0) return false;
     }
     return true;
