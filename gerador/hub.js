@@ -200,12 +200,17 @@
   function registrar(caminho) {
     try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: caminho, title: caminho, event: true }); } catch (e) {}
   }
+  function cidReg() {
+    if (estado.cid) return estado.cid;
+    var ks = Object.keys(window.DESVIA_CIDADES || {});
+    return ks.length === 1 ? ks[0] : 'todas';
+  }
   function registrarBusca(n) {
     clearTimeout(tBusca);
     var q = norm(estado.q || '').trim();
     if (q.length < 3) return;
     tBusca = setTimeout(function () {
-      registrar((n ? 'busca/' : 'busca-sem-resultado/') + (estado.cid || 'todas') + '/' + q.replace(/\s+/g, '-'));
+      registrar((n ? 'busca/' : 'busca-sem-resultado/') + cidReg() + '/' + q.replace(/\s+/g, '-'));
     }, 1500);
   }
   function contaFiltros() {
@@ -247,7 +252,7 @@
       navigator.geolocation.getCurrentPosition(function (g) {
         estado.pos = [g.coords.latitude, g.coords.longitude];
         bt.textContent = '✕ Ordenado por distância'; bt.setAttribute('aria-pressed', 'true');
-        registrar('perto-de-mim/' + (estado.cid || 'todas'));
+        registrar('perto-de-mim/' + cidReg());
         render();
         var r = document.getElementById('resultados') || document.getElementById('lista');
         if (r && r.scrollIntoView) r.scrollIntoView({ behavior: 'smooth', block: 'start' });

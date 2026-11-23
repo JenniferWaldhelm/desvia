@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Baixa do GoatCounter as buscas SEM resultado dos últimos 7 dias e acrescenta em
-metricas/buscas-sem-resultado.csv (semana, termo, cidade, contagem). A revisão semanal lê daqui
+"""Baixa do GoatCounter os últimos 7 dias e acrescenta em metricas/: buscas.csv (tudo o que foi
+buscado, por cidade), paginas-residuo.csv (visitas a cada página de resíduo) e
+buscas-sem-resultado.csv (semana, termo, cidade, contagem). A revisão semanal lê daqui
 e propõe sinônimos para a Jen aprovar. Precisa do segredo GOATCOUNTER_TOKEN."""
 import csv
 import json
@@ -39,26 +40,48 @@ while True:
     if not d.get("more"):
         break
 
-arq = Path(__file__).resolve().parent / "buscas-sem-resultado.csv"
+PASTA = Path(__file__).resolve().parent
 semana = f"{inicio:%d/%m/%Y}-{fim:%d/%m/%Y}"
-ja = set()
-if arq.exists():
+
+
+def ja_tem(arq):
+    if not arq.exists():
+        return False
     with open(arq, encoding="utf-8") as f:
-        ja = {r["semana"] for r in csv.DictReader(f)}
-novas = []
+        return any(r["semana"] == semana for r in csv.DictReader(f))
+
+
+def gravar(arq, cab, linhas):
+    if ja_tem(arq):
+        print(f"{arq.name}: semana {semana} já registrada.")
+        return
+    novo = not arq.exists()
+    with open(arq, "a", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        if novo:
+            w.writerow(cab)
+        for r in sorted(linhas, key=lambda r: -r[-1]):
+            w.writerow(r)
+
+
+sem, todas, paginas = [], [], []
 for h in hits:
-    partes = str(h.get("path", "")).split("/", 2)  # busca-sem-resultado/<cidade>/<termo>
-    if partes[0] == "busca-sem-resultado" and len(partes) == 3:
-        novas.append([semana, urllib.parse.unquote(partes[2]).replace("-", " "), partes[1], h.get("count", 0)])
-if semana in ja:
-    sys.exit(f"Semana {semana} já registrada.")
-novo = not arq.exists()
-with open(arq, "a", newline="", encoding="utf-8") as f:
-    w = csv.writer(f)
-    if novo:
-        w.writerow(["semana", "termo", "cidade", "contagem"])
-    for r in sorted(novas, key=lambda r: -r[3]):
-        w.writerow(r)
-print(f"Semana {semana}: {len(novas)} buscas sem resultado.")
-for r in sorted(novas, key=lambda r: -r[3])[:30]:
-    print(f"- {r[1]} ({r[2]}): {r[3]}")
+    caminho = str(h.get("path", "")).strip("/")
+    partes = caminho.split("/", 2)
+    n = h.get("count", 0)
+    if partes[0] in ("busca", "busca-sem-resultado") and len(partes) == 3:
+        termo = urllib.parse.unquote(partes[2]).replace("-", " ")
+        achou = "sim" if partes[0] == "busca" else "não"
+        todas.append([semana, partes[1], termo, achou, n])
+        if achou == "não":
+            sem.append([semana, termo, partes[1], n])
+    elif partes[0] == "residuos" and len(partes) == 3 and partes[2]:
+        paginas.append([semana, partes[1], partes[2].strip("/"), n])
+
+# buscas-sem-resultado.csv continua igual (a revisão semanal de sinônimos lê daqui)
+gravar(PASTA / "buscas-sem-resultado.csv", ["semana", "termo", "cidade", "contagem"], sem)
+gravar(PASTA / "buscas.csv", ["semana", "cidade", "termo", "achou", "contagem"], todas)
+gravar(PASTA / "paginas-residuo.csv", ["semana", "cidade", "residuo", "visitas"], paginas)
+print(f"Semana {semana}: {len(todas)} termos buscados ({len(sem)} sem resultado), {len(paginas)} páginas de resíduo visitadas.")
+for r in sorted(sem, key=lambda r: -r[3])[:30]:
+    print(f"- sem resultado: {r[1]} ({r[2]}): {r[3]}")
