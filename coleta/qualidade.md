@@ -1,14 +1,8 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 3 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 2
 - Possíveis duplicados: 1
-
-## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
-
-- CAM-007 Prefeitura de Cambé: aterro sanitário: -23.06551, -51.26145
-- CAM-041 Droga Raia Cambé: -23.28040, -51.28016
-- CAM-042 Sicoob Ouro Verde: -23.28822, -51.27866
 
 ## Sem coordenada (pegar no Google Maps)
 
