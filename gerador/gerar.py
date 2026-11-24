@@ -492,6 +492,9 @@ def status_licenca(p):
 def pessoa_fisica(p):
     if p["CNPJ"].strip():
         return False
+    # loja, farmácia, shopping e ponto público de entrega são estabelecimentos abertos ao público: o endereço aparece
+    if p.get("Tipo de ponto", "") in ("PEV privado", "PEV público"):
+        return False
     nome = " " + norm(p["Nome"]) + " "
     return not any(t in nome for t in EMPRESA_TOKENS)
 
