@@ -1,9 +1,9 @@
-# RAPP/IBAMA no Paraná (19/11/2026)
+# RAPP/IBAMA no Paraná (25/11/2026)
 
 - Linhas do Paraná: 232648
 - Empresas (CNPJ) do Paraná: 9329
-- Já estão no Desvia: 70 (21 com categorias que faltam no cadastro)
-- Recebem resíduo de terceiros e não estão no Desvia: 273
+- Já estão no Desvia: 83 (16 com categorias que faltam no cadastro)
+- Recebem resíduo de terceiros e não estão no Desvia: 260
 - Recebem cinza (destinador, armazenador ou reciclador): 38
 
 ## Avisos
