@@ -125,7 +125,7 @@
     if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';
-    if (p.emp && !p.cf && window.CONFIRMAR_EMPRESA) h += '<p class="sou-empresa"><a href="' + CONFIRMAR_EMPRESA + '" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>';
+    if (p.emp && !p.cf && window.CONFIRMAR_EMPRESA) h += '<p class="sou-empresa"><a href="' + CONFIRMAR_EMPRESA + '&entry.538366619=' + encodeURIComponent(p.n) + '&entry.1658842514=' + encodeURIComponent(String(p.id).toUpperCase()) + '" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>';
     return h + '</article>';
   }
 

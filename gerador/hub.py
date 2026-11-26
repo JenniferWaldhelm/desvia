@@ -6,8 +6,8 @@ from sinonimos import SINONIMOS
 from html import escape as _esc
 
 
-# Formulário "Confirmar dados da empresa" (vazio = link escondido). PRÉVIA: "#confirmar" até a Jen criar o formulário.
-CONFIRMAR_EMPRESA = "#confirmar"
+# Formulário "Atualizar informações da empresa" (vazio = link escondido). entry.538366619 = nome, entry.1658842514 = código do Desvia
+CONFIRMAR_EMPRESA = "https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url"
 PEDIR_RESIDUO = "https://docs.google.com/forms/d/e/1FAIpQLSdVWXuT2sFSa57aPxEIei0YLQuAFriagAevpUHBohCyu9sAWQ/viewform?usp=pp_url"  # formulário "Pedir um resíduo ou ponto" (entry.2064153661 = resíduo, entry.1952163065 = cidade)
 
 
