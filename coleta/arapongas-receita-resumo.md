@@ -9,10 +9,10 @@
 
 Lista completa em arapongas-receita.csv. Conferir com a Jen antes de gravar na planilha.
 
-## Licenças (conferido em 19/11/2026)
+## Licenças (conferido em 26/11/2026)
 
-- IAT por CNPJ: 220 consultados, 595 registros de licença
-- Novas com licença no IAT: 56 (só AA: 0; vencidas: 17)
+- IAT por CNPJ: 223 consultados, 596 registros de licença
+- Novas com licença no IAT: 56 (só AA: 0; vencidas: 18)
 - Novas com inscrição de resíduos no CTF/IBAMA: 7
 - Novas sem licença nem CTF: 157
 
