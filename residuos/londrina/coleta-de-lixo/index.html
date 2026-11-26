@@ -31,6 +31,15 @@
 
 <p class="regra">Os setores e dias de coleta podem mudar quando há novo contrato do serviço (licitação). Confira sempre a fonte oficial antes de colocar o lixo para fora.</p>
 
+<section class="dia-coleta" id="dia-coleta" data-setores="../setores.geojson" data-lat="-23.3045" data-lng="-51.1696">
+<h2>Em que dia passa a coleta na sua rua?</h2>
+<p>Use a localização do celular ou toque na sua casa no mapa. Mostramos os dias da coleta comum e da coleta seletiva do seu setor.</p>
+<p class="dc-botoes"><button type="button" id="dc-gps" class="principal">Usar minha localização</button><button type="button" id="dc-mapa-btn">Marcar no mapa</button></p>
+<div id="dc-mapa" class="dc-mapa" hidden></div>
+<div id="dc-res" class="dc-res" aria-live="polite" hidden></div>
+<p class="fonte">Fonte: CMTU Londrina (GeoLondrina, setores da coleta domiciliar e da coleta seletiva), consulta em 26/11/2026. Sua localização não é guardada.</p>
+<script src="../../dia-coleta.js" defer></script>
+</section>
 <h2>Como descobrir o dia da coleta na sua rua</h2>
 <ol class="lista-texto">
 <li>Abra o mapa oficial da coleta no botão acima.</li>

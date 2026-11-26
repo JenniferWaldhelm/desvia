@@ -34,7 +34,8 @@
     achados = [];
     SET.features.forEach(function (f) {
       var g = f.geometry, polys = g.type === 'Polygon' ? [g.coordinates] : g.coordinates, t = f.properties.tipo;
-      if (polys.some(function (p) { return dentro(lng, lat, p[0]); })) { out[t].push(f.properties); achados.push(f); }
+      // dentro do anel externo e fora dos buracos (em Londrina um setor noturno fica encaixado dentro de outro)
+      if (polys.some(function (p) { return dentro(lng, lat, p[0]) && !p.slice(1).some(function (b) { return dentro(lng, lat, b); }); })) { out[t].push(f.properties); achados.push(f); }
       else polys.forEach(function (p) { var d = distBorda(lat, lng, p[0]); if (d < 80 && (!perto[t] || d < perto[t].d)) perto[t] = { d: d, p: f.properties, f: f }; });
     });
     ['comum', 'seletiva'].forEach(function (t) { if (!out[t].length && perto[t]) { out[t].push(perto[t].p); achados.push(perto[t].f); } });
@@ -43,8 +44,21 @@
   function linha(lista, rotulo) {
     if (!lista.length) return '<p><b>' + rotulo + ':</b> não achamos este ponto nos setores do mapa da prefeitura. Confirme o dia com a prefeitura ou com os vizinhos.</p>';
     var vistos = {};
-    return lista.filter(function (p) { var k = p.dias + p.turno; if (vistos[k]) return false; return (vistos[k] = true); })
-      .map(function (p) { return '<p><b>' + rotulo + ':</b> ' + dias(p.dias) + (p.turno ? ' (' + p.turno + ')' : '') + '.</p>'; }).join('');
+    return lista.filter(function (p) { var k = p.dias + p.turno + (p.horario || '') + (p.cooperativa || ''); if (vistos[k]) return false; return (vistos[k] = true); })
+      .map(function (p) {
+        var quando = [p.turno, p.horario].filter(Boolean).join(', ');
+        var txt = '<p><b>' + rotulo + ':</b> ' + dias(p.dias) + (quando ? ' (' + quando + ')' : '') + '.';
+        if (p.cooperativa) txt += ' Quem recolhe: ' + esc(p.cooperativa) + (p.telefone ? ', ' + fones(p.telefone) : '') + '.';
+        return txt + '</p>';
+      }).join('');
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  // "(43) 3341-0398 / (43) 99640-1433" vira links de ligar
+  function fones(t) {
+    return t.split('/').map(function (n) {
+      n = n.trim(); var d = n.replace(/\D/g, '');
+      return d.length >= 10 ? '<a href="tel:+55' + d + '">' + esc(n) + '</a>' : esc(n);
+    }).join(' ou ');
   }
   function mostra(lat, lng) {
     var r = acha(lat, lng);
