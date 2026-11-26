@@ -1,12 +1,8 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 1 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 50
 - Possíveis duplicados: 4
-
-## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
-
-- ARA-632 Raia Drogasil – Av. Arapongas: -23.41318, -51.43283
 
 ## Sem coordenada (pegar no Google Maps)
 
