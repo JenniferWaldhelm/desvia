@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Reciplast Recicladora de Plásticos Ltda ME", "a": -23.52491, "o": -51.44424, "id": "apu-022", "s": "vencida"}, {"n": "V. Farias", "a": -23.54, "o": -51.45629, "id": "apu-020", "s": "nao_localizada"}];
+  var pts = [{"n": "Bioverde Reciclagem Ltda", "a": -23.52368, "o": -51.43637, "id": "apu-032", "s": "valida"}, {"n": "Ferro Velho Formigao (Formigao Ferragens Ltda)", "a": -23.56017, "o": -51.43429, "id": "apu-037", "s": "valida"}, {"n": "Iberica Embalagens (Iberica Polimeros Ltda)", "a": -23.58095, "o": -51.55575, "id": "apu-038", "s": "valida"}, {"n": "Iron Comercio de Sucatas e Ferragens (Iron Comercio de Sucatas e Ferragens Ltda)", "a": -23.52765, "o": -51.45316, "id": "apu-039", "s": "valida"}, {"n": "Reciplast Recicladora de Plásticos Ltda ME", "a": -23.52491, "o": -51.44424, "id": "apu-022", "s": "vencida"}, {"n": "Ambiental Reciclagem Ltda", "a": -23.52284, "o": -51.44699, "id": "apu-028", "s": "nao_localizada"}, {"n": "Aoucarana Reciclagem (Apucarana Metais e Reciclagem Ltda)", "a": -23.56017, "o": -51.43429, "id": "apu-030", "s": "nao_localizada"}, {"n": "V. Farias", "a": -23.54, "o": -51.45629, "id": "apu-020", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);

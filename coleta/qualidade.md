@@ -1,68 +1,65 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 57 (já aparecem no mapa)
-- Endereços que o OpenStreetMap não achou: 7
+- Coordenadas achadas nesta rodada: 54 (já aparecem no mapa)
+- Endereços que o OpenStreetMap não achou: 13
 - Possíveis duplicados: 3
 
 ## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
 
-- LDA-437 Jv Paletes e Reciclagem Ltda: -23.30763, -51.20436
-- LDA-440 Lig Cacambas (V.C. Cacambas Ltda): -23.28096, -51.21813
-- LDA-441 Lira Eps Reciclagem: -23.32944, -51.17940
-- LDA-442 Londri Verde Ambiental: -23.28649, -51.17506
-- LDA-443 Londrimetais: -23.29334, -51.13050
-- LDA-444 Londrimetais Sucatas Ltda: -23.29334, -51.13050
-- LDA-446 Maxflux Desentupidora Ltda: -23.30164, -51.13697
-- LDA-447 Maxiligas Industria e Comercio de Metais Ltda: -23.30771, -51.16928
-- LDA-448 Metalvale Comercio de Residuos e Servicos Ambientais Ltda: -23.29348, -51.10960
-- LDA-449 Monteiro Aparas Ltda: -23.30858, -51.18634
-- LDA-450 Msplast Industria e Comercio de Polimeros Reciclados Ltda: -23.26633, -51.23753
-- LDA-451 Neriah Dedetizadora e Desentupidora Ltda: -23.26256, -51.17942
-- LDA-452 Nortesul Comercio de Sucatas Ltda: -23.28554, -51.20702
-- LDA-453 Paulo Pereira Reciclagem Ltda: -23.30658, -51.15639
-- LDA-454 Pblon Reciclagem e Metais: -23.30346, -51.19016
-- LDA-456 Pl Transportes de Residuos e Terraplanagem: -23.37207, -51.16021
-- LDA-458 Plastini Recuperadora de Materiais Plasticos Ltda: -23.29478, -51.12281
-- LDA-459 Plastini Recuperadora de Materiais Plasticos Ltda: -23.29503, -51.12167
-- LDA-460 Polako Metais (Ede Carlos da Silva & Cia Ltda): -23.35469, -51.14179
-- LDA-461 R Lombarde Plasticos Ltda: -23.28768, -51.09804
-- LDA-462 Recicla Eletronicos: -23.37130, -51.12446
-- LDA-463 Recimag Industria e Comercio de Embalagens Ltda: -23.28583, -51.15591
-- LDA-464 Republica da Sucata Comercio de Sucatas Ltda: -23.29692, -51.19247
-- LDA-465 Revita Engenharia S.A.: -23.38113, -51.08394
-- LDA-467 Rr Sucatas Ltda: -23.35009, -51.16293
-- LDA-469 Sallve Ambiental Ltda: -23.26003, -51.16481
-- LDA-470 Soares Cacamba e Terraplenagem Ltda: -23.27109, -51.16586
-- LDA-471 Sos Cacambas: -23.31951, -51.11746
-- LDA-472 Sos Moreira Desentupidora e Oficina Mecanica Ltda: -23.28469, -51.20253
-- LDA-473 Tem Tem Pneus: -23.31031, -51.12681
-- LDA-474 Tubarao Cacambas (R F Quilis Ltda): -23.30123, -51.13657
-- LDA-475 Vergoti Comercio de Metais Ltda: -23.29863, -51.16637
-- LDA-476 Vergoti Comercio de Metais Ltda: -23.29863, -51.16637
-- LDA-477 Vigor Sucatas Ltda: -23.29055, -51.12876
-- LDA-478 Volpe Ambiental: -23.28554, -51.20702
-- LDA-479 Zandona Cacambas Ltda: -23.28554, -51.20702
-- MGA-362 A Coleta (Borges & Roman Ltda -me): -23.40383, -51.87757
-- MGA-363 A-ws Ambiental e Sustentabilidade Ltda: -23.45412, -51.90822
-- MGA-365 Aero Auto Fossa e Desentupidora (Auto Fossa e Desentupidora Ltda): -23.42271, -51.95797
-- MGA-366 Agiliza Rua Limpa: -23.42539, -51.93395
-- MGA-367 Aguia Azul- Nogarotto Cacambas Ltda: -23.39062, -51.89335
-- MGA-370 Aluminios Maringa (Germojeschi Comercio de Metais Ltda): -23.40654, -51.90396
-- MGA-372 Auto Fossa e Desentupidora Everest: -23.40336, -51.97682
-- MGA-374 Brasil Metais: -23.40389, -51.87819
-- MGA-375 C L Metais (C. da Silva Lomes Ltda): -23.40799, -51.91573
-- MGA-377 Cacambas Operaria (Disk Entulho Operaria Ltda.): -23.42965, -51.92291
-- MGA-378 Cacambas Sp Ltda: -23.37949, -51.96631
-- MGA-379 Cacambas Uniao: -23.39305, -51.88752
-- MGA-381 Coletas de Entulhos Real Eireli (Coletas de Entulhos Real Ltda): -23.42447, -51.90173
-- MGA-382 Colombo Desentupimento e Hidrojateamento Ltda: -23.39728, -51.98208
-- MGA-383 Constroeste: -23.46118, -51.91079
-- MGA-384 Contorno Sul Resibox Disk Entulhos (Resibox Disk Entulhos Ltda): -23.45104, -51.99794
-- MGA-385 Cooperativa de Trabalho, Cultura e Educacao de Reciclagem Criativa de Maringa Recria Inga: -23.43166, -51.95032
-- MGA-387 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis): -23.45524, -52.00147
-- MGA-388 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis): -23.45524, -52.00147
-- MGA-391 Copasul Metais (Copasul Residuos Metalicos Ltda): -23.37252, -51.92310
-- MGA-392 Covidro Comercio de Sucatas de Vidro (Gg Sucatas de Vidro Ltda): -23.35564, -51.89830
+- MGA-393 Covidros Comercio de Sucatas de Vidro: -23.35564, -51.89830
+- MGA-396 Desentupidora Maringa: -23.40171, -51.89637
+- MGA-397 Destak Comercio Atacadista de Produtos Reciclaveis Ltda: -23.41357, -51.98436
+- MGA-398 Digital Telecon (Ferro Velho do Souza Ltda.): -23.45119, -51.91982
+- MGA-399 Disk Entulho Cancao: -23.39509, -51.92098
+- MGA-400 Disk Entulho Trabuco (Luzia Lopes de Souza & Cia Ltda): -23.41604, -51.95459
+- MGA-401 Eco Parana Comercio de Sucatas Ltda: -23.46998, -51.95183
+- MGA-402 Eco Vidros Ltda: -23.36231, -51.89924
+- MGA-403 Entul Servicos de Locacao de Cacambas Ltda: -23.41997, -51.92950
+- MGA-404 Entul Servicos de Locacao de Cacambas Ltda: -23.39904, -51.97725
+- MGA-405 Ferro Velho Bill: -23.38061, -51.95987
+- MGA-406 Ferro Velho Maringa (Germojeschi Materiais Ferrosos e Nao Ferrosos Ltda): -23.42556, -51.88544
+- MGA-407 Ferro Velho do Pedrinho: -23.45782, -51.92910
+- MGA-408 Ferro Velho do Polaco Ltda: -23.41990, -51.93189
+- MGA-410 G L Costa Prestadora de Servicos Ltda: -23.45246, -51.94066
+- MGA-411 G&s Transporte, Logistica e Locação de Maquinas e Equipamentos Ltda: -23.45353, -51.99236
+- MGA-413 Hidrotec Desentupidora Ltda: -23.38204, -51.92978
+- MGA-414 Higieclean: -23.37590, -51.91892
+- MGA-415 Imperium Materiais Reciclados: -23.40961, -51.93117
+- MGA-416 Isa Verde Ambiental (Isa Madureira Transportes Ltda): -23.41174, -51.87998
+- MGA-417 Itaipu Disk Entulhos (Itaipu Transportes e Locacoes Ltda): -23.40954, -51.89596
+- MGA-420 Lanali Ambiental (Labsam Servicos Ambientais Lab. Tec. Ltda): -23.43264, -51.95190
+- MGA-421 Leonardo da Silva Zbronski Sucatas Ltda.: -23.40398, -51.92876
+- MGA-424 Mam Sucatas e Transportes: -23.40214, -51.87646
+- MGA-428 Moreira Sucatas: -23.40046, -51.87916
+- MGA-429 Ms Plasticos: -23.41982, -51.95040
+- MGA-430 N'ativa Ambiental (Nativa Ambiental Ltda): -23.42251, -51.95817
+- MGA-431 Nativa Reciclagem e Gestao Ambiental Ltda: -23.49887, -51.97010
+- MGA-433 New Plastic: -23.37255, -51.94521
+- MGA-434 Original Clean Desentupidora e Auto Fossa (Original Clean Servicos de Auto Fossa Ltda): -23.42389, -51.92062
+- MGA-435 Parana Metais (Maringa Comercio de Metais Ltda): -23.38390, -51.94955
+- MGA-436 Parana Metais 2: -23.36231, -51.89924
+- MGA-437 Petrolmarques: -23.35571, -51.89663
+- MGA-438 Pinheiro & Drigo Ltda ME: -23.42888, -51.97212
+- MGA-439 Plush Comercio de Papeis Ltda: -23.42336, -51.95573
+- MGA-440 Polixpan Reciclagem Ltda: -23.37548, -51.86079
+- MGA-443 Rcr Gestao de Residuos Ltda: -23.50949, -51.99442
+- MGA-445 Reciclagem Santa Rosa Ltda: -23.42122, -51.97333
+- MGA-446 Reciclar (Bandeirantes Comercio de Papeis Ltda): -23.42055, -51.98095
+- MGA-448 Rj Metais (Rosivani Jose Cardoso Metais e Sucatas Ltda): -23.41821, -51.93962
+- MGA-449 Silva e Maia Manutencao (Silva Manutencao Ltda): -23.40402, -51.89893
+- MGA-451 Sp4 Participações Ltda: -23.42790, -51.95957
+- MGA-452 Suprematec Desentupidora Ltda: -23.37586, -51.93147
+- MGA-453 Teruel Disk Entulhos Ltda: -23.42540, -51.93431
+- MGA-454 Tp Pecas e Pneus (Transpanorama Transportes S.A.): -23.40961, -51.93117
+- MGA-458 Versa Engenharia Ambiental: -23.45957, -51.95782
+- MGA-461 Wl Desentupidora: -23.40335, -51.93518
+- APU-028 Ambiental Reciclagem Ltda: -23.52284, -51.44699
+- APU-030 Aoucarana Reciclagem (Apucarana Metais e Reciclagem Ltda): -23.56017, -51.43429
+- APU-032 Bioverde Reciclagem Ltda: -23.52368, -51.43637
+- APU-034 Celso Cacambas (Cacambas Cidade Alta Ltda): -23.52630, -51.45697
+- APU-037 Ferro Velho Formigao (Formigao Ferragens Ltda): -23.56017, -51.43429
+- APU-038 Iberica Embalagens (Iberica Polimeros Ltda): -23.58095, -51.55575
+- APU-039 Iron Comercio de Sucatas e Ferragens (Iron Comercio de Sucatas e Ferragens Ltda): -23.52765, -51.45316
 
 ## Sem coordenada (pegar no Google Maps)
 
@@ -73,6 +70,12 @@
 - LDA-457 Plasticos Brasilon (Lombarde & Cia Ltda) (Estrada Da Pedreira Pavilon//Urbalon, Km 1.6, 02, Gleba Primavera, Londrina)
 - MGA-364 Acoleta (Rua Manoel Prudencio De Brito, 161, Gleba Patrimonio Maringa, Maringá)
 - MGA-369 Alltech Engenharia Ambiental e Ocupacional (Alltech Ocupacional Seg. do Trabalho e Meio Ambiente Ltda) (Rua Maria Cleusa Milleo Romano,Professora, 66, Gleba Ribeirao Pinguim, Maringá)
+- MGA-395 Desentupidora Avanci Ltda (Rua Guido Antonio Germani,Pioneiro, 489, Jardim Dias Ii, Maringá)
+- MGA-419 J3f Reciclagem (Fabiane Cristina Luna de Lima Reciclagem Ltda) (Rua Santa Edwirges, 137, Parque Industrial, Maringá)
+- MGA-426 Maringa-comercio de Aparas de Papeis Ltda (Avenida Fernao Dias, 680, Zona 01, Maringá)
+- MGA-427 Milton Comercio de Metais (Silva & Silveira Ltda) (Margem B, 20273, Jardim Everest, Maringá)
+- MGA-459 Voidelo Comercio de Aparas Ltda (Rua Santa Edwirges, 113, Parque Industrial, Maringá)
+- APU-035 Coletudo Cacambas (Wlk Ltda) (Rua Ubilar Guerra Lobo, 527, Núcleo Habitacional Parigot De Souza, Apucarana)
 
 ## Possíveis duplicados (decidir qual fica)
 
