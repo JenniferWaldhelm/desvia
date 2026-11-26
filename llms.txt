@@ -164,6 +164,15 @@ Dados atualizados em 26/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Cambira](https://desvia.eco.br/residuos/cambira/reciclaveis/)
   - [Onde descartar sucata metálica em Cambira](https://desvia.eco.br/residuos/cambira/sucata-metalica/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Cambira](https://desvia.eco.br/residuos/cambira/residuos-classe-ii/)
+- [Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/): 16 pontos e empresas, 8 tipos de resíduo, obrigações das empresas
+  - [Onde descartar pneus em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/pneus/)
+  - [Onde descartar eletrônicos em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/eletronicos/)
+  - [Onde descartar lâmpadas em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/lampadas/)
+  - [Onde descartar pilhas e baterias em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/pilhas-e-baterias/)
+  - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/reciclaveis/)
+  - [Onde descartar sucata metálica em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/sucata-metalica/)
+  - [Onde descartar resíduos perigosos (Classe I) em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/residuos-perigosos/)
+  - [Onde descartar resíduos industriais não perigosos (Classe II) em Jandaia do Sul](https://desvia.eco.br/residuos/jandaia-do-sul/residuos-classe-ii/)
 - [Marialva](https://desvia.eco.br/residuos/marialva/): 17 pontos e empresas, 8 tipos de resíduo, obrigações das empresas
   - [Onde descartar óleo lubrificante em Marialva](https://desvia.eco.br/residuos/marialva/oleo-lubrificante/)
   - [Onde descartar entulho e resíduos de construção em Marialva](https://desvia.eco.br/residuos/marialva/entulho/)

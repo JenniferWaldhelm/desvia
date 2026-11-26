@@ -1,69 +1,68 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 58 (já aparecem no mapa)
-- Endereços que o OpenStreetMap não achou: 4
-- Possíveis duplicados: 1
+- Coordenadas achadas nesta rodada: 57 (já aparecem no mapa)
+- Endereços que o OpenStreetMap não achou: 7
+- Possíveis duplicados: 3
 
 ## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
 
-- SAR-045 Almeida & Coleta Transportes Ltda: -23.42729, -51.87743
-- SAR-046 Alumix Metais Brasil (Alumix Brasil Metais Ltda.): -23.48986, -51.89836
-- SAR-047 Amaro Reciclagem Ltda: -23.46370, -51.87322
-- SAR-048 Aparas de Papeis Aparecida (Martins & Pinzan Ltda): -23.43983, -51.87269
-- SAR-049 Auto Fossa Cancao: -23.42277, -51.87919
-- SAR-050 Avante (Futuro Metais Ltda): -23.48986, -51.89836
-- SAR-051 Brasil Insumos: -23.45492, -51.85714
-- SAR-052 C. G. Containers Ltda: -23.45044, -51.89411
-- SAR-053 Cooperativa Futuro Metais: -23.48986, -51.89836
-- SAR-054 J. Ferrari Pneus (J Ferrari Pneus Ltda): -23.42784, -51.87855
-- SAR-055 Jks Gerenciamentos de Residuos (J.A. Costa Gerenciamento de Residuos Ltda): -23.42510, -51.86870
-- SAR-056 Mar Azul Reciclagem, Industria e Comercio: -23.45320, -51.85444
-- SAR-057 Mil Reciclagem Ltda: -23.45627, -51.85681
-- SAR-058 Multi Aco Comercio de Metais (Rosse & Rosse Ltda): -23.43431, -51.88376
-- SAR-059 Multiaco Comercio de Metais (Grc Comercio de Metais Ltda): -23.45508, -51.85517
-- SAR-060 Nova Fenix Reciclagem Ltda: -23.45227, -51.86837
-- SAR-061 R J Desentupidora: -23.43861, -51.85960
-- SAR-062 Recicla Sarandi: -23.44495, -51.88850
-- SAR-063 Sanches Metais Ltda: -23.42889, -51.86847
-- SAR-064 Sarandi Solucoes Ambientais: -23.43036, -51.87843
-- SAR-065 Sucata dos Irmaos Ltda: -23.45755, -51.87958
-- SAR-067 Vf Residuos (V F Residuos Ltda): -23.45492, -51.85714
-- LDA-388 100 Entulhos Londrina (Scaramal & Bertoncelli Ltda): -23.30390, -51.16405
-- LDA-391 A Impecavel Desentupidora: -23.29478, -51.12281
-- LDA-393 A Perez Comercio de Papeis Usados (Perez Comercio de Papeis Usados Ltda): -23.36603, -51.14398
-- LDA-394 A.L.B. Fernandes Reciclagem Ltda: -23.28154, -51.10572
-- LDA-396 Alianca Metais: -23.26011, -51.16470
-- LDA-397 All Ecology Ambiental Ltda: -23.70258, -51.12043
-- LDA-398 Arena Metais: -23.27975, -51.14930
-- LDA-399 Aterrando Terraplenagem (E Basilio de Oliveira e Oliveira Ltda): -23.33338, -51.18134
-- LDA-400 Auto Ferro Velho Brasilia Ltda: -23.29692, -51.19247
-- LDA-401 Avs Coleta de Oleo (A.V.S Coleta de Oleo Vegetal Usado Ltda): -23.28877, -51.15710
-- LDA-402 Band Metais e Ferro Velho Ltda: -23.26541, -51.19834
-- LDA-404 Bl Terraplanagem e Transportes de Residuos: -23.37059, -51.15337
-- LDA-405 C.B. Werneck & Cia Ltda: -23.41695, -51.13007
-- LDA-406 Cobrao Comercio de Sucata de Metais Ltda: -23.30171, -51.16369
-- LDA-407 Comercio de Sucatas Wj Ltda: -23.30878, -51.14215
-- LDA-408 Construrban Logistica Ambiental Ltda: -23.38487, -51.12128
-- LDA-411 Coopermudanca Cooperativa dos Catadores de Materiasi Re (Coopermudanca Cooperativa dos Catadores de Materiais Reciclaveis de Londrina): -23.26921, -51.15401
-- LDA-412 Coopersucata: -23.29043, -51.09660
-- LDA-413 D.C. Pereira Transportes (Trans Entulho Ltda): -23.31951, -51.11746
-- LDA-414 Desentupidora Barateira (Rrsantos Limpeza Tecnica Ltda): -23.31719, -51.18424
-- LDA-415 Desentupidora Kairos (Kairos Desentupidora Ltda): -23.27600, -51.14850
-- LDA-416 Ecorecin Cooperativa de Coleta de Materiais Reciclaveis e Reutilizaveis: -23.29503, -51.12167
-- LDA-418 Ecosul Londrina Ltda: -23.28592, -51.14791
-- LDA-419 Equilibrio Ambiental: -23.31023, -51.18922
-- LDA-420 Estrella Dedetizacao e Desentupidora Ltda: -23.25733, -51.16426
-- LDA-421 Ferro Velho Batista Ltda em Recuperacao Judicial: -23.29348, -51.10960
-- LDA-422 Ferro Velho Gralha Azul (Silvano Aparecido de Angelo Ltda): -23.33143, -51.17997
-- LDA-424 G&s Transporte, Logistica e Locação de Máquinas e Equipamentos Ltda: -23.29147, -51.21447
-- LDA-425 Gd 7 Sucatas (Gd 7 Comercio de Artigos Usados Ltda): -23.26277, -51.16967
-- LDA-426 Gladiador Cacambas Ltda: -23.24954, -51.15038
-- LDA-427 Gransteel Comercio de Metais Ltda: -23.28745, -51.18521
-- LDA-428 Hidrex Desentupidora Ltda: -23.26522, -51.14224
-- LDA-429 Hidrotech Desentupimento e Soluções Ambientais Ltda: -23.24998, -51.15805
-- LDA-431 Imperio Ambiental: -23.26690, -51.19327
-- LDA-432 Isa Ambiental: -23.29616, -51.17735
-- LDA-436 Js Metais: -23.31273, -51.20978
+- LDA-437 Jv Paletes e Reciclagem Ltda: -23.30763, -51.20436
+- LDA-440 Lig Cacambas (V.C. Cacambas Ltda): -23.28096, -51.21813
+- LDA-441 Lira Eps Reciclagem: -23.32944, -51.17940
+- LDA-442 Londri Verde Ambiental: -23.28649, -51.17506
+- LDA-443 Londrimetais: -23.29334, -51.13050
+- LDA-444 Londrimetais Sucatas Ltda: -23.29334, -51.13050
+- LDA-446 Maxflux Desentupidora Ltda: -23.30164, -51.13697
+- LDA-447 Maxiligas Industria e Comercio de Metais Ltda: -23.30771, -51.16928
+- LDA-448 Metalvale Comercio de Residuos e Servicos Ambientais Ltda: -23.29348, -51.10960
+- LDA-449 Monteiro Aparas Ltda: -23.30858, -51.18634
+- LDA-450 Msplast Industria e Comercio de Polimeros Reciclados Ltda: -23.26633, -51.23753
+- LDA-451 Neriah Dedetizadora e Desentupidora Ltda: -23.26256, -51.17942
+- LDA-452 Nortesul Comercio de Sucatas Ltda: -23.28554, -51.20702
+- LDA-453 Paulo Pereira Reciclagem Ltda: -23.30658, -51.15639
+- LDA-454 Pblon Reciclagem e Metais: -23.30346, -51.19016
+- LDA-456 Pl Transportes de Residuos e Terraplanagem: -23.37207, -51.16021
+- LDA-458 Plastini Recuperadora de Materiais Plasticos Ltda: -23.29478, -51.12281
+- LDA-459 Plastini Recuperadora de Materiais Plasticos Ltda: -23.29503, -51.12167
+- LDA-460 Polako Metais (Ede Carlos da Silva & Cia Ltda): -23.35469, -51.14179
+- LDA-461 R Lombarde Plasticos Ltda: -23.28768, -51.09804
+- LDA-462 Recicla Eletronicos: -23.37130, -51.12446
+- LDA-463 Recimag Industria e Comercio de Embalagens Ltda: -23.28583, -51.15591
+- LDA-464 Republica da Sucata Comercio de Sucatas Ltda: -23.29692, -51.19247
+- LDA-465 Revita Engenharia S.A.: -23.38113, -51.08394
+- LDA-467 Rr Sucatas Ltda: -23.35009, -51.16293
+- LDA-469 Sallve Ambiental Ltda: -23.26003, -51.16481
+- LDA-470 Soares Cacamba e Terraplenagem Ltda: -23.27109, -51.16586
+- LDA-471 Sos Cacambas: -23.31951, -51.11746
+- LDA-472 Sos Moreira Desentupidora e Oficina Mecanica Ltda: -23.28469, -51.20253
+- LDA-473 Tem Tem Pneus: -23.31031, -51.12681
+- LDA-474 Tubarao Cacambas (R F Quilis Ltda): -23.30123, -51.13657
+- LDA-475 Vergoti Comercio de Metais Ltda: -23.29863, -51.16637
+- LDA-476 Vergoti Comercio de Metais Ltda: -23.29863, -51.16637
+- LDA-477 Vigor Sucatas Ltda: -23.29055, -51.12876
+- LDA-478 Volpe Ambiental: -23.28554, -51.20702
+- LDA-479 Zandona Cacambas Ltda: -23.28554, -51.20702
+- MGA-362 A Coleta (Borges & Roman Ltda -me): -23.40383, -51.87757
+- MGA-363 A-ws Ambiental e Sustentabilidade Ltda: -23.45412, -51.90822
+- MGA-365 Aero Auto Fossa e Desentupidora (Auto Fossa e Desentupidora Ltda): -23.42271, -51.95797
+- MGA-366 Agiliza Rua Limpa: -23.42539, -51.93395
+- MGA-367 Aguia Azul- Nogarotto Cacambas Ltda: -23.39062, -51.89335
+- MGA-370 Aluminios Maringa (Germojeschi Comercio de Metais Ltda): -23.40654, -51.90396
+- MGA-372 Auto Fossa e Desentupidora Everest: -23.40336, -51.97682
+- MGA-374 Brasil Metais: -23.40389, -51.87819
+- MGA-375 C L Metais (C. da Silva Lomes Ltda): -23.40799, -51.91573
+- MGA-377 Cacambas Operaria (Disk Entulho Operaria Ltda.): -23.42965, -51.92291
+- MGA-378 Cacambas Sp Ltda: -23.37949, -51.96631
+- MGA-379 Cacambas Uniao: -23.39305, -51.88752
+- MGA-381 Coletas de Entulhos Real Eireli (Coletas de Entulhos Real Ltda): -23.42447, -51.90173
+- MGA-382 Colombo Desentupimento e Hidrojateamento Ltda: -23.39728, -51.98208
+- MGA-383 Constroeste: -23.46118, -51.91079
+- MGA-384 Contorno Sul Resibox Disk Entulhos (Resibox Disk Entulhos Ltda): -23.45104, -51.99794
+- MGA-385 Cooperativa de Trabalho, Cultura e Educacao de Reciclagem Criativa de Maringa Recria Inga: -23.43166, -51.95032
+- MGA-387 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis): -23.45524, -52.00147
+- MGA-388 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis): -23.45524, -52.00147
+- MGA-391 Copasul Metais (Copasul Residuos Metalicos Ltda): -23.37252, -51.92310
+- MGA-392 Covidro Comercio de Sucatas de Vidro (Gg Sucatas de Vidro Ltda): -23.35564, -51.89830
 
 ## Sem coordenada (pegar no Google Maps)
 
@@ -71,8 +70,13 @@
 - MRV-001 Ecoponto Municipal de Marialva (Av. Dr. Eurico Jardim Dornelas de Barros, 21, Centro, Marialva)
 - SAR-066 Sucatas Zillo (Pina & Cia. Ltda) (Rua Joao Marangoni, 1371, Residencial Sao Jose, Sarandi)
 - LDA-403 Betel Ambiental Comercio de Sucatas (Rua Antonio Piovesan, 215, Parque Industrial Betel, Londrina)
+- LDA-457 Plasticos Brasilon (Lombarde & Cia Ltda) (Estrada Da Pedreira Pavilon//Urbalon, Km 1.6, 02, Gleba Primavera, Londrina)
+- MGA-364 Acoleta (Rua Manoel Prudencio De Brito, 161, Gleba Patrimonio Maringa, Maringá)
+- MGA-369 Alltech Engenharia Ambiental e Ocupacional (Alltech Ocupacional Seg. do Trabalho e Meio Ambiente Ltda) (Rua Maria Cleusa Milleo Romano,Professora, 66, Gleba Ribeirao Pinguim, Maringá)
 
 ## Possíveis duplicados (decidir qual fica)
 
 - Nome parecido a 0 m: MGA-319 Loja Vivo Maringá Park Shopping Center / MGA-323 Loja TIM Maringá Park Shopping Center
+- Nome parecido a 0 m: LDA-475 Vergoti Comercio de Metais Ltda / LDA-476 Vergoti Comercio de Metais Ltda
+- Nome parecido a 0 m: MGA-387 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis) / MGA-388 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis)
 
