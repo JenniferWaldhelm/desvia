@@ -329,6 +329,9 @@ SERIE_SINISA = ler_sinisa()
 DIA_COLETA = {
     "maringa": ("setores-maringa.geojson", -23.4205, -51.9333,
                 "Prefeitura de Maringá (IPPLAM), mapa Descarte Regular de Resíduos, atualizado em 05/06/2025"),
+    # gerado por coleta/setores_londrina.py
+    "londrina": ("setores-londrina.geojson", -23.3045, -51.1696,
+                 "CMTU Londrina (GeoLondrina, setores da coleta domiciliar e da coleta seletiva), consulta em 26/11/2026"),
 }
 
 
