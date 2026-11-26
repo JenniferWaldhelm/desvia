@@ -11,11 +11,13 @@
   <url><loc>https://desvia.eco.br/residuos/mandaguari/oleo-de-cozinha/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/moveis-e-volumosos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/mandaguari/poda-e-galhos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/madeira/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/medicamentos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/residuos-de-saude/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/sucata-metalica/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/mandaguari/organicos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/residuos-classe-ii/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/servicos/cacamba-de-entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/servicos/coleta-de-residuos-para-empresas/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
@@ -102,6 +104,7 @@
   <url><loc>https://desvia.eco.br/residuos/rolandia/sucata-metalica/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/rolandia/texteis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/rolandia/limpa-fossa/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/rolandia/residuos-perigosos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/rolandia/residuos-classe-ii/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/rolandia/servicos/cacamba-de-entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/rolandia/servicos/limpa-fossa-e-desentupidora/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
@@ -120,9 +123,11 @@
   <url><loc>https://desvia.eco.br/residuos/cambe/medicamentos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/sucata-metalica/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/cambe/organicos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/limpa-fossa/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/embalagens-de-agrotoxico/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/residuos-perigosos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/cambe/residuos-classe-ii/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/servicos/cacamba-de-entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/servicos/limpa-fossa-e-desentupidora/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambe/servicos/coleta-de-residuos-para-empresas/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
@@ -131,13 +136,18 @@
   <url><loc>https://desvia.eco.br/residuos/apucarana/pneus/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/eletronicos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/pilhas-e-baterias/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/apucarana/oleo-lubrificante/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/moveis-e-volumosos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/apucarana/poda-e-galhos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/sucata-metalica/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/apucarana/organicos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/texteis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/limpa-fossa/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/residuos-perigosos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/apucarana/residuos-classe-ii/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/apucarana/servicos/cacamba-de-entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/servicos/limpa-fossa-e-desentupidora/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/servicos/coleta-de-residuos-para-empresas/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/apucarana/servicos/compra-de-sucata-e-reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
@@ -161,24 +171,42 @@
   <url><loc>https://desvia.eco.br/residuos/sarandi/servicos/cacamba-de-entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/sarandi/servicos/limpa-fossa-e-desentupidora/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/sarandi/servicos/coleta-de-residuos-para-empresas/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/sarandi/servicos/compra-de-sucata-e-reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/sarandi/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/pneus/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/oleo-lubrificante/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/poda-e-galhos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/madeira/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/sucata-metalica/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/organicos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/tintas-e-solventes/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/limpa-fossa/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/residuos-perigosos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/residuos-classe-ii/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/servicos/cacamba-de-entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/servicos/limpa-fossa-e-desentupidora/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/arapongas/servicos/coleta-de-residuos-para-empresas/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/servicos/compra-de-sucata-e-reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/arapongas/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambira/lampadas/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambira/reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambira/sucata-metalica/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/cambira/residuos-classe-ii/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambira/servicos/compra-de-sucata-e-reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/cambira/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/marialva/oleo-lubrificante/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/marialva/entulho/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/marialva/reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/marialva/sucata-metalica/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/marialva/organicos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/marialva/limpa-fossa/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/marialva/residuos-perigosos/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/marialva/residuos-classe-ii/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/marialva/servicos/limpa-fossa-e-desentupidora/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/marialva/servicos/coleta-de-residuos-para-empresas/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://desvia.eco.br/residuos/marialva/servicos/compra-de-sucata-e-reciclaveis/</loc><lastmod>2026-11-26</lastmod><priority>0.7</priority></url>
   <url><loc>https://desvia.eco.br/residuos/marialva/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://desvia.eco.br/residuos/mandaguari/coleta-de-lixo/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
   <url><loc>https://desvia.eco.br/residuos/londrina/coleta-de-lixo/</loc><lastmod>2026-11-26</lastmod><priority>0.8</priority></url>
