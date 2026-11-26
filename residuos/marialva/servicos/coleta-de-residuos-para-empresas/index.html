@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Etiplast Ltda", "a": -23.47766, "o": -51.84915, "id": "mrv-007", "s": "valida"}, {"n": "Sol Brasil Soluções Ambientais Ltda. (Sol Ambiental)", "a": -23.47395, "o": -51.81403, "id": "mrv-015", "s": "valida"}];
+  var pts = [{"n": "Etiplast Ltda", "a": -23.47766, "o": -51.84915, "id": "mrv-007", "s": "valida"}, {"n": "Sol Brasil Soluções Ambientais Ltda. (Sol Ambiental)", "a": -23.47395, "o": -51.81403, "id": "mrv-015", "s": "valida"}, {"n": "Inga Transportes (S. Altoe Transportes Ltda)", "a": -23.60625, "o": -51.86047, "id": "mrv-010", "s": "vencida"}, {"n": "Auto Fossa Hidrojato Marialva (Cpb Servicos Ltda)", "a": -23.48794, "o": -51.79649, "id": "mrv-004", "s": "nao_localizada"}, {"n": "R. Coleta Transportes", "a": -23.48987, "o": -51.81072, "id": "mrv-013", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);

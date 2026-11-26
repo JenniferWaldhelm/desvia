@@ -30,7 +30,22 @@
 <p class="regra">Sucata e recicláveis têm valor. Para empresas, exija nota e comprovante de destinação de quem compra.</p>
 
 <p class="atualizado">Dados atualizados em 26/11/2026. Licença válida aparece primeiro.</p>
-
+<div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
+<script>
+window.addEventListener('load', function () {
+  var pts = [{"n": "Etiplasticos Ltda", "a": -23.47752, "o": -51.81941, "id": "mrv-008", "s": "nao_localizada"}, {"n": "Ps Silva Coletas Ltda", "a": -23.48381, "o": -51.81514, "id": "mrv-012", "s": "nao_localizada"}, {"n": "Reciclaveis Zeferino Ltda", "a": -23.48435, "o": -51.79552, "id": "mrv-014", "s": "nao_localizada"}, {"n": "Ss Metais Ltda", "a": -23.45445, "o": -51.84865, "id": "mrv-017", "s": "nao_localizada"}];
+  var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
+  var mapa = L.map('mapa', {scrollWheelZoom: false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
+  var grupo = L.featureGroup();
+  pts.forEach(function (p) {
+    L.circleMarker([p.a, p.o], {radius: 8, color: '#fff', weight: 2, fillColor: cores[p.s] || '#7A7F8C', fillOpacity: 0.95})
+      .bindPopup('<a href="#' + p.id + '">' + p.n.replace(/</g, '&lt;') + '</a>').addTo(grupo);
+  });
+  grupo.addTo(mapa);
+  mapa.fitBounds(grupo.getBounds().pad(0.15), {maxZoom: 15});
+});
+</script>
 <section class="lista">
 <article class="ponto" id="mrv-009">
 <h3>Ferro Velho Pulinopolis Ltda</h3>

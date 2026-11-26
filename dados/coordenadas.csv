@@ -84,6 +84,10 @@ ARA-053,-23.38803,-51.42697,"Rua Capitao De Coroa, 121, Parque Industrial Ii","R
 ARA-054,,,"Sitio Sitio Santa Ana - Estrada Ponte Seca, Sn, Gleba Pirapo",
 ARA-056,-23.39297,-51.42773,"Rua Jurutau, 2140, Parque Industrial Ii","Rua Jurutau, Arapongas, Paraná, Região Sul, 86701-472, Brasil"
 ARA-057,-23.37032,-51.41854,"Rua Tinguacu Parda, 420, Parque Industrial Araucaria","Rua Tinguaçu Parda, Arapongas, Paraná, Região Sul, 86703-494, Brasil"
+ARA-629,-23.40783,-51.43808,"Rua Garças, 750, Centro","Prefeitura Municipal de Arapongas, 750, Rua das Garças, Arapongas, Paraná, Região Sul, 86700-285, Brasil"
+ARA-630,-23.41318,-51.43283,"Av. Arapongas, 8, Centro","Avenida Arapongas, Arapongas, Paraná, Região Sul, 86700-060, Brasil"
+ARA-631,-23.38579,-51.41953,"Avenida Maracanã, 1815, Vila Bernardes","Avenida Maracanã, Arapongas, Paraná, Região Sul, 86703-494, Brasil"
+ARA-632,,,"Av. Centro Arapongas, 624",
 CAM-006,-23.28944,-51.23514,"Rodovia Celso Garcia Cid, 1, Gleba Cacadores","Rodovia Celso Garcia Cid, Cambé, Paraná, Região Sul, 86185-470, Brasil"
 CAM-007,-23.06551,-51.26145,"Estrada da Prata, km 6, zona rural","Estrada da Prata, Prata, Cambé, Paraná, Região Sul, Brasil"
 CAM-009,,,"Rua Uzen Ajimura, 101, Distrito Industrial Doutor Jehovah Almeida Gomes",
@@ -129,6 +133,21 @@ IBI-050,,,"Rua Santa Ana, 77, Jardim Santa Paula",
 IBI-051,-23.29192,-51.08752,"Rua Luiz Carlos Zani, 299, Pq Industrial Castelo Branco","Rua Luiz Carlos Zani, Ibiporã, Paraná, Região Sul, 86200-000, Brasil"
 IBI-052,,,"Rua Luis Carlos Zani, 3579, Parque Industrial V",
 IBI-054,-23.29192,-51.08752,"Rua Luiz Carlos Zani, 299, Pq Industrial C","Rua Luiz Carlos Zani, Ibiporã, Paraná, Região Sul, 86200-000, Brasil"
+JDS-001,,,"Rua Guerino Barbieri, 51, Domingos Massa",
+JDS-002,,,"Estrada Caminho Das Uvas - Km 2,5, Sn, Km - 25",
+JDS-003,-23.59387,-51.61684,"Rodovia Br 376, 203, Vila Paiao","Rodovia do Café Governador Ney Braga, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-004,-23.59387,-51.61684,"Rodovia Br 376, 203, Vila Paião","Rodovia do Café Governador Ney Braga, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-005,-23.59339,-51.61757,"Rodovia Br 376, 201, Vila Paiao","Rodovia do Café Governador Ney Braga, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-006,-23.59387,-51.61684,"Rodovia Br 376, 205, Vila Paiao","Rodovia do Café Governador Ney Braga, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-007,-23.59387,-51.61684,"Rodovia Br 376, Sn, Gleba Dourados, Chacara Nino","Rodovia do Café Governador Ney Braga, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-008,-23.59387,-51.61684,"Rodovia Br 376 Km 217, 380, Parque Industrial","Rodovia do Café Governador Ney Braga, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-009,,,"Rua Ildefonso Maioli, 54, Parque Industrial Domingos Massa",
+JDS-010,,,"Avenida Tancredo Neves, 700, Centro",
+JDS-011,,,"Rua Guerino Barbieri, 35, Parque Industrial Domingos Massa",
+JDS-012,-23.61550,-51.64649,"Rua Marechal Cândido Rondon, 744, Centro","Rua Marechal Cândido Rondon, Vila Operária, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-013,-23.59866,-51.65882,"Av. Anunciato Sonni, 1697, Centro","Avenida Anunciato Sonni, Vila Operária, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-015,-23.60288,-51.62750,Rua Professor Roberto Resende Chaves,"Rua Professor Roberto Resende Chaves, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
+JDS-016,-23.60091,-51.64244,"Avenida Getúlio Vargas, 1109, Centro","Avenida Doutor Getulio Vargas, Vila Paiao, Jandaia do Sul, Paraná, Região Sul, 86900-000, Brasil"
 LDA-023,,,www.joguelimpo.org.br,
 LDA-070,,,Aragarça,
 LDA-074,,,Pontos de recebimento e coleta em casa pelo site greeneletron.org.br,
@@ -448,7 +467,20 @@ MGI-032,-23.51928,-51.65992,"Rua Jarmes Estacio Dutra, 204, Parque Industrial Ii
 MGI-033,-23.51447,-51.68624,"Rua Joao Do Pulo, 141, Parque Indl I - Abilio Pereira Nunes","Rua João do Pulo, Parque Industrial I, Mandaguari, Paraná, Região Sul, 86975-000, Brasil"
 MGI-034,,,"Estrada Estrada Dourados Km 02, Sn, Gleba Ribeirao Do Dourado",
 MGI-035,-23.52331,-51.68992,"Rua Antonio Domingues Freire, 670, Gleba Patrimonio Mandaguari","Rua Antônio Domingues Freire, Jardim Mônaco, Mandaguari, Paraná, Região Sul, 86975-000, Brasil"
+MGI-036,-23.51439,-51.69099,"Rua Pedro Alves Madeira, 140, Parque Industrial I","Rua Pedro Alves Madeira, Parque Industrial I, Mandaguari, Paraná, Região Sul, 86975-000, Brasil"
+MGI-037,-23.52316,-51.69437,"Rua Jose Zanardo, 66, Jardim Nova America","66, Rua José Zanardo, Vila Verde, Mandaguari, Paraná, Região Sul, 86975-000, Brasil"
 MRV-001,,,"Av. Dr. Eurico Jardim Dornelas de Barros, 21, Centro",
+MRV-004,-23.48794,-51.79649,"Rua Presidente Nereu Ramos, 580, Centro","Rua Presidente Nereu Ramos, Marialva, Paraná, Região Sul, Brasil"
+MRV-006,,,"Avenida Dr Eurico Dornelas De Barros, 592, Centro",
+MRV-008,-23.47752,-51.81941,"Rua Honorato Severino, 148 A, Industrial Polessi","Rua Honorato Severino, Marialva, Paraná, Região Sul, 87114-636, Brasil"
+MRV-009,,,"Gleba Ribeirao Sarandi, S/N, Zona Rural",
+MRV-010,-23.60625,-51.86047,"Rua A, 270, Parque Industrial Jaloto","Rua Jesus A. de Figueredo, São Miguel do Cambuí, Marialva, Paraná, Região Sul, Brasil"
+MRV-011,,,"Rua Anselmo M. T.  Mandadori, 82, Conjunto Joao Olimpio Da Rocha",
+MRV-012,-23.48381,-51.81514,"Rua Carlindo Abilio De Britto, 423, Lot. Luzia Megiato Silvestre","Rua Carlindo Abilio de Britto, Conjunto Habitacional Luiza Megiato Silvestre, Marialva, Paraná, Região Sul, 87114-636, B"
+MRV-013,-23.48987,-51.81072,"Rua Tieko Hamada, 621, Jardim Hamada","Rua Tieko Hamada, Jardim Hamada, Marialva, Paraná, Região Sul, Brasil"
+MRV-014,-23.48435,-51.79552,"Rua B, 366, Parque Industrial Jaloto","Rua Formosa, Marialva, Paraná, Região Sul, Brasil"
+MRV-016,-23.48381,-51.81514,"Rua Carlindo Abilio De Britto, 471, Centro","Rua Carlindo Abilio de Britto, Conjunto Habitacional Luiza Megiato Silvestre, Marialva, Paraná, Região Sul, 87114-636, B"
+MRV-017,-23.45445,-51.84865,"Avenida Br 376, Km 113, S/N, Zona Rural","Rodovia do Café Governador Ney Braga, Marialva, Paraná, Região Sul, 87114-636, Brasil"
 ROL-018,-23.31396,-51.36218,"Rua Estilac Leal, 21-A, Centro","Rua Estilac Leal, Centro Histórico, Rolândia, Paraná, Região Sul, 86600-123, Brasil"
 ROL-019,-23.30135,-51.34528,"Avenida Itamaraty, 3180, Pq Industrial","Avenida Itamaraty, Jardim Planalto, Centro, Rolândia, Paraná, Região Sul, 86600-469, Brasil"
 ROL-020,,,"Rua Shoshishi Sasaky, 390, Pq Industrial Bandeirantes",

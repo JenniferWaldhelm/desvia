@@ -30,7 +30,22 @@
 <p class="regra">Sucata e recicláveis têm valor. Para empresas, exija nota e comprovante de destinação de quem compra.</p>
 
 <p class="atualizado">Dados atualizados em 26/11/2026. Licença válida aparece primeiro.</p>
-
+<div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
+<script>
+window.addEventListener('load', function () {
+  var pts = [{"n": "Gl Metais (Silva Industria e Comercio de Metais Ltda)", "a": -23.59387, "o": -51.61684, "id": "jds-003", "s": "nao_localizada"}, {"n": "Lavimetais", "a": -23.59387, "o": -51.61684, "id": "jds-004", "s": "nao_localizada"}, {"n": "M. D. Metais", "a": -23.59339, "o": -51.61757, "id": "jds-005", "s": "nao_localizada"}, {"n": "Mgc Servicos e Recuperacao de Plasticos Ltda", "a": -23.59387, "o": -51.61684, "id": "jds-006", "s": "nao_localizada"}, {"n": "Nino Sucatas", "a": -23.59387, "o": -51.61684, "id": "jds-007", "s": "nao_localizada"}, {"n": "Nino Sucatas (Aj Industria e Comercio de Plasticos Ltda)", "a": -23.59387, "o": -51.61684, "id": "jds-008", "s": "nao_localizada"}];
+  var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
+  var mapa = L.map('mapa', {scrollWheelZoom: false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
+  var grupo = L.featureGroup();
+  pts.forEach(function (p) {
+    L.circleMarker([p.a, p.o], {radius: 8, color: '#fff', weight: 2, fillColor: cores[p.s] || '#7A7F8C', fillOpacity: 0.95})
+      .bindPopup('<a href="#' + p.id + '">' + p.n.replace(/</g, '&lt;') + '</a>').addTo(grupo);
+  });
+  grupo.addTo(mapa);
+  mapa.fitBounds(grupo.getBounds().pad(0.15), {maxZoom: 15});
+});
+</script>
 <section class="lista">
 <article class="ponto" id="jds-010">
 <h3>Parana Recicla (Ls Metais Nobres Ltda)</h3>

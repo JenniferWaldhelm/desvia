@@ -146,7 +146,7 @@ Dados atualizados em 26/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar esgoto de fossa e efluentes em Sarandi](https://desvia.eco.br/residuos/sarandi/limpa-fossa/)
   - [Onde descartar resíduos perigosos (Classe I) em Sarandi](https://desvia.eco.br/residuos/sarandi/residuos-perigosos/)
   - [Onde descartar resíduos industriais não perigosos (Classe II) em Sarandi](https://desvia.eco.br/residuos/sarandi/residuos-classe-ii/)
-- [Arapongas](https://desvia.eco.br/residuos/arapongas/): 89 pontos e empresas, 16 tipos de resíduo, obrigações das empresas
+- [Arapongas](https://desvia.eco.br/residuos/arapongas/): 92 pontos e empresas, 17 tipos de resíduo, obrigações das empresas
   - [Onde descartar pneus em Arapongas](https://desvia.eco.br/residuos/arapongas/pneus/)
   - [Onde descartar eletrônicos em Arapongas](https://desvia.eco.br/residuos/arapongas/eletronicos/)
   - [Onde descartar lâmpadas em Arapongas](https://desvia.eco.br/residuos/arapongas/lampadas/)
@@ -155,6 +155,7 @@ Dados atualizados em 26/11/2026. A situação da licença reflete as bases públ
   - [Onde descartar entulho e resíduos de construção em Arapongas](https://desvia.eco.br/residuos/arapongas/entulho/)
   - [Onde descartar poda e galhos em Arapongas](https://desvia.eco.br/residuos/arapongas/poda-e-galhos/)
   - [Onde descartar madeira em Arapongas](https://desvia.eco.br/residuos/arapongas/madeira/)
+  - [Onde descartar medicamentos vencidos em Arapongas](https://desvia.eco.br/residuos/arapongas/medicamentos/)
   - [Onde descartar resíduos de serviços de saúde em Arapongas](https://desvia.eco.br/residuos/arapongas/residuos-de-saude/)
   - [Onde descartar recicláveis (papel, plástico, metal e vidro) em Arapongas](https://desvia.eco.br/residuos/arapongas/reciclaveis/)
   - [Onde descartar sucata metálica em Arapongas](https://desvia.eco.br/residuos/arapongas/sucata-metalica/)

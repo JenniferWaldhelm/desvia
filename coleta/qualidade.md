@@ -1,51 +1,34 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 40 (já aparecem no mapa)
-- Endereços que o OpenStreetMap não achou: 42
+- Coordenadas achadas nesta rodada: 23 (já aparecem no mapa)
+- Endereços que o OpenStreetMap não achou: 51
 - Possíveis duplicados: 4
 
 ## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
 
-- ROL-048 Cpx Oleo Ambiental Aditivos Industriais: -23.30528, -51.39845
-- ROL-051 Desentupidora Paranoa Ltda: -23.33506, -51.39738
-- ROL-059 Gr Residuos e Reciclagem Ltda: -23.31047, -51.33766
-- ROL-063 Kazuko Comercio e Reciclagem de Sucatas Ltda: -23.31810, -51.38262
-- ROL-067 Mabene Ambiental: -23.35896, -51.39708
-- ROL-068 Mr Sucatas: -23.31047, -51.33766
-- ROL-071 Polijac Industria e Processamento de Materiais Plasticos Ltda: -23.29856, -51.38761
-- ROL-072 R. G. Reciclagem e Sucatas do Paraguai (Raiter Comercio de Sucatas Ltda): -23.33841, -51.38303
-- ROL-073 Rolampel Comercio de Papelao e Plasticos Ltda: -23.31047, -51.33766
-- ROL-075 Sucatao Rolandia Ltda: -23.30984, -51.38606
-- ROL-076 Transmarin (Transportes Casado Ltda.): -23.30192, -51.39160
-- ROL-078 Zenda Agronegocios (Zenda Industria e Comercio de Plasticos Ltda): -23.30506, -51.33722
-- CAM-044 Agiliza Transportes de Cacambas (C Archanjo Transportes de Cacambas Ltda): -23.27401, -51.26125
-- CAM-045 Ambiental Comercio e Coleta de Residuos Ltda: -23.30267, -51.22706
-- CAM-047 C.A.M. Sucatas Ltda: -23.28822, -51.27866
-- CAM-048 Cacamba Legal: -23.30526, -51.25214
-- CAM-051 Coopermarli: -23.28315, -51.26432
-- CAM-053 Dedique Cacambas (Dedique Locacao de Cacambas Ltda): -23.29631, -51.25100
-- CAM-055 Ferro Velho Daniel: -23.30937, -51.21887
-- CAM-056 Lp Viva Melhor (Cooperativa de Reciclagem Viva Melhor): -23.29849, -51.23772
-- CAM-057 Mccplast (Fujii Plast Industria e Comercio de Plasticos Ltda): -23.30937, -51.21887
-- CAM-058 Mfplast Industria e Comercio de Plasticos Ltda: -23.28208, -51.23908
-- CAM-062 So Cacambas: -23.29631, -51.25100
-- CAM-063 Xavantes Aluminios (Metais Xavantes Ltda): -23.27137, -51.26297
-- IBI-042 Associacao de Trabalho dos Catadores de Materiais Reciclaveis e Reutilizaveis de Ibipora: -23.27251, -51.03649
-- IBI-043 Brasil Sustentabilidade & Gestao de Residuos Ltda: -23.26830, -51.04110
-- IBI-044 E M Teixeira Ltda: -23.29212, -51.08983
-- IBI-045 Guna Industria de Materiais Plasticos: -23.29192, -51.08752
-- IBI-046 Jakob Industria e Comercio de Metais Ltda: -23.29472, -51.09125
-- IBI-047 Lapaza Empreendimentos Ltda: -23.26732, -51.04897
-- IBI-049 Nor Materiais e Embalagens Plasticas: -23.29192, -51.08752
-- IBI-051 Reciclo Produtos Plasticos (Reciclo Industria de Produtos Plasticos Ltda): -23.29192, -51.08752
-- IBI-054 Zanoni Industria e Comercio de Materiais Plasticos Ltda: -23.29192, -51.08752
-- MGI-024 A T Martins Sucatas Ltda: -23.52043, -51.68753
-- MGI-027 Edu Borrachas (A e Rodrigues Borrachas Ltda): -23.51439, -51.69099
-- MGI-030 Ll Reciclagem de Pneus e Transporte (Irmaos Silva Reciclagem e Art. de Borracha Ltda): -23.51333, -51.70412
-- MGI-031 M M J Transportes e Servicos (M M J Transportes e Prestacao de Servicos Ltda): -23.51575, -51.68028
-- MGI-032 Mbp Borrachas e Pneu (Oliveira Borrachas Ltda): -23.51928, -51.65992
-- MGI-033 Sbr Borrachas (Sbr Comercio de Borrachas e Residuos Industriais Ltda): -23.51447, -51.68624
-- MGI-035 Tikin Pneus (Tj Alves Borrachas Ltda): -23.52331, -51.68992
+- MGI-036 Transk (K. R Transportes Ltda): -23.51439, -51.69099
+- MGI-037 Visual (Frank Comercio de Sucata de Pneus Ltda): -23.52316, -51.69437
+- JDS-003 Gl Metais (Silva Industria e Comercio de Metais Ltda): -23.59387, -51.61684
+- JDS-004 Lavimetais: -23.59387, -51.61684
+- JDS-005 M. D. Metais: -23.59339, -51.61757
+- JDS-006 Mgc Servicos e Recuperacao de Plasticos Ltda: -23.59387, -51.61684
+- JDS-007 Nino Sucatas: -23.59387, -51.61684
+- JDS-008 Nino Sucatas (Aj Industria e Comercio de Plasticos Ltda): -23.59387, -51.61684
+- MRV-004 Auto Fossa Hidrojato Marialva (Cpb Servicos Ltda): -23.48794, -51.79649
+- MRV-008 Etiplasticos Ltda: -23.47752, -51.81941
+- MRV-010 Inga Transportes (S. Altoe Transportes Ltda): -23.60625, -51.86047
+- MRV-012 Ps Silva Coletas Ltda: -23.48381, -51.81514
+- MRV-013 R. Coleta Transportes: -23.48987, -51.81072
+- MRV-014 Reciclaveis Zeferino Ltda: -23.48435, -51.79552
+- MRV-016 Solução Locação e Remoção Ltda: -23.48381, -51.81514
+- MRV-017 Ss Metais Ltda: -23.45445, -51.84865
+- JDS-012 Amigão Jandaia do Sul: -23.61550, -51.64649
+- JDS-013 Eletrojan: -23.59866, -51.65882
+- JDS-015 Prefeitura de Jandaia do Sul: ponto de coleta de pneus: -23.60288, -51.62750
+- JDS-016 Sicoob Jandaia do Sul: -23.60091, -51.64244
+- ARA-629 Paço Municipal: ponto de entrega da Prefeitura de Arapongas: -23.40783, -51.43808
+- ARA-630 Nissei – Av. Arapongas: -23.41318, -51.43283
+- ARA-631 Raia Drogasil – Avenida Maracanã: -23.38579, -51.41953
 
 ## Sem coordenada (pegar no Google Maps)
 
@@ -91,6 +74,15 @@
 - MGI-028 Kavuco Tyres (R M da Silva Comercio de Pneus Ltda) (Rua Avenida Das Industrias, 292, Parque Industrial I - Abilio Pereira Nunes, Mandaguari)
 - MGI-029 Limpida Ambiental (Rua Amabile Vasques Rodrigues, 3993, Vila Dizolina, Mandaguari)
 - MGI-034 Silvati Gomes & Giannini Compostagem e Fertilizantes (Silvati e Gomes Compostagem e Fertilizantes Ltda) (Estrada Estrada Dourados Km 02, Sn, Gleba Ribeirao Do Dourado, Mandaguari)
+- JDS-001 Antonino Deposito de Materiais Reciclaveis (Rua Guerino Barbieri, 51, Domingos Massa, Jandaia do Sul)
+- JDS-002 Ascamar (Associacao dos Agentes Ambientais Catadores de Materiais Reciclaveis de Jandaia do Sul Pr) (Estrada Caminho Das Uvas - Km 2,5, Sn, Km - 25, Jandaia do Sul)
+- JDS-009 Nino Sucatas e Papelao Ltda (Rua Ildefonso Maioli, 54, Parque Industrial Domingos Massa, Jandaia do Sul)
+- JDS-010 Parana Recicla (Ls Metais Nobres Ltda) (Avenida Tancredo Neves, 700, Centro, Jandaia do Sul)
+- JDS-011 Wp Logistica Reversa (C.G.R.S. Centro de Gerenciamento de Residuos Solidos Ltda) (Rua Guerino Barbieri, 35, Parque Industrial Domingos Massa, Jandaia do Sul)
+- MRV-006 Erlich Filho Recuperacao de Materiais Plasticos Ltda (Avenida Dr Eurico Dornelas De Barros, 592, Centro, Marialva)
+- MRV-009 Ferro Velho Pulinopolis Ltda (Gleba Ribeirao Sarandi, S/N, Zona Rural, Marialva)
+- MRV-011 M.C. Comercio de Metais (Rua Anselmo M. T.  Mandadori, 82, Conjunto Joao Olimpio Da Rocha, Marialva)
+- ARA-632 Raia Drogasil – Av. Centro Arapongas (Av. Centro Arapongas, 624, Arapongas)
 
 ## Possíveis duplicados (decidir qual fica)
 
