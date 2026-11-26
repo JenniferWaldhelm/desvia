@@ -24,11 +24,12 @@ DIA = {"SEGUNDA": "2ª", "TERÇA": "3ª", "TERCA": "3ª", "QUARTA": "4ª", "QUIN
 TODOS = "2ª, 3ª, 4ª, 5ª, 6ª e Sábado"
 
 # Telefones com erro de digitação no mapa da CMTU: vale o que aparece na maioria dos setores da cooperativa.
+# Coopermudança: número confirmado pela Jen em 26/11/2026 (o celular do mapa da CMTU está desatualizado).
 TELEFONE = {
     "COOCEPEVE": "(43) 3322-1450 / (43) 98412-8452",
     "COOPER REFUM": "(43) 3037-6973 / (43) 99914-2693",
     "COOPER REGIÃO": "(43) 3341-0398 / (43) 3321-6992",
-    "COOPERMUDANÇA": "(43) 3339-2199 / (43) 99995-7604",
+    "COOPERMUDANÇA": "(43) 3339-2199 / (43) 99672-3414",
     "COOPERNORTH": "(43) 3339-0617 / (43) 98403-8325",
     "COOPEROESTE": "(43) 3348-8838 / (43) 99640-1433",
     "ECORECIN": "(43) 3326-1205 / (43) 98424-7738",
