@@ -105,3 +105,9 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 - 18/11/2026: Localizadores sem navegador (ação mensal, dia 21): Reciclanip, Green Eletron (pilhas e eletroeletrônicos), ABREE, Reciclus, Jogue Limpo, OpenStreetMap e Mapa das OSCs (Ipea). LogMed pelo PDF baixado pela Jen (OCR). EcoMed só pelo navegador (robots.txt). Pontos já na base que o programa diz receber outro resíduo viram "acrescentar resíduo" na aba Revisão. Mapa das OSCs entra como candidato a doação: a Jen confirma o que cada entidade aceita.
 
 - 23/11/2026: Página inicial no modelo limpo (busca, "De onde vêm os dados", cidades por região) e cores verdes de reciclagem no site todo (#155E45 escuro, #2E8B57 botões, #9FD67A logo). Cores dos pinos do mapa não mudam. Botão "Limpar filtros" saiu do formulário de busca.
+
+## 26/11/2026 — Empresas de confiança Alta publicadas sem revisão individual
+- Decisão da Jen: publicar as empresas **Alta** da aba Revisão com o aviso "A empresa ainda não confirmou estes dados. Ligue antes de levar." e o link "É desta empresa? Confirme ou corrija os dados" (formulário com nome e código já preenchidos). Média continuam na Revisão.
+- Entraram 390 (aba Pontos, linhas 920 a 1309), selecionadas por coleta/publicar_alta.py. Ficaram de fora: duplicatas de pontos já publicados, empresas recusadas pela Jen em 11/11 (Apucarana), Cabocla (sede em Mandaguaçu), só LP/LI. Lista em coleta/alta-fora.csv.
+- CPF e número de MEI tirados dos nomes; empresário individual sem endereço publicado.
+- Quando a empresa responde: corrigir na planilha e escrever "Confirmado pela empresa" na coluna Fonte.
