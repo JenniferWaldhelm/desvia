@@ -523,3 +523,15 @@ body { overflow-x: clip; }
 .regiao small { color: var(--cinza); font-weight: 400; }
 .cidades-sec .pedir-cidade { margin-top: 14px; text-align: center; }
 .busca .limpar-form { display: none; } /* já existe "Limpar filtros" na lista de resultados */
+
+/* Caixa "Em que dia passa a coleta na sua rua?" */
+.dia-coleta { background: #F1F8F3; border: 1px solid #A9D8B8; border-radius: 10px; padding: 16px 18px; margin: 24px 0; }
+.dia-coleta h2 { margin-top: 0; }
+.dc-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.dc-botoes button { font: inherit; padding: 10px 16px; border-radius: 8px; border: 1px solid #155E45; background: #fff; color: #155E45; cursor: pointer; }
+.dc-botoes button.principal { background: #155E45; color: #fff; }
+.dc-mapa { height: 280px; border-radius: 8px; margin: 12px 0; }
+.dc-res { background: #fff; border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
+.dc-res p { margin: 6px 0; }
+.dc-res .nota { font-size: .88rem; color: var(--cinza); }
+.dia-coleta .fonte { font-size: .82rem; color: var(--cinza); margin-bottom: 0; }

@@ -325,6 +325,32 @@ def bloco_sinisa(cid_slug, cidade, serie):
 SERIE_SINISA = ler_sinisa()
 
 # Informações próprias de cada cidade na página de coleta (fonte oficial informada pela Jen).
+# Setores da coleta por cidade (dados/setores-<cidade>.geojson): caixa "Em que dia passa a coleta na sua rua?"
+DIA_COLETA = {
+    "maringa": ("setores-maringa.geojson", -23.4205, -51.9333,
+                "Prefeitura de Maringá (IPPLAM), mapa Descarte Regular de Resíduos, atualizado em 05/06/2025"),
+}
+
+
+def caixa_dia_coleta(cid_slug):
+    if cid_slug not in DIA_COLETA:
+        return ""
+    arq, lat, lng, fonte = DIA_COLETA[cid_slug]
+    src = Path(__file__).resolve().parent.parent / "dados" / arq
+    (SAIDA / cid_slug).mkdir(parents=True, exist_ok=True)
+    shutil.copy(src, SAIDA / cid_slug / "setores.geojson")
+    return f"""<section class="dia-coleta" id="dia-coleta" data-setores="../setores.geojson" data-lat="{lat}" data-lng="{lng}">
+<h2>Em que dia passa a coleta na sua rua?</h2>
+<p>Use a localização do celular ou toque na sua casa no mapa. Mostramos os dias da coleta comum e da coleta seletiva do seu setor.</p>
+<p class="dc-botoes"><button type="button" id="dc-gps" class="principal">Usar minha localização</button><button type="button" id="dc-mapa-btn">Marcar no mapa</button></p>
+<div id="dc-mapa" class="dc-mapa" hidden></div>
+<div id="dc-res" class="dc-res" aria-live="polite" hidden></div>
+<p class="fonte">Fonte: {esc(fonte)}. Sua localização não é guardada.</p>
+<script src="../../dia-coleta.js" defer></script>
+</section>
+"""
+
+
 EXTRA_COLETA = {
     "mandaguari": """<h2 id="bairros">Dias da coleta seletiva por bairro em Mandaguari</h2>
 <p>A coleta seletiva de recicláveis em Mandaguari é feita pela ACAMAN (Associação dos Catadores de Mandaguari). Os bairros são divididos em dois grupos:</p>
@@ -789,6 +815,7 @@ def gerar():
     shutil.copy(Path(__file__).with_name("estilo.css"), SAIDA / "estilo.css")
     shutil.copy(Path(__file__).with_name("hub.js"), SAIDA / "hub.js")
     shutil.copy(Path(__file__).with_name("webmcp.js"), SAIDA / "webmcp.js")
+    shutil.copy(Path(__file__).with_name("dia-coleta.js"), SAIDA / "dia-coleta.js")
     urls = [(f"{BASE_URL}/{u}", pr) for u, pr in PAGINAS_FIXAS]
     nomes = {s: (f, c) for s, f, c, _ in CATEGORIAS}
     resumo_cidades = []
@@ -973,7 +1000,7 @@ def gerar():
 {"".join(f'<p><a class="pq-btn" href="{esc(l)}" target="_blank" rel="noopener">Ver dias da coleta seletiva (recicláveis) ↗</a></p>' for l in links[1:2])}
 <p class="regra">Os setores e dias de coleta podem mudar quando há novo contrato do serviço (licitação). Confira sempre a fonte oficial antes de colocar o lixo para fora.</p>
 
-<h2>Como descobrir o dia da coleta na sua rua</h2>
+{caixa_dia_coleta(cid_slug)}<h2>Como descobrir o dia da coleta na sua rua</h2>
 <ol class="lista-texto">
 <li>Abra {tipo_link} no botão acima.</li>
 <li>Procure o seu endereço ou bairro.</li>
