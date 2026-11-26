@@ -1,34 +1,8 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 23 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 51
 - Possíveis duplicados: 4
-
-## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
-
-- MGI-036 Transk (K. R Transportes Ltda): -23.51439, -51.69099
-- MGI-037 Visual (Frank Comercio de Sucata de Pneus Ltda): -23.52316, -51.69437
-- JDS-003 Gl Metais (Silva Industria e Comercio de Metais Ltda): -23.59387, -51.61684
-- JDS-004 Lavimetais: -23.59387, -51.61684
-- JDS-005 M. D. Metais: -23.59339, -51.61757
-- JDS-006 Mgc Servicos e Recuperacao de Plasticos Ltda: -23.59387, -51.61684
-- JDS-007 Nino Sucatas: -23.59387, -51.61684
-- JDS-008 Nino Sucatas (Aj Industria e Comercio de Plasticos Ltda): -23.59387, -51.61684
-- MRV-004 Auto Fossa Hidrojato Marialva (Cpb Servicos Ltda): -23.48794, -51.79649
-- MRV-008 Etiplasticos Ltda: -23.47752, -51.81941
-- MRV-010 Inga Transportes (S. Altoe Transportes Ltda): -23.60625, -51.86047
-- MRV-012 Ps Silva Coletas Ltda: -23.48381, -51.81514
-- MRV-013 R. Coleta Transportes: -23.48987, -51.81072
-- MRV-014 Reciclaveis Zeferino Ltda: -23.48435, -51.79552
-- MRV-016 Solução Locação e Remoção Ltda: -23.48381, -51.81514
-- MRV-017 Ss Metais Ltda: -23.45445, -51.84865
-- JDS-012 Amigão Jandaia do Sul: -23.61550, -51.64649
-- JDS-013 Eletrojan: -23.59866, -51.65882
-- JDS-015 Prefeitura de Jandaia do Sul: ponto de coleta de pneus: -23.60288, -51.62750
-- JDS-016 Sicoob Jandaia do Sul: -23.60091, -51.64244
-- ARA-629 Paço Municipal: ponto de entrega da Prefeitura de Arapongas: -23.40783, -51.43808
-- ARA-630 Nissei – Av. Arapongas: -23.41318, -51.43283
-- ARA-631 Raia Drogasil – Avenida Maracanã: -23.38579, -51.41953
 
 ## Sem coordenada (pegar no Google Maps)
 
