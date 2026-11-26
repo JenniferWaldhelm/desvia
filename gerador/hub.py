@@ -6,6 +6,8 @@ from sinonimos import SINONIMOS
 from html import escape as _esc
 
 
+# Formulário "Confirmar dados da empresa" (vazio = link escondido). PRÉVIA: "#confirmar" até a Jen criar o formulário.
+CONFIRMAR_EMPRESA = "#confirmar"
 PEDIR_RESIDUO = "https://docs.google.com/forms/d/e/1FAIpQLSdVWXuT2sFSa57aPxEIei0YLQuAFriagAevpUHBohCyu9sAWQ/viewform?usp=pp_url"  # formulário "Pedir um resíduo ou ponto" (entry.2064153661 = resíduo, entry.1952163065 = cidade)
 
 
@@ -263,8 +265,28 @@ def dados_js(pts, cid_slug, ctx):
             "a": p["_lat"], "o": p["_lng"], "tel": p["Telefone"], "site": site,
             "st": p["_status"], "lic": lic, "lc": cls, "cnpj": aviso_cnpj(p), "obs": obs_publica(p),
             "pp": acoes(p, norm), "cs": sorted(p["_cidades"]),
+            "ck": conferido(p, norm, aviso_cnpj)[0], "cf": conferido(p, norm, aviso_cnpj)[1],
+            "emp": p["Tipo de ponto"] in EMPRESA_TIPOS,
         })
     return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
+
+
+# Empresas (não lojas nem pontos públicos): o que o Desvia conferiu, em fatos, e se a própria empresa confirmou.
+EMPRESA_TIPOS = ("Coleta e transporte", "Tratamento/destinação final", "Cooperativa/associação")
+
+
+def conferido(p, norm, aviso_cnpj):
+    if p["Tipo de ponto"] not in EMPRESA_TIPOS:
+        return [], ""
+    ck = []
+    if p["CNPJ"].strip() and not aviso_cnpj(p):
+        ck.append("CNPJ ativo na Receita")
+    if p["Telefone"].strip():
+        ck.append("Tem telefone")
+    cf = ""
+    if "confirmado pela empresa" in norm(p["Fonte"]):
+        cf = p["Data verificação"].strip() or "s/d"
+    return ck, cf
 
 
 def grupos(ctx):
@@ -398,6 +420,7 @@ var CATS = {cats_js};
 var SINONIMOS = {json.dumps(SINONIMOS, ensure_ascii=False)};
 var PEDIR_RESIDUO = "https://docs.google.com/forms/d/e/1FAIpQLSdVWXuT2sFSa57aPxEIei0YLQuAFriagAevpUHBohCyu9sAWQ/viewform?usp=pp_url";
 var DESVIA_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdV7aBhtu6Lx6uHXM5MxB13WXaX9or0uAkJa9rJz395m_Rj4Q/viewform";
+var CONFIRMAR_EMPRESA = "{CONFIRMAR_EMPRESA}";
 var GRUPOS = {json.dumps(grupos(ctx), ensure_ascii=False)};
 var DESVIA_CIDADES = {json.dumps({cid_slug: cidade}, ensure_ascii=False)};
 </script>

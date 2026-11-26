@@ -108,6 +108,13 @@
     if (cont.length) h += '<p class="contato">' + cont.join(' · ') + '</p>';
     h += '<p class="licenca ' + p.lc + '">' + esc(p.lic) + '</p>';
     if (p.cnpj) h += '<p class="licenca aviso">' + esc(p.cnpj) + '</p>';
+    if (p.emp) {
+      // o que o Desvia conferiu (fatos, sem nota) e se a própria empresa confirmou
+      var ck = (p.ck || []).map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('');
+      h += '<div class="conferido">' + (ck ? '<ul>' + ck + '</ul>' : '') +
+        (p.cf ? '<p class="conf-ok">Dados confirmados pela empresa em ' + esc(p.cf) + '.</p>'
+              : '<p class="conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>') + '</div>';
+    }
     if (p.fo) h += '<p class="fonte">' + esc(p.fo) + '</p>';
     if (p.obs) h += '<p class="obs">' + esc(p.obs) + '</p>';
     if (viz && (p.t === 'PEV público' || p.st === 'publico')) h += '<p class="obs aviso-viz">Ponto público de ' + esc(p.m) + ': pode aceitar só moradores da cidade. Confirme antes de ir.</p>';
@@ -118,6 +125,7 @@
     if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';
+    if (p.emp && !p.cf && window.CONFIRMAR_EMPRESA) h += '<p class="sou-empresa"><a href="' + CONFIRMAR_EMPRESA + '" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>';
     return h + '</article>';
   }
 

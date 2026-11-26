@@ -523,3 +523,15 @@ body { overflow-x: clip; }
 .regiao small { color: var(--cinza); font-weight: 400; }
 .cidades-sec .pedir-cidade { margin-top: 14px; text-align: center; }
 .busca .limpar-form { display: none; } /* já existe "Limpar filtros" na lista de resultados */
+
+/* O que o Desvia conferiu na empresa (fatos, sem nota) */
+.conferido { margin: 6px 0 0; font-size: .86rem; }
+.conferido ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.conferido li { color: #236B43; }
+.conferido li::before { content: "✓ "; font-weight: 700; }
+.conferido p { margin: 4px 0 0; }
+.conferido .conf-ok { color: #155E45; font-weight: 600; }
+.conferido .conf-ok::before { content: "✓ "; }
+.conferido .conf-nao { color: var(--cinza); }
+.sou-empresa { margin: 6px 0 0; font-size: .82rem; }
+.sou-empresa a { color: var(--cinza); }
