@@ -1,8 +1,12 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
-- Endereços que o OpenStreetMap não achou: 51
+- Coordenadas achadas nesta rodada: 1 (já aparecem no mapa)
+- Endereços que o OpenStreetMap não achou: 50
 - Possíveis duplicados: 4
+
+## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
+
+- ARA-632 Raia Drogasil – Av. Arapongas: -23.41318, -51.43283
 
 ## Sem coordenada (pegar no Google Maps)
 
@@ -56,7 +60,6 @@
 - MRV-006 Erlich Filho Recuperacao de Materiais Plasticos Ltda (Avenida Dr Eurico Dornelas De Barros, 592, Centro, Marialva)
 - MRV-009 Ferro Velho Pulinopolis Ltda (Gleba Ribeirao Sarandi, S/N, Zona Rural, Marialva)
 - MRV-011 M.C. Comercio de Metais (Rua Anselmo M. T.  Mandadori, 82, Conjunto Joao Olimpio Da Rocha, Marialva)
-- ARA-632 Raia Drogasil – Av. Centro Arapongas (Av. Centro Arapongas, 624, Arapongas)
 
 ## Possíveis duplicados (decidir qual fica)
 
