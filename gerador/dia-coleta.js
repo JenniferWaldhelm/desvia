@@ -18,12 +18,24 @@
     }
     return ok;
   }
+  // distância em metros do ponto até a borda do polígono (o mapa da prefeitura deixa frestas nas ruas entre setores)
+  function distBorda(lat, lng, anel) {
+    var kx = 111320 * Math.cos(lat * Math.PI / 180), ky = 110540, min = Infinity;
+    for (var i = 0, j = anel.length - 1; i < anel.length; j = i++) {
+      var ax = (anel[j][0] - lng) * kx, ay = (anel[j][1] - lat) * ky, bx = (anel[i][0] - lng) * kx, by = (anel[i][1] - lat) * ky;
+      var dx = bx - ax, dy = by - ay, t = (dx || dy) ? Math.max(0, Math.min(1, -(ax * dx + ay * dy) / (dx * dx + dy * dy))) : 0;
+      min = Math.min(min, Math.hypot(ax + t * dx, ay + t * dy));
+    }
+    return min;
+  }
   function acha(lat, lng) {
-    var out = { comum: [], seletiva: [] };
+    var out = { comum: [], seletiva: [] }, perto = { comum: null, seletiva: null };
     SET.features.forEach(function (f) {
-      var g = f.geometry, polys = g.type === 'Polygon' ? [g.coordinates] : g.coordinates;
-      if (polys.some(function (p) { return dentro(lng, lat, p[0]); })) out[f.properties.tipo].push(f.properties);
+      var g = f.geometry, polys = g.type === 'Polygon' ? [g.coordinates] : g.coordinates, t = f.properties.tipo;
+      if (polys.some(function (p) { return dentro(lng, lat, p[0]); })) out[t].push(f.properties);
+      else polys.forEach(function (p) { var d = distBorda(lat, lng, p[0]); if (d < 80 && (!perto[t] || d < perto[t].d)) perto[t] = { d: d, p: f.properties }; });
     });
+    ['comum', 'seletiva'].forEach(function (t) { if (!out[t].length && perto[t]) out[t].push(perto[t].p); });
     return out;
   }
   function linha(lista, rotulo) {
