@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Cooperativa dos Recicladores da Cidade dos Passaros", "a": -23.45624, "o": -51.42534, "id": "ara-018", "s": "valida"}, {"n": "Cooperativa dos Recicladores da Zona Sul", "a": -23.45503, "o": -51.42631, "id": "ara-019", "s": "valida"}, {"n": "Leplast Embalagens e Acessorios Ltda", "a": -23.43088, "o": -51.42599, "id": "ara-036", "s": "valida"}, {"n": "Paulo Cesar de Faria & Cia Ltda", "a": -23.38017, "o": -51.44747, "id": "ara-044", "s": "valida"}, {"n": "Zanona Comercio de Aparas e Embalagens Ltda", "a": -23.46333, "o": -51.42972, "id": "ara-055", "s": "valida"}, {"n": "UBS Águias: ponto de entrega da Prefeitura de Arapongas", "a": -23.3820549, "o": -51.4157966, "id": "ara-068", "s": "publico"}, {"n": "UBS Araucária: ponto de entrega da Prefeitura de Arapongas", "a": -23.4179193, "o": -51.4648264, "id": "ara-071", "s": "publico"}, {"n": "UBS Aricanduva: ponto de entrega da Prefeitura de Arapongas", "a": -23.4932799, "o": -51.4251566, "id": "ara-058", "s": "publico"}, {"n": "UBS Bandeirantes (Dr. Simão Del Bosco Brunetti): ponto de entrega da Prefeitura de Arapongas", "a": -23.3998898, "o": -51.4317119, "id": "ara-065", "s": "publico"}, {"n": "UBS Baroneza: ponto de entrega da Prefeitura de Arapongas", "a": -23.4198396, "o": -51.4244009, "id": "ara-081", "s": "publico"}, {"n": "UBS CAIC: ponto de entrega da Prefeitura de Arapongas", "a": -23.4233822, "o": -51.4313596, "id": "ara-067", "s": "publico"}, {"n": "UBS Campinho: ponto de entrega da Prefeitura de Arapongas", "a": -23.4151706, "o": -51.4379025, "id": "ara-059", "s": "publico"}, {"n": "UBS Centauro: ponto de entrega da Prefeitura de Arapongas", "a": -23.4086017, "o": -51.4549154, "id": "ara-086", "s": "publico"}, {"n": "UBS Colônia Esperança: ponto de entrega da Prefeitura de Arapongas", "a": -23.4909697, "o": -51.4619273, "id": "ara-082", "s": "publico"}, {"n": "UBS Columbia (Dr. Josias Araújo Machado): ponto de entrega da Prefeitura de Arapongas", "a": -23.4283386, "o": -51.4348291, "id": "ara-066", "s": "publico"}, {"n": "UBS Del Condor: ponto de entrega da Prefeitura de Arapongas", "a": -23.3914902, "o": -51.4213579, "id": "ara-072", "s": "publico"}, {"n": "UBS Guadalupe: ponto de entrega da Prefeitura de Arapongas", "a": -23.3899445, "o": -51.4428163, "id": "ara-075", "s": "publico"}, {"n": "UBS Lori: ponto de entrega da Prefeitura de Arapongas", "a": -23.4066849, "o": -51.4480367, "id": "ara-060", "s": "publico"}, {"n": "UBS Padre Chico: ponto de entrega da Prefeitura de Arapongas", "a": -23.425173, "o": -51.4364862, "id": "ara-076", "s": "publico"}, {"n": "UBS Palmares: ponto de entrega da Prefeitura de Arapongas", "a": -23.4545015, "o": -51.4318873, "id": "ara-085", "s": "publico"}, {"n": "UBS Panorama: ponto de entrega da Prefeitura de Arapongas", "a": -23.4120887, "o": -51.4500894, "id": "ara-077", "s": "publico"}, {"n": "UBS Petrópolis: ponto de entrega da Prefeitura de Arapongas", "a": -23.4129554, "o": -51.4589685, "id": "ara-083", "s": "publico"}, {"n": "UBS Pombas: ponto de entrega da Prefeitura de Arapongas", "a": -23.4045532, "o": -51.4419558, "id": "ara-061", "s": "publico"}, {"n": "UBS Primavera: ponto de entrega da Prefeitura de Arapongas", "a": -23.393678, "o": -51.451432, "id": "ara-074", "s": "publico"}, {"n": "UBS Sampaio: ponto de entrega da Prefeitura de Arapongas", "a": -23.4091907, "o": -51.4260886, "id": "ara-084", "s": "publico"}, {"n": "UBS San Rafael: ponto de entrega da Prefeitura de Arapongas", "a": -23.3941787, "o": -51.4126682, "id": "ara-078", "s": "publico"}, {"n": "UBS Santo Antônio: ponto de entrega da Prefeitura de Arapongas", "a": -23.4138713, "o": -51.4240047, "id": "ara-079", "s": "publico"}, {"n": "UBS São Bento: ponto de entrega da Prefeitura de Arapongas", "a": -23.4594671, "o": -51.4311808, "id": "ara-063", "s": "publico"}, {"n": "UBS São João: ponto de entrega da Prefeitura de Arapongas", "a": -23.4166996, "o": -51.4427197, "id": "ara-073", "s": "publico"}, {"n": "UBS São Vicente: ponto de entrega da Prefeitura de Arapongas", "a": -23.417858, "o": -51.4343775, "id": "ara-062", "s": "publico"}, {"n": "UBS Triângulo: ponto de entrega da Prefeitura de Arapongas", "a": -23.4064155, "o": -51.4349479, "id": "ara-064", "s": "publico"}, {"n": "UBS Tropical: ponto de entrega da Prefeitura de Arapongas", "a": -23.3801317, "o": -51.4624612, "id": "ara-070", "s": "publico"}, {"n": "UBS Ulisses Guimarães: ponto de entrega da Prefeitura de Arapongas", "a": -23.420282, "o": -51.4243387, "id": "ara-069", "s": "publico"}, {"n": "UBS Vila Araponguinha: ponto de entrega da Prefeitura de Arapongas", "a": -23.4034821, "o": -51.4247461, "id": "ara-080", "s": "publico"}, {"n": "Plastsul Reciclagem de Plasticos Ltda", "a": -23.36433, "o": -51.39773, "id": "ara-045", "s": "vencida"}, {"n": "Recicle Cacambas e Reciclagem Ltda (Recicle Cacambas, Terraplanagem e Reciclagem)", "a": -23.46635, "o": -51.40768, "id": "ara-047", "s": "vencida"}, {"n": "Ams Reciclagem", "a": -23.39796, "o": -51.41007, "id": "ara-007", "s": "nao_localizada"}, {"n": "Armazen Industria Nlds Platfer Plasticos Ortin", "a": -23.42107, "o": -51.44168, "id": "ara-010", "s": "nao_localizada"}, {"n": "Biore9 Sucatas Ltda", "a": -23.403, "o": -51.43788, "id": "ara-014", "s": "nao_localizada"}, {"n": "Biosul Reciclagem de Oleos Ltda", "a": -23.38784, "o": -51.42139, "id": "ara-015", "s": "nao_localizada"}, {"n": "C&c Cacambas e Cia", "a": -23.45503, "o": -51.42631, "id": "ara-016", "s": "nao_localizada"}, {"n": "Ferro Velho Estrela", "a": -23.42596, "o": -51.42173, "id": "ara-025", "s": "nao_localizada"}, {"n": "G. D. Benevenuto Reciclagem", "a": -23.45961, "o": -51.42931, "id": "ara-028", "s": "nao_localizada"}, {"n": "J N de Jesus Comercio de Reciclagens Ltda", "a": -23.42206, "o": -51.42516, "id": "ara-033", "s": "nao_localizada"}, {"n": "Rmm Gestao Ambiental de Residuos Ltda", "a": -23.403, "o": -51.43788, "id": "ara-050", "s": "nao_localizada"}];
+  var pts = [{"n": "Cooperativa dos Recicladores da Cidade dos Passaros", "a": -23.45624, "o": -51.42534, "id": "ara-018", "s": "valida"}, {"n": "Cooperativa dos Recicladores da Zona Sul", "a": -23.45503, "o": -51.42631, "id": "ara-019", "s": "valida"}, {"n": "Leplast Embalagens e Acessorios Ltda", "a": -23.43088, "o": -51.42599, "id": "ara-036", "s": "valida"}, {"n": "Paulo Cesar de Faria & Cia Ltda", "a": -23.38017, "o": -51.44747, "id": "ara-044", "s": "valida"}, {"n": "Zanona Comercio de Aparas e Embalagens Ltda", "a": -23.46333, "o": -51.42972, "id": "ara-055", "s": "valida"}, {"n": "UBS Águias: ponto de entrega da Prefeitura de Arapongas", "a": -23.3820549, "o": -51.4157966, "id": "ara-610", "s": "publico"}, {"n": "UBS Araucária: ponto de entrega da Prefeitura de Arapongas", "a": -23.4179193, "o": -51.4648264, "id": "ara-613", "s": "publico"}, {"n": "UBS Aricanduva: ponto de entrega da Prefeitura de Arapongas", "a": -23.4932799, "o": -51.4251566, "id": "ara-600", "s": "publico"}, {"n": "UBS Bandeirantes (Dr. Simão Del Bosco Brunetti): ponto de entrega da Prefeitura de Arapongas", "a": -23.3998898, "o": -51.4317119, "id": "ara-607", "s": "publico"}, {"n": "UBS Baroneza: ponto de entrega da Prefeitura de Arapongas", "a": -23.4198396, "o": -51.4244009, "id": "ara-623", "s": "publico"}, {"n": "UBS CAIC: ponto de entrega da Prefeitura de Arapongas", "a": -23.4233822, "o": -51.4313596, "id": "ara-609", "s": "publico"}, {"n": "UBS Campinho: ponto de entrega da Prefeitura de Arapongas", "a": -23.4151706, "o": -51.4379025, "id": "ara-601", "s": "publico"}, {"n": "UBS Centauro: ponto de entrega da Prefeitura de Arapongas", "a": -23.4086017, "o": -51.4549154, "id": "ara-628", "s": "publico"}, {"n": "UBS Colônia Esperança: ponto de entrega da Prefeitura de Arapongas", "a": -23.4909697, "o": -51.4619273, "id": "ara-624", "s": "publico"}, {"n": "UBS Columbia (Dr. Josias Araújo Machado): ponto de entrega da Prefeitura de Arapongas", "a": -23.4283386, "o": -51.4348291, "id": "ara-608", "s": "publico"}, {"n": "UBS Del Condor: ponto de entrega da Prefeitura de Arapongas", "a": -23.3914902, "o": -51.4213579, "id": "ara-614", "s": "publico"}, {"n": "UBS Guadalupe: ponto de entrega da Prefeitura de Arapongas", "a": -23.3899445, "o": -51.4428163, "id": "ara-617", "s": "publico"}, {"n": "UBS Lori: ponto de entrega da Prefeitura de Arapongas", "a": -23.4066849, "o": -51.4480367, "id": "ara-602", "s": "publico"}, {"n": "UBS Padre Chico: ponto de entrega da Prefeitura de Arapongas", "a": -23.425173, "o": -51.4364862, "id": "ara-618", "s": "publico"}, {"n": "UBS Palmares: ponto de entrega da Prefeitura de Arapongas", "a": -23.4545015, "o": -51.4318873, "id": "ara-627", "s": "publico"}, {"n": "UBS Panorama: ponto de entrega da Prefeitura de Arapongas", "a": -23.4120887, "o": -51.4500894, "id": "ara-619", "s": "publico"}, {"n": "UBS Petrópolis: ponto de entrega da Prefeitura de Arapongas", "a": -23.4129554, "o": -51.4589685, "id": "ara-625", "s": "publico"}, {"n": "UBS Pombas: ponto de entrega da Prefeitura de Arapongas", "a": -23.4045532, "o": -51.4419558, "id": "ara-603", "s": "publico"}, {"n": "UBS Primavera: ponto de entrega da Prefeitura de Arapongas", "a": -23.393678, "o": -51.451432, "id": "ara-616", "s": "publico"}, {"n": "UBS Sampaio: ponto de entrega da Prefeitura de Arapongas", "a": -23.4091907, "o": -51.4260886, "id": "ara-626", "s": "publico"}, {"n": "UBS San Rafael: ponto de entrega da Prefeitura de Arapongas", "a": -23.3941787, "o": -51.4126682, "id": "ara-620", "s": "publico"}, {"n": "UBS Santo Antônio: ponto de entrega da Prefeitura de Arapongas", "a": -23.4138713, "o": -51.4240047, "id": "ara-621", "s": "publico"}, {"n": "UBS São Bento: ponto de entrega da Prefeitura de Arapongas", "a": -23.4594671, "o": -51.4311808, "id": "ara-605", "s": "publico"}, {"n": "UBS São João: ponto de entrega da Prefeitura de Arapongas", "a": -23.4166996, "o": -51.4427197, "id": "ara-615", "s": "publico"}, {"n": "UBS São Vicente: ponto de entrega da Prefeitura de Arapongas", "a": -23.417858, "o": -51.4343775, "id": "ara-604", "s": "publico"}, {"n": "UBS Triângulo: ponto de entrega da Prefeitura de Arapongas", "a": -23.4064155, "o": -51.4349479, "id": "ara-606", "s": "publico"}, {"n": "UBS Tropical: ponto de entrega da Prefeitura de Arapongas", "a": -23.3801317, "o": -51.4624612, "id": "ara-612", "s": "publico"}, {"n": "UBS Ulisses Guimarães: ponto de entrega da Prefeitura de Arapongas", "a": -23.420282, "o": -51.4243387, "id": "ara-611", "s": "publico"}, {"n": "UBS Vila Araponguinha: ponto de entrega da Prefeitura de Arapongas", "a": -23.4034821, "o": -51.4247461, "id": "ara-622", "s": "publico"}, {"n": "Plastsul Reciclagem de Plasticos Ltda", "a": -23.36433, "o": -51.39773, "id": "ara-045", "s": "vencida"}, {"n": "Recicle Cacambas e Reciclagem Ltda (Recicle Cacambas, Terraplanagem e Reciclagem)", "a": -23.46635, "o": -51.40768, "id": "ara-047", "s": "vencida"}, {"n": "Ams Reciclagem", "a": -23.39796, "o": -51.41007, "id": "ara-007", "s": "nao_localizada"}, {"n": "Armazen Industria Nlds Platfer Plasticos Ortin", "a": -23.42107, "o": -51.44168, "id": "ara-010", "s": "nao_localizada"}, {"n": "Biore9 Sucatas Ltda", "a": -23.403, "o": -51.43788, "id": "ara-014", "s": "nao_localizada"}, {"n": "Biosul Reciclagem de Oleos Ltda", "a": -23.38784, "o": -51.42139, "id": "ara-015", "s": "nao_localizada"}, {"n": "C&c Cacambas e Cia", "a": -23.45503, "o": -51.42631, "id": "ara-016", "s": "nao_localizada"}, {"n": "Ferro Velho Estrela", "a": -23.42596, "o": -51.42173, "id": "ara-025", "s": "nao_localizada"}, {"n": "G. D. Benevenuto Reciclagem", "a": -23.45961, "o": -51.42931, "id": "ara-028", "s": "nao_localizada"}, {"n": "J N de Jesus Comercio de Reciclagens Ltda", "a": -23.42206, "o": -51.42516, "id": "ara-033", "s": "nao_localizada"}, {"n": "Rmm Gestao Ambiental de Residuos Ltda", "a": -23.403, "o": -51.43788, "id": "ara-050", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
@@ -96,7 +96,7 @@ window.addEventListener('load', function () {
 <p class="local">Rua Fruxu Serrano, 889, Parque Industrial Xi, Arapongas</p>
 <p class="contato"><a href="tel:+554299021406">(42) 99021406</a></p>
 <p class="licenca ok">Licença ambiental LO 270332 (IAT) válida até 24/05/2027.</p>
-</article><article class="ponto" id="ara-087">
+</article><article class="ponto" id="ara-629">
 <h3>Paço Municipal: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -104,7 +104,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. No horário de atendimento da Prefeitura: segunda a sexta, das 8h às 14h. O recolhimento é feito pela Sanetran. Dúvidas: (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-068">
+</article><article class="ponto" id="ara-610">
 <h3>UBS Águias: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -112,7 +112,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-071">
+</article><article class="ponto" id="ara-613">
 <h3>UBS Araucária: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -120,7 +120,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-058">
+</article><article class="ponto" id="ara-600">
 <h3>UBS Aricanduva: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -128,7 +128,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-065">
+</article><article class="ponto" id="ara-607">
 <h3>UBS Bandeirantes (Dr. Simão Del Bosco Brunetti): ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -136,7 +136,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-081">
+</article><article class="ponto" id="ara-623">
 <h3>UBS Baroneza: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -144,7 +144,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-067">
+</article><article class="ponto" id="ara-609">
 <h3>UBS CAIC: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -152,7 +152,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-059">
+</article><article class="ponto" id="ara-601">
 <h3>UBS Campinho: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -160,7 +160,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-086">
+</article><article class="ponto" id="ara-628">
 <h3>UBS Centauro: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -168,7 +168,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-082">
+</article><article class="ponto" id="ara-624">
 <h3>UBS Colônia Esperança: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -176,7 +176,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-066">
+</article><article class="ponto" id="ara-608">
 <h3>UBS Columbia (Dr. Josias Araújo Machado): ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -184,7 +184,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-072">
+</article><article class="ponto" id="ara-614">
 <h3>UBS Del Condor: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -192,7 +192,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-075">
+</article><article class="ponto" id="ara-617">
 <h3>UBS Guadalupe: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -200,7 +200,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-060">
+</article><article class="ponto" id="ara-602">
 <h3>UBS Lori: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -208,7 +208,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-076">
+</article><article class="ponto" id="ara-618">
 <h3>UBS Padre Chico: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -216,7 +216,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-085">
+</article><article class="ponto" id="ara-627">
 <h3>UBS Palmares: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -224,7 +224,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-077">
+</article><article class="ponto" id="ara-619">
 <h3>UBS Panorama: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -232,7 +232,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-083">
+</article><article class="ponto" id="ara-625">
 <h3>UBS Petrópolis: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -240,7 +240,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-061">
+</article><article class="ponto" id="ara-603">
 <h3>UBS Pombas: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -248,7 +248,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-074">
+</article><article class="ponto" id="ara-616">
 <h3>UBS Primavera: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -256,7 +256,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-084">
+</article><article class="ponto" id="ara-626">
 <h3>UBS Sampaio: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -264,7 +264,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-078">
+</article><article class="ponto" id="ara-620">
 <h3>UBS San Rafael: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -272,7 +272,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-079">
+</article><article class="ponto" id="ara-621">
 <h3>UBS Santo Antônio: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -280,7 +280,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-063">
+</article><article class="ponto" id="ara-605">
 <h3>UBS São Bento: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -288,7 +288,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-073">
+</article><article class="ponto" id="ara-615">
 <h3>UBS São João: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -296,7 +296,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-062">
+</article><article class="ponto" id="ara-604">
 <h3>UBS São Vicente: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -304,7 +304,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-064">
+</article><article class="ponto" id="ara-606">
 <h3>UBS Triângulo: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -312,7 +312,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-070">
+</article><article class="ponto" id="ara-612">
 <h3>UBS Tropical: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -320,7 +320,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-069">
+</article><article class="ponto" id="ara-611">
 <h3>UBS Ulisses Guimarães: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>
@@ -328,7 +328,7 @@ window.addEventListener('load', function () {
 <p class="contato"><a href="tel:+554339021089">(43) 3902-1089</a> · <a href="https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos" rel="nofollow noopener" target="_blank">https://arapongasnews.com.br/noticia/3479/paco-municipal-de-arapongas-ponto-coleta-residuos</a></p>
 <p class="licenca neutro">Serviço público municipal.</p>
 <p class="obs">Ponto de entrega da Prefeitura, grátis. Leve no horário de funcionamento da unidade. O recolhimento é feito pela Sanetran. Dúvidas: Secretaria de Agricultura, Serviços Públicos e Meio Ambiente, (43) 3902-1194 ou WhatsApp (43) 3902-1089.</p>
-</article><article class="ponto" id="ara-080">
+</article><article class="ponto" id="ara-622">
 <h3>UBS Vila Araponguinha: ponto de entrega da Prefeitura de Arapongas</h3>
 <p class="tipo">PEV público · Recebimento</p>
 <p class="residuos">Pilhas e baterias; Lâmpadas fluorescentes; Eletrônicos; Latas de tinta vazias; Isopor; Chapas de raio-X</p>

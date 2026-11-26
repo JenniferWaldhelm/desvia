@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Líder Desentupidora Ltda (Desentupidora Líder)", "a": -23.31735265, "o": -51.38259069, "id": "lda-127", "s": "valida"}, {"n": "Mundi Ambiental (desentupidora e transportadora de resíduos)", "a": -23.30166, "o": -51.39038, "id": "rol-033", "s": "vencida"}];
+  var pts = [{"n": "Líder Desentupidora Ltda (Desentupidora Líder)", "a": -23.31735265, "o": -51.38259069, "id": "lda-127", "s": "valida"}, {"n": "Mundi Ambiental (desentupidora e transportadora de resíduos)", "a": -23.30166, "o": -51.39038, "id": "rol-033", "s": "vencida"}, {"n": "Desentupidora Paranoa Ltda", "a": -23.33506, "o": -51.39738, "id": "rol-051", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);

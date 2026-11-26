@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Associação Assurban", "a": -23.27649, "o": -51.2897, "id": "cam-004", "s": "valida"}];
+  var pts = [{"n": "Ambiental Comercio e Coleta de Residuos Ltda", "a": -23.30267, "o": -51.22706, "id": "cam-045", "s": "valida"}, {"n": "Associação Assurban", "a": -23.27649, "o": -51.2897, "id": "cam-004", "s": "valida"}, {"n": "Coopermarli", "a": -23.28315, "o": -51.26432, "id": "cam-051", "s": "valida"}, {"n": "Mfplast Industria e Comercio de Plasticos Ltda", "a": -23.28208, "o": -51.23908, "id": "cam-058", "s": "valida"}, {"n": "Xavantes Aluminios (Metais Xavantes Ltda)", "a": -23.27137, "o": -51.26297, "id": "cam-063", "s": "valida"}, {"n": "C.A.M. Sucatas Ltda", "a": -23.28822, "o": -51.27866, "id": "cam-047", "s": "nao_localizada"}, {"n": "Ferro Velho Daniel", "a": -23.30937, "o": -51.21887, "id": "cam-055", "s": "nao_localizada"}, {"n": "Lp Viva Melhor (Cooperativa de Reciclagem Viva Melhor)", "a": -23.29849, "o": -51.23772, "id": "cam-056", "s": "nao_localizada"}, {"n": "Mccplast (Fujii Plast Industria e Comercio de Plasticos Ltda)", "a": -23.30937, "o": -51.21887, "id": "cam-057", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);

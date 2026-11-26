@@ -1,62 +1,51 @@
 # Qualidade da base
 
-- Coordenadas achadas nesta rodada: 51 (já aparecem no mapa)
-- Endereços que o OpenStreetMap não achou: 22
+- Coordenadas achadas nesta rodada: 40 (já aparecem no mapa)
+- Endereços que o OpenStreetMap não achou: 42
 - Possíveis duplicados: 4
 
 ## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
 
-- APU-042 Jbf Metais (F M de Oliveira Metais Ltda): -23.56229, -51.44334
-- APU-044 Jvm Eco Solutions (Jvm Nascimento Ind e com Plasticos Ltda): -23.51453, -51.42566
-- APU-045 Lsk Coletas e Transportes: -23.56141, -51.46252
-- APU-046 M S Carvalho Prestadora de Servicos e Reciclagem Ltda: -23.56526, -51.49149
-- APU-047 Mv Plast Reciclagem Ltda: -23.51893, -51.42898
-- APU-048 Nathan Reciclagem (Nathan Recicladora Ltda): -23.52964, -51.45565
-- APU-051 Peninsula Reciclaveis: -23.58192, -51.44332
-- APU-054 Reciclar e Transformar (Freitas e Coutinho Reciclaveis Ltda): -23.52368, -51.43637
-- APU-055 Rosi Metais Ltda: -23.55775, -51.46128
-- APU-057 Samplast Reciclagens (Apucaplast Reciclagens Ltda): -23.53715, -51.45186
-- APU-058 Sul Brazil Sucatas e Baterias Ltda.: -23.51661, -51.43140
-- APU-060 Trans Apostolo Cacambas Ltda: -23.55597, -51.46353
-- APU-061 Transcaben Transporte de Cacambas e Entulhos Ltda: -23.52368, -51.43637
-- ARA-006 Agaponi Hidro Ambiental: -23.39366, -51.45447
-- ARA-007 Ams Reciclagem: -23.39796, -51.41007
-- ARA-009 Arapongas Kcamba (Arapongas Locacao de Cacambas Ltda): -23.43087, -51.42674
-- ARA-010 Armazen Industria Nlds Platfer Plasticos Ortin: -23.42107, -51.44168
-- ARA-012 Batalha Pneus Comercio de Pneus Usados Ltda: -23.41504, -51.42124
-- ARA-013 Bio Residuos de Arapongas Ltda: -23.39310, -51.40847
-- ARA-014 Biore9 Sucatas Ltda: -23.40300, -51.43788
-- ARA-015 Biosul Reciclagem de Oleos Ltda: -23.38784, -51.42139
-- ARA-016 C&c Cacambas e Cia: -23.45503, -51.42631
-- ARA-017 Cacambao (Msl Transportes e Servicos de Cacamba Ltda): -23.41540, -51.43255
-- ARA-018 Cooperativa dos Recicladores da Cidade dos Passaros: -23.45624, -51.42534
-- ARA-019 Cooperativa dos Recicladores da Zona Sul: -23.45503, -51.42631
-- ARA-023 Fasolli Ambiental Ltda: -23.39305, -51.45451
-- ARA-024 Fenix Transporte e Comercio de Sucata Ltda: -23.39179, -51.43096
-- ARA-025 Ferro Velho Estrela: -23.42596, -51.42173
-- ARA-026 Fert Tech Industria e Comercio de Fertilizantes Ltda: -23.38803, -51.42697
-- ARA-027 Figueiredo Disk Terra (Figueiredo Servicos de Terraplanagem Ltda): -23.39938, -51.44577
-- ARA-028 G. D. Benevenuto Reciclagem: -23.45961, -51.42931
-- ARA-030 Galuch Servicos Ltda: -23.38784, -51.42139
-- ARA-033 J N de Jesus Comercio de Reciclagens Ltda: -23.42206, -51.42516
-- ARA-035 L. a Coletas e Transportes (L . a Coletas e Transportes Ltda): -23.41136, -51.44791
-- ARA-036 Leplast Embalagens e Acessorios Ltda: -23.43088, -51.42599
-- ARA-038 Mbm Comercio de Metais Ltda: -23.40460, -51.44659
-- ARA-039 Metais Arapongas: -23.39296, -51.42779
-- ARA-040 Multicoletas: -23.39507, -51.42244
-- ARA-042 Ncm Residuos de Madeira e Maquinas (Ncm Residuos de Madeira e Comercio de Maquinas Ltda): -23.40884, -51.45974
-- ARA-044 Paulo Cesar de Faria & Cia Ltda: -23.38017, -51.44747
-- ARA-048 Renovaplast Comercio de Artigos Plasticos Ltda: -23.41215, -51.43643
-- ARA-049 Rj Comercio de Sucatas Ltda: -23.45578, -51.43452
-- ARA-050 Rmm Gestao Ambiental de Residuos Ltda: -23.40300, -51.43788
-- ARA-051 So Cacamba Jumbo: -23.41011, -51.43469
-- ARA-052 Sucanorte Comercio e Transporte de Reciclagem de Residuos Industriais Ltda: -23.39766, -51.44873
-- ARA-053 Tba Embalagens Industriais Ltda: -23.38803, -51.42697
-- ARA-056 Zechel Metais, Transportes e Servicos Ltda: -23.39297, -51.42773
-- ARA-057 Zechelrecicla Comercio de Metais Ltda: -23.37032, -51.41854
-- ROL-044 A.R.R.R. Org (Ambiental Residuos Reciclaveis Rolandia. Org): -23.30646, -51.35769
-- ROL-045 Adevece Reciclagem Ltda: -23.31047, -51.33766
-- ROL-046 Ahs Industria e Serviços Ltda: -23.31465, -51.34068
+- ROL-048 Cpx Oleo Ambiental Aditivos Industriais: -23.30528, -51.39845
+- ROL-051 Desentupidora Paranoa Ltda: -23.33506, -51.39738
+- ROL-059 Gr Residuos e Reciclagem Ltda: -23.31047, -51.33766
+- ROL-063 Kazuko Comercio e Reciclagem de Sucatas Ltda: -23.31810, -51.38262
+- ROL-067 Mabene Ambiental: -23.35896, -51.39708
+- ROL-068 Mr Sucatas: -23.31047, -51.33766
+- ROL-071 Polijac Industria e Processamento de Materiais Plasticos Ltda: -23.29856, -51.38761
+- ROL-072 R. G. Reciclagem e Sucatas do Paraguai (Raiter Comercio de Sucatas Ltda): -23.33841, -51.38303
+- ROL-073 Rolampel Comercio de Papelao e Plasticos Ltda: -23.31047, -51.33766
+- ROL-075 Sucatao Rolandia Ltda: -23.30984, -51.38606
+- ROL-076 Transmarin (Transportes Casado Ltda.): -23.30192, -51.39160
+- ROL-078 Zenda Agronegocios (Zenda Industria e Comercio de Plasticos Ltda): -23.30506, -51.33722
+- CAM-044 Agiliza Transportes de Cacambas (C Archanjo Transportes de Cacambas Ltda): -23.27401, -51.26125
+- CAM-045 Ambiental Comercio e Coleta de Residuos Ltda: -23.30267, -51.22706
+- CAM-047 C.A.M. Sucatas Ltda: -23.28822, -51.27866
+- CAM-048 Cacamba Legal: -23.30526, -51.25214
+- CAM-051 Coopermarli: -23.28315, -51.26432
+- CAM-053 Dedique Cacambas (Dedique Locacao de Cacambas Ltda): -23.29631, -51.25100
+- CAM-055 Ferro Velho Daniel: -23.30937, -51.21887
+- CAM-056 Lp Viva Melhor (Cooperativa de Reciclagem Viva Melhor): -23.29849, -51.23772
+- CAM-057 Mccplast (Fujii Plast Industria e Comercio de Plasticos Ltda): -23.30937, -51.21887
+- CAM-058 Mfplast Industria e Comercio de Plasticos Ltda: -23.28208, -51.23908
+- CAM-062 So Cacambas: -23.29631, -51.25100
+- CAM-063 Xavantes Aluminios (Metais Xavantes Ltda): -23.27137, -51.26297
+- IBI-042 Associacao de Trabalho dos Catadores de Materiais Reciclaveis e Reutilizaveis de Ibipora: -23.27251, -51.03649
+- IBI-043 Brasil Sustentabilidade & Gestao de Residuos Ltda: -23.26830, -51.04110
+- IBI-044 E M Teixeira Ltda: -23.29212, -51.08983
+- IBI-045 Guna Industria de Materiais Plasticos: -23.29192, -51.08752
+- IBI-046 Jakob Industria e Comercio de Metais Ltda: -23.29472, -51.09125
+- IBI-047 Lapaza Empreendimentos Ltda: -23.26732, -51.04897
+- IBI-049 Nor Materiais e Embalagens Plasticas: -23.29192, -51.08752
+- IBI-051 Reciclo Produtos Plasticos (Reciclo Industria de Produtos Plasticos Ltda): -23.29192, -51.08752
+- IBI-054 Zanoni Industria e Comercio de Materiais Plasticos Ltda: -23.29192, -51.08752
+- MGI-024 A T Martins Sucatas Ltda: -23.52043, -51.68753
+- MGI-027 Edu Borrachas (A e Rodrigues Borrachas Ltda): -23.51439, -51.69099
+- MGI-030 Ll Reciclagem de Pneus e Transporte (Irmaos Silva Reciclagem e Art. de Borracha Ltda): -23.51333, -51.70412
+- MGI-031 M M J Transportes e Servicos (M M J Transportes e Prestacao de Servicos Ltda): -23.51575, -51.68028
+- MGI-032 Mbp Borrachas e Pneu (Oliveira Borrachas Ltda): -23.51928, -51.65992
+- MGI-033 Sbr Borrachas (Sbr Comercio de Borrachas e Residuos Industriais Ltda): -23.51447, -51.68624
+- MGI-035 Tikin Pneus (Tj Alves Borrachas Ltda): -23.52331, -51.68992
 
 ## Sem coordenada (pegar no Google Maps)
 
@@ -82,11 +71,31 @@
 - ARA-032 J Andrade de Souza Sucatas Ltda (Rodovia Pr-218 Saida Para Astorga, S/N, Jardim Universitario, Arapongas)
 - ARA-046 Reciclamais Sucatas Comercio de Metais Ltda (Distrito Campinho - Chacara Estoril, S/N, Campinho, Arapongas)
 - ARA-054 Terra Verde Solucoes (Sitio Sitio Santa Ana - Estrada Ponte Seca, Sn, Gleba Pirapo, Arapongas)
+- ROL-047 Biomix Industria e Comercio de Residuo de Madeira e Locacao de Maquinas Agricolas Ltda (Estrada Ceboleiro Gleba Bandeirantes, Sn, Zona Rural, Rolândia)
+- ROL-049 Dallon Plasticos Ltda (Rua Shoshishi Sasaki, 700, Pq. Industrial Roland, Rolândia)
+- ROL-050 Dallon Transporte e Logistica (Rua Jose Nicola Caliento, 110, Jardim Rosangelo, Rolândia)
+- ROL-052 Dgo Comercio de Sucatas (Campos e Zorzella Ltda) (Rua José Nicola Caliento, 705, Jardim Rosângelo, Rolândia)
+- ROL-054 Ef&ev Leonardi Ambiental Ltda (Sitio Sitio Sao Joao, Lote 56-A, Estrada Do Km 14, Rodovia Rolandi, Sn, Distrito De Sao Martinho, Rolândia)
+- ROL-055 Eireli Plasticos (Angela Maria Leandro Comercio de Sucatas e Papeis Ltda) (Rua Jose Nicola Caliento, 580, Jardim Rosangelo, Rolândia)
+- ROL-057 Gamplast Extrusao e Injecao de Aces.plasticos P/moveis (Gamplast Industria e Comercio de Plasticos Ltda.) (Rua Joao Garcia De Andrade, 115, Parque Industrial Manoel Estrada Goncalves, Rolândia)
+- ROL-060 Granplast (Acg Comercio de Plasticos Ltda) (Rodovia Pr-218 - Saida P/ Sabaudia, 10, Lotes Da Rodovia Herminio Antonio Pennacchi, Rolândia)
+- ROL-061 J R R Industria e Comercio de Residuos de Madeira Ltda (Rua Shoshishi Sasaki, 390 A, Parque Indl. Bandeirantes, Rolândia)
+- ROL-065 Lea Papeis Ltda (Rua Jose Nicola Caliento, 620, Jardim Rosangelo, Rolândia)
+- CAM-046 C P Comercio de Vasilhames e Sucatas (Cezar Pizaia Ltda) (Rua Jose Carlos Mufatto, 2990, Jardim Riviera, Cambé)
+- CAM-054 F. J. F. Solucoes Ambientais (Rua Jose Carlos Mufatto, 3282, Jardim Riviera, Cambé)
+- CBR-004 Ferro Velho Mundial (Rua B Populares, 12, Sete De Maio, Cambira)
+- IBI-050 Ps Recuperadora de Plasticos (Rua Santa Ana, 77, Jardim Santa Paula, Ibiporã)
+- IBI-052 Rr Brasil Materiais Plasticos Ltda (Rua Luis Carlos Zani, 3579, Parque Industrial V, Ibiporã)
+- MGI-025 Ademir Zachia & Cia Ltda (Rua Tadaske Utiume, 97, Pq Indl I, Mandaguari)
+- MGI-026 Cacambas Mandaguari (Rua Vicente Ribeiro Chagas, 427, Jardim Boa Vista, Mandaguari)
+- MGI-028 Kavuco Tyres (R M da Silva Comercio de Pneus Ltda) (Rua Avenida Das Industrias, 292, Parque Industrial I - Abilio Pereira Nunes, Mandaguari)
+- MGI-029 Limpida Ambiental (Rua Amabile Vasques Rodrigues, 3993, Vila Dizolina, Mandaguari)
+- MGI-034 Silvati Gomes & Giannini Compostagem e Fertilizantes (Silvati e Gomes Compostagem e Fertilizantes Ltda) (Estrada Estrada Dourados Km 02, Sn, Gleba Ribeirao Do Dourado, Mandaguari)
 
 ## Possíveis duplicados (decidir qual fica)
 
 - Nome parecido a 0 m: MGA-319 Loja Vivo Maringá Park Shopping Center / MGA-323 Loja TIM Maringá Park Shopping Center
 - Nome parecido a 0 m: LDA-475 Vergoti Comercio de Metais Ltda / LDA-476 Vergoti Comercio de Metais Ltda
 - Nome parecido a 0 m: MGA-387 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis) / MGA-388 Coopercentral (Cooperativa Central do Complexo de Transformacao e Comercializacao de Materiais Reciclaveis)
-- Nome parecido a 50 m: ARA-069 UBS Ulisses Guimarães: ponto de entrega da Prefeitura de Arapongas / ARA-081 UBS Baroneza: ponto de entrega da Prefeitura de Arapongas
+- Nome parecido a 50 m: ARA-611 UBS Ulisses Guimarães: ponto de entrega da Prefeitura de Arapongas / ARA-623 UBS Baroneza: ponto de entrega da Prefeitura de Arapongas
 

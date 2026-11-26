@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Líder Multicoisas", "a": -23.5215422, "o": -51.6793386, "id": "mgi-003", "s": "valida"}];
+  var pts = [{"n": "Líder Multicoisas", "a": -23.5215422, "o": -51.6793386, "id": "mgi-003", "s": "valida"}, {"n": "M M J Transportes e Servicos (M M J Transportes e Prestacao de Servicos Ltda)", "a": -23.51575, "o": -51.68028, "id": "mgi-031", "s": "valida"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);

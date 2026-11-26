@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Cambé Caçambas (R.A. De Maso Transporte de Resíduos Ltda)", "a": -23.28626, "o": -51.26358, "id": "cam-043", "s": "valida"}, {"n": "Coletão Transportes em Caçambas S/C Ltda.", "a": -23.27694, "o": -51.26784, "id": "cam-001", "s": "vencida"}];
+  var pts = [{"n": "Cambé Caçambas (R.A. De Maso Transporte de Resíduos Ltda)", "a": -23.28626, "o": -51.26358, "id": "cam-043", "s": "valida"}, {"n": "Coletão Transportes em Caçambas S/C Ltda.", "a": -23.27694, "o": -51.26784, "id": "cam-001", "s": "vencida"}, {"n": "Agiliza Transportes de Cacambas (C Archanjo Transportes de Cacambas Ltda)", "a": -23.27401, "o": -51.26125, "id": "cam-044", "s": "nao_localizada"}, {"n": "Cacamba Legal", "a": -23.30526, "o": -51.25214, "id": "cam-048", "s": "nao_localizada"}, {"n": "Dedique Cacambas (Dedique Locacao de Cacambas Ltda)", "a": -23.29631, "o": -51.251, "id": "cam-053", "s": "nao_localizada"}, {"n": "So Cacambas", "a": -23.29631, "o": -51.251, "id": "cam-062", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
