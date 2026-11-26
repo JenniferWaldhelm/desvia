@@ -4,7 +4,8 @@
   var box = document.getElementById('dia-coleta');
   if (!box) return;
   var res = document.getElementById('dc-res'), mapaEl = document.getElementById('dc-mapa');
-  var SET = null, mapa = null, pino = null;
+  var SET = null, mapa = null, pino = null, achados = [], destaque = null;
+  var COR = { comum: '#6B7280', seletiva: '#2E8B57' };
   var NOMES = { '2ª': 'segunda', '3ª': 'terça', '4ª': 'quarta', '5ª': 'quinta', '6ª': 'sexta', 'sábado': 'sábado' };
   function dias(t) {
     var p = t.replace(/\s+e\s+/g, ', ').split(/,\s*/).map(function (d) { d = d.trim(); return NOMES[d.toLowerCase()] || NOMES[d] || d; });
@@ -30,12 +31,13 @@
   }
   function acha(lat, lng) {
     var out = { comum: [], seletiva: [] }, perto = { comum: null, seletiva: null };
+    achados = [];
     SET.features.forEach(function (f) {
       var g = f.geometry, polys = g.type === 'Polygon' ? [g.coordinates] : g.coordinates, t = f.properties.tipo;
-      if (polys.some(function (p) { return dentro(lng, lat, p[0]); })) out[t].push(f.properties);
-      else polys.forEach(function (p) { var d = distBorda(lat, lng, p[0]); if (d < 80 && (!perto[t] || d < perto[t].d)) perto[t] = { d: d, p: f.properties }; });
+      if (polys.some(function (p) { return dentro(lng, lat, p[0]); })) { out[t].push(f.properties); achados.push(f); }
+      else polys.forEach(function (p) { var d = distBorda(lat, lng, p[0]); if (d < 80 && (!perto[t] || d < perto[t].d)) perto[t] = { d: d, p: f.properties, f: f }; });
     });
-    ['comum', 'seletiva'].forEach(function (t) { if (!out[t].length && perto[t]) out[t].push(perto[t].p); });
+    ['comum', 'seletiva'].forEach(function (t) { if (!out[t].length && perto[t]) { out[t].push(perto[t].p); achados.push(perto[t].f); } });
     return out;
   }
   function linha(lista, rotulo) {
@@ -49,7 +51,13 @@
     res.innerHTML = linha(r.comum, 'Coleta comum (orgânico e rejeito)') + linha(r.seletiva, 'Coleta seletiva (recicláveis)') +
       '<p class="nota">Coloque o lixo para fora pouco antes do horário da coleta. Se mora perto do limite de um setor, confirme com os vizinhos ou com a prefeitura.</p>';
     res.hidden = false;
-    if (mapa) { if (pino) pino.setLatLng([lat, lng]); else pino = L.marker([lat, lng]).addTo(mapa); mapa.setView([lat, lng], 15); }
+    if (mapa) {
+      if (pino) pino.setLatLng([lat, lng]); else pino = L.marker([lat, lng]).addTo(mapa);
+      if (destaque) mapa.removeLayer(destaque);
+      destaque = L.geoJSON({ type: 'FeatureCollection', features: achados }, { interactive: false, style: function (f) {
+        return { color: COR[f.properties.tipo], weight: 3, fillOpacity: f.properties.tipo === 'seletiva' ? 0.25 : 0.08, dashArray: f.properties.tipo === 'comum' ? '6 4' : null }; } }).addTo(mapa);
+      mapa.setView([lat, lng], 14);
+    }
   }
   function carrega(cb) {
     if (SET) return cb();
@@ -63,6 +71,16 @@
     mapa = L.map(mapaEl).setView([+box.dataset.lat, +box.dataset.lng], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(mapa);
     mapa.on('click', function (e) { carrega(function () { mostra(e.latlng.lat, e.latlng.lng); }); });
+    carrega(function () {
+      ['comum', 'seletiva'].forEach(function (t) {
+        L.geoJSON({ type: 'FeatureCollection', features: SET.features.filter(function (f) { return f.properties.tipo === t; }) }, {
+          interactive: false, style: { color: COR[t], weight: 1, fillOpacity: t === 'seletiva' ? 0.12 : 0, dashArray: t === 'comum' ? '4 4' : null } }).addTo(mapa);
+      });
+      var leg = L.control({ position: 'bottomleft' });
+      leg.onAdd = function () { var d = L.DomUtil.create('div', 'dc-legenda');
+        d.innerHTML = '<span class="l-sel"></span> setores da coleta seletiva<br><span class="l-com"></span> setores da coleta comum'; return d; };
+      leg.addTo(mapa);
+    });
   }
   function leaflet(cb) {
     if (window.L) return cb();

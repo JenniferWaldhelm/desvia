@@ -535,3 +535,7 @@ body { overflow-x: clip; }
 .dc-res p { margin: 6px 0; }
 .dc-res .nota { font-size: .88rem; color: var(--cinza); }
 .dia-coleta .fonte { font-size: .82rem; color: var(--cinza); margin-bottom: 0; }
+.dc-legenda { background: #fff; padding: 4px 8px; border-radius: 6px; font-size: .75rem; line-height: 1.5; }
+.dc-legenda span { display: inline-block; width: 14px; height: 10px; margin-right: 4px; vertical-align: middle; }
+.dc-legenda .l-sel { background: rgba(46,139,87,.25); border: 1px solid #2E8B57; }
+.dc-legenda .l-com { border: 1px dashed #6B7280; }
