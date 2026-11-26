@@ -30,7 +30,22 @@
 <p class="regra">O caminhão precisa levar o esgoto para uma estação de tratamento licenciada. Peça o comprovante de descarte.</p>
 
 <p class="atualizado">Dados atualizados em 26/11/2026. Licença válida aparece primeiro.</p>
-
+<div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
+<script>
+window.addEventListener('load', function () {
+  var pts = [{"n": "Agaponi Hidro Ambiental", "a": -23.39366, "o": -51.45447, "id": "ara-006", "s": "valida"}, {"n": "Fasolli Ambiental Ltda", "a": -23.39305, "o": -51.45451, "id": "ara-023", "s": "nao_localizada"}];
+  var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
+  var mapa = L.map('mapa', {scrollWheelZoom: false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
+  var grupo = L.featureGroup();
+  pts.forEach(function (p) {
+    L.circleMarker([p.a, p.o], {radius: 8, color: '#fff', weight: 2, fillColor: cores[p.s] || '#7A7F8C', fillOpacity: 0.95})
+      .bindPopup('<a href="#' + p.id + '">' + p.n.replace(/</g, '&lt;') + '</a>').addTo(grupo);
+  });
+  grupo.addTo(mapa);
+  mapa.fitBounds(grupo.getBounds().pad(0.15), {maxZoom: 15});
+});
+</script>
 <section class="lista">
 <article class="ponto" id="ara-006">
 <h3>Agaponi Hidro Ambiental</h3>

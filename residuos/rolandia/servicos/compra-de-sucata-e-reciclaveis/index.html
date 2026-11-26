@@ -33,7 +33,7 @@
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "King Plasticos Reciclados Ltda", "a": -23.35157, "o": -51.38727, "id": "rol-064", "s": "vencida"}, {"n": "PR Sucata do Gaúcho Ltda (Paraná Recicladora)", "a": -23.30609, "o": -51.33554, "id": "rol-021", "s": "nao_localizada"}];
+  var pts = [{"n": "King Plasticos Reciclados Ltda", "a": -23.35157, "o": -51.38727, "id": "rol-064", "s": "vencida"}, {"n": "A.R.R.R. Org (Ambiental Residuos Reciclaveis Rolandia. Org)", "a": -23.30646, "o": -51.35769, "id": "rol-044", "s": "nao_localizada"}, {"n": "Adevece Reciclagem Ltda", "a": -23.31047, "o": -51.33766, "id": "rol-045", "s": "nao_localizada"}, {"n": "PR Sucata do Gaúcho Ltda (Paraná Recicladora)", "a": -23.30609, "o": -51.33554, "id": "rol-021", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
