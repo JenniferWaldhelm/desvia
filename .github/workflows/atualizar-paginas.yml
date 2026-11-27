@@ -32,8 +32,15 @@ jobs:
         env:
           # aba Pontos publicada como CSV (Arquivo › Compartilhar › Publicar na Web); a variável PLANILHA_CSV_URL, se existir, tem prioridade
           URL: ${{ vars.PLANILHA_CSV_URL || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRYt3WY6jEpAs9iS9Icz4jTQl_O_JA7pFLJ8Gd0-vKCC5Xsbs1j2VkJR1F9YolAvLoYp6t25704z2yV/pub?gid=0&single=true&output=csv' }}
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
         run: |
-          curl -fsSL "$URL" -o dados/pontos.novo.csv
+          # 1º: API do Google (sem atraso), com a chave só de leitura; se faltar ou falhar, usa a cópia publicada
+          if [ -n "$GOOGLE_SA_JSON" ] && pip install -q google-auth requests && python3 coleta/ler_planilha.py; then
+            echo "Planilha lida pela API."
+          else
+            echo "Lendo a cópia publicada da planilha."; rm -f dados/cidades.api.csv
+            curl -fsSL "$URL" -o dados/pontos.novo.csv
+          fi
           head -1 dados/pontos.novo.csv | grep -q "^ID," || { echo "CSV inesperado"; exit 1; }
           python3 - <<'PY'
           import csv, sys
@@ -76,7 +83,9 @@ jobs:
           mv dados/pontos.novo.csv dados/pontos.csv
           # aba "Fila de cidades" (gid=1) do mesmo documento publicado: define quais cidades viram página
           CID_URL=$(echo "$URL" | sed 's/gid=0/gid=1/')
-          if curl -fsSL "$CID_URL" -o dados/cidades.novo.csv && head -1 dados/cidades.novo.csv | grep -q "Publicar"; then
+          if [ -s dados/cidades.api.csv ] && head -1 dados/cidades.api.csv | grep -q "Publicar"; then
+            mv dados/cidades.api.csv dados/cidades.csv
+          elif curl -fsSL "$CID_URL" -o dados/cidades.novo.csv && head -1 dados/cidades.novo.csv | grep -q "Publicar"; then
             mv dados/cidades.novo.csv dados/cidades.csv
           else
             echo "Aba Fila de cidades não publicada ou sem a coluna Publicar: mantenho dados/cidades.csv"; rm -f dados/cidades.novo.csv
