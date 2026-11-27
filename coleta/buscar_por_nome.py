@@ -29,7 +29,7 @@ for nome in nomes:
     if not feats:
         saida.append("- IAT: nada encontrado")
     for a in feats:
-        c = str(a.get("cpf_cnpj") or "").zfill(14)
+        c = str(int(float(a.get("cpf_cnpj") or 0))).zfill(14)
         cnpjs[c] = a.get("nome_razao_social")
         val = a.get("dt_validade")
         if isinstance(val, (int, float)):
