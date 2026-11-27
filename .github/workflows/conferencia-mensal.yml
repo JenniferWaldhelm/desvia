@@ -1,0 +1,32 @@
+name: Conferência mensal (Receita e IAT)
+
+# Dia 22, depois do arquivo da Receita (dia 20) e dos localizadores (dia 21). Só avisa: grava coleta/conferencia-mensal.md.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 8 22 * *"   # dia 22, 5h41 em Brasília
+
+permissions:
+  contents: write
+
+jobs:
+  conferir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Baixar o arquivo da Receita do mês
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: mkdir -p /tmp/receita-pr && gh release download receita-pr -p receita-pr.csv.gz -D /tmp/receita-pr || echo "sem arquivo da Receita"
+      - name: Conferir
+        run: python3 coleta/conferencia_mensal.py /tmp/receita-pr/receita-pr.csv.gz | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Gravar
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add coleta/conferencia-mensal.md
+          git commit -m "Conferência mensal da base" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
