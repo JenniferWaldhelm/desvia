@@ -79,6 +79,18 @@ muffato supermuffato condor cancao amigao atacadao assai max cobasi petz magazin
 leroy merlin havan sicoob sicredi caixa itau bradesco santander""".split())
 
 
+# tipos de lugar: se os dois nomes dizem tipos diferentes (UBS e farmácia), são lugares diferentes
+TIPOS = {"farmacia": "farmacia", "farmacias": "farmacia", "drogaria": "farmacia", "drogarias": "farmacia",
+         "ubs": "saude", "saude": "saude", "hospital": "saude", "clinica": "saude",
+         "mercado": "mercado", "supermercado": "mercado", "atacadao": "mercado", "atacadista": "mercado",
+         "shopping": "shopping", "escola": "escola", "colegio": "escola", "cmei": "escola",
+         "igreja": "igreja", "paroquia": "igreja", "correios": "correios", "agf": "correios", "agc": "correios"}
+
+
+def tipos(s):
+    return {TIPOS[w] for w in re.findall(r"[a-z0-9]+", sem_acento(s)) if w in TIPOS}
+
+
 def redes(s):
     return set(re.findall(r"[a-z0-9]+", sem_acento(s))) & REDES
 
@@ -98,6 +110,9 @@ def comparar(a, b, sim_sig, cache):
         return "certo", "mesmo CNPJ", {}
     if cn_a and cn_b:
         return None  # CNPJs diferentes: estabelecimentos diferentes na Receita
+    ta, tb = tipos(a["Nome"]), tipos(b["Nome"])
+    if ta and tb and not (ta & tb):
+        return None  # tipos de lugar diferentes
     ra, rb = redes(a["Nome"]), redes(b["Nome"])
     if ra != rb:
         return None  # redes diferentes, ou o shopping e uma loja dentro dele
@@ -140,7 +155,7 @@ def ler_revisao():
     cands = []
     for n, l in enumerate(linhas[1:], start=2):
         d = dict(zip(cab, l + [""] * len(cab)))
-        if sem_acento(d.get("No site?", "")).startswith("sim") or not d.get("Nome"):
+        if sem_acento(d.get("No site?", "")).strip() or not d.get("Nome"):  # "Já no site" = já importado
             continue
         d["_linha"] = n
         cands.append(d)
