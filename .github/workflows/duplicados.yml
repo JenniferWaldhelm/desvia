@@ -1,0 +1,30 @@
+name: Procurar duplicados na base
+
+# Manual. Só avisa: grava coleta/duplicados.md e coleta/duplicados.csv.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  procurar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Instalar o modelo
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q sentence-transformers
+      - name: Procurar
+        run: python3 coleta/duplicados.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Gravar
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add coleta/duplicados.md coleta/duplicados.csv
+          git commit -m "Duplicados prováveis na base" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
