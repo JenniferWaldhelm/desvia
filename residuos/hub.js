@@ -79,6 +79,16 @@
     return true;
   }
 
+  var IC_TEL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>';
+  var IC_COPIA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></svg>';
+  function linhaTel(t) {
+    var dig = t.replace(/\D/g, '');
+    if ((dig.length === 10 || dig.length === 11) && dig[0] !== '0') t = '(' + dig.slice(0, 2) + ') ' + dig.slice(2, -4) + '-' + dig.slice(-4);
+    if (dig.length < 10) return '<p class="tel-linha">' + IC_TEL + '<span>' + esc(t) + '</span></p>';
+    return '<p class="tel-linha">' + IC_TEL + '<a href="tel:+55' + dig + '">' + esc(t) + '</a>' +
+      '<button type="button" class="tel-bt" data-copiar="' + esc(t) + '" aria-label="Copiar o telefone ' + esc(t) + '" title="Copiar">' + IC_COPIA + '</button>' +
+      '<a class="tel-bt" href="tel:+55' + dig + '" aria-label="Ligar para ' + esc(t) + '" title="Ligar">' + IC_TEL + '</a></p>';
+  }
   function telLink(t) {
     var primeiro = (t || '').split('/')[0].trim();
     var dig = primeiro.replace(/\D/g, '');
@@ -100,28 +110,30 @@
     var local = p.e ? p.e + (p.m ? ', ' + p.m : '') : p.m;
     if (local) h += '<p class="local">' + esc(local) + '</p>';
     var cont = [];
-    if (p.tel) cont.push(telLink(p.tel));
+    var tels = (p.tel || '').split('/').map(function (t) { return t.trim(); }).filter(Boolean);
+    tels.forEach(function (t) { h += linhaTel(t); });
     if (p.site) {
       var href = /^http/.test(p.site) ? p.site : (p.site.indexOf('@') > 0 ? 'mailto:' + p.site : 'https://' + p.site);
       cont.push('<a href="' + esc(href) + '" target="_blank" rel="nofollow noopener">' + esc(p.site) + '</a>');
     }
     if (cont.length) h += '<p class="contato">' + cont.join(' · ') + '</p>';
+    if (p.emp) {
+      // selos: só fatos conferidos (licença, CNPJ, confirmação da empresa), sem nota
+      var selos = [];
+      if (p.st === 'valida' || p.st === 'vencendo') selos.push('<span class="selo ok" title="Licença ambiental válida nas bases consultadas">Licença válida</span>');
+      (p.ck || []).forEach(function (c) { selos.push('<span class="selo ok" title="Situação cadastral ativa na Receita Federal">' + esc(c) + '</span>'); });
+      if (p.cf) selos.push('<span class="selo ok" title="A própria empresa conferiu os dados">Confirmado pela empresa</span>');
+      if (selos.length) h += '<p class="selos-ponto">' + selos.join('') + '</p>';
+      if (p.doc) h += '<p class="doc">CNPJ ' + esc(p.doc) + '</p>';
+    }
     h += '<p class="licenca ' + p.lc + '">' + esc(p.lic) + '</p>';
     if (p.cnpj) h += '<p class="licenca aviso">' + esc(p.cnpj) + '</p>';
-    if (p.emp) {
-      // o que o Desvia conferiu (fatos, sem nota) e se a própria empresa confirmou
-      var ck = (p.ck || []).map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('');
-      h += '<div class="conferido">' + (ck ? '<ul>' + ck + '</ul>' : '') +
-        (p.cf ? '<p class="conf-ok">Dados confirmados pela empresa em ' + esc(p.cf) + '.</p>'
-              : '<p class="conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>') + '</div>';
-    }
+    if (p.emp) h += '<p class="conferido conf-' + (p.cf ? 'ok' : 'nao') + '">' + (p.cf ? 'Dados confirmados pela empresa em ' + esc(p.cf) + '.' : 'A empresa ainda não confirmou estes dados. Ligue antes de levar.') + '</p>';
     if (p.fo) h += '<p class="fonte">' + esc(p.fo) + '</p>';
     if (p.obs) h += '<p class="obs">' + esc(p.obs) + '</p>';
     if (viz && (p.t === 'PEV público' || p.st === 'publico')) h += '<p class="obs aviso-viz">Ponto público de ' + esc(p.m) + ': pode aceitar só moradores da cidade. Confirme antes de ir.</p>';
     var acoes = [];
     if (p.a != null) acoes.push('<a class="principal" href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
-    var dig = (p.tel || '').split('/')[0].replace(/\D/g, '');
-    if (dig.length >= 10) acoes.push('<a class="principal" href="tel:+55' + dig + '">Ligar</a>');
     if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';

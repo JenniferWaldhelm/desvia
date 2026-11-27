@@ -373,9 +373,10 @@ a.btn-ajuda { text-decoration: none; margin-left: 8px; }
 .ponto .acoes .principal { background: var(--verde); color: #fff !important; border-color: var(--verde); font-weight: 700; }
 .atalhos-topo { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
 .atalhos-topo .btn-ajuda { margin: 0; }
-.cookies { left: 8px; right: 8px; bottom: 8px; padding: 8px 12px; gap: 8px; border-radius: 10px; }
-.cookies p { font-size: .8rem; flex: 1 1 220px; }
-.cookies button { padding: .35rem .7rem; font-size: .85rem; }
+.cookies { left: 8px; right: 8px; bottom: 8px; padding: 14px 14px; gap: 10px; border-radius: 12px; }
+.cookies p { font-size: .95rem; flex: 1 1 100%; }
+.cookies-bt { width: 100%; }
+.cookies button { flex: 1; padding: .65rem .9rem; font-size: 1rem; }
 header .menu-cta { background: transparent !important; border: 1.5px solid rgba(255,255,255,.55); color: #fff !important; font-weight: 600; }
 .marker-cluster { background: rgba(26,58,143,.25); border-radius: 50%; }
 .marker-cluster div { background: #155E45; color: #fff; width: 30px; height: 30px; margin: 5px; border-radius: 50%; text-align: center; font: 700 12px/30px system-ui, sans-serif; }
@@ -550,3 +551,22 @@ body { overflow-x: clip; }
 .dc-legenda span { display: inline-block; width: 14px; height: 10px; margin-right: 4px; vertical-align: middle; }
 .dc-legenda .l-sel { background: rgba(46,139,87,.25); border: 1px solid #2E8B57; }
 .dc-legenda .l-com { border: 1px dashed #6B7280; }
+
+/* Selos do cartão de empresa: só fatos conferidos */
+.selos-ponto { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+.selo { font-size: .78rem; padding: 2px 8px; border-radius: 999px; border: 1px solid #A9D8B8; background: #F1F8F3; color: #155E45; }
+.selo.ok::before { content: "✓ "; font-weight: 700; }
+.doc { font-size: .8rem; color: var(--cinza); margin: 2px 0; }
+p.conferido { font-size: .84rem; margin: 6px 0 0; }
+p.conferido.conf-nao { color: var(--cinza); }
+p.conferido.conf-ok { color: #155E45; font-weight: 600; }
+.cookies p b { display: block; font-size: 1.02rem; margin-bottom: 2px; }
+
+/* Telefone numa linha: número, copiar e ligar */
+.tel-linha { display: flex; align-items: center; gap: 10px; background: #F1F3F2; border-radius: 8px; padding: 6px 6px 6px 10px; margin: 8px 0; }
+.tel-linha > svg { width: 18px; height: 18px; fill: #2E8B57; flex: none; }
+.tel-linha a:not(.tel-bt), .tel-linha span { flex: 1; color: inherit; text-decoration: none; font-variant-numeric: tabular-nums; }
+.tel-bt { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 0; border-radius: 6px; background: transparent; cursor: pointer; color: #1d2a24; }
+.tel-bt svg { width: 18px; height: 18px; fill: currentColor; }
+.tel-bt:hover, .tel-bt:focus-visible { background: #E2F1E7; }
+.tel-bt.copiado { background: #E2F1E7; color: #155E45; }
