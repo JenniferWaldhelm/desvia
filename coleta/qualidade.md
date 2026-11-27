@@ -1,5 +1,8 @@
 # Qualidade da base
 
+- Possível CPF na planilha: 0
+- Fonte vaga (lista em coleta/qualidade-fontes.csv): 431
+- Município fora da Fila de cidades: 13
 - Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 50
 - Possíveis duplicados: 4
@@ -57,7 +60,23 @@
 - MRV-009 Ferro Velho Pulinopolis Ltda (Gleba Ribeirao Sarandi, S/N, Zona Rural, Marialva)
 - MRV-011 M.C. Comercio de Metais (Rua Anselmo M. T.  Mandadori, 82, Conjunto Joao Olimpio Da Rocha, Marialva)
 
-## Possíveis duplicados (decidir qual fica)
+## Município fora da Fila de cidades
+
+- LDA-004 Central de Tratamento de Resíduos Buriti (Três Lagoas (MS))
+- LDA-006 Sanetran – Saneamento Ambiental (Assaí)
+- LDA-013 Emtre - Empresa Maringaense de Tratamento de Efluentes Ltda (Presidente Castelo Branco)
+- LDA-016 Tecnotam Soluções Ambientais Ltda (Tecnotam Embalagens Industriais) (Balsa Nova)
+- LDA-018 Tamarana Tecnologia e Soluções Ambientais Ltda (Tamarana)
+- LDA-024 Lwart Lubrificantes Ltda (Colombo)
+- LDA-026 João Aparecido dos Reis (ITA Resíduos) (Campo Mourão)
+- LDA-046 Suzaquim Indústrias Químicas Ltda (Suzano (SP))
+- LDA-067 Celus Ambiental Ltda (Fazenda Rio Grande)
+- LDA-080 Central Sul – Desentupidora Ltda ME (Central Sul Ambiental) (Birigui (SP))
+- LDA-093 J.F. Soluções Ambientais Ltda ME (J. F. Soluções Ambientais) (Tamarana)
+- LDA-123 Antares Reciclagem Ltda (Tamarana)
+- LDA-124 Rodojima Transportes de Cargas Ltda (Tamarana)
+
+## Possíveis duplicados (decidir qual fica; marcar 'duplicado' na coluna Situação)
 
 - Nome parecido a 0 m: MGA-319 Loja Vivo Maringá Park Shopping Center / MGA-323 Loja TIM Maringá Park Shopping Center
 - Nome parecido a 0 m: LDA-475 Vergoti Comercio de Metais Ltda / LDA-476 Vergoti Comercio de Metais Ltda
