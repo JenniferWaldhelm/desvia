@@ -34,7 +34,7 @@ TELEFONE = {
     "COOPEROESTE": "(43) 3348-8838 / (43) 99640-1433",
     "ECORECIN": "(43) 3326-1205 / (43) 98424-7738",
 }
-NOME = {"COOCEPEVE": "Cepeve", "COOPER REFUM": "Cooper Refum", "COOPER REGIÃO": "Cooper Região",
+NOME = {"COOCEPEVE": "Coocepeve", "COOPER REFUM": "Cooper Refum", "COOPER REGIÃO": "Cooper Região",
         "COOPERMUDANÇA": "Coopermudança", "COOPERNORTH": "Coopernorth", "COOPEROESTE": "Cooperoeste",
         "ECORECIN": "Ecorecin"}
 
