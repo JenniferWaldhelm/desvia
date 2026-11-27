@@ -26,14 +26,14 @@
 <main>
 <nav class="trilha" aria-label="Você está em"><a href="../../../">Cidades</a> › <a href="../../">Rolândia</a> › Compra de sucata e recicláveis</nav>
 <h1>Compra de sucata e recicláveis em Rolândia</h1>
-<p class="resposta"><strong>21 opções</strong> em Rolândia, 5 com licença ambiental válida.</p>
+<p class="resposta"><strong>21 opções</strong> em Rolândia, 7 com licença ambiental válida.</p>
 <p class="regra">Sucata e recicláveis têm valor. Para empresas, exija nota e comprovante de destinação de quem compra.</p>
 
 <p class="atualizado">Dados atualizados em 27/11/2026. Licença válida aparece primeiro.</p>
 <div id="mapa" role="region" aria-label="Mapa dos pontos"></div>
 <script>
 window.addEventListener('load', function () {
-  var pts = [{"n": "Sucatao Rolandia Ltda", "a": -23.30984, "o": -51.38606, "id": "rol-075", "s": "valida"}, {"n": "King Plasticos Reciclados Ltda", "a": -23.35157, "o": -51.38727, "id": "rol-064", "s": "vencida"}, {"n": "Rolampel Comercio de Papelao e Plasticos Ltda", "a": -23.31047, "o": -51.33766, "id": "rol-073", "s": "vencida"}, {"n": "A.R.R.R. Org (Ambiental Residuos Reciclaveis Rolandia. Org)", "a": -23.30646, "o": -51.35769, "id": "rol-044", "s": "nao_localizada"}, {"n": "Adevece Reciclagem Ltda", "a": -23.31047, "o": -51.33766, "id": "rol-045", "s": "nao_localizada"}, {"n": "Cpx Oleo Ambiental Aditivos Industriais", "a": -23.30528, "o": -51.39845, "id": "rol-048", "s": "nao_localizada"}, {"n": "Gr Residuos e Reciclagem Ltda", "a": -23.31047, "o": -51.33766, "id": "rol-059", "s": "nao_localizada"}, {"n": "Kazuko Comercio e Reciclagem de Sucatas Ltda", "a": -23.3181, "o": -51.38262, "id": "rol-063", "s": "nao_localizada"}, {"n": "Mabene Ambiental", "a": -23.35896, "o": -51.39708, "id": "rol-067", "s": "nao_localizada"}, {"n": "Mr Sucatas", "a": -23.31047, "o": -51.33766, "id": "rol-068", "s": "nao_localizada"}, {"n": "PR Sucata do Gaúcho Ltda (Paraná Recicladora)", "a": -23.30609, "o": -51.33554, "id": "rol-021", "s": "nao_localizada"}, {"n": "R. G. Reciclagem e Sucatas do Paraguai (Raiter Comercio de Sucatas Ltda)", "a": -23.33841, "o": -51.38303, "id": "rol-072", "s": "nao_localizada"}, {"n": "Zenda Agronegocios (Zenda Industria e Comercio de Plasticos Ltda)", "a": -23.30506, "o": -51.33722, "id": "rol-078", "s": "nao_localizada"}];
+  var pts = [{"n": "King Plasticos Reciclados Ltda", "a": -23.35157, "o": -51.38727, "id": "rol-064", "s": "valida"}, {"n": "PR Sucata do Gaúcho Ltda (Paraná Recicladora)", "a": -23.30609, "o": -51.33554, "id": "rol-021", "s": "valida"}, {"n": "Sucatao Rolandia Ltda", "a": -23.30984, "o": -51.38606, "id": "rol-075", "s": "valida"}, {"n": "Rolampel Comercio de Papelao e Plasticos Ltda", "a": -23.31047, "o": -51.33766, "id": "rol-073", "s": "vencida"}, {"n": "A.R.R.R. Org (Ambiental Residuos Reciclaveis Rolandia. Org)", "a": -23.30646, "o": -51.35769, "id": "rol-044", "s": "nao_localizada"}, {"n": "Adevece Reciclagem Ltda", "a": -23.31047, "o": -51.33766, "id": "rol-045", "s": "nao_localizada"}, {"n": "Cpx Oleo Ambiental Aditivos Industriais", "a": -23.30528, "o": -51.39845, "id": "rol-048", "s": "nao_localizada"}, {"n": "Gr Residuos e Reciclagem Ltda", "a": -23.31047, "o": -51.33766, "id": "rol-059", "s": "nao_localizada"}, {"n": "Kazuko Comercio e Reciclagem de Sucatas Ltda", "a": -23.3181, "o": -51.38262, "id": "rol-063", "s": "nao_localizada"}, {"n": "Mabene Ambiental", "a": -23.35896, "o": -51.39708, "id": "rol-067", "s": "nao_localizada"}, {"n": "Mr Sucatas", "a": -23.31047, "o": -51.33766, "id": "rol-068", "s": "nao_localizada"}, {"n": "R. G. Reciclagem e Sucatas do Paraguai (Raiter Comercio de Sucatas Ltda)", "a": -23.33841, "o": -51.38303, "id": "rol-072", "s": "nao_localizada"}, {"n": "Zenda Agronegocios (Zenda Industria e Comercio de Plasticos Ltda)", "a": -23.30506, "o": -51.33722, "id": "rol-078", "s": "nao_localizada"}];
   var cores = {valida: '#2A7A2A', vencendo: '#C77700', publico: '#1A3A8F', entrega: '#2B7A8C', vencida: '#C77700', nao_localizada: '#7A7F8C'};
   var mapa = L.map('mapa', {scrollWheelZoom: false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: '&copy; OpenStreetMap'}).addTo(mapa);
@@ -71,6 +71,19 @@ window.addEventListener('load', function () {
 <p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
 <p class="fonte">Fonte: IAT e Receita Federal · consulta em 18/11/2026</p>
 <p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=Granplast%20%28Acg%20Comercio%20de%20Plasticos%20Ltda%29&amp;entry.1658842514=ROL-060" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
+</article><article class="ponto" id="rol-064">
+<h3>King Plasticos Reciclados Ltda</h3>
+<p class="tipo">Tratamento/destinação final · Compra de recicláveis</p>
+<p class="residuos">Plásticos</p>
+<p class="local">Rodovia Br 369, S/N, Gleba Ceboleiro, Rolândia</p>
+<p class="tel-linha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg><a href="tel:+554333243311">(43) 3324-3311</a><button type="button" class="tel-bt" data-copiar="(43) 3324-3311" aria-label="Copiar o telefone (43) 3324-3311" title="Copiar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></svg></button><a class="tel-bt" href="tel:+554333243311" aria-label="Ligar para (43) 3324-3311" title="Ligar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></a></p>
+<p class="selos-ponto"><span class="selo ok" title="Licença ambiental válida nas bases consultadas">Licença válida</span><span class="selo ok" title="Situação cadastral ativa na Receita Federal">CNPJ ativo</span></p>
+<p class="doc">CNPJ 15.553.552/0001-02</p>
+<p class="licenca ok">Licença ambiental DLAE 213037 (IAT) válida até 08/12/2030.</p>
+<p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
+<p class="fonte">Fonte: IAT e Receita Federal · consulta em 18/11/2026</p>
+<p class="acoes"><a class="principal" href="https://www.google.com/maps/dir/?api=1&amp;destination=-23.35157,-51.38727" target="_blank" rel="noopener">Como chegar</a></p>
+<p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=King%20Plasticos%20Reciclados%20Ltda&amp;entry.1658842514=ROL-064" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
 </article><article class="ponto" id="rol-065">
 <h3>Lea Papeis Ltda</h3>
 <p class="tipo">Tratamento/destinação final · Compra de recicláveis</p>
@@ -83,6 +96,18 @@ window.addEventListener('load', function () {
 <p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
 <p class="fonte">Fonte: IAT e Receita Federal · consulta em 18/11/2026</p>
 <p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=Lea%20Papeis%20Ltda&amp;entry.1658842514=ROL-065" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
+</article><article class="ponto" id="rol-021">
+<h3>PR Sucata do Gaúcho Ltda (Paraná Recicladora)</h3>
+<p class="tipo">Tratamento/destinação final · Destinação final</p>
+<p class="residuos">Sucata metálica; Recicláveis</p>
+<p class="local">Avenida Esplanada, 1355, Parque Industrial Cafezal, Rolândia</p>
+<p class="tel-linha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg><a href="tel:+551832220079">(18) 3222-0079</a><button type="button" class="tel-bt" data-copiar="(18) 3222-0079" aria-label="Copiar o telefone (18) 3222-0079" title="Copiar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></svg></button><a class="tel-bt" href="tel:+551832220079" aria-label="Ligar para (18) 3222-0079" title="Ligar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></a></p>
+<p class="selos-ponto"><span class="selo ok" title="Licença ambiental válida nas bases consultadas">Licença válida</span><span class="selo ok" title="Situação cadastral ativa na Receita Federal">CNPJ ativo</span></p>
+<p class="doc">CNPJ 27.468.299/0001-60</p>
+<p class="licenca ok">Licença ambiental DLAE 334983 (IAT) válida até 01/11/2034.</p>
+<p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
+<p class="fonte">Fonte: CTF/Ibama e Receita Federal · consulta em 03/11/2026</p>
+<p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=PR%20Sucata%20do%20Ga%C3%BAcho%20Ltda%20%28Paran%C3%A1%20Recicladora%29&amp;entry.1658842514=ROL-021" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
 </article><article class="ponto" id="rol-074">
 <h3>Roland Estopas (Luis Antonio Mendes Junior Comercio Atacadista de Residuos e Sucatas Nao Metalicos, Exceto de Papel e Papelao)</h3>
 <p class="tipo">Tratamento/destinação final · Compra de recicláveis</p>
@@ -119,19 +144,6 @@ window.addEventListener('load', function () {
 <p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
 <p class="fonte">Fonte: IAT e Receita Federal · consulta em 18/11/2026</p>
 <p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=J%20R%20R%20Industria%20e%20Comercio%20de%20Residuos%20de%20Madeira%20Ltda&amp;entry.1658842514=ROL-061" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
-</article><article class="ponto" id="rol-064">
-<h3>King Plasticos Reciclados Ltda</h3>
-<p class="tipo">Tratamento/destinação final · Compra de recicláveis</p>
-<p class="residuos">Plásticos</p>
-<p class="local">Rodovia Br 369, S/N, Gleba Ceboleiro, Rolândia</p>
-<p class="tel-linha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg><a href="tel:+554333243311">(43) 3324-3311</a><button type="button" class="tel-bt" data-copiar="(43) 3324-3311" aria-label="Copiar o telefone (43) 3324-3311" title="Copiar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></svg></button><a class="tel-bt" href="tel:+554333243311" aria-label="Ligar para (43) 3324-3311" title="Ligar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></a></p>
-<p class="selos-ponto"><span class="selo ok" title="Situação cadastral ativa na Receita Federal">CNPJ ativo</span></p>
-<p class="doc">CNPJ 15.553.552/0001-02</p>
-<p class="licenca alerta">Licença ambiental RLO 6880 (IAT) venceu em 26/12/2012. Renovação não localizada nas bases consultadas em 18/11/2026.</p>
-<p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
-<p class="fonte">Fonte: IAT e Receita Federal · consulta em 18/11/2026</p>
-<p class="acoes"><a class="principal" href="https://www.google.com/maps/dir/?api=1&amp;destination=-23.35157,-51.38727" target="_blank" rel="noopener">Como chegar</a></p>
-<p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=King%20Plasticos%20Reciclados%20Ltda&amp;entry.1658842514=ROL-064" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
 </article><article class="ponto" id="rol-070">
 <h3>P. C. dos Santos Comercio de Sucatas</h3>
 <p class="tipo">Tratamento/destinação final · Compra de recicláveis</p>
@@ -264,18 +276,6 @@ window.addEventListener('load', function () {
 <p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
 <p class="fonte">Fonte: Receita Federal · consulta em 18/11/2026</p>
 <p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=Mr%20Sucatas&amp;entry.1658842514=ROL-068" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
-</article><article class="ponto" id="rol-021">
-<h3>PR Sucata do Gaúcho Ltda (Paraná Recicladora)</h3>
-<p class="tipo">Tratamento/destinação final · Destinação final</p>
-<p class="residuos">Sucata metálica; Recicláveis</p>
-<p class="local">Avenida Esplanada, 1355, Parque Industrial Cafezal, Rolândia</p>
-<p class="tel-linha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg><a href="tel:+551832220079">(18) 3222-0079</a><button type="button" class="tel-bt" data-copiar="(18) 3222-0079" aria-label="Copiar o telefone (18) 3222-0079" title="Copiar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></svg></button><a class="tel-bt" href="tel:+551832220079" aria-label="Ligar para (18) 3222-0079" title="Ligar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></a></p>
-<p class="selos-ponto"><span class="selo ok" title="Situação cadastral ativa na Receita Federal">CNPJ ativo</span></p>
-<p class="doc">CNPJ 27.468.299/0001-60</p>
-<p class="licenca aviso">Licença ambiental não localizada nas bases consultadas em 03/11/2026.</p>
-<p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>
-<p class="fonte">Fonte: CTF/Ibama e Receita Federal · consulta em 03/11/2026</p>
-<p class="sou-empresa"><a href="https://docs.google.com/forms/d/e/1FAIpQLScwb1620oIh00a6M1IuVfj6LyKuDf-_8MAaNulNlHGW8ho1Bg/viewform?usp=pp_url&amp;entry.538366619=PR%20Sucata%20do%20Ga%C3%BAcho%20Ltda%20%28Paran%C3%A1%20Recicladora%29&amp;entry.1658842514=ROL-021" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>
 </article><article class="ponto" id="rol-072">
 <h3>R. G. Reciclagem e Sucatas do Paraguai (Raiter Comercio de Sucatas Ltda)</h3>
 <p class="tipo">Tratamento/destinação final · Compra de recicláveis</p>
