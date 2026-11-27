@@ -1,7 +1,7 @@
 # Qualidade da base
 
 - Possível CPF na planilha: 0
-- Fonte vaga (lista em coleta/qualidade-fontes.csv): 428
+- Fonte vaga (lista em coleta/qualidade-fontes.csv): 27
 - Município fora da Fila de cidades: 13
 - Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 50
