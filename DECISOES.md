@@ -117,3 +117,9 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 - Checagem a cada publicação (coleta/qualidade.py → coleta/qualidade.md): coordenadas pelo OpenStreetMap (60 por rodada), duplicados, CPF na planilha, fonte vaga (lista em coleta/qualidade-fontes.csv) e município fora da Fila de cidades.
 - O site nunca publica CPF nem número de MEI no nome, mesmo que estejam na planilha.
 - Fonte: sempre órgão/programa + documento ou link + data. Dado passado pela Jen: "Informado pela Jen (dd/mm/aaaa)".
+
+## 27/11/2026 — Duplicados e busca pelo nome
+- Duplicados prováveis: ação mensal (dia 22) que compara a base com ela mesma e os candidatos da Revisão com a base, com um modelo de linguagem pequeno que roda no GitHub (sem API paga). Só avisa; a Jen decide. Primeira rodada: 2 duplicados reais em 20 pares (Ecorecin LDA-041/417 e IAM MGA-020/061, juntados); regras ajustadas para ignorar palavras genéricas e redes diferentes.
+- Para juntar duplicados: fica a linha mais completa, recebe o que só a outra tem (CNPJ, contatos, resíduos, fontes), e a outra vira "duplicado" na Situação com o motivo na Obs.
+- Empresa de lista oficial sem CNPJ: antes de incluir, rodar a ação "Buscar empresa pelo nome (IAT e Receita)".
+- Busca por significado no site (modelo no celular): adiada. Pesaria 25 a 50 MB por visitante e só houve 2 buscas sem resultado na semana de 16 a 22/11. Rever quando a lista de buscas sem resultado crescer.

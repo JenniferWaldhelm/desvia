@@ -1,8 +1,10 @@
 name: Procurar duplicados na base
 
-# Manual. Só avisa: grava coleta/duplicados.md e coleta/duplicados.csv.
+# Dia 22 (junto da conferência mensal) ou à mão. Só avisa: grava coleta/duplicados.md e coleta/duplicados.csv.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "11 9 22 * *"   # dia 22, 6h11 em Brasília
 
 permissions:
   contents: write
@@ -19,8 +21,10 @@ jobs:
       - name: Instalar o modelo
         run: |
           pip install -q torch --index-url https://download.pytorch.org/whl/cpu
-          pip install -q sentence-transformers
+          pip install -q sentence-transformers google-auth requests
       - name: Procurar
+        env:
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
         run: python3 coleta/duplicados.py | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Gravar
         run: |
