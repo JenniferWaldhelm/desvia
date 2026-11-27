@@ -1,0 +1,38 @@
+name: Buscar empresa pelo nome (IAT e Receita)
+
+# Manual. Consulta só: grava coleta/busca-por-nome.md.
+on:
+  workflow_dispatch:
+    inputs:
+      nomes:
+        description: "Nomes separados por ;"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Baixar o arquivo da Receita do mês
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: mkdir -p /tmp/receita-pr && gh release download receita-pr -p receita-pr.csv.gz -D /tmp/receita-pr || echo "sem arquivo da Receita"
+      - name: Buscar
+        env:
+          NOMES: ${{ inputs.nomes }}
+        run: |
+          IFS=';' read -ra N <<< "$NOMES"
+          python3 coleta/buscar_por_nome.py /tmp/receita-pr/receita-pr.csv.gz "${N[@]}" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Gravar
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add coleta/busca-por-nome.md
+          git commit -m "Busca de empresa pelo nome" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
