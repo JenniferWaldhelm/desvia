@@ -281,8 +281,6 @@ def conferido(p, norm, aviso_cnpj):
     ck = []
     if p["CNPJ"].strip() and not aviso_cnpj(p):
         ck.append("CNPJ ativo na Receita")
-    if p["Telefone"].strip():
-        ck.append("Tem telefone")
     cf = ""
     if "confirmado pela empresa" in norm(p["Fonte"]):
         cf = p["Data verificação"].strip() or "s/d"
