@@ -561,3 +561,12 @@ p.conferido { font-size: .84rem; margin: 6px 0 0; }
 p.conferido.conf-nao { color: var(--cinza); }
 p.conferido.conf-ok { color: #155E45; font-weight: 600; }
 .cookies p b { display: block; font-size: 1.02rem; margin-bottom: 2px; }
+
+/* Telefone numa linha: número, copiar e ligar */
+.tel-linha { display: flex; align-items: center; gap: 10px; background: #F1F3F2; border-radius: 8px; padding: 6px 6px 6px 10px; margin: 8px 0; }
+.tel-linha > svg { width: 18px; height: 18px; fill: #2E8B57; flex: none; }
+.tel-linha a:not(.tel-bt), .tel-linha span { flex: 1; color: inherit; text-decoration: none; font-variant-numeric: tabular-nums; }
+.tel-bt { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 0; border-radius: 6px; background: transparent; cursor: pointer; color: #1d2a24; }
+.tel-bt svg { width: 18px; height: 18px; fill: currentColor; }
+.tel-bt:hover, .tel-bt:focus-visible { background: #E2F1E7; }
+.tel-bt.copiado { background: #E2F1E7; color: #155E45; }

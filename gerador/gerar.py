@@ -16,6 +16,7 @@ import json
 import re
 import shutil
 import unicodedata
+from urllib.parse import quote
 from datetime import date, datetime
 from pathlib import Path
 
@@ -714,11 +715,28 @@ def pagina(titulo, descricao, url, raiz, corpo, jsonld, mapa=False):
   <div><b>Contato</b><a href="{site_desvia.WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a><a href="{site_desvia.CADASTRO}" target="_blank" rel="noopener">Cadastre sua empresa</a></div>
 </nav></footer>
 {f'''<div id="cookies" class="cookies" hidden role="dialog" aria-label="Aviso de cookies"><p><b>Podemos medir sua visita?</b>Usamos o Google Analytics só para saber como o site é usado e melhorar o Desvia. Sem anúncios. <a href="{raiz}privacidade/">Saiba mais</a></p><div class="cookies-bt"><button type="button" data-c="nao">Recusar</button><button type="button" data-c="sim" class="cookies-ok">Aceitar</button></div></div>
+<script>document.addEventListener("click",function(e){{var b=e.target.closest("[data-copiar]");if(!b)return;var t=b.getAttribute("data-copiar");(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){{b.classList.add("copiado");b.title="Copiado";setTimeout(function(){{b.classList.remove("copiado");b.title="Copiar"}},1500)}}).catch(function(){{}})}});</script>
 <script>(function(){{var b=document.getElementById("cookies");if(!b)return;var v=null;try{{v=localStorage.getItem("desvia-cookies")}}catch(e){{}}if(!v)b.hidden=false;b.addEventListener("click",function(e){{var c=e.target.getAttribute("data-c");if(!c)return;try{{localStorage.setItem("desvia-cookies",c)}}catch(x){{}}b.hidden=true;if(c==="sim"&&window.desviaGA)desviaGA()}});document.querySelectorAll("[data-cookies-abrir]").forEach(function(a){{a.addEventListener("click",function(ev){{ev.preventDefault();b.hidden=false}})}})}})();</script>''' if GA4 else ""}
 {f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER else ""}
 </body>
 </html>
 """
+
+
+ICONE_TEL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>'
+ICONE_COPIA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></svg>'
+
+
+def linha_telefone(tel):
+    """Telefone numa linha só: ícone, número, copiar e ligar (o número não se repete num botão)."""
+    dig = re.sub(r"\D", "", tel)
+    if len(dig) in (10, 11) and not dig.startswith("0"):
+        tel = f"({dig[:2]}) {dig[2:-4]}-{dig[-4:]}"
+    if len(dig) < 10:
+        return f'<p class="tel-linha">{ICONE_TEL}<span>{esc(tel)}</span></p>'
+    return (f'<p class="tel-linha">{ICONE_TEL}<a href="tel:+55{dig}">{esc(tel)}</a>'
+            f'<button type="button" class="tel-bt" data-copiar="{esc(tel)}" aria-label="Copiar o telefone {esc(tel)}" title="Copiar">{ICONE_COPIA}</button>'
+            f'<a class="tel-bt" href="tel:+55{dig}" aria-label="Ligar para {esc(tel)}" title="Ligar">{ICONE_TEL}</a></p>')
 
 
 def cartao(p, cidade_slug):
@@ -733,24 +751,44 @@ def cartao(p, cidade_slug):
     if local:
         fora = "" if norm(p["Município sede"]).replace(" ", "-") == cidade_slug or not p["Município sede"] else ""
         partes.append(f'<p class="local">{esc(local)}{fora}</p>')
-    contatos = []
-    if p["Telefone"]:
-        tel1 = p["Telefone"].split("/")[0].strip()
-        digitos = re.sub(r"\D", "", tel1)
-        contatos.append(f'<a href="tel:+55{digitos}">{esc(p["Telefone"])}</a>' if len(digitos) >= 10 else esc(p["Telefone"]))
+    for i, tel in enumerate(t.strip() for t in p["Telefone"].split("/") if t.strip()):
+        partes.append(linha_telefone(tel))
     site = p["Site/rede"] or (p["Endereço"] if p["Endereço"].startswith("www.") else "")
     if site:
         href = site if site.startswith("http") else ("mailto:" + site if "@" in site else "https://" + site)
-        contatos.append(f'<a href="{esc(href)}" rel="nofollow noopener" target="_blank">{esc(site)}</a>')
-    if contatos:
-        partes.append(f'<p class="contato">{" · ".join(contatos)}</p>')
+        partes.append(f'<p class="contato"><a href="{esc(href)}" rel="nofollow noopener" target="_blank">{esc(site)}</a></p>')
+    emp = p["Tipo de ponto"] in hub.EMPRESA_TIPOS
+    ck, cf = hub.conferido(p, norm, aviso_cnpj)
+    if emp:
+        selos = []
+        if p.get("_status") in ("valida", "vencendo"):
+            selos.append('<span class="selo ok" title="Licença ambiental válida nas bases consultadas">Licença válida</span>')
+        selos += [f'<span class="selo ok" title="Situação cadastral ativa na Receita Federal">{esc(c)}</span>' for c in ck]
+        if cf:
+            selos.append('<span class="selo ok" title="A própria empresa conferiu os dados">Confirmado pela empresa</span>')
+        if selos:
+            partes.append(f'<p class="selos-ponto">{"".join(selos)}</p>')
+        if p["CNPJ"].strip():
+            partes.append(f'<p class="doc">CNPJ {esc(p["CNPJ"].strip())}</p>')
     partes.append(f'<p class="licenca {cls}">{esc(texto_lic)}</p>')
     cnpj = aviso_cnpj(p)
     if cnpj:
         partes.append(f'<p class="licenca aviso">{esc(cnpj)}</p>')
+    if emp:
+        partes.append(f'<p class="conferido conf-ok">Dados confirmados pela empresa em {esc(cf)}.</p>' if cf else
+                      '<p class="conferido conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>')
+    fo = hub.fonte_publica(p)
+    if fo:
+        partes.append(f'<p class="fonte">{esc(fo)}</p>')
     o = obs_publica(p)
     if o:
         partes.append(f'<p class="obs">{esc(o)}</p>')
+    lat, lng = (p.get("Lat") or "").replace(",", "."), (p.get("Lng") or "").replace(",", ".")
+    if lat and lng and not pessoa_fisica(p):
+        partes.append(f'<p class="acoes"><a class="principal" href="https://www.google.com/maps/dir/?api=1&amp;destination={esc(lat)},{esc(lng)}" target="_blank" rel="noopener">Como chegar</a></p>')
+    if emp and not cf and hub.CONFIRMAR_EMPRESA:
+        url = hub.CONFIRMAR_EMPRESA + "&entry.538366619=" + quote(p["Nome"]) + "&entry.1658842514=" + quote(p["ID"])
+        partes.append(f'<p class="sou-empresa"><a href="{esc(url)}" target="_blank" rel="noopener">É desta empresa? Confirme ou corrija os dados</a></p>')
     partes.append("</article>")
     return "\n".join(partes)
 

@@ -79,6 +79,16 @@
     return true;
   }
 
+  var IC_TEL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>';
+  var IC_COPIA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11z"/></svg>';
+  function linhaTel(t) {
+    var dig = t.replace(/\D/g, '');
+    if ((dig.length === 10 || dig.length === 11) && dig[0] !== '0') t = '(' + dig.slice(0, 2) + ') ' + dig.slice(2, -4) + '-' + dig.slice(-4);
+    if (dig.length < 10) return '<p class="tel-linha">' + IC_TEL + '<span>' + esc(t) + '</span></p>';
+    return '<p class="tel-linha">' + IC_TEL + '<a href="tel:+55' + dig + '">' + esc(t) + '</a>' +
+      '<button type="button" class="tel-bt" data-copiar="' + esc(t) + '" aria-label="Copiar o telefone ' + esc(t) + '" title="Copiar">' + IC_COPIA + '</button>' +
+      '<a class="tel-bt" href="tel:+55' + dig + '" aria-label="Ligar para ' + esc(t) + '" title="Ligar">' + IC_TEL + '</a></p>';
+  }
   function telLink(t) {
     var primeiro = (t || '').split('/')[0].trim();
     var dig = primeiro.replace(/\D/g, '');
@@ -100,11 +110,8 @@
     var local = p.e ? p.e + (p.m ? ', ' + p.m : '') : p.m;
     if (local) h += '<p class="local">' + esc(local) + '</p>';
     var cont = [];
-    // o primeiro telefone vai no botão "Ligar"; só os outros números aparecem aqui
     var tels = (p.tel || '').split('/').map(function (t) { return t.trim(); }).filter(Boolean);
-    var dig1 = tels.length ? tels[0].replace(/\D/g, '') : '';
-    var extras = dig1.length >= 10 ? tels.slice(1) : tels;
-    if (extras.length) cont.push((dig1.length >= 10 ? 'Outro número: ' : 'Telefone: ') + extras.map(telLink).join(' · '));
+    tels.forEach(function (t) { h += linhaTel(t); });
     if (p.site) {
       var href = /^http/.test(p.site) ? p.site : (p.site.indexOf('@') > 0 ? 'mailto:' + p.site : 'https://' + p.site);
       cont.push('<a href="' + esc(href) + '" target="_blank" rel="nofollow noopener">' + esc(p.site) + '</a>');
@@ -127,7 +134,6 @@
     if (viz && (p.t === 'PEV público' || p.st === 'publico')) h += '<p class="obs aviso-viz">Ponto público de ' + esc(p.m) + ': pode aceitar só moradores da cidade. Confirme antes de ir.</p>';
     var acoes = [];
     if (p.a != null) acoes.push('<a class="principal" href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
-    if (dig1.length >= 10) acoes.push('<a class="principal" href="tel:+55' + dig1 + '">Ligar ' + esc(tels[0]) + '</a>');
     if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';
