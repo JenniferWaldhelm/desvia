@@ -586,6 +586,11 @@ def _ajustes():
 def carregar():
     with open(CSV, newline="", encoding="utf-8") as f:
         pontos = [p for p in csv.DictReader(f) if (p.get("ID") or "").strip()]
+    # coluna Situação: em vez de apagar linhas, marcar removido / duplicado / fechado (vazio = ativo)
+    pontos = [p for p in pontos if norm(p.get("Situação") or "ativo") in ("ativo", "")]
+    # nunca publicar CPF (11 dígitos soltos) nem o número do MEI no começo do nome
+    for p in pontos:
+        p["Nome"] = re.sub(r"\s*\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b\s*", " ", re.sub(r"^\d{2}\.\d{3}\.\d{3}\s+", "", p["Nome"])).strip()
     aj = _ajustes()
     for p in pontos:
         for a in aj.get(p["ID"], []):

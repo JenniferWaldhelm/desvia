@@ -111,3 +111,9 @@ Registro das decisões que valem para o projeto inteiro e das decisões sobre po
 - Entraram 390 (aba Pontos, linhas 920 a 1309), selecionadas por coleta/publicar_alta.py. Ficaram de fora: duplicatas de pontos já publicados, empresas recusadas pela Jen em 11/11 (Apucarana), Cabocla (sede em Mandaguaçu), só LP/LI. Lista em coleta/alta-fora.csv.
 - CPF e número de MEI tirados dos nomes; empresário individual sem endereço publicado.
 - Quando a empresa responde: corrigir na planilha e escrever "Confirmado pela empresa" na coluna Fonte.
+
+## 27/11/2026 — Auditoria do processo de dados
+- Não apagar linhas da aba Pontos: usar a coluna **Situação** (W): ativo (ou vazio), removido, duplicado, fechado. O site só publica "ativo"/vazio; o motivo vai na Obs.
+- Checagem a cada publicação (coleta/qualidade.py → coleta/qualidade.md): coordenadas pelo OpenStreetMap (60 por rodada), duplicados, CPF na planilha, fonte vaga (lista em coleta/qualidade-fontes.csv) e município fora da Fila de cidades.
+- O site nunca publica CPF nem número de MEI no nome, mesmo que estejam na planilha.
+- Fonte: sempre órgão/programa + documento ou link + data. Dado passado pela Jen: "Informado pela Jen (dd/mm/aaaa)".

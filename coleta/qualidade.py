@@ -37,6 +37,7 @@ def num(v):
 
 
 pontos = [p for p in csv.DictReader(open(RAIZ / "dados" / "pontos.csv", encoding="utf-8")) if (p.get("ID") or "").strip()]
+pontos = [p for p in pontos if norm(p.get("Situação") or "ativo") in ("ativo", "")]   # removido/duplicado/fechado ficam de fora
 arq_cache = RAIZ / "dados" / "coordenadas.csv"
 cache = {r["ID"]: r for r in csv.DictReader(open(arq_cache, encoding="utf-8"))} if arq_cache.exists() else {}
 
@@ -99,7 +100,20 @@ for i in range(len(coords)):
         if dist < 50 and difflib.SequenceMatcher(None, n1, n2).ratio() >= 0.8:
             dups.append(f"Nome parecido a {dist:.0f} m: {p['ID']} {p['Nome']} / {q['ID']} {q['Nome']}")
 
+# CPF em qualquer campo (o site já tira do nome, mas a planilha deve ficar sem)
+cpf = [p for p in pontos if re.search(r"\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b", re.sub(r"\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}", "", " ".join(v or "" for v in p.values())))]
+# Fonte vaga: sem órgão/programa, documento ou link
+vaga = [p for p in pontos if re.fullmatch(r"(site desvia( kmz)?|planilha unificada( jen)?|)", norm(p.get("Fonte")))]
+cids = {c["Município"].strip() for c in csv.DictReader(open(RAIZ / "dados" / "cidades.csv", encoding="utf-8"))}
+fora = [p for p in pontos if p["Município sede"].strip() and p["Município sede"].strip() not in cids]
+with open(RAIZ / "coleta" / "qualidade-fontes.csv", "w", newline="", encoding="utf-8") as f:
+    w = csv.writer(f); w.writerow(["ID", "Nome", "Município", "Fonte atual"])
+    w.writerows([[p["ID"], p["Nome"], p["Município sede"], p["Fonte"]] for p in vaga])
+
 linhas = ["# Qualidade da base", "",
+          f"- Possível CPF na planilha: {len(cpf)}",
+          f"- Fonte vaga (lista em coleta/qualidade-fontes.csv): {len(vaga)}",
+          f"- Município fora da Fila de cidades: {len(fora)}",
           f"- Coordenadas achadas nesta rodada: {len(achados)} (já aparecem no mapa)",
           f"- Endereços que o OpenStreetMap não achou: {len(nao_achados)}",
           f"- Possíveis duplicados: {len(dups)}", ""]
@@ -108,7 +122,11 @@ if achados:
     linhas += [f"- {p['ID']} {p['Nome']}: {cache[p['ID']]['Lat']}, {cache[p['ID']]['Lng']}" for p in achados] + [""]
 if nao_achados:
     linhas += ["## Sem coordenada (pegar no Google Maps)", ""] + [f"- {p['ID']} {p['Nome']} ({p['Endereço']}, {p['Município sede']})" for p in nao_achados] + [""]
+if cpf:
+    linhas += ["## Possível CPF (apagar da planilha)", ""] + [f"- {p['ID']} {p['Nome']}" for p in cpf] + [""]
+if fora:
+    linhas += ["## Município fora da Fila de cidades", ""] + [f"- {p['ID']} {p['Nome']} ({p['Município sede']})" for p in fora] + [""]
 if dups:
-    linhas += ["## Possíveis duplicados (decidir qual fica)", ""] + [f"- {d}" for d in dups] + [""]
+    linhas += ["## Possíveis duplicados (decidir qual fica; marcar 'duplicado' na coluna Situação)", ""] + [f"- {d}" for d in dups] + [""]
 (RAIZ / "coleta" / "qualidade.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
 print("\n".join(linhas[:5]))
