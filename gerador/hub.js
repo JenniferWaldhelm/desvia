@@ -100,28 +100,34 @@
     var local = p.e ? p.e + (p.m ? ', ' + p.m : '') : p.m;
     if (local) h += '<p class="local">' + esc(local) + '</p>';
     var cont = [];
-    if (p.tel) cont.push(telLink(p.tel));
+    // o primeiro telefone vai no botão "Ligar"; só os outros números aparecem aqui
+    var tels = (p.tel || '').split('/').map(function (t) { return t.trim(); }).filter(Boolean);
+    var dig1 = tels.length ? tels[0].replace(/\D/g, '') : '';
+    var extras = dig1.length >= 10 ? tels.slice(1) : tels;
+    if (extras.length) cont.push((dig1.length >= 10 ? 'Outro número: ' : 'Telefone: ') + extras.map(telLink).join(' · '));
     if (p.site) {
       var href = /^http/.test(p.site) ? p.site : (p.site.indexOf('@') > 0 ? 'mailto:' + p.site : 'https://' + p.site);
       cont.push('<a href="' + esc(href) + '" target="_blank" rel="nofollow noopener">' + esc(p.site) + '</a>');
     }
     if (cont.length) h += '<p class="contato">' + cont.join(' · ') + '</p>';
+    if (p.emp) {
+      // selos: só fatos conferidos (licença, CNPJ, confirmação da empresa), sem nota
+      var selos = [];
+      if (p.st === 'valida' || p.st === 'vencendo') selos.push('<span class="selo ok" title="Licença ambiental válida nas bases consultadas">Licença válida</span>');
+      (p.ck || []).forEach(function (c) { selos.push('<span class="selo ok" title="Situação cadastral ativa na Receita Federal">' + esc(c) + '</span>'); });
+      if (p.cf) selos.push('<span class="selo ok" title="A própria empresa conferiu os dados">Confirmado pela empresa</span>');
+      if (selos.length) h += '<p class="selos-ponto">' + selos.join('') + '</p>';
+      if (p.doc) h += '<p class="doc">CNPJ ' + esc(p.doc) + '</p>';
+    }
     h += '<p class="licenca ' + p.lc + '">' + esc(p.lic) + '</p>';
     if (p.cnpj) h += '<p class="licenca aviso">' + esc(p.cnpj) + '</p>';
-    if (p.emp) {
-      // o que o Desvia conferiu (fatos, sem nota) e se a própria empresa confirmou
-      var ck = (p.ck || []).map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('');
-      h += '<div class="conferido">' + (ck ? '<ul>' + ck + '</ul>' : '') +
-        (p.cf ? '<p class="conf-ok">Dados confirmados pela empresa em ' + esc(p.cf) + '.</p>'
-              : '<p class="conf-nao">A empresa ainda não confirmou estes dados. Ligue antes de levar.</p>') + '</div>';
-    }
+    if (p.emp) h += '<p class="conferido conf-' + (p.cf ? 'ok' : 'nao') + '">' + (p.cf ? 'Dados confirmados pela empresa em ' + esc(p.cf) + '.' : 'A empresa ainda não confirmou estes dados. Ligue antes de levar.') + '</p>';
     if (p.fo) h += '<p class="fonte">' + esc(p.fo) + '</p>';
     if (p.obs) h += '<p class="obs">' + esc(p.obs) + '</p>';
     if (viz && (p.t === 'PEV público' || p.st === 'publico')) h += '<p class="obs aviso-viz">Ponto público de ' + esc(p.m) + ': pode aceitar só moradores da cidade. Confirme antes de ir.</p>';
     var acoes = [];
     if (p.a != null) acoes.push('<a class="principal" href="https://www.google.com/maps/dir/?api=1&destination=' + p.a + ',' + p.o + '" target="_blank" rel="noopener">Como chegar</a>');
-    var dig = (p.tel || '').split('/')[0].replace(/\D/g, '');
-    if (dig.length >= 10) acoes.push('<a class="principal" href="tel:+55' + dig + '">Ligar</a>');
+    if (dig1.length >= 10) acoes.push('<a class="principal" href="tel:+55' + dig1 + '">Ligar ' + esc(tels[0]) + '</a>');
     if (p.a != null) acoes.push('<button type="button" data-ver="' + p.id + '">Ver no mapa</button>');
     if (window.DESVIA_FORM) acoes.push('<a class="informar" href="' + DESVIA_FORM + '" target="_blank" rel="noopener" title="Fechou, mudou de endereço ou não recebe mais? Avise o Desvia">Informar problema</a>');
     if (acoes.length) h += '<p class="acoes">' + acoes.join('') + '</p>';

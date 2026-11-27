@@ -267,6 +267,7 @@ def dados_js(pts, cid_slug, ctx):
             "pp": acoes(p, norm), "cs": sorted(p["_cidades"]),
             "ck": conferido(p, norm, aviso_cnpj)[0], "cf": conferido(p, norm, aviso_cnpj)[1],
             "emp": p["Tipo de ponto"] in EMPRESA_TIPOS,
+            "doc": p["CNPJ"].strip() if p["Tipo de ponto"] in EMPRESA_TIPOS else "",
         })
     return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
 
@@ -280,7 +281,7 @@ def conferido(p, norm, aviso_cnpj):
         return [], ""
     ck = []
     if p["CNPJ"].strip() and not aviso_cnpj(p):
-        ck.append("CNPJ ativo na Receita")
+        ck.append("CNPJ ativo")
     cf = ""
     if "confirmado pela empresa" in norm(p["Fonte"]):
         cf = p["Data verificação"].strip() or "s/d"
