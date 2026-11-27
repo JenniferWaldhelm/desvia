@@ -3,9 +3,15 @@
 - Possível CPF na planilha: 0
 - Fonte vaga (lista em coleta/qualidade-fontes.csv): 27
 - Município fora da Fila de cidades: 13
-- Coordenadas achadas nesta rodada: 0 (já aparecem no mapa)
+- Coordenadas achadas nesta rodada: 3 (já aparecem no mapa)
 - Endereços que o OpenStreetMap não achou: 50
 - Possíveis duplicados: 4
+
+## Coordenadas achadas (conferir e, se quiser, copiar para a planilha)
+
+- LDA-035 Cooper Refum (Cooperativa de Coleta Seletiva de Materiais Recicláveis): -23.29632, -51.13747
+- LDA-038 Coopernorth: -23.29055, -51.12876
+- LDA-040 Cooperoeste – Coop. dos Catadores da Região Oeste de Londrina: -23.28955, -51.13204
 
 ## Sem coordenada (pegar no Google Maps)
 
